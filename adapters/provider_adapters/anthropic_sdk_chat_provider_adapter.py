@@ -237,8 +237,12 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
     ) -> dict[str, Any]:
         system_prompt: Optional[Union[str, Iterable[TextBlockParam]]] = None
 
-        # Extract system prompt if it's the first message
-        if len(messages) and messages[0]["role"] == ConversationRole.system.value:
+        # Extract system prompt if it's the first message, only works for str
+        if (
+            len(messages)
+            and messages[0]["role"] == ConversationRole.system.value
+            and isinstance(messages[0]["content"], str)
+        ):
             system_prompt = messages[0]["content"]
             messages = messages[1:]
 
