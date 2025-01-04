@@ -78,6 +78,7 @@ class ConversationRole(str, Enum):
     system = "system"
     function = "function"
     tool = "tool"
+    developer = "developer"
 
 
 class AdapterFinishReason(str, Enum):
