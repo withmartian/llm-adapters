@@ -388,7 +388,7 @@ class SDKChatAdapter(
                 del kwargs[param]
 
         params["extra_body"] = {
-            **params["extra_body"],
+            **(params.get("extra_body", {})),
             **kwargs,
             **(
                 {"temperature": self._adjust_temperature(kwargs.get("temperature", 1))}
