@@ -374,21 +374,27 @@ class SDKChatAdapter(
             "messages": messages,
         }
 
-        if kwargs.get("max_tokens") is not None:
-            params["max_tokens"] = kwargs["max_tokens"]
-            del kwargs["max_tokens"]
+        top_params = [
+            "max_tokens",
+            "stream",
+            "extra_body",
+            "extra_query",
+            "extra_headers",
+        ]
 
-        if kwargs.get("stream") is not None:
-            params["stream"] = kwargs["stream"]
-            del kwargs["stream"]
+        for param in top_params:
+            if param in kwargs:
+                params[param] = kwargs[param]
+                del kwargs[param]
 
         params["extra_body"] = {
+            **(params.get("extra_body", {})),
+            **kwargs,
             **(
                 {"temperature": self._adjust_temperature(kwargs.get("temperature", 1))}
                 if kwargs.get("temperature") is not None
                 else {}
             ),
-            **kwargs,
         }
 
         return params
