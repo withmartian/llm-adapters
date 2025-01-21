@@ -31,7 +31,7 @@ class BaseAdapter(ABC):
     @overload
     def execute_sync(
         self,
-        llm_input: Iterable[ChatCompletionMessageParam] | Conversation,
+        messages: Iterable[ChatCompletionMessageParam],
         stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
         **kwargs: Any,
     ) -> AdapterChatCompletion: ...
@@ -39,7 +39,7 @@ class BaseAdapter(ABC):
     @overload
     def execute_sync(
         self,
-        llm_input: Iterable[ChatCompletionMessageParam] | Conversation,
+        messages: Iterable[ChatCompletionMessageParam],
         stream: Literal[True],
         **kwargs: Any,
     ) -> AdapterStreamSyncChatCompletion: ...
@@ -47,7 +47,7 @@ class BaseAdapter(ABC):
     @abstractmethod
     def execute_sync(
         self,
-        llm_input: Iterable[ChatCompletionMessageParam] | Conversation,
+        messages: Iterable[ChatCompletionMessageParam],
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
         **kwargs: Any,
     ) -> AdapterChatCompletion | AdapterStreamSyncChatCompletion: ...
@@ -55,7 +55,7 @@ class BaseAdapter(ABC):
     @overload
     async def execute_async(
         self,
-        llm_input: Iterable[ChatCompletionMessageParam] | Conversation,
+        messages: Iterable[ChatCompletionMessageParam],
         stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
         **kwargs: Any,
     ) -> AdapterChatCompletion: ...
@@ -63,7 +63,7 @@ class BaseAdapter(ABC):
     @overload
     async def execute_async(
         self,
-        llm_input: Iterable[ChatCompletionMessageParam] | Conversation,
+        messages: Iterable[ChatCompletionMessageParam],
         stream: Literal[True],
         **kwargs: Any,
     ) -> AdapterStreamAsyncChatCompletion: ...
@@ -71,12 +71,11 @@ class BaseAdapter(ABC):
     @abstractmethod
     async def execute_async(
         self,
-        llm_input: Iterable[ChatCompletionMessageParam] | Conversation,
+        messages: Iterable[ChatCompletionMessageParam],
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
         **kwargs: Any,
     ) -> AdapterChatCompletion | AdapterStreamAsyncChatCompletion: ...
 
-    # Completion
     @overload
     def execute_completion_sync(
         self,
@@ -124,10 +123,3 @@ class BaseAdapter(ABC):
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
         **kwargs: Any,
     ) -> AdapterCompletion | AdapterStreamAsyncCompletion: ...
-
-    # Deprecated
-    @staticmethod
-    def convert_to_input(llm_input: Conversation | Prompt) -> Conversation:
-        if isinstance(llm_input, Conversation):
-            return llm_input
-        return llm_input.convert_to_conversation()
