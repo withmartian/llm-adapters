@@ -11,9 +11,7 @@ from adapters.types import (
     AdapterStreamAsyncCompletion,
     AdapterStreamSyncChatCompletion,
     AdapterStreamSyncCompletion,
-    Conversation,
     Model,
-    Prompt,
 )
 
 

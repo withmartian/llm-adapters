@@ -3,7 +3,6 @@ from typing import (
     Any,
     AsyncGenerator,
     Generator,
-    List,
     Optional,
     Union,
 )
