@@ -120,6 +120,22 @@ MODELS: list[Model] = [
         supports_vision=False,
         supports_tools=False,
     ),
+    FireworksModel(
+        name="deepseek-v3",
+        cost=Cost(prompt=0.90e-6, completion=0.90e-6),
+        context_length=128000,
+        vendor_name=Vendor.deepseek_ai.value,
+        supports_vision=False,
+        supports_tools=False,
+    ),
+    FireworksModel(
+        name="deepseek-r1",
+        cost=Cost(prompt=0.8e-5, completion=0.8e-5),
+        context_length=160000,
+        vendor_name=Vendor.deepseek_ai.value,
+        supports_vision=False,
+        supports_tools=False,
+    ),
 ]
 
 
