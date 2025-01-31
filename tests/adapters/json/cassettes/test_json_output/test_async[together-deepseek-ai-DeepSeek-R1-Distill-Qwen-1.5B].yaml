@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '158'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"90a59490a8d11748\",\n  \"error\": {\n    \"message\":
+        \"deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B is not supported for JSON mode/function
+        calling\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n
+        \   \"code\": \"constraints_model\"\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 90a59490a8d11748-SJC
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '244'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 31 Jan 2025 00:28:12 GMT
+      ETag:
+      - W/"f4-QzT/sXuHgAlbrDjbt0jmyvdnU2s"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      x-amzn-trace-id:
+      - 06a29166-1c85-4979-9d69-2c05905d3875-noamzn
+      x-api-received:
+      - '2025-01-31T00:28:12.302Z'
+    status:
+      code: 400
+      message: Bad Request
+version: 1

@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-V3"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '271'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-8cd7b90f18e2444c87254fc81a54ef9c\",\"object\":\"chat.completion\",\"created\":1738285904,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"It
+        seems like you might be trying to ask something, but your message is unclear.
+        Could you clarify or provide more details? I\u2019m here to help! \U0001F60A\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":14,\"total_tokens\":49,\"completion_tokens\":35,\"estimated_cost\":4.34e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '495'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Jan 2025 01:11:44 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

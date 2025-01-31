@@ -1,0 +1,57 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-V3","max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '95'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-cb1b585880d04767ba1fdb3ca7485785","object":"chat.completion","created":1738286018,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","name":null,"tool_calls":[]},"finish_reason":"length"}],"usage":{"prompt_tokens":4,"total_tokens":14,"completion_tokens":10,"estimated_cost":1.2400000000000002e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '396'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Jan 2025 01:13:38 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,100 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-V3"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '182'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"90a592999d277aec\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1738283214,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
+        \       \"role\": \"assistant\",\n        \"content\": \"Hello! How can I
+        assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        12,\n    \"total_tokens\": 24,\n    \"completion_tokens\": 12\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 90a592999d277aec-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 31 Jan 2025 00:26:55 GMT
+      ETag:
+      - W/"1e3-ZhsDJTklbBlLapRSTG/rqoTxRhQ"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '483'
+      x-api-call-end:
+      - '2025-01-31T00:26:54.967Z'
+      x-api-call-start:
+      - '2025-01-31T00:26:51.829Z'
+      x-api-received:
+      - '2025-01-31T00:26:51.815Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

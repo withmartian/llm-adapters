@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '271'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-487ec14c76b543beb347bc3c0c94cadc\",\"object\":\"chat.completion\",\"created\":1738285900,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user sent three empty messages in a row. Let me see what's going on here.
+        The first one is just a mention of my username, \\\"</think>,\\\" followed
+        by three empty messages. Hmm, maybe they started typing but didn't finish,
+        or there's a technical issue.\\n\\nI should consider why they might send empty
+        messages. Could be accidental, like hitting enter by mistake. Alternatively,
+        they might be testing the system or trying to see how I respond to empty input.
+        Since there's no content, my response needs to be open and encouraging them
+        to ask a question.\\n\\nI want to be helpful without assuming their intent.
+        Responding with a friendly reminder to ask a question seems appropriate. I'll
+        keep it simple and positive to make sure they feel comfortable to reach out
+        with their actual query.\\n</think>\\n\\nIt seems like your messages are coming
+        through empty. How can I assist you today? Feel free to ask any questions
+        or share what\u2019s on your mind! \U0001F60A\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":14,\"total_tokens\":217,\"completion_tokens\":203,\"estimated_cost\":0.0005194}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1314'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Jan 2025 01:11:40 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
