@@ -112,7 +112,7 @@ MODELS: list[Model] = [
     ),
     OpenAIModel(
         name="o1-mini",
-        cost=Cost(prompt=3.00e-6, completion=12.00e-6),
+        cost=Cost(prompt=1.10e-6, completion=4.40e-6),
         context_length=128000,
         completion_length=65536,
         supports_tools=False,
@@ -128,7 +128,7 @@ MODELS: list[Model] = [
     ),
     OpenAIModel(
         name="o1-mini-2024-09-12",
-        cost=Cost(prompt=3.00e-6, completion=12.00e-6),
+        cost=Cost(prompt=1.10e-6, completion=4.40e-6),
         context_length=128000,
         completion_length=65536,
         supports_tools=False,
