@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '89'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-4eeb1dc91c4446af9935ebae92dcd502","object":"text_completion","created":1738286398,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"text":"Question
+        Alzheimer''s disease**.: As a degossville disease, An organism--I''m losing
+        it: Alzheimer''s.\n\nOkay, so I need to write an acrostic poem for the word
+        Alzheimer''s. Hmm, that sounds a bit challenging, but doable. Let me think
+        about what I know regarding Alzheimer''s disease. It''s a progressive neurological
+        disorder that causes the brain to shrink and brain cells to die. It''s the
+        most common cause of dementia, leading to a continuous decline in thinking,
+        behavioral, and social skills. This decline disrupts a person''s ability to
+        function indep","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":119,"completion_tokens":118,"estimated_cost":8.165e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '869'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Jan 2025 01:19:58 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

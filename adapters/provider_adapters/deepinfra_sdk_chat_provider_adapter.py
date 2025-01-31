@@ -1,5 +1,5 @@
 from adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
-from adapters.types import Cost, Model, Provider
+from adapters.types import Cost, Model, Provider, Vendor
 
 
 class DeepInfraModel(Model):
@@ -76,6 +76,26 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.35e-6, completion=0.40e-6),
         context_length=32768,
         vendor_name="Qwen",
+    ),
+    DeepInfraModel(
+        name="DeepSeek-R1",
+        cost=Cost(prompt=0.85e-6, completion=2.5e-6),
+        context_length=15000,
+        vendor_name=Vendor.deepseek_ai.value,
+        supports_completion=False,
+    ),
+    DeepInfraModel(
+        name="DeepSeek-V3",
+        cost=Cost(prompt=0.85e-6, completion=0.9e-6),
+        context_length=15000,
+        vendor_name=Vendor.deepseek_ai.value,
+        supports_completion=False,
+    ),
+    DeepInfraModel(
+        name="DeepSeek-R1-Distill-Llama-70B",
+        cost=Cost(prompt=0.23e-6, completion=0.69e-6),
+        context_length=128000,
+        vendor_name=Vendor.deepseek_ai.value,
     ),
 ]
 

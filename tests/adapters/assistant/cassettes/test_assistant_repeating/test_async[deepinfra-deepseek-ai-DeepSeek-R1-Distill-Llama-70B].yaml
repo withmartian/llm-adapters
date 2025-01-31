@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '200'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-61b08752a796485e9d479486e545dadc","object":"chat.completion","created":1738285785,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nAlright,
+        the user just said \"Hi.\" I should keep the conversation friendly.\n\nMaybe
+        I can greet them back and ask how I can assist today.\n\nKeeping it open-ended
+        will encourage them to share what''s on their mind.\n\nLet''s see... \"Hello!
+        How can I assist you today?\" sounds good.\n</think>\n\nHello! How can I assist
+        you today?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":11,"total_tokens":86,"completion_tokens":75,"estimated_cost":5.4279999999999995e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '721'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Jan 2025 01:09:45 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

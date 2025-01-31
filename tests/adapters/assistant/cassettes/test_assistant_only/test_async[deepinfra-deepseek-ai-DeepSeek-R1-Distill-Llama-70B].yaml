@@ -1,0 +1,120 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '102'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-0c903c6dfe1b45f38ef4991dfd88cb75\",\"object\":\"chat.completion\",\"created\":1738285756,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\",
+        I need to solve this problem:\\nIn a shopping mall, there are 3 security guards
+        each with specific roles:\\n1. Supervisor (1)\\n2. Patrol officer (2)\\n3.
+        Security Analyst (3)\\nEach of them has a schedule of working hours. The supervisor
+        works from 9 AM to 5 PM, the patrol officer works from 9 AM to 9 PM, and the
+        security analyst works from 9 AM to 1 PM. I need to determine the total number
+        of hours each guard is available to work with overlap considerations.\\n\\nOkay,
+        first, let me understand the problem. There are three security guards with
+        different shifts. I need to figure out how many hours each one is working,
+        considering any overlaps. Wait, but all of them start at 9 AM? So from 9 AM
+        to their respective end times.\\n\\nSo the Supervisor is from 9 AM to 5 PM.
+        Let's calculate that first. From 9 to 5 is 8 hours. Wait, 5 PM minus 9 AM
+        is 8 hours because 9 to 12 is 3 hours, and 12 to 5 is 5 hours, so total 8.
+        So Supervisor works 8 hours.\\n\\nNext, the Patrol officer is from 9 AM to
+        9 PM. So that's a longer shift. From 9 AM to 9 PM is 12 hours. Because from
+        9 AM to 12 PM is 3 hours, 12 PM to 9 PM is 9 hours, so total 12. So Patrol
+        officer works 12 hours.\\n\\nSecurity Analyst is from 9 AM to 1 PM. That seems
+        shorter. From 9 to 1 PM is 4 hours, right? 9, 10, 11, 12, 1. Wait, but that's
+        four hours, but the time difference is 1 - 9 = 4 hours... Hmm, wait, no, 1
+        PM is 13:00, 9 AM is 9:00. So 13 minus 9 is 4 hours. So Security Analyst works
+        4 hours.\\n\\nNow, the overlap considerations. But since each has different
+        roles, does that affect the total hours? I'm a bit confused. Wait, maybe the
+        question isn't about overlapping shifts, perhaps it's just about calculating
+        the total hours each one is available, not considering overlaps. Because each
+        has their own role, they\u2019re on duty regardless of others. So maybe I
+        don't need to worry about overlaps for each person's total hours.\\n\\nWait,
+        but the problem says \\\"with overlap considerations.\\\" So perhaps I'm being
+        asked how many hours each is available when considering if their shifts overlap
+        with others. Or maybe it's about the total coverage across all guards considering
+        overlaps. Hmm, the wording is a bit unclear.\\n\\nWait, let me think. Maybe
+        it's about the total number of hours each is available, taking into account
+        if they're overlapping or not. But since each has their own fixed schedule,
+        maybe the overlaps don't really affect each individual's total hours because
+        they're different roles. So maybe it's just straightforward calculation of
+        each person's shift duration.\\n\\nAlternatively, if the problem is asking
+        for the total numbers of coverage with overlaps, perhaps it's about the combined
+        coverage. But the question says \\\"the total number of hours each guard is
+        available to work with overlap considerations.\\\" So maybe it's each guard's
+        individual hours, and whether their shift overlaps with others. Wait, maybe
+        that's not it.\\n\\nWait, perhaps the user meant that the mall operates from
+        9 AM to 9 PM. The supervisor is 9-5, which is within that. Patrol is 9-9,
+        which is the full time. Security analyst is 9-1, which is part of it. But
+        how does that affect each guard's total available hours? Maybe that's not
+        necessary.\\n\\nWait, perhaps the question is just to compute each guard's
+        total working hours as per their shifts, which are already fixed. So regardless
+        of others' shifts, each works their own hours.\\n\\nSo, in summary:\\n\\n-
+        Supervisor: 9 AM to 5 PM is 8 hours.\\n- Patrol officer: 9 AM to 9 PM is 12
+        hours.\\n- Security Analyst: 9 AM to 1 PM is 4 hours.\\n\\nTherefore, the
+        total hours each is available are 8, 12, and 4 hours, respectively.\\n\\nI
+        think that's the answer. Maybe 'with overlap considerations' was a red herring,
+        because each guard's role is different, and they don't interfere with each
+        other's hours.\\n\\n**Final Answer**\\nThe total number of hours each security
+        guard is available is as follows:\\n- Supervisor: \\\\boxed{8} hours\\n- Patrol
+        officer: \\\\boxed{12} hours\\n- Security Analyst: \\\\boxed{4} hours\\n</think>\\n\\nTo
+        determine the total number of hours each security guard is available to work,
+        we simply calculate the duration of each guard's shift.\\n\\n1. **Supervisor**:
+        Works from 9 AM to 5 PM.\\n   - From 9 AM to 12 PM is 3 hours.\\n   - From
+        12 PM to 5 PM is 5 hours.\\n   - Total: \\\\(3 + 5 = 8\\\\) hours.\\n\\n2.
+        **Patrol officer**: Works from 9 AM to 9 PM.\\n   - From 9 AM to 12 PM is
+        3 hours.\\n   - From 12 PM to 9 PM is 9 hours.\\n   - Total: \\\\(3 + 9 =
+        12\\\\) hours.\\n\\n3. **Security Analyst**: Works from 9 AM to 1 PM.\\n   -
+        This duration is 4 hours.\\n\\nThus, the total number of hours each security
+        guard is available is:\\n\\n- Supervisor: \\\\(\\\\boxed{8}\\\\) hours\\n-
+        Patrol officer: \\\\(\\\\boxed{12}\\\\) hours\\n- Security Analyst: \\\\(\\\\boxed{4}\\\\)
+        hours\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4,\"total_tokens\":1223,\"completion_tokens\":1219,\"estimated_cost\":0.0008420299999999999}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5147'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Jan 2025 01:09:16 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
