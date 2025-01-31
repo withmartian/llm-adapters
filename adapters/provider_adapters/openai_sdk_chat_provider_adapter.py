@@ -174,6 +174,26 @@ MODELS: list[Model] = [
     #     can_system=False,
     #     can_top_p=False,
     # ),
+    OpenAIModel(
+        name="o3-mini",
+        cost=Cost(prompt=1.10e-6, completion=4.40e-6),
+        context_length=200000,
+        completion_length=100000,
+        supports_vision=False,
+        supports_max_tokens=False,
+        can_temperature=False,
+        can_top_p=False,
+    ),
+    OpenAIModel(
+        name="o3-mini-2025-01-31",
+        cost=Cost(prompt=1.10e-6, completion=4.40e-6),
+        context_length=200000,
+        completion_length=100000,
+        supports_vision=False,
+        supports_max_tokens=False,
+        can_temperature=False,
+        can_top_p=False,
+    ),
 ]
 
 
