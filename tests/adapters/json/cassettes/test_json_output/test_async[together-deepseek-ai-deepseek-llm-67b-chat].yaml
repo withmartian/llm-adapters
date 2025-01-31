@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/deepseek-llm-67b-chat","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '150'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"90a59479993dcea8\",\n  \"error\": {\n    \"message\":
+        \"deepseek-ai/deepseek-llm-67b-chat is not supported for JSON mode/function
+        calling\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n
+        \   \"code\": \"constraints_model\"\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 90a59479993dcea8-SJC
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '236'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 31 Jan 2025 00:28:09 GMT
+      ETag:
+      - W/"ec-+qYDMRoOJ79c6B8DWtOo0fXB4mY"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      x-amzn-trace-id:
+      - a8ff7d4d-dc68-4966-b2f6-ef0d19ef3a03-noamzn
+      x-api-received:
+      - '2025-01-31T00:28:08.787Z'
+    status:
+      code: 400
+      message: Bad Request
+version: 1

@@ -70,6 +70,7 @@ class Vendor(str, Enum):
     microsoft = "microsoft"
     moescape = "moescape"
     bigmodel = "bigmodel"
+    deepseek_ai = "deepseek-ai"
 
 
 class ConversationRole(str, Enum):

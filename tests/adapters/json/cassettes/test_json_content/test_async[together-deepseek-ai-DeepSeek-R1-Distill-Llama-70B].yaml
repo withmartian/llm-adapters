@@ -1,0 +1,161 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '150'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"90a593dd3a352578\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1738283263,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
+        \     \"seed\": 15158651635035957000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"<think>\\nOkay, so I'm trying to figure out what the user is asking for
+        here. They just wrote \\\"[object Object],[object Object]\\\" and that's it.
+        Hmm, that's a bit confusing. I know that in JavaScript, when you try to convert
+        an object to a string, it often shows up as \\\"[object Object]\\\". So maybe
+        they're seeing this in their code or somewhere else and are confused about
+        why it's happening.\\n\\nLet me think about possible scenarios where this
+        might come up. If someone is using alert() or console.log() on an object,
+        they might see this string instead of the actual object properties. Or maybe
+        they're trying to concatenate an object into a string, which would also result
+        in \\\"[object Object]\\\".\\n\\nI should consider that the user might be
+        a developer, possibly new to JavaScript, who's encountering this issue and
+        doesn't understand why their objects aren't displaying as expected. They might
+        need guidance on how to properly log or display object contents.\\n\\nAnother
+        angle is that they might be working with JSON data and seeing this string
+        instead of the parsed data. Or perhaps they're dealing with objects in a different
+        context, like in HTML or another programming language that handles objects
+        similarly.\\n\\nI should also think about solutions. The first thing that
+        comes to mind is using JSON.stringify() to convert the object into a readable
+        string. Alternatively, they might need to access specific properties of the
+        object instead of trying to display the whole thing. Maybe they're using the
+        wrong method to output the object, so suggesting the correct methods like
+        console.log() with proper formatting or using a debugger could be helpful.\\n\\nI
+        wonder if they're getting this output in a specific environment, like in a
+        browser console or a Node.js environment. The approach might slightly differ
+        depending on where they're working. Also, maybe they're not aware of how to
+        use developer tools to inspect objects properly.\\n\\nI should also consider
+        if they're trying to compare objects or use them in a way that's causing this
+        string to appear. For example, in conditional statements or when using equality
+        operators, objects might not behave as expected because they're reference
+        types.\\n\\nPerhaps they're using a framework or library that's causing this
+        output, so I should think about common libraries like React or Angular where
+        objects are frequently used and might produce such strings in certain situations.\\n\\nI
+        need to make sure my response is clear and addresses the possible reasons
+        they're seeing \\\"[object Object]\\\". I should provide multiple solutions,
+        like using JSON.stringify, accessing properties, or using console.dir, so
+        they can choose the one that fits their situation.\\n\\nAlso, it's important
+        to explain why this happens, so they understand the underlying issue and can
+        avoid it in the future. Maybe they're not aware that objects can't be directly
+        converted to strings in a meaningful way without using specific methods.\\n\\nI
+        should structure my response to first explain the cause, then offer step-by-step
+        solutions, and maybe provide examples to illustrate each point. That way,
+        the user can follow along and apply the solution to their specific problem.\\n\\nI
+        also need to be concise but thorough, making sure I cover the most common
+        scenarios without overwhelming them with too much information. Prioritizing
+        the most likely causes and solutions would be best.\\n\\nIn summary, the user
+        is likely encountering \\\"[object Object]\\\" when trying to display or use
+        an object in JavaScript. They need to know how to correctly handle objects
+        to see their contents or properties. My response should guide them through
+        understanding the issue and provide practical solutions.\\n</think>\\n\\nWhen
+        you see `[object Object]` in JavaScript, it typically occurs when an object
+        is converted to a string, such as in `alert()`, `console.log()`, or when concatenating
+        strings. To resolve this, you can:\\n\\n1. **Use `JSON.stringify()`** to convert
+        the object to a JSON string.\\n2. **Access specific properties** of the object
+        instead of the whole object.\\n3. **Use `console.dir()`** for a detailed view
+        of the object in the console.\\n\\n**Example:**\\n\\n```javascript\\nconst
+        obj = { name: \\\"Alice\\\", age: 30 };\\nconsole.log(JSON.stringify(obj));
+        // Output: {\\\"name\\\":\\\"Alice\\\",\\\"age\\\":30\\\"}\\nconsole.log(obj.name);
+        // Output: Alice\\n```\\n\\nThis approach allows you to handle objects effectively
+        and avoid the `[object Object]` string.\",\n        \"tool_calls\": []\n      }\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 10,\n    \"completion_tokens\":
+        876,\n    \"total_tokens\": 886\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 90a593dd3a352578-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 31 Jan 2025 00:27:52 GMT
+      ETag:
+      - W/"1357-TOrze1BYBHYzffj42O9IBg2TRqE"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '4951'
+      x-amzn-trace-id:
+      - 4b044884-ea52-4b8b-81ed-75a12a048793-noamzn
+      x-api-call-end:
+      - '2025-01-31T00:27:52.689Z'
+      x-api-call-start:
+      - '2025-01-31T00:27:43.907Z'
+      x-api-received:
+      - '2025-01-31T00:27:43.600Z'
+      x-api-retries:
+      - '5'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

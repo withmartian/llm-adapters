@@ -1,0 +1,170 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '155'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"90a593459f2afa8a\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1738283239,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
+        \     \"seed\": 4532402640018088000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"<think>\\nOkay, so I'm trying to figure out what the user is asking for
+        here. They wrote \\\"[object Object],[object Object]\\\" and then \\\"Could
+        you please explain this?\\\". Hmm, that's a bit confusing. I know that in
+        JavaScript, when you try to output an object using something like console.log,
+        it sometimes shows up as [object Object] if it's not properly stringified.
+        Maybe the user is seeing this in their console or somewhere else and doesn't
+        understand why it's happening.\\n\\nI should start by explaining what [object
+        Object] means. It's a way that JavaScript represents objects when they're
+        converted to strings, but it's not very helpful because it doesn't show the
+        actual properties or values. So, if someone is logging an object to the console
+        and just sees [object Object], they might not know how to view the details
+        of that object.\\n\\nNext, I should think about why this happens. It's because
+        when you use methods like console.log on an object, JavaScript calls the toString()
+        method, and for objects, the default toString() returns [object Object]. To
+        see the actual contents, the user needs to use methods that can display the
+        object's properties, like JSON.stringify() or using console.dir() which provides
+        a more detailed output.\\n\\nI should also consider common scenarios where
+        this might happen. For example, if a user is debugging and logs an object
+        without stringifying it, they'll just see [object Object]. Or maybe they're
+        trying to send an object in an API response without converting it to JSON,
+        which would also show up as [object Object].\\n\\nIt might be helpful to provide
+        examples. Like, if you have an object { name: \\\"Alice\\\", age: 30 }, and
+        you do console.log(obj), you'll see [object Object]. But if you do console.log(JSON.stringify(obj)),
+        you'll see the actual JSON string. Alternatively, using console.dir(obj) in
+        Node.js gives a more readable output.\\n\\nI should also mention that in different
+        environments, the output might vary slightly. For instance, in browsers, the
+        console might display the object in a more user-friendly way if you don't
+        stringify it, but it's still better practice to use JSON.stringify for consistency.\\n\\nAnother
+        point is that sometimes in HTML, if you try to display an object in a string
+        context, like in a template literal, it will also show [object Object]. So,
+        the user needs to ensure they're converting objects to strings properly in
+        those contexts.\\n\\nI should also think about possible solutions. The main
+        solution is to use JSON.stringify() to convert the object into a JSON string.
+        Alternatively, using console.log with multiple arguments can sometimes display
+        the object better, like console.log('Object:', obj). Or using the + operator
+        to concatenate the object with a string, which implicitly converts it, but
+        that's not recommended as it can lead to [object Object] again.\\n\\nMaybe
+        the user is working on a specific project where they're encountering this
+        issue, so providing a step-by-step explanation on how to handle objects in
+        different situations would be helpful. They might need guidance on debugging,
+        sending data over a network, or displaying data on a webpage.\\n\\nI should
+        also consider if there are any edge cases, like when the object is null or
+        undefined. For example, null would be [object Null], and undefined would just
+        be \\\"undefined\\\". But in the case of an object, it's [object Object].\\n\\nIn
+        summary, the user is likely encountering [object Object] when trying to output
+        or use an object in a string context without proper conversion. The solution
+        involves converting the object to a string using methods like JSON.stringify()
+        or using appropriate logging methods that handle objects better.\\n</think>\\n\\nWhen
+        you encounter `[object Object]` in JavaScript, it typically occurs when an
+        object is converted to a string without proper handling. Here's a structured
+        explanation and solution:\\n\\n### Explanation:\\n- **Cause**: This happens
+        because JavaScript's default `toString()` method for objects returns `[object
+        Object]`. When you try to output an object using methods like `console.log()`
+        or in string contexts, it invokes `toString()`, which isn't helpful for viewing
+        the object's contents.\\n- **Scenarios**: Common in debugging, logging, or
+        when sending objects in responses without conversion.\\n\\n### Solutions:\\n1.
+        **Use `JSON.stringify()`**:\\n   - Convert the object to a JSON string to
+        see its properties.\\n   - Example: `console.log(JSON.stringify(obj));`\\n\\n2.
+        **Use `console.dir()`**:\\n   - In Node.js, `console.dir(obj)` provides a
+        detailed object output.\\n\\n3. **Logging in Browsers**:\\n   - Modern browsers
+        often display objects more user-friendly in the console, but using `JSON.stringify()`
+        ensures consistency.\\n\\n4. **String Contexts**:\\n   - When using template
+        literals, ensure objects are stringified: `` `Object: ${JSON.stringify(obj)}`
+        ``\\n\\n5. **Debugging Tips**:\\n   - Use `console.log('Object:', obj);` to
+        see the object in the console.\\n   - Avoid implicit conversion with `+` as
+        it may result in `[object Object]`.\\n\\n### Example:\\n```javascript\\nconst
+        obj = { name: \\\"Alice\\\", age: 30 };\\nconsole.log(obj); // Outputs [object
+        Object]\\nconsole.log(JSON.stringify(obj)); // Outputs {\\\"name\\\":\\\"Alice\\\",\\\"age\\\":30\\\"}\\n```\\n\\nBy
+        using these methods, you can effectively view and work with object data in
+        JavaScript.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 10,\n    \"completion_tokens\": 1107,\n    \"total_tokens\":
+        1117\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 90a593459f2afa8a-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 31 Jan 2025 00:27:43 GMT
+      ETag:
+      - W/"16cf-qnch0rZNjdVaZCnHOxUYWccnLTI"
+      Retry-After:
+      - '6'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '5839'
+      x-amzn-trace-id:
+      - f51abac0-6637-4fb5-99b4-d7113a2490c1-noamzn
+      x-api-call-end:
+      - '2025-01-31T00:27:42.979Z'
+      x-api-call-start:
+      - '2025-01-31T00:27:19.484Z'
+      x-api-received:
+      - '2025-01-31T00:27:19.478Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '0.16666667'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '0'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '6'
+    status:
+      code: 200
+      message: OK
+version: 1

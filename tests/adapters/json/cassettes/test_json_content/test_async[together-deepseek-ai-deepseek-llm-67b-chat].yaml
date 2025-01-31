@@ -1,0 +1,109 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"deepseek-ai/deepseek-llm-67b-chat"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '142'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"90a593163ba79453\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1738283231,\n  \"model\": \"deepseek-ai/deepseek-llm-67b-chat\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
+        \     \"seed\": 5102725168688711000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"It seems like you're trying to display two objects in JavaScript, but the
+        output is not very informative. To display the properties of the objects,
+        you can use the `console.log()` function and access the properties of the
+        objects. Here's an example:\\n\\n```javascript\\nconst obj1 = { name: 'John',
+        age: 30 };\\nconst obj2 = { name: 'Jane', age: 25 };\\n\\nconsole.log(obj1);\\nconsole.log(obj2);\\n\\nconsole.log(obj1.name);
+        // Output: John\\nconsole.log(obj1.age); // Output: 30\\n\\nconsole.log(obj2.name);
+        // Output: Jane\\nconsole.log(obj2.age); // Output: 25\\n```\\n\\nIn this
+        example, `obj1` and `obj2` are two objects with properties `name` and `age`.
+        The `console.log()` function is used to display the objects and their properties.\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        15,\n    \"completion_tokens\": 218,\n    \"total_tokens\": 233\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 90a593163ba79453-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 31 Jan 2025 00:27:18 GMT
+      ETag:
+      - W/"4c1-ZfOaaupzZG1/C4+YgyKYa6SipRM"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1217'
+      x-amzn-trace-id:
+      - 0cd6c5e7-cf3d-484a-9140-c201fe55bb77-noamzn
+      x-api-call-end:
+      - '2025-01-31T00:27:18.754Z'
+      x-api-call-start:
+      - '2025-01-31T00:27:11.783Z'
+      x-api-received:
+      - '2025-01-31T00:27:11.781Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1
