@@ -13,8 +13,8 @@ from vcr import VCR
 async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     adapter = create_adapter()
 
-    adapter_response = await adapter.execute_async(
-        [
+    adapter_response = await adapter.execute_chat_completion_async(
+        messages=[
             {
                 "role": "assistant",
                 "content": "Hi",

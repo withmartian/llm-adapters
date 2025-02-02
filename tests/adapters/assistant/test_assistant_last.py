@@ -1,6 +1,5 @@
 import pytest
 
-from adapters.types import Conversation, ConversationRole, Turn
 from tests.utils import (
     ADAPTER_CHAT_TEST_FACTORIES,
     AdapterTestFactory,
@@ -9,22 +8,14 @@ from tests.utils import (
 from vcr import VCR
 
 
-conversation = Conversation(
-    [
-        Turn(role=ConversationRole.user, content="Hi"),
-        Turn(role=ConversationRole.assistant, content="Hi "),
-    ]
-)
-
-
 @pytest.mark.vcr
 @pytest.mark.parametrize("create_adapter", ADAPTER_CHAT_TEST_FACTORIES, ids=str)
 async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     adapter = create_adapter()
 
     # Empty space intentionally added, to test trailing whitespace as some providers don't like it
-    adapter_response = await adapter.execute_async(
-        [
+    adapter_response = await adapter.execute_chat_completion_async(
+        messages=[
             {
                 "role": "user",
                 "content": "Hi",

@@ -1,0 +1,70 @@
+from typing import Mapping
+from openai import NOT_GIVEN, NotGiven
+from openai.types.completion import Completion
+from openai.types.chat import (
+    ChatCompletion,
+    ChatCompletionChunk,
+)
+from openai.types.chat import ChatCompletionMessageParam
+from openai.types.chat.completion_create_params import (
+    FunctionCall,
+    Function,
+    ResponseFormat,
+)
+from openai.types.chat.chat_completion_modality import ChatCompletionModality
+from openai.types.chat.chat_completion_audio_param import ChatCompletionAudioParam
+from openai.types.chat.chat_completion_prediction_content_param import (
+    ChatCompletionPredictionContentParam,
+)
+from openai.types.chat.chat_completion_reasoning_effort import (
+    ChatCompletionReasoningEffort,
+)
+from openai.types.chat.chat_completion_stream_options_param import (
+    ChatCompletionStreamOptionsParam,
+)
+from openai.types.chat.chat_completion_tool_choice_option_param import (
+    ChatCompletionToolChoiceOptionParam,
+)
+from openai.types.chat.chat_completion_tool_param import ChatCompletionToolParam
+from openai.types.chat.chat_completion_message_tool_call import (
+    ChatCompletionMessageToolCall,
+)
+from openai.types.chat.chat_completion import (
+    Choice,
+    ChatCompletionMessage,
+    CompletionUsage,
+)
+
+
+Query = Mapping[str, object]
+Body = object
+Headers = Mapping[str, str]
+
+ChatModel = str
+
+__all__ = [
+    "NotGiven",
+    "NOT_GIVEN",
+    "Completion",
+    "ChatCompletion",
+    "ChatCompletionChunk",
+    "ChatCompletionMessageParam",
+    "Query",
+    "Body",
+    "Headers",
+    "ChatModel",
+    "ChatCompletionAudioParam",
+    "FunctionCall",
+    "Function",
+    "ChatCompletionModality",
+    "ChatCompletionPredictionContentParam",
+    "ResponseFormat",
+    "ChatCompletionReasoningEffort",
+    "ChatCompletionStreamOptionsParam",
+    "ChatCompletionToolChoiceOptionParam",
+    "ChatCompletionToolParam",
+    "ChatCompletionMessageToolCall",
+    "Choice",
+    "ChatCompletionMessage",
+    "CompletionUsage",
+]

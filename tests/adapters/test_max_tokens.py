@@ -18,8 +18,8 @@ async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     if not adapter.get_model().supports_max_tokens:
         return
 
-    adapter_response = await adapter.execute_async(
-        SIMPLE_CONVERSATION_USER_ONLY, max_tokens=10
+    adapter_response = await adapter.execute_chat_completion_async(
+        messages=SIMPLE_CONVERSATION_USER_ONLY, max_tokens=10
     )
 
     cassette_response = get_response_content_from_vcr(vcr, adapter)
@@ -32,6 +32,8 @@ async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
 async def test_async_completion(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     adapter = create_adapter()
 
-    adapter_response = await adapter.execute_completion_async("Hi", max_tokens=10)
+    adapter_response = await adapter.execute_completion_async(
+        prompt="Hi", max_tokens=10
+    )
 
     assert adapter_response.choices[0].text

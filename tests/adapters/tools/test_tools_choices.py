@@ -21,8 +21,8 @@ async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     ):
         return
 
-    adapter_response = await adapter.execute_async(
-        SIMPLE_FUNCTION_CALL_USER_ONLY,
+    adapter_response = await adapter.execute_chat_completion_async(
+        messages=SIMPLE_FUNCTION_CALL_USER_ONLY,
         tools=SIMPLE_GENERATE_TOOLS,
         tool_choice={"type": "function", "function": {"name": "generate"}},
     )

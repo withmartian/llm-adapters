@@ -53,7 +53,7 @@ poetry run pytest
 ## Quickstart
 
 ```python
-from adapters import AdapterFactory
+from llm_adapters import AdapterFactory
 
 # First component in model path is Provider, then Vendor, and last model name itself
 adapter = AdapterFactory.get_adapter_by_path("openai/openai/gpt-4o-mini")

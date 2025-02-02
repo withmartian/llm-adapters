@@ -16,8 +16,8 @@ def test_sync(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     if not adapter.get_model().supports_streaming:
         return
 
-    adapter_response = adapter.execute_sync(
-        SIMPLE_CONVERSATION_USER_ONLY,
+    adapter_response = adapter.execute_chat_completion_sync(
+        messages=SIMPLE_CONVERSATION_USER_ONLY,
         stream=True,
     )
 
@@ -41,8 +41,8 @@ async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     if not adapter.get_model().supports_streaming:
         return
 
-    adapter_response = await adapter.execute_async(
-        SIMPLE_CONVERSATION_USER_ONLY,
+    adapter_response = await adapter.execute_chat_completion_async(
+        messages=SIMPLE_CONVERSATION_USER_ONLY,
         stream=True,
     )
 

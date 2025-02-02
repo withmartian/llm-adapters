@@ -16,8 +16,8 @@ async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     if not adapter.get_model().supports_vision:
         return
 
-    adapter_response = await adapter.execute_async(
-        [
+    adapter_response = await adapter.execute_chat_completion_async(
+        messages=[
             {
                 "role": "user",
                 "content": [

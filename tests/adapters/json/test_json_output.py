@@ -17,8 +17,8 @@ async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
     if adapter.get_model().supports_json_output is False:
         return
 
-    adapter_response = await adapter.execute_async(
-        SIMPLE_CONVERSATION_JSON_OUTPUT,
+    adapter_response = await adapter.execute_chat_completion_async(
+        messages=SIMPLE_CONVERSATION_JSON_OUTPUT,
         response_format={"type": "json_object"},
     )
 

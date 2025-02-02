@@ -1,4 +1,4 @@
-from adapters.adapter_factory import AdapterFactory
+from llm_adapters.adapter_factory import AdapterFactory
 
 # Load supported models
 supported_models = AdapterFactory.get_supported_models()
