@@ -43,6 +43,7 @@ from adapters.provider_adapters.openrouter_sdk_chat_provider_adapter import (
 from adapters.provider_adapters.perplexity_sdk_chat_provider_adapter import (
     PerplexityModel,
 )
+from adapters.provider_adapters.deepseek_sdk_chat_provider_adapter import DeepSeekModel
 
 
 class AdapterTestFactory:
@@ -78,6 +79,7 @@ TEST_MODELS = (
     DeepInfraModel,
     BigModelModel,
     TensorOperaModel,
+    DeepSeekModel,
 )
 
 ADAPTER_CHAT_TEST_FACTORIES = [

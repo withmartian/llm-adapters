@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-chat","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '368'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"b80d695f-8ead-43cb-a2a6-f789dae3d258","object":"chat.completion","created":1738792186,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"index":0,"id":"call_0_39ec0f81-9dea-4530-9bf5-a41ca8387aec","type":"function","function":{"name":"generate","arguments":"{\"prompt\":\"Random
+        number between 1 and 10\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":132,"completion_tokens":25,"total_tokens":157,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":132},"system_fingerprint":"fp_3a5770e1b4"}'
+    headers:
+      CF-RAY:
+      - 90d61cbc7a3a67a0-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2025 21:49:46 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1738792183404; path=/
+      - HWWAFSESID=922f9a3a545d349970; path=/
+      - __cf_bm=uwGpsC_sTwdJm422FatKIzn3j3lfQPhqZdEDvzremWc-1738792186-1.0.1.1-OoNr8EZDb1i0UR7G9.k4z0DMTuXWBBeIefkDcb1UGIh.o4AD97Q_BfhkV7Y0PdWDr7Mm6y6E4.oTwQpe6w0OyQ;
+        path=/; expires=Wed, 05-Feb-25 22:19:46 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '631'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 3c5d204fed6309ca3b96fe61e6d4001c
+    status:
+      code: 200
+      message: OK
+version: 1

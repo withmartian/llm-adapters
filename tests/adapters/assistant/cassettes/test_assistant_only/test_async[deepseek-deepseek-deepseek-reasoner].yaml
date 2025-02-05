@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '144'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"a07e8f72-8a6c-4f32-9bfd-e731de4f1f7a\",\"object\":\"chat.completion\",\"created\":1738793507,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        It looks like your message might be incomplete. How can I assist you today?
+        Let me know what you need help with! \U0001F60A\",\"reasoning_content\":\"Okay,
+        the user sent \\\"Hi\\\" followed by some empty quotes. Maybe they're testing
+        how I handle different inputs or there was a typo.\\n\\nFirst, I should acknowledge
+        their greeting to be friendly. Then, address the empty quotes by asking if
+        they need help with something specific. That way, I cover both parts of their
+        message and invite them to clarify their request. Keep it open and helpful.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"completion_tokens\":112,\"total_tokens\":123,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":81},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":11},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+    headers:
+      CF-RAY:
+      - 90d63cfa7a197ada-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2025 22:11:47 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1738793503382; path=/
+      - HWWAFSESID=b413acad62d9b68b16; path=/
+      - __cf_bm=TebBPy7q1huO.98SDFndDibGErPd1TkUgt4wK_n9Dnc-1738793507-1.0.1.1-1L_k8SHVDmP87gb8DATlHipazVixAcHAV6L29fWviTvLyK6swEXSXHXE4Z_Wc9OingnFC53N5C.bhug0lqpSAA;
+        path=/; expires=Wed, 05-Feb-25 22:41:47 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1028'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 75f8b03c4bfbfdc6f6e6ea4a7a83f83d
+    status:
+      code: 200
+      message: OK
+version: 1
