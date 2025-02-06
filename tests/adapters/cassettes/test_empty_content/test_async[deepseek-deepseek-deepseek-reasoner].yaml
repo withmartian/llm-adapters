@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '232'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"0a1e68e6-525c-4121-a4b0-64dfae716d1e\",\"object\":\"chat.completion\",\"created\":1738791995,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"It
+        seems like your message might be incomplete or unclear. Could you please provide
+        more details or clarify your request? For example:\\n\\n1. Are you asking
+        for information on a specific topic? (e.g., \\\"Explain quantum computing
+        in simple terms.\\\")\\n2. Do you need assistance with a task? (e.g., \\\"Help
+        me write an email within 100 words.\\\")\\n3. Are there specific constraints?
+        (e.g., \\\"Respond in Spanish,\\\" or \\\"Keep it under 500 characters.\\\")\\n\\nLet
+        me know how I can assist! \U0001F60A\",\"reasoning_content\":\"Alright, the
+        user sent three messages in a row: \\\"in\\\", \\\"please\\\", and \\\"within\\\".
+        That's a bit cryptic. Let me try to figure out what they need.\\n\\nFirst,
+        \\\"in\\\" might be the start of a question. Maybe they meant to type something
+        else but hit send too soon. Then \\\"please\\\" and \\\"within\\\" could be
+        part of a request. Maybe they're asking for a response within a certain time
+        frame or character limit?\\n\\nLooking at the previous conversation, there's
+        no history except these three messages. So, I need to consider possible interpretations.
+        \\\"Please within\\\" might be asking for something to be done within specific
+        constraints. Like, \\\"Please respond within 500 characters\\\" or \\\"Please
+        answer in English.\\\"\\n\\nAlternatively, they might have intended to write
+        a sentence that got cut off. For example, \\\"In [some context], please [do
+        something] within [some limit].\\\" Without more context, it's challenging,
+        but I should make an educated guess.\\n\\nThe safest approach is to ask for
+        clarification. But since the user might want a prompt response, maybe I should
+        provide a general answer that covers possible scenarios. Let me address possible
+        interpretations:\\n\\n1. If they need a response within a certain character
+        limit, I can confirm and adjust accordingly.\\n2. If they need information
+        on a topic that starts with \\\"in,\\\" like \\\"inflation\\\" or \\\"internet
+        security,\\\" I can offer to elaborate.\\n3. Maybe they're testing the assistant's
+        ability to handle incomplete queries.\\n\\nI'll respond by politely asking
+        for more details while offering examples of how I can assist. That way, I
+        cover different possibilities without making incorrect assumptions.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":15,\"completion_tokens\":447,\"total_tokens\":462,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":336},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":15},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+    headers:
+      CF-RAY:
+      - 90d618116d53ed3b-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2025 21:46:35 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=22fc39db0c9172ac1c; path=/
+      - HWWAFSESTIME=1738791993012; path=/
+      - __cf_bm=JTc6xY35SGxgJsH0SLfSeoStOjEamVRKqV01790jgpg-1738791995-1.0.1.1-Fi.7_ulQVRzD08n7yWIzstmeC5Mdi830MVLQMt4PgwzR35Vz4.2nxY8lci94d4Zz3vV92kvibwfuVphKtxnVgA;
+        path=/; expires=Wed, 05-Feb-25 22:16:35 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '2653'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 703ed92e72fda6175372d490827c911f
+    status:
+      code: 200
+      message: OK
+version: 1

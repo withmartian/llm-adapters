@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-reasoner","max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '89'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"24f1f168-073f-4c07-abff-a05803e0ffab","object":"chat.completion","created":1738792031,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","reasoning_content":"Okay, the user just said
+        \"Hi\". I should respond in a friendly and welcoming manner. Maybe say hello
+        and ask how I can assist them today. Keep it open-ended to encourage them
+        to share what they need help with. Make sure the tone is warm and approachable."},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":6,"completion_tokens":67,"total_tokens":73,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":56},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":6},"system_fingerprint":"fp_7e73fd9a08"}'
+    headers:
+      CF-RAY:
+      - 90d618f5385bfa96-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2025 21:47:11 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1738792028923; path=/
+      - HWWAFSESID=98ca6b8d537b901509; path=/
+      - __cf_bm=ugOquwta7fdz4hd.tRh0dDFt.w6y86zUAIpTGihcPB8-1738792031-1.0.1.1-u4kLs4ZhlBgYhd_K7F.DnjV5agWFA5SmqSExFKrRMWy9mUvsvt0x_c372CDQezGN2EBg7t0stjeO8Zx3D1FBHQ;
+        path=/; expires=Wed, 05-Feb-25 22:17:11 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '801'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 9e0d0f7b6ca99b2c06e754996f0c15da
+    status:
+      code: 200
+      message: OK
+version: 1

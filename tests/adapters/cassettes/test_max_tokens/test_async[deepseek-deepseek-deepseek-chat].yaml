@@ -1,0 +1,78 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-chat","max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '85'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"38362d39-9aeb-4c4c-ab8f-b73d53dabf04","object":"chat.completion","created":1738792028,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?"},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":4,"completion_tokens":9,"total_tokens":13,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":4},"system_fingerprint":"fp_3a5770e1b4"}'
+    headers:
+      CF-RAY:
+      - 90d618dfc885cf7a-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2025 21:47:08 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=e8d777cd0057b95126; path=/
+      - HWWAFSESTIME=1738792027840; path=/
+      - __cf_bm=FzpYvdHMtrtl2RjZ59zfzerGkrcUwykCErjz4ggy8nc-1738792028-1.0.1.1-acw4NruU5nyGOSNfmpvimKdD03RgWp2xHKJ8EyjYmMiZQWfTIWXV8z6EZckXtMyCyDBcuJE36V.45LPXS3UK3Q;
+        path=/; expires=Wed, 05-Feb-25 22:17:08 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '466'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 26fb2f36f9c95dce561ee5ba5b31de5a
+    status:
+      code: 200
+      message: OK
+version: 1

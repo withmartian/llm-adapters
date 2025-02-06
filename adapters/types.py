@@ -43,6 +43,7 @@ class Provider(str, Enum):
     vertex = "vertex"
     bigmodel = "bigmodel"
     tensoropera = "tensoropera"
+    deepseek = "deepseek"
 
 
 class Vendor(str, Enum):
@@ -70,6 +71,7 @@ class Vendor(str, Enum):
     microsoft = "microsoft"
     moescape = "moescape"
     bigmodel = "bigmodel"
+    deepseek = "deepseek"
     deepseek_ai = "deepseek-ai"
 
 

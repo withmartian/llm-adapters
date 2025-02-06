@@ -1,0 +1,82 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.59.3
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.59.3
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.7
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"7b882402-1dca-4b78-805d-9b9eec228f01\",\"object\":\"chat.completion\",\"created\":1738793712,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay,
+        the user just said \\\"Hi\\\" again after my initial response. Maybe they
+        want to continue the conversation.\\n\\nI should respond in a friendly manner
+        and ask how I can assist them today. Keeping it open-ended might encourage
+        them to share what they need help with.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":68,\"total_tokens\":76,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":54},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":8},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+    headers:
+      CF-RAY:
+      - 90d642008b5d7aac-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 05 Feb 2025 22:15:13 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1738793709990; path=/
+      - HWWAFSESID=20b5bc4b4bb6febd13; path=/
+      - __cf_bm=GPvaDeV4DdIV2as_vF7oAEr5E0Y.pK1GgnlxNmK0DYU-1738793713-1.0.1.1-icE_UgtKsVleceNRayedTkAvJSu14_JhZOs4vffSOzAQavIgz0nBgrYbs_u_agd.ZX8Yc8T9qkKl_3YfoCJ2qQ;
+        path=/; expires=Wed, 05-Feb-25 22:45:13 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '818'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - f5d6176da46080132f18b06aea9f766d
+    status:
+      code: 200
+      message: OK
+version: 1
