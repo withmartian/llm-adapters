@@ -60,10 +60,10 @@ adapter = AdapterFactory.get_adapter_by_path("openai/openai/gpt-4o-mini")
 
 adapter.execute_sync(
     [
-        {role: "system", content: "You are a helpful assistant."},
+        {"role": "system", "content": "You are a helpful assistant."},
         {
-            role: "user",
-            content: "Write a haiku about recursion in programming.",
+            "role": "user",
+            "content": "Write a haiku about recursion in programming.",
         },
     ]
 )
