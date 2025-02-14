@@ -12,6 +12,7 @@ from vcr import VCR
 @pytest.mark.vcr
 @pytest.mark.parametrize("create_adapter", ADAPTER_CHAT_TEST_FACTORIES, ids=str)
 async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
+    print(ADAPTER_CHAT_TEST_FACTORIES)
     adapter = create_adapter()
 
     adapter_response = await adapter.execute_chat_completion_async(

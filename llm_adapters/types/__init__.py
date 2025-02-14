@@ -11,7 +11,7 @@ from llm_adapters.types.openai import (
     ChatModel,
     ChatCompletionAudioParam,
     FunctionCall,
-    Function,
+    FunctionCreate,
     ChatCompletionModality,
     ChatCompletionPredictionContentParam,
     ResponseFormat,
@@ -23,6 +23,7 @@ from llm_adapters.types.openai import (
     Choice,
     ChatCompletionMessage,
     CompletionUsage,
+    ChatCompletionUserMessageParam,
 )
 
 from llm_adapters.types.request import (
@@ -76,7 +77,7 @@ __all__ = [
     "ChatModel",
     "ChatCompletionAudioParam",
     "FunctionCall",
-    "Function",
+    "FunctionCreate",
     "ChatCompletionModality",
     "ChatCompletionPredictionContentParam",
     "ResponseFormat",
@@ -111,4 +112,5 @@ __all__ = [
     "ModelNotFoundException",
     "ChatCompletionCreateArgs",
     "CompletionCreateArgs",
+    "ChatCompletionUserMessageParam",
 ]

@@ -13,10 +13,6 @@ from typing import (
     cast,
     overload,
 )
-
-from openai.types.chat import ChatCompletionMessageParam, ChatCompletionUserMessageParam
-from openai import NOT_GIVEN, NotGiven
-
 from llm_adapters.abstract_adapters.api_key_adapter_mixin import ApiKeyAdapterMixin
 from llm_adapters.abstract_adapters.adapter import Adapter
 from llm_adapters.abstract_adapters.provider_adapter_mixin import ProviderAdapterMixin
@@ -43,6 +39,10 @@ from llm_adapters.types import (
     ModelProperties,
     ChatCompletionCreateArgs,
     CompletionCreateArgs,
+    NOT_GIVEN,
+    NotGiven,
+    ChatCompletionMessageParam,
+    ChatCompletionUserMessageParam,
 )
 
 CLIENT_SYNC = TypeVar("CLIENT_SYNC")
@@ -342,9 +342,10 @@ class SDKChatAdapter(
     # TODO: add support for n removal
     def _get_params(
         self,
+        *,
         stream: Optional[Literal[False]] | Literal[True] | NotGiven,
-        **kwargs: Any,
-    ) -> Any:
+        **kwargs: Unpack[ChatCompletionCreateArgs],
+    ) -> dict[str, Any]:
         self._verify(**kwargs)
         messages = self._format_messages(**kwargs)
 
@@ -361,15 +362,17 @@ class SDKChatAdapter(
 
         for attr_flag, kwarg_key in attributes:
             if not getattr(self.get_model(), attr_flag, False) and kwarg_key in kwargs:
-                kwargs[kwarg_key] = None
+                kwargs[kwarg_key] = None  # type: ignore
+
+        temperature = kwargs.get("temperature")
 
         params: dict[str, Any] = {
-            "model": self.get_model()._get_api_path(),
+            "model": self.get_model().get_api_path(),
             "messages": messages,
             **({"stream": stream} if stream is not NOT_GIVEN else {}),
             **(
-                {"temperature": self._adjust_temperature(kwargs.get("temperature", 1))}
-                if kwargs.get("temperature") is not None
+                {"temperature": self._adjust_temperature(temperature)}
+                if temperature is not None
                 else {}
             ),
         }
@@ -386,8 +389,8 @@ class SDKChatAdapter(
         ]:
             if top_param in kwargs:
                 if top_param not in params:
-                    params[top_param] = kwargs[top_param]
-                del kwargs[top_param]
+                    params[top_param] = kwargs[top_param]  # type: ignore
+                del kwargs[top_param]  # type: ignore
 
         params["extra_body"] = kwargs
 
@@ -428,7 +431,7 @@ class SDKChatAdapter(
         **kwargs: Unpack[CompletionCreateArgs],
     ) -> AdapterCompletion | AdapterStreamSyncCompletion:
         response = self._call_completion_sync()(
-            model=self.get_model()._get_api_path(), stream=stream, **kwargs
+            model=self.get_model().get_api_path(), stream=stream, **kwargs
         )
 
         if not stream:
@@ -468,7 +471,7 @@ class SDKChatAdapter(
         **kwargs: Unpack[CompletionCreateArgs],
     ) -> AdapterCompletion | AdapterStreamAsyncCompletion:
         response = await self._call_completion_async()(
-            model=self.get_model()._get_api_path(), stream=stream, **kwargs
+            model=self.get_model().get_api_path(), stream=stream, **kwargs
         )
 
         if not stream:
@@ -486,6 +489,7 @@ class SDKChatAdapter(
             except Exception as e:
                 raise AdapterException(f"Error in streaming response: {e}") from e
             finally:
+                # Never await thrown
                 response.close()
 
         return AdapterStreamAsyncCompletion(response=stream_response())

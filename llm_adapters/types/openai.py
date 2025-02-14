@@ -8,9 +8,10 @@ from openai.types.chat import (
 from openai.types.chat import ChatCompletionMessageParam
 from openai.types.chat.completion_create_params import (
     FunctionCall,
-    Function,
+    Function as FunctionCreate,
     ResponseFormat,
 )
+
 from openai.types.chat.chat_completion_modality import ChatCompletionModality
 from openai.types.chat.chat_completion_audio_param import ChatCompletionAudioParam
 from openai.types.chat.chat_completion_prediction_content_param import (
@@ -34,6 +35,9 @@ from openai.types.chat.chat_completion import (
     ChatCompletionMessage,
     CompletionUsage,
 )
+from openai.types.chat.chat_completion_user_message_param import (
+    ChatCompletionUserMessageParam,
+)
 
 
 Query = Mapping[str, object]
@@ -55,7 +59,7 @@ __all__ = [
     "ChatModel",
     "ChatCompletionAudioParam",
     "FunctionCall",
-    "Function",
+    "FunctionCreate",
     "ChatCompletionModality",
     "ChatCompletionPredictionContentParam",
     "ResponseFormat",
@@ -67,4 +71,5 @@ __all__ = [
     "Choice",
     "ChatCompletionMessage",
     "CompletionUsage",
+    "ChatCompletionUserMessageParam",
 ]

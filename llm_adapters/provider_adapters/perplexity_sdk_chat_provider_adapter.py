@@ -27,48 +27,23 @@
 
 # MODELS: list[Model] = [
 #     PerplexityModel(
-#         name="llama-3.1-sonar-small-128k-online",
-#         cost=Cost(prompt=0.20e-6, completion=0.20e-6, request=0.005),
-#         context_length=127072,
-#         vendor_name=Vendor.perplexity.value,
-#     ),
-#     PerplexityModel(
-#         name="llama-3.1-sonar-large-128k-online",
+#         name="sonar",
 #         cost=Cost(prompt=1.00e-6, completion=1.00e-6, request=0.005),
-#         context_length=127072,
+#         context_length=127000,
 #         vendor_name=Vendor.perplexity.value,
 #     ),
 #     PerplexityModel(
-#         name="llama-3.1-sonar-huge-128k-online",
-#         cost=Cost(prompt=5.00e-6, completion=5.00e-6, request=0.005),
-#         context_length=127072,
+#         name="sonar-pro",
+#         cost=Cost(prompt=3.00e-6, completion=15.00e-6, request=0.005),
+#         context_length=127000,
+#         completion_length=8000,
 #         vendor_name=Vendor.perplexity.value,
 #     ),
 #     PerplexityModel(
-#         name="llama-3.1-sonar-small-128k-chat",
-#         cost=Cost(prompt=0.20e-6, completion=0.20e-6),
-#         context_length=131072,
+#         name="sonar-reasoning",
+#         cost=Cost(prompt=1.00e-6, completion=5.00e-6, request=0.005),
+#         context_length=127000,
 #         vendor_name=Vendor.perplexity.value,
-#     ),
-#     PerplexityModel(
-#         name="llama-3.1-sonar-large-128k-chat",
-#         cost=Cost(prompt=1.00e-6, completion=1.00e-6),
-#         context_length=131072,
-#         vendor_name=Vendor.perplexity.value,
-#     ),
-#     PerplexityModel(
-#         name="llama-3.1-8b-instruct",
-#         cost=Cost(prompt=0.20e-6, completion=0.20e-6),
-#         context_length=131072,
-#         vendor_name=Vendor.meta_llama.value,
-#         properties=ModelProperties(open_source=True),
-#     ),
-#     PerplexityModel(
-#         name="llama-3.1-70b-instruct",
-#         cost=Cost(prompt=1.00e-6, completion=1.00e-6),
-#         context_length=131072,
-#         vendor_name=Vendor.meta_llama.value,
-#         properties=ModelProperties(open_source=True),
 #     ),
 # ]
 

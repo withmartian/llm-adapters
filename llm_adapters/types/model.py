@@ -145,7 +145,7 @@ class Model(BaseModel):
     def get_path(self) -> str:
         return f"{self.provider_name}/{self.vendor_name}/{self.name}"
 
-    def _get_api_path(self) -> str:
+    def get_api_path(self) -> str:
         return self.api_name if self.api_name else self.name
 
     def __str__(self) -> str:

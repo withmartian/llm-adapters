@@ -4,15 +4,17 @@ from llm_adapters.abstract_adapters import Adapter
 from llm_adapters.abstract_adapters.provider_adapter_mixin import ProviderAdapterMixin
 
 from llm_adapters.provider_adapters import (
-    # AnthropicSDKChatProviderAdapter,
+    AnthropicSDKChatProviderAdapter,
     # GeminiSDKChatProviderAdapter,
+    AI21SDKChatProviderAdapter,
     OpenAISDKChatProviderAdapter,
 )
 from llm_adapters.types import Model, ModelNotFoundException
 
 ADAPTER_CLASSES: list[type[Adapter]] = [
-    # AnthropicSDKChatProviderAdapter,
+    AnthropicSDKChatProviderAdapter,
     # GeminiSDKChatProviderAdapter,
+    AI21SDKChatProviderAdapter,
     OpenAISDKChatProviderAdapter,
 ]
 

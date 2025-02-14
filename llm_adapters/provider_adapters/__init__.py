@@ -1,5 +1,5 @@
 from .ai21_sdk_chat_provider_adapter import AI21SDKChatProviderAdapter
-# from .anthropic_sdk_chat_provider_adapter import AnthropicSDKChatProviderAdapter
+from .anthropic_sdk_chat_provider_adapter import AnthropicSDKChatProviderAdapter
 
 # from .azure_sdk_chat_provider_adapter import AzureSDKChatProviderAdapter
 # from .cerebras_sdk_chat_provider_adapter import CerebrasSDKChatProviderAdapter
@@ -23,7 +23,7 @@ from .openai_sdk_chat_provider_adapter import OpenAISDKChatProviderAdapter
 
 __all__ = [
     "AI21SDKChatProviderAdapter",
-    # "AnthropicSDKChatProviderAdapter",
+    "AnthropicSDKChatProviderAdapter",
     # # "AzureSDKChatProviderAdapter",
     # "CerebrasSDKChatProviderAdapter",
     # "CohereSDKChatProviderAdapter",

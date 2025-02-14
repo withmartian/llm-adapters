@@ -7,6 +7,7 @@ class OpenAIModel(Model):
     vendor_name: str = Vendor.openai.value
 
     supports_completion: bool = False
+
     can_min_p: bool = False
     can_top_k: bool = False
 
@@ -68,7 +69,16 @@ MODELS: list[Model] = [
         supports_max_tokens=False,
         supports_stop=False,
         can_temperature=False,
-        can_system=False,
+        can_top_p=False,
+    ),
+    OpenAIModel(
+        name="o3-mini",
+        cost=Cost(prompt=1.10e-6, completion=4.40e-6),
+        context_length=200000,
+        completion_length=100000,
+        supports_vision=False,
+        supports_max_tokens=False,
+        can_temperature=False,
         can_top_p=False,
     ),
 ]

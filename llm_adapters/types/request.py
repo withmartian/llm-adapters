@@ -14,7 +14,7 @@ from llm_adapters.types import (
     ChatModel,
     ChatCompletionAudioParam,
     FunctionCall,
-    Function,
+    FunctionCreate,
     ChatCompletionModality,
     ChatCompletionPredictionContentParam,
     ChatCompletionReasoningEffort,
@@ -65,7 +65,7 @@ class ChatCompletionCreateKwargs(TypedDict, total=False):
     audio: Optional[ChatCompletionAudioParam] | None
     frequency_penalty: Optional[float] | None
     function_call: FunctionCall | None
-    functions: Iterable[Function] | None
+    functions: Iterable[FunctionCreate] | None
     logit_bias: Optional[dict[str, int]] | None
     logprobs: Optional[bool] | None
     max_completion_tokens: Optional[int] | None
@@ -97,7 +97,7 @@ class ChatCompletionCreateKwargs(TypedDict, total=False):
     timeout: float | httpx.Timeout | None
 
 
-class ChatCompletionCreateArgs(ChatCompletionCreateKwargs, total=False):
+class ChatCompletionCreateArgs(ChatCompletionCreateKwargs):
     messages: Iterable[ChatCompletionMessageParam]
     model: Union[str, ChatModel]
     # stream: Optional[Literal[False]] | NotGiven

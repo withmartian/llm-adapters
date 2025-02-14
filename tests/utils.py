@@ -7,6 +7,10 @@ from llm_adapters.abstract_adapters.adapter import Adapter
 from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
 from llm_adapters.adapter_factory import AdapterFactory
 from llm_adapters.provider_adapters.ai21_sdk_chat_provider_adapter import AI21Model
+from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
+    AnthropicModel,
+    AnthropicSDKChatProviderAdapter,
+)
 from llm_adapters.provider_adapters.openai_sdk_chat_provider_adapter import OpenAIModel
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
@@ -29,10 +33,10 @@ class AdapterTestFactory:
 
 
 TEST_MODELS = (
-    OpenAIModel,
-    # AnthropicModel,
-    # TogetherModel,
     AI21Model,
+    OpenAIModel,
+    AnthropicModel,
+    # TogetherModel,
     # CerebrasModel,
     # CohereModel,
     # FireworksModel,
@@ -133,8 +137,8 @@ def get_response_content_from_vcr(vcr: VCR, adapter: Adapter) -> Any:
 
     if isinstance(adapter, OpenAISDKChatAdapter):
         return response["choices"][0]["message"]["content"]
-    # elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
-    #     return response["content"][0]["text"]
+    elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
+        return response["content"][0]["text"]
     # elif isinstance(adapter, CohereSDKChatProviderAdapter):
     #     return (
     #         response["message"]["content"][0]["text"]
@@ -159,38 +163,38 @@ def get_response_choices_from_vcr(vcr: VCR, adapter: Adapter) -> Any:
 
     if isinstance(adapter, OpenAISDKChatAdapter):
         return response["choices"]
-    # elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
-    #     anthropic_choices: list[Any] = []
+    elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
+        anthropic_choices: list[Any] = []
 
-    #     for content in response["content"]:
-    #         if content["type"] == "tool_use":
-    #             anthropic_choices.append(
-    #                 {
-    #                     "message": {
-    #                         "role": response["role"],
-    #                         "tool_calls": [
-    #                             {
-    #                                 "function": {
-    #                                     "name": content["name"],
-    #                                     "arguments": json.dumps(content["input"]),
-    #                                 },
-    #                             }
-    #                         ],
-    #                     }
-    #                 }
-    #             )
-    #         elif content["type"] == "text":
-    #             anthropic_choices.append(
-    #                 {
-    #                     "message": {
-    #                         "role": response["role"],
-    #                         "content": content["text"],
-    #                     }
-    #                 }
-    #             )
-    #         else:
-    #             raise ValueError(f"Unknown content type: {content['type']}")
-    #     return anthropic_choices
+        for content in response["content"]:
+            if content["type"] == "tool_use":
+                anthropic_choices.append(
+                    {
+                        "message": {
+                            "role": response["role"],
+                            "tool_calls": [
+                                {
+                                    "function": {
+                                        "name": content["name"],
+                                        "arguments": json.dumps(content["input"]),
+                                    },
+                                }
+                            ],
+                        }
+                    }
+                )
+            elif content["type"] == "text":
+                anthropic_choices.append(
+                    {
+                        "message": {
+                            "role": response["role"],
+                            "content": content["text"],
+                        }
+                    }
+                )
+            else:
+                raise ValueError(f"Unknown content type: {content['type']}")
+        return anthropic_choices
     # elif isinstance(adapter, CohereSDKChatProviderAdapter):
     #     # Parse the Cohere SDK response
     #     cohere_choices: list[Any] = []

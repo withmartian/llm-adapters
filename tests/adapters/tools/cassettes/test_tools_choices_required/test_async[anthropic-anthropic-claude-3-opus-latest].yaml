@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: '{"max_tokens":4096,"messages":[{"role":"user","content":"Generate random
+      number with tools specified, range 1-10"}],"model":"claude-3-opus-latest","stream":false}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '162'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - AsyncAnthropic/Python 0.45.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.45.2
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: '{"id":"msg_01Rpb19jemk9sudB8rtZBxeK","type":"message","role":"assistant","model":"claude-3-opus-20240229","content":[{"type":"text","text":"I''m
+        sorry, but I don''t have a built-in tool to generate random numbers. However,
+        I can suggest some ways you can generate a random number between 1 and 10:\n\n1.
+        If you have access to a programming language like Python, you can use the
+        `random` module to generate a random integer between 1 and 10 like this:\n\n   ```python\n   import
+        random\n   random_number = random.randint(1, 10)\n   ```\n\n2. If you''re
+        using a spreadsheet application like Microsoft Excel or Google Sheets, you
+        can use the `RANDBETWEEN` function to generate a random integer between 1
+        and 10 like this:\n\n   ```\n   =RANDBETWEEN(1, 10)\n   ```\n\n3. If you have
+        a physical tool like dice, you can roll a 10-sided die to get a random number
+        between 1 and 10.\n\n4. If you don''t have access to any tools, you can use
+        an online random number generator to get a random number between 1 and 10.
+        There are many websites that offer this service for free.\n\nI hope this helps!"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":260}}'
+    headers:
+      CF-RAY:
+      - 911eefa64ddc9fcb-SIN
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 14 Feb 2025 17:56:49 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Robots-Tag:
+      - none
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-02-14T17:56:40Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-02-14T17:56:49Z'
+      anthropic-ratelimit-tokens-limit:
+      - '6000000'
+      anthropic-ratelimit-tokens-remaining:
+      - '6000000'
+      anthropic-ratelimit-tokens-reset:
+      - '2025-02-14T17:56:40Z'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1241'
+      request-id:
+      - req_01HBe35viNtYhdMVztX3E1rE
+      via:
+      - 1.1 google
+    status:
+      code: 200
+      message: OK
+version: 1

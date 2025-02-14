@@ -9,7 +9,9 @@ from typing import (
     List,
     Literal,
     Optional,
+    TypedDict,
     Union,
+    Unpack,
 )
 
 from anthropic import Anthropic, AsyncAnthropic
@@ -34,7 +36,6 @@ from anthropic.types.tool_param import ToolParam
 from httpx import AsyncClient, Client, Limits, Timeout
 
 from openai.types.chat.chat_completion_chunk import Choice as ChoiceChunk, ChoiceDelta
-from pydantic import BaseModel
 
 from llm_adapters.abstract_adapters.sdk_chat_adapter import SDKChatAdapter
 from llm_adapters.constants import (
@@ -43,7 +44,7 @@ from llm_adapters.constants import (
     MAX_CONNECTIONS_PER_PROCESS,
     MAX_KEEPALIVE_CONNECTIONS_PER_PROCESS,
 )
-from llm_adapters.general_utils import process_image_url_anthropic
+from llm_adapters.general_utils import delete_none_values, process_image_url_anthropic
 from llm_adapters.types import (
     AdapterChatCompletion,
     AdapterChatCompletionChunk,
@@ -53,12 +54,13 @@ from llm_adapters.types import (
     Model,
     Provider,
     Vendor,
-    ChatCompletionMessageParam,
     ChatCompletionMessageToolCall,
-    Function,
+    FunctionCreate,
     Choice,
     ChatCompletionMessage,
     CompletionUsage,
+    NotGiven,
+    ChatCompletionCreateArgs,
 )
 
 
@@ -66,82 +68,41 @@ class AnthropicModel(Model):
     vendor_name: str = Vendor.anthropic.value
     provider_name: str = Provider.anthropic.value
 
-    supports_completion: bool = False
+    # TODO: fix vision
     supports_vision: bool = False
+    # TODO: fix tools
+    supports_tools: bool = False
+    # TODO: fix functions
+    supports_functions: bool = False
+
+    supports_completion: bool = False
     supports_n: bool = False
 
     can_system: bool = False
     can_empty_content: bool = False
 
 
-# TODO: check completion length
 MODELS: list[Model] = [
-    AnthropicModel(
-        name="claude-3-haiku-20240307",
-        cost=Cost(prompt=0.25e-6, completion=1.25e-6),
-        context_length=200000,
-        completion_length=4096,
-    ),
-    # AnthropicModel(
-    #     name="claude-3-haiku-latest",
-    #     cost=Cost(prompt=0.25e-6, completion=1.25e-6),
-    #     context_length=200000,
-    #     completion_length=4096,
-    # ),
-    AnthropicModel(
-        name="claude-3-sonnet-20240229",
-        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
-        context_length=200000,
-        completion_length=4096,
-    ),
-    # AnthropicModel(
-    #     name="claude-3-sonnet-latest",
-    #     cost=Cost(prompt=3.0e-6, completion=15.0e-6),
-    #     context_length=200000,
-    #     completion_length=4096,
-    # ),
-    AnthropicModel(
-        name="claude-3-opus-20240229",
-        cost=Cost(prompt=15.00e-6, completion=75.00e-6),
-        context_length=200000,
-        completion_length=4096,
-    ),
     AnthropicModel(
         name="claude-3-opus-latest",
         cost=Cost(prompt=15.00e-6, completion=75.00e-6),
         context_length=200000,
         completion_length=4096,
-    ),
-    AnthropicModel(
-        name="claude-3-5-haiku-20241022",
-        cost=Cost(prompt=0.80e-6, completion=4.00e-6),
-        context_length=200000,
-        completion_length=8192,
-        supports_vision=False,
-    ),
-    AnthropicModel(
-        name="claude-3-5-sonnet-20240620",
-        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
-        context_length=200000,
-        completion_length=4096,
-    ),
-    AnthropicModel(
-        name="claude-3-5-sonnet-20241022",
-        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
-        context_length=200000,
-        completion_length=4096,
+        # supports_vision=True,
     ),
     AnthropicModel(
         name="claude-3-5-haiku-latest",
-        cost=Cost(prompt=1.00e-6, completion=5.00e-6),
+        cost=Cost(prompt=0.80e-6, completion=4.00e-6),
         context_length=200000,
         completion_length=8192,
+        # supports_vision=False,
     ),
     AnthropicModel(
         name="claude-3-5-sonnet-latest",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
         completion_length=4096,
+        # supports_vision=True,
     ),
 ]
 
@@ -161,7 +122,8 @@ FINISH_REASON_MAPPING: Dict[AnthropicFinishReason, AdapterFinishReason] = {
 }
 
 
-class AnthropicCreate(BaseModel):
+class AnthropicCreate(TypedDict, total=False):
+    model: str
     max_tokens: int
     messages: Iterable[MessageParam]
     metadata: Optional[Metadata] = None
@@ -231,8 +193,14 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
         return temperature / 2
 
     def _get_params(
-        self, messages: list[ChatCompletionMessageParam], **kwargs: Any
+        self,
+        *,
+        stream: Optional[Literal[False]] | Literal[True] | NotGiven,
+        **kwargs: Unpack[ChatCompletionCreateArgs],
     ) -> dict[str, Any]:
+        messages = list(kwargs["messages"])
+        kwargs["messages"] = messages
+
         system_prompt: Optional[Union[str, Iterable[TextBlockParam]]] = None
 
         # Extract system prompt if it's the first message, only works for str
@@ -242,11 +210,11 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
             and isinstance(messages[0]["content"], str)
         ):
             system_prompt = messages[0]["content"]
-            messages = messages[1:]
+            kwargs["messages"] = messages[1:]
 
-        params = super()._get_params(messages, **kwargs)
+        params = super()._get_params(stream=stream, **kwargs)
 
-        anthropic_messages = params["messages"]
+        messages = params["messages"]
 
         # Remove trailing whitespace from the last assistant message
         if len(messages) and messages[-1]["role"] == ConversationRole.assistant.value:
@@ -261,7 +229,7 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
                 messages[-1]["content"] = messages_content_list
 
         # Include base64-encoded images in the request
-        for message in anthropic_messages:
+        for message in messages:
             if (
                 isinstance(message["content"], list)
                 and message["role"] == ConversationRole.user.value
@@ -315,19 +283,22 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
                 type="tool",
             )
 
-        return AnthropicCreate(
-            max_tokens=params.get("max_tokens", self.get_model().completion_length),
-            messages=anthropic_messages,
-            metadata=params.get("metadata"),
-            stop_sequences=params.get("stop_sequences"),
-            stream=bool(params.get("stream")),
-            system=system_prompt,
-            temperature=params.get("temperature"),
-            tool_choice=anthropic_tool_choice,
-            tools=anthropic_tools,
-            top_k=params.get("top_k"),
-            top_p=params.get("top_p"),
-        ).model_dump()
+        return delete_none_values(
+            AnthropicCreate(
+                model=self.get_model().get_api_path(),
+                max_tokens=params.get("max_tokens", self.get_model().completion_length),
+                messages=messages,
+                metadata=params.get("metadata"),
+                stop_sequences=params.get("stop_sequences"),
+                stream=bool(params.get("stream")),
+                system=system_prompt,
+                temperature=params.get("temperature"),
+                tool_choice=anthropic_tool_choice,
+                tools=anthropic_tools,
+                top_k=params.get("top_k"),
+                top_p=params.get("top_p"),
+            )
+        )
 
     def _extract_response(
         self, request: Any, response: Message
@@ -360,9 +331,9 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
                                 ChatCompletionMessageToolCall(
                                     id=content.id,
                                     type="function",
-                                    function=Function(
+                                    function=FunctionCreate(
                                         name=content.name,
-                                        arguments=json.dumps(content.input),
+                                        parameters=json.dumps(content.input),
                                     ),
                                 )
                             ],
