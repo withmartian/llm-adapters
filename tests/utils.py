@@ -11,6 +11,9 @@ from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
     AnthropicModel,
     AnthropicSDKChatProviderAdapter,
 )
+from llm_adapters.provider_adapters.cerebras_sdk_chat_provider_adapter import (
+    CerebrasModel,
+)
 from llm_adapters.provider_adapters.openai_sdk_chat_provider_adapter import OpenAIModel
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
@@ -36,8 +39,8 @@ TEST_MODELS = (
     AI21Model,
     OpenAIModel,
     AnthropicModel,
+    CerebrasModel,
     # TogetherModel,
-    # CerebrasModel,
     # CohereModel,
     # FireworksModel,
     # MoescapeModel,

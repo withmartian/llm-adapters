@@ -8,6 +8,7 @@ from llm_adapters.provider_adapters import (
     # GeminiSDKChatProviderAdapter,
     AI21SDKChatProviderAdapter,
     OpenAISDKChatProviderAdapter,
+    CerebrasSDKChatProviderAdapter,
 )
 from llm_adapters.types import Model, ModelNotFoundException
 
@@ -16,6 +17,7 @@ ADAPTER_CLASSES: list[type[Adapter]] = [
     # GeminiSDKChatProviderAdapter,
     AI21SDKChatProviderAdapter,
     OpenAISDKChatProviderAdapter,
+    CerebrasSDKChatProviderAdapter,
 ]
 
 

@@ -56,7 +56,7 @@
 #     can_top_p: bool = False
 #     can_top_k: bool = False
 
-#     def _get_api_path(self) -> str:
+#     def get_api_path(self) -> str:
 #         return self.name
 
 

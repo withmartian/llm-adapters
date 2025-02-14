@@ -2,7 +2,7 @@ from .ai21_sdk_chat_provider_adapter import AI21SDKChatProviderAdapter
 from .anthropic_sdk_chat_provider_adapter import AnthropicSDKChatProviderAdapter
 
 # from .azure_sdk_chat_provider_adapter import AzureSDKChatProviderAdapter
-# from .cerebras_sdk_chat_provider_adapter import CerebrasSDKChatProviderAdapter
+from .cerebras_sdk_chat_provider_adapter import CerebrasSDKChatProviderAdapter
 # from .cohere_sdk_chat_provider_adapter import CohereSDKChatProviderAdapter
 
 # from .databricks_sdk_chat_provider_adapter import DatabricksSDKChatProviderAdapter
@@ -24,8 +24,8 @@ from .openai_sdk_chat_provider_adapter import OpenAISDKChatProviderAdapter
 __all__ = [
     "AI21SDKChatProviderAdapter",
     "AnthropicSDKChatProviderAdapter",
+    "CerebrasSDKChatProviderAdapter",
     # # "AzureSDKChatProviderAdapter",
-    # "CerebrasSDKChatProviderAdapter",
     # "CohereSDKChatProviderAdapter",
     # # "DatabricksSDKChatProviderAdapter",
     # "DeepInfraSDKChatProviderAdapter",
@@ -36,8 +36,8 @@ __all__ = [
     # "GroqSDKChatProviderAdapter",
     # "LeptonSDKChatProviderAdapter",
     # "MoonshotSDKChatProviderAdapter",
-    # "OctoaiSDKChatProviderAdapter",
     "OpenAISDKChatProviderAdapter",
+    # "OctoaiSDKChatProviderAdapter",
     # "OpenRouterSDKChatProviderAdapter",
     # "PerplexitySDKChatProviderAdapter",
     # "TogetherSDKChatProviderAdapter",

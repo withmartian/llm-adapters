@@ -5,7 +5,7 @@
 # class OpenRouterModel(Model):
 #     provider_name: str = Provider.openrouter.value
 
-#     def _get_api_path(self) -> str:
+#     def get_api_path(self) -> str:
 #         return f"{self.vendor_name}/{self.name}"
 
 
