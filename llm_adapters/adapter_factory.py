@@ -5,19 +5,23 @@ from llm_adapters.abstract_adapters.provider_adapter_mixin import ProviderAdapte
 
 from llm_adapters.provider_adapters import (
     AnthropicSDKChatProviderAdapter,
-    # GeminiSDKChatProviderAdapter,
+    GeminiSDKChatProviderAdapter,
     AI21SDKChatProviderAdapter,
     OpenAISDKChatProviderAdapter,
     CerebrasSDKChatProviderAdapter,
+    CohereSDKChatProviderAdapter,
+    DeepInfraSDKChatProviderAdapter,
 )
 from llm_adapters.types import Model, ModelNotFoundException
 
 ADAPTER_CLASSES: list[type[Adapter]] = [
     AnthropicSDKChatProviderAdapter,
-    # GeminiSDKChatProviderAdapter,
+    GeminiSDKChatProviderAdapter,
     AI21SDKChatProviderAdapter,
     OpenAISDKChatProviderAdapter,
     CerebrasSDKChatProviderAdapter,
+    CohereSDKChatProviderAdapter,
+    DeepInfraSDKChatProviderAdapter,
 ]
 
 

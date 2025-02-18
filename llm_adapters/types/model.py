@@ -27,6 +27,7 @@ class Provider(str, Enum):
     vertex = "vertex"
     bigmodel = "bigmodel"
     tensoropera = "tensoropera"
+    xai = "xai"
 
 
 class Vendor(str, Enum):
@@ -37,6 +38,7 @@ class Vendor(str, Enum):
     mixtral = "mixtral"
     pygmalionai = "pygmalionai"
     qwen = "qwen"
+    Qwen = "Qwen"  # For Deepseek
     openai = "openai"
     anthropic = "anthropic"
     cohere = "cohere"
@@ -55,6 +57,7 @@ class Vendor(str, Enum):
     moescape = "moescape"
     bigmodel = "bigmodel"
     deepseek = "deepseek-ai"
+    grok = "grok"
 
 
 class ConversationRole(str, Enum):

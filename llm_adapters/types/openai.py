@@ -1,3 +1,6 @@
+# TODO: Remove this once openai types are updated
+# mypy: ignore-errors
+
 from typing import Mapping
 from openai import NOT_GIVEN, NotGiven
 from openai.types.completion import Completion
@@ -12,6 +15,9 @@ from openai.types.chat.completion_create_params import (
     ResponseFormat,
 )
 
+from openai.types.chat.chat_completion_message_tool_call import (
+    Function as FunctionToolCall,
+)
 from openai.types.chat.chat_completion_modality import ChatCompletionModality
 from openai.types.chat.chat_completion_audio_param import ChatCompletionAudioParam
 from openai.types.chat.chat_completion_prediction_content_param import (
@@ -30,6 +36,7 @@ from openai.types.chat.chat_completion_tool_param import ChatCompletionToolParam
 from openai.types.chat.chat_completion_message_tool_call import (
     ChatCompletionMessageToolCall,
 )
+from openai.types.chat.chat_completion_chunk import Choice as ChoiceChunk, ChoiceDelta
 from openai.types.chat.chat_completion import (
     Choice,
     ChatCompletionMessage,
@@ -60,6 +67,7 @@ __all__ = [
     "ChatCompletionAudioParam",
     "FunctionCall",
     "FunctionCreate",
+    "FunctionToolCall",
     "ChatCompletionModality",
     "ChatCompletionPredictionContentParam",
     "ResponseFormat",
@@ -72,4 +80,6 @@ __all__ = [
     "ChatCompletionMessage",
     "CompletionUsage",
     "ChatCompletionUserMessageParam",
+    "ChoiceChunk",
+    "ChoiceDelta",
 ]

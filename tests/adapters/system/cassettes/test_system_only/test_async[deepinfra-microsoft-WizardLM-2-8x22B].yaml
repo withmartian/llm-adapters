@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"microsoft/WizardLM-2-8x22B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '117'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-71f0aff90cbb481cb94e1fe73f4ba925","object":"chat.completion","created":1739905771,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"message":{"role":"assistant","content":"
+        It looks like you haven''t provided a question or a statement for me to respond
+        to. If you have a question or need assistance with something, please feel
+        free to ask, and I''ll do my best to help you out! Whether it''s information
+        you''re seeking, advice on a topic, or just a friendly conversation, I''m
+        here to assist. What can I do for you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":93,"completion_tokens":84,"estimated_cost":4.6500000000000005e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '726'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 18 Feb 2025 19:09:31 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

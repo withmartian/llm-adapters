@@ -14,9 +14,22 @@ from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
 from llm_adapters.provider_adapters.cerebras_sdk_chat_provider_adapter import (
     CerebrasModel,
 )
+from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
+    CohereModel,
+    CohereSDKChatProviderAdapter,
+)
+from llm_adapters.provider_adapters.deepinfra_sdk_chat_provider_adapter import (
+    DeepInfraModel,
+)
+from llm_adapters.provider_adapters.gemini_sdk_chat_provider_adapter import (
+    GeminiModel,
+    GeminiSDKChatProviderAdapter,
+)
 from llm_adapters.provider_adapters.openai_sdk_chat_provider_adapter import OpenAIModel
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
+
+# from llm_adapters.provider_adapters.together_sdk_chat_provider_adapter import TogetherModel
 
 
 class AdapterTestFactory:
@@ -40,8 +53,10 @@ TEST_MODELS = (
     OpenAIModel,
     AnthropicModel,
     CerebrasModel,
+    CohereModel,
+    DeepInfraModel,
+    GeminiModel,
     # TogetherModel,
-    # CohereModel,
     # FireworksModel,
     # MoescapeModel,
     # GeminiModel,
@@ -142,14 +157,14 @@ def get_response_content_from_vcr(vcr: VCR, adapter: Adapter) -> Any:
         return response["choices"][0]["message"]["content"]
     elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
         return response["content"][0]["text"]
-    # elif isinstance(adapter, CohereSDKChatProviderAdapter):
-    #     return (
-    #         response["message"]["content"][0]["text"]
-    #         if response.get("message") and response["message"].get("content")
-    #         else ""
-    #     )
-    # elif isinstance(adapter, GeminiSDKChatProviderAdapter):
-    #     return response["candidates"][0]["content"]["parts"][0]["text"]
+    elif isinstance(adapter, CohereSDKChatProviderAdapter):
+        return (
+            response["message"]["content"][0]["text"]
+            if response.get("message") and response["message"].get("content")
+            else ""
+        )
+    elif isinstance(adapter, GeminiSDKChatProviderAdapter):
+        return response["candidates"][0]["content"]["parts"][0]["text"]
     else:
         raise ValueError("Unknown adapter")
 
@@ -238,7 +253,7 @@ def get_response_choices_from_vcr(vcr: VCR, adapter: Adapter) -> Any:
 
     # return cohere_choices
 
-    # elif isinstance(adapter, GeminiSDKChatProviderAdapter):
-    # return response["candidates"][0]["content"]["parts"][0]["text"]
+    elif isinstance(adapter, GeminiSDKChatProviderAdapter):
+        return response["candidates"][0]["content"]["parts"][0]["text"]
     else:
         raise ValueError("Unknown adapter")

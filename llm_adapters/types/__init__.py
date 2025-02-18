@@ -12,6 +12,7 @@ from llm_adapters.types.openai import (
     ChatCompletionAudioParam,
     FunctionCall,
     FunctionCreate,
+    FunctionToolCall,
     ChatCompletionModality,
     ChatCompletionPredictionContentParam,
     ResponseFormat,
@@ -24,6 +25,8 @@ from llm_adapters.types.openai import (
     ChatCompletionMessage,
     CompletionUsage,
     ChatCompletionUserMessageParam,
+    ChoiceChunk,
+    ChoiceDelta,
 )
 
 from llm_adapters.types.request import (
@@ -113,4 +116,11 @@ __all__ = [
     "ChatCompletionCreateArgs",
     "CompletionCreateArgs",
     "ChatCompletionUserMessageParam",
+    "ChoiceChunk",
+    "ChoiceDelta",
+    "ChatCompletionMessageToolCall",
+    "Choice",
+    "ChatCompletionMessage",
+    "CompletionUsage",
+    "FunctionToolCall",
 ]

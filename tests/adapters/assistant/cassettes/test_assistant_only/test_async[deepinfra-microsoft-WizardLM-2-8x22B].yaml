@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"microsoft/WizardLM-2-8x22B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '120'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-df07c4b7a7544638839cead16705e276","object":"chat.completion","created":1739905963,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"message":{"role":"assistant","content":"
+        It seems like you''ve entered a pair of double quotes. If you''re looking
+        to start a conversation or need assistance with something, feel free to let
+        me know what you need help with, and I''ll do my best to assist you! If you''re
+        coding and encountering issues with double quotes in your code, please provide
+        more context or the specific problem, and I''ll be glad to help you out.","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":104,"completion_tokens":87,"estimated_cost":5.2000000000000004e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '760'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 18 Feb 2025 19:12:43 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

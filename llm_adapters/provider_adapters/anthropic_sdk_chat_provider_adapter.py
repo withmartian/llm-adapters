@@ -12,6 +12,7 @@ from typing import (
     TypedDict,
     Union,
     Unpack,
+    cast,
 )
 
 from anthropic import Anthropic, AsyncAnthropic
@@ -55,7 +56,7 @@ from llm_adapters.types import (
     Provider,
     Vendor,
     ChatCompletionMessageToolCall,
-    FunctionCreate,
+    FunctionToolCall,
     Choice,
     ChatCompletionMessage,
     CompletionUsage,
@@ -91,6 +92,13 @@ MODELS: list[Model] = [
         # supports_vision=True,
     ),
     AnthropicModel(
+        name="claude-3-opus-20240229",
+        cost=Cost(prompt=15.00e-6, completion=75.00e-6),
+        context_length=200000,
+        completion_length=4096,
+        # supports_vision=True,
+    ),
+    AnthropicModel(
         name="claude-3-5-haiku-latest",
         cost=Cost(prompt=0.80e-6, completion=4.00e-6),
         context_length=200000,
@@ -98,7 +106,28 @@ MODELS: list[Model] = [
         # supports_vision=False,
     ),
     AnthropicModel(
+        name="claude-3-5-haiku-20241022",
+        cost=Cost(prompt=0.80e-6, completion=4.00e-6),
+        context_length=200000,
+        completion_length=8192,
+        # supports_vision=False,
+    ),
+    AnthropicModel(
         name="claude-3-5-sonnet-latest",
+        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
+        context_length=200000,
+        completion_length=4096,
+        # supports_vision=True,
+    ),
+    AnthropicModel(
+        name="claude-3-5-sonnet-20241022",
+        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
+        context_length=200000,
+        completion_length=4096,
+        # supports_vision=True,
+    ),
+    AnthropicModel(
+        name="claude-3-5-sonnet-20240620",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
         completion_length=4096,
@@ -126,15 +155,15 @@ class AnthropicCreate(TypedDict, total=False):
     model: str
     max_tokens: int
     messages: Iterable[MessageParam]
-    metadata: Optional[Metadata] = None
-    stop_sequences: Optional[List[str]] = None
-    stream: Optional[Literal[False] | Literal[True]] = None
-    system: Optional[Union[str, Iterable[TextBlockParam]]] = None
-    temperature: Optional[float] = None
-    tool_choice: Optional[ToolChoice] = None
-    tools: Optional[Iterable[ToolParam]] = None
-    top_k: Optional[int] = None
-    top_p: Optional[float] = None
+    metadata: Optional[Metadata]
+    stop_sequences: Optional[List[str]]
+    stream: Optional[Literal[False] | Literal[True]]
+    system: Optional[Union[str, Iterable[TextBlockParam]]]
+    temperature: Optional[float]
+    tool_choice: Optional[ToolChoice]
+    tools: Optional[Iterable[ToolParam]]
+    top_k: Optional[int]
+    top_p: Optional[float]
 
 
 class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic]):
@@ -198,38 +227,43 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
         stream: Optional[Literal[False]] | Literal[True] | NotGiven,
         **kwargs: Unpack[ChatCompletionCreateArgs],
     ) -> dict[str, Any]:
-        messages = list(kwargs["messages"])
-        kwargs["messages"] = messages
+        openai_messages = list(kwargs["messages"])
+        kwargs["messages"] = openai_messages
 
         system_prompt: Optional[Union[str, Iterable[TextBlockParam]]] = None
 
         # Extract system prompt if it's the first message, only works for str
         if (
-            len(messages)
-            and messages[0]["role"] == ConversationRole.system.value
-            and isinstance(messages[0]["content"], str)
+            len(openai_messages)
+            and openai_messages[0]["role"] == ConversationRole.system.value
+            and isinstance(openai_messages[0]["content"], str)
         ):
-            system_prompt = messages[0]["content"]
-            kwargs["messages"] = messages[1:]
+            system_prompt = openai_messages[0]["content"]
+            kwargs["messages"] = openai_messages[1:]
 
         params = super()._get_params(stream=stream, **kwargs)
 
-        messages = params["messages"]
+        anthropic_messages = params["messages"]
 
         # Remove trailing whitespace from the last assistant message
-        if len(messages) and messages[-1]["role"] == ConversationRole.assistant.value:
-            if isinstance(messages[-1]["content"], str):
-                messages[-1]["content"] = messages[-1]["content"].rstrip()
-            elif messages[-1]["content"]:
-                messages_content_list = list(messages[-1]["content"])
+        if (
+            len(anthropic_messages)
+            and anthropic_messages[-1]["role"] == ConversationRole.assistant.value
+        ):
+            if isinstance(anthropic_messages[-1]["content"], str):
+                anthropic_messages[-1]["content"] = anthropic_messages[-1][
+                    "content"
+                ].rstrip()
+            elif anthropic_messages[-1]["content"]:
+                messages_content_list = list(anthropic_messages[-1]["content"])
                 if messages_content_list[-1]["type"] == "text":
                     messages_content_list[-1]["text"] = messages_content_list[-1][
                         "text"
                     ].rstrip()
-                messages[-1]["content"] = messages_content_list
+                anthropic_messages[-1]["content"] = messages_content_list
 
         # Include base64-encoded images in the request
-        for message in messages:
+        for message in anthropic_messages:
             if (
                 isinstance(message["content"], list)
                 and message["role"] == ConversationRole.user.value
@@ -283,22 +317,22 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
                 type="tool",
             )
 
-        return delete_none_values(
-            AnthropicCreate(
-                model=self.get_model().get_api_path(),
-                max_tokens=params.get("max_tokens", self.get_model().completion_length),
-                messages=messages,
-                metadata=params.get("metadata"),
-                stop_sequences=params.get("stop_sequences"),
-                stream=bool(params.get("stream")),
-                system=system_prompt,
-                temperature=params.get("temperature"),
-                tool_choice=anthropic_tool_choice,
-                tools=anthropic_tools,
-                top_k=params.get("top_k"),
-                top_p=params.get("top_p"),
-            )
-        )
+        anthropic_create: AnthropicCreate = {
+            "model": self.get_model().get_api_path(),
+            "max_tokens": params.get("max_tokens", self.get_model().completion_length),
+            "messages": anthropic_messages,
+            "metadata": params.get("metadata"),
+            "stop_sequences": params.get("stop_sequences"),
+            "stream": bool(params.get("stream")),
+            "system": system_prompt,
+            "temperature": params.get("temperature"),
+            "tool_choice": anthropic_tool_choice,
+            "tools": anthropic_tools,
+            "top_k": params.get("top_k"),
+            "top_p": params.get("top_p"),
+        }
+
+        return delete_none_values(cast(dict[str, Any], anthropic_create))
 
     def _extract_response(
         self, request: Any, response: Message
@@ -331,9 +365,9 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
                                 ChatCompletionMessageToolCall(
                                     id=content.id,
                                     type="function",
-                                    function=FunctionCreate(
+                                    function=FunctionToolCall(
                                         name=content.name,
-                                        parameters=json.dumps(content.input),
+                                        arguments=json.dumps(content.input),
                                     ),
                                 )
                             ],
