@@ -430,6 +430,8 @@ class SDKChatAdapter(
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
         **kwargs: Unpack[CompletionCreateArgs],
     ) -> AdapterCompletion | AdapterStreamSyncCompletion:
+        kwargs.pop("model", None)
+
         response = self._call_completion_sync()(
             model=self.get_model().get_api_path(), stream=stream, **kwargs
         )
@@ -470,6 +472,8 @@ class SDKChatAdapter(
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
         **kwargs: Unpack[CompletionCreateArgs],
     ) -> AdapterCompletion | AdapterStreamAsyncCompletion:
+        kwargs.pop("model", None)
+
         response = await self._call_completion_async()(
             model=self.get_model().get_api_path(), stream=stream, **kwargs
         )

@@ -29,10 +29,11 @@ from llm_adapters.types import (
     ModelProperties,
 )
 from llm_adapters.adapter_factory import AdapterFactory
-from llm_adapters.client import OpenAI
+from llm_adapters.client import OpenAI, AsyncOpenAI
 
 __all__ = [
     "OpenAI",
+    "AsyncOpenAI",
     "general_utils",
     "ApiKeyAdapterMixin",
     "Adapter",

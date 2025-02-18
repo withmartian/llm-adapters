@@ -19,7 +19,7 @@ from llm_adapters.types import (
 )
 
 
-class Completion:
+class Completions:
     @overload
     def create(
         self,
@@ -54,7 +54,7 @@ class Completion:
         )
 
 
-class AsyncCompletion:
+class AsyncCompletions:
     @overload
     async def create(
         self,
@@ -89,7 +89,7 @@ class AsyncCompletion:
         )
 
 
-class ChatCompletion:
+class ChatCompletions:
     @overload
     def create(
         self,
@@ -127,7 +127,7 @@ class ChatCompletion:
         )
 
 
-class AsyncChatCompletion:
+class AsyncChatCompletions:
     @overload
     async def create(
         self,
@@ -169,48 +169,48 @@ class AsyncChatCompletion:
 
 class Chat:
     def __init__(self) -> None:
-        self._chat_completion = ChatCompletion()
+        self._chat_completions = ChatCompletions()
 
     @property
-    def completion(self) -> ChatCompletion:
-        return self._chat_completion
+    def completions(self) -> ChatCompletions:
+        return self._chat_completions
 
 
 class AsyncChat:
     def __init__(self) -> None:
-        self._chat_completion = AsyncChatCompletion()
+        self._chat_completions = AsyncChatCompletions()
 
     @property
-    def completion(self) -> AsyncChatCompletion:
-        return self._chat_completion
+    def completions(self) -> AsyncChatCompletions:
+        return self._chat_completions
 
 
 class OpenAI:
     def __init__(self, **kwargs: Any) -> None:
         self._chat = Chat()
-        self._completion = Completion()
+        self._completions = Completions()
 
     @property
     def chat(self) -> Chat:
         return self._chat
 
     @property
-    def completion(self) -> Completion:
-        return self._completion
+    def completions(self) -> Completions:
+        return self._completions
 
 
 class AsyncOpenAI:
     def __init__(self, **kwargs: Any) -> None:
         self._chat = AsyncChat()
-        self._completion = AsyncCompletion()
+        self._completions = AsyncCompletions()
 
     @property
     def chat(self) -> AsyncChat:
         return self._chat
 
     @property
-    def completion(self) -> AsyncCompletion:
-        return self._completion
+    def completions(self) -> AsyncCompletions:
+        return self._completions
 
 
 __all__ = ["OpenAI", "AsyncOpenAI"]
