@@ -1,0 +1,118 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-R1","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '140'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"915813c36b15e5a5\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740154978,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
+        \       \"role\": \"assistant\",\n        \"content\": \"<think>\\nOkay, the
+        user just said, \\\"Hi, output simple json\\\". Let me figure out what they
+        need.\\n\\nFirst, they greeted with \\\"Hi\\\", so maybe they want a friendly
+        response. Then they're asking for a simple JSON. I need to make sure I provide
+        a valid JSON structure that's straightforward.\\n\\nThe user didn't specify
+        the content, so I should create a generic example. Common examples include
+        user info, to-do lists, or basic objects. Let's go with something like a person's
+        details. Keys like \\\"name\\\", \\\"age\\\", \\\"city\\\" are simple and
+        clear.\\n\\nMake sure the JSON syntax is correct: curly braces, quotes around
+        keys and string values, commas separating the fields. Don't use any trailing
+        commas. Also, remember to set the content type to application/json in the
+        response.\\n\\nWait, the user might need it as code without markdown. So I
+        should format it properly here. Let me check again: {\\\"name\\\": \\\"John
+        Doe\\\", \\\"age\\\": 30, \\\"city\\\": \\\"New York\\\"} \u2013 that's simple
+        enough. Maybe add an array for hobbies to show a bit more structure? But they
+        said simple, so maybe keep it basic. Alright, go with the initial example.
+        Ensure proper formatting and validity.\\n</think>\\n\\n```json\\n{\\n  \\\"response\\\":
+        \\\"Hello! Here's a simple JSON example:\\\",\\n  \\\"data\\\": {\\n    \\\"name\\\":
+        \\\"John Doe\\\",\\n    \\\"age\\\": 30,\\n    \\\"city\\\": \\\"New York\\\"\\n
+        \ }\\n}\\n```\",\n        \"tool_calls\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        8,\n    \"total_tokens\": 322,\n    \"completion_tokens\": 314\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 915813c36b15e5a5-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 16:22:58 GMT
+      ETag:
+      - W/"6fd-gGpsK4JlpOt1DXhxih6rZa0AAMU"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1789'
+      x-amzn-trace-id:
+      - b6e5c633-2946-4dcb-86d1-f18beb5ce85f-noamzn
+      x-api-call-end:
+      - '2025-02-21T16:22:58.272Z'
+      x-api-call-start:
+      - '2025-02-21T16:22:47.719Z'
+      x-api-received:
+      - '2025-02-21T16:22:47.711Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '10'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '19'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

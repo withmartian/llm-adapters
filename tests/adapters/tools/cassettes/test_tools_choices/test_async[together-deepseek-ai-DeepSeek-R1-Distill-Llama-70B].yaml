@@ -1,0 +1,158 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '461'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"91582485fcdc6b38\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740155654,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
+        \     \"seed\": 13843486642470156000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"<think>\\nOkay, so I need to generate a random number between 1 and 10 using
+        the tools I have. Hmm, I don't have any specialized tools, but I can think
+        of a few methods. Let me see... Maybe I can use a dice? But I don't have a
+        10-sided die, only a regular 6-sided one. Wait, I can roll it twice. The first
+        roll could represent the tens place and the second the ones place. But since
+        I only need numbers up to 10, maybe that's overcomplicating it. Alternatively,
+        I could just roll the die once and take the result as is if it's between 1
+        and 10, but since it's only 6 sides, that might not cover the whole range.
+        Maybe I can assign numbers beyond 6 to other values. Like, if I roll a 7,
+        I can count it as 10, 8 as 9, and so on. That could work.\\n\\nAnother idea
+        is to use a deck of cards. I can shuffle the deck and draw a card. If it's
+        a number card, I can take its value. If it's a face card, I can assign it
+        a number, like Jack as 11, Queen as 12, King as 13, but since I need only
+        up to 10, maybe I can ignore face cards or subtract a certain number. Or maybe
+        just take the numeric cards from Ace to 10 and exclude the face cards. That
+        way, each draw gives me a number between 1 and 10.\\n\\nI could also use a
+        random number generator on my phone or computer, but the user mentioned using
+        tools I have, so maybe I should stick to physical tools. Wait, I have a watch
+        with a second hand. I can set a timer for 10 seconds and note where the second
+        hand stops. Each second represents a number from 1 to 10. That might be a
+        bit tricky, but it could work.\\n\\nAlternatively, I could use a random object
+        with more than 10 sides, like a 12-sided die, but I don't have one. Maybe
+        I can use a spinner divided into 10 equal sections, but again, I don't have
+        that. So perhaps the deck of cards is the best bet. Let me outline the steps:
+        shuffle the deck, draw the top card, if it's a number card, take its value.
+        If it's a face card, maybe I can redraw or assign a number. But since I need
+        exactly 1-10, maybe I can just take the numeric value modulo 10, but that
+        might complicate things.\\n\\nWait, another idea: I can use a 20-sided die,
+        but I don't have that either. Maybe I can use a calculator and generate a
+        random number by dividing the current time by something, but that's not very
+        random. Or I can use the digits of the current time, like the seconds, but
+        that's limited.\\n\\nI think the deck of cards is the most straightforward.
+        So, step by step: shuffle the deck, remove the Jokers, draw a card. If it's
+        a number card, that's my number. If it's a face card, I can assign it a value,
+        like Jack=10, Queen=10, King=10, but that might not give a uniform distribution.
+        Alternatively, I can ignore face cards and redraw until I get a number card.
+        That way, I ensure the number is between 1 and 10.\\n\\nAlternatively, I can
+        use two dice. Roll one die for the tens place and another for the ones place,
+        but since I only need up to 10, maybe I can cap it. For example, if the first
+        die is 1, the second die can be 0-9, but since dice only go up to 6, I can
+        adjust. Wait, this might get too complicated. Maybe it's better to stick with
+        the deck of cards.\\n\\nSo, to summarize, I'll shuffle a deck of cards, draw
+        the top card, and if it's a number card, that's my number. If it's a face
+        card, I'll assign it a value or redraw. That should give me a random number
+        between 1 and 10.\\n</think>\\n\\nTo generate a random number between 1 and
+        10 using a deck of cards, follow these steps:\\n\\n1. **Shuffle the Deck**:
+        Thoroughly shuffle a standard deck of 52 playing cards, ensuring a random
+        order.\\n\\n2. **Remove Jokers**: Take out any Jokers or non-numbered cards
+        to focus only on the 52 cards.\\n\\n3. **Draw a Card**: Draw the top card
+        from the shuffled deck.\\n\\n4. **Determine the Number**:\\n   - If the card
+        is a number card (Ace through 10), the number on the card is your random number.\\n
+        \  - If the card is a face card (Jack, Queen, King), you can either assign
+        it a value (e.g., Jack=11, Queen=12, King=13) and then take the result modulo
+        10, or redraw until you get a number card.\\n\\nThis method ensures a random
+        number between 1 and 10 using a readily available tool.\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 15,\n    \"completion_tokens\":
+        1069,\n    \"total_tokens\": 1084\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 91582485fcdc6b38-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 16:34:29 GMT
+      ETag:
+      - W/"122e-DVP6D32E2xp7OWjoI3t5fgtPWW4"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '4654'
+      x-amzn-trace-id:
+      - e0271da2-2064-4fe0-9a72-e43ec93544f5-noamzn
+      x-api-call-end:
+      - '2025-02-21T16:34:29.591Z'
+      x-api-call-start:
+      - '2025-02-21T16:34:15.338Z'
+      x-api-received:
+      - '2025-02-21T16:34:14.332Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

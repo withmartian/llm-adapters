@@ -1,0 +1,110 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '182'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"915811116e11468a\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740154857,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\":
+        17735210119737590000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"<think>\\nOkay,
+        the user keeps saying \\\"Hi\\\" repeatedly. They started with \\\"Hi\\\",
+        I responded with \\\"Hi\\\", then they said \\\"Hi\\\" again, and I did the
+        same. Now they've sent another \\\"Hi\\\". Maybe they're testing if I'll keep
+        responding the same way or if there's a different response.\\n\\nI should
+        consider why they're repeating the same message. It could be a test, a connection
+        issue, or maybe they're just being playful. I need to respond politely but
+        also try to move the conversation forward. Let me acknowledge their greeting
+        and ask how I can assist them today. That way, I'm showing I'm attentive and
+        ready to help, which might encourage them to state their actual request.\\n</think>\\n\\nHi!
+        It looks like you're saying hello. \U0001F60A How can I assist you today?\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        12,\n    \"completion_tokens\": 171,\n    \"total_tokens\": 183\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 915811116e11468a-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 16:21:02 GMT
+      ETag:
+      - W/"4dd-qh+zxHGSO/epDuMRYpw0DPBRVKo"
+      Retry-After:
+      - '30'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1245'
+      x-amzn-trace-id:
+      - 0e240654-a7e8-43d6-b0c8-6571e9fc820c-noamzn
+      x-api-call-end:
+      - '2025-02-21T16:21:02.520Z'
+      x-api-call-start:
+      - '2025-02-21T16:20:57.317Z'
+      x-api-received:
+      - '2025-02-21T16:20:57.305Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '7'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '209'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '30'
+    status:
+      code: 200
+      message: OK
+version: 1

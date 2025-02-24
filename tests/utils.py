@@ -29,6 +29,10 @@ from llm_adapters.provider_adapters.openai_sdk_chat_provider_adapter import Open
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
 
+from llm_adapters.provider_adapters.together_sdk_chat_provider_adapter import (
+    TogetherModel,
+)
+
 # from llm_adapters.provider_adapters.together_sdk_chat_provider_adapter import TogetherModel
 
 
@@ -56,7 +60,7 @@ TEST_MODELS = (
     CohereModel,
     DeepInfraModel,
     GeminiModel,
-    # TogetherModel,
+    TogetherModel,
     # FireworksModel,
     # MoescapeModel,
     # GeminiModel,

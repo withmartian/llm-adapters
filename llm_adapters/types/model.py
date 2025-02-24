@@ -31,6 +31,7 @@ class Provider(str, Enum):
 
 
 class Vendor(str, Enum):
+    nvidia = "nvidia"
     meta_llama = "meta-llama"
     perplexity = "perplexity"
     databricks = "databricks"

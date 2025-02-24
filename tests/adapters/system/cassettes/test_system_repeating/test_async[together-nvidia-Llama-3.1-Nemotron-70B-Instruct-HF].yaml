@@ -1,0 +1,111 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '291'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"9158176ab9706b17\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740155117,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
+        \     \"seed\": 8718234681322316000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"**BREAKING THE HI LOOP**\\n\\nIt seems like we're stuck in a never-ending
+        \\\"Hi\\\" cycle. Let's mix things up! Here are some conversation starters:\\n\\n1.
+        **Hobbies**: What do you enjoy doing in your free time?\\n2. **Travel**: If
+        you could visit any place in the world, where would you go?\\n3. **Food**:
+        What's your favorite cuisine or dish?\\n4. **Technology**: Are you excited
+        about any upcoming tech releases?\\n5. **Games**: Would you like to play a
+        text-based game (e.g., 20 Questions, Hangman, Word Chain)?\\n6. **Learn Something
+        New**: Pick a topic (e.g., space, history, science), and I'll share an interesting
+        fact.\\n7. **Just Chat**: Talk about your day, and I'll listen.\\n\\nChoose
+        a number (1-7) to start a new conversation, or feel free to introduce a topic
+        of your own!\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 48,\n    \"completion_tokens\": 195,\n    \"total_tokens\":
+        243\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 9158176ab9706b17-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 16:25:20 GMT
+      ETag:
+      - W/"4f8-CJUFhjqkToR1p8sAje0dDDY47Mo"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1272'
+      x-amzn-trace-id:
+      - be825fd6-ec48-4922-9baa-96cac0fa6223-noamzn
+      x-api-call-end:
+      - '2025-02-21T16:25:20.564Z'
+      x-api-call-start:
+      - '2025-02-21T16:25:18.033Z'
+      x-api-received:
+      - '2025-02-21T16:25:17.681Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '99981'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

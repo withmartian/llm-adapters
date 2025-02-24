@@ -5,6 +5,7 @@ from .cohere_sdk_chat_provider_adapter import CohereSDKChatProviderAdapter
 from .deepinfra_sdk_chat_provider_adapter import DeepInfraSDKChatProviderAdapter
 from .openai_sdk_chat_provider_adapter import OpenAISDKChatProviderAdapter
 from .gemini_sdk_chat_provider_adapter import GeminiSDKChatProviderAdapter
+from .together_sdk_chat_provider_adapter import TogetherSDKChatProviderAdapter
 
 # from .xai_sdk_chat_provider_adapter import XAISDKChatProviderAdapter
 
@@ -20,7 +21,6 @@ from .gemini_sdk_chat_provider_adapter import GeminiSDKChatProviderAdapter
 # from .octoai_sdk_chat_provider_adapter import OctoaiSDKChatProviderAdapter
 # from .openrouter_sdk_chat_provider_adapter import OpenRouterSDKChatProviderAdapter
 # from .perplexity_sdk_chat_provider_adapter import PerplexitySDKChatProviderAdapter
-# from .together_sdk_chat_provider_adapter import TogetherSDKChatProviderAdapter
 # from .bigmodel_provider_adapter import BigModelSDKChatProviderAdapter
 
 __all__ = [
@@ -31,6 +31,7 @@ __all__ = [
     "OpenAISDKChatProviderAdapter",
     "DeepInfraSDKChatProviderAdapter",
     "GeminiSDKChatProviderAdapter",
+    "TogetherSDKChatProviderAdapter",
     # # "AzureSDKChatProviderAdapter",
     # # "DatabricksSDKChatProviderAdapter",
     # "DeepInfraSDKChatProviderAdapter",
@@ -43,6 +44,5 @@ __all__ = [
     # "OctoaiSDKChatProviderAdapter",
     # "OpenRouterSDKChatProviderAdapter",
     # "PerplexitySDKChatProviderAdapter",
-    # "TogetherSDKChatProviderAdapter",
     # "BigModelSDKChatProviderAdapter",
 ]

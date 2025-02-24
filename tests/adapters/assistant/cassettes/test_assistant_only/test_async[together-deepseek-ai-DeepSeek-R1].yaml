@@ -1,0 +1,174 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '84'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"9154106778e9f0b0\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740112887,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\":
+        1645612829488979500,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \", I need to solve
+        the equation sin(2\u03B8) = 0.5 for \u03B8 in the interval [0, 2\u03C0). Can
+        you guide me through the process?\\nOkay, so I need to solve sin(2\u03B8)
+        = 0.5 for \u03B8 between 0 and 2\u03C0. Hmm, let's start by recalling how
+        to solve trigonometric equations. I remember that the general solution for
+        sin(x) = a is x = arcsin(a) + 2\u03C0n or x = \u03C0 - arcsin(a) + 2\u03C0n,
+        where n is any integer. But here, instead of just \u03B8, we have 2\u03B8
+        inside the sine function. So maybe I need to adjust the period accordingly?\\n\\nFirst,
+        let me substitute \u03C6 = 2\u03B8. Then the equation becomes sin(\u03C6)
+        = 0.5. Solving for \u03C6, the solutions would be \u03C6 = \u03C0/6 + 2\u03C0n
+        and \u03C6 = 5\u03C0/6 + 2\u03C0n, where n is any integer. But since \u03C6
+        = 2\u03B8, I need to solve for \u03B8 by dividing these solutions by 2. So
+        \u03B8 = (\u03C0/6 + 2\u03C0n)/2 and \u03B8 = (5\u03C0/6 + 2\u03C0n)/2. That
+        simplifies to \u03B8 = \u03C0/12 + \u03C0n and \u03B8 = 5\u03C0/12 + \u03C0n.\\n\\nNow,
+        I need to find all \u03B8 in [0, 2\u03C0). Let's plug in integer values for
+        n and see which solutions fall within the interval. Starting with \u03B8 =
+        \u03C0/12 + \u03C0n:\\n\\nFor n = 0: \u03B8 = \u03C0/12 \u2248 0.2618 rad,
+        which is within [0, 2\u03C0).\\nFor n = 1: \u03B8 = \u03C0/12 + \u03C0 = 13\u03C0/12
+        \u2248 3.4034 rad, still within the interval.\\nFor n = 2: \u03B8 = \u03C0/12
+        + 2\u03C0 = 25\u03C0/12 \u2248 6.5449 rad, which is less than 2\u03C0 \u2248
+        6.2832? Wait, 25\u03C0/12 is approximately 6.5449, which is more than 2\u03C0
+        (since 2\u03C0 \u2248 6.2832). So n=2 gives a \u03B8 outside the interval.
+        Similarly, n=-1: \u03B8 = \u03C0/12 - \u03C0 = -11\u03C0/12 \u2248 -2.8798
+        rad, which is negative, so also outside the interval. So for \u03B8 = \u03C0/12
+        + \u03C0n, the valid solutions are \u03C0/12 and 13\u03C0/12.\\n\\nNow for
+        \u03B8 = 5\u03C0/12 + \u03C0n:\\n\\nFor n = 0: \u03B8 = 5\u03C0/12 \u2248
+        1.3089 rad, which is good.\\nFor n = 1: \u03B8 = 5\u03C0/12 + \u03C0 = 17\u03C0/12
+        \u2248 4.4506 rad, still within [0, 2\u03C0).\\nFor n = 2: \u03B8 = 5\u03C0/12
+        + 2\u03C0 = 29\u03C0/12 \u2248 7.5922 rad, which is more than 2\u03C0, so
+        invalid.\\nFor n = -1: \u03B8 = 5\u03C0/12 - \u03C0 = -7\u03C0/12 \u2248 -1.8326
+        rad, negative, so invalid. So the valid solutions here are 5\u03C0/12 and
+        17\u03C0/12.\\n\\nPutting all together, the solutions in [0, 2\u03C0) are
+        \u03C0/12, 5\u03C0/12, 13\u03C0/12, and 17\u03C0/12. Let me check if these
+        make sense. \\n\\nAlternatively, maybe I can solve it without substitution.
+        The original equation is sin(2\u03B8) = 0.5. The sine of an angle is 0.5 at
+        \u03C0/6 and 5\u03C0/6 in the unit circle, and these angles repeat every 2\u03C0.
+        So 2\u03B8 = \u03C0/6 + 2\u03C0n or 2\u03B8 = 5\u03C0/6 + 2\u03C0n. Solving
+        for \u03B8 gives \u03B8 = \u03C0/12 + \u03C0n or \u03B8 = 5\u03C0/12 + \u03C0n.
+        Then, as before, n is integers, and \u03B8 must be in [0, 2\u03C0). So plugging
+        n=0,1 gives the four solutions. \\n\\nWait, let me verify with n=0 and n=1:\\n\\nFor
+        \u03B8 = \u03C0/12 + \u03C0n:\\nn=0: \u03C0/12\\nn=1: \u03C0/12 + \u03C0 =
+        13\u03C0/12\\nn=2: \u03C0/12 + 2\u03C0 = 25\u03C0/12 (too big)\\nSimilarly
+        for \u03B8 = 5\u03C0/12 + \u03C0n:\\nn=0: 5\u03C0/12\\nn=1: 5\u03C0/12 + \u03C0
+        = 17\u03C0/12\\nn=2: 5\u03C0/12 + 2\u03C0 = 29\u03C0/12 (too big)\\nSo yes,
+        the four solutions are \u03C0/12, 5\u03C0/12, 13\u03C0/12, 17\u03C0/12.\\n\\nLet
+        me check these solutions in the original equation. For \u03B8 = \u03C0/12:
+        sin(2*(\u03C0/12)) = sin(\u03C0/6) = 0.5, correct. \u03B8 = 5\u03C0/12: sin(2*(5\u03C0/12))
+        = sin(5\u03C0/6) = 0.5, correct. \u03B8 = 13\u03C0/12: sin(2*(13\u03C0/12))
+        = sin(13\u03C0/6) = sin(\u03C0/6) = 0.5, since 13\u03C0/6 is equivalent to
+        \u03C0/6 in standard position (13\u03C0/6 - 2\u03C0 = \u03C0/6). Similarly,
+        \u03B8 =17\u03C0/12: sin(2*(17\u03C0/12)) = sin(17\u03C0/6) = sin(5\u03C0/6)
+        = 0.5, because 17\u03C0/6 - 2\u03C0 = 5\u03C0/6. So all four solutions check
+        out.\\n\\nTherefore, the solutions in [0, 2\u03C0) are \u03B8 = \u03C0/12,
+        5\u03C0/12, 13\u03C0/12, and 17\u03C0/12.\\n</think>\\n\\nTo solve the equation
+        \\\\(\\\\sin(2\\\\theta) = 0.5\\\\) for \\\\(\\\\theta\\\\) in the interval
+        \\\\([0, 2\\\\pi)\\\\), follow these steps:\\n\\n1. **Find the general solutions
+        for \\\\(2\\\\theta\\\\):**\\n   - The sine function equals \\\\(0.5\\\\)
+        at \\\\(\\\\frac{\\\\pi}{6}\\\\) and \\\\(\\\\frac{5\\\\pi}{6}\\\\) within
+        \\\\([0, 2\\\\pi)\\\\), with a period of \\\\(2\\\\pi\\\\).\\n   - Therefore,
+        \\\\(2\\\\theta = \\\\frac{\\\\pi}{6} + 2\\\\pi n\\\\) or \\\\(2\\\\theta
+        = \\\\frac{5\\\\pi}{6} + 2\\\\pi n\\\\), where \\\\(n\\\\) is any integer.\\n\\n2.
+        **Solve for \\\\(\\\\theta\\\\):**\\n   - Divide each equation by 2:\\n     \\\\[\\n
+        \    \\\\theta = \\\\frac{\\\\pi}{12} + \\\\pi n \\\\quad \\\\text{or} \\\\quad
+        \\\\theta = \\\\frac{5\\\\pi}{12} + \\\\pi n\\n     \\\\]\\n\\n3. **Determine
+        valid solutions within \\\\([0, 2\\\\pi)\\\\):**\\n   - For \\\\(\\\\theta
+        = \\\\frac{\\\\pi}{12} + \\\\pi n\\\\):\\n     - \\\\(n = 0\\\\): \\\\(\\\\theta
+        = \\\\frac{\\\\pi}{12}\\\\)\\n     - \\\\(n = 1\\\\): \\\\(\\\\theta = \\\\frac{13\\\\pi}{12}\\\\)\\n
+        \  - For \\\\(\\\\theta = \\\\frac{5\\\\pi}{12} + \\\\pi n\\\\):\\n     -
+        \\\\(n = 0\\\\): \\\\(\\\\theta = \\\\frac{5\\\\pi}{12}\\\\)\\n     - \\\\(n
+        = 1\\\\): \\\\(\\\\theta = \\\\frac{17\\\\pi}{12}\\\\)\\n   - Higher values
+        of \\\\(n\\\\) result in \\\\(\\\\theta \\\\geq 2\\\\pi\\\\), and lower values
+        make \\\\(\\\\theta\\\\) negative.\\n\\n4. **Verify the solutions:**\\n   -
+        Substitute each \\\\(\\\\theta\\\\) back into \\\\(\\\\sin(2\\\\theta)\\\\)
+        to confirm they equal \\\\(0.5\\\\).\\n\\n**Final Solutions:**\\n\\\\[\\n\\\\boxed{\\\\frac{\\\\pi}{12},
+        \\\\frac{5\\\\pi}{12}, \\\\frac{13\\\\pi}{12}, \\\\frac{17\\\\pi}{12}}\\n\\\\]\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        3,\n    \"completion_tokens\": 1762,\n    \"total_tokens\": 1765\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 9154106778e9f0b0-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 04:41:40 GMT
+      ETag:
+      - W/"1494-RA2G76ute4BV8pE1uGCAGWDGWKI"
+      Retry-After:
+      - '30'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '5268'
+      x-amzn-trace-id:
+      - 2120f27b-41ea-4713-a3cd-eb248a1dcc8a-noamzn
+      x-api-call-end:
+      - '2025-02-21T04:41:40.204Z'
+      x-api-call-start:
+      - '2025-02-21T04:41:27.079Z'
+      x-api-received:
+      - '2025-02-21T04:41:27.070Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '7'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '209'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '30'
+    status:
+      code: 200
+      message: OK
+version: 1

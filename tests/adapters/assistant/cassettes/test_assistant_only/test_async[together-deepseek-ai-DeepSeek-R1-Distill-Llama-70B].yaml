@@ -1,0 +1,171 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '102'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"91541154cba7ddad\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740112925,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
+        \     \"seed\": 11684225038076880000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \", I'm trying to figure out how to solve this problem. It says that in a
+        certain population, the number of people with blood type A is 40%, type B
+        is 30%, type AB is 10%, and type O is 20%. Then, it asks what the probability
+        is that a randomly selected person from this population will have a blood
+        type that is compatible with a person who has blood type A.\\n\\nOkay, so
+        first, I need to understand what blood type compatibility means. I remember
+        that blood type compatibility is important for blood transfusions. If someone
+        has blood type A, they can receive blood from certain other blood types. Let
+        me recall the rules.\\n\\nI think blood type compatibility is based on the
+        presence or absence of antigens on red blood cells. People with type A blood
+        have A antigens, type B have B antigens, type AB have both, and type O has
+        neither. So, when it comes to receiving blood, a person can receive blood
+        from someone who doesn't have any antigens that their own plasma will attack.\\n\\nSo,
+        for someone with blood type A, their plasma has anti-B antibodies. That means
+        they can receive blood from people who don't have B antigens. So, type A can
+        receive from type A and type O. Because type O has no antigens, so it won't
+        cause a reaction, and type A has A antigens, which their own anti-B antibodies
+        won't attack.\\n\\nWait, let me make sure. So, if someone is type A, they
+        can receive from type A and type O. So, in this population, the percentage
+        of people with type A is 40%, and type O is 20%. So, the total compatible
+        blood types would be 40% + 20% = 60%.\\n\\nIs that right? Let me think again.
+        So, type A can receive from A and O. So, yes, adding those two percentages
+        should give the probability that a randomly selected person is compatible.\\n\\nAlternatively,
+        I can think about the donor's blood type. The donor must not have any antigens
+        that the recipient's plasma will attack. Since the recipient is type A, their
+        plasma has anti-B antibodies. So, the donor can't have B antigens. So, donor
+        blood types must be A or O.\\n\\nTherefore, the compatible blood types are
+        A and O, which are 40% and 20% respectively. So, adding them together gives
+        60%.\\n\\nWait, but I also remember that sometimes AB is the universal recipient,
+        but in this case, the recipient is type A, so AB can't donate to A because
+        AB has both A and B antigens, which the recipient's anti-B antibodies would
+        attack. So, AB is not compatible.\\n\\nSimilarly, type B has B antigens, which
+        the recipient's anti-B antibodies would attack, so type B is not compatible
+        either. So, only type A and O are compatible.\\n\\nTherefore, the probability
+        is 40% + 20% = 60%, which is 0.6. So, 60% chance.\\n\\nWait, but let me double-check.
+        Maybe I'm mixing up donor and recipient compatibility. Sometimes it's the
+        other way around. Let me confirm.\\n\\nIn blood transfusions, the donor's
+        red blood cells must not have antigens that the recipient's plasma will attack.
+        So, if the recipient is type A, their plasma has anti-B antibodies. Therefore,
+        the donor's red blood cells must not have B antigens. So, donor can be type
+        A (has A antigens, which are compatible because recipient has anti-B, not
+        anti-A) or type O (has no antigens, so nothing to attack).\\n\\nTherefore,
+        yes, type A and O are compatible. So, 40% + 20% = 60%.\\n\\nAlternatively,
+        if the question was about someone with type A donating to others, that would
+        be different. But in this case, it's about receiving, so the recipient is
+        type A, and we're looking for compatible donors.\\n\\nSo, the answer should
+        be 60%.\\n\\nWait, but let me think about the exact wording. It says, \\\"the
+        probability that a randomly selected person from this population will have
+        a blood type that is compatible with a person who has blood type A.\\\"\\n\\nSo,
+        yes, that means the selected person is the donor, and the recipient is type
+        A. So, the donor must be compatible with the recipient's blood type.\\n\\nTherefore,
+        the donor must be type A or O, which are 40% + 20% = 60%.\\n\\nSo, I think
+        that's correct. Therefore, the probability is 60%, or 0.6.\\n\\nBut just to
+        make sure, let me think about the universal donor and universal recipient.
+        Type O is the universal donor because they can donate to anyone, and AB is
+        the universal recipient because they can receive from anyone. But in this
+        case, the recipient is type A, so they can receive from O and A, but not from
+        B or AB.\\n\\nYes, that's consistent with what I thought earlier.\\n\\nSo,
+        the compatible blood types are A and O, which are 40% and 20%, adding up to
+        60%.\\n\\nTherefore, the probability is 60%.\\n</think>\\n\\nThe probability
+        that a randomly selected person from this population has a blood type compatible
+        with a person who has blood type A is 60%.\\n\\n**Step-by-Step Explanation:**\\n\\n1.
+        **Understand Blood Type Compatibility:**\\n   - Blood type compatibility is
+        determined by the presence of antigens on red blood cells.\\n   - A person
+        with blood type A has anti-B antibodies in their plasma.\\n\\n2. **Determine
+        Compatible Blood Types:**\\n   - A person with type A blood can receive blood
+        from donors whose red blood cells do not have B antigens.\\n   - Therefore,
+        compatible blood types are A (has A antigens) and O (has no antigens).\\n\\n3.
+        **Calculate the Probability:**\\n   - The population percentages are:\\n     -
+        Type A: 40%\\n     - Type O: 20%\\n   - Add the percentages of compatible
+        blood types: 40% + 20% = 60%.\\n\\n**Answer:** The probability is 60%.\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        3,\n    \"completion_tokens\": 1263,\n    \"total_tokens\": 1266\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 91541154cba7ddad-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 04:42:19 GMT
+      ETag:
+      - W/"170b-S0/PJpQBlejmWHcd9BTJ5Yf0QCU"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '5899'
+      x-amzn-trace-id:
+      - 505cb8de-26c1-4d5b-ac0b-8853677ae898-noamzn
+      x-api-call-end:
+      - '2025-02-21T04:42:19.226Z'
+      x-api-call-start:
+      - '2025-02-21T04:42:05.064Z'
+      x-api-received:
+      - '2025-02-21T04:42:05.055Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

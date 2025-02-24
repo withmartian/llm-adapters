@@ -1,0 +1,208 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-ai/DeepSeek-R1","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '443'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"915822285f7d346d\",\n  \"object\": \"text.completion\",\n
+        \ \"created\": 1740155628,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"logprobs\": null,\n
+        \     \"finish_reason\": \"stop\",\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"<think>\\nOkay, so the user wants a
+        random number between 1 and 10. Hmm, first, I need to figure out what tools
+        they're referring to. They mentioned \\\"tools specified,\\\" but they didn't
+        list any specific tools. Maybe they have certain methods in mind? Like different
+        ways to generate random numbers without using a computer or a dice? Well,
+        if there are no specific tools mentioned, perhaps I should suggest some common
+        everyday items they might have.\\n\\nFirst thought: they might not have access
+        to digital tools, so let's think physical. Maybe a coin? But a coin only gives
+        two outcomes, not enough for 1-10. Maybe multiple coin flips? Let's see, with
+        each flip being heads or tails, you can combine them into binary numbers.
+        For example, flipping four coins could give numbers from 0 to 15, but we need
+        1-10. Maybe discard results above 10? But that's not efficient. Hmm.\\n\\nAnother
+        idea: using a deck of cards. If they have a standard deck, they could shuffle
+        and draw a card. Assign numbers 1-10 to each card, ignoring face cards and
+        keeping only Ace through 10. That way, each draw gives a number between 1
+        and 10. That's a good method. Or perhaps using a book and opening to a random
+        page, taking the page number modulo 10. Wait, but page numbers can vary; maybe
+        the last digit? For example, open a book, look at the last digit of the page
+        number, add 1 if it's 0. So 0 becomes 10. That might work, though it could
+        have some bias depending on the book's pagination.\\n\\nAlternatively, using
+        a clock or watch. If you look at the seconds, you can take the current second
+        and divide by 6 (since 60 seconds in a minute divided by 10 gives 6), then
+        add 1. For example, if it's 23 seconds, 23 divided by 6 is approximately 3.83,
+        floor it to 3, add 1 gives 4. But that's a bit complicated. Maybe modulo 10
+        instead? The seconds from 0-59, take modulo 10, then add 1. So 23 seconds
+        would be 3+1=4. If it's 59, 59%10 is 9, plus 1 is 10. That works, but does
+        the user have access to a clock or watch with seconds?\\n\\nWhat about using
+        their hands? Maybe count the number of items around them, like pencils, books,
+        etc. But that's not really random. Perhaps using a phone's contact list? Take
+        the number of contacts modulo 10. But that's not random either. Wait, random
+        numbers are supposed to be unpredictable. If the user wants true randomness,
+        physical methods like dice are better. If they have a 10-sided die, that's
+        perfect. But they might not. So, maybe use a regular 6-sided die (since most
+        people have those) and combine rolls. Like roll twice: first roll multiplied
+        by 2 minus 1 or something. Wait, let's think: 1-6 is too small. If you roll
+        two dice, adding them gives 2-12. But that's a different range. Maybe create
+        a system where if the sum is 1-10, keep it, or roll again if it's 11-12. But
+        that might take multiple attempts.\\n\\nAnother approach: using slips of paper.
+        Write numbers 1-10 on slips, put them in a container, shuffle, and draw one.
+        That's straightforward if they can make the slips.\\n\\nAlternatively, using
+        a calculator. If they have a calculator with a random function, like RAN#
+        or RAND, they can generate a number between 0 and 1 and then multiply by 10,
+        take the integer part, add 1. For example, if the RAND is 0.734, multiply
+        by 10 is 7.34, integer part is 7, add 1 gives 8. But not all calculators have
+        that feature.\\n\\nWait, the initial request was to generate a random number
+        using specified tools, but the user hasn't provided the tools. Maybe I need
+        to ask them to clarify which tools they have access to. But since I need to
+        generate an answer without further input, perhaps list several methods with
+        different tools, assuming common items they might have. Let's structure each
+        method with a tool, steps, and example.\\n\\nWait, the user's message: \\\"Generate
+        random number with tools specified, range 1-10\\\". They probably forgot to
+        list the tools. Maybe this is a follow-up without context. Maybe in a previous
+        message, but as I don't have that, perhaps the tools were mentioned elsewhere.
+        But since I can't see that, maybe the user made an error. However, I should
+        proceed by assuming common tools.\\n\\nAlright. Common tools for generating
+        random numbers could be a die, coin, cards, clock, calculator, book, phone
+        apps, etc. Let's list a few methods:\\n\\n1. Using a 10-sided die (if available).
+        \\n2. Using a 6-sided die: roll twice, first roll decides 1-6, second roll:
+        if even add 0, if odd add 5. So results can be 1-6 or 6-11, but adjust to
+        1-10.\\nWait, maybe better method: roll the die once. If the number is 1-5,
+        that's the result. If it's 6, roll again and add 5. If the second roll is
+        1-5, you get 6-10. But if the second roll is 6, maybe roll again. This way,
+        each number 1-10 has equal probability. Example: first roll 6, then roll again.
+        Second roll 3 \u2192 3 +5 = 8. If second roll is 6, re-roll again. Though
+        this might take multiple tries.\\n\\n3. Using a coin: flip four times. Each
+        flip is a bit (heads=1, tails=0). Convert the 4-bit binary to decimal. Since
+        4 bits can be 0-15, if the result is 0 or 11-15, discard and flip again. Otherwise,
+        take the number 1-10. Not super efficient but works.\\n\\n4. Using a standard
+        deck of cards: Assign each card Ace (1) through 10 as numbers 1-10. Shuffle
+        the deck and draw a card. Ignore face cards or remove them first.\\n\\n5.
+        Using a book's page numbers: Open a random page, take the last digit of the
+        page number. If it's 0, treat as 10. Assuming the book has page numbers ending
+        with all digits 0-9 uniformly.\\n\\n6. Using a clock: Look at the current
+        second (0-59). Take the second modulo 10, add 1. So for second 37 \u2192 37
+        mod 10 =7 \u2192 7+1=8. For second 45 \u21925+1=6. For 59 \u21929+1=10.\\n\\n7.
+        Using a calculator's random function: As mentioned earlier.\\n\\n8. Using
+        numbered slips: Write numbers 1-10 on paper, shuffle, and pick one.\\n\\nAlternatively,
+        if the user has a smartphone, they can use a random number generator app or
+        website.\\n\\nBut since the user didn't specify tools, I'd present several
+        methods for them to choose based on what they have available. Each method
+        with steps and example.\\n</think>\\n\\nTo generate a random number between
+        1 and 10 using common tools, here are several methods:\\n\\n---\\n\\n### **1.
+        10-Sided Die**  \\n- **Tools**: A 10-sided die (d10).  \\n- **Steps**: Roll
+        the die once. The result is your number.  \\n- **Example**: Roll \u2192 7
+        \u2192 **7**.\\n\\n---\\n\\n### **2. 6-Sided Dice (Two Rolls)**  \\n- **Tools**:
+        A standard 6-sided die.  \\n- **Steps**:  \\n  1. Roll the die.  \\n  2. If
+        the result is 1\u20135: **note the number**.  \\n  3. If the result is 6:
+        Roll again and **add 5** to the new result (discard 6s until you get 1\u20135).
+        \ \\n- **Example**: First roll \u2192 6 \u2192 Second roll \u2192 3 \u2192
+        **3 + 5 = 8**.\\n\\n---\\n\\n### **3. Coin Flips (Binary Conversion)**  \\n-
+        **Tools**: A coin.  \\n- **Steps**:  \\n  1. Flip a coin **4 times** (assign
+        heads=1, tails=0).  \\n  2. Convert the binary result to decimal (e.g., H-T-H-T
+        = 1010 = 10).  \\n  3. If the result is 0 or 11\u201315: **discard** and repeat.
+        \ \\n- **Example**: Flips \u2192 H-T-H-H (1001) \u2192 **9**.\\n\\n---\\n\\n###
+        **4. Playing Cards**  \\n- **Tools**: Standard deck (remove face cards).  \\n-
+        **Steps**:  \\n  1. Shuffle the deck.  \\n  2. Draw a card. Its rank is your
+        number (Ace=1, 10=10).  \\n- **Example**: Draw \u2192 8\u2660 \u2192 **8**.\\n\\n---\\n\\n###
+        **5. Clock/Stopwatch**  \\n- **Tools**: A clock displaying seconds.  \\n-
+        **Steps**:  \\n  1. Note the **current second** (0\u201359).  \\n  2. Compute:
+        \\\\(\\\\text{Result} = (\\\\text{Second} \\\\% 10) + 1\\\\).  \\n- **Example**:
+        Time \u2192 0:37 \u2192 \\\\(37 \\\\% 10 = 7\\\\) \u2192 **7 + 1 = 8**.\\n\\n---\\n\\n###
+        **6. Calculator RAND Function**  \\n- **Tools**: Calculator with a random-number
+        generator.  \\n- **Steps**:  \\n  1. Generate a decimal between 0 and 1 (e.g.,
+        0.734).  \\n  2. Multiply by 10 \u2192 take the integer part \u2192 add 1.
+        \ \\n- **Example**: \\\\(0.456 \\\\times 10 = 4.56\\\\) \u2192 **4 + 1 = 5**.\\n\\n---\\n\\n**Your
+        Result**: Using one of these methods, your number is **\U0001F51F**!\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        16,\n    \"total_tokens\": 2182,\n    \"completion_tokens\": 2166\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 915822285f7d346d-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 16:33:48 GMT
+      ETag:
+      - W/"20e0-yLPJCQf5XbLuJnVemrgQPES0toU"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '8416'
+      x-amzn-trace-id:
+      - 01d1ea04-8054-4508-966b-427f31b1003a-noamzn
+      x-api-call-end:
+      - '2025-02-21T16:33:48.368Z'
+      x-api-call-start:
+      - '2025-02-21T16:32:37.253Z'
+      x-api-received:
+      - '2025-02-21T16:32:37.245Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '10'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '19'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

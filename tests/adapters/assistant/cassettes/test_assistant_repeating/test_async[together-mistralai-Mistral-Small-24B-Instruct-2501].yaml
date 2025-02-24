@@ -1,0 +1,104 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"mistralai/Mistral-Small-24B-Instruct-2501"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '200'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"9158117d189c486f\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740154877,\n  \"model\": \"mistralai/Mistral-Small-24B-Instruct-2501\",\n
+        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
+        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
+        \       \"content\": \"Hello! How are you today? Let's have a friendly conversation.
+        \ Here are a few topics we could discuss:\\n\\n* Hobbies and interests\\n*
+        Movies, books, or music\\n* Travel and adventure\\n* Food and cuisine\\n*
+        or anything else you'd like to talk about!\\n\\nWhat would you like to chat
+        about?\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n
+        \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        11,\n    \"total_tokens\": 80,\n    \"completion_tokens\": 69\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 9158117d189c486f-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 16:21:18 GMT
+      ETag:
+      - W/"305-RzPq9xZWuD+p8jdEkjcFN2W77Bc"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '773'
+      x-amzn-trace-id:
+      - 23f45419-902c-4f1e-bfe7-4633d973c6af-noamzn
+      x-api-call-end:
+      - '2025-02-21T16:21:18.748Z'
+      x-api-call-start:
+      - '2025-02-21T16:21:17.380Z'
+      x-api-received:
+      - '2025-02-21T16:21:14.793Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

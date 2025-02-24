@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '200'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"915811981caa6c4c\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740154879,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
+        \     \"seed\": 18235733980713034000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Seems like we're having a friendly \\\"Hi\\\" loop! Let's break the cycle
+        and have a more engaging conversation. Here are some options to get us started:\\n\\n1.
+        **Hobbies**: What do you enjoy doing in your free time? (e.g., reading, gaming,
+        traveling, etc.)\\n2. **Questions**: Ask me anything! (e.g., about science,
+        history, technology, or even a random fact)\\n3. **Chat Games**:\\n\\t* **20
+        Questions**: Think of an object, and I'll try to guess what it is.\\n\\t*
+        **Word Chain**: We take turns saying a word that starts with the last letter
+        of the previous word.\\n\\t* **Would You Rather**: I'll give you two options,
+        and you choose which one you prefer.\\n4. **Topics**:\\n\\t* **Movies/TV Shows**:
+        Discuss your favorite series or films.\\n\\t* **Travel**: Share your dream
+        destination or a memorable trip.\\n\\t* **Future Tech**: Explore upcoming
+        technologies that interest you.\\n5. **Something Else** (Surprise me!): Is
+        there a specific topic or activity you have in mind that's not listed here?\\n\\nWhich
+        direction would you like our conversation to take?\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 35,\n    \"completion_tokens\":
+        249,\n    \"total_tokens\": 284\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 915811981caa6c4c-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 21 Feb 2025 16:21:23 GMT
+      ETag:
+      - W/"606-rBlRBTV8M5mI+4OtL811Si5kWzU"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1542'
+      x-amzn-trace-id:
+      - 11ffc1db-c474-4c2a-a8dd-a145b62380fb-noamzn
+      x-api-call-end:
+      - '2025-02-21T16:21:23.292Z'
+      x-api-call-start:
+      - '2025-02-21T16:21:19.817Z'
+      x-api-received:
+      - '2025-02-21T16:21:19.297Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '99920'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1
