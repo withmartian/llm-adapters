@@ -1,10 +1,7 @@
 interactions:
 - request:
-    body: '{"max_tokens": 4096, "messages": [{"content": "Generate random number with
-      tools specified, range 1-10", "role": "user"}], "model": "claude-3-5-sonnet-20240620",
-      "stream": false, "tools": [{"input_schema": {"type": "object", "properties":
-      {"prompt": {"type": "string", "description": "Random number like 5, 4, 3, 10,
-      11"}}}, "name": "generate", "description": "Generate random number"}]}'
+    body: '{"max_tokens":4096,"messages":[{"content":"Generate random number with
+      tools specified, range 1-10","role":"user"}],"model":"claude-3-5-sonnet-20240620","stream":false}'
     headers:
       accept:
       - application/json
@@ -15,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '387'
+      - '168'
       content-type:
       - application/json
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.39.0
+      - AsyncAnthropic/Python 0.45.2
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -31,54 +28,75 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.39.0
+      - 0.45.2
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_01LJ8aVU2sYxdJLwBcjiTjFY","type":"message","role":"assistant","model":"claude-3-5-sonnet-20240620","content":[{"type":"text","text":"Certainly!
-        I''ll use the \"generate\" function to generate a random number for you within
-        the range of 1 to 10. Here''s how we''ll do it:"},{"type":"tool_use","id":"toolu_01MPK8pVKWLMyUKeSteSkbXe","name":"generate","input":{"prompt":"Random
-        number between 1 and 10"}}],"stop_reason":"tool_use","stop_sequence":null,"usage":{"input_tokens":378,"output_tokens":97}}'
+      string: '{"id":"msg_015hbRhkqse7tm2p5mVJYdHa","type":"message","role":"assistant","model":"claude-3-5-sonnet-20240620","content":[{"type":"text","text":"I
+        apologize, but I don''t have access to any specific tools or random number
+        generators. However, I can explain how you could generate a random number
+        between 1 and 10 using common programming languages or methods:\n\n1. Using
+        Python:\n```python\nimport random\nrandom_number = random.randint(1, 10)\n```\n\n2.
+        Using JavaScript:\n```javascript\nconst randomNumber = Math.floor(Math.random()
+        * 10) + 1;\n```\n\n3. Using a physical method:\nYou could roll a 10-sided
+        die (d10) or use a random number app on a smartphone.\n\n4. Using an online
+        random number generator:\nThere are many websites that offer random number
+        generation services.\n\nIf you have a specific tool or method in mind, please
+        provide more details, and I''ll be happy to offer more tailored advice."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":193}}'
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8e6c43246e0e176b-SJC
+      - 91721b3869487cc8-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Nov 2024 22:12:41 GMT
+      - Mon, 24 Feb 2025 20:11:45 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
       - chunked
       X-Robots-Tag:
       - none
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '8000000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '8000000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-02-24T20:11:43Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '1600000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '1600000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-02-24T20:11:45Z'
       anthropic-ratelimit-requests-limit:
       - '4000'
       anthropic-ratelimit-requests-remaining:
       - '3999'
       anthropic-ratelimit-requests-reset:
-      - '2024-11-22T22:12:39Z'
+      - '2025-02-24T20:11:42Z'
       anthropic-ratelimit-tokens-limit:
-      - '8000000'
+      - '9600000'
       anthropic-ratelimit-tokens-remaining:
-      - '8000000'
+      - '9600000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-11-22T22:12:41Z'
+      - '2025-02-24T20:11:43Z'
+      cf-cache-status:
+      - DYNAMIC
       content-length:
-      - '504'
+      - '1065'
       request-id:
-      - req_019wVW5hTosXdGk9duyWFGfQ
+      - req_01TwTqD7zzPK81dffRLktm78
       via:
       - 1.1 google
     status:

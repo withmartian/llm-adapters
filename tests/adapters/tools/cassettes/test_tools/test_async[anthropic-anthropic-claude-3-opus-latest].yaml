@@ -1,10 +1,7 @@
 interactions:
 - request:
-    body: '{"max_tokens": 4096, "messages": [{"content": "Generate random number with
-      tools specified, range 1-10", "role": "user"}], "model": "claude-3-opus-latest",
-      "stream": false, "tools": [{"input_schema": {"type": "object", "properties":
-      {"prompt": {"type": "string", "description": "Random number like 5, 4, 3, 10,
-      11"}}}, "name": "generate", "description": "Generate random number"}]}'
+    body: '{"max_tokens":4096,"messages":[{"content":"Generate random number with
+      tools specified, range 1-10","role":"user"}],"model":"claude-3-opus-latest","stream":false}'
     headers:
       accept:
       - application/json
@@ -15,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '381'
+      - '162'
       content-type:
       - application/json
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.39.0
+      - AsyncAnthropic/Python 0.45.2
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -31,56 +28,63 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.39.0
+      - 0.45.2
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_0135Rn3mTR2uWR6DWyKpuiRN","type":"message","role":"assistant","model":"claude-3-opus-20240229","content":[{"type":"text","text":"<thinking>\nThe
-        user is requesting to generate a random number between 1 and 10. The \"generate\"
-        tool provided is relevant for this task, as its description is \"Generate
-        random number\".\n\nLooking at the \"generate\" tool''s parameters, it requires
-        a \"prompt\" string parameter. The user did not provide the exact prompt string,
-        but they specified the range should be 1-10. I can infer the appropriate prompt
-        string based on the example given in the description: \"Random number like
-        5, 4, 3, 10, 11\". \n\nI will modify this example prompt to match the user''s
-        requested range of 1-10, using the prompt \"Random number between 1 and 10\".
-        Since I can infer the required \"prompt\" parameter, I have all the necessary
-        information to proceed with calling the \"generate\" tool.\n</thinking>"},{"type":"tool_use","id":"toolu_012Y3UTPGQW12BnCKnhp7mTz","name":"generate","input":{"prompt":"Random
-        number between 1 and 10"}}],"stop_reason":"tool_use","stop_sequence":null,"usage":{"input_tokens":617,"output_tokens":244}}'
+      string: '{"id":"msg_01F4niVpcq67iRWV8849x3AE","type":"message","role":"assistant","model":"claude-3-opus-20240229","content":[{"type":"text","text":"I
+        apologize for the confusion, but you haven''t specified any tools for generating
+        a random number. Could you please provide more details about the tools or
+        programming language you would like me to use to generate a random number
+        between 1 and 10? Once I have that information, I''ll be happy to assist you."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":68}}'
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8e6c42cf9aa415ce-SJC
+      - 91721b03abff1032-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Nov 2024 22:12:37 GMT
+      - Mon, 24 Feb 2025 20:11:37 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
       - chunked
       X-Robots-Tag:
       - none
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-02-24T20:11:35Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-02-24T20:11:37Z'
       anthropic-ratelimit-tokens-limit:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-remaining:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-11-22T22:12:37Z'
+      - '2025-02-24T20:11:35Z'
+      cf-cache-status:
+      - DYNAMIC
       content-length:
-      - '1158'
+      - '603'
       request-id:
-      - req_01KgnszSZBAd58W3UX5BasEx
+      - req_01GdACBh9PGP3UYsciAbQ4Db
       via:
       - 1.1 google
     status:
