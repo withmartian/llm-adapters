@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"gemini-2.0-flash-latest"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '182'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: "[{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"models/gemini-2.0-flash-latest
+        is not found for API version v1main, or is not supported for generateContent.
+        Call ListModels to see the list of available models and their supported methods.\",\n
+        \   \"status\": \"NOT_FOUND\"\n  }\n}\n]"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 24 Feb 2025 21:08:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=56
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '274'
+    status:
+      code: 404
+      message: Not Found
+version: 1

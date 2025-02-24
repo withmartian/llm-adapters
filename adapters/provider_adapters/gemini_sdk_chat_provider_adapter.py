@@ -14,6 +14,8 @@ class GeminiModel(Model):
 
     can_empty_content: bool = False
 
+    supports_completion: bool = False
+
     properties: ModelProperties = ModelProperties(gdpr_compliant=True)
 
 
@@ -50,6 +52,12 @@ MODELS: list[Model] = [
     ),
     GeminiModel(
         name="gemini-1.5-flash-8b",
+        cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
+        context_length=1048576,
+        completion_length=8192,
+    ),
+    GeminiModel(
+        name="gemini-2.0-flash",
         cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
         context_length=1048576,
         completion_length=8192,

@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-2.0-flash"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"
+        all.\nI have a question about using a custom error handler function with the
+        <code>send_from_directory</code> method.\nI''m serving static files through
+        a Flask app using <code>send_from_directory</code>, and want to handle errors
+        in a custom manner.\nThis is my current implementation:\n\n<code>from flask
+        import Flask, send_from_directory\nimport os\n\napp = Flask(__name__)\n\n@app.errorhandler(404)\ndef
+        not_found(e):\n    return \"File not found\", 404\n\n@app.route(''/<path:path>'')\ndef
+        get_file(path):\n    static_directory = os.path.abspath(''static'')\n    return
+        send_from_directory(static_directory, path)\n\nif __name__ == ''__main__'':\n    app.run(debug=True)\n</code>\n\nThis
+        works as expected when requesting <code>localhost:5000/non_existent_file.txt</code>.\nHowever,
+        I''m trying to understand why the <code>send_from_directory</code> method
+        doesn''t trigger the custom error handler function when the requested file
+        is not found, and instead returns the default 404 page.\nI''m using Flask
+        version 2.2.2.\n\nThanks for your help!","role":"assistant"}}],"created":1740431301,"model":"gemini-2.0-flash","object":"chat.completion","usage":{"completion_tokens":279,"prompt_tokens":1,"total_tokens":280}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 24 Feb 2025 21:08:21 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=2633
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1279'
+    status:
+      code: 200
+      message: OK
+version: 1

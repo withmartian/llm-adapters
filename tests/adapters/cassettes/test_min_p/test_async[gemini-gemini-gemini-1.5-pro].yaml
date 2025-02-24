@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"gemini-1.5-pro","min_p":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '82'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: "[{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid
+        JSON payload received. Unknown name \\\"min_p\\\": Cannot find field.\",\n
+        \   \"status\": \"INVALID_ARGUMENT\",\n    \"details\": [\n      {\n        \"@type\":
+        \"type.googleapis.com/google.rpc.BadRequest\",\n        \"fieldViolations\":
+        [\n          {\n            \"description\": \"Invalid JSON payload received.
+        Unknown name \\\"min_p\\\": Cannot find field.\"\n          }\n        ]\n
+        \     }\n    ]\n  }\n}\n]"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 24 Feb 2025 21:10:52 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=53
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '433'
+    status:
+      code: 400
+      message: Bad Request
+version: 1
