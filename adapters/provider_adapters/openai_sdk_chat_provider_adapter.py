@@ -194,6 +194,18 @@ MODELS: list[Model] = [
         can_temperature=False,
         can_top_p=False,
     ),
+    OpenAIModel(
+        name="gpt-4.5-preview-2025-02-27",
+        cost=Cost(prompt=75.00e-6, completion=150.00e-6),
+        context_length=128000,
+        completion_length=16384,
+    ),
+    OpenAIModel(
+        name="gpt-4.5-preview",
+        cost=Cost(prompt=75.00e-6, completion=150.00e-6),
+        context_length=128000,
+        completion_length=16384,
+    ),
 ]
 
 
