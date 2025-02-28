@@ -12,6 +12,7 @@ from llm_adapters.provider_adapters import (
     CohereSDKChatProviderAdapter,
     DeepInfraSDKChatProviderAdapter,
     TogetherSDKChatProviderAdapter,
+    DeepSeekSDKChatProviderAdapter,
 )
 from llm_adapters.types import Model, ModelNotFoundException
 
@@ -21,6 +22,7 @@ ADAPTER_CLASSES: list[type[Adapter]] = [
     AI21SDKChatProviderAdapter,
     OpenAISDKChatProviderAdapter,
     TogetherSDKChatProviderAdapter,
+    DeepSeekSDKChatProviderAdapter,
     CerebrasSDKChatProviderAdapter,
     CohereSDKChatProviderAdapter,
     DeepInfraSDKChatProviderAdapter,

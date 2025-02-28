@@ -112,19 +112,31 @@ MODELS: list[Model] = [
         name="claude-3-5-sonnet-latest",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
-        completion_length=4096,
+        completion_length=8192,
     ),
     AnthropicModel(
         name="claude-3-5-sonnet-20241022",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
-        completion_length=4096,
+        completion_length=8192,
     ),
     AnthropicModel(
         name="claude-3-5-sonnet-20240620",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
-        completion_length=4096,
+        completion_length=8192,
+    ),
+    AnthropicModel(
+        name="claude-3-7-sonnet-20250219",
+        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
+        context_length=200000,
+        completion_length=8192,
+    ),
+    AnthropicModel(
+        name="claude-3-7-sonnet-latest",
+        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
+        context_length=200000,
+        completion_length=8192,
     ),
 ]
 

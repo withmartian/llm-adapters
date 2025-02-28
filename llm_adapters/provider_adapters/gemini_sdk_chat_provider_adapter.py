@@ -12,6 +12,8 @@ class GeminiModel(Model):
     provider_name: str = Provider.gemini.value
     vendor_name: str = Vendor.gemini.value
 
+    supports_completion: bool = False
+
     can_empty_content: bool = False
 
     properties: ModelProperties = ModelProperties(gdpr_compliant=True)
@@ -88,6 +90,12 @@ MODELS: list[Model] = [
     # GeminiModel(
     #     name="gemini-2.0-flash-exp",
     #     cost=Cost(prompt=0.075e-6, completion=0.30e-6),
+    #     context_length=1048576,
+    #     completion_length=8192,
+    # ),
+    #     GeminiModel(
+    #     name="gemini-2.0-flash",
+    #     cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
     #     context_length=1048576,
     #     completion_length=8192,
     # ),

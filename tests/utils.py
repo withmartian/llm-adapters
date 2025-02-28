@@ -12,9 +12,6 @@ from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
 from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
     CohereSDKChatProviderAdapter,
 )
-from llm_adapters.provider_adapters.gemini_sdk_chat_provider_adapter import (
-    GeminiSDKChatProviderAdapter,
-)
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
 
@@ -114,8 +111,6 @@ def get_response_content_from_vcr(vcr: VCR, model_path: str) -> Any:
             if response.get("message") and response["message"].get("content")
             else ""
         )
-    elif isinstance(adapter, GeminiSDKChatProviderAdapter):
-        return response["candidates"][0]["content"]["parts"][0]["text"]
     else:
         raise ValueError("Unknown adapter")
 
@@ -203,8 +198,5 @@ def get_response_choices_from_vcr(vcr: VCR, adapter: Adapter) -> Any:
     #             )
 
     # return cohere_choices
-
-    elif isinstance(adapter, GeminiSDKChatProviderAdapter):
-        return response["candidates"][0]["content"]["parts"][0]["text"]
     else:
         raise ValueError("Unknown adapter")
