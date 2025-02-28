@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"meta-llama/Llama-3.3-70B-Instruct"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"meta-llama/Llama-3.3-70B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '94'
+      - '127'
       content-type:
       - application/json
       host:
@@ -36,17 +36,18 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-84752f1ebe534092bdb4a1acd6843ce8","object":"chat.completion","created":1739904773,"model":"meta-llama/Llama-3.3-70B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"!
-        How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":19,"completion_tokens":8,"estimated_cost":5.73e-06}}'
+      string: '{"id":"chatcmpl-20b914e0ceec432eab4fd28343eee8a1","object":"chat.completion","created":1740703073,"model":"meta-llama/Llama-3.3-70B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like you may have accidentally sent a blank message! If you''d like
+        to start a conversation, I''m here to chat. What''s on your mind?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":22,"total_tokens":55,"completion_tokens":33,"estimated_cost":1.8260000000000005e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '403'
+      - '528'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Feb 2025 18:52:53 GMT
+      - Fri, 28 Feb 2025 00:37:53 GMT
       server:
       - uvicorn
       x-robots-tag:

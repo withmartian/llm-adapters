@@ -1,0 +1,60 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"microsoft/WizardLM-2-8x22B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '153'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-48fda2c3129e478188aef0c7cd29c388","object":"chat.completion","created":1740703675,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"message":{"role":"assistant","content":"
+        It seems like you didn''t provide a message or question. How can I assist
+        you today? If you have a question or need information on a topic, feel free
+        to ask! Whether it''s about technology, science, history, advice on a project,
+        or any other subject, I''m here to help.","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":18,"total_tokens":83,"completion_tokens":65,"estimated_cost":4.15e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '635'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 00:47:55 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

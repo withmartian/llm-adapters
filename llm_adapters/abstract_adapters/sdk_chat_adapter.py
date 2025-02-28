@@ -233,16 +233,17 @@ class SDKChatAdapter(
                 )
             )
 
+        # Covered by can_system_last
         # Add empty user message if system only
-        if (
-            not self.get_model().can_system_only
-            and messages[0]["role"] == ConversationRole.system.value
-        ):
-            messages.append(
-                ChatCompletionUserMessageParam(
-                    role=ConversationRole.user.value, content=EMPTY_CONTENT
-                )
-            )
+        # if (
+        #     not self.get_model().can_system_only
+        #     and messages[0]["role"] == ConversationRole.system.value
+        # ):
+        #     messages.append(
+        #         ChatCompletionUserMessageParam(
+        #             role=ConversationRole.user.value, content=EMPTY_CONTENT
+        #         )
+        #     )
 
         # Change system prompt roles to user if not supported
         if not self.get_model().can_system_multiple:

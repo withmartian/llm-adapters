@@ -36,40 +36,72 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"9158147aadf6f095\",\n  \"error\": {\n    \"message\":
-        \"Qwen/Qwen2.5-Coder-32B-Instruct is not supported for JSON mode/function
-        calling\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n
-        \   \"code\": \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"918c62095cfdcef9\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703433,\n  \"model\": \"Qwen/Qwen2.5-Coder-32B-Instruct\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 13029328753720412000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Sure! Here's a simple JSON example:\\n\\n```json\\n{\\n  \\\"name\\\": \\\"John
+        Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"isStudent\\\": false,\\n  \\\"courses\\\":
+        [\\\"Math\\\", \\\"Science\\\"],\\n  \\\"address\\\": {\\n    \\\"street\\\":
+        \\\"123 Main St\\\",\\n    \\\"city\\\": \\\"Anytown\\\",\\n    \\\"state\\\":
+        \\\"CA\\\"\\n  }\\n}\\n```\\n\\nThis JSON object includes a person's name,
+        age, student status, a list of courses, and an address with street, city,
+        and state.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 34,\n    \"completion_tokens\": 113,\n    \"total_tokens\":
+        147\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 9158147aadf6f095-DFW
+      - 918c62095cfdcef9-SJC
       Connection:
       - keep-alive
-      Content-Length:
-      - '234'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 21 Feb 2025 16:23:17 GMT
+      - Fri, 28 Feb 2025 00:43:54 GMT
       ETag:
-      - W/"ea-L5bVKtfFt6onih9uznqJKsaktGQ"
+      - W/"37f-ZEVm5ptpOJrs513ZK1rG+YIxwLI"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '895'
+      x-api-call-end:
+      - '2025-02-28T00:43:54.781Z'
+      x-api-call-start:
+      - '2025-02-28T00:43:53.252Z'
       x-api-received:
-      - '2025-02-21T16:23:17.481Z'
+      - '2025-02-28T00:43:53.243Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '99739'
+      x-ratelimit-reset:
+      - '2'
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

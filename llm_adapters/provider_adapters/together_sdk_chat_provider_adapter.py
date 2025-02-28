@@ -33,6 +33,7 @@ MODELS: list[Model] = [
         vendor_name=Vendor.deepseek.value,
         cost=Cost(prompt=1.25e-6, completion=1.25e-6),
         context_length=131000,
+        can_assistant_only=False,
     ),
     TogetherModel(
         name="Qwen2.5-72B-Instruct-Turbo",
@@ -45,6 +46,7 @@ MODELS: list[Model] = [
         vendor_name=Vendor.mistralai.value,
         cost=Cost(prompt=0.80e-6, completion=0.80e-6),
         context_length=32768,
+        can_assistant_only=False,
     ),
     TogetherModel(
         name="Llama-3.1-Nemotron-70B-Instruct-HF",
@@ -57,12 +59,14 @@ MODELS: list[Model] = [
         vendor_name=Vendor.meta_llama.value,
         cost=Cost(prompt=0.88e-6, completion=0.88e-6),
         context_length=128000,
+        supports_json_content=False,
     ),
     TogetherModel(
         name="Meta-Llama-3.1-405B-Instruct-Turbo",
         vendor_name=Vendor.meta_llama.value,
         cost=Cost(prompt=3.50e-6, completion=3.50e-6),
         context_length=131000,
+        supports_json_content=False,
     ),
     TogetherModel(
         name="Qwen2.5-Coder-32B-Instruct",
@@ -76,18 +80,18 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.80e-6, completion=0.80e-6),
         context_length=8000,
     ),
-    TogetherModel(
-        name="DeepSeek-R1-Distill-Llama-70B",
-        vendor_name=Vendor.deepseek.value,
-        cost=Cost(prompt=2.00e-6, completion=2.00e-6),
-        context_length=128000,
-    ),
-    TogetherModel(
-        name="DeepSeek-R1-Distill-Qwen-14",
-        vendor_name=Vendor.deepseek.value,
-        cost=Cost(prompt=1.60e-6, completion=1.60e-6),
-        context_length=128000,
-    ),
+    # TogetherModel(
+    #     name="DeepSeek-R1-Distill-Llama-70B",
+    #     vendor_name=Vendor.deepseek.value,
+    #     cost=Cost(prompt=2.00e-6, completion=2.00e-6),
+    #     context_length=128000,
+    # ),
+    # TogetherModel(
+    #     name="DeepSeek-R1-Distill-Qwen-14",
+    #     vendor_name=Vendor.deepseek.value,
+    #     cost=Cost(prompt=1.60e-6, completion=1.60e-6),
+    #     context_length=128000,
+    # ),
     TogetherModel(
         name="DeepSeek-R1-Distill-Qwen-1.5B",
         vendor_name=Vendor.deepseek.value,

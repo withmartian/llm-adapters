@@ -36,40 +36,67 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"915814813eb06b41\",\n  \"error\": {\n    \"message\":
-        \"google/gemma-2-27b-it is not supported for JSON mode/function calling\",\n
-        \   \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\":
-        \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"918c62192fce15d6\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703435,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        6618287229310049000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"```json\\n{\\n
+        \ \\\"name\\\": \\\"John Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"city\\\": \\\"New
+        York\\\"\\n}\\n```\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\": 36,\n
+        \   \"total_tokens\": 50\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 915814813eb06b41-DFW
+      - 918c62192fce15d6-SJC
       Connection:
       - keep-alive
-      Content-Length:
-      - '224'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 21 Feb 2025 16:23:19 GMT
+      - Fri, 28 Feb 2025 00:43:56 GMT
       ETag:
-      - W/"e0-i7yP41jmOj/mYQlD8r/llT/SzA8"
+      - W/"234-+soc8qem1+5WlyS4Yu1J10ncYv8"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '564'
       x-amzn-trace-id:
-      - 1b138d1f-9286-445f-8a77-9a4ab6cb489c-noamzn
+      - 2c51fdaf-b32a-4267-af10-c3c9463eeb3a-noamzn
+      x-api-call-end:
+      - '2025-02-28T00:43:56.353Z'
+      x-api-call-start:
+      - '2025-02-28T00:43:55.505Z'
       x-api-received:
-      - '2025-02-21T16:23:18.265Z'
+      - '2025-02-28T00:43:55.502Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '99217'
+      x-ratelimit-reset:
+      - '2'
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

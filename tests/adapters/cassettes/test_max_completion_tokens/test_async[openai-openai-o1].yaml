@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1","max_completion_tokens":10}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '85'
+      - '74'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.9
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,46 +25,40 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.9
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IRAMACBWU62nqW62dkLOdO4+Z0aCk4wVQPHz1M3zgDTBtXCDLbBfC6xBWZjwwBKNOKfT4zdCK23M
-        Psfct7+CCM5CEcw+7kwZivHua5V8nT+nV35wzUtxdnbxcFQnl9ZfXd7fYCSI4JMDmy4ymxwxaJ2v
-        KN6by6/YQpFczzer5UxGW/Bl6S0XUAQvx9EsWoxlNJbrwMu9d4ZbKHoVRES/owkRrr4/QtFsNOsd
-        xCigiD8RofEFQxHitnVtF1cdRgTMuW6mCBB2GX0wLqCo6osiX/6/FlD4LDQ+aTm+Bs/CTdOfy7qF
-        Ing9xBDU/Qui96rMXugDhMaXodOdz7lqoWidU0MHMTyVBWv44QE45gWSCTNtN6e3TTmCic2ebTTW
-        wX3cW+dBXRTOEMTM7xS/4qpMNGsNDESM4dCx1Y6FZNUY1V7DBzaZ6LP179vswbpz3EARHgwO4e67
-        7bjUqasybkLjNsF5GrTdSrNdrdZyC/EvDAM=
+      string: "{\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'max_tokens'
+        is not supported with this model. Use 'max_completion_tokens' instead.\",\n
+        \   \"type\": \"invalid_request_error\",\n    \"param\": \"max_tokens\",\n
+        \   \"code\": \"unsupported_parameter\"\n  }\n}"
     headers:
       CF-RAY:
-      - 90c8908e6b01db86-LAX
+      - 918c74d5182fcf51-SJC
       Connection:
       - keep-alive
-      Content-Encoding:
-      - br
+      Content-Length:
+      - '245'
       Content-Type:
       - application/json
       Date:
-      - Tue, 04 Feb 2025 06:22:11 GMT
+      - Fri, 28 Feb 2025 00:56:43 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=XI2ugLm4VH6xoEPUV48s_OUyuDuytEJIjn8KUHGZLaE-1738650131-1.0.1.1-48yA2kzhi4RE0Gwk3UeDGJSl_Rd703CdaLsZ36eurV72m2evUz6VGQRFtvabK9nqXb4gWyj5kvOYqy3XrodL2Q;
-        path=/; expires=Tue, 04-Feb-25 06:52:11 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=r_5H1EM5oyaCnG2O10FKfohguUxoEGCJcEcKdnTfox4-1740704203-1.0.1.1-7G0kFn_rL0GyXQyiE9YkiVgeOOXmwrqjXDBJ.D3fmsCV68DVYNGkpMDBq9ez38uMZ5Tel5eYlp5IySyzKGHVvQ;
+        path=/; expires=Fri, 28-Feb-25 01:26:43 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=7XSksjA5mJN1eJSosKdUpvGQ0skLhQeSiGYafRZVQQo-1738650131078-0.0.1.1-604800000;
+      - _cfuvid=AlTrzmT3nuTrLrdU8EyHI57yornbc2s5N0GBMBxsgpQ-1740704203181-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       X-Content-Type-Options:
       - nosniff
       access-control-expose-headers:
@@ -76,7 +70,7 @@ interactions:
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '1282'
+      - '11'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -88,14 +82,14 @@ interactions:
       x-ratelimit-remaining-requests:
       - '999'
       x-ratelimit-remaining-tokens:
-      - '29999982'
+      - '29999988'
       x-ratelimit-reset-requests:
       - 60ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_b47520c1dd2d5e78487d7f2a7538ac4d
+      - req_31824d98db30f624aceead7ff908a0bf
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
 version: 1

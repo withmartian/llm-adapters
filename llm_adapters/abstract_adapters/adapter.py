@@ -17,6 +17,11 @@ from llm_adapters.types.request import (
     CompletionCreateArgs,
 )
 
+# TODO: add Deepske and pricing
+
+# DeepSeek-V3 at 50% off
+# DeepSeek-R1 at a massive 75% off
+
 
 class Adapter(ABC):
     def __str__(self) -> str:

@@ -36,46 +36,47 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"915813c36b15e5a5\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1740154978,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+      string: "{\n  \"id\": \"918c61327e8c67af\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703409,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
         \       \"role\": \"assistant\",\n        \"content\": \"<think>\\nOkay, the
-        user just said, \\\"Hi, output simple json\\\". Let me figure out what they
-        need.\\n\\nFirst, they greeted with \\\"Hi\\\", so maybe they want a friendly
-        response. Then they're asking for a simple JSON. I need to make sure I provide
-        a valid JSON structure that's straightforward.\\n\\nThe user didn't specify
-        the content, so I should create a generic example. Common examples include
-        user info, to-do lists, or basic objects. Let's go with something like a person's
-        details. Keys like \\\"name\\\", \\\"age\\\", \\\"city\\\" are simple and
-        clear.\\n\\nMake sure the JSON syntax is correct: curly braces, quotes around
-        keys and string values, commas separating the fields. Don't use any trailing
-        commas. Also, remember to set the content type to application/json in the
-        response.\\n\\nWait, the user might need it as code without markdown. So I
-        should format it properly here. Let me check again: {\\\"name\\\": \\\"John
-        Doe\\\", \\\"age\\\": 30, \\\"city\\\": \\\"New York\\\"} \u2013 that's simple
-        enough. Maybe add an array for hobbies to show a bit more structure? But they
-        said simple, so maybe keep it basic. Alright, go with the initial example.
-        Ensure proper formatting and validity.\\n</think>\\n\\n```json\\n{\\n  \\\"response\\\":
-        \\\"Hello! Here's a simple JSON example:\\\",\\n  \\\"data\\\": {\\n    \\\"name\\\":
-        \\\"John Doe\\\",\\n    \\\"age\\\": 30,\\n    \\\"city\\\": \\\"New York\\\"\\n
-        \ }\\n}\\n```\",\n        \"tool_calls\": []\n      },\n      \"logprobs\":
-        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        8,\n    \"total_tokens\": 322,\n    \"completion_tokens\": 314\n  }\n}"
+        user asked for a simple JSON output. Let me think about what's the best way
+        to approach this.\\n\\nFirst, I need to make sure the JSON is valid and straightforward.
+        Maybe they want an example, so a common structure like a person with some
+        attributes would work.\\n\\nI should include a few key-value pairs. Let's
+        see, maybe name, age, and some other details. Maybe include a nested object
+        or an array to show different data types.\\n\\nWait, the user said \\\"simple,\\\"
+        so maybe not too complicated. Let's keep it basic. A user object with name,
+        age, and a list of hobbies. That's classic. Also, adding a boolean like isStudent
+        could be helpful.\\n\\nLet me structure it. The top-level object, then keys
+        with appropriate values. Make sure the syntax is correct: curly braces, commas
+        between key-value pairs, quotes around strings. Hobbies as an array of strings,
+        age as a number, isStudent as a boolean.\\n\\nChecking for any syntax errors.
+        Let me write it out:\\n\\n{\\n  \\\"name\\\": \\\"John Doe\\\",\\n  \\\"age\\\":
+        30,\\n  \\\"hobbies\\\": [\\\"reading\\\", \\\"cycling\\\", \\\"gaming\\\"],\\n
+        \ \\\"isStudent\\\": false\\n}\\n\\nThat seems simple enough. It covers different
+        data types and structures without being too complex. I think this should meet
+        the user's request.\\n</think>\\n\\n```json\\n{\\n  \\\"name\\\": \\\"John
+        Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"hobbies\\\": [\\\"reading\\\", \\\"cycling\\\",
+        \\\"gaming\\\"],\\n  \\\"isStudent\\\": false\\n}\\n```\",\n        \"tool_calls\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 8,\n    \"total_tokens\":
+        335,\n    \"completion_tokens\": 327\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 915813c36b15e5a5-DFW
+      - 918c61327e8c67af-SJC
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 21 Feb 2025 16:22:58 GMT
+      - Fri, 28 Feb 2025 00:43:29 GMT
       ETag:
-      - W/"6fd-gGpsK4JlpOt1DXhxih6rZa0AAMU"
+      - W/"736-E4kt46M41unDWm7HK3NCrWDS8Y8"
       Retry-After:
       - '2'
       Server:
@@ -89,15 +90,15 @@ interactions:
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
-      - '1789'
+      - '1846'
       x-amzn-trace-id:
-      - b6e5c633-2946-4dcb-86d1-f18beb5ce85f-noamzn
+      - 2a70092b-7806-4568-8225-dcc754b781be-noamzn
       x-api-call-end:
-      - '2025-02-21T16:22:58.272Z'
+      - '2025-02-28T00:43:29.933Z'
       x-api-call-start:
-      - '2025-02-21T16:22:47.719Z'
+      - '2025-02-28T00:43:18.863Z'
       x-api-received:
-      - '2025-02-21T16:22:47.711Z'
+      - '2025-02-28T00:43:18.853Z'
       x-inference-version:
       - v2
       x-ratelimit:

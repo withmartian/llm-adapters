@@ -36,51 +36,43 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"91581a99c907b78c\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1740155247,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 3722140041436896000,\n      \"logprobs\": null,\n      \"index\":
-        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \"<think>\\n\\n</think>\\n\\nHello! How can I assist you today? \U0001F60A\",\n
-        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        4,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 20\n  }\n}"
+      string: "{\n  \"id\": \"918c7881edf12ee7\",\n  \"error\": {\n    \"message\":
+        \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769.
+        Given: 4 `inputs` tokens and 32768 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n
+        \   \"param\": null,\n    \"code\": null\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 91581a99c907b78c-DFW
+      - 918c7881edf12ee7-LAX
       Connection:
       - keep-alive
+      Content-Length:
+      - '268'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 21 Feb 2025 16:27:28 GMT
+      - Fri, 28 Feb 2025 00:59:13 GMT
       ETag:
-      - W/"22d-2lIyRgrMTmY1wEW5Hs5zWTnmNco"
+      - W/"10c-GJwl7MGcrY6bRAL8rPCQxd01yNI"
       Retry-After:
       - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       Vary:
       - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
-      content-length:
-      - '557'
       x-amzn-trace-id:
-      - d52370db-b051-43c7-ac67-6d5cfcdbff4b-noamzn
-      x-api-call-end:
-      - '2025-02-21T16:27:28.689Z'
+      - 85eaff5d-27cd-4a9c-a717-4ff738c60cf7-noamzn
       x-api-call-start:
-      - '2025-02-21T16:27:28.282Z'
+      - '2025-02-28T00:59:13.877Z'
       x-api-received:
-      - '2025-02-21T16:27:27.804Z'
+      - '2025-02-28T00:59:13.846Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -92,10 +84,10 @@ interactions:
       x-ratelimit-remaining:
       - '199'
       x-ratelimit-remaining-tokens:
-      - '100000'
+      - '99954'
       x-ratelimit-reset:
       - '2'
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
 version: 1

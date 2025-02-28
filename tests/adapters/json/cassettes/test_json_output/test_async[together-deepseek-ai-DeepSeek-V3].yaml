@@ -36,40 +36,70 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"915814081fbe6bad\",\n  \"error\": {\n    \"message\":
-        \"deepseek-ai/DeepSeek-V3 is not supported for JSON mode/function calling\",\n
-        \   \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\":
-        \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"918c617afd2917c4\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703414,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
+        \       \"role\": \"assistant\",\n        \"content\": \"Here\u2019s a simple
+        JSON example:\\n\\n```json\\n{\\n  \\\"name\\\": \\\"John Doe\\\",\\n  \\\"age\\\":
+        30,\\n  \\\"isStudent\\\": false,\\n  \\\"skills\\\": [\\\"JavaScript\\\",
+        \\\"Python\\\", \\\"SQL\\\"],\\n  \\\"address\\\": {\\n    \\\"city\\\": \\\"New
+        York\\\",\\n    \\\"zipcode\\\": \\\"10001\\\"\\n  }\\n}\\n```\\n\\nLet me
+        know if you need any modifications!\",\n        \"tool_calls\": []\n      },\n
+        \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 8,\n    \"total_tokens\": 91,\n    \"completion_tokens\":
+        83\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 915814081fbe6bad-DFW
+      - 918c617afd2917c4-SJC
       Connection:
       - keep-alive
-      Content-Length:
-      - '226'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 21 Feb 2025 16:23:01 GMT
+      - Fri, 28 Feb 2025 00:43:34 GMT
       ETag:
-      - W/"e2-g81iie4wgTn64pdTsBSZkwtTW5s"
+      - W/"2e8-2Bqb7yqvm+w2s+5bVRysBilskAc"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '744'
       x-amzn-trace-id:
-      - 27b3d83f-a463-4071-a6e2-13efa5b65905-noamzn
+      - 9effc366-2521-4225-912d-fbc7b28cadab-noamzn
+      x-api-call-end:
+      - '2025-02-28T00:43:34.668Z'
+      x-api-call-start:
+      - '2025-02-28T00:43:30.484Z'
       x-api-received:
-      - '2025-02-21T16:22:58.760Z'
+      - '2025-02-28T00:43:30.460Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

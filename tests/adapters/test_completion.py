@@ -1,41 +1,40 @@
 import pytest
 
+from llm_adapters.client import AsyncOpenAI, OpenAI
 from tests.utils import (
-    ADAPTER_COMPLETION_TEST_FACTORIES,
-    AdapterTestFactory,
+    TEST_COMPLETION_MODELS,
 )
 from vcr import VCR
 
+async_client = AsyncOpenAI()
+sync_client = OpenAI()
+
 
 @pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_COMPLETION_TEST_FACTORIES, ids=str)
-async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
-
-    if not adapter.get_model().supports_completion:
-        return
-
-    adapter_response = await adapter.execute_completion_async(
-        prompt="Hi", max_tokens=10
+@pytest.mark.parametrize("model_path", TEST_COMPLETION_MODELS, ids=str)
+async def test_async(vcr: VCR, model_path: str) -> None:
+    response = await async_client.completions.create(
+        model=model_path,
+        prompt="Hi",
     )
 
-    assert adapter_response.choices[0].text
+    assert response.choices[0].text
 
-    # cassette_response = get_response_content_from_vcr(vcr, adapter)
-    # assert adapter_response.choices[0].text == cassette_response
+    # TODO: Fix this
+    # cassette_response = get_response_content_from_vcr(vcr, model_path)
+    # assert response.choices[0].text == cassette_response
 
 
 @pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_COMPLETION_TEST_FACTORIES, ids=str)
-def test_sync(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
+@pytest.mark.parametrize("model_path", TEST_COMPLETION_MODELS, ids=str)
+def test_sync(vcr: VCR, model_path: str) -> None:
+    response = sync_client.completions.create(
+        model=model_path,
+        prompt="Hi",
+    )
 
-    if not adapter.get_model().supports_completion:
-        return
+    assert response.choices[0].text
 
-    adapter_response = adapter.execute_completion_sync(prompt="Hi", max_tokens=10)
-
-    assert adapter_response.choices[0].text
-
-    # cassette_response = get_response_content_from_vcr(vcr, adapter)
-    # assert adapter_response.choices[0].text == cassette_response
+    # TODO: Fix this
+    # cassette_response = get_response_content_from_vcr(vcr, model_path)
+    # assert response.choices[0].text == cassette_response

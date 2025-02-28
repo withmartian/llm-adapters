@@ -6,83 +6,29 @@ import brotli
 from llm_adapters.abstract_adapters.adapter import Adapter
 from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
 from llm_adapters.adapter_factory import AdapterFactory
-from llm_adapters.provider_adapters.ai21_sdk_chat_provider_adapter import AI21Model
 from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
-    AnthropicModel,
     AnthropicSDKChatProviderAdapter,
 )
-from llm_adapters.provider_adapters.cerebras_sdk_chat_provider_adapter import (
-    CerebrasModel,
-)
 from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
-    CohereModel,
     CohereSDKChatProviderAdapter,
 )
-from llm_adapters.provider_adapters.deepinfra_sdk_chat_provider_adapter import (
-    DeepInfraModel,
-)
 from llm_adapters.provider_adapters.gemini_sdk_chat_provider_adapter import (
-    GeminiModel,
     GeminiSDKChatProviderAdapter,
 )
-from llm_adapters.provider_adapters.openai_sdk_chat_provider_adapter import OpenAIModel
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
 
-from llm_adapters.provider_adapters.together_sdk_chat_provider_adapter import (
-    TogetherModel,
-)
 
-# from llm_adapters.provider_adapters.together_sdk_chat_provider_adapter import TogetherModel
-
-
-class AdapterTestFactory:
-    model_path: str
-
-    def __init__(self, model_path: str):
-        self.model_path = model_path
-
-    def __call__(self) -> Adapter:
-        adapter = AdapterFactory.get_adapter_by_path(self.model_path)
-        if adapter is None:
-            raise ValueError(f"No adapter found for path: {self.model_path}")
-        return adapter
-
-    def __str__(self) -> str:
-        return self.model_path
-
-
-TEST_MODELS = (
-    AI21Model,
-    OpenAIModel,
-    AnthropicModel,
-    CerebrasModel,
-    CohereModel,
-    DeepInfraModel,
-    GeminiModel,
-    TogetherModel,
-    # FireworksModel,
-    # MoescapeModel,
-    # GeminiModel,
-    # PerplexityModel,
-    # OpenRouterModel,
-    # MoonshotModel,
-    # LeptonModel,
-    # DeepInfraModel,
-    # BigModelModel,
-    # TensorOperaModel,
-)
-
-ADAPTER_CHAT_TEST_FACTORIES = [
-    AdapterTestFactory(model.get_path())
+TEST_CHAT_MODELS = [
+    model.get_path()
     for model in AdapterFactory.get_supported_models()
-    if isinstance(model, TEST_MODELS) and model.supports_chat
+    if model.supports_chat
 ]
 
-ADAPTER_COMPLETION_TEST_FACTORIES = [
-    AdapterTestFactory(model.get_path())
+TEST_COMPLETION_MODELS = [
+    model.get_path()
     for model in AdapterFactory.get_supported_models()
-    if isinstance(model, TEST_MODELS) and model.supports_completion
+    if model.supports_completion
 ]
 
 
@@ -147,7 +93,8 @@ SIMPLE_GENERATE_TOOLS = [
 ]
 
 
-def get_response_content_from_vcr(vcr: VCR, adapter: Adapter) -> Any:
+def get_response_content_from_vcr(vcr: VCR, model_path: str) -> Any:
+    adapter = AdapterFactory.get_adapter_by_path(model_path)
     response = vcr.responses[-1]["body"]["string"]
 
     try:

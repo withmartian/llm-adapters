@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"microsoft/WizardLM-2-8x22B"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"microsoft/WizardLM-2-8x22B"}'
     headers:
       accept:
       - application/json
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '118'
+      - '151'
       content-type:
       - application/json
       host:
@@ -36,17 +36,18 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-dc8802e6f9c449bbaf05687d852a7f63","object":"chat.completion","created":1739904690,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"message":{"role":"assistant","content":"
-        Hello! How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":26,"completion_tokens":9,"estimated_cost":1.3000000000000001e-05}}'
+      string: '{"id":"chatcmpl-1587659885e3426ba84815ec770cfb02","object":"chat.completion","created":1740702442,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"message":{"role":"assistant","content":"
+        Hello! How can I assist you today? If you have any questions or need information
+        on a particular topic, feel free to ask.","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":19,"total_tokens":46,"completion_tokens":27,"estimated_cost":2.3e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '416'
+      - '489'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Feb 2025 18:51:30 GMT
+      - Fri, 28 Feb 2025 00:27:22 GMT
       server:
       - uvicorn
       x-robots-tag:

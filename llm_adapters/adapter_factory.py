@@ -98,8 +98,13 @@ class AdapterFactory:
         return adapter
 
     @staticmethod
-    def get_model_by_path(model_path: str) -> Model | None:
-        return AdapterFactory._model_registry.get(model_path)
+    def get_model_by_path(model_path: str) -> Model:
+        model = AdapterFactory._model_registry.get(model_path)
+
+        if model is None:
+            raise ModelNotFoundException()
+
+        return model
 
     # TODO: add more supports filtering
     @staticmethod

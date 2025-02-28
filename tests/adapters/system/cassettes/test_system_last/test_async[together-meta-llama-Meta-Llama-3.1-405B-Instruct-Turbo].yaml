@@ -36,38 +36,67 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: '{ "error": {"message": "Service unavailable", "type": "service_unavailable"}
-        }'
+      string: "{\n  \"id\": \"918c6b2fbb82f7e3\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703808,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 2217483859676864800,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"How are you today? Is there something I can help you with or would you like
+        to chat?\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 42,\n    \"completion_tokens\": 21,\n    \"total_tokens\":
+        63\n  }\n}"
     headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
       CF-Ray:
-      - 9158150c78652cdc-DFW
-      Cache-Control:
-      - private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      - 918c6b2fbb82f7e3-LAX
       Connection:
       - keep-alive
-      Content-Length:
-      - '78'
       Content-Type:
-      - application/json
+      - application/json; charset=utf-8
       Date:
-      - Fri, 21 Feb 2025 16:23:40 GMT
-      Expires:
-      - Thu, 01 Jan 1970 00:00:01 GMT
-      Referrer-Policy:
-      - same-origin
+      - Fri, 28 Feb 2025 00:50:08 GMT
+      ETag:
+      - W/"249-jxh1UZE3GrpO8nDNlejULQCHIGA"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '585'
+      x-api-call-end:
+      - '2025-02-28T00:50:08.652Z'
+      x-api-call-start:
+      - '2025-02-28T00:50:08.107Z'
+      x-api-received:
+      - '2025-02-28T00:50:08.078Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
     status:
-      code: 503
-      message: Service Temporarily Unavailable
+      code: 200
+      message: OK
 version: 1

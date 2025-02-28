@@ -36,40 +36,76 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"915814377fd947a4\",\n  \"error\": {\n    \"message\":
-        \"mistralai/Mistral-Small-24B-Instruct-2501 is not supported for JSON mode/function
-        calling\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n
-        \   \"code\": \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"918c61a07f4ecf51\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703416,\n  \"model\": \"mistralai/Mistral-Small-24B-Instruct-2501\",\n
+        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
+        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
+        \       \"content\": \"Sure, here is a simple example of a JSON (JavaScript
+        Object Notation) object:\\n\\n```json\\n{\\n  \\\"name\\\": \\\"John Doe\\\",\\n
+        \ \\\"age\\\": 30,\\n  \\\"isEmployed\\\": true,\\n  \\\"address\\\": {\\n
+        \   \\\"street\\\": \\\"123 Main St\\\",\\n    \\\"city\\\": \\\"Anytown\\\",\\n
+        \   \\\"state\\\": \\\"CA\\\",\\n    \\\"zip\\\": \\\"12345\\\"\\n  },\\n
+        \ \\\"phones\\\": [\\n    {\\n      \\\"type\\\": \\\"home\\\",\\n      \\\"number\\\":
+        \\\"555-1234\\\"\\n    },\\n    {\\n      \\\"type\\\": \\\"mobile\\\",\\n
+        \     \\\"number\\\": \\\"555-5678\\\"\\n    }\\n  ]\\n}\\n```\\n\\nThis JSON
+        object includes:\\n- A name\\n- An age\\n- An employment status\\n- An address
+        (which is itself a JSON object)\\n- An array of phone numbers, each with a
+        type and number\\n\\nYou can modify this to fit your specific needs!\",\n
+        \       \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
+        \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 8,\n    \"total_tokens\":
+        213,\n    \"completion_tokens\": 205\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 915814377fd947a4-DFW
+      - 918c61a07f4ecf51-SJC
       Connection:
       - keep-alive
-      Content-Length:
-      - '244'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 21 Feb 2025 16:23:08 GMT
+      - Fri, 28 Feb 2025 00:43:39 GMT
       ETag:
-      - W/"f4-GPhRhIZlzaCYVKCfyQKVrRAUmRs"
+      - W/"4a7-Ep8XCMjnccxEUpFUzPGlbM/5eCg"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '1191'
       x-amzn-trace-id:
-      - 4ad59a19-7637-4190-9cda-88e20b32d3b4-noamzn
+      - adcbb8ee-de52-4bc3-943d-63ba80bf2ae6-noamzn
+      x-api-call-end:
+      - '2025-02-28T00:43:38.971Z'
+      x-api-call-start:
+      - '2025-02-28T00:43:36.556Z'
       x-api-received:
-      - '2025-02-21T16:23:07.155Z'
+      - '2025-02-28T00:43:36.549Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

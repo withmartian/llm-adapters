@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
     headers:
       accept:
       - application/json
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '133'
+      - '166'
       content-type:
       - application/json
       host:
@@ -36,20 +36,27 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-239635a3ac39443b9957ae2ec7dc42b2","object":"chat.completion","created":1739904688,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
-        the user just said \"Hi.\" That''s a friendly greeting. I should respond in
-        a warm and welcoming way. Maybe say \"Hello! How can I assist you today?\"
-        to keep the conversation going and let them know I''m here to help.\n</think>\n\nHello!
-        How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":8,"total_tokens":73,"completion_tokens":65,"estimated_cost":4.6689999999999995e-05}}'
+      string: "{\"id\":\"chatcmpl-101a44ce341e4258a543288d0033bc61\",\"object\":\"chat.completion\",\"created\":1740702438,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user greeted me with \\\"Hi\\\" and I responded with \\\"Hello! How can
+        I assist you today?\\\". Now, they've sent another \\\"Hi\\\" followed by
+        a smiley and some text. Hmm, the smiley is a happy face, so maybe they're
+        in a good mood or trying to be friendly.\\n\\nI should acknowledge their greeting
+        again to keep the conversation flowing. It's important to be welcoming and
+        approachable. Maybe I can ask how they're doing or if there's something specific
+        they need help with. I don't want to assume they have a question, but offering
+        assistance is a good way to invite them to share more.\\n\\nI should also
+        keep the tone light and positive, matching their smiley. Let's go with a friendly
+        response that opens the door for them to continue the conversation.\\n</think>\\n\\nHello!
+        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":191,\"completion_tokens\":181,\"estimated_cost\":0.00012719}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '675'
+      - '1203'
       Content-Type:
       - application/json
       Date:
-      - Tue, 18 Feb 2025 18:51:28 GMT
+      - Fri, 28 Feb 2025 00:27:18 GMT
       server:
       - uvicorn
       x-robots-tag:
