@@ -1,0 +1,79 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"deepseek-chat"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"7161c69e-2fe3-4f19-8d86-ea298d4c7001","object":"chat.completion","created":1740770617,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like your message got cut off. Could you please provide more details
+        or clarify what you''re asking about? I''m here to help!"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":3,"completion_tokens":29,"total_tokens":32,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":3},"system_fingerprint":"fp_3a5770e1b4_prod0225"}'
+    headers:
+      CF-RAY:
+      - 9192ca4859e413e9-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:23:37 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1740770613231; path=/
+      - HWWAFSESID=1d075b2db4345027fd; path=/
+      - __cf_bm=FwtYtIr4JYnaKBFLkuUsfcIPPiPA1Swxqmoap7JOtFA-1740770617-1.0.1.1-pXGrNT6MC_ha9Nc8c7vThRM8vSa630N2CJgTlO9VPIBuCfkD3tDNt1PYvhRVJ1jrxt67DtgNfZamnXangwQve7nnA2RQ0iZ7Qes6RPdOovI;
+        path=/; expires=Fri, 28-Feb-25 19:53:37 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '572'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - eb4ae0fd195e6afc6d1d1b3aa4a58cf4
+    status:
+      code: 200
+      message: OK
+version: 1

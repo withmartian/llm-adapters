@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"bbd25a08-3957-404f-b8d2-be77052745dc\",\"object\":\"chat.completion\",\"created\":1740770913,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! \U0001F44B How can I assist you today?\",\"reasoning_content\":\"Okay,
+        the user said \\\"Hi\\\" and then another \\\"Hi\\\". Maybe they're testing
+        if I notice the repetition. I should respond warmly. Let me make sure to greet
+        them properly and offer help. Keep it friendly and open-ended.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":62,\"total_tokens\":70,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":48},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":8},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 9192d1805b10ab95-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:28:33 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1740770909911; path=/
+      - HWWAFSESID=a2ba8a0d6e6632faa9; path=/
+      - __cf_bm=Wy8LM5CskhdHSnnEYdF.V9km_CYsO6.jFufpitdfZwo-1740770913-1.0.1.1-dmy19cB6w5Fjuf.2bqKrP8YU6u1PKpapuU4bXxmbM6DzkIbffbDMH_5EJ2tWWYwTczqEkervuvwAX29AX0HyuycDe4IXu2AozHPiWk.WTlQ;
+        path=/; expires=Fri, 28-Feb-25 19:58:33 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '776'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 36883b749d37176ef605b74c63bf1b0d
+    status:
+      code: 200
+      message: OK
+version: 1

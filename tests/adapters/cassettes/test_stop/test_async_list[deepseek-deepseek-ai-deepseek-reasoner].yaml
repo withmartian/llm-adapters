@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-reasoner","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '95'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"19ef4063-2e4c-4596-9fb5-fdbaf854b9f0","object":"chat.completion","created":1740770802,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","reasoning_content":"Okay, the user just said
+        \"Hi\". I need to respond in a friendly and welcoming manner. Maybe start
+        with a greeting and offer assistance. Let me make sure the tone is approachable.
+        Something like, \"Hello! How can I assist you today?\" That should work. Keep
+        it simple and open-ended so they feel comfortable asking anything."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":6,"completion_tokens":80,"total_tokens":86,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":69},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":6},"system_fingerprint":"fp_5417b77867_prod0225"}'
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 9192cec96e5f22d4-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:26:42 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=a15b185e738c02df58; path=/
+      - HWWAFSESTIME=1740770799471; path=/
+      - __cf_bm=.6Kg5AuoiYLIFrFEXAVYoXZGPIc7gevzjPhVLsOoRsk-1740770802-1.0.1.1-rVdo7sP1vSwfnOj_Xg3CGMa1r4lu6dpahRot_5wpW5zoSgDk_WF6DSueX4SsmuPmDr1xRoHTkSAO_dkeLCgqimOOd_qROjiAOnE22Htekko;
+        path=/; expires=Fri, 28-Feb-25 19:56:42 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      content-length:
+      - '877'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 1b4741143bdfdc83897d983d04714c54
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '144'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"765b2cbd-027a-4d0d-9730-bb896c3d4d16\",\"object\":\"chat.completion\",\"created\":1740770455,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"It
+        looks like your message might be empty or didn\u2019t send properly. Could
+        you clarify or repeat your question? I\u2019m here to help! \U0001F60A\",\"reasoning_content\":\"Okay,
+        the user sent two empty quotes: \\\"\\\". I need to figure out what they're
+        asking for. Maybe they had a technical issue and the message didn't go through
+        properly. Or perhaps they're testing how I handle empty inputs.\\n\\nI should
+        consider possible scenarios. If they intended to ask something but the content
+        got lost, I should let them know and ask for clarification. It's also possible
+        they're checking if I can recognize when there's no real query. \\n\\nI should
+        respond politely, acknowledging the empty message and invite them to provide
+        more details or repeat their question. Keeping the tone friendly and helpful
+        is key here. Let them know I'm here to assist once they provide more information.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":11,\"completion_tokens\":174,\"total_tokens\":185,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":140},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":11},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 9192c64ea83c2240-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:20:55 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=ee8ef976ed069259c0; path=/
+      - HWWAFSESTIME=1740770452803; path=/
+      - __cf_bm=KJibVSKF1eH6gsoV0fpXrFi8ppWOL6dY4Ua_APYpJBQ-1740770455-1.0.1.1-uvPgzQ68TvzY9fMe.Y.nsY21TDJQ04R4NzXz9mGfTmaa.I9KXyGXbKdSfviTlsIXGspt8WU2dQeJpi.HFk1AWKOuv_Es4nRecB.v4G_MF3s;
+        path=/; expires=Fri, 28-Feb-25 19:50:55 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1363'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - becb08cedc0e4cf47ddfad61a1b35f23
+    status:
+      code: 200
+      message: OK
+version: 1

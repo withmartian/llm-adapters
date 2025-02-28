@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"03cb9ab8-3f5d-4b99-9029-0d393f08faf5\",\"object\":\"chat.completion\",\"created\":1740770590,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        again! \U0001F60A How can I assist you today? Whether you have a question,
+        need help with something, or just want to chat\u2014I'm here for it! Let me
+        know what's on your mind.\",\"reasoning_content\":\"Okay, the user said \\\"Hi\\\"
+        and I responded with \\\"Hi\\\". Now they sent another \\\"Hi\\\". Maybe they're
+        just being friendly or testing the response. I should acknowledge their greeting
+        again but also prompt them to ask a question or share what they need help
+        with. Keep it friendly and open-ended to encourage them to specify their request.
+        Let me make sure my response is welcoming and not repetitive. Maybe add a
+        smiley to keep it light.\\n\\nHmm, perhaps they're not sure how to proceed,
+        so giving them examples of what I can help with might be useful. Let me list
+        a few areas like answering questions, helping with tasks, or providing information.
+        That way, they know the scope of my assistance. Avoid sounding too robotic.
+        Keep the tone conversational. Yeah, that should work.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":208,\"total_tokens\":216,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":162},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":8},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 9192c99b3f3489f2-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:23:10 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=68a3682d711dc3176a; path=/
+      - HWWAFSESTIME=1740770589989; path=/
+      - __cf_bm=zVpZvfbr6LQ6Ws__MoX1evTStTds06Ba3Nuluv.Mwnw-1740770590-1.0.1.1-U8KqwkX9f8x8s1aUb90Mwp6tqZfHEt_narHBJ5cydiGf7wsQ2q7nzs52xSXDF4yEwDX4d7lo5ZPuCkvUwAPSMel5TiitiZjDyKrA7jAhDxY;
+        path=/; expires=Fri, 28-Feb-25 19:53:10 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1467'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 49397158b77398a1ab359f5aaaebf81b
+    status:
+      code: 200
+      message: OK
+version: 1

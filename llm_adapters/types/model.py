@@ -28,6 +28,7 @@ class Provider(str, Enum):
     bigmodel = "bigmodel"
     tensoropera = "tensoropera"
     xai = "xai"
+    deepseek = "deepseek"
 
 
 class Vendor(str, Enum):
