@@ -91,6 +91,8 @@ class ChatCompletionCreateKwargs(TypedDict, total=False):
     top_p: Optional[float] | None
     user: str | None
 
+    # min_p: Optional[float] | None
+
     extra_headers: Headers | None
     extra_query: Query | None
     extra_body: Body | None

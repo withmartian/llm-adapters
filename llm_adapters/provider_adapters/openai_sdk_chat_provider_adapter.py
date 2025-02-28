@@ -64,6 +64,7 @@ MODELS: list[Model] = [
         context_length=128000,
         completion_length=65536,
         supports_json_output=False,
+        supports_stop=False,
     ),
     OpenAIModel(
         name="o1-mini-2024-09-12",
@@ -71,6 +72,7 @@ MODELS: list[Model] = [
         context_length=128000,
         completion_length=65536,
         supports_json_output=False,
+        supports_stop=False,
     ),
     OpenAIModel(
         name="o1",
@@ -101,10 +103,11 @@ MODELS: list[Model] = [
         cost=Cost(prompt=75.00e-6, completion=150.00e-6),
         context_length=128000,
         completion_length=16384,
+        supports_n=False,
+        supports_stop=False,
         can_system_last=False,
         can_repeating_roles=False,
         can_empty_content=False,
-        supports_n=False,
         can_temperature=False,
     ),
     OpenAIModel(
@@ -112,10 +115,11 @@ MODELS: list[Model] = [
         cost=Cost(prompt=75.00e-6, completion=150.00e-6),
         context_length=128000,
         completion_length=16384,
+        supports_n=False,
+        supports_stop=False,
         can_system_last=False,
         can_repeating_roles=False,
         can_empty_content=False,
-        supports_n=False,
         can_temperature=False,
     ),
 ]
