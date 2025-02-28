@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""}],"model":"gemini-1.5-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '249'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"\"\"\n","role":"assistant"}}],"created":1740771854,"model":"gemini-1.5-pro","object":"chat.completion","usage":{"completion_tokens":2,"prompt_tokens":6,"total_tokens":8}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:44:14 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=568
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '238'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,79 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-2.0-flash-lite"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '82'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":",\n\nI
+        am trying to extract the audio from a video using ffmpeg on linux. I am also
+        trying to encode it into a certain format. My code is as follows:\n\n<code>String
+        command = \"ffmpeg -i \" + videoFile.getAbsolutePath() + \" -vn -acodec libmp3lame
+        -ar 44100 -ab 128k \" + audioFile.getAbsolutePath();</code>\n\nWhen I run
+        this in a terminal, it works as expected. However, when I run this in a java
+        program, it either does nothing or throws a \"File not found\" error. Here''s
+        the java code:\n\n<code>try {\n            String command = \"ffmpeg -i \"
+        + videoFile.getAbsolutePath() + \" -vn -acodec libmp3lame -ar 44100 -ab 128k
+        \" + audioFile.getAbsolutePath();\n            Process process = Runtime.getRuntime().exec(command);\n            process.waitFor();\n        }\n        catch(Exception
+        e) {\n            System.out.println(e.getMessage());\n        }</code>\n\nAny
+        thoughts?\n\nThanks!","role":"assistant"}}],"created":1740771820,"model":"gemini-2.0-flash-lite","object":"chat.completion","usage":{"completion_tokens":238,"prompt_tokens":1,"total_tokens":239}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:43:40 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=1934
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1140'
+    status:
+      code: 200
+      message: OK
+version: 1

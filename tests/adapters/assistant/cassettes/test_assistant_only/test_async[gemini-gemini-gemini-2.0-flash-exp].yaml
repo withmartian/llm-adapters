@@ -1,0 +1,170 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-2.0-flash-exp"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '81'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\",\\nI
+        have written a simple BP to write the current location of the player to a
+        file.\\n\\nHere\u2019s the code:\\n\\nHere\u2019s the .build.cs file:\\n\\n<code>//
+        Fill out your copyright notice in the Description page of Project Settings.\\n\\nusing
+        UnrealBuildTool;\\n\\npublic class BPCall : ModuleRules\\n{\\n\\tpublic BPCall(ReadOnlyTargetRules
+        Target) : base(Target)\\n\\t{\\n\\t\\tPCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;\\n\\n\\t\\tPublicDependencyModuleNames.AddRange(new
+        string[] { \\\"Core\\\", \\\"CoreUObject\\\", \\\"Engine\\\", \\\"InputCore\\\",
+        \\\"HeadMountedDisplay\\\", \\\"UMG\\\", \\\"SlateCore\\\" });\\n\\n\\t\\tPrivateDependencyModuleNames.AddRange(new
+        string[] {  });\\n\\n\\t\\t// Uncomment if you are using Slate UI\\n\\t\\t//
+        PrivateDependencyModuleNames.AddRange(new string[] { \\\"Slate\\\", \\\"SlateCore\\\"
+        });\\n\\n\\t\\t// Uncomment if you are using online features\\n\\t\\t// PrivateDependencyModuleNames.Add(\\\"OnlineSubsystem\\\");\\n\\n\\t\\t//
+        To include OnlineSubsystemSteam, add it to the plugins section in your uproject
+        file with the Enabled attribute set to true\\n\\t}\\n}\\n\\n</code>\\n\\nAnd
+        here\u2019s the .h file:\\n\\n<code>#pragma once\\n\\n#include \\\"CoreMinimal.h\\\"\\n#include
+        \\\"Kismet/BlueprintFunctionLibrary.h\\\"\\n#include \\\"BPCall.generated.h\\\"\\n\\n/**\\n
+        * \\n */\\nUCLASS()\\nclass BPCALL_API UBPCall : public UBlueprintFunctionLibrary\\n{\\n\\tGENERATED_BODY()\\n\\npublic:\\n\\n\\tUFUNCTION(BlueprintCallable,
+        Category = \\\"FileAccess\\\")\\n\\t\\tstatic bool SaveStringToFile(FString
+        FileName, FString SaveText);\\n\\n\\tUFUNCTION(BlueprintCallable, Category
+        = \\\"FileAccess\\\")\\n\\t\\tstatic FString LoadStringFromFile(FString FileName);\\n};\\n</code>\\n\\nAnd
+        here\u2019s the .cpp file:\\n\\n<code>// Fill out your copyright notice in
+        the Description page of Project Settings.\\n\\n\\n#include \\\"BPCall.h\\\"\\n#include
+        \\\"Misc/FileHelper.h\\\"\\n#include \\\"HAL/PlatformFilemanager.h\\\"\\n\\nbool
+        UBPCall::SaveStringToFile(FString FileName, FString SaveText)\\n{\\n\\treturn
+        FFileHelper::SaveStringToFile(SaveText, *FileName);\\n}\\n\\nFString UBPCall::LoadStringFromFile(FString
+        FileName)\\n{\\n\\tFString Result = \\\"\\\";\\n\\tFFileHelper::LoadFileToString(Result,
+        *FileName);\\n\\treturn Result;\\n}\\n</code>\\n\\nEvery time I try to compile
+        the project, it fails. I have tried deleting the Intermediate, Saved and .sln
+        file and rebuild the project, but that didn\u2019t work. I am using UE5.3\\n\\nHere\u2019s
+        the compilation error I get:\\n\\n<code>LogCompiler: Error: D:\\\\Unreal_Projects\\\\BPCall\\\\Source\\\\BPCall\\\\BPCall.cpp(10):
+        [C4703] potentially uninitialized local pointer variable 'FileName' used\\nLogCompiler:
+        Error: D:\\\\Unreal_Projects\\\\BPCall\\\\Source\\\\BPCall\\\\BPCall.cpp(16):
+        [C4703] potentially uninitialized local pointer variable 'FileName' used\\n</code>\\n\\nPlease
+        let me know what I am doing wrong.\\n\\nYou need to pass your FString as Const
+        Reference:\\n\\n<code>static bool SaveStringToFile(const FString& FileName,
+        const FString& SaveText);\\n\\nstatic FString LoadStringFromFile(const FString&
+        FileName);\\n</code>\\n\\n<code>bool UBPCall::SaveStringToFile(const FString&
+        FileName, const FString& SaveText)\\n{\\n\\treturn FFileHelper::SaveStringToFile(SaveText,
+        *FileName);\\n}\\n\\nFString UBPCall::LoadStringFromFile(const FString& FileName)\\n{\\n\\tFString
+        Result = \\\"\\\";\\n\\tFFileHelper::LoadFileToString(Result, *FileName);\\n\\treturn
+        Result;\\n}\\n</code>\\n\\nThank you. It works now!\\n\\nCould you explain
+        why it works now, so I can avoid this error in the future?\\n\\nThis error
+        occurs because you\u2019re dereferencing the FString object using the * operator
+        without ensuring that the FString object is properly initialized.\\nThe issue
+        is when you pass FString FileName to SaveStringToFile and LoadStringFromFile
+        functions. When you pass a regular FString object, it creates a copy of the
+        string when the function is called. However, there\u2019s no guarantee that
+        this copy will be initialized with a valid string. If the string is empty
+        or uninitialized, dereferencing it with * can lead to a crash or undefined
+        behavior.\\n\\nBy passing a const reference, you\u2019re ensuring that the
+        FString object is passed to the function without creating a copy, and the
+        original object is guaranteed to be valid. The const keyword ensures that
+        the function won\u2019t modify the original object. This approach avoids the
+        potential issues with uninitialized or invalid FString objects.\\n\\nThank
+        you for the explanation. It\u2019s much clearer now.\\n\\n@dan.mroczek You\u2019re
+        welcome! Happy to help\\n\\nOne more question:\\nWhy doesn\u2019t this cause
+        the same problem when passing SaveText?\\n\\nBecause your SaveText is initialized
+        when it comes into the function, its passed and copied and populated with
+        valid data from the input of the blueprint node. Filename doesn\u2019t have
+        that guarantee, so you may get an empty string.\\n\\n<code>static bool SaveStringToFile(FString
+        FileName, FString SaveText);\\n</code>\\n\\n^ This is a standard copy. The
+        value is copied into the function, if a value is input in Blueprint.\\n\\n<code>static
+        bool SaveStringToFile(const FString& FileName, FString SaveText);\\n</code>\\n\\n^
+        This is a read-only reference, the original variable is not copied but rather
+        used by the function. This ensures that the data exists.\\n\\nThank you!\\n\\n@dan.mroczek
+        You\u2019re welcome! I am happy to help.\\n\\nSorry to bother you again, but
+        I have another similar error I don\u2019t understand.\\n\\nI am trying to
+        add functionality to set the players\u2019 mesh. The blueprint part works
+        fine, but the C++ part doesn\u2019t compile.\\n\\nHere\u2019s the BP code:\\n\\nHere\u2019s
+        the .h file:\\n\\n<code>#pragma once\\n\\n#include \\\"CoreMinimal.h\\\"\\n#include
+        \\\"Kismet/BlueprintFunctionLibrary.h\\\"\\n#include \\\"Components/SkeletalMeshComponent.h\\\"\\n#include
+        \\\"BPCall.generated.h\\\"\\n\\n/**\\n * \\n */\\nUCLASS()\\nclass BPCALL_API
+        UBPCall : public UBlueprintFunctionLibrary\\n{\\n\\tGENERATED_BODY()\\n\\npublic:\\n\\n\\tUFUNCTION(BlueprintCallable,
+        Category = \\\"FileAccess\\\")\\n\\t\\tstatic bool SaveStringToFile(const
+        FString& FileName, const FString& SaveText);\\n\\n\\tUFUNCTION(BlueprintCallable,
+        Category = \\\"FileAccess\\\")\\n\\t\\tstatic FString LoadStringFromFile(const
+        FString& FileName);\\n\\n\\tUFUNCTION(BlueprintCallable, Category = \\\"MeshHandling\\\")\\n\\t\\tstatic
+        void SetMesh(USkeletalMeshComponent* SkeletalMesh, USkeletalMesh* NewMesh);\\n};\\n</code>\\n\\nHere\u2019s
+        the .cpp file:\\n\\n<code>#include \\\"BPCall.h\\\"\\n#include \\\"Misc/FileHelper.h\\\"\\n#include
+        \\\"HAL/PlatformFilemanager.h\\\"\\n\\n#include \\\"Components/SkeletalMeshComponent.h\\\"\\n\\nbool
+        UBPCall::SaveStringToFile(const FString& FileName, const FString& SaveText)\\n{\\n\\treturn
+        FFileHelper::SaveStringToFile(SaveText, *FileName);\\n}\\n\\nFString UBPCall::LoadStringFromFile(const
+        FString& FileName)\\n{\\n\\tFString Result = \\\"\\\";\\n\\tFFileHelper::LoadFileToString(Result,
+        *FileName);\\n\\treturn Result;\\n}\\n\\nvoid UBPCall::SetMesh(USkeletalMeshComponent*
+        SkeletalMesh, USkeletalMesh* NewMesh)\\n{\\n\\tif (SkeletalMesh)\\n\\t{\\n\\t\\tSkeletalMesh->SetSkeletalMesh(NewMesh);\\n\\t}\\n}\\n</code>\\n\\nAnd
+        here\u2019s the error message:\\n\\n<code>LogCompiler: Error: D:\\\\Unreal_Projects\\\\BPCall\\\\Source\\\\BPCall\\\\BPCall.cpp(26):
+        [C4703] potentially uninitialized local pointer variable 'SkeletalMesh' used\\nLogCompiler:
+        Error: D:\\\\Unreal_Projects\\\\BPCall\\\\Source\\\\BPCall\\\\BPCall.cpp(26):
+        [C4703] potentially uninitialized local pointer variable 'SkeletalMesh' used\\n</code>\\n\\nPlease
+        let me know what I am doing wrong.\\n\\nThat\u2019s the same problem as before!\\nYou
+        need to pass the parameters by reference.\\n\\n<code>static void SetMesh(USkeletalMeshComponent*&
+        SkeletalMesh, USkeletalMesh*& NewMesh);\\n</code>\\n\\nAnother issue. If you
+        want to create custom nodes, you can only create them inside Actor classes,
+        which you\u2019re not using. I highly recommend you follow a video tutorial
+        on youtube how to create custom nodes.\\n\\nThank you!\\n\\nI have tried adding
+        \u201C&\u201D to the parameters and it still doesn\u2019t work. Also, I can
+        create custom nodes in BlueprintFunctionLibrary.\\n\\nAh yes sorry, it should
+        work from within a function library!\\n\\nAre you sure you added the &s to
+        the parameters? That error should only occur when you\u2019re using a non-referenced
+        parameter.\\n\\nI can confirm that the function works. If you are still getting
+        that error with reference parameters, clean up the project\\n\\n* Close the
+        project.\\n* Delete the following folders: <code>.vs</code>, <code>Binaries</code>,
+        <code>Intermediate</code>, and <code>Saved</code>.\\n* Re-open the project.\\n\\nIt
+        works after deleting those files.\\nThank you!\",\"role\":\"assistant\"}}],\"created\":1740771489,\"model\":\"gemini-2.0-flash-exp\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":2103,\"prompt_tokens\":1,\"total_tokens\":2104}}"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:38:09 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=15316
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '8626'
+    status:
+      code: 200
+      message: OK
+version: 1

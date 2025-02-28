@@ -1,0 +1,133 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-1.5-flash-8b-001"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '84'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"I
+        am trying to generate a report that shows a percentage change in the number
+        of tickets assigned to different departments for a given date range.\n\nI''t
+        needs to show columns like:\n\n* Department Name\n* Total Tickets Assigned
+        in the date range for the department.\n* Percentage Change from Previous Period
+        (e.g., previous month)\n\nI''m using SQL Server.\n\n```sql\n-- Sample Table
+        Structure\nCREATE TABLE Tickets\n(\n    TicketID INT PRIMARY KEY,\n    DepartmentName
+        VARCHAR(50),\n    AssignmentDate DATE\n);\n\n-- Sample Data\nINSERT INTO Tickets
+        (TicketID, DepartmentName, AssignmentDate) VALUES\n(1, ''Sales'', ''2023-10-26''),\n(2,
+        ''Marketing'', ''2023-10-27''),\n(3, ''Sales'', ''2023-10-27''),\n(4, ''Sales'',
+        ''2023-11-01''),\n(5, ''Marketing'', ''2023-11-01''),\n(6, ''Sales'', ''2023-11-15''),\n(7,
+        ''Support'', ''2023-10-28''),\n(8, ''Sales'', ''2023-11-05'');\n\n-- Calculate
+        the total tickets assigned to each department in the current period\nSELECT\n\tDepartmentName,\n    COUNT(*)
+        AS CurrentPeriodTickets\nFROM Tickets\nWHERE AssignmentDate BETWEEN ''2023-10-26''
+        AND ''2023-11-15''\nGROUP BY DepartmentName;\n\n```\n\nTo get the previous
+        period''s data, I''d need to define the start and end dates of the previous
+        month.\n\n\n```sql\n-- Calculate the total tickets assigned to each department
+        in the previous period\nDECLARE @PreviousPeriodStartDate DATE, @PreviousPeriodEndDate
+        DATE;\n\nSELECT\n    @PreviousPeriodStartDate = DATEADD(month,DATEDIFF(month,0,GETDATE())-1,0),\n    @PreviousPeriodEndDate
+        = DATEADD(day,-1,DATEADD(month,DATEDIFF(month,0,GETDATE()),0))\n\nSELECT\n\tDepartmentName,\n    COUNT(*)
+        AS PreviousPeriodTickets\nFROM Tickets\nWHERE AssignmentDate BETWEEN @PreviousPeriodStartDate
+        AND @PreviousPeriodEndDate\nGROUP BY DepartmentName;\n```\n\nI need to combine
+        these queries to get the percentage change.\n\n\n```sql\n-- Final Query (Needs
+        improvement)\n\nSELECT\n\tt1.DepartmentName,\n\tt1.CurrentPeriodTickets,\n\t(CAST(t1.CurrentPeriodTickets
+        AS DECIMAL(18, 2)) / CAST(t1.PreviousPeriodTickets AS DECIMAL(18, 2))) * 100
+        AS PercentageChange\nFROM (\n\tSELECT\n\t\tDepartmentName,\n\t\tCOUNT(*) AS
+        CurrentPeriodTickets\n\tFROM Tickets\n\tWHERE AssignmentDate BETWEEN ''2023-10-26''
+        AND ''2023-11-15''\n\tGROUP BY DepartmentName\n) AS t1\nJOIN (\n\tSELECT\n\t\tDepartmentName,\n\t\tCOUNT(*)
+        AS PreviousPeriodTickets\n\tFROM Tickets\n\tWHERE AssignmentDate BETWEEN DATEADD(month,DATEDIFF(month,0,GETDATE())-1,0)
+        AND DATEADD(day,-1,DATEADD(month,DATEDIFF(month,0,GETDATE()),0))\n\tGROUP
+        BY DepartmentName\n) AS t2 ON t1.DepartmentName = t2.DepartmentName;\n```\n\n**Complete
+        and Improved Solution:**\n\n```sql\n-- Calculate the percentage change in
+        tickets assigned to each department.\nDECLARE @CurrentPeriodStartDate DATE
+        = ''2023-10-26'', @CurrentPeriodEndDate DATE = ''2023-11-15'';\nDECLARE @PreviousPeriodStartDate
+        DATE, @PreviousPeriodEndDate DATE;\n\nSELECT\n    @PreviousPeriodStartDate
+        = DATEADD(month, DATEDIFF(month, 1, @CurrentPeriodStartDate), 0),\n    @PreviousPeriodEndDate
+        = DATEADD(day, -1, DATEADD(month, DATEDIFF(month, 0, @CurrentPeriodStartDate),
+        0));\n\n\nSELECT\n    d.DepartmentName,\n    CurrentPeriodTickets,\n    ISNULL(PreviousPeriodTickets,
+        0) AS PreviousPeriodTickets,\n    CASE\n        WHEN ISNULL(PreviousPeriodTickets,
+        0) = 0\n        THEN 0.00\n        ELSE\n            ROUND((CAST(CurrentPeriodTickets
+        AS DECIMAL(18, 2)) / CAST(PreviousPeriodTickets AS DECIMAL(18, 2))) * 100
+        - 100, 2)\n    END AS PercentageChange\nFROM\n(\n    SELECT\n        DepartmentName,\n        COUNT(*)
+        AS CurrentPeriodTickets\n    FROM Tickets\n    WHERE AssignmentDate BETWEEN
+        @CurrentPeriodStartDate AND @CurrentPeriodEndDate\n    GROUP BY DepartmentName\n)
+        AS d\nLEFT JOIN\n(\n    SELECT\n        DepartmentName,\n        COUNT(*)
+        AS PreviousPeriodTickets\n    FROM Tickets\n    WHERE AssignmentDate BETWEEN
+        @PreviousPeriodStartDate AND @PreviousPeriodEndDate\n    GROUP BY DepartmentName\n)
+        AS p ON d.DepartmentName = p.DepartmentName;\n```\n\n**Explanation and Improvements:**\n\n*
+        **Clearer Variable Declarations:**  Defines `@CurrentPeriodStartDate` and
+        `@CurrentPeriodEndDate` for better readability and maintainability.  Crucially,
+        the previous period''s dates are calculated using these variables, instead
+        of relying on `GETDATE()`, which could lead to incorrect results if the query
+        runs on different dates.\n* **LEFT JOIN:** Uses `LEFT JOIN` to handle cases
+        where a department might not have tickets in the previous period. This prevents
+        errors from division by zero and returns 0% for those cases.\n* **ISNULL:**
+        Explicitly handles the `NULL` values that `LEFT JOIN` might produce using
+        `ISNULL` for `PreviousPeriodTickets`.\n* **Accurate Percentage Calculation:**
+        Calculates the percentage change correctly by subtracting 100 from the result
+        of the division.  This accurately represents the percentage *increase* or
+        *decrease*.\n* **ROUNDing:**  Rounds the `PercentageChange` to two decimal
+        places using `ROUND()`.\n\n\nThis revised solution is more robust and handles
+        potential issues more gracefully. Remember to replace `''2023-10-26''` and
+        `''2023-11-15''` with your actual date range.  Using parameterized dates is
+        a best practice for maintainability.\n\n\n```sql\n--Example usage with parameterized
+        dates\nDECLARE @CurrentPeriodStartDate DATE = ''20231026'', @CurrentPeriodEndDate
+        DATE = ''20231115'';\n```","role":"assistant"}}],"created":1740771440,"model":"gemini-1.5-flash-8b-001","object":"chat.completion","usage":{"completion_tokens":1461,"prompt_tokens":1,"total_tokens":1462}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:37:20 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=6652
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '5572'
+    status:
+      code: 200
+      message: OK
+version: 1

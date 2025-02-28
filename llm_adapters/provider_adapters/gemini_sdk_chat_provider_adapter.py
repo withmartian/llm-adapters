@@ -1,6 +1,6 @@
 from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
 from llm_adapters.types import (
-    # Cost,
+    Cost,
     Model,
     ModelProperties,
     Provider,
@@ -15,90 +15,44 @@ class GeminiModel(Model):
     supports_completion: bool = False
 
     can_empty_content: bool = False
+    can_system_last: bool = False
 
     properties: ModelProperties = ModelProperties(gdpr_compliant=True)
 
 
 # TODO: setup pricing for longer contexts
 MODELS: list[Model] = [
-    # GeminiModel(
-    #     name="gemini-1.5-pro-latest",
-    #     cost=Cost(prompt=1.25e-6, completion=5.00e-6),
-    #     context_length=2097152,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-pro",
-    #     cost=Cost(prompt=1.25e-6, completion=5.00e-6),
-    #     context_length=2097152,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-pro-001",
-    #     cost=Cost(prompt=1.25e-6, completion=5.00e-6),
-    #     context_length=2097152,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-pro-002",
-    #     cost=Cost(prompt=1.25e-6, completion=5.00e-6),
-    #     context_length=2097152,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-flash-8b-latest",
-    #     cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-flash-8b",
-    #     cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-flash-8b-001",
-    #     cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-flash-latest",
-    #     cost=Cost(prompt=0.075e-6, completion=0.30e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-flash",
-    #     cost=Cost(prompt=0.075e-6, completion=0.30e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-flash-001",
-    #     cost=Cost(prompt=0.075e-6, completion=0.30e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-1.5-flash-002",
-    #     cost=Cost(prompt=0.075e-6, completion=0.30e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    # GeminiModel(
-    #     name="gemini-2.0-flash-exp",
-    #     cost=Cost(prompt=0.075e-6, completion=0.30e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
-    #     GeminiModel(
-    #     name="gemini-2.0-flash",
-    #     cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
-    #     context_length=1048576,
-    #     completion_length=8192,
-    # ),
+    GeminiModel(
+        name="gemini-1.5-pro",
+        cost=Cost(prompt=1.25e-6, completion=5.00e-6),
+        context_length=2097152,
+        completion_length=8192,
+    ),
+    GeminiModel(
+        name="gemini-1.5-flash-8b",
+        cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
+        context_length=1048576,
+        completion_length=8192,
+    ),
+    GeminiModel(
+        name="gemini-1.5-flash",
+        cost=Cost(prompt=0.075e-6, completion=0.30e-6),
+        context_length=1048576,
+        completion_length=8192,
+    ),
+    GeminiModel(
+        name="gemini-2.0-flash",
+        cost=Cost(prompt=0.10e-6, completion=0.40e-6),
+        context_length=1048576,
+        completion_length=8192,
+    ),
+    GeminiModel(
+        name="gemini-2.0-flash-lite",
+        cost=Cost(prompt=0.075e-6, completion=0.30e-6),
+        context_length=1048576,
+        completion_length=8192,
+        can_assistant_last=False,
+    ),
 ]
 
 
