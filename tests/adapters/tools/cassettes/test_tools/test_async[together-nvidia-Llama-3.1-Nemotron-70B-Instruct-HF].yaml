@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '396'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"91aa699dbf129e2b\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1741018317,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 17229132264579662000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Here is the JSON for a function call with its proper arguments based on
+        the provided prompt:\\n\\n```\\n{\\n  \\\"name\\\": \\\"generate\\\",\\n  \\\"parameters\\\":
+        {\\n    \\\"prompt\\\": \\\"5, 4, 3, 10, 11\\\"\\n  }\\n}\\n```\\n\\nNote:
+        Since the prompt asks for a random number with tools specified in the range
+        1-10, but the `generate` function only takes a `prompt` parameter which seems
+        to expect a string of numbers (as per the description), I've assumed the tools
+        specified are implied within the range or context, and the `prompt` should
+        still reflect a random number selection within the 1-10 range. If the function
+        was expected to directly accept a range or additional parameters for tools,
+        the function definition provided would need to be adjusted to accommodate
+        those requirements.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 142,\n    \"completion_tokens\": 170,\n
+        \   \"total_tokens\": 312\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 91aa699dbf129e2b-MEX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 03 Mar 2025 16:11:59 GMT
+      ETag:
+      - W/"4f3-uUzRBcoWcmmd6DTMU/k0ScNa4cI"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1267'
+      x-amzn-trace-id:
+      - ec4ea27e-f72e-447b-a5c6-eed293002ef7-noamzn
+      x-api-call-end:
+      - '2025-03-03T16:11:59.296Z'
+      x-api-call-start:
+      - '2025-03-03T16:11:57.224Z'
+      x-api-received:
+      - '2025-03-03T16:11:57.102Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

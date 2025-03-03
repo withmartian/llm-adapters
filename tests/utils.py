@@ -3,7 +3,6 @@ from typing import Any, Iterable
 
 import brotli
 
-from llm_adapters.abstract_adapters.adapter import Adapter
 from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
 from llm_adapters.adapter_factory import AdapterFactory
 from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
@@ -115,7 +114,9 @@ def get_response_content_from_vcr(vcr: VCR, model_path: str) -> Any:
         raise ValueError("Unknown adapter")
 
 
-def get_response_choices_from_vcr(vcr: VCR, adapter: Adapter) -> Any:
+def get_response_choices_from_vcr(vcr: VCR, model_path: str) -> Any:
+    adapter = AdapterFactory.get_adapter_by_path(model_path)
+
     response = vcr.responses[-1]["body"]["string"]
 
     try:

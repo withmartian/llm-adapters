@@ -1,0 +1,129 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '396'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"91aa69e4bba35235\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1741018328,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 12924581852716485000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"<think>\\nOkay, so I need to generate a random number between 1 and 10 using
+        the tools specified. The user mentioned using the random module in Python,
+        so I should focus on that. Let me think about how to do this step by step.\\n\\nFirst,
+        I remember that in Python, the random module is used for generating random
+        numbers. The function I need is random.randint(). I think this function takes
+        two arguments: the lower bound and the upper bound. So, I should use random.randint(1,
+        10) to get a number between 1 and 10, inclusive.\\n\\nWait, but sometimes
+        people get confused between random.randint() and random.randrange(). I should
+        make sure I'm using the correct function. random.randint() includes both endpoints,
+        while random.randrange() doesn't. Since the user specified the range is 1-10,
+        I should definitely use randint.\\n\\nLet me double-check the syntax. The
+        first argument is the lower bound, and the second is the upper bound. So,
+        yes, random.randint(1, 10) should give me a number from 1 to 10.\\n\\nI should
+        also consider if there are any other modules or methods that might be useful.
+        For example, using the random module's functions like random() which gives
+        a float between 0 and 1, but that's not what the user asked for. They wanted
+        an integer between 1 and 10.\\n\\nAnother thought: sometimes people use the
+        random module with the seed function to get a predictable sequence, but that's
+        not necessary here. The user didn't specify any particular method, so I can
+        just use randint.\\n\\nI think that's all. So, the code should be as simple
+        as importing the random module and then using random.randint(1, 10) to get
+        the desired number.\\n</think>\\n\\nTo generate a random number between 1
+        and 10 using Python's random module, you can use the `random.randint()` function.
+        Here's how to do it:\\n\\n```python\\nimport random\\n\\nrandom_number = random.randint(1,
+        10)\\nprint(random_number)\\n```\\n\\nThis code will output a random integer
+        between 1 and 10, inclusive.\",\n        \"tool_calls\": []\n      }\n    }\n
+        \ ],\n  \"usage\": {\n    \"prompt_tokens\": 16,\n    \"completion_tokens\":
+        451,\n    \"total_tokens\": 467\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 91aa69e4bba35235-MEX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 03 Mar 2025 16:12:09 GMT
+      ETag:
+      - W/"99b-f35bN0fO3RM5z8QWFc2YuSw65xc"
+      Retry-After:
+      - '0'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '2459'
+      x-amzn-trace-id:
+      - 14048c9b-202a-44c9-9be5-a447b7a7f8f5-noamzn
+      x-api-call-end:
+      - '2025-03-03T16:12:10.011Z'
+      x-api-call-start:
+      - '2025-03-03T16:12:08.366Z'
+      x-api-received:
+      - '2025-03-03T16:12:08.363Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '198'
+      x-ratelimit-remaining-tokens:
+      - '99579'
+      x-ratelimit-reset:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,95 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-chat","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '389'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"b3f0364a-c563-4383-b695-31a250247fd7","object":"chat.completion","created":1741018578,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"To
+        generate a random number between 1 and 10, you can use various tools depending
+        on your preference. Here are a few examples:\n\n### 1. **Using Python:**\n```python\nimport
+        random\nrandom_number = random.randint(1, 10)\nprint(random_number)\n```\n\n###
+        2. **Using JavaScript:**\n```javascript\nlet randomNumber = Math.floor(Math.random()
+        * 10) + 1;\nconsole.log(randomNumber);\n```\n\n### 3. **Using Excel:**\n-
+        In a cell, type the formula:\n  ```excel\n  =RANDBETWEEN(1, 10)\n  ```\n\n###
+        4. **Using Bash (Linux/Mac):**\n```bash\necho $((1 + RANDOM % 10))\n```\n\n###
+        5. **Using an Online Random Number Generator:**\n- Visit a website like [Random.org](https://www.random.org/)
+        and specify the range 1-10.\n\n### 6. **Using a Calculator:**\n- Some calculators
+        have a random number function. For example, on a TI-84 calculator, you can
+        use:\n  ```\n  randInt(1, 10)\n  ```\n\n### 7. **Using a Command Prompt (Windows):**\n```cmd\n@echo
+        off\nset /a randomNumber=%RANDOM% %% 10 + 1\necho %randomNumber%\n```\n\n###
+        8. **Using a Dice (Physical Tool):**\n- Roll a 10-sided die (d10) to get a
+        random number between 1 and 10.\n\nLet me know if you''d like further clarification
+        or assistance!"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":15,"completion_tokens":335,"total_tokens":350,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":15},"system_fingerprint":"fp_3a5770e1b4_prod0225"}'
+    headers:
+      CF-RAY:
+      - 91aa7002bec05792-QRO
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 03 Mar 2025 16:16:19 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=23229852ef6f20ec0e; path=/
+      - HWWAFSESTIME=1741018576607; path=/
+      - __cf_bm=2VxMzw4w1pyi2jPDV.NZjLPz3L9BU7LrT0wWYhmmkfA-1741018579-1.0.1.1-LBlIFBo5evkkPOr9dnRmm.cqICeSSzGPika5x6Wqe6rC0tZiD3LHkFmyGRF9ej6im9y88iu5KBvOQMTI3r64KGqv_DzT2E2tqzYdF8egEHE;
+        path=/; expires=Mon, 03-Mar-25 16:46:19 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1630'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-ds-trace-id:
+      - 023eb41ecc4837d3f34dbff03f770c94
+    status:
+      code: 200
+      message: OK
+version: 1

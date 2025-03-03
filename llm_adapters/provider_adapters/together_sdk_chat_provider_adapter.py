@@ -10,6 +10,7 @@ from llm_adapters.types import (
 class TogetherModel(Model):
     provider_name: str = Provider.together.value
 
+    supports_tools: bool = False
     supports_completion: bool = False
     supports_n: bool = False
     supports_vision: bool = False

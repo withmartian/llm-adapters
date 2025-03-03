@@ -8,6 +8,7 @@ class AI21Model(Model):
     provider_name: str = Provider.ai21.value
     vendor_name: str = Vendor.ai21.value
 
+    supports_tools: bool = False
     supports_completion: bool = False
     supports_json_content: bool = False
     supports_vision: bool = False

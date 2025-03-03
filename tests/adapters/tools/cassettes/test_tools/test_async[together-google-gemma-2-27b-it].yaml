@@ -1,0 +1,108 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"google/gemma-2-27b-it","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '376'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"91aa69d96d8adbd6\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1741018326,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        16100945768872390000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Please provide
+        me with the tools you'd like me to use to generate the random number. For
+        example, you could say:\\n\\n* \\\"Use Python to generate a random number\\\"\\n*
+        \\\"Tell me how to use a dice to generate a random number\\\"\\n* \\\"Describe
+        a method using a coin to generate a random number\\\" \\n\\n\\nOnce you tell
+        me the tool, I can give you specific instructions! \\n\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 22,\n    \"completion_tokens\":
+        87,\n    \"total_tokens\": 109\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 91aa69d96d8adbd6-QRO
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 03 Mar 2025 16:12:07 GMT
+      ETag:
+      - W/"348-CrJ+GroQ+WL/or42mKSbrugj+uw"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '840'
+      x-amzn-trace-id:
+      - 8fea2a8a-f879-47d3-9a0d-5fcc1de0ed54-noamzn
+      x-api-call-end:
+      - '2025-03-03T16:12:07.904Z'
+      x-api-call-start:
+      - '2025-03-03T16:12:06.547Z'
+      x-api-received:
+      - '2025-03-03T16:12:06.541Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '99688'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -65,6 +65,7 @@ MODELS: list[Model] = [
         completion_length=65536,
         supports_json_output=False,
         supports_stop=False,
+        supports_tools=False,
     ),
     OpenAIModel(
         name="o1-mini-2024-09-12",
@@ -73,6 +74,7 @@ MODELS: list[Model] = [
         completion_length=65536,
         supports_json_output=False,
         supports_stop=False,
+        supports_tools=False,
     ),
     OpenAIModel(
         name="o1",

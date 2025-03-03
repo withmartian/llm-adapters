@@ -13,6 +13,7 @@ class GeminiModel(Model):
     vendor_name: str = Vendor.gemini.value
 
     supports_completion: bool = False
+    supports_tools: bool = False
 
     can_empty_content: bool = False
     can_system_last: bool = False
