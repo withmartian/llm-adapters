@@ -17,21 +17,14 @@ class AdapterChatCompletionChunk(ChatCompletionChunk):
     pass
 
 
-class AdapterStreamChatCompletion(BaseModel):
-    response: Union[
-        Generator[AdapterChatCompletionChunk, Any, None],
-        AsyncGenerator[AdapterChatCompletionChunk, Any],
-    ]
+AdapterStreamSyncChatCompletion = Generator[AdapterChatCompletionChunk, Any, None]
 
-    model_config = ConfigDict(arbitrary_types_allowed=True)
+AdapterStreamAsyncChatCompletion = AsyncGenerator[AdapterChatCompletionChunk, Any]
 
-
-class AdapterStreamSyncChatCompletion(AdapterStreamChatCompletion):
-    response: Generator[AdapterChatCompletionChunk, Any, None]
-
-
-class AdapterStreamAsyncChatCompletion(AdapterStreamChatCompletion):
-    response: AsyncGenerator[AdapterChatCompletionChunk, Any]
+AdapterStreamChatCompletion = Union[
+    AdapterStreamSyncChatCompletion,
+    AdapterStreamAsyncChatCompletion,
+]
 
 
 class AdapterCompletion(Completion):

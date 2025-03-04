@@ -12,6 +12,7 @@ class AI21Model(Model):
     supports_completion: bool = False
     supports_json_content: bool = False
     supports_vision: bool = False
+    supports_streaming: bool = False
 
     can_system_only: bool = False
     can_empty_content: bool = False

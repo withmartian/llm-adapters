@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"max_tokens":4096,"messages":[{"role":"user","content":"Hi"}],"model":"claude-3-5-sonnet-latest","stream":true}'
+    body: '{"max_tokens":8192,"messages":[{"role":"user","content":"Hi"}],"model":"claude-3-5-sonnet-latest","stream":true}'
     headers:
       accept:
       - application/json
@@ -40,7 +40,7 @@ interactions:
     body:
       string: 'event: message_start
 
-        data: {"type":"message_start","message":{"id":"msg_01EouFjrqdkPstKz7MdEkb9o","type":"message","role":"assistant","model":"claude-3-5-sonnet-20241022","content":[],"stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":8,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":5}}        }
+        data: {"type":"message_start","message":{"id":"msg_01SZhX3qu9TNpZ4bcKc3PmL3","type":"message","role":"assistant","model":"claude-3-5-sonnet-20241022","content":[],"stop_reason":null,"stop_sequence":null,"usage":{"input_tokens":8,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":5}}     }
 
 
         event: content_block_start
@@ -56,36 +56,34 @@ interactions:
         event: content_block_delta
 
         data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"Hello!
-        How can I"}  }
+        How can I"}         }
 
 
         event: content_block_delta
 
         data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"
-        help you today?"}         }
+        help you today?"} }
 
 
         event: content_block_stop
 
-        data: {"type":"content_block_stop","index":0}
+        data: {"type":"content_block_stop","index":0              }
 
 
         event: message_delta
 
-        data: {"type":"message_delta","delta":{"stop_reason":"end_turn","stop_sequence":null},"usage":{"output_tokens":12}   }
+        data: {"type":"message_delta","delta":{"stop_reason":"end_turn","stop_sequence":null},"usage":{"output_tokens":12}     }
 
 
         event: message_stop
 
-        data: {"type":"message_stop"       }
+        data: {"type":"message_stop"}
 
 
         '
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 918c7b79eb962ec3-LAX
+      - 91ae8a895da99a47-MEX
       Cache-Control:
       - no-cache
       Connection:
@@ -93,7 +91,7 @@ interactions:
       Content-Type:
       - text/event-stream; charset=utf-8
       Date:
-      - Fri, 28 Feb 2025 01:01:17 GMT
+      - Tue, 04 Mar 2025 04:13:28 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -107,27 +105,29 @@ interactions:
       anthropic-ratelimit-input-tokens-remaining:
       - '8000000'
       anthropic-ratelimit-input-tokens-reset:
-      - '2025-02-28T01:01:15Z'
+      - '2025-03-04T04:13:27Z'
       anthropic-ratelimit-output-tokens-limit:
       - '1600000'
       anthropic-ratelimit-output-tokens-remaining:
-      - '1597000'
+      - '1596000'
       anthropic-ratelimit-output-tokens-reset:
-      - '2025-02-28T01:01:15Z'
+      - '2025-03-04T04:13:28Z'
       anthropic-ratelimit-requests-limit:
       - '4000'
       anthropic-ratelimit-requests-remaining:
       - '3999'
       anthropic-ratelimit-requests-reset:
-      - '2025-02-28T01:01:15Z'
+      - '2025-03-04T04:13:28Z'
       anthropic-ratelimit-tokens-limit:
       - '9600000'
       anthropic-ratelimit-tokens-remaining:
-      - '9597000'
+      - '9596000'
       anthropic-ratelimit-tokens-reset:
-      - '2025-02-28T01:01:15Z'
+      - '2025-03-04T04:13:27Z'
+      cf-cache-status:
+      - DYNAMIC
       request-id:
-      - req_01Ch6Ua7CqgCTAG3Dg7PfzGV
+      - req_013nNH1xN6KUdxrvuhSuept9
       via:
       - 1.1 google
     status:
