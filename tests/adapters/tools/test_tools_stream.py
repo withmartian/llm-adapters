@@ -20,7 +20,7 @@
 # async def test_async(vcr: VCR, model_path: str) -> None:
 #     model = AdapterFactory.get_model_by_path(model_path)
 
-#     if not model.supports_tools:
+#     if not model.supports_tools or not model.supports_streaming:
 #         return
 
 #     tools = cast(Iterable[ChatCompletionToolParam], SIMPLE_GENERATE_TOOLS)
@@ -38,13 +38,12 @@
 
 #     cassette_choices = get_response_choices_from_vcr(vcr, model_path)
 
-
 #     assert collected_choices[0].choices[0].delta.tool_calls
 #     assert (
-#         collected_choices[0].choices[0].delta.tool_calls[0].function.name
+#         collected_choices[0].choices[0].delta.tool_calls[0].function.name  # type: ignore
 #         == cassette_choices[0]["message"]["tool_calls"][0]["function"]["name"]
 #     )
 #     assert (
-#         collected_choices[0].choices[0].delta.tool_calls[0].function.arguments
+#         collected_choices[0].choices[0].delta.tool_calls[0].function.arguments  # type: ignore
 #         == cassette_choices[0]["message"]["tool_calls"][0]["function"]["arguments"]
 #     )
