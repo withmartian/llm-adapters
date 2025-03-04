@@ -4,7 +4,8 @@ from llm_adapters.types import Cost, Model, Provider, Vendor
 
 class DeepSeekModel(Model):
     provider_name: str = Provider.deepseek.value
-    vendor_name: str = Vendor.deepseek.value
+    vendor_name: str = Vendor.deepseek_ai.value
+
     supports_vision: bool = False
     supports_n: bool = False
 

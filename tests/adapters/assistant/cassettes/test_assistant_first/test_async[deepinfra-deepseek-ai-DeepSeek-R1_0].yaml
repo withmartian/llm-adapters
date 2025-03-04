@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '148'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-8c1d445207a74d1fabfdeac62c302f94\",\"object\":\"chat.completion\",\"created\":1741064301,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user just said \\\"Hi\\\" and then sent an empty message with \\\"Hi\\\"
+        again. Let me try to figure out what they need. They might be testing if the
+        bot is responsive or maybe had a typo. Since the second message is empty but
+        has \\\"Hi\\\" in quotes, maybe they're trying to see how the bot handles
+        different inputs. I should respond warmly and invite them to ask questions.
+        Keep it friendly and open-ended to encourage them to specify what they need
+        help with.\\n</think>\\n\\nHi there! How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":130,\"completion_tokens\":120,\"estimated_cost\":0.00029549999999999997}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '907'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Mar 2025 04:58:21 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

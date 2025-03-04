@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"deepseek-ai/DeepSeek-V3"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '238'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-34cc6470ae8343289afbc33f4f74e154","object":"chat.completion","created":1741065060,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"message":{"role":"assistant","content":"**Question:**  \nYou
+        have two generators in parallel. Generator A is rated at 50 kW and Generator
+        B is rated at 25 kW. The loads in the system are 30 kW, 20 kW, and another
+        20 kW. How would you assign the loads to the generators?\n\n**Solution:**\n\nTo
+        assign the loads to the generators, follow these steps:\n\n1. **Determine
+        the Total Load:**  \n   The total load in the system is the sum of all individual
+        loads:  \n   \\[\n   \\text{Total Load} = 30\\,\\text{kW} + 20\\,\\text{kW}
+        + 20\\,\\text{kW} = 70\\,\\text{kW}\n   \\]\n\n2. **Calculate the Total Generator
+        Capacity:**  \n   The combined capacity of the generators is:  \n   \\[\n   \\text{Total
+        Generator Capacity} = 50\\,\\text{kW} + 25\\,\\text{kW} = 75\\,\\text{kW}\n   \\]\n\n3.
+        **Assign Loads Based on Generator Capacity:**  \n   The total load (70 kW)
+        is less than the total generator capacity (75 kW). We need to distribute the
+        load efficiently between the two generators.\n\n   - **Assign Load to Generator
+        A (50 kW):**  \n     Since Generator A has a higher capacity, it can handle
+        a larger portion of the load. Assign the 30 kW and one 20 kW load to Generator
+        A:  \n     \\[\n     \\text{Load on Generator A} = 30\\,\\text{kW} + 20\\,\\text{kW}
+        = 50\\,\\text{kW}\n     \\]\n\n   - **Assign Load to Generator B (25 kW):**  \n     Assign
+        the remaining 20 kW load to Generator B:  \n     \\[\n     \\text{Load on
+        Generator B} = 20\\,\\text{kW}\n     \\]\n\n4. **Verify the Assignment:**  \n   Ensure
+        that the assigned loads do not exceed the capacities of the generators:  \n   \\[\n   \\text{Load
+        on Generator A} = 50\\,\\text{kW} \\leq 50\\,\\text{kW} \\quad \\text{(Valid)}\n   \\]\n   \\[\n   \\text{Load
+        on Generator B} = 20\\,\\text{kW} \\leq 25\\,\\text{kW} \\quad \\text{(Valid)}\n   \\]\n\n**Final
+        Answer:**  \n\\[\n\\boxed{\n\\begin{aligned}\n\\text{Generator A} &= 50\\,\\text{kW}
+        \\quad \\text{(30 kW + 20 kW)} \\\\\n\\text{Generator B} &= 20\\,\\text{kW}\n\\end{aligned}\n}\n\\]","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":8,"total_tokens":553,"completion_tokens":545,"estimated_cost":0.0004889699999999999}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2338'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Mar 2025 05:11:00 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

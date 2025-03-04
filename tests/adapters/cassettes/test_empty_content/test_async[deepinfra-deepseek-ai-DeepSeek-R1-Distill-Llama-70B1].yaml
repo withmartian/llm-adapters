@@ -1,0 +1,57 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '256'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-fb897a5908e14515870e53fe79da826c\",\"object\":\"chat.completion\",\"created\":1741065063,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n\u60A8\u597D\uFF01\u6211\u662F\u7531\u4E2D\u56FD\u7684\u6DF1\u5EA6\u6C42\u7D22\uFF08DeepSeek\uFF09\u516C\u53F8\u5F00\u53D1\u7684\u667A\u80FD\u52A9\u624BDeepSeek-R1\u3002\u6709\u5173\u6A21\u578B\u548C\u4EA7\u54C1\u7684\u8BE6\u7EC6\u5185\u5BB9\u8BF7\u53C2\u8003\u5B98\u65B9\u6587\u6863\u3002\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":12,\"total_tokens\":54,\"completion_tokens\":42,\"estimated_cost\":3.174e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '542'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Mar 2025 05:11:03 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

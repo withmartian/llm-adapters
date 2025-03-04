@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '291'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-5fc2c38787634089b418372e544fc24e","object":"chat.completion","created":1741064645,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        so I saw the conversation where the user wrote \"Hi\" four times and then
+        \"Hi\" three more times. I responded with \"Hi\" each time, keeping it friendly
+        and open. \n\nHmm, the user might be testing how I handle multiple greetings
+        or just being enthusiastic. Maybe they''re trying to see if I''ll respond
+        each time or if I''ll aggregate the responses. I should keep it simple and
+        consistent, showing that I''m engaged and ready to help with whatever they
+        need. \n\nI wonder if they have a specific question or if they''re just saying
+        hi repeatedly. I should make sure to reassure them I''m here to assist and
+        maybe prompt them gently to ask anything they want. That way, the conversation
+        can move forward smoothly if they have something on their mind.\n</think>\n\nHello!
+        It seems like you''re saying hello multiple times. How can I assist you today?
+        Feel free to ask anything you need!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":15,"total_tokens":204,"completion_tokens":189,"estimated_cost":0.00013386}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1281'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Mar 2025 05:04:05 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,155 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-2.0-flash"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":",\n\nI''m
+        struggling a bit with how to use a QSharedDataPointer with polymorphism correctly.\nI
+        want to implement a class hierarchy of \"objects\", where each object has
+        a unique id associated with it.\n\nI want to implement it so that the object
+        itself has a unique id, such that if I create copies of the same object,\nthose
+        copies share the same unique id.\n\nI also want to make these \"object\" inherit
+        from a common abstract class, such that I can store instances of\ndifferent
+        \"objects\" in a single container.\n\nI thought the following snippet of code
+        would achieve that:\n\n<code>#include <QSharedData>\n#include <QSharedDataPointer>\n#include
+        <QDebug>\n#include <QVector>\n\n// the data class\nclass ObjectData : public
+        QSharedData\n{\npublic:\n    ObjectData(const int& id) : id_(id) {}\n    ObjectData(const
+        ObjectData& other) : QSharedData(other), id_(other.id_) {}\n    ~ObjectData(){}\n    int
+        id() const { return id_; }\n\nprivate:\n    const int id_;\n};\n\n// the abstract
+        base class\nclass Object\n{\npublic:\n    Object(const int& id) : data_(new
+        ObjectData(id)) {}\n    Object(const Object& other) : data_(other.data_) {}\n    virtual
+        ~Object() {}\n    int id() const { return data_->id(); }\n    virtual QString
+        type() const = 0;\n\nprivate:\n    QSharedDataPointer<ObjectData> data_;\n};\n\n//
+        first \"object\" implementation\nclass ObjectA : public Object\n{\npublic:\n    ObjectA(const
+        int& id) : Object(id) {}\n    ObjectA(const ObjectA& other) : Object(other)
+        {}\n    virtual ~ObjectA() {}\n    virtual QString type() const { return \"ObjectA\";
+        }\n};\n\n// second \"object\" implementation\nclass ObjectB : public Object\n{\npublic:\n    ObjectB(const
+        int& id) : Object(id) {}\n    ObjectB(const ObjectB& other) : Object(other)
+        {}\n    virtual ~ObjectB() {}\n    virtual QString type() const { return \"ObjectB\";
+        }\n};\n\nint main(int argc, char *argv[])\n{\n    QVector<Object*> objects;\n\n    ObjectA*
+        a1 = new ObjectA(10);\n    ObjectA* a2 = new ObjectA(*a1);\n    ObjectB* b1
+        = new ObjectB(20);\n    ObjectB* b2 = new ObjectB(*b1);\n\n    objects.append(a1);\n    objects.append(a2);\n    objects.append(b1);\n    objects.append(b2);\n\n    qDebug()
+        << \"a1: \" << a1->type() << a1->id();\n    qDebug() << \"a2: \" << a2->type()
+        << a2->id();\n    qDebug() << \"b1: \" << b1->type() << b1->id();\n    qDebug()
+        << \"b2: \" << b2->type() << b2->id();\n\n    foreach(Object* o, objects)\n    {\n        qDebug()
+        << o->type() << o->id();\n        delete o;\n    }\n\n    return 0;\n}\n</code>\n\nThe
+        above works as expected, but I am forced to store pointers in the <code>QVector</code>.\nI
+        want to avoid this for simplicity and to avoid potential memory leaks.\nWhen
+        I replace <code>QVector<Object*></code> by <code>QVector<Object></code> the
+        copy constructors are called but the\n<code>QSharedDataPointer</code> is not
+        shared among copies, so that the id''s are not unique anymore.\n\nCan I achieve
+        this with <code>QSharedDataPointer</code>?\n\nIs this the way to go in the
+        first place, or is there a simpler and better way to do this?\n\nThanks!\n\n@Christian-Ehrhardt
+        Thanks for the reply!\nI think the issue is not with the copying of <code>QVector</code>,
+        but with the copying of the <code>Object</code> instances.\nFor <code>QSharedDataPointer</code>
+        to work as intended, instances of classes that contain a <code>QSharedDataPointer</code>
+        need to be copied using the copy constructor.\n\nIn my example, I have the
+        following hierarchy:\n\n* <code>Object</code> which contains the <code>QSharedDataPointer</code>\n*
+        <code>ObjectA</code> which inherits from <code>Object</code>\n\nIf I want
+        to store <code>ObjectA</code> in a <code>QVector<Object></code>, a copy of
+        <code>ObjectA</code> will be made.\nThis copy will be of type <code>Object</code>,
+        because that is the type of the <code>QVector</code>.\nThe copy constructor
+        of <code>ObjectA</code> will not be called, but the copy constructor of <code>Object</code>
+        will be called.\n\nSo, if I understand correctly, I need to implement the
+        following copy constructor:\n\n<code>Object(const Object& other) : data_(other.data_)
+        {}\n</code>\n\nin all child classes of <code>Object</code> as well?\n\n@Christian-Ehrhardt
+        Thanks, that makes sense!\n\nSo what would be the correct way to deal with
+        this?\nI see the following possibilities:\n\n1. use smart pointers in the
+        <code>QVector</code>, which makes the ownership very clear.\n  This will solve
+        the copy problem, but introduces a small amount of boilerplate code.\n\n2.
+        use a factory that allocates the objects using <code>new</code> and a register
+        that deletes the objects later on.\n  In this case, the ownership will not
+        be that clear and I need to take care of freeing the objects.\n\nIs there
+        another way to achieve this?\n\n@Christian-Ehrhardt I am going to try this
+        out. Thanks a lot for your help!\n\n@Christian-Ehrhardt The <code>QPointer</code>-solution
+        works like a charm!\nThanks again for pointing me in the right direction.\n\nI''m
+        using the following code now:\n\n<code>#include <QSharedData>\n#include <QSharedDataPointer>\n#include
+        <QPointer>\n#include <QDebug>\n#include <QVector>\n\n// the data class\nclass
+        ObjectData : public QSharedData\n{\npublic:\n    ObjectData(const int& id)
+        : id_(id) {}\n    ObjectData(const ObjectData& other) : QSharedData(other),
+        id_(other.id_) {}\n    ~ObjectData(){}\n    int id() const { return id_; }\n\nprivate:\n    const
+        int id_;\n};\n\n// the abstract base class\nclass Object\n{\npublic:\n    Object(const
+        int& id) : data_(new ObjectData(id)) {}\n    Object(const Object& other) :
+        data_(other.data_) {}\n    virtual ~Object() {}\n    int id() const { return
+        data_->id(); }\n    virtual QString type() const = 0;\n\nprivate:\n    QSharedDataPointer<ObjectData>
+        data_;\n};\n\n// first \"object\" implementation\nclass ObjectA : public Object\n{\npublic:\n    ObjectA(const
+        int& id) : Object(id) {}\n    ObjectA(const ObjectA& other) : Object(other)
+        {}\n    virtual ~ObjectA() {}\n    virtual QString type() const { return \"ObjectA\";
+        }\n};\n\n// second \"object\" implementation\nclass ObjectB : public Object\n{\npublic:\n    ObjectB(const
+        int& id) : Object(id) {}\n    ObjectB(const ObjectB& other) : Object(other)
+        {}\n    virtual ~ObjectB() {}\n    virtual QString type() const { return \"ObjectB\";
+        }\n};\n\nint main(int argc, char *argv[])\n{\n    QVector<QPointer<Object>>
+        objects;\n\n    ObjectA* a1 = new ObjectA(10);\n    ObjectA* a2 = new ObjectA(*a1);\n    ObjectB*
+        b1 = new ObjectB(20);\n    ObjectB* b2 = new ObjectB(*b1);\n\n    objects.append(a1);\n    objects.append(a2);\n    objects.append(b1);\n    objects.append(b2);\n\n    qDebug()
+        << \"a1: \" << a1->type() << a1->id();\n    qDebug() << \"a2: \" << a2->type()
+        << a2->id();\n    qDebug() << \"b1: \" << b1->type() << b1->id();\n    qDebug()
+        << \"b2: \" << b2->type() << b2->id();\n\n    foreach(Object* o, objects)\n    {\n        qDebug()
+        << o->type() << o->id();\n    }\n\n    delete a1;\n    delete b1;\n\n    return
+        0;\n}\n</code>\n\nThe shared pointer makes sure that copies of <code>Object</code>
+        inherit the same id, and the <code>QPointer</code> takes care of the ownership
+        of the <code>Object</code>-instances.\nNow, if I delete the first created
+        <code>ObjectA</code> and <code>ObjectB</code> instance, the program still
+        runs correctly and the references in the <code>QVector</code> are set to <code>nullptr</code>
+        automatically.","role":"assistant"}}],"created":1741064451,"model":"gemini-2.0-flash","object":"chat.completion","usage":{"completion_tokens":2045,"prompt_tokens":1,"total_tokens":2046}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Mar 2025 05:00:51 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=13073
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '7640'
+    status:
+      code: 200
+      message: OK
+version: 1

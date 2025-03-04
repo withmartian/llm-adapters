@@ -1,0 +1,60 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '128'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-92f642e75768449985ee5b5f2050d521","object":"chat.completion","created":1741065196,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user just said \"Hi\". I should respond in a friendly and welcoming manner.\n\nMaybe
+        I can ask them how they''re doing or if they need help with something specific.\n\nI
+        should keep it open-ended to encourage them to share more.\n</think>\n\nHello!
+        How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":6,"total_tokens":69,"completion_tokens":63,"estimated_cost":4.4850000000000006e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '690'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Mar 2025 05:13:16 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

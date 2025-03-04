@@ -25,13 +25,13 @@ class TogetherModel(Model):
 MODELS: list[Model] = [
     TogetherModel(
         name="DeepSeek-R1",
-        vendor_name=Vendor.deepseek.value,
+        vendor_name=Vendor.deepseek_ai.value,
         cost=Cost(prompt=3.00e-6, completion=7.00e-6),
         context_length=164000,
     ),
     TogetherModel(
         name="DeepSeek-V3",
-        vendor_name=Vendor.deepseek.value,
+        vendor_name=Vendor.deepseek_ai.value,
         cost=Cost(prompt=1.25e-6, completion=1.25e-6),
         context_length=131000,
         can_assistant_only=False,
@@ -83,19 +83,19 @@ MODELS: list[Model] = [
     ),
     # TogetherModel(
     #     name="DeepSeek-R1-Distill-Llama-70B",
-    #     vendor_name=Vendor.deepseek.value,
+    #     vendor_name=Vendor.deepseek_ai.value,
     #     cost=Cost(prompt=2.00e-6, completion=2.00e-6),
     #     context_length=128000,
     # ),
     # TogetherModel(
     #     name="DeepSeek-R1-Distill-Qwen-14",
-    #     vendor_name=Vendor.deepseek.value,
+    #     vendor_name=Vendor.deepseek_ai.value,
     #     cost=Cost(prompt=1.60e-6, completion=1.60e-6),
     #     context_length=128000,
     # ),
     TogetherModel(
         name="DeepSeek-R1-Distill-Qwen-1.5B",
-        vendor_name=Vendor.deepseek.value,
+        vendor_name=Vendor.deepseek_ai.value,
         cost=Cost(prompt=0.18e-6, completion=0.18e-6),
         context_length=128000,
     ),

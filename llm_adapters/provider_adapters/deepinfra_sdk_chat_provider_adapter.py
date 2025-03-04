@@ -47,19 +47,22 @@ MODELS: list[Model] = [
         name="DeepSeek-V3",
         cost=Cost(prompt=0.85e-6, completion=0.90e-6),
         context_length=16000,
-        vendor_name=Vendor.deepseek,
+        vendor_name=Vendor.deepseek_ai.value,
+        can_system_only=False,
     ),
     DeepInfraModel(
         name="DeepSeek-R1",
         cost=Cost(prompt=0.85e-6, completion=2.50e-6),
         context_length=16000,
-        vendor_name=Vendor.deepseek,
+        vendor_name=Vendor.deepseek_ai.value,
+        can_system_only=False,
     ),
     DeepInfraModel(
         name="DeepSeek-R1-Distill-Llama-70B",
         cost=Cost(prompt=0.23e-6, completion=0.69e-6),
         context_length=131072,
-        vendor_name=Vendor.deepseek,
+        vendor_name=Vendor.deepseek_ai.value,
+        can_system_only=False,
     ),
     DeepInfraModel(
         name="QwQ-32B-Preview",
@@ -84,6 +87,27 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.50e-6, completion=0.50e-6),
         context_length=65536,
         vendor_name=Vendor.microsoft,
+    ),
+    DeepInfraModel(
+        name="DeepSeek-R1",
+        cost=Cost(prompt=0.85e-6, completion=2.5e-6),
+        context_length=15000,
+        vendor_name=Vendor.deepseek_ai.value,
+        can_system_only=False,
+    ),
+    DeepInfraModel(
+        name="DeepSeek-V3",
+        cost=Cost(prompt=0.85e-6, completion=0.9e-6),
+        context_length=15000,
+        vendor_name=Vendor.deepseek_ai.value,
+        can_system_only=False,
+    ),
+    DeepInfraModel(
+        name="DeepSeek-R1-Distill-Llama-70B",
+        cost=Cost(prompt=0.23e-6, completion=0.69e-6),
+        context_length=128000,
+        vendor_name=Vendor.deepseek_ai.value,
+        can_system_only=False,
     ),
 ]
 

@@ -58,7 +58,7 @@ class Vendor(str, Enum):
     microsoft = "microsoft"
     moescape = "moescape"
     bigmodel = "bigmodel"
-    deepseek = "deepseek-ai"
+    deepseek_ai = "deepseek-ai"
     grok = "grok"
 
 
