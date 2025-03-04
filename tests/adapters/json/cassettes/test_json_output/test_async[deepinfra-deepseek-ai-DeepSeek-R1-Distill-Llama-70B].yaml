@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,28 +25,32 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-f05263ac3bfe4b8bb271e5d86d77a75d","object":"chat.completion","created":1738285796,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"{\r\n    \"name\":
-        \"John\",\r\n    \"age\": 30\r\n}\r\n","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":25,"completion_tokens":17,"estimated_cost":1.3569999999999999e-05}}'
+      string: '{"id":"chatcmpl-77a37940245b422d8e222ea55560a82e","object":"chat.completion","created":1740703459,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"{\n    \"version\":
+        \"1.0\",\n    \"response\": {\n     \"outputSpeech\": {\n         \"type\":
+        \"PlainText\",\n            \"text\": \"Sure! Here''s a simple JSON format
+        for you: { \\\"message\\\": \\\"Hello, World!\\\" }.\",\n            \"SSML\":
+        null\n        },\n    \"card\": null,\n        \"directives\": null,\n        \"shouldEndSession\":
+        false\n    }\n}\r","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":8,"total_tokens":99,"completion_tokens":91,"estimated_cost":6.463e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '436'
+      - '749'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:09:56 GMT
+      - Fri, 28 Feb 2025 00:44:19 GMT
       server:
       - uvicorn
       x-robots-tag:

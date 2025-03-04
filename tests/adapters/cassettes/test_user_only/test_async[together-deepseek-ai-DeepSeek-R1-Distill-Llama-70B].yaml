@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,62 +25,54 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a59fbaedcc17e0\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283749,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 5009801124173799000,\n      \"logprobs\": null,\n      \"index\":
-        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \"<think>\\n\\n</think>\\n\\nHello! How can I assist you today? \U0001F60A\",\n
-        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        4,\n    \"completion_tokens\": 16,\n    \"total_tokens\": 20\n  }\n}"
+      string: "{\n  \"id\": \"918c886c1f751698\",\n  \"error\": {\n    \"message\":
+        \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769.
+        Given: 4 `inputs` tokens and 32768 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n
+        \   \"param\": null,\n    \"code\": null\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 90a59fbaedcc17e0-SJC
+      - 918c886c1f751698-SJC
       Connection:
       - keep-alive
+      Content-Length:
+      - '268'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 31 Jan 2025 00:35:50 GMT
+      - Fri, 28 Feb 2025 01:10:05 GMT
       ETag:
-      - W/"22d-oLThqMg4iG7JIVqRkZKaNPWYrsI"
+      - W/"10c-9426otrxWS3UbSaIy0fnCz9t45A"
       Retry-After:
-      - '2'
+      - '1'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       Vary:
       - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
-      content-length:
-      - '557'
       x-amzn-trace-id:
-      - eaa6b30d-7e46-430b-836d-5d116268cd3c-noamzn
-      x-api-call-end:
-      - '2025-01-31T00:35:50.045Z'
+      - dffc3f8a-8af8-4c3b-ab15-67d5c019e786-noamzn
       x-api-call-start:
-      - '2025-01-31T00:35:49.819Z'
+      - '2025-02-28T01:10:05.689Z'
       x-api-received:
-      - '2025-01-31T00:35:49.681Z'
+      - '2025-02-28T01:10:05.665Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -90,12 +82,12 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '199'
+      - '198'
       x-ratelimit-remaining-tokens:
-      - '100000'
+      - '99975'
       x-ratelimit-reset:
-      - '2'
+      - '1'
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
 version: 1

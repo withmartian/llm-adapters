@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi "}], "model": "llama3.1-8b"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"llama3.1-8b"}'
     headers:
       accept:
       - application/json
@@ -10,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '114'
+      - '104'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,42 +26,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-90ee2429-708f-4ff1-ad4e-312e88f8369b","choices":[{"finish_reason":"stop","index":0,"message":{"content":"How
-        can I assist you today?","role":"assistant"}}],"created":1732322543,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":42,"completion_tokens":8,"total_tokens":50},"time_info":{"queue_time":2.918e-05,"prompt_time":0.002233889,"completion_time":0.00379892,"total_time":0.02053236961364746,"created":1732322543}}'
+      string: !!binary |
+        IbwHACD+p1tVLfPqwMRYSM7au6I29CMWdP3MduAweBuMYLjZeIBh5AEH1t0w0C5Ncif+/toyv2DX
+        A20Ji6LJ9mKcBz+WPKYii/yTjrWv84x8ExvlFxlJoZQwKiQwWNibDfb7gXlmKdkd9QAW2+5mMBys
+        r7CcoW2ig31ggNwqi0938Yps8r68bNvabfdu7vB2V2a3DzCsbiBYwDGbdvz//zIYohdRCSsizSMu
+        tTEMoytpgMUwZGOmAuHHORgc5wdJ1U41rfPa6k5Wc1JyMrzQ2hAYXN5RsZeAgz4J27oJDEfWP+bV
+        jfOe7K6naYPVkoEMqIkZPhOAKAv5P8PejpS0U+VgH1gOOijZ25FgTcBNRD4PmQZhN3jAuRShEEpJ
+        geHViSsTSkmAzyOtTsbwSEVGhFyZisn/vwED
     headers:
-      Alt-Svc:
-      - h3=":443"; ma=86400
+      CF-RAY:
+      - 918c4b407ec67d71-LAX
       Connection:
       - keep-alive
-      Content-Length:
-      - '494'
+      Content-Encoding:
+      - br
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 00:42:23 GMT
-      Via:
-      - 1.1 a46f7dcdfa7630ab92712a32ece3853c.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - rzBqWp2aDRYboREA6mAFsv5w6mdVlfQJfbQ7SnOI-h7hFDMfjXKLBQ==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      - Fri, 28 Feb 2025 00:28:20 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=FXbWLnRwKJS3s605XyPXdjUir2MUANWAtvy1cu5eHRM-1740702500-1.0.1.1-UJvgfA3ndgrH0.eKctMLzlHTpaJ1DrB9ymDd.4nswffVP.VMuDHddEepUoe8XZgPwWOfuXCh0N5SSMUgYgdlww;
+        path=/; expires=Fri, 28-Feb-25 00:58:20 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       referrer-policy:
       - strict-origin-when-cross-origin
-      server:
-      - uvicorn
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -73,13 +80,13 @@ interactions:
       x-ratelimit-remaining-requests-day:
       - '14399'
       x-ratelimit-remaining-tokens-minute:
-      - '59942'
+      - '60000'
       x-ratelimit-reset-requests-day:
-      - '83856.6754283905'
+      - '84699.97777175903'
       x-ratelimit-reset-tokens-minute:
-      - '36.67542839050293'
+      - '39.9777717590332'
       x-request-id:
-      - rzBqWp2aDRYboREA6mAFsv5w6mdVlfQJfbQ7SnOI-h7hFDMfjXKLBQ==
+      - 918c4b407ec67d71-SJC
     status:
       code: 200
       message: OK

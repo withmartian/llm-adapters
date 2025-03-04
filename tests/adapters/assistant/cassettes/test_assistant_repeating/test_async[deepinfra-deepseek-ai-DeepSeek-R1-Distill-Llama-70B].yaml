@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,32 +25,32 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-61b08752a796485e9d479486e545dadc","object":"chat.completion","created":1738285785,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nAlright,
-        the user just said \"Hi.\" I should keep the conversation friendly.\n\nMaybe
-        I can greet them back and ask how I can assist today.\n\nKeeping it open-ended
-        will encourage them to share what''s on their mind.\n\nLet''s see... \"Hello!
-        How can I assist you today?\" sounds good.\n</think>\n\nHello! How can I assist
-        you today?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":11,"total_tokens":86,"completion_tokens":75,"estimated_cost":5.4279999999999995e-05}}'
+      string: '{"id":"chatcmpl-b878770632a84e58b00d373604642527","object":"chat.completion","created":1740703165,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user is sending \"Hi\" multiple times. They might be testing me or just
+        being friendly.\n\nI should keep the conversation light and open.\n\nMaybe
+        I can encourage them to ask questions or share what''s on their mind.\n\nIt''s
+        important to be engaging and welcoming.\n</think>\n\nHello! How can I assist
+        you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":80,"completion_tokens":69,"estimated_cost":5.013999999999999e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '721'
+      - '726'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:09:45 GMT
+      - Fri, 28 Feb 2025 00:39:25 GMT
       server:
       - uvicorn
       x-robots-tag:

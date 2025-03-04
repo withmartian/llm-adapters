@@ -1,0 +1,143 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '158'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"918c61b39ccc942f\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703419,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 9366857560262863000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Below is a simple example of JSON (JavaScript Object Notation) output. For
+        the sake of this example, let's say we're outputting information about a book.
+        Here's how it might look:\\n\\n```\\n{\\n  \\\"book\\\": {\\n    \\\"title\\\":
+        \\\"The Great Adventure\\\",\\n    \\\"author\\\": \\\"John Doe\\\",\\n    \\\"publicationYear\\\":
+        2020,\\n    \\\"genres\\\": [\\n      \\\"Fiction\\\",\\n      \\\"Adventure\\\"\\n
+        \   ],\\n    \\\"rating\\\": 4.5\\n  }\\n}\\n```\\n\\nLet me break down the
+        components of this simple JSON for clarity:\\n\\n- **Objects**: Defined by
+        curly brackets `{}`. In this example, `\\\"book\\\"` is an object.\\n- **Key-Value
+        Pairs**: Within objects, data is represented as key-value pairs, e.g., `\\\"title\\\":
+        \\\"The Great Adventure\\\"`. The key is `\\\"title\\\"`, and the value is
+        `\\\"The Great Adventure\\\"`.\\n- **Arrays**: Defined by square brackets
+        `[]`. Here, `\\\"genres\\\"` is an array containing two string values: `\\\"Fiction\\\"`
+        and `\\\"Adventure\\\"`.\\n- **Data Types**:\\n  - **String**: Text values,
+        always enclosed in double quotes (`\\\"\\\"`), e.g., `\\\"The Great Adventure\\\"`.\\n
+        \ - **Number**: Numeric values, which can be integers or floats, e.g., `2020`
+        and `4.5`.\\n  - **Array**: A collection of values, e.g., the `\\\"genres\\\"`
+        array.\\n  - **Object**: A collection of key-value pairs, e.g., the `\\\"book\\\"`
+        object itself.\\n\\nIf you're looking to **generate** this JSON output programmatically
+        (e.g., from a programming language), the approach would depend on the language
+        you're using. Here's a quick example in Python, JavaScript, and Java to output
+        the above JSON:\\n\\n### Python\\n```python\\nimport json\\n\\nbook = {\\n
+        \   \\\"title\\\": \\\"The Great Adventure\\\",\\n    \\\"author\\\": \\\"John
+        Doe\\\",\\n    \\\"publicationYear\\\": 2020,\\n    \\\"genres\\\": [\\n        \\\"Fiction\\\",\\n
+        \       \\\"Adventure\\\"\\n    ],\\n    \\\"rating\\\": 4.5\\n}\\n\\nprint(json.dumps({\\\"book\\\":
+        book}, indent=4))\\n```\\n\\n### JavaScript\\n```javascript\\nconst book =
+        {\\n    title: \\\"The Great Adventure\\\",\\n    author: \\\"John Doe\\\",\\n
+        \   publicationYear: 2020,\\n    genres: [\\n        \\\"Fiction\\\",\\n        \\\"Adventure\\\"\\n
+        \   ],\\n    rating: 4.5\\n};\\n\\nconsole.log(JSON.stringify({book}, null,
+        4));\\n```\\n\\n### Java\\n```java\\nimport org.json.JSONObject;\\n\\npublic
+        class Main {\\n    public static void main(String[] args) {\\n        JSONObject
+        book = new JSONObject();\\n        book.put(\\\"title\\\", \\\"The Great Adventure\\\");\\n
+        \       book.put(\\\"author\\\", \\\"John Doe\\\");\\n        book.put(\\\"publicationYear\\\",
+        2020);\\n        book.put(\\\"rating\\\", 4.5);\\n        \\n        JSONObject[]
+        genres = new JSONObject[2];\\n        for (int i = 0; i < 2; i++) {\\n            genres[i]
+        = new JSONObject();\\n        }\\n        genres[0].put(\\\"genre\\\", \\\"Fiction\\\");\\n
+        \       genres[1].put(\\\"genre\\\", \\\"Adventure\\\");\\n        book.put(\\\"genres\\\",
+        genres); // Note: This example uses a simplified array of objects for genres,
+        actual implementation might vary based on the JSON library used\\n        \\n
+        \       JSONObject output = new JSONObject();\\n        output.put(\\\"book\\\",
+        book);\\n        \\n        System.out.println(output.toString(4));\\n    }\\n}\\n```\\n\\n**Note**:
+        For Java, the example uses `org.json` package for simplicity. In a real-world
+        application, you might prefer using more robust libraries like Jackson or
+        Gson for JSON handling.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 21,\n    \"completion_tokens\": 762,\n
+        \   \"total_tokens\": 783\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 918c61b39ccc942f-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 28 Feb 2025 00:43:46 GMT
+      ETag:
+      - W/"e98-ou4QtrqnuOc3mZNzkqcmt+163Es"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '3736'
+      x-amzn-trace-id:
+      - f14d9654-1f85-4d72-bc41-728ab12fa0ab-noamzn
+      x-api-call-end:
+      - '2025-02-28T00:43:46.010Z'
+      x-api-call-start:
+      - '2025-02-28T00:43:39.502Z'
+      x-api-received:
+      - '2025-02-28T00:43:39.491Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '99713'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

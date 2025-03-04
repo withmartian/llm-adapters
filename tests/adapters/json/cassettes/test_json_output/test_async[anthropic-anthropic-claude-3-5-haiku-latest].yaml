@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"max_tokens": 8192, "messages": [{"content": "Hi, output simple json",
-      "role": "user"}], "model": "claude-3-5-haiku-latest", "stream": false}'
+    body: '{"max_tokens":8192,"messages":[{"role":"user","content":"Hi, output simple
+      json"}],"model":"claude-3-5-haiku-latest","stream":false}'
     headers:
       accept:
       - application/json
@@ -12,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '142'
+      - '132'
       content-type:
       - application/json
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.39.0
+      - AsyncAnthropic/Python 0.45.2
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,48 +28,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.39.0
+      - 0.45.2
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_0176X1heXBXQXq7NBqfhFRhN","type":"message","role":"assistant","model":"claude-3-5-haiku-20241022","content":[{"type":"text","text":"Here''s
+      string: '{"id":"msg_01YDrsvRsfUZFwjf8suzzykE","type":"message","role":"assistant","model":"claude-3-5-haiku-20241022","content":[{"type":"text","text":"Here''s
         a simple JSON example:\n\n```json\n{\n    \"name\": \"John Doe\",\n    \"age\":
         30,\n    \"city\": \"New York\"\n}\n```\n\nWould you like me to generate a
-        different JSON structure or do you have specific requirements?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":12,"output_tokens":64}}'
+        specific type of JSON or modify this one?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":12,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":63}}'
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8e6c40c48f0c6429-SJC
+      - 918c60496f282b9c-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Nov 2024 22:11:03 GMT
+      - Fri, 28 Feb 2025 00:42:42 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
       - chunked
       X-Robots-Tag:
       - none
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-02-28T00:42:41Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-02-28T00:42:42Z'
       anthropic-ratelimit-tokens-limit:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-remaining:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-11-22T22:11:03Z'
+      - '2025-02-28T00:42:41Z'
+      cf-cache-status:
+      - DYNAMIC
       content-length:
-      - '464'
+      - '503'
       request-id:
-      - req_016nzRsCra5GjtKZsve9kKHw
+      - req_016iHnZv46p32YHxmWiNDLa3
       via:
       - 1.1 google
     status:

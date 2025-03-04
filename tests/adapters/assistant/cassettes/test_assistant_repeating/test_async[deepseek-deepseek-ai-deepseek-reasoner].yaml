@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi\nHi"},{"role":"user","content":"Hi"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '144'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"b77be64a-8bb4-4cc6-bbf4-ac984bb51870\",\"object\":\"chat.completion\",\"created\":1740770498,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi!
+        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay, the
+        user just said \\\"Hi\\\" again. I responded with \\\"Hi\\\" initially, but
+        now they sent another \\\"Hi\\\" after my first response. I need to figure
+        out the best way to reply.\\n\\nMaybe they're testing if I'm paying attention
+        or just being friendly. Since I already greeted them, repeating \\\"Hi\\\"
+        might seem robotic. I should acknowledge their message and invite them to
+        ask something specific. Let me ask how I can assist them today. That way,
+        I'm encouraging them to state their needs and keeping the conversation moving
+        forward.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":13,\"completion_tokens\":125,\"total_tokens\":138,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":112},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":13},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 9192c760080921a3-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:21:38 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1740770494423; path=/
+      - HWWAFSESID=20795a90c7079a6bc2; path=/
+      - __cf_bm=F3YCXd4LaWBozwkzy0qASWgzZTCzvKTIqsHbESiJqnw-1740770498-1.0.1.1-FIc.OAiIXTJUAK1fKbk9ibpX.W7lMVt7tOplbEG5WeTa7BQkqHNJmlxqMxx92TovwsvkIcZhP1SpW5vvfPjH_v1Q43JyKyuP0QHd31M2A4E;
+        path=/; expires=Fri, 28-Feb-25 19:51:38 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      content-length:
+      - '1090'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 51c832563e1251df6f1b0d99f5ce040f
+    status:
+      code: 200
+      message: OK
+version: 1

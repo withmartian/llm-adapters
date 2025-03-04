@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1","max_completion_tokens":10}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '85'
+      - '74'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,58 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IRAMACB+Tdf3NNXOq89ITum+mDI52IjBmU3dPA9IE1wLN9gC+7XAGpSFCQ8s0YhzOj1+I7TSxuxz
-        zH27E0TILBTBpNHcVL5sHi1n65w/R8/VY5qvepzL2/js9PriePNWfKAhiODGOZt5ZNY6YtBmrqZ4
-        by6/YgtFchAOw94oDHvgy8pZLqEITjaDTtBtyqApB4GXqcsMz6DoRxAR7UYTIlx9f4SiTmPWO4hR
-        QBF/IsLUlQxFiGazbDaP6jkaBMy5bqYIEHYZfTAqoahelGW+/LAWULrET914xvE1eBZumv5c1i0U
-        weshhqDuIIj+qjIXQh/AT13l53ruCq5nUDTIqaGDGJ7KgjX88AAc8wLJhJm2m9NnTTmCiUzKNhrr
-        4D5a2MyBuiicIYiZ3yl+JasT0aw1MBAxhv2crXYsJKvGqPamnLPJRJ+tg2+zB+t5xlMowoPBIdxt
-        ZnOudJzVCU/9NNsE57HXdiTNqN8fyBHEQRgD
+      string: "{\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'max_tokens'
+        is not supported with this model. Use 'max_completion_tokens' instead.\",\n
+        \   \"type\": \"invalid_request_error\",\n    \"param\": \"max_tokens\",\n
+        \   \"code\": \"unsupported_parameter\"\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 90acd5174ac2fb28-SJC
+      - 918c74d5182fcf51-SJC
       Connection:
       - keep-alive
-      Content-Encoding:
-      - br
+      Content-Length:
+      - '245'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 21:35:36 GMT
+      - Fri, 28 Feb 2025 00:56:43 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=x7ImDAf3n8Jdcfl4gLNJO7QDyiCUxz8LqDOTOG7ScpQ-1738359336-1.0.1.1-6SboTHMll0UhfzKFhLEZwEPhiv3BVwlvCQvftuI0v.uF8O8YT3c3xdyZ1DUmJB2ZEts9lWqlaGWxi.eWB4.6.Q;
-        path=/; expires=Fri, 31-Jan-25 22:05:36 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=r_5H1EM5oyaCnG2O10FKfohguUxoEGCJcEcKdnTfox4-1740704203-1.0.1.1-7G0kFn_rL0GyXQyiE9YkiVgeOOXmwrqjXDBJ.D3fmsCV68DVYNGkpMDBq9ez38uMZ5Tel5eYlp5IySyzKGHVvQ;
+        path=/; expires=Fri, 28-Feb-25 01:26:43 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=RK32TzgoHItmOFjBtxO3tNhqdYHrI0QqTPhGQuVMTbo-1738359336335-0.0.1.1-604800000;
+      - _cfuvid=AlTrzmT3nuTrLrdU8EyHI57yornbc2s5N0GBMBxsgpQ-1740704203181-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       X-Content-Type-Options:
       - nosniff
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       openai-organization:
-      - user-yjadzo7w15dqwkegenievvm9
+      - martian-4
       openai-processing-ms:
-      - '722'
+      - '11'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -88,14 +82,14 @@ interactions:
       x-ratelimit-remaining-requests:
       - '999'
       x-ratelimit-remaining-tokens:
-      - '29999981'
+      - '29999988'
       x-ratelimit-reset-requests:
       - 60ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_0a9ff24f2e54b14fb8807e0654d65e7c
+      - req_31824d98db30f624aceead7ff908a0bf
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
 version: 1

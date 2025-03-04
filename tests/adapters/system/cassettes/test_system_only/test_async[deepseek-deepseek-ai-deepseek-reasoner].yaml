@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '108'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"4a6e5507-3369-498f-baf7-c2d23e800fc4\",\"object\":\"chat.completion\",\"created\":1740770635,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Alright,
+        the user just said \\\"Hi\\\". That's pretty straightforward. I should respond
+        in a friendly and welcoming manner. Maybe say something like, \\\"Hello! How
+        can I assist you today?\\\" to invite them to ask for help. Keep it open-ended
+        so they feel comfortable to ask anything they need. Also, make sure the tone
+        is warm and approachable. Let me double-check for any typos and send that
+        over.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":99,\"total_tokens\":107,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":86},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":8},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 9192cab6ffbaf855-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:23:55 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1740770632388; path=/
+      - HWWAFSESID=c88a88b3415fe6099d; path=/
+      - __cf_bm=M_9rm83qDGSw1vfQ8z__HcZDHJ5yIp_k5KZQIURVbiQ-1740770635-1.0.1.1-iiJiIUtPkvokrVx3BVpHpsYNSKQS8bVfcc4w8StlAvrLfnSgLojjCXXNhQigzJroIN06CTXhN7zyrHpg0BU8.HkbTgUkE897A5eDPh8Br6Y;
+        path=/; expires=Fri, 28-Feb-25 19:53:55 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '951'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 5d85f5c0e05742a6497fb055af401ddc
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -5,7 +5,7 @@ import pytest
 @pytest.fixture(name="adapters_patch", autouse=True, scope="function")
 def fixture_adapters_patch(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(
-        "adapters.client_cache.client_cache.get_client",
+        "llm_adapters.client_cache.client_cache.get_client",
         lambda base_url, api_key, mode: None,
     )
 

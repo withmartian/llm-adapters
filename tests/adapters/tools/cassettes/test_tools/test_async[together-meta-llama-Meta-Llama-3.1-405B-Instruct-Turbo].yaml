@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
-      "tools": [{"type": "function", "function": {"description": "Generate random
-      number", "name": "generate", "parameters": {"type": "object", "properties":
-      {"prompt": {"type": "string", "description": "Random number like 5, 4, 3, 10,
-      11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '425'
+      - '400'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,71 +28,75 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce55d6a70f9e4-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320204,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+      string: "{\n  \"id\": \"91aa69cd0f5d523b\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1741018324,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
         \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n
-        \     \"seed\": 7539761233554787000,\n      \"logprobs\": null,\n      \"index\":
+        \     \"seed\": 13789694634643206000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n
-        \           \"id\": \"call_0zod8ezhq44yk9wg2ss8eqi3\",\n            \"type\":
+        \           \"id\": \"call_bhimqwn4gmeyxgskmwq0nove\",\n            \"type\":
         \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"prompt\\\":\\\"10\\\"}\",\n
         \             \"name\": \"generate\"\n            }\n          }\n        ]\n
-        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 298,\n    \"completion_tokens\":
-        14,\n    \"total_tokens\": 312\n  }\n}"
+        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 297,\n    \"completion_tokens\":
+        14,\n    \"total_tokens\": 311\n  }\n}"
     headers:
+      Access-Control-Allow-Origin:
+      - '*'
       CF-Cache-Status:
       - DYNAMIC
-      CF-RAY:
-      - 8e6ce55d6a70f9e4-SJC
+      CF-Ray:
+      - 91aa69cd0f5d523b-MEX
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 23 Nov 2024 00:03:25 GMT
+      - Mon, 03 Mar 2025 16:12:04 GMT
+      ETag:
+      - W/"307-STNFaFW+xoAO1edYkDnaPNuPNyI"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
+      - max-age=15552000; includeSubDomains
       Transfer-Encoding:
       - chunked
-      access-control-allow-origin:
-      - '*'
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
-      - '778'
-      etag:
-      - W/"30a-gmSVlzLNGrRU9BvfGqp4rnxUbSE"
-      retry-after:
-      - '2'
+      - '775'
       x-api-call-end:
-      - '2024-11-23T00:03:25.159Z'
+      - '2025-03-03T16:12:04.892Z'
       x-api-call-start:
-      - '2024-11-23T00:03:24.629Z'
+      - '2025-03-03T16:12:04.327Z'
       x-api-received:
-      - '2024-11-23T00:03:24.537Z'
+      - '2025-03-03T16:12:04.293Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '10'
+      - '100'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '19'
+      - '199'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:

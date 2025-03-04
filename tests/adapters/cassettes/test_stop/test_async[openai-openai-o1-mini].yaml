@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "o1-mini", "stop":
-      "stop"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1-mini","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '85'
+      - '77'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,49 +25,58 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: "{\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'stop'
-        is not supported with this model.\",\n    \"type\": \"invalid_request_error\",\n
-        \   \"param\": \"stop\",\n    \"code\": \"unsupported_parameter\"\n  }\n}"
+      string: !!binary |
+        IVAMACDXVN1Zps/PUlQ6qWXMlK4j8LKxCqi5Z+rmeReQJfjDPmuDLZD5Y4I1QMKEB6aBBh5YTnXn
+        Pg9joaON8Zs43z0wANQKOaBcikm2tnFvE73f2o+nePu5V/vN+0u0zN6qvB9fi6ccHQaA5m9FcmKS
+        0yUGhTYdBL25/IwUcgiy2M/8OAqi4JPWKGqQA5rAbXWn3dAPY9cv3CBkny6NljQihy8GAHA4mwDg
+        /vcb5OA7V9FqjBg58CcAHExDyAHFOOpxEt2EDoCyr7vFAZ+pacwJPJsNSNHBC5C+wM7MMBkldldk
+        as/6fdEgh25umqThvxrk6GaVX8/aRg44Tsbi3OU/A/ipzp0F30A7mNZO5WRq6kbkUGi1sJ1UPIrT
+        Qf3+APpYy3InJSnd5+yxPXsohVySolO93IpZaRO0WYECScL8oPip7hbq/Fg0CRUcSUl2IlU6GLKF
+        U9BgA61IEtZq7x/b7g3LSdOAHPBBAQBXu3Gitqx0t6DBDvp+OK5smcgoi+I8qgJk/8wAAw==
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8f18fcb36d5aeb25-SJC
+      - 918c7789fcfd156a-SJC
       Connection:
       - keep-alive
-      Content-Length:
-      - '196'
+      Content-Encoding:
+      - br
       Content-Type:
       - application/json
       Date:
-      - Fri, 13 Dec 2024 21:18:31 GMT
+      - Fri, 28 Feb 2025 00:58:37 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=.GAsZv4B89OqbQniRK4t7dVzeE49Ex9rD_OS.SV8q2I-1734124711-1.0.1.1-nXW7cVUBmGW_jq4SGu49fbOEDCtvIXQzBigcNjhb8V.Yh6RNl.G2YhJbGjn5Ad6RsUBYWOafjZ24rTwtx2XwIA;
-        path=/; expires=Fri, 13-Dec-24 21:48:31 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=qFMOKw6mREXdgnAilgfWBXkM3o8ZqtsGuMga5hEv.VM-1740704317-1.0.1.1-fus3rsJlXcuUv4ciupAXPHEFmlqNxSeFTm7afZmEW8VVZGBEtTojvITNAdJpT2gK0glmnBSmo4_vd.TVw.JUMw;
+        path=/; expires=Fri, 28-Feb-25 01:28:37 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=Qfh2bxQxCfxHDu8kuxqYcDODjS5FklmCbEFcdg9x2bg-1734124711064-0.0.1.1-604800000;
+      - _cfuvid=U3mCJ1zvPMyfsp06OgpyabZpzsJJD7uqNNWeUqTEJL0-1740704317466-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
       X-Content-Type-Options:
       - nosniff
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '10'
+      - '3458'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -80,14 +88,14 @@ interactions:
       x-ratelimit-remaining-requests:
       - '29999'
       x-ratelimit-remaining-tokens:
-      - '149999982'
+      - '149999981'
       x-ratelimit-reset-requests:
       - 2ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_3419408225d4a1298a35bb4cf5f4f01a
+      - req_0b28111c6ab4141be5b4e241d2a00d2e
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

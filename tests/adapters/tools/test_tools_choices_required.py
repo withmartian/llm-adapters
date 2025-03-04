@@ -1,41 +1,45 @@
 import pytest
+from typing import cast, Iterable
 
+from llm_adapters.client import AsyncOpenAI
+from llm_adapters.types.openai import ChatCompletionToolParam
+from llm_adapters.adapter_factory import AdapterFactory
 from tests.utils import (
-    ADAPTER_CHAT_TEST_FACTORIES,
+    TEST_CHAT_MODELS,
     SIMPLE_FUNCTION_CALL_USER_ONLY,
     SIMPLE_GENERATE_TOOLS,
-    AdapterTestFactory,
     get_response_choices_from_vcr,
 )
 from vcr import VCR
 
+async_client = AsyncOpenAI()
+
 
 @pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_CHAT_TEST_FACTORIES, ids=str)
-async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
+@pytest.mark.parametrize("model_path", TEST_CHAT_MODELS, ids=str)
+async def test_async(vcr: VCR, model_path: str) -> None:
+    model = AdapterFactory.get_model_by_path(model_path)
 
-    if (
-        adapter.get_model().supports_tools is False
-        or adapter.get_model().supports_tools_choice is False
-        or adapter.get_model().supports_tools_choice_required is False
-    ):
+    if not model.supports_tools:
         return
 
-    adapter_response = await adapter.execute_async(
-        SIMPLE_FUNCTION_CALL_USER_ONLY,
-        tools=SIMPLE_GENERATE_TOOLS,
+    tools = cast(Iterable[ChatCompletionToolParam], SIMPLE_GENERATE_TOOLS)
+
+    adapter_response = await async_client.chat.completions.create(
+        model=model_path,
+        messages=SIMPLE_FUNCTION_CALL_USER_ONLY,
+        tools=tools,
         tool_choice="required",
     )
 
-    choices = get_response_choices_from_vcr(vcr, adapter)
+    cassette_choices = get_response_choices_from_vcr(vcr, model_path)
 
-    assert adapter_response.choices[0].message.tool_calls
+    assert adapter_response.choices[-1].message.tool_calls
     assert (
-        adapter_response.choices[0].message.tool_calls[0].function.name
-        == choices[0]["message"]["tool_calls"][0]["function"]["name"]
+        adapter_response.choices[-1].message.tool_calls[0].function.name
+        == cassette_choices[-1]["message"]["tool_calls"][0]["function"]["name"]
     )
     assert (
-        adapter_response.choices[0].message.tool_calls[0].function.arguments
-        == choices[0]["message"]["tool_calls"][0]["function"]["arguments"]
+        adapter_response.choices[-1].message.tool_calls[0].function.arguments
+        == cassette_choices[-1]["message"]["tool_calls"][0]["function"]["arguments"]
     )

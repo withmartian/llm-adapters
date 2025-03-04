@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "system", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "user", "content": "Hi"}, {"role": "user", "content": "\"\""}], "model": "jamba-1.5-large"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"jamba-1.5-large"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '332'
+      - '298'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,25 +25,25 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
       string: !!binary |
-        IUgEACAWzqlsdroMdhOaC/yBEenkwPFgnzcPNE0wwISCONCWae5gnVEN4xCuv5haJGjG6qb7oVuH
-        ddB5rdN7cRvWbm05Tuu7du8Hfm1Bw+j65Ipk+8VF+orE0tAX8YXki4ukDgmq63W63ipxg4bQuEmC
-        dUckV2wtn6ypBNsw6xp7yzu7ybZ6l9Bwk5KOTUV0RSLuRH8NJAd1kTVJDQlq7ritao0E15tU+O81
-        3Evp1UVydTve5NKJKxLXh+GKutskhRRsS8NDAcCK5///Aw==
+        IWgEACD+szVTZS/DmUzrFrJzoh+ZmU4OHA/2efNA0wQDTCiIA40jzR2sM6phHMLVF32FKcpO3kpl
+        SWRZE1ZlEog6i2qRZmUoCr/0RJZFYe43UjapB44R9skV0+0Xl+krph5Hf8QXpl9cDNWYQl6v/fUm
+        9Q0c4XGTKdY1kZmwtXmyUmq2YdY19jZ3djOVfK/AcTOGjqUkumKq70R/DjKtvZiCJEeSmjturVpj
+        iuvNWPz3HPdSensxyt6ONzPW+oppGMMoS/WtN1oKvsfxWACYJYr/fwMD
     headers:
       CF-RAY:
-      - 8e6d1c642d54ebe2-SJC
+      - 918c6e52c9dbeb21-SJC
       Connection:
       - keep-alive
       Content-Encoding:
@@ -54,7 +51,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 00:40:58 GMT
+      - Fri, 28 Feb 2025 00:52:17 GMT
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -63,10 +60,20 @@ interactions:
       - chunked
       cf-cache-status:
       - DYNAMIC
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - 36cc9f85-1874-7489-fd00-b7fadb4dfaae
+      - 88f3dc62-e84e-78c3-b1c0-884391faaf70
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK

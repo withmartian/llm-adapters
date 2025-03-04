@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "gemini-1.5-pro"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-1.5-pro"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '81'
+      - '75'
       content-type:
       - application/json
       host:
       - generativelanguage.googleapis.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,31 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
   response:
     body:
-      string: "[{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource
-        has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n
-        \ }\n}\n]"
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"I
+        need to create a function to get value base on conditions , however, I need
+        to check the condition one by one, and if any condition is true, then stop
+        check the rest.\n\nI am use CASE method now, but I think it will check all
+        the conditions even it is not necessary.\n\nPlease suggest me some idea or
+        correct my method.\n\nThank you.\n\nExample of code :\n\nCREATE OR REPLACE
+        FUNCTION GET_VALUE (\n    INPUT_VALUE   IN VARCHAR2\n)\n    RETURN NUMBER\nIS\n    OUTPUT_VALUE   NUMBER;\nBEGIN\n    SELECT\n        CASE\n            WHEN
+        INPUT_VALUE = ''A'' THEN 1\n            WHEN INPUT_VALUE = ''B'' THEN 2\n            WHEN
+        INPUT_VALUE = ''C'' THEN 3\n            WHEN INPUT_VALUE = ''D'' THEN 4\n            ELSE
+        5\n        END\n    INTO OUTPUT_VALUE\n    FROM\n        DUAL;\n\n    RETURN
+        OUTPUT_VALUE;\nEND;","role":"assistant"}}],"created":1740771419,"model":"gemini-1.5-pro","object":"chat.completion","usage":{"completion_tokens":207,"prompt_tokens":1,"total_tokens":208}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json
       Date:
-      - Sat, 23 Nov 2024 01:15:19 GMT
+      - Fri, 28 Feb 2025 19:36:59 GMT
       Server:
       - scaffolding on HTTPServer2
       Server-Timing:
-      - gfet4t7; dur=30
+      - gfet4t7; dur=3601
       Transfer-Encoding:
       - chunked
       Vary:
@@ -63,8 +71,8 @@ interactions:
       X-XSS-Protection:
       - '0'
       content-length:
-      - '141'
+      - '1039'
     status:
-      code: 429
-      message: Too Many Requests
+      code: 200
+      message: OK
 version: 1

@@ -1,0 +1,168 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-2.0-flash"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":",\n\nYou
+        could use a workflow rule on the \"email message\" entity (or whatever is
+        the right one for email tracking) to copy the regarding object into the \"email\"
+        field of the activity party entity. The reason for using workflow instead
+        of calculated field is that you need to copy the data into the activity party
+        (there is no \"related\" field on calculated fields). The workflow should
+        trigger on the create of the email tracking entity.\n\nI hope this helps!\n\nHi,\n\nI''m
+        having the same issue.\n\nI have also tried creating a calculated field on
+        the Email entity to copy the Regarding attribute into the Email Address Name
+        field. However, I have the same issue and it only populates for new emails
+        but doesn''t populate for any existing emails.\n\nHave you found a solution
+        to this issue yet?\n\nThanks\n\nHi,\n\nThere might be a better way than the
+        solution below (I was trying to solve something slightly different), but I
+        can offer this, which might help:\n\nI would like to know if you are looking
+        to get this value to be populated in the email address section of the To,
+        From, CC or BCC fields of the email, rather than the regarding field?\n\nIf
+        so, then it is a little trickier, and I had to do the following:\n\n1. Create
+        a new custom field on the Email entity (e.g. \"Regarding Email\") and make
+        it a \"Multiple Lines of Text\" field. This will be a holding field, that
+        the emails can populate, prior to workflow being triggered.\n\n2. Create a
+        new workflow on the Email entity (to run in the background). It will be triggered
+        by a change to the Regarding field. The action that it takes is to Update
+        the record of the email. It updates the \"Regarding Email\" field with the
+        name of the record from the Regarding field, and then uses the following string
+        to grab the Email Address of the Regarding record, and add that to the end
+        of the name: \" <\" + Related Entity(Regarding).Email Address + \">\"\n\n3.
+        You can then go into your View (or modify a pre-existing view) and add the
+        \"Regarding Email\" field.\n\n4. This will then be populated when the Regarding
+        field is populated.\n\nThis can then be changed as necessary to populate the
+        To, From, CC, or BCC fields of the email, by changing the workflow to update
+        those instead of the \"Regarding Email\" field that I created.\n\nI hope that
+        helps! Let me know if you have any questions.\n\nHi guys,\n\nThanks for your
+        help. I managed to solve the issue using a plugin which triggers when a new
+        Email is created.\n\nThe plugin then iterates over the Email''s Activity Parties
+        and updates the Party ID to equal the Regarding Object.\n\nI still think there
+        should be a better way of doing this but this works for the moment.\n\nHi,\n\nI
+        was wondering if you can share the solution you found. I need to do the same
+        thing\n\nThanks,\n\nHi,\n\nHere is the plugin code to copy the \"Regarding
+        Object\" to the \"Party ID\" field. The plugin triggers \"Post Operation\"
+        on \"Create\" of the Email entity.\n\npublic class UpdateActivityParty : IPlugin\n\n{\n\n   public
+        void Execute(IServiceProvider serviceProvider)\n\n   {\n\n       //Extract
+        the tracing service for use in debugging sandboxed plug-ins.\n\n       ITracingService
+        tracingService =\n\n           (ITracingService)serviceProvider.GetService(typeof(ITracingService));\n\n       //
+        Obtain the execution context from the service provider.\n\n       IPluginExecutionContext
+        context = (IPluginExecutionContext)\n\n           serviceProvider.GetService(typeof(IPluginExecutionContext));\n\n       //
+        Obtain the organization service reference which you will need for\n\n       //
+        accessing the CRM server context.\n\n       IOrganizationServiceFactory serviceFactory
+        =\n\n           (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));\n\n       IOrganizationService
+        service = serviceFactory.CreateOrganizationService(context.UserId);\n\n       //
+        The InputParameters collection contains all the data passed in the message
+        request.\n\n       if (context.InputParameters.Contains(\"Target\") &&\n\n           context.InputParameters[\"Target\"]
+        is Entity)\n\n       {\n\n           // Obtain the target entity from the
+        input parameters.\n\n           Entity entity = (Entity)context.InputParameters[\"Target\"];\n\n           //
+        Verify that the target entity represents an email.\n\n           // If not,
+        this plug-in was not registered correctly.\n\n           if (entity.LogicalName
+        != \"email\")\n\n               return;\n\n           try\n\n           {\n\n               tracingService.Trace(\"Email
+        Plugin Started\");\n\n               EntityReference regardingObjectId = (EntityReference)entity.Attributes[\"regardingobjectid\"];\n\n               Guid
+        regardingObjectIdGuid = regardingObjectId.Id;\n\n               //Get the
+        Activity Parties\n\n               if (entity.Contains(\"to\") && entity.Attributes[\"to\"]
+        != null)\n\n               {\n\n                   EntityCollection activityParties
+        = (EntityCollection)entity.Attributes[\"to\"];\n\n                   foreach
+        (Entity activityParty in activityParties.Entities)\n\n                   {\n\n                       if
+        (activityParty.Attributes.Contains(\"partyid\"))\n\n                       {\n\n                           activityParty.Attributes[\"partyid\"]
+        = regardingObjectId;\n\n                       }\n\n                   }\n\n                   //Update
+        the email entity\n\n                   Entity emailToUpdate = new Entity(\"email\");\n\n                   emailToUpdate.Id
+        = entity.Id;\n\n                   emailToUpdate[\"to\"] = activityParties;\n\n                   service.Update(emailToUpdate);\n\n               }\n\n               tracingService.Trace(\"Email
+        Plugin Finished\");\n\n           }\n\n           catch (Exception ex)\n\n           {\n\n               tracingService.Trace(\"Email
+        Plugin Exception: \" + ex.Message);\n\n               throw new InvalidPluginExecutionException(\"Error
+        in email plugin, please contact system administrator.\", ex);\n\n           }\n\n       }\n\n   }\n\n}\n\nI
+        hope this helps.\n\nHi,\n\nI was able to solve this issue using a Real time
+        workflow. The goal is when an email is created and has the Regarding object,
+        populate the \"Party ID (Regarding Object)\" field on the Activity Party.\n\n*
+        Create a workflow on Email Entity.\n* Check Run this workflow in the background.\n*
+        Workflow type = New (Real Time Workflow)\n* Scope = Organization\n* Uncheck
+        Start When Record is Created, Uncheck Record Status Changes, Check Record
+        is assigned and Record fields change (Regarding (Regarding Object)).\n\n*
+        Add a step: Check Condition. If Regarding (Regarding Object) is not null\n\n*
+        Add a step inside the Check Condition: Update Record. Change the \"Regarding
+        Object\" field to \"Party ID (Regarding Object)\" field.\n* Check the properties:\n\n*
+        Finally Active the workflow and that''s it. The \"Regarding Object\" should
+        populate the \"Party ID (Regarding Object)\" field on the Activity Party.\n\nThe
+        email entity does not appear to be able to update activity parties.  I get
+        an error saying I am missing prvWrite email privilege.  \n\nI was having the
+        same issue with workflow failing and erroring with privileges. I resolved
+        this by changing the workflow to run as the process owner instead of the calling
+        user. Once I made this change, the privileges of the workflow process owner
+        are used instead of the user triggering the workflow.\n\nHi Guys,\n\nI have
+        tried workflow and plugins to accomplish this but nothing has worked yet.\n\nDoes
+        anybody have any other suggestion of how I can accomplish this functionality?\n\nI
+        need all Activity Parties to contain the \"PartyID\" of the RegardingObject.\n\nThanks
+        in advance!\n\nHi,\n\nThere is some limitation on what actions can a workflow
+        do. I would like to know if you have found a working plugin for this. I am
+        facing the same issue, I need all Activity Parties to contain the \"PartyID\"
+        of the RegardingObject.\n\nThanks\n\nThere should be a relationship between
+        email and the ''Regarding Object''.\n\nUse ''Connect to Common Data Model''
+        from power automate.\n\nGet the Regarding Object record. \n\nGet all records
+        of Activity Parties from that email (Create an array)\n\nFor Each item of
+        the activity parties array,\n\nUpdate each activity party record ''Party ID(Regarding
+        Object)'' to be the related record from the Regarding object relationship.
+        \n\nThe update record statement should be the last step inside the For Each
+        activity loop.\n\nCan you send me the Plugin code?","role":"assistant"}}],"created":1741064466,"model":"gemini-2.0-flash","object":"chat.completion","usage":{"completion_tokens":1744,"prompt_tokens":1,"total_tokens":1745}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Mar 2025 05:01:06 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=14231
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '8768'
+    status:
+      code: 200
+      message: OK
+version: 1

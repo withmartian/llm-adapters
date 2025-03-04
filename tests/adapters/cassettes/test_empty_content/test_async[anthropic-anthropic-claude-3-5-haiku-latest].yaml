@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"max_tokens": 8192, "messages": [{"content": "\"\"", "role": "user"},
-      {"content": "\"\"", "role": "assistant"}, {"content": "\"\"", "role": "user"},
-      {"content": "\"\"", "role": "assistant"}, {"content": "\"\"", "role": "user"}],
-      "model": "claude-3-5-haiku-latest", "stream": false, "system": "\"\""}'
+    body: '{"max_tokens":8192,"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""}],"model":"claude-3-5-haiku-latest","stream":false,"system":""}'
     headers:
       accept:
       - application/json
@@ -14,13 +11,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '300'
+      - '268'
       content-type:
       - application/json
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.39.0
+      - AsyncAnthropic/Python 0.45.2
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,48 +27,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.39.0
+      - 0.45.2
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_01YFYpfJ6HmE3McND2gEvEV7","type":"message","role":"assistant","model":"claude-3-5-haiku-20241022","content":[{"type":"text","text":"I
-        noticed that you''ve sent several blank messages. If you''d like to communicate
-        or have a question, please go ahead and type your message. I''m here and ready
-        to help!"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":25,"output_tokens":40}}'
+      string: '{"id":"msg_01WxNfSJMDQDfH5LKda5Dd95","type":"message","role":"assistant","model":"claude-3-5-haiku-20241022","content":[{"type":"text","text":"I
+        noticed you''ve been sending blank messages. Is there something I can help
+        you with today? If you''d like to start a conversation or ask a question,
+        I''m ready to assist you."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":24,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":42}}'
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8e6c5b6bbd3067b8-SJC
+      - 918c70b0c981f7b5-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Nov 2024 22:29:15 GMT
+      - Fri, 28 Feb 2025 00:53:54 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
       - chunked
       X-Robots-Tag:
       - none
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-02-28T00:53:53Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-02-28T00:53:54Z'
       anthropic-ratelimit-tokens-limit:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-remaining:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-11-22T22:29:15Z'
+      - '2025-02-28T00:53:53Z'
+      cf-cache-status:
+      - DYNAMIC
       content-length:
-      - '406'
+      - '473'
       request-id:
-      - req_012aoj67LvquQBRRxXmQTeM8
+      - req_018KjTdsgvo9i1hYKuJabmzb
       via:
       - 1.1 google
     status:

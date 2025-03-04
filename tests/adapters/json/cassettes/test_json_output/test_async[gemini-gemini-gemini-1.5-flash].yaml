@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi, output simple json"}], "model":
-      "gemini-1.5-flash", "response_format": {"type": "json_object"}}'
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"gemini-1.5-flash","response_format":{"type":"json_object"}}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '142'
+      - '133'
       content-type:
       - application/json
       host:
       - generativelanguage.googleapis.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,29 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
   response:
     body:
-      string: '{"object":"chat.completion","created":1732324636,"model":"gemini-1.5-flash","choices":[{"index":0,"message":{"content":"{\"key1\":\"value1\",\"key2\":\"value2\"}","role":"assistant","tool_calls":[]},"finish_reason":"stop"}]}'
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"{\"message\":
+        \"Hello, world!\"}","role":"assistant"}}],"created":1740771835,"model":"gemini-1.5-flash","object":"chat.completion","usage":{"completion_tokens":9,"prompt_tokens":5,"total_tokens":14}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 01:17:16 GMT
+      - Fri, 28 Feb 2025 19:43:55 GMT
       Server:
       - scaffolding on HTTPServer2
       Server-Timing:
-      - gfet4t7; dur=398
+      - gfet4t7; dur=383
       Transfer-Encoding:
       - chunked
       Vary:
@@ -62,7 +62,7 @@ interactions:
       X-XSS-Protection:
       - '0'
       content-length:
-      - '224'
+      - '267'
     status:
       code: 200
       message: OK

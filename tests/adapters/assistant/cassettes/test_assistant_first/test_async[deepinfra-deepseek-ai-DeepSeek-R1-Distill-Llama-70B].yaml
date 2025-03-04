@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '133'
+      - '166'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,28 +25,38 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-eca53d0983614fa09bfc7ddcc7c63693\",\"object\":\"chat.completion\",\"created\":1738285663,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\n\\n</think>\\n\\nHello!
-        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"total_tokens\":23,\"completion_tokens\":15,\"estimated_cost\":1.2189999999999998e-05}}"
+      string: "{\"id\":\"chatcmpl-101a44ce341e4258a543288d0033bc61\",\"object\":\"chat.completion\",\"created\":1740702438,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user greeted me with \\\"Hi\\\" and I responded with \\\"Hello! How can
+        I assist you today?\\\". Now, they've sent another \\\"Hi\\\" followed by
+        a smiley and some text. Hmm, the smiley is a happy face, so maybe they're
+        in a good mood or trying to be friendly.\\n\\nI should acknowledge their greeting
+        again to keep the conversation flowing. It's important to be welcoming and
+        approachable. Maybe I can ask how they're doing or if there's something specific
+        they need help with. I don't want to assume they have a question, but offering
+        assistance is a good way to invite them to share more.\\n\\nI should also
+        keep the tone light and positive, matching their smiley. Let's go with a friendly
+        response that opens the door for them to continue the conversation.\\n</think>\\n\\nHello!
+        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":191,\"completion_tokens\":181,\"estimated_cost\":0.00012719}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '442'
+      - '1203'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:07:43 GMT
+      - Fri, 28 Feb 2025 00:27:18 GMT
       server:
       - uvicorn
       x-robots-tag:

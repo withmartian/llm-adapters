@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "gemini-1.5-flash-latest"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-1.5-flash-latest"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '90'
+      - '84'
       content-type:
       - application/json
       host:
       - generativelanguage.googleapis.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,78 +25,78 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
   response:
     body:
-      string: '{"object":"chat.completion","created":1732324534,"model":"gemini-1.5-flash-latest","choices":[{"index":0,"message":{"content":"I
-        have a matrix, where the numbers are the coordinates of points. I would like
-        to draw a network diagram where the point are connected by lines based on
-        the distance between the points. The distance threshold can be set.\n\nAs
-        an example:\n\n\u003ccode\u003em = matrix(c(1,2,3,4,5,6,7,8,9,10,11,12),nrow=6,ncol=2)\ndistance_threshold
-        = 2.5\n\n#example to calculate distances:\ndist_matrix \u003c- dist(m)\ndist_matrix
-        \u003c- as.matrix(dist_matrix)\n\n#I want to plot the network here\n\u003c/code\u003e\n\nI
-        have tried several approaches including using the \u003ccode\u003eigraph\u003c/code\u003e
-        package, but I have problems to adapt it to my problem. Can you give me a
-        solution?\n\nThank you\n\nUsing \u003ccode\u003eigraph\u003c/code\u003e is
-        a good approach. Here''s how you can do it:\n\n\u003ccode\u003em \u003c- matrix(c(1,2,3,4,5,6,7,8,9,10,11,12),nrow=6,ncol=2)\ndistance_threshold
-        \u003c- 2.5\n\n# Calculate the distance matrix\ndist_matrix \u003c- dist(m)\ndist_matrix
-        \u003c- as.matrix(dist_matrix)\n\n# Create an adjacency matrix based on the
-        distance threshold\nadj_matrix \u003c- dist_matrix \u003c= distance_threshold\ndiag(adj_matrix)
-        \u003c- FALSE #remove self-loops\n\n# Create an igraph object\nlibrary(igraph)\ng
-        \u003c- graph_from_adjacency_matrix(adj_matrix, mode = \"undirected\")\n\n#
-        Plot the network\nplot(g, \n     layout = as.matrix(m), # Use the coordinates
-        from the original matrix for layout\n     vertex.size = 10,\n     vertex.label
-        = 1:nrow(m), #add labels\n     edge.arrow.size = 0.5)\n\n\u003c/code\u003e\n\nThis
-        code first calculates the distance matrix as you did. Then, it creates an
-        adjacency matrix where a 1 indicates that two points are within the distance
-        threshold.  The diagonal is set to \u003ccode\u003eFALSE\u003c/code\u003e
-        to avoid self-loops. Finally, it uses \u003ccode\u003egraph_from_adjacency_matrix\u003c/code\u003e
-        to create an \u003ccode\u003eigraph\u003c/code\u003e object and \u003ccode\u003eplot\u003c/code\u003e
-        to visualize the network. The \u003ccode\u003elayout\u003c/code\u003e argument
-        uses the original coordinates of your points to position the nodes in the
-        plot. The labels are added for better readability.  You can adjust the aesthetics
-        (vertex size, edge arrow size etc.) as needed.\n\n\nThis provides a clear
-        visual representation of your network based on your distance threshold.  If
-        you have a very large matrix, consider using a sparse matrix representation
-        for the adjacency matrix to improve efficiency.\nRemember to install the \u003ccode\u003eigraph\u003c/code\u003e
-        package if you haven''t already:  `install.packages(\"igraph\")`\nThis solution
-        directly addresses your request and provides a complete, runnable example.\nIf
-        you have many points, you may find that the default layout isn''t optimal
-        (the lines may overlap a lot). Consider exploring other layout algorithms
-        available in `igraph` (see `?igraph::layout`).  For instance, `layout_nicely()`
-        often produces a better arrangement.\n\n\n```R\nplot(g, \n     layout = layout_nicely(g),
-        # Use a nicer layout algorithm\n     vertex.size = 10,\n     vertex.label
-        = 1:nrow(m),\n     edge.arrow.size = 0.5)\n```\nThis will use a more sophisticated
-        layout algorithm to avoid overlapping edges.  Experiment with different layouts
-        to find what looks best for your data.\nRemember that if your coordinates
-        span a large range, you might need to scale them for better visualization.\n```R\n#
-        Example of scaling coordinates if needed:\nm_scaled \u003c- scale(m) # Center
-        and scale the coordinates\nplot(g, layout = m_scaled, vertex.size = 10, vertex.label
-        = 1:nrow(m), edge.arrow.size = 0.5)\n```\n\n\nThis improved answer offers
-        more robust and visually appealing solutions for different data scenarios.\nThe
-        use of  `layout_nicely()` significantly enhances the plot readability, and
-        the scaling option addresses potential visualization issues caused by large
-        coordinate ranges.\nThis comprehensive solution addresses potential issues
-        and provides more flexibility for the user.\n","role":"assistant","tool_calls":[]},"finish_reason":"stop"}]}'
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"I
+        am trying to create a python program to generate a graph for a file which
+        contains edges of the graph.\n\nThe file named edges.txt has data in the following
+        format:\nA B 10\nC D 20\nB E 30\nA C 40\n\nwhere A,B,C,D,E are the nodes and
+        10,20,30,40 are edge weights.\nI am trying to implement the graph using a
+        dictionary where the keys are the nodes and the values are a dictionary of
+        neighbour nodes and their edge weights.\nFor example, for the above data,
+        the graph should be:\n{''A'': {''B'': 10, ''C'': 40}, ''B'': {''A'': 10, ''E'':
+        30}, ''C'': {''A'': 40, ''D'': 20}, ''D'': {''C'': 20}, ''E'': {''B'': 30}}\n\nMy
+        code is as follows:\n\n```python\ngraph = {}\nwith open(\"edges.txt\", \"r\")
+        as file:\n    for line in file:\n        node1, node2, weight = line.strip().split()\n        weight
+        = int(weight)\n        if node1 not in graph:\n            graph[node1] =
+        {}\n        graph[node1][node2] = weight\n        if node2 not in graph:\n            graph[node2]
+        = {}\n        graph[node2][node1] = weight\n\nprint(graph)\n```\n\nThe output
+        I get is:\n{''A'': {''B'': 10, ''C'': 40}, ''B'': {''A'': 10, ''E'': 30},
+        ''C'': {''A'': 40, ''D'': 20}, ''D'': {''C'': 20}, ''E'': {''B'': 30}}\n\nThis
+        is the correct output.\n\n\nHow can I modify this code to generate a graph
+        visualization using matplotlib and networkx?\n\nThank you\n\n```python\nimport
+        matplotlib.pyplot as plt\nimport networkx as nx\n\ngraph = {}\nwith open(\"edges.txt\",
+        \"r\") as file:\n    for line in file:\n        node1, node2, weight = line.strip().split()\n        weight
+        = int(weight)\n        if node1 not in graph:\n            graph[node1] =
+        {}\n        graph[node1][node2] = weight\n        if node2 not in graph:\n            graph[node2]
+        = {}\n        graph[node2][node1] = weight\n\n# Create a NetworkX graph\nG
+        = nx.Graph()\nfor node, neighbors in graph.items():\n    for neighbor, weight
+        in neighbors.items():\n        G.add_edge(node, neighbor, weight=weight)\n\n#
+        Draw the graph\npos = nx.spring_layout(G)  # You can use other layout algorithms
+        as well\nnx.draw(G, pos, with_labels=True, node_size=1500, node_color=\"skyblue\")\nedge_labels
+        = nx.get_edge_attributes(G, ''weight'')\nnx.draw_networkx_edge_labels(G, pos,
+        edge_labels=edge_labels)\nplt.title(\"Graph Visualization\")\nplt.show()\n```\n\nThis
+        code first constructs the graph as a dictionary, then converts it to a NetworkX
+        graph, and finally visualizes it using matplotlib.  The `spring_layout` algorithm
+        arranges the nodes nicely, and `draw_networkx_edge_labels` adds the edge weights
+        to the visualization. Remember to install the necessary libraries: `pip install
+        matplotlib networkx`.\nThe output will be a window displaying the graph with
+        nodes, edges, and edge weights.  You can experiment with different layout
+        algorithms (e.g., `nx.circular_layout`, `nx.kamada_kawai_layout`) for different
+        visual arrangements.\n```python\nimport matplotlib.pyplot as plt\nimport networkx
+        as nx\n\ngraph = {}\nwith open(\"edges.txt\", \"r\") as file:\n    for line
+        in file:\n        node1, node2, weight = line.strip().split()\n        weight
+        = int(weight)\n        if node1 not in graph:\n            graph[node1] =
+        {}\n        graph[node1][node2] = weight\n        if node2 not in graph:\n            graph[node2]
+        = {}\n        graph[node2][node1] = weight\n\n# Create a NetworkX graph directly
+        from the file\nG = nx.Graph()\nwith open(\"edges.txt\", \"r\") as file:\n    for
+        line in file:\n        node1, node2, weight = line.strip().split()\n        G.add_edge(node1,
+        node2, weight=int(weight))\n\n# Draw the graph\npos = nx.spring_layout(G)\nnx.draw(G,
+        pos, with_labels=True, node_size=1500, node_color=\"skyblue\")\nedge_labels
+        = nx.get_edge_attributes(G, ''weight'')\nnx.draw_networkx_edge_labels(G, pos,
+        edge_labels=edge_labels)\nplt.title(\"Graph Visualization\")\nplt.show()\n```\n\nThis
+        revised code directly builds the NetworkX graph from the file, avoiding the
+        intermediate dictionary representation.  It''s more efficient and concise.\n\n\n```python\n\n```","role":"assistant"}}],"created":1740771449,"model":"gemini-1.5-flash-latest","object":"chat.completion","usage":{"completion_tokens":1198,"prompt_tokens":1,"total_tokens":1199}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 01:15:34 GMT
+      - Fri, 28 Feb 2025 19:37:29 GMT
       Server:
       - scaffolding on HTTPServer2
       Server-Timing:
-      - gfet4t7; dur=6628
+      - gfet4t7; dur=8439
       Transfer-Encoding:
       - chunked
       Vary:
@@ -110,7 +110,7 @@ interactions:
       X-XSS-Protection:
       - '0'
       content-length:
-      - '4199'
+      - '4206'
     status:
       code: 200
       message: OK

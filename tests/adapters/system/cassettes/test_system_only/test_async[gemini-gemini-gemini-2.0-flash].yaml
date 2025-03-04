@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"gemini-2.0-flash"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"gemini-2.0-flash"}'
     headers:
       accept:
       - application/json
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '74'
+      - '107'
       content-type:
       - application/json
       host:
@@ -36,19 +36,19 @@ interactions:
     uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
   response:
     body:
-      string: "[{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"* GenerateContentRequest.contents:
-        contents is not specified\\n\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n]"
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"Okay!
+        How can I help you today?\n","role":"assistant"}}],"created":1740772021,"model":"gemini-2.0-flash","object":"chat.completion","usage":{"completion_tokens":10,"prompt_tokens":2,"total_tokens":12}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json
       Date:
-      - Mon, 24 Feb 2025 21:08:44 GMT
+      - Fri, 28 Feb 2025 19:47:01 GMT
       Server:
       - scaffolding on HTTPServer2
       Server-Timing:
-      - gfet4t7; dur=46
+      - gfet4t7; dur=367
       Transfer-Encoding:
       - chunked
       Vary:
@@ -62,8 +62,8 @@ interactions:
       X-XSS-Protection:
       - '0'
       content-length:
-      - '154'
+      - '269'
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "llama3.1-8b", "tool_choice": "none",
-      "tools": [{"type": "function", "function": {"description": "Generate random
-      number", "name": "generate", "parameters": {"type": "object", "properties":
-      {"prompt": {"type": "string", "description": "Random number like 5, 4, 3, 10,
-      11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-8b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '414'
+      - '387'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,56 +28,57 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-b211de6c-e0cf-4b7a-967e-1f60013de20a","choices":[{"finish_reason":"stop","index":0,"message":{"content":"I
-        can use Python''s built-in `random` library to generate a random number between
-        1 and 10.\n\nHere''s an example of how to do this:\n\n```python\nimport random\n\nrandom_number
-        = random.randint(1, 10)\nprint(random_number)\n```\n\nIn this code:\n\n- `random.randint(a,
-        b)` generates a random integer `N` such that `a <= N <= b`. So in our case,
-        `a` is 1 and `b` is 10, thus `1 <= random_number <= 10`.\n\nYou can run this
-        code and you will get a random number between 1 and 10 printed out.\n\nAlternatively,
-        you can also use `random.uniform(a, b)` which generates a random floating
-        point number `N` such that `a <= N <= b`. However, note that it generates
-        floats, not integers, so if you need integers, you should use `random.randint()`.","role":"assistant"}}],"created":1732322570,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":47,"completion_tokens":192,"total_tokens":239},"time_info":{"queue_time":3.807e-05,"prompt_time":0.002524207,"completion_time":0.090362167,"total_time":0.10801243782043457,"created":1732322570}}'
+      string: !!binary |
+        MXQUACCXTe313dmUJrBEjZX2zdWOk8iwGN3BikMi6QPnBIf1O2i3yOakz57J6Q14+0EzH+psfSpA
+        9EN39YS2QY11Z0I9jH1Ul3laFLmKipyyKKO0iZbrdRnVeUaqyXLZ5hIFirA38aj/PKE+s4hr21H3
+        QI0+uBEFOqyvQi0Fsk3koH5CBXJ5Gr86kGQ+gcDAZLhxA9+LG9zZ0FkGTXh5raUGjHG9d19FSh7A
+        q72+h9mTi47ij5cfQfD3DwpmUAyXNNGeB5cY5jLD2JOuuOKbm5uxGys+vbhTtjFT3i+UM0jrKAFK
+        HpxUTHXnoMKvHRELkOJ5IlqvAZB+hScVX5xj26fiil+18OBmMOhUDMERzjMgqd3MDIPlTUdBB5NP
+        Y4BdC/jHy4/iz4a1YTC9X8Afwekk+1QRIjg8VDxXeHio4aZ0J8EhKAlHoG5AzH9g2e5lkGukcpVR
+        omQMX+/jQ+gcw0akzEO54HAC42Q57GcAgFJqOWRgYgeXMi0H2qyy1+bWbDQ+IAXUjn3L4QD2U5j0
+        gxO00op/5TNQNOn8AIEruEBPEJzrPYR6mjV0tA+NoeKKL2kisNVQz3FvmaipM7WmJrAjFy5kueVx
+        DsAQ1Qh47RoilDPNOLYTnOtj6EIYvV4sxm5sbdP0FLtps0CBk+sJNRrvrQ+GA768rAQqD9gQNahV
+        mSmpjguZCRxcQz1q7HszmDRW0fEaBWpn0L9uLW9oKtvlUWM7XjeSlrLOsiWhQLf+S3XoLmgxT5Gp
+        dYwC5xb+j3Fywxiug/tH7FFnpcAfI1/lJSoTGMcDj49nLtSLwGAHurbcOtRP+H+mma6HqahlLKXM
+        kmIp0CDfNZMmy1SqBBv0T3cll3mRqTzFCX/5cpWrQhV5maZpWmYyyTPWy4sBAw==
     headers:
-      Alt-Svc:
-      - h3=":443"; ma=86400
+      CF-RAY:
+      - 91aa70a6b9e35792-QRO
       Connection:
       - keep-alive
+      Content-Encoding:
+      - br
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 00:42:50 GMT
+      - Mon, 03 Mar 2025 16:16:44 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=2X4PZDpk5RVIwKNY3pS.NTZSWWXd1ROEg3wJFHXS3ag-1741018604-1.0.1.1-ORZwibUQTbjoILEStg1WzHRWTfRsRZmTnM3DbRTyTsyILnQBN2AIuuv7GiLQXNy3cmGLL1hQmczUxW81PxiNQzA_82sAneRbg0ajw1DgG1w;
+        path=/; expires=Mon, 03-Mar-25 16:46:44 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 dfd0a9d31e7c22e1ecdaa3c92763b966.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - uFQPYqwnTEm2IY-XE3gi9v_1iLknpSqzLwW2BOs59MKprw08b1I66w==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
-      content-length:
-      - '1207'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       referrer-policy:
       - strict-origin-when-cross-origin
-      server:
-      - uvicorn
       strict-transport-security:
       - max-age=3600; includeSubDomains
-      vary:
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ratelimit-limit-requests-day:
@@ -87,15 +86,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14380'
+      - '14399'
       x-ratelimit-remaining-tokens-minute:
-      - '58410'
+      - '60000'
       x-ratelimit-reset-requests-day:
-      - '83829.04277515411'
+      - '27795.14860343933'
       x-ratelimit-reset-tokens-minute:
-      - '9.04277515411377'
+      - '15.148603439331055'
       x-request-id:
-      - uFQPYqwnTEm2IY-XE3gi9v_1iLknpSqzLwW2BOs59MKprw08b1I66w==
+      - 91aa70a6b9e35792-SJC
     status:
       code: 200
       message: OK

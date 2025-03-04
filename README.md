@@ -1,115 +1,61 @@
-# LLM Adapters Package Documentation
+# LLM Adapters
 
-List of currently [supported models](https://withmartian.github.io/llm-adapters/)
+LLM Adapters provides a unified interface for interacting with various language model APIs, supporting both synchronous and asynchronous operations. Whether you're using OpenAI, Claude, or other providers, this library simplifies integration and offers flexibility in usage.
 
-## Overview
+## Installation
 
-The Adapters package facilitates communication between different language model APIs by providing a unified interface for interaction. This ensures ease of use and flexibility in integrating multiple models from various providers.
+To install llm-adapters for use in your projects, simply run:
 
-The package can be installed an used via pip:
-
-```
-pip install martian-adapters
+```bash
+pip install llm-adapters
 ```
 
-## Getting Started
+## Usage
 
-### Prerequisites
+Package is using OpenAI SDK format, so you can use it as a drop in replacement for the OpenAI SDK, just need to change the import. It works both for synchronous and asynchronous clients.
 
-- Python version: 3.11.10
-- [Poetry](https://python-poetry.org/docs/#installation)
+```python
+from llm_adapters import OpenAI
 
-### Installation
+client = OpenAI()
+
+completion = client.chat.completions.create(
+  model="claude-3-5-sonnet-20241022",
+  messages=[
+    {"role": "developer", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Hello!"}
+  ]
+)
+
+print(completion.choices[0].message)
+
+```
+
+Note: If you plan to contribute to this project, you'll need Poetry to set up the development environment. After cloning the repository, run:
 
 ```bash
 poetry install
 poetry run pre-commit install
 ```
 
-### Setting Up Pre-commit
+## Getting Started
 
-To run pre-commit manually:
+### Prerequisites
 
-```bash
-poetry run pre-commit run --all-files
-```
+- Python 3.11+
+- [Poetry](https://python-poetry.org/docs/#installation) (if using Poetry)
 
-### Semantic Versioning
+### Setup
 
-For versioning we follow [Semantic Versioning](https://semver.org)
+1. Copy `.env-example` to `.env` and fill in the necessary environment variables.
 
-### Environment Configuration
+## Supported Models
 
-The package requires certain environment variables to be set by the users:
+Adapter paths follow the format `provider/vendor/model_name`. Use `AdapterFactory.get_supported_models()` to retrieve all supported models. For any model, calling `.get_path()` will return its adapter path.
 
-- Copy `.env-example` to `.env` and populate it with appropriate values.
+## Configuration and Environment
 
-### Running Tests
-
-```bash
-poetry run pytest
-```
-
-## Quickstart
-
-```python
-from adapters import AdapterFactory
-
-# First component in model path is Provider, then Vendor, and last model name itself
-adapter = AdapterFactory.get_adapter_by_path("openai/openai/gpt-4o-mini")
-
-adapter.execute_sync(
-    [
-        {"role": "system", "content": "You are a helpful assistant."},
-        {
-            "role": "user",
-            "content": "Write a haiku about recursion in programming.",
-        },
-    ]
-)
-```
-
-Adapter paths follows the format `provider/vendor/model_name`. Use `AdapterFactory.get_supported_models()` to retrieve all supported models. For a given model, `model.get_path()` returns the adapter path.
-
-## Contributing
-
-### Adding New Models
-
-1. **Existing Providers:**
-   Add new models to the `MODELS` array if the provider is already supported.
-
-2. **New Providers:**
-   - If the provider follows the OpenAI format, model integration is straightforward. See the "_Fireworks_" provider class as an example.
-   - For providers with different schemas, see the "_Anthropic_" provider class for guidance.
-
-### Development Steps
-
-1. **Add the Provider and Model:** Update `provider_adapters/__init__.py` and test files accordingly.
-2. **Write Tests:** Add tests in the relevant directories. Use `@pytest.mark.vcr` for tests making network requests.
-3. **Run Tests:**
-
-   ```bash
-   poetry run pytest
-   ```
-
-4. **Check-in Cassette Files:** Include any new cassette YAML files in your commit.
-5. **Send a Pull Request:** Ensure all tests pass before requesting a review.
-
-### Re-creating Cassette Files
-
-Use the `poetry run pytest --record-mode=rewrite` option with pytest to update cassette files.
-
-## Additional Notes
-
-Some models may only be accessible from specific locations (e.g., the U.S.). In such cases, running tests might require access to a U.S.-based server.
-
-This documentation provides a streamlined approach to using and contributing to the Adapters package, emphasizing practical steps and clear examples.
-
-## Misclenous
-
-### HTTP Client configuration
-
-To optimize throughput and performance, we provide options to configure HTTP networking parameters:
+LLM Adapters can be customized via environment variables. For example, configure the HTTP client settings with:
 
 ```env
 ADAPTERS_MAX_KEEPALIVE_CONNECTIONS_PER_PROCESS = 100
@@ -118,12 +64,42 @@ ADAPTERS_HTTP_CONNECT_TIMEOUT = 5
 ADAPTERS_HTTP_TIMEOUT = 600
 ```
 
-### Base URL overriding
-
-For stress testing or other purposes, you can override all base URLs by setting the following in your .env file:
+To override base URLs for testing or specific setups:
 
 ```env
 _ADAPTERS_OVERRIDE_ALL_BASE_URLS_ = "https://new-base-url.com/api"
 ```
 
-This setting ensures that all LLM API calls will route to the specified new base URL.
+## Testing and Pre-commit
+
+- Run tests with:
+
+```bash
+poetry run pytest
+```
+
+- Validate code using pre-commit hooks:
+
+```bash
+poetry run pre-commit run --all-files
+```
+
+## Contributing
+
+We welcome contributions! To contribute:
+
+1. Fork the repository.
+2. Create a branch for your feature or bug fix.
+3. Update tests and documentation as necessary.
+4. Run existing tests and pre-commit checks.
+5. Submit a pull request.
+
+## Versioning
+
+This project adheres to [Semantic Versioning](https://semver.org).
+
+## Additional Resources
+
+For complete documentation and a list of supported models, please visit our [Documentation Site](https://withmartian.github.io/llm-adapters/).
+
+Happy coding!

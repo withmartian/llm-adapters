@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1-2024-12-17","max_completion_tokens":10}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1-2024-12-17","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '96'
+      - '85'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,58 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IRAMACB+r1v1aap5vwZWPN2emAUbxBL0fOrmeUCa4Fq4wRbYrwXWoCxMeGCJRpzT6fEboZU2Zp9j
-        7ttfQYQ0hCQEidcFpSns7dB+5cne5cnp9fP53uIlqm4Pdh9ul7O2LL5hCSJoP+Ogi8ycIwZtqiuK
-        9+byKw4habKarWeLzWy2BF+WOuQCkqAn9nQ8nduTqT1ZBV4mOg24haRXQUT0O5oQ4er7IySNrVnv
-        IEYBSfyJCI0uGJLgtW3adl7VwSJgznUzSYCwy+iDXgFJVV8U+fL/tYBCx6bRfsvxNXgWbpr6XNYt
-        JMHrIYag7l8QvVdl9kIfwDS6NJ3qdM5VC0mrnBo6iOHppGANPzwAx7xAMmGm7Ob0tilHCLwg4TAa
-        6+De68NUg7oonCGImd8pfiWtYtGsNTAQCQI2HYfKsZCsGqPaazjjIBN9tv59mz1YdSk3kIQHg0O4
-        +247LlWUVjE3pkk3wXlk1HK5WvjLZThZQ/wLAwM=
+      string: "{\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'max_tokens'
+        is not supported with this model. Use 'max_completion_tokens' instead.\",\n
+        \   \"type\": \"invalid_request_error\",\n    \"param\": \"max_tokens\",\n
+        \   \"code\": \"unsupported_parameter\"\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 90acd51d4ab415aa-SJC
+      - 918c74d8bcbfeb32-SJC
       Connection:
       - keep-alive
-      Content-Encoding:
-      - br
+      Content-Length:
+      - '245'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 21:35:37 GMT
+      - Fri, 28 Feb 2025 00:56:43 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=T_DNiCP1vCvFqXkSwPMbTChFzllelWj5uK3DkzuQtpM-1738359337-1.0.1.1-nWQ9x9q8W4uYj9djhTGbDGBxbuquZaPKG8Hnh3ntXhjwzi6425KIg4kJq4MN85q5Tc8u6lqUgOBkkMUK719IPA;
-        path=/; expires=Fri, 31-Jan-25 22:05:37 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=og5Zj7sP_maae6bkPIwBC59YV1MOPWnRznuvPkWk25U-1740704203-1.0.1.1-dqOzrrxHPtXt9DgQitOcvFqzMcXchMP9BsUhHiyIrS.reJ4nuIAhG6qHBSV5THewNo0QQvqgHm42mWriqGwr4g;
+        path=/; expires=Fri, 28-Feb-25 01:26:43 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=mh2Xco6M73Kb9Y9YI3hX_6RGXnBBgmQRThK7LR8ufFk-1738359337954-0.0.1.1-604800000;
+      - _cfuvid=pDGCtUcM1..MPGoihkMYhWWtXJkqK5v9Hu96pE3B4hE-1740704203730-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       X-Content-Type-Options:
       - nosniff
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       openai-organization:
-      - user-yjadzo7w15dqwkegenievvm9
+      - martian-4
       openai-processing-ms:
-      - '1198'
+      - '13'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -88,14 +82,14 @@ interactions:
       x-ratelimit-remaining-requests:
       - '999'
       x-ratelimit-remaining-tokens:
-      - '29999981'
+      - '29999988'
       x-ratelimit-reset-requests:
       - 60ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_9dda3d929c9068d7da4f675bd706235d
+      - req_58273d787b226aa1062c8c3bd879e038
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
 version: 1

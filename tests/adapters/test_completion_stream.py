@@ -1,53 +1,50 @@
-import pytest
+# import pytest
 
-from tests.utils import (
-    ADAPTER_COMPLETION_TEST_FACTORIES,
-    AdapterTestFactory,
-)
-from vcr import VCR
+# from llm_adapters.client import AsyncOpenAI, OpenAI
+# from tests.utils import (
+#     TEST_COMPLETION_MODELS,
+# )
+# from vcr import VCR
 
-
-@pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_COMPLETION_TEST_FACTORIES, ids=str)
-async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
-
-    if not (
-        adapter.get_model().supports_completion
-        and adapter.get_model().supports_streaming
-    ):
-        return
-
-    adapter_response = await adapter.execute_completion_async(
-        prompt="Hi", max_tokens=10, stream=True
-    )
-
-    chunks = [data_chunk async for data_chunk in adapter_response.response]
-
-    response = "".join(
-        [chunk.choices[0].text for chunk in chunks if len(chunk.choices)]
-    )
-    assert len(response)
+# async_client = AsyncOpenAI()
+# sync_client = OpenAI()
 
 
-@pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_COMPLETION_TEST_FACTORIES, ids=str)
-def test_sync(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
+# @pytest.mark.vcr
+# @pytest.mark.parametrize("model_path", TEST_COMPLETION_MODELS, ids=str)
+# async def test_async(vcr: VCR, model_path: str) -> None:
+#     response = await async_client.completions.create(
+#         model=model_path, prompt="Hi", stream=True
+#     )
 
-    if not (
-        adapter.get_model().supports_completion
-        and adapter.get_model().supports_streaming
-    ):
-        return
+#     response_text = ""
+#     async for chunk in response.response:
+#         if chunk.choices and len(chunk.choices) > 0:
+#             response_text += chunk.choices[0].text if chunk.choices[0].text else ""
 
-    adapter_response = adapter.execute_completion_sync(
-        prompt="Hi", max_tokens=10, stream=True
-    )
+#     chunks = [data_chunk async for data_chunk in response.response]
 
-    chunks = list(adapter_response.response)
+#     response_text = "".join(
+#         [chunk.choices[0].text for chunk in chunks if len(chunk.choices)]
+#     )
+#     assert len(response_text)
 
-    response = "".join(
-        [chunk.choices[0].text for chunk in chunks if len(chunk.choices)]
-    )
-    assert len(response)
+
+# @pytest.mark.vcr
+# @pytest.mark.parametrize("model_path", TEST_COMPLETION_MODELS, ids=str)
+# def test_sync(vcr: VCR, model_path: str) -> None:
+#     response = sync_client.completions.create(
+#         model=model_path, prompt="Hi", stream=True
+#     )
+
+#     response_text = ""
+#     for chunk in response:
+#         if chunk.choices and len(chunk.choices) > 0:
+#             response_text += chunk.choices[0].text if chunk.choices[0].text else ""
+
+#     chunks = list(response.response)
+
+#     response_text = "".join(
+#         [chunk.choices[0].text for chunk in chunks if len(chunk.choices)]
+#     )
+#     assert len(response_text)

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '117'
+      - '84'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,42 +25,106 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5af8a4b5a967c\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738284398,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
-        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
-        \       \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHello!
-        How can I assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      },\n
-        \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-        \ \"usage\": {\n    \"prompt_tokens\": 7,\n    \"total_tokens\": 23,\n    \"completion_tokens\":
-        16\n  }\n}"
+      string: "{\n  \"id\": \"918c55b008842acc\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740702927,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        11081378624233601000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \", I need to solve
+        this problem: A 3.0 kg block is attached to a horizontal spring that has a
+        spring constant of 300 N/m. The block is pulled from its equilibrium position
+        at x=0 to x=5.0 cm and released from rest. The block then oscillates in simple
+        harmonic motion. Calculate the speed of the block when it is at x=3.0 cm.
+        Okay, so I need to find the speed of the block when it's at 3.0 cm. Let me
+        think. Hmm, simple harmonic motion, spring-block system. I remember that energy
+        conservation is involved here. The total mechanical energy in the system should
+        be the sum of kinetic and potential energy. At the maximum displacement, all
+        energy is potential, and at equilibrium position, all energy is kinetic. So
+        maybe I can use the conservation of energy to find the speed at 3.0 cm.\\n\\nFirst,
+        let me recall the formulas. The potential energy stored in a spring is (1/2)kx\xB2,
+        right? And the kinetic energy is (1/2)mv\xB2. So the total energy should be
+        the sum of these two, and since energy is conserved, the total energy at any
+        point should be equal to the total energy at the maximum displacement, where
+        kinetic energy is zero. So, total energy E = (1/2)kA\xB2, where A is the amplitude,
+        which is 5.0 cm here. Then, at position x=3.0 cm, the potential energy is
+        (1/2)k(0.03 m)\xB2 and the kinetic energy is (1/2)mv\xB2. So, setting them
+        equal: (1/2)kA\xB2 = (1/2)kx\xB2 + (1/2)mv\xB2. Then I can solve for v.\\n\\nLet
+        me write that equation out:\\n\\n(1/2)kA\xB2 = (1/2)kx\xB2 + (1/2)mv\xB2\\n\\nMultiply
+        both sides by 2 to eliminate the 1/2:\\n\\nkA\xB2 = kx\xB2 + mv\xB2\\n\\nThen,
+        subtract kx\xB2 from both sides:\\n\\nkA\xB2 - kx\xB2 = mv\xB2\\n\\nFactor
+        out k:\\n\\nk(A\xB2 - x\xB2) = mv\xB2\\n\\nThen solve for v:\\n\\nv = sqrt(
+        [k(A\xB2 - x\xB2)] / m )\\n\\nOkay, that seems right. Let me plug in the numbers.
+        But first, make sure all units are in meters and kilograms. The amplitude
+        A is 5.0 cm, which is 0.05 m. The position x is 3.0 cm, which is 0.03 m. The
+        spring constant k is 300 N/m, and mass m is 3.0 kg.\\n\\nSo plugging in:\\n\\nv
+        = sqrt( [300*(0.05\xB2 - 0.03\xB2)] / 3.0 )\\n\\nFirst compute 0.05\xB2: 0.0025\\n\\n0.03\xB2:
+        0.0009\\n\\nSubtract: 0.0025 - 0.0009 = 0.0016\\n\\nMultiply by 300: 300 *
+        0.0016 = 0.48\\n\\nDivide by 3.0: 0.48 / 3.0 = 0.16\\n\\nThen take the square
+        root: sqrt(0.16) = 0.4 m/s\\n\\nWait, that seems straightforward. So the speed
+        is 0.4 m/s. Let me check if that makes sense. At x=0, the speed should be
+        maximum. Let's compute the maximum speed to see if 0.4 is reasonable.\\n\\nMaximum
+        speed v_max = A*sqrt(k/m) = 0.05*sqrt(300/3) = 0.05*sqrt(100) = 0.05*10 =
+        0.5 m/s. So the maximum speed is 0.5 m/s. Then at x=3 cm, the speed is 0.4
+        m/s, which is less than maximum. That seems reasonable. Because 3 cm is closer
+        to the equilibrium than 5 cm, so the speed should be increasing as it approaches
+        equilibrium. So 0.4 m/s at 3 cm is plausible.\\n\\nAlternatively, maybe I
+        can check using another method. For example, using the equation for velocity
+        in SHM: v = \xB1\u03C9\u221A(A\xB2 - x\xB2), where \u03C9 is the angular frequency.
+        Let's compute \u03C9 first. \u03C9 = sqrt(k/m) = sqrt(300/3) = sqrt(100) =
+        10 rad/s. Then, v = 10*sqrt(0.05\xB2 - 0.03\xB2) = 10*sqrt(0.0025 - 0.0009)
+        = 10*sqrt(0.0016) = 10*0.04 = 0.4 m/s. Same result. So that confirms it.\\n\\nTherefore,
+        the speed at x=3.0 cm is 0.4 m/s.\\n\\n**Final Answer**\\nThe speed of the
+        block when it is at x=3.0 cm is \\\\boxed{0.4 \\\\text{ m/s}}.\\n</think>\\n\\nTo
+        find the speed of the block when it is at \\\\( x = 3.0 \\\\, \\\\text{cm}
+        \\\\), we use the conservation of energy principle. The total mechanical energy
+        in the system is the sum of kinetic and potential energy. At maximum displacement,
+        all energy is potential, and at equilibrium position, all energy is kinetic.
+        \\n\\nThe total energy \\\\( E \\\\) is given by:\\n\\\\[ E = \\\\frac{1}{2}
+        k A^2 \\\\]\\nwhere \\\\( A \\\\) is the amplitude (0.05 m), \\\\( k \\\\)
+        is the spring constant (300 N/m), and \\\\( m \\\\) is the mass (3.0 kg).\\n\\nAt
+        position \\\\( x = 0.03 \\\\, \\\\text{m} \\\\), the potential energy is \\\\(
+        \\\\frac{1}{2} k x^2 \\\\) and the kinetic energy is \\\\( \\\\frac{1}{2}
+        m v^2 \\\\). Setting the total energy equal at both points:\\n\\\\[ \\\\frac{1}{2}
+        k A^2 = \\\\frac{1}{2} k x^2 + \\\\frac{1}{2} m v^2 \\\\]\\n\\nMultiplying
+        through by 2:\\n\\\\[ k A^2 = k x^2 + m v^2 \\\\]\\n\\nRearranging and solving
+        for \\\\( v \\\\):\\n\\\\[ v = \\\\sqrt{ \\\\frac{k (A^2 - x^2)}{m} } \\\\]\\n\\nPlugging
+        in the values:\\n\\\\[ A = 0.05 \\\\, \\\\text{m}, \\\\, x = 0.03 \\\\, \\\\text{m},
+        \\\\, k = 300 \\\\, \\\\text{N/m}, \\\\, m = 3.0 \\\\, \\\\text{kg} \\\\]\\n\\\\[
+        v = \\\\sqrt{ \\\\frac{300 \\\\left( (0.05)^2 - (0.03)^2 \\\\right)}{3.0}
+        } \\\\]\\n\\\\[ v = \\\\sqrt{ \\\\frac{300 (0.0025 - 0.0009)}{3.0} } \\\\]\\n\\\\[
+        v = \\\\sqrt{ \\\\frac{300 \\\\times 0.0016}{3.0} } \\\\]\\n\\\\[ v = \\\\sqrt{
+        \\\\frac{0.48}{3.0} } \\\\]\\n\\\\[ v = \\\\sqrt{0.16} \\\\]\\n\\\\[ v = 0.4
+        \\\\, \\\\text{m/s} \\\\]\\n\\nThe speed of the block when it is at \\\\(
+        x = 3.0 \\\\, \\\\text{cm} \\\\) is \\\\(\\\\boxed{0.4 \\\\text{ m/s}}\\\\).\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        3,\n    \"completion_tokens\": 1595,\n    \"total_tokens\": 1598\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 90a5af8a4b5a967c-SJC
+      - 918c55b008842acc-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 31 Jan 2025 00:46:38 GMT
+      - Fri, 28 Feb 2025 00:35:50 GMT
       ETag:
-      - W/"1f9-1hFx0u+KUv9cECFjy6AkugsnoCo"
+      - W/"14a7-8SbaRDBYoqH+VxPf3sWa8mn1Jgs"
       Retry-After:
-      - '2'
+      - '30'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -69,32 +133,32 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
-      - '505'
+      - '5287'
+      x-amzn-trace-id:
+      - ec7f3e5a-5f6c-4aa9-b567-bfcbc60492e1-noamzn
       x-api-call-end:
-      - '2025-01-31T00:46:38.646Z'
+      - '2025-02-28T00:35:50.015Z'
       x-api-call-start:
-      - '2025-01-31T00:46:37.236Z'
+      - '2025-02-28T00:35:27.462Z'
       x-api-received:
-      - '2025-01-31T00:46:37.207Z'
+      - '2025-02-28T00:35:27.450Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '2'
+      - '7'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '3'
+      - '209'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
-      - '2'
+      - '30'
     status:
       code: 200
       message: OK

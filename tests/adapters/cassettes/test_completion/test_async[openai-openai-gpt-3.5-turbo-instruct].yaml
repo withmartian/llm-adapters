@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "gpt-3.5-turbo-instruct", "prompt": "Hi", "max_tokens": 10}'
+    body: '{"model":"gpt-3.5-turbo-instruct","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '69'
+      - '64'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,26 +25,26 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/completions
   response:
     body:
       string: !!binary |
-        IWwGACD2ueb7GLWzuoRxrfqEquXcO6DkoEBmO3DYbbL5AAdxEj1ONONBUMSJZ6ljLPRju9D1wpsC
-        GHnUoMlc2pztznXw/PQf/ucfh7eu+cxCNzBF0Pl+vryzoQDafSympgZrOdcbYzOXSh3ZnA0FsGt5
-        JR41uuN+vz/uD7oj21eZ9SSlBgNXN/utYbM+lHvbXGSUEcrQRkYqaiwUANwog79/1CBeJapDzMXz
-        bek1lvkyf8Zc0kiOgqvoN8yuEkQVDnlUHAS73IMnJLiiP6jR4a5SG7jS7itq5Ic01ZYpbWmzEetM
-        DY5zUKK1hwJWifWHahcIdawHdKXNXL2pbSJ5RY2ud6cpFMo5kMSfBqBs6CrgoR7KAAM=
+        IVgGACBW6qxXU+1sbYfguvxz9VwFUGb5NLaSZ7MdOOw22XyAgziJHieaQTRI8sQSTzeGocuf0u+D
+        vwZgfqKAR+er+GqcXxaP97dV+3G7KNzk+jT9Wuzts1s8vXwzMgD1UNhjoIDBfoXtUZ2vbMi1ZmQA
+        di2v7ImC/nTUm/ZGvf7E9pfTk60oYOpDPOyM43BuDhovMrqUQW8w7M0Go/gy8FZmmh9tS8HSAMAv
+        ZYh9SQEjPGLvUNtPBIX/DpnWnRx7h3ITLjKEA/qDgh53V2nqGz20FNTnqtKWAW1puwzrTAEnOSi9
+        tX8DrHPqz+0+tRRoB/SNOh+2QUtbtxT0ozuPNUI5A0l8ZwDKhr4B/s2/MQAD
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8ed1568f382cd011-SJC
+      - 918c70465a22eb32-SJC
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -54,14 +54,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 04:36:57 GMT
+      - Fri, 28 Feb 2025 00:53:36 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=xzYkwSS7hHRqh71szGW904j5g24xBVaivkyJX4VPF2Y-1733373417-1.0.1.1-WIQXQwJDuiOiwmJWGCfIKZ.YuzWfmQ6dX9_oNDKPD9kMWiVz6NfnRT.MH2xqVthyUlAEvEtUvUz8K3ma.UnvmQ;
-        path=/; expires=Thu, 05-Dec-24 05:06:57 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=M0Niz92Ud4bL2OF62gksnh_B5mgW2qkTbEaGbPvMMms-1740704016-1.0.1.1-vzmUUXcnjYlaRNhR6XdPKAWnjr4a_DZBVZb_UhC5o5nxHatWWx0NUCGTl46L.TFmSqY0xifROD9YcY36c5Zamg;
+        path=/; expires=Fri, 28-Feb-25 01:23:36 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=r7XZ9LwXDUJpIkjT3F345yHxtaa0yTuEL.Yj3jGA7hs-1733373417176-0.0.1.1-604800000;
+      - _cfuvid=mdij5Vu8j6sNIQkdcnZwPye77PjtoW_7lSdqiJjWSC0-1740704016870-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -73,16 +73,22 @@ interactions:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       openai-model:
-      - gpt-3.5-turbo-instruct
+      - gpt-3.5-turbo-instruct:20230824-v2
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '264'
+      - '268'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      via:
+      - envoy-router-5b8f9cb765-xw56h
+      x-envoy-upstream-service-time:
+      - '243'
       x-ratelimit-limit-requests:
       - '3500'
       x-ratelimit-limit-tokens:
@@ -90,13 +96,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '3499'
       x-ratelimit-remaining-tokens:
-      - '89989'
+      - '89990'
       x-ratelimit-reset-requests:
       - 17ms
       x-ratelimit-reset-tokens:
       - 6ms
       x-request-id:
-      - req_20d529f223286fa5b81a5a8ac54bc86a
+      - req_321b4cd5e83ff4e82d2818f82599d81a
     status:
       code: 200
       message: OK

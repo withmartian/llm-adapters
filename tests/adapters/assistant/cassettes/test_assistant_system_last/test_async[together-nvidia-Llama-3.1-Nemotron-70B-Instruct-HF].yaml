@@ -1,0 +1,115 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"system","content":"Hi"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '166'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"918c5ce44aea7ccb\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703222,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 2030281212748757000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"It seems we've got a friendly \\\"Hi\\\" chain going on. Now that we've
+        broken the ice, how can I assist you today? Please pick one (or more) from
+        the options below, or feel free to suggest something else:\\n\\n1. **Chat
+        about a topic**:\\n\\t* Hobbies (e.g., reading, gaming, travel)\\n\\t* Technology
+        (e.g., AI, space exploration, gadgets)\\n\\t* Science (e.g., biology, physics,
+        environment)\\n\\t* Entertainment (e.g., movies, TV shows, music)\\n\\t* Other
+        (specify your interest)\\n\\n2. **Play a game**:\\n\\t* 20 Questions\\n\\t*
+        Hangman\\n\\t* Word Chain\\n\\t* Would You Rather\\n\\t* Trivia (choose a
+        category)\\n\\n3. **Generate creative content**:\\n\\t* **Story**: Provide
+        a prompt for a short story.\\n\\t* **Poem**: Give me a theme or subject.\\n\\t*
+        **Character Profile**: For a story or RPG.\\n\\n4. **Seek advice or information**:\\n\\t*
+        **General Knowledge**: Ask me anything.\\n\\t* **Study Tips**: For a specific
+        subject or exam.\\n\\t* **Career Guidance**: Briefly describe your dilemma.\\n\\n5.
+        **Just for fun**:\\n\\t* **Joke Exchange**: Share one, get one in return.\\n\\t*
+        **Fun Facts**: Receive an interesting fact.\\n\\nWhat's your choice?\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        29,\n    \"completion_tokens\": 291,\n    \"total_tokens\": 320\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 918c5ce44aea7ccb-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 28 Feb 2025 00:40:25 GMT
+      ETag:
+      - W/"64e-6e8ZrA7970aivZ3RKCaU/pZTOLM"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1614'
+      x-amzn-trace-id:
+      - 462e27c3-d11d-4017-9295-db7b76baa422-noamzn
+      x-api-call-end:
+      - '2025-02-28T00:40:25.304Z'
+      x-api-call-start:
+      - '2025-02-28T00:40:22.465Z'
+      x-api-received:
+      - '2025-02-28T00:40:22.455Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

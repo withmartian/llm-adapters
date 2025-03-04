@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "system", "content": "Hi"}], "model": "google/gemma-2-27b-it"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"system","content":"Hi"}],"model":"google/gemma-2-27b-it"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '160'
+      - '146'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,58 +25,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cde657ebf969a-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732319918,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+      string: "{\n  \"id\": \"918c5d1aba4f2f08\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703231,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
-        670191074008512900,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
-        {\n        \"role\": \"assistant\",\n        \"content\": \"Hello! \U0001F44B
+        1652263238728047600,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Hi there! \U0001F44B
         \ What can I do for you today? \U0001F60A\",\n        \"tool_calls\": []\n
-        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 23,\n    \"completion_tokens\":
-        14,\n    \"total_tokens\": 37\n  }\n}"
+        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 22,\n    \"completion_tokens\":
+        15,\n    \"total_tokens\": 37\n  }\n}"
     headers:
+      Access-Control-Allow-Origin:
+      - '*'
       CF-Cache-Status:
       - DYNAMIC
-      CF-RAY:
-      - 8e6cde657ebf969a-SJC
+      CF-Ray:
+      - 918c5d1aba4f2f08-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 22 Nov 2024 23:58:39 GMT
+      - Fri, 28 Feb 2025 00:40:31 GMT
+      ETag:
+      - W/"20e-1IF0AsHK25UBGvaVD7n4ym1CrPk"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
+      - max-age=15552000; includeSubDomains
       Transfer-Encoding:
       - chunked
-      access-control-allow-origin:
-      - '*'
+      Vary:
+      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
       - '526'
-      etag:
-      - W/"20e-TH8ip4KhP8kv2CWF2YU5nVVpkWA"
-      retry-after:
-      - '1'
+      x-amzn-trace-id:
+      - 76c7cccd-149b-4d5e-8598-f4a8d858ed92-noamzn
       x-api-call-end:
-      - '2024-11-22T23:58:39.643Z'
+      - '2025-02-28T00:40:31.899Z'
       x-api-call-start:
-      - '2024-11-22T23:58:39.004Z'
+      - '2025-02-28T00:40:31.493Z'
       x-api-received:
-      - '2024-11-22T23:58:38.995Z'
+      - '2025-02-28T00:40:31.489Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -87,11 +90,11 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '197'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99906'
+      - '99680'
       x-ratelimit-reset:
-      - '1'
+      - '2'
     status:
       code: 200
       message: OK

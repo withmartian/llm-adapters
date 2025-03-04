@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "system", "content": "Hi"}], "model": "jamba-1.5-large"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"system","content":"Hi"}],"model":"jamba-1.5-large"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '154'
+      - '140'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,25 +25,25 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
       string: !!binary |
-        IUgEACAWzqlsdroMdhOaC/yBEenkwPFgnzdPOMAEw4CCONCWae5gnVEN4xCuv5haJGjG6qb3Ue33
-        sWX1XRR5QRTUtuN0revFdddHftVAw+j64Ipk+8VF+orE0tAX8YXki4ukDgmq63W63ipxg4bQuEmC
-        dUckV2wtn6ypBNsw6xp7yzu7ybZ6l9Bwk5KOTUV0RSLuRH8NJAd1kTVJDQlq5ritao0E15tU+O81
-        3Evp1UVydTve5NKJKxI7RsIVdbdJCslZGh4KAFac+P83AAM=
+        IWgEACAWzqlsdjppeYB2E5q/gB8YkU4OHA/2efOEA0wwDCiIA40jzR2sM6phHMLVF22BKfKGbrl2
+        rIZ5Ns7HOamkyEmNaVSpPBlPVFZW4Sgf5sO4qCAxwj64Yrr94jJ9xTSQ6I/4wvSLi+USU9D12l5v
+        ZG6QCI+bTLEume1ArO1T5GTERljXxNvexc0W9F5B4mYtH3NivmJq7sx/Cba1u9iMpESSmjlurVpj
+        iuvNOvz3EvdSenex2t2ON9uX5oppOEGiHZe31hrJBRKPBYBZosn/bwAD
     headers:
       CF-RAY:
-      - 8e6d1c099e6696d2-SJC
+      - 918c5c0d195f535b-LAX
       Connection:
       - keep-alive
       Content-Encoding:
@@ -52,7 +51,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 00:40:44 GMT
+      - Fri, 28 Feb 2025 00:39:48 GMT
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -61,10 +60,20 @@ interactions:
       - chunked
       cf-cache-status:
       - DYNAMIC
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - b4895508-12ab-478f-5e49-8a83e91360d2
+      - 6cb8c8ca-4dca-8a7f-c489-bef17c6c63df
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "Qwen/Qwen2.5-72B-Instruct"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '87'
+      - '81'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,27 +25,28 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-92d29185a51f4295967695649074cb31\",\"object\":\"chat.completion\",\"created\":1734146541,\"model\":\"Qwen/Qwen2.5-72B-Instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        How can I assist you today? Feel free to ask me any questions or let me know
-        if you need help with anything specific. \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":9,\"total_tokens\":39,\"completion_tokens\":30,\"estimated_cost\":1.407e-05}}"
+      string: '{"id":"chatcmpl-c71be306961244a3926cb75c9668f8ab","object":"chat.completion","created":1740704873,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":18,"completion_tokens":9,"estimated_cost":4.77e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '480'
+      - '399'
       Content-Type:
       - application/json
       Date:
-      - Sat, 14 Dec 2024 03:22:21 GMT
+      - Fri, 28 Feb 2025 01:07:53 GMT
       server:
       - uvicorn
       x-robots-tag:

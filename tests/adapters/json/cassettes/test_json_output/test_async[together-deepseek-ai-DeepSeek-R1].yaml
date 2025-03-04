@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,53 +25,58 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a594323cc1d011\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283287,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+      string: "{\n  \"id\": \"918c61327e8c67af\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703409,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
         \       \"role\": \"assistant\",\n        \"content\": \"<think>\\nOkay, the
-        user wants me to output a simple JSON. Let me think about what that entails.
-        They probably expect a basic example without any complex structures.\\n\\nFirst,
-        I should start with a JSON object. Maybe include some key-value pairs with
-        common data types. Let's use strings, numbers, and maybe a boolean or an array.\\n\\nLet
-        me check if the syntax is correct. Keys need to be in double quotes, and string
-        values also in quotes. Commas between the key-value pairs, but not after the
-        last one.\\n\\nPerhaps something like:\\n\\n{\\n  \\\"name\\\": \\\"John Doe\\\",\\n
-        \ \\\"age\\\": 30,\\n  \\\"isStudent\\\": false,\\n  \\\"hobbies\\\": [\\\"reading\\\",
-        \\\"cycling\\\", \\\"gaming\\\"]\\n}\\n\\nThat seems simple enough. It has
-        a string, a number, a boolean, and an array. Covers basic types. Let's make
-        sure there's no trailing comma in the hobbies array. Yep, looks good. Alright,
-        this should work as a straightforward example.\\n</think>\\n\\n```json\\n{\\n
-        \ \\\"name\\\": \\\"Example\\\",\\n  \\\"value\\\": 42,\\n  \\\"isActive\\\":
-        true,\\n  \\\"tags\\\": [\\\"simple\\\", \\\"json\\\", \\\"response\\\"]\\n}\\n```\",\n
-        \       \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
-        \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 8,\n    \"total_tokens\":
-        259,\n    \"completion_tokens\": 251\n  }\n}"
+        user asked for a simple JSON output. Let me think about what's the best way
+        to approach this.\\n\\nFirst, I need to make sure the JSON is valid and straightforward.
+        Maybe they want an example, so a common structure like a person with some
+        attributes would work.\\n\\nI should include a few key-value pairs. Let's
+        see, maybe name, age, and some other details. Maybe include a nested object
+        or an array to show different data types.\\n\\nWait, the user said \\\"simple,\\\"
+        so maybe not too complicated. Let's keep it basic. A user object with name,
+        age, and a list of hobbies. That's classic. Also, adding a boolean like isStudent
+        could be helpful.\\n\\nLet me structure it. The top-level object, then keys
+        with appropriate values. Make sure the syntax is correct: curly braces, commas
+        between key-value pairs, quotes around strings. Hobbies as an array of strings,
+        age as a number, isStudent as a boolean.\\n\\nChecking for any syntax errors.
+        Let me write it out:\\n\\n{\\n  \\\"name\\\": \\\"John Doe\\\",\\n  \\\"age\\\":
+        30,\\n  \\\"hobbies\\\": [\\\"reading\\\", \\\"cycling\\\", \\\"gaming\\\"],\\n
+        \ \\\"isStudent\\\": false\\n}\\n\\nThat seems simple enough. It covers different
+        data types and structures without being too complex. I think this should meet
+        the user's request.\\n</think>\\n\\n```json\\n{\\n  \\\"name\\\": \\\"John
+        Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"hobbies\\\": [\\\"reading\\\", \\\"cycling\\\",
+        \\\"gaming\\\"],\\n  \\\"isStudent\\\": false\\n}\\n```\",\n        \"tool_calls\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 8,\n    \"total_tokens\":
+        335,\n    \"completion_tokens\": 327\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 90a594323cc1d011-SJC
+      - 918c61327e8c67af-SJC
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 31 Jan 2025 00:28:07 GMT
+      - Fri, 28 Feb 2025 00:43:29 GMT
       ETag:
-      - W/"5d5-5uuqfRoI51hVR1UTDGGuRoD2C5g"
+      - W/"736-E4kt46M41unDWm7HK3NCrWDS8Y8"
       Retry-After:
       - '2'
       Server:
@@ -82,28 +87,28 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
-      - '1493'
+      - '1846'
+      x-amzn-trace-id:
+      - 2a70092b-7806-4568-8225-dcc754b781be-noamzn
       x-api-call-end:
-      - '2025-01-31T00:28:07.984Z'
+      - '2025-02-28T00:43:29.933Z'
       x-api-call-start:
-      - '2025-01-31T00:27:57.255Z'
+      - '2025-02-28T00:43:18.863Z'
       x-api-received:
-      - '2025-01-31T00:27:57.237Z'
+      - '2025-02-28T00:43:18.853Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '2'
+      - '10'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '3'
+      - '19'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:

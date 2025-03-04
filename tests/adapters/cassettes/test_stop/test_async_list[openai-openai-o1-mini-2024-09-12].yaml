@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "o1-mini-2024-09-12",
-      "stop": ["stop", "end"]}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1-mini-2024-09-12","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '105'
+      - '96'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,38 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: "{\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'stop'
-        is not supported with this model.\",\n    \"type\": \"invalid_request_error\",\n
-        \   \"param\": \"stop\",\n    \"code\": \"unsupported_parameter\"\n  }\n}"
+      string: "{\n  \"error\": {\n    \"message\": \"The model produced invalid content.
+        Consider modifying your prompt if you are seeing this error persistently.\",\n
+        \   \"type\": \"model_error\",\n    \"param\": null,\n    \"code\": null\n
+        \ }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8f18ff2beaebebf3-SJC
+      - 918c79ccaf51ce44-SJC
       Connection:
       - keep-alive
       Content-Length:
-      - '196'
+      - '211'
       Content-Type:
       - application/json
       Date:
-      - Fri, 13 Dec 2024 21:20:12 GMT
+      - Fri, 28 Feb 2025 01:00:08 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=DFaiOJv.SYLMPUArf_BUpesRSpIZTnznQ7FuVVYloAE-1734124812-1.0.1.1-PN7bt6frRCtR45d.YzcNDJhnsChTrPzah.hW1vQDYTKLMCzuBZ0GNdn01SSIygJ_bCie9Fhfkhw06DR_RaIk4w;
-        path=/; expires=Fri, 13-Dec-24 21:50:12 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=DSG4XKqvk_tGfGhwRl2GrlFdmVxC0p2h1tbteLooILs-1740704408-1.0.1.1-LvB2WOsm7nj_2CJm80ziAL4WHtLGWiU40a.qeRBQi_iCp66GT_QlGWIODdWviyfCPWDYLkcV9YWm60GOuT_H3Q;
+        path=/; expires=Fri, 28-Feb-25 01:30:08 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=PgRdcOn_E1JiAJl1Ro9aVIDiexBh8LvvC7KNlR.81WA-1734124812684-0.0.1.1-604800000;
+      - _cfuvid=3OJW8Vgwgk6xm84XdDD03YFXInRn5xeyzKe7xAWduVE-1740704408250-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
@@ -65,10 +65,12 @@ interactions:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '17'
+      - '516'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -80,14 +82,14 @@ interactions:
       x-ratelimit-remaining-requests:
       - '29999'
       x-ratelimit-remaining-tokens:
-      - '149999982'
+      - '149999981'
       x-ratelimit-reset-requests:
       - 2ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_a7382ced016e154b4ba4873376d823e5
+      - req_e3fee8680b13b46b81edb122dba091c7
     status:
-      code: 400
-      message: Bad Request
+      code: 500
+      message: Internal Server Error
 version: 1

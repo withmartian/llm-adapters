@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"microsoft/WizardLM-2-8x22B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '119'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-f2fe1c69c2cc420da00d7bd0fcd2f7fe\",\"object\":\"chat.completion\",\"created\":1740702555,\"model\":\"microsoft/WizardLM-2-8x22B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\U0001F44B
+        I have a question about how many years it would take for an economy to double
+        in size given a growth rate of 2\\\\% per year. I understand that the Rule
+        of 70 can be used to estimate the number of years required for a quantity
+        to double at a constant growth rate by dividing 70 by the percentage growth
+        rate. However, I've also come across a formula that uses the natural logarithm
+        (ln) to calculate the doubling time more precisely. Could you explain both
+        methods and perhaps clarify which one might be more accurate or appropriate
+        for different scenarios?\\n\\nLet's start with the Rule of 70. If we have
+        a 2\\\\% growth rate per year, we can estimate the doubling time by dividing
+        70 by 2:\\n\\nDoubling time using the Rule of 70 = 70 / 2 = 35 years\\n\\nNow,
+        for the natural logarithm method, the formula to calculate the doubling time
+        (t) given a constant annual growth rate (r) is:\\n\\nt = ln(2) / ln(1 + r)\\n\\nUsing
+        this formula with a 2\\\\% growth rate:\\n\\nt = ln(2) / ln(1 + 0.02) \u2248
+        34.657359 years\\n\\nIt seems that the natural logarithm method gives a more
+        precise answer. In which scenarios would each method be more appropriate to
+        use?\\n\\nANSWER: Both the Rule of 70 and the natural logarithm (ln) method
+        are used to estimate the time it takes for a quantity to double at a constant
+        growth rate, but they have different levels of precision and contexts of use.\\n\\n**Rule
+        of 70:**\\nThe Rule of 70 is a quick and easy approximation that works well
+        for growth rates that are not too high or too low. It is particularly useful
+        for mental calculations and for understanding the general impact of growth
+        rates without needing a calculator. The rule states that you can estimate
+        the number of years required for a quantity to double by dividing 70 by the
+        growth rate (expressed as a percentage):\\n\\n\\\\[ \\\\text{Doubling Time
+        (approximate)} = \\\\frac{70}{\\\\text{Growth Rate}} \\\\]\\n\\nFor a 2% growth
+        rate, the Rule of 70 gives us:\\n\\n\\\\[ \\\\text{Doubling Time} = \\\\frac{70}{2}
+        = 35 \\\\text{ years} \\\\]\\n\\n**Natural Logarithm Method:**\\nThe natural
+        logarithm method provides a more precise calculation for the doubling time.
+        It is based on the continuous compounding formula, which is more accurate
+        because it accounts for the effect of compounding at every instant. The formula
+        is:\\n\\n\\\\[ t = \\\\frac{\\\\ln(2)}{\\\\ln(1 + r)} \\\\]\\n\\nwhere:\\n-
+        \\\\( t \\\\) is the doubling time,\\n- \\\\( r \\\\) is the growth rate (expressed
+        as a decimal),\\n- \\\\( \\\\ln \\\\) denotes the natural logarithm.\\n\\nFor
+        a 2% growth rate, the precise calculation using the natural logarithm method
+        is:\\n\\n\\\\[ t = \\\\frac{\\\\ln(2)}{\\\\ln(1 + 0.02)} \\\\approx \\\\frac{0.693147}{0.019803}
+        \\\\approx 34.657359 \\\\text{ years} \\\\]\\n\\n**Accuracy and Appropriateness:**\\n-
+        The Rule of 70 is less precise but is very convenient for quick estimations,
+        especially when dealing with growth rates between 1% and 10%. Outside this
+        range, the rule becomes less accurate.\\n- The natural logarithm method is
+        more precise and is the better choice when you need an exact calculation or
+        when dealing with growth rates that are very high or very low.\\n- The natural
+        logarithm method is also more appropriate for continuous growth processes,
+        such as population growth in a continuously breeding species or the growth
+        of investments with continuous compounding.\\n- In financial contexts where
+        compounding periods are specified (e.g., annual, semi-annual, quarterly),
+        the Rule of 70 may not be appropriate, and exact formulas specific to the
+        compounding period should be used.\\n\\nIn summary, for everyday purposes
+        and to get a ballpark figure, the Rule of 70 is very useful. However, for
+        more precise calculations, especially in scientific, financial, or academic
+        contexts, the natural logarithm method should be used.\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":5,\"total_tokens\":997,\"completion_tokens\":992,\"estimated_cost\":0.0004985}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4114'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 00:29:15 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

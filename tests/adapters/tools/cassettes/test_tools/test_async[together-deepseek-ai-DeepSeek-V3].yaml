@@ -18,7 +18,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,51 +28,80 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5a06e2e1bebef\",\n  \"error\": {\n    \"message\":
-        \"deepseek-ai/DeepSeek-V3 is not supported for JSON mode/function calling\",\n
-        \   \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\":
-        \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"91aa69637d919e2d\",\n  \"object\": \"text.completion\",\n
+        \ \"created\": 1741018311,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"logprobs\": null,\n
+        \     \"finish_reason\": \"tool_calls\",\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n
+        \           \"index\": 0,\n            \"id\": \"call_rg2uzw9iygpe3ko8366jql0s\",\n
+        \           \"type\": \"function\",\n            \"function\": {\n              \"arguments\":
+        \"{\\\"prompt\\\":\\\"Random number between 1 and 10\\\"}\",\n              \"name\":
+        \"generate\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 164,\n    \"total_tokens\": 197,\n
+        \   \"completion_tokens\": 33\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 90a5a06e2e1bebef-SJC
+      - 91aa69637d919e2d-MEX
       Connection:
       - keep-alive
-      Content-Length:
-      - '226'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 31 Jan 2025 00:36:18 GMT
+      - Mon, 03 Mar 2025 16:11:51 GMT
       ETag:
-      - W/"e2-T1SpK8CAjYz75LjiimVLyYKc9wk"
+      - W/"2e9-NVYr3UPl0U1FFzzn7uB2kioq2vE"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
       Vary:
       - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      content-length:
+      - '745'
+      x-amzn-trace-id:
+      - 87ea410c-93d8-4583-9df7-43a19f980486-noamzn
+      x-api-call-end:
+      - '2025-03-03T16:11:51.472Z'
+      x-api-call-start:
+      - '2025-03-03T16:11:48.752Z'
       x-api-received:
-      - '2025-01-31T00:36:18.347Z'
+      - '2025-03-03T16:11:47.460Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

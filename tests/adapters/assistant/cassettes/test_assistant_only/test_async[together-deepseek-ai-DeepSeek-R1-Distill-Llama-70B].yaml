@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,106 +25,54 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5923229ae1688\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283195,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 17860016296964174000,\n      \"logprobs\": null,\n      \"index\":
-        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \", I'm trying to figure out how to solve this problem. It says that in a
-        certain population, the number of people with blood type A is 40%, type B
-        is 30%, type AB is 10%, and type O is 20%. Then, it asks what the probability
-        is that a randomly selected person from this population will have a blood
-        type that is compatible with a person who has blood type A.\\n\\nOkay, so
-        first, I need to understand what blood type compatibility means. From what
-        I remember, blood type compatibility is important for blood transfusions.
-        A person can receive blood from a donor if their blood type can accept the
-        donor's blood type. So, for someone with blood type A, which blood types can
-        they receive?\\n\\nI think blood type A has the A antigen on red blood cells.
-        So, the donor's blood shouldn't have any antigens that the recipient's plasma
-        will attack. People with blood type A can receive blood from type A and type
-        O because type O doesn't have any A or B antigens. Wait, is that right? Or
-        is it the other way around?\\n\\nLet me double-check. The ABO blood group
-        system works on the principle that the recipient's plasma must not contain
-        antibodies against the donor's red blood cells. So, type A blood has anti-B
-        antibodies. Therefore, the donor's blood cannot have B antigens. So, type
-        A can receive from type A (which has A antigens, but the recipient already
-        has A, so no reaction) and type O (which has no antigens, so no reaction).
-        So, yes, type A can receive from A and O.\\n\\nSo, in this population, the
-        percentage of people with blood type A is 40%, and type O is 20%. Therefore,
-        the probability that a randomly selected person is compatible with someone
-        with type A is the sum of the probabilities of selecting someone with type
-        A or type O.\\n\\nSo, that would be 40% + 20% = 60%. Therefore, the probability
-        is 60%.\\n\\nWait, but let me make sure I'm not mixing up donor and recipient.
-        Sometimes it's easy to get confused. So, if someone is type A, they can receive
-        from type A and type O. So, the compatible donors are A and O. So, in the
-        population, 40% are A and 20% are O, so 60% total.\\n\\nAlternatively, if
-        the question was about someone with type A donating to others, that would
-        be different. Because type A can donate to type A and type AB. But in this
-        case, the question is about compatibility with a person who has type A, meaning
-        the person with type A is the recipient. So, the donor must be compatible
-        with them.\\n\\nSo, yes, the donor needs to be type A or O. So, 40% + 20%
-        = 60%.\\n\\nI think that's correct. So, the probability is 60%.\\n\\n**Final
-        Answer**\\nThe probability is \\\\boxed{60\\\\%}.\\n</think>\\n\\nTo determine
-        the probability that a randomly selected person from the population will have
-        a blood type compatible with a person who has blood type A, we need to understand
-        blood type compatibility. \\n\\nA person with blood type A can receive blood
-        from donors with blood type A or O. This is because blood type A has anti-B
-        antibodies, so the donor's blood must not have B antigens. \\n\\nIn the given
-        population:\\n- The percentage of people with blood type A is 40%.\\n- The
-        percentage of people with blood type O is 20%.\\n\\nTherefore, the probability
-        that a randomly selected person is compatible with someone with type A is
-        the sum of the probabilities of selecting someone with type A or type O:\\n\\n\\\\[
-        40\\\\% + 20\\\\% = 60\\\\% \\\\]\\n\\nThus, the probability is \\\\boxed{60\\\\%}.\",\n
-        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        3,\n    \"completion_tokens\": 789,\n    \"total_tokens\": 792\n  }\n}"
+      string: "{\n  \"id\": \"918c56a9da1b2aef\",\n  \"error\": {\n    \"message\":
+        \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769.
+        Given: 3 `inputs` tokens and 32768 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n
+        \   \"param\": null,\n    \"code\": null\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 90a5923229ae1688-SJC
+      - 918c56a9da1b2aef-LAX
       Connection:
       - keep-alive
+      Content-Length:
+      - '268'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 31 Jan 2025 00:26:42 GMT
+      - Fri, 28 Feb 2025 00:36:07 GMT
       ETag:
-      - W/"f2a-gtVx4xCsxKof0krFRF4mHozMywg"
+      - W/"10c-3i46SGpIA21SilELVKSPBXseITo"
       Retry-After:
       - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       Vary:
       - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
-      content-length:
-      - '3882'
       x-amzn-trace-id:
-      - b2fdf3c5-047f-4c0c-9fd6-a1b203541c30-noamzn
-      x-api-call-end:
-      - '2025-01-31T00:26:42.490Z'
+      - 6ac191c1-8208-491a-b111-b604b3b6bd58-noamzn
       x-api-call-start:
-      - '2025-01-31T00:26:35.600Z'
+      - '2025-02-28T00:36:07.551Z'
       x-api-received:
-      - '2025-01-31T00:26:35.581Z'
+      - '2025-02-28T00:36:07.520Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -140,6 +88,6 @@ interactions:
       x-ratelimit-reset:
       - '2'
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
 version: 1

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": [{"type": "text", "text": "Hi"},
-      {"type": "text", "text": "Hi"}]}], "model": "llama3.1-8b"}'
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"llama3.1-8b"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '133'
+      - '120'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,45 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-3bfcec85-e741-4dab-8325-26fcb3e57479","choices":[{"finish_reason":"stop","index":0,"message":{"content":"It
-        appears that you''ve provided a JSON list containing two ''text'' objects
-        with the same text ''Hi''. This could be a message or conversation log from
-        a messaging platform, perhaps even an interaction in a conversational AI application
-        like this one.","role":"assistant"}}],"created":1732322548,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":61,"completion_tokens":50,"total_tokens":111},"time_info":{"queue_time":2.879e-05,"prompt_time":0.003144373,"completion_time":0.030496451,"total_time":0.04887962341308594,"created":1732322548}}'
+      string: !!binary |
+        IegMACB+TX2r2p3ncAlpQMr0l+orHRFa+fMD6MQ6pP+9RTYwOa3r+aj0OLXhx4XZcBgWB9zLCoeB
+        9tLbjenzpMW2fAXcXu8IMyz8zok/rceCa9NN2rui5rktmmWui2GelqIdZl2ZoZ2rqYMChX0tw169
+        Q88M3HlHPQCLLGmFwsD6MaxWaJvQYN8hIKda0M/zogTUXDEUOJf00/ndcuuVKNKjTI5O1SlEmtrR
+        EEobMbCbTkKKAx9u9SmKCzGTPCc68Gu21/E6FvRFXlf+YjnvuRyfynnex7q8rkxpAekp6W8k8fG6
+        ILOiIF8yfRF+kS+KgiJbNz6QwLCQHe+V4UN+kRIY8YvIFmcLzsujO+ZB8kzLwMev43X8lxSFZ+AF
+        jF+LacYJ74471UyuWFdf40+4RgmFLR0ZFi7nkMVFwefnjQKzvCWeYU3f6F7XdVspnNLMR1gcj+7k
+        6tIUwwQF6v6JuyXEB97WLVzgzGW9mzWP2jfNyFBI05691JJTNpzUQ4pQeLz+P9YtnVa5k3TgmGE7
+        o5DMQ1o/KPzjAb5qz9Tjp4KEE9+FuCTYd/x/5Ee+k3Bi2LHsmpEL3SoUHDtDl1rXptVm6MBYRqNu
+        Rl2ZpsNkwesbrRutTWf6pjZdo7tvFnx+GgM=
     headers:
-      Alt-Svc:
-      - h3=":443"; ma=86400
+      CF-RAY:
+      - 918c601128220fed-LAX
       Connection:
       - keep-alive
-      Content-Length:
-      - '717'
+      Content-Encoding:
+      - br
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 00:42:28 GMT
-      Via:
-      - 1.1 dfd0a9d31e7c22e1ecdaa3c92763b966.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - fBtEcGF-OL8mabnL1bAo9JGEbjj7Mm6vDHw13qbTbNk_TAQYQpJXXw==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      - Fri, 28 Feb 2025 00:42:32 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=Ce8bgx3_wb2mt2fK0G1iq7fm3g6_CIuTPBGc0W77dHI-1740703352-1.0.1.1-OL.yxyJN1zp.RYTl.No6Tbt3kdnrgZCCODiVNALcMrLtdLD_rhSQONG2lqeBB1E8y_iBf8YGGIFSRGPilZNDgA;
+        path=/; expires=Fri, 28-Feb-25 01:12:32 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       referrer-policy:
       - strict-origin-when-cross-origin
-      server:
-      - uvicorn
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -76,13 +82,13 @@ interactions:
       x-ratelimit-remaining-requests-day:
       - '14395'
       x-ratelimit-remaining-tokens-minute:
-      - '59715'
+      - '60000'
       x-ratelimit-reset-requests-day:
-      - '83851.6987798214'
+      - '83847.35694503784'
       x-ratelimit-reset-tokens-minute:
-      - '31.698779821395874'
+      - '27.356945037841797'
       x-request-id:
-      - fBtEcGF-OL8mabnL1bAo9JGEbjj7Mm6vDHw13qbTbNk_TAQYQpJXXw==
+      - 918c601128220fed-SJC
     status:
       code: 200
       message: OK

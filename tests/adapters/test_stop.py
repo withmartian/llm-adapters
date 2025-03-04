@@ -1,74 +1,73 @@
 import pytest
 
+from llm_adapters.adapter_factory import AdapterFactory
+from llm_adapters.client import AsyncOpenAI
 from tests.utils import (
-    ADAPTER_CHAT_TEST_FACTORIES,
-    ADAPTER_COMPLETION_TEST_FACTORIES,
+    TEST_CHAT_MODELS,
+    TEST_COMPLETION_MODELS,
     SIMPLE_CONVERSATION_USER_ONLY,
-    AdapterTestFactory,
     get_response_content_from_vcr,
 )
 from vcr import VCR
 
+async_client = AsyncOpenAI()
+
 
 @pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_CHAT_TEST_FACTORIES, ids=str)
-async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
-
-    if not adapter.get_model().supports_stop:
+@pytest.mark.parametrize("model_path", TEST_CHAT_MODELS, ids=str)
+async def test_async(vcr: VCR, model_path: str) -> None:
+    if not AdapterFactory.get_model_by_path(model_path).supports_stop:
         return
 
-    adapter_response = await adapter.execute_async(
-        SIMPLE_CONVERSATION_USER_ONLY, stop="stop"
+    adapter_response = await async_client.chat.completions.create(
+        model=model_path, messages=SIMPLE_CONVERSATION_USER_ONLY, stop="stop"
     )
 
-    cassette_response = get_response_content_from_vcr(vcr, adapter)
+    cassette_response = get_response_content_from_vcr(vcr, model_path)
 
     assert adapter_response.choices[0].message.content == cassette_response
 
 
 @pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_CHAT_TEST_FACTORIES, ids=str)
-async def test_async_list(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
-
-    if not adapter.get_model().supports_stop:
+@pytest.mark.parametrize("model_path", TEST_CHAT_MODELS, ids=str)
+async def test_async_list(vcr: VCR, model_path: str) -> None:
+    if not AdapterFactory.get_model_by_path(model_path).supports_stop:
         return
 
-    adapter_response = await adapter.execute_async(
-        SIMPLE_CONVERSATION_USER_ONLY, stop=["stop", "end"]
+    adapter_response = await async_client.chat.completions.create(
+        model=model_path, messages=SIMPLE_CONVERSATION_USER_ONLY, stop=["stop", "end"]
     )
 
-    cassette_response = get_response_content_from_vcr(vcr, adapter)
+    cassette_response = get_response_content_from_vcr(vcr, model_path)
 
     assert adapter_response.choices[0].message.content == cassette_response
 
 
 @pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_COMPLETION_TEST_FACTORIES, ids=str)
-async def test_async_completion(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
-    adapter = create_adapter()
-
-    if not adapter.get_model().supports_stop:
+@pytest.mark.parametrize("model_path", TEST_COMPLETION_MODELS, ids=str)
+async def test_async_completion(vcr: VCR, model_path: str) -> None:
+    if not AdapterFactory.get_model_by_path(model_path).supports_stop:
         return
 
-    adapter_response = await adapter.execute_completion_async("Hi", stop="stop")
+    response = await async_client.completions.create(
+        model=model_path,
+        prompt="Hi",
+        stop="stop",
+    )
 
-    assert adapter_response.choices[0].text
+    assert response.choices[0].text
 
 
 @pytest.mark.vcr
-@pytest.mark.parametrize("create_adapter", ADAPTER_COMPLETION_TEST_FACTORIES, ids=str)
-async def test_async_list_completion(
-    vcr: VCR, create_adapter: AdapterTestFactory
-) -> None:
-    adapter = create_adapter()
-
-    if not adapter.get_model().supports_stop:
+@pytest.mark.parametrize("model_path", TEST_COMPLETION_MODELS, ids=str)
+async def test_async_list_completion(vcr: VCR, model_path: str) -> None:
+    if not AdapterFactory.get_model_by_path(model_path).supports_stop:
         return
 
-    adapter_response = await adapter.execute_completion_async(
-        "Hi", stop=["stop", "end"]
+    response = await async_client.completions.create(
+        model=model_path,
+        prompt="Hi",
+        stop=["stop", "end"],
     )
 
-    assert adapter_response.choices[0].text
+    assert response.choices[0].text

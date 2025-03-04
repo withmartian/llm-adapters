@@ -1,9 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": ""}, {"role": "user", "content":
-      ""}, {"role": "assistant", "content": " "}, {"role": "user", "content": ""},
-      {"role": "assistant", "content": " "}, {"role": "user", "content": "\n"}], "model":
-      "Qwen/Qwen2.5-72B-Instruct"}'
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"Qwen/Qwen2.5-72B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -12,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '266'
+      - '273'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,26 +26,29 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-7f6b05b0d7f34b33b4a9ed532969097c","object":"chat.completion","created":1733368822,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like you didn''t type a message. How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":47,"completion_tokens":17,"estimated_cost":1.3700000000000001e-05}}'
+      string: '{"id":"chatcmpl-52f514b7f44f4ad5a36ce8c8c2260075","object":"chat.completion","created":1740704180,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like your message was cut off. Could you please provide more information
+        so I can assist you better?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":31,"total_tokens":53,"completion_tokens":22,"estimated_cost":1.283e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '433'
+      - '477'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:20:22 GMT
+      - Fri, 28 Feb 2025 00:56:20 GMT
       server:
       - uvicorn
       x-robots-tag:

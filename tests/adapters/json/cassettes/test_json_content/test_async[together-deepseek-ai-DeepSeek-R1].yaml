@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,42 +25,42 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5930d0eae17dc\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283231,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
-        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
-        \       \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHello!
-        How can I assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      },\n
-        \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-        \ \"usage\": {\n    \"prompt_tokens\": 6,\n    \"total_tokens\": 22,\n    \"completion_tokens\":
-        16\n  }\n}"
+      string: "{\n  \"id\": \"918c5ed28bf4d009\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703301,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        6307994053681800000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHello!
+        How can I assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      }\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 5,\n    \"completion_tokens\":
+        16,\n    \"total_tokens\": 21\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 90a5930d0eae17dc-SJC
+      - 918c5ed28bf4d009-SJC
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 31 Jan 2025 00:27:11 GMT
+      - Fri, 28 Feb 2025 00:41:42 GMT
       ETag:
-      - W/"1f9-0L/fdwUXdBAPKBjd7QM0vP5GsvI"
+      - W/"21c-V8e7AAHOWl506jaX3aW3Jsgthmw"
       Retry-After:
-      - '2'
+      - '30'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -69,32 +69,32 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
-      - '505'
+      - '540'
+      x-amzn-trace-id:
+      - c29b2c29-e2e8-4c57-b8e6-a7187d669b45-noamzn
       x-api-call-end:
-      - '2025-01-31T00:27:11.235Z'
+      - '2025-02-28T00:41:42.502Z'
       x-api-call-start:
-      - '2025-01-31T00:27:10.309Z'
+      - '2025-02-28T00:41:41.681Z'
       x-api-received:
-      - '2025-01-31T00:27:10.292Z'
+      - '2025-02-28T00:41:41.672Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '2'
+      - '7'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '3'
+      - '209'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
-      - '2'
+      - '30'
     status:
       code: 200
       message: OK

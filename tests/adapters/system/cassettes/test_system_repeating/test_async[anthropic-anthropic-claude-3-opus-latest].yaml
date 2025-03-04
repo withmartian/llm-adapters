@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"max_tokens": 4096, "messages": [{"content": "Hi", "role": "user"}, {"content":
-      "Hi", "role": "user"}, {"content": "Hi", "role": "user"}, {"content": "Hi",
-      "role": "user"}, {"content": "Hi", "role": "user"}, {"content": "Hi", "role":
-      "user"}], "model": "claude-3-opus-latest", "stream": false, "system": "Hi"}'
+    body: '{"max_tokens":4096,"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"claude-3-opus-latest","stream":false,"system":"Hi"}'
     headers:
       accept:
       - application/json
@@ -14,13 +11,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '310'
+      - '278'
       content-type:
       - application/json
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.39.0
+      - AsyncAnthropic/Python 0.45.2
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,49 +27,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.39.0
+      - 0.45.2
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_01PStWtufHFZhr2BPzdn74Z5","type":"message","role":"assistant","model":"claude-3-opus-20240229","content":[{"type":"text","text":"Hi
-        there! While I appreciate your eagerness to chat, repeating the same greeting
-        multiple times isn''t really necessary. I''m here and ready to have a thoughtful
-        conversation whenever you''d like - just let me know what''s on your mind
-        or if there''s anything I can assist with. What would you like to talk about?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"output_tokens":70}}'
+      string: '{"id":"msg_01SYbye38g5za9cwrZYBxCc9","type":"message","role":"assistant","model":"claude-3-opus-20240229","content":[{"type":"text","text":"Is
+        there something I can assist you with today, or did you just want to exchange
+        greetings? I''m happy to chat, but if there''s a specific topic or question
+        you had in mind, feel free to let me know."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":51}}'
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8e6c863dda5122ae-SJC
+      - 918c6df83df0f7d9-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Nov 2024 22:58:31 GMT
+      - Fri, 28 Feb 2025 00:52:04 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
       - chunked
       X-Robots-Tag:
       - none
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '5000000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-02-28T00:52:02Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '1000000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-02-28T00:52:04Z'
       anthropic-ratelimit-tokens-limit:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-remaining:
-      - '5000000'
+      - '6000000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-11-22T22:58:31Z'
+      - '2025-02-28T00:52:02Z'
+      cf-cache-status:
+      - DYNAMIC
       content-length:
-      - '545'
+      - '494'
       request-id:
-      - req_016UXmyTuCg6jiT4E6WF6yQD
+      - req_01JW5PGnQps8saZEVQgZoHot
       via:
       - 1.1 google
     status:

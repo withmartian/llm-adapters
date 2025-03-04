@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '112'
+      - '106'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,69 +25,73 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cdc888d842350-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732319842,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 16140770365106495000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"918c56868b7278de\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740702961,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 10547169349128143000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \", I'm happy to help you with any questions or topics you'd like to discuss.
-        What's on your mind?\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
-        \ \"usage\": {\n    \"prompt_tokens\": 32,\n    \"completion_tokens\": 25,\n
-        \   \"total_tokens\": 57\n  }\n}"
+        \", I'm here to help with any questions or information you need. What would
+        you like to know?\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 31,\n    \"completion_tokens\": 22,\n    \"total_tokens\":
+        53\n  }\n}"
     headers:
+      Access-Control-Allow-Origin:
+      - '*'
       CF-Cache-Status:
       - DYNAMIC
-      CF-RAY:
-      - 8e6cdc888d842350-SJC
+      CF-Ray:
+      - 918c56868b7278de-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 22 Nov 2024 23:57:23 GMT
+      - Fri, 28 Feb 2025 00:36:02 GMT
+      ETag:
+      - W/"251-8jh7Iw5FQT1Hee3UtpdmAtO0Yhc"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
+      - max-age=15552000; includeSubDomains
       Transfer-Encoding:
       - chunked
-      access-control-allow-origin:
-      - '*'
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
-      - '601'
-      etag:
-      - W/"259-fRzkW7MrX0mN7rdn5DTL8ForH6w"
-      retry-after:
-      - '2'
+      - '593'
       x-api-call-end:
-      - '2024-11-22T23:57:23.381Z'
+      - '2025-02-28T00:36:02.286Z'
       x-api-call-start:
-      - '2024-11-22T23:57:22.682Z'
+      - '2025-02-28T00:36:01.802Z'
       x-api-received:
-      - '2024-11-22T23:57:22.669Z'
+      - '2025-02-28T00:36:01.773Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '10'
+      - '100'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '19'
+      - '199'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:

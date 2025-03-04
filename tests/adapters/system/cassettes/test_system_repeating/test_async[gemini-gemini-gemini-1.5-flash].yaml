@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "system", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "user", "content": "Hi"}], "model": "gemini-1.5-flash"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"gemini-1.5-flash"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '296'
+      - '266'
       content-type:
       - application/json
       host:
       - generativelanguage.googleapis.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,31 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
   response:
     body:
-      string: "[{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource
-        has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n
-        \ }\n}\n]"
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"Hello
+        there!  How can I help you today?\n","role":"assistant"}}],"created":1740771850,"model":"gemini-1.5-flash","object":"chat.completion","usage":{"completion_tokens":12,"prompt_tokens":4,"total_tokens":16}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json
       Date:
-      - Sat, 23 Nov 2024 01:17:46 GMT
+      - Fri, 28 Feb 2025 19:44:10 GMT
       Server:
       - scaffolding on HTTPServer2
       Server-Timing:
-      - gfet4t7; dur=41
+      - gfet4t7; dur=377
       Transfer-Encoding:
       - chunked
       Vary:
@@ -66,8 +62,8 @@ interactions:
       X-XSS-Protection:
       - '0'
       content-length:
-      - '141'
+      - '277'
     status:
-      code: 429
-      message: Too Many Requests
+      code: 200
+      message: OK
 version: 1

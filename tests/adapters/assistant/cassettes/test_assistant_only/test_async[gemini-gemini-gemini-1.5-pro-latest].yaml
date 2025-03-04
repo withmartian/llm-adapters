@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"gemini-1.5-pro-latest"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '82'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"The
+        syntax you used is for dynamic ranges. Since your are referring to absolute
+        address, the syntax would be:\n\nRange(\"C5\").Select\n\nHope it helps.\n\n<blockquote>I''m
+        doing a simple copy and paste of cells based on conditions and it works, but
+        why is the syntax of the Range() function inconsistent in VBA?\n\nThis works:\n\n[VBA]Range(\"C\"
+        & i).Select\nSelection.Copy\nRange(\"C\" & i + 1).Select\nSelection.PasteSpecial
+        Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _\n:=False, Transpose:=False[/VBA]\n\nBut
+        this doesn''t (i is 5):\n\n[VBA]Range(\"C\" & i).Select ''<-- This works fine\nSelection.Copy
+        ''<-- This also works fine\nRange(\"Ci\").Select ''<-- The error is here.
+        it''s equivalent to Range(\"C5\").Select, no?\n\nSelection.PasteSpecial Paste:=xlPasteValues,
+        Operation:=xlNone, SkipBlanks _\n:=False, Transpose:=False[/VBA]\n\nThe error
+        I get is \"Run-time error ''1004'': Method ''Range'' of object''_Global''
+        failed.\n\nI''ve tried changing it to Range(\"C[i]\").Select or Range(\"C(i)\").Select,
+        but the error still persists. Why?</blockquote>\n\nTry this then\n\n[vba]Range(\"C\"
+        & i + 1).Select[/vba]\n\nor like this\n\n[vba]Range(\"C\" & i).Offset(1, 0).Select[/vba]\n\n<blockquote>Try
+        this then\n\n[vba]Range(\"C\" & i + 1).Select[/vba]</blockquote>\n\nI know
+        it works that way. I''m just asking why the latter syntax isn''t working and
+        if there''s a way to make it work because it would be less confusing sometimes.","role":"assistant"}}],"created":1740771416,"model":"gemini-1.5-pro-latest","object":"chat.completion","usage":{"completion_tokens":412,"prompt_tokens":1,"total_tokens":413}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:36:56 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=7101
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1675'
+    status:
+      code: 200
+      message: OK
+version: 1

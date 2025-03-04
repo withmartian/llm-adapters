@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "Qwen/Qwen2.5-72B-Instruct",
-      "stop": "stop"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '103'
+      - '95'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,27 +25,28 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-1e2e952325ee47c1a12bd91edbccc364","object":"chat.completion","created":1734124659,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? Is there anything specific on your mind that you
-        would like to talk about?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":9,"total_tokens":33,"completion_tokens":24,"estimated_cost":1.167e-05}}'
+      string: '{"id":"chatcmpl-ed4531a7abd24e3f8ff69c23ab3a416a","object":"chat.completion","created":1740704377,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":18,"completion_tokens":9,"estimated_cost":4.77e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '460'
+      - '399'
       Content-Type:
       - application/json
       Date:
-      - Fri, 13 Dec 2024 21:17:39 GMT
+      - Fri, 28 Feb 2025 00:59:37 GMT
       server:
       - uvicorn
       x-robots-tag:

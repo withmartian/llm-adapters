@@ -1,0 +1,116 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"mistralai/Mistral-Small-24B-Instruct-2501","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '396'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"91aa6987affd9e2d\",\n  \"object\": \"text.completion\",\n
+        \ \"created\": 1741018313,\n  \"model\": \"mistralai/Mistral-Small-24B-Instruct-2501\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\",\n      \"prompt_logprobs\": null,\n
+        \     \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Sure, let's generate a random number between 1 and 10 using a simple method.
+        Here are the steps:\\n\\n1. **Using Python:**\\n   ```python\\n   import random\\n\\n
+        \  random_number = random.randint(1, 10)\\n   print(random_number)\\n   ```\\n\\n2.
+        **Using JavaScript:**\\n   ```javascript\\n   const randomNumber = Math.floor(Math.random()
+        * 10) + 1;\\n   console.log(randomNumber);\\n   ```\\n\\n3. **Using a Common
+        Calculator:**\\n   - If you have a scientific calculator, you can use it to
+        generate a random number within the desired range.\\n   - For example, some
+        scientific calculators have a `rand` function that can be used to generate
+        random numbers and then scaled to the desired range.\\n\\n4. **Using Excel:**\\n
+        \  - Open Excel and type `=RANDBETWEEN(1, 10)` into a cell and hit Enter.\\n
+        \  - This will generate a random number between 1 and 10 each time you press
+        Enter in the cell.\\n\\nWould you like to proceed with any of these methods,
+        or do you have a specific tool or language in mind?\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 23,\n    \"total_tokens\":
+        264,\n    \"completion_tokens\": 241\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 91aa6987affd9e2d-MEX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 03 Mar 2025 16:11:56 GMT
+      ETag:
+      - W/"5c2-NXR1TRfCD2bzu+fKxXs9lNrLvHY"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1474'
+      x-amzn-trace-id:
+      - 075e0aa1-1ad2-4c21-9767-5192110e4de5-noamzn
+      x-api-call-end:
+      - '2025-03-03T16:11:56.140Z'
+      x-api-call-start:
+      - '2025-03-03T16:11:53.187Z'
+      x-api-received:
+      - '2025-03-03T16:11:53.060Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

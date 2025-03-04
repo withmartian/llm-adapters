@@ -1,0 +1,95 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"o1-mini-2024-09-12","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '135'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"message\": \"Invalid parameter: 'response_format'
+        of type 'json_object' is not supported with this model.\",\n    \"type\":
+        \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\":
+        null\n  }\n}"
+    headers:
+      CF-RAY:
+      - 9191bb0f1bcb1574-SJC
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '217'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 16:18:31 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=eMb3WAAOFkCHAr1FGgCqahc5yO.Yti7UWmVYzSHQ_Fs-1740759511-1.0.1.1-Pyvz3JCfpuyPlSOKJ9xGUJ5w1jQ4Fb72KPkq53Y.RXJshTBmkjB8wF3wx8pdJU54BTK7sUuJ7Tbk5Xwp6YajU0SeuUnRHX6En0XzgjF5lAo;
+        path=/; expires=Fri, 28-Feb-25 16:48:31 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=VIwPJjLg2nG_fmSG7IWcJ10bQFbcleA6tA0plbyNkSc-1740759511349-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - martian-4
+      openai-processing-ms:
+      - '58'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-ratelimit-limit-requests:
+      - '30000'
+      x-ratelimit-limit-tokens:
+      - '150000000'
+      x-ratelimit-remaining-requests:
+      - '29999'
+      x-ratelimit-remaining-tokens:
+      - '149999976'
+      x-ratelimit-reset-requests:
+      - 2ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_e7c360b41bf9fced576ee7c08cf3166e
+    status:
+      code: 400
+      message: Bad Request
+version: 1

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "assistant", "content": "Hi"}], "model": "Qwen/Qwen2.5-72B-Instruct"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"assistant","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '164'
+      - '150'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,26 +25,28 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-decd4aad760242e5b79006af38c1d48c","object":"chat.completion","created":1733368690,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"
-        there! How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":16,"total_tokens":25,"completion_tokens":9,"estimated_cost":7.280000000000001e-06}}'
+      string: '{"id":"chatcmpl-b303a4ff007c4a3bac7c70bc4fc66327","object":"chat.completion","created":1740703752,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"
+        there! How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":16,"total_tokens":25,"completion_tokens":9,"estimated_cost":5.680000000000001e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '398'
+      - '414'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:18:10 GMT
+      - Fri, 28 Feb 2025 00:49:12 GMT
       server:
       - uvicorn
       x-robots-tag:

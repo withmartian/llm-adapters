@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "user", "content":
-      "\"\""}], "model": "jamba-1.5-mini"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"jamba-1.5-mini"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '115'
+      - '105'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,25 +25,26 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
       string: !!binary |
-        IVgEACAWzqlsdroMdhOaC/yBEenkwPFgnzdPOMAEw4CCONA40tzBOqMaxiFcfDG1SNCM1a3hivTW
-        soI2jPy26x0vtOPKj3or8NvA64Pe7VtoGF8fXJFsv7hKX5FYGnojvpB8cZHUIUF1vU7XWyVu0BAc
-        N0mw7ojkiq3lkzWVYBtmXWNveWc32VbvEhpuUtKxqYiuSMSd6K+B5KAusiapIUXNHDdWrZHgepMK
-        /72Geym9ukiubsebXDpxRWLbSLii7jZJITlLw1MBYBbH/v8NAw==
+        IeAEACC+qe6nVfdmm1pXGGb4JaUrli9WoL9x4DjY+f7CAy44DvQ1DzpPul6MVoLvhMLG1RtVig2S
+        MtKk9WyTbLoa5aupTbMst4tpNLbJZBTbRT7O89FkNZ/PJjBYYe8EbC5vXKYv2IwM5iO+sHmjE86w
+        QRRCFTRyCgPyuGqDsxKLNIHkj/JT+o7SZ1QFylqvzwGd5E5J5OhMhdboKT2ppNHzCAMV4b8kYg7Y
+        uJ75a8BS+E5iIxrwrKk/Tas5NggqHt8fg77R3nfSev1TaTIXsBmPEbSeM63EuczC4O0AEEyT5fdr
+        AAM=
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8ecf3f5f2d71cf17-SJC
+      - 918c6c383e6e1008-LAX
       Connection:
       - keep-alive
       Content-Encoding:
@@ -52,17 +52,29 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 04 Dec 2024 22:31:36 GMT
+      - Fri, 28 Feb 2025 00:50:50 GMT
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
       Transfer-Encoding:
       - chunked
+      cf-cache-status:
+      - DYNAMIC
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - 5444d36f-df1c-516d-0cc8-0d99e9654013
+      - ce380f83-deef-63a1-c20b-6f1ff0285542
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK

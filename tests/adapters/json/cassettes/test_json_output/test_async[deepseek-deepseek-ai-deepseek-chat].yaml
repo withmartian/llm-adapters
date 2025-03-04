@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-chat","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '130'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"6048f1a0-cbf7-4948-9cf4-af503b5cb449","object":"chat.completion","created":1740770565,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"{\n  \"greeting\":
+        \"Hi\",\n  \"message\": \"Here''s a simple JSON for you!\"\n}"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":24,"completion_tokens":27,"total_tokens":51,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":24},"system_fingerprint":"fp_3a5770e1b4_prod0225"}'
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 9192c900afe41126-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:22:45 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESTIME=1740770561862; path=/
+      - HWWAFSESID=d6050c7619832e163c; path=/
+      - __cf_bm=cO.Uj_EZAuisvqys43pXwIML60RO75XUO46zi0SqdwE-1740770565-1.0.1.1-yNlIkB0JwV38DTdLUjHNDZmrx0Q2b56HcHNnBtW5by_7BD16zxhR1xhoQhPoXhj31IAw8miIF.ZRcbM6wCQPF6YB9GW14AyAIfy6IASVKO0;
+        path=/; expires=Fri, 28-Feb-25 19:52:45 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      content-length:
+      - '521'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - 8d403356cc4fbf8d5e40810fafdb096b
+    status:
+      code: 200
+      message: OK
+version: 1

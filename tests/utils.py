@@ -3,95 +3,28 @@ from typing import Any, Iterable
 
 import brotli
 
-from adapters.abstract_adapters.base_adapter import BaseAdapter
-from adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
-from adapters.adapter_factory import AdapterFactory
-from adapters.provider_adapters.ai21_sdk_chat_provider_adapter import AI21Model
-from adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
-    AnthropicModel,
+from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
+from llm_adapters.adapter_factory import AdapterFactory
+from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
     AnthropicSDKChatProviderAdapter,
 )
-from adapters.provider_adapters.cerebras_sdk_chat_provider_adapter import CerebrasModel
-from adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
-    CohereModel,
+from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
     CohereSDKChatProviderAdapter,
 )
-from adapters.provider_adapters.deepinfra_sdk_chat_provider_adapter import (
-    DeepInfraModel,
-)
-from adapters.provider_adapters.fireworks_sdk_chat_provider_adapter import (
-    FireworksModel,
-)
-from adapters.provider_adapters.gemini_sdk_chat_provider_adapter import (
-    GeminiSDKChatProviderAdapter,
-)
-from adapters.provider_adapters.lepton_sdk_chat_provider_adapter import LeptonModel
-from adapters.provider_adapters.moescape_sdk_chat_provider_adapter import MoescapeModel
-from adapters.provider_adapters.moonshot_sdk_chat_provider_adapter import MoonshotModel
-from adapters.provider_adapters.openai_sdk_chat_provider_adapter import OpenAIModel
-from adapters.provider_adapters.tensoropera_sdk_chat_provider_adapter import (
-    TensorOperaModel,
-)
-from adapters.provider_adapters.together_sdk_chat_provider_adapter import TogetherModel
-from adapters.provider_adapters.bigmodel_provider_adapter import BigModelModel
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
 
-from adapters.provider_adapters.openrouter_sdk_chat_provider_adapter import (
-    OpenRouterModel,
-)
-from adapters.provider_adapters.perplexity_sdk_chat_provider_adapter import (
-    PerplexityModel,
-)
-from adapters.provider_adapters.deepseek_sdk_chat_provider_adapter import DeepSeekModel
 
-
-class AdapterTestFactory:
-    model_path: str
-
-    def __init__(self, model_path: str):
-        self.model_path = model_path
-
-    def __call__(self) -> BaseAdapter:
-        adapter = AdapterFactory.get_adapter_by_path(self.model_path)
-        if adapter is None:
-            raise ValueError(f"No adapter found for path: {self.model_path}")
-        return adapter
-
-    def __str__(self) -> str:
-        return self.model_path
-
-
-TEST_MODELS = (
-    OpenAIModel,
-    AnthropicModel,
-    TogetherModel,
-    AI21Model,
-    CerebrasModel,
-    CohereModel,
-    FireworksModel,
-    MoescapeModel,
-    # GeminiModel,
-    PerplexityModel,
-    OpenRouterModel,
-    MoonshotModel,
-    LeptonModel,
-    DeepInfraModel,
-    BigModelModel,
-    TensorOperaModel,
-    DeepSeekModel,
-)
-
-ADAPTER_CHAT_TEST_FACTORIES = [
-    AdapterTestFactory(model.get_path())
+TEST_CHAT_MODELS = [
+    model.get_path()
     for model in AdapterFactory.get_supported_models()
-    if isinstance(model, TEST_MODELS) and model.supports_chat
+    if model.supports_chat
 ]
 
-ADAPTER_COMPLETION_TEST_FACTORIES = [
-    AdapterTestFactory(model.get_path())
+TEST_COMPLETION_MODELS = [
+    model.get_path()
     for model in AdapterFactory.get_supported_models()
-    if isinstance(model, TEST_MODELS) and model.supports_completion
+    if model.supports_completion
 ]
 
 
@@ -156,7 +89,8 @@ SIMPLE_GENERATE_TOOLS = [
 ]
 
 
-def get_response_content_from_vcr(vcr: VCR, adapter: BaseAdapter) -> Any:
+def get_response_content_from_vcr(vcr: VCR, model_path: str) -> Any:
+    adapter = AdapterFactory.get_adapter_by_path(model_path)
     response = vcr.responses[-1]["body"]["string"]
 
     try:
@@ -176,13 +110,13 @@ def get_response_content_from_vcr(vcr: VCR, adapter: BaseAdapter) -> Any:
             if response.get("message") and response["message"].get("content")
             else ""
         )
-    elif isinstance(adapter, GeminiSDKChatProviderAdapter):
-        return response["candidates"][0]["content"]["parts"][0]["text"]
     else:
         raise ValueError("Unknown adapter")
 
 
-def get_response_choices_from_vcr(vcr: VCR, adapter: BaseAdapter) -> Any:
+def get_response_choices_from_vcr(vcr: VCR, model_path: str) -> Any:
+    adapter = AdapterFactory.get_adapter_by_path(model_path)
+
     response = vcr.responses[-1]["body"]["string"]
 
     try:
@@ -226,47 +160,44 @@ def get_response_choices_from_vcr(vcr: VCR, adapter: BaseAdapter) -> Any:
             else:
                 raise ValueError(f"Unknown content type: {content['type']}")
         return anthropic_choices
-    elif isinstance(adapter, CohereSDKChatProviderAdapter):
-        # Parse the Cohere SDK response
-        cohere_choices: list[Any] = []
+    # elif isinstance(adapter, CohereSDKChatProviderAdapter):
+    #     # Parse the Cohere SDK response
+    #     cohere_choices: list[Any] = []
 
-        # Assuming the structure of the Cohere response can vary
-        message = response.get("message")
-        role = message.get("role", "assistant")
-        tool_calls = message.get("tool_calls")
-        content_list = message.get("content")
+    #     # Assuming the structure of the Cohere response can vary
+    #     message = response.get("message")
+    #     role = message.get("role", "assistant")
+    #     tool_calls = message.get("tool_calls")
+    #     content_list = message.get("content")
 
-        # Check if there are tool calls and handle them
-        if tool_calls:
-            for tool_call in tool_calls:
-                cohere_choices.append(
-                    {
-                        "message": {
-                            "role": role,
-                            "tool_calls": [
-                                {
-                                    "id": tool_call["id"],
-                                    "type": tool_call["type"],
-                                    "function": {
-                                        "name": tool_call["function"]["name"],
-                                        "arguments": tool_call["function"]["arguments"],
-                                    },
-                                }
-                            ],
-                        }
-                    }
-                )
-        # If no tool calls, check for and handle content as a list of text items
-        elif content_list:
-            for content in content_list:
-                if content.get("type") == "text":
-                    cohere_choices.append(
-                        {"message": {"role": role, "content": content["text"]}}
-                    )
+    #     # Check if there are tool calls and handle them
+    #     if tool_calls:
+    #         for tool_call in tool_calls:
+    #             cohere_choices.append(
+    #                 {
+    #                     "message": {
+    #                         "role": role,
+    #                         "tool_calls": [
+    #                             {
+    #                                 "id": tool_call["id"],
+    #                                 "type": tool_call["type"],
+    #                                 "function": {
+    #                                     "name": tool_call["function"]["name"],
+    #                                     "arguments": tool_call["function"]["arguments"],
+    #                                 },
+    #                             }
+    #                         ],
+    #                     }
+    #                 }
+    #             )
+    # If no tool calls, check for and handle content as a list of text items
+    # elif content_list:
+    #     for content in content_list:
+    #         if content.get("type") == "text":
+    #             cohere_choices.append(
+    #                 {"message": {"role": role, "content": content["text"]}}
+    #             )
 
-        return cohere_choices
-
-    # elif isinstance(adapter, GeminiSDKChatProviderAdapter):
-    # return response["candidates"][0]["content"]["parts"][0]["text"]
+    # return cohere_choices
     else:
         raise ValueError("Unknown adapter")

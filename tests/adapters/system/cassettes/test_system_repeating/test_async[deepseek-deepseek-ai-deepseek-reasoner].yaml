@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"Hi\nHi\nHi\nHi\nHi\nHi"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '126'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"d196c2f1-ca0d-479f-8fa4-203ac5932631\",\"object\":\"chat.completion\",\"created\":1740770662,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! \U0001F44B It looks like you're excited to chat! How can I assist you
+        today? \U0001F60A\",\"reasoning_content\":\"Okay, the user has sent a bunch
+        of \\\"Hi\\\" messages. Let me count them. There's seven \\\"Hi\\\"s in a
+        row. That's a lot. Maybe they're testing if I notice, or just being playful.\\n\\nI
+        should respond in a friendly way. Maybe acknowledge the multiple greetings.
+        It's important to be engaging. Let me check if there's a question hidden here,
+        but it doesn't seem like it. They might just want to chat.\\n\\nI should ask
+        how I can help them today. Keeping it open-ended is good. Make sure the response
+        is welcoming and not robotic. Maybe add an emoji to keep the tone light. Let's
+        go with that.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":18,\"completion_tokens\":163,\"total_tokens\":181,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":138},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":18},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 9192cb5aca77eac3-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:24:22 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=4cddeb544e3f305ce2; path=/
+      - HWWAFSESTIME=1740770657551; path=/
+      - __cf_bm=sXJZ2BHCUGe1BvOxAOR0.ZmOIZVph5l6Mqbap01NTxA-1740770662-1.0.1.1-oXdlA_5sQkrvGGn4qy6LW__tzaLw6dqhNBJBqLk4VAamZlqCzbkkg1smgG7OYkzXdxXAyjMR.aJFbeZlQQ22Sq_S9OSSQets1pYpkm9TaSc;
+        path=/; expires=Fri, 28-Feb-25 19:54:22 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1192'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - ec46cd4439fa327ce7e584290141c079
+    status:
+      code: 200
+      message: OK
+version: 1

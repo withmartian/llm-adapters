@@ -1,0 +1,112 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '162'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"918c61f68e276800\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703430,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 1951717801140463900,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Here's a simple JSON object:\\n\\n```\\n{\\n  \\\"name\\\": \\\"John Doe\\\",\\n
+        \ \\\"age\\\": 30,\\n  \\\"city\\\": \\\"New York\\\"\\n}\\n```\\n\\nIf you
+        want to generate this JSON object using a programming language, here are a
+        few examples:\\n\\n**Python**\\n```python\\nimport json\\n\\ndata = {\\n  \\\"name\\\":
+        \\\"John Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"city\\\": \\\"New York\\\"\\n}\\n\\nprint(json.dumps(data,
+        indent=2))\\n```\\n\\n**JavaScript**\\n```javascript\\nconst data = {\\n  name:
+        \\\"John Doe\\\",\\n  age: 30,\\n  city: \\\"New York\\\"\\n};\\n\\nconsole.log(JSON.stringify(data,
+        null, 2));\\n```\\n\\n**Java**\\n```java\\nimport org.json.JSONObject;\\n\\npublic
+        class Main {\\n  public static void main(String[] args) {\\n    JSONObject
+        data = new JSONObject();\\n    data.put(\\\"name\\\", \\\"John Doe\\\");\\n
+        \   data.put(\\\"age\\\", 30);\\n    data.put(\\\"city\\\", \\\"New York\\\");\\n\\n
+        \   System.out.println(data.toString(2));\\n  }\\n}\\n```\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 40,\n    \"completion_tokens\":
+        221,\n    \"total_tokens\": 261\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 918c61f68e276800-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 28 Feb 2025 00:43:52 GMT
+      ETag:
+      - W/"555-CB8mQbJ91xu37wsVIhoXonwJmIg"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1365'
+      x-api-call-end:
+      - '2025-02-28T00:43:52.478Z'
+      x-api-call-start:
+      - '2025-02-28T00:43:50.262Z'
+      x-api-received:
+      - '2025-02-28T00:43:50.233Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

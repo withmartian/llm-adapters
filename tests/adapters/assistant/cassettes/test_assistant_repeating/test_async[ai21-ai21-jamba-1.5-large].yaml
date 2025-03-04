@@ -1,8 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "assistant", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "jamba-1.5-large"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"jamba-1.5-large"}'
     headers:
       accept:
       - application/json
@@ -11,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '192'
+      - '174'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,25 +25,25 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
       string: !!binary |
-        ITwEACAWzqlsdroMthOaC5zm0xHo5MDxYJ83DzRNMMCEgpZoyzR3sM6ohnEI11+MDSLUQ3lTQ6ex
-        A68O7LAxnNqsys7sws6snK60bCdwoWB0fXJFtPviIn1FZCjoi/hC9MWFeIsI5fU6Xm+luEFBaNwY
-        oRg3rKAnq0vBtsy3xt50ZzdqyncOBTcifqpLzq+IxJ3zvwJOvbxQRVJBfJo7rapaI8L1RhL/g4J7
-        Hb280CJvpxvNrbgismyYRfL2NpKQgmko+CYAWLHt/98AAw==
+        IegDACBWzqX0r05KcEK98FzgAFV16gYnYkECgT4OuOBCw+LzpLuNeYYKjVVWVxe2EYRh7cIgjeBl
+        N+V10dV8zqaUz23e8rkoM1615ZRnTdZXVQOGEfaFB70uXKYvUMLQH/EFuuC0mEDovN986FQAQ3jc
+        AuG5PcAQtBa/oRPCg9QpxM0g9GKc7kkwRKWF31qqPQg+aIP7w3DWmo3T0oRf0MekPCjLYaQRU9i0
+        klLO8DgA52V13wM=
     headers:
       CF-RAY:
-      - 8e6d1bfd5cabed3e-SJC
+      - 918c59f07c940925-LAX
       Connection:
       - keep-alive
       Content-Encoding:
@@ -53,7 +51,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 00:40:42 GMT
+      - Fri, 28 Feb 2025 00:38:21 GMT
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -62,10 +60,20 @@ interactions:
       - chunked
       cf-cache-status:
       - DYNAMIC
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - d93895ab-cce4-0cf8-c8a2-f6ef89eabc10
+      - 5ae374a7-f2e1-f939-f452-695e3282b668
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK

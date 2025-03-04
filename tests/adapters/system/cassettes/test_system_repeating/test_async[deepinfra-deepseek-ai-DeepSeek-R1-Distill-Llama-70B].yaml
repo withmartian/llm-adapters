@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,88 +25,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-ceaf6cb007a247cb972cd56cd5cebbe2\",\"object\":\"chat.completion\",\"created\":1738285849,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
-        so I just saw a message where someone wrote \\\"Hi\\\" four times, and then
-        I responded with \\\"Hi\\\" four times again. Then they wrote \\\"Hi\\\" again,
-        followed by two sets of \\\"Hi\\\" with quotes around them. Hmm, that's a
-        bit confusing. I'm not entirely sure what's going on here. Maybe they're trying
-        to test something or maybe it's just a typo.\\n\\nLet me start breaking this
-        down. The initial exchange seems normal\u2014trading \\\"Hi\\\"s back and
-        forth. But then they wrote \\\"Hi\\\" again, and I responded with \\\"Hi\\\"
-        once more. Then they wrote \\\"Hi\\\" with quotes around it, which is \\\"\u201CHi\u201D\\\"
-        and then another set of \\\"Hi\\\" with different quotes. Wait, is there a
-        difference between \u201CHi\u201D and \\\"Hi\\\"? Maybe they're emphasizing
-        the word differently or using different types of quotes.\\n\\nCould this be
-        a test of how I handle repeated phrases or different punctuations? Or perhaps
-        they're trying to see if I notice the change in quotation marks. Let me think
-        about the possible reasons. Maybe they're checking if I can handle multiple
-        responses in a row or if I can identify patterns. Alternatively, they might
-        be experimenting with how the chat handles the same word repeated multiple
-        times.\\n\\nI should also consider that it might just be a mistake. Perhaps
-        they meant to write something else but ended up sending multiple \\\"Hi\\\"s.
-        Or maybe they're seeing how the chat responds when they send the same message
-        several times. It's possible they're checking for consistency in responses
-        or if the AI gets confused with repetition.\\n\\nAnother angle could be that
-        they're trying to see if the AI can recognize different types of quotes, like
-        \u201C\u201D vs. \\\"\\\" or if it affects the response. Maybe they're testing
-        the attention to detail in the AI's responses. Or perhaps it's about formatting
-        and how the AI handles different ways of writing the same word.\\n\\nI also
-        need to think about the context. In some contexts, repeating the same word
-        multiple times can mean different things. For example, in a chat, it could
-        be a way of getting attention, testing the latency, or checking if the chat
-        is still responsive. The quotes might indicate they're referencing something
-        or using emphasis differently.\\n\\nMaybe the user is trying to prompt a specific
-        kind of response by varying the way they write \\\"Hi.\\\" For example, using
-        quotes might be a way to make the AI think it's a command or a special instruction.
-        Alternatively, they could be testing the AI's ability to handle different
-        inputs and still provide a coherent response.\\n\\nI should also consider
-        if there's a language barrier or if they're using a different keyboard layout,
-        which might cause unintended repetition or quotation marks. It's possible
-        they're not speaking English as their first language and are experimenting
-        with different ways to express greetings.\\n\\nIn any case, the main thing
-        is to respond in a helpful and friendly manner, ensuring that the user feels
-        comfortable continuing the conversation. If they have a specific question
-        or need assistance, they'll likely ask after this initial exchange. My role
-        is to be patient and ready to assist once they clarify their needs.\\n\\nSo,
-        putting it all together, the user seems to be experimenting with the chat,
-        possibly testing repetition, formatting, or checking the AI's responsiveness.
-        My response should remain open and inviting, encouraging them to proceed with
-        their actual query or conversation.\\n\\nMaybe I should ask them if they need
-        help with something specific or if there's a particular topic they want to
-        discuss. That way, I can guide the conversation towards a more productive
-        path rather than continuing the repetition of greetings.\\n\\nAlternatively,
-        if I'm unsure, I could acknowledge the repetition and politely ask how I can
-        assist them today. This shows that I'm attentive and willing to help, without
-        making assumptions about their intentions.\\n\\nI think the key here is to
-        be clear and helpful. Even if the initial messages are a bit confusing or
-        repetitive, my response should aim to clarify and invite further interaction.
-        It's important to maintain a positive and supportive tone to keep the conversation
-        flowing smoothly.\\n\\nAlright, I think that's a good analysis. Time to craft
-        a response that's both friendly and encouraging, prompting them to share what
-        they need help with.\\n</think>\\n\\nIt seems like you're experimenting with
-        the chat, possibly testing repetition or formatting. How can I assist you
-        today? If you have any questions or need help with a specific topic, feel
-        free to ask! I'm here to help.\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":17,\"total_tokens\":922,\"completion_tokens\":905,\"estimated_cost\":0.0006283599999999999}}"
+      string: '{"id":"chatcmpl-3735e0752a7f44969cc8266d1b04f7f9","object":"chat.completion","created":1740704005,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nAlright,
+        the user sent a series of \"Hi\" messages followed by an empty string. I should
+        respond in a friendly and approachable manner.\n\nI need to acknowledge their
+        greeting and offer assistance. Since there''s an empty string, I''ll make
+        sure my response is open-ended to invite them to share more.\n\nI''ll keep
+        it natural and conversational, avoiding any technical jargon. Maybe ask how
+        I can assist them today to keep the conversation going.\n</think>\n\nHello!
+        How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":121,"completion_tokens":104,"estimated_cost":7.567e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '4942'
+      - '887'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:10:49 GMT
+      - Fri, 28 Feb 2025 00:53:25 GMT
       server:
       - uvicorn
       x-robots-tag:

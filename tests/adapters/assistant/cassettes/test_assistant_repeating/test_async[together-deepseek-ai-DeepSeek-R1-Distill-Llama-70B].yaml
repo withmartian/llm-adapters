@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,66 +25,54 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a592d99d1b174a\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283222,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 17993809255896392000,\n      \"logprobs\": null,\n      \"index\":
-        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \"<think>\\nAlright, the user just said \\\"Hi\\\" again. I should keep the
-        conversation going.\\n\\nMaybe I can ask them how they're doing or if they
-        need help with something.\\n\\nI want to sound friendly and approachable.\\n\\nLet
-        me respond with a warm greeting and offer my assistance.\\n</think>\\n\\nHello!
-        How can I assist you today?\",\n        \"tool_calls\": []\n      }\n    }\n
-        \ ],\n  \"usage\": {\n    \"prompt_tokens\": 12,\n    \"completion_tokens\":
-        70,\n    \"total_tokens\": 82\n  }\n}"
+      string: "{\n  \"id\": \"918c5b09aa020928\",\n  \"error\": {\n    \"message\":
+        \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769.
+        Given: 12 `inputs` tokens and 32768 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n
+        \   \"param\": null,\n    \"code\": null\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 90a592d99d1b174a-SJC
+      - 918c5b09aa020928-LAX
       Connection:
       - keep-alive
+      Content-Length:
+      - '269'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 31 Jan 2025 00:27:02 GMT
+      - Fri, 28 Feb 2025 00:39:06 GMT
       ETag:
-      - W/"336-Mc7UyjeGT7z9chDoaq8dIct6Aj0"
+      - W/"10d-ajUuW621eRcZS21JnjkiwMigixc"
       Retry-After:
       - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       Vary:
       - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
-      content-length:
-      - '822'
       x-amzn-trace-id:
-      - 489b337f-7e82-4f68-9e5a-eb8a400d1caa-noamzn
-      x-api-call-end:
-      - '2025-01-31T00:27:02.928Z'
+      - 70664853-f8b0-41fa-bf2b-421a5a8d6298-noamzn
       x-api-call-start:
-      - '2025-01-31T00:27:02.203Z'
+      - '2025-02-28T00:39:06.697Z'
       x-api-received:
-      - '2025-01-31T00:27:02.184Z'
+      - '2025-02-28T00:39:06.676Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -96,10 +84,10 @@ interactions:
       x-ratelimit-remaining:
       - '199'
       x-ratelimit-remaining-tokens:
-      - '99208'
+      - '100000'
       x-ratelimit-reset:
       - '2'
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
 version: 1

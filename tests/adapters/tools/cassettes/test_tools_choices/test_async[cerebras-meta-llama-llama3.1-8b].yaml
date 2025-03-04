@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "llama3.1-8b", "tool_choice": {"type":
-      "function", "function": {"name": "generate"}}, "tools": [{"type": "function",
-      "function": {"description": "Generate random number", "name": "generate", "parameters":
-      {"type": "object", "properties": {"prompt": {"type": "string", "description":
-      "Random number like 5, 4, 3, 10, 11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-8b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '462'
+      - '431'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,42 +28,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-72e3438d-6c2e-43a8-ad2e-f13ced75cbb4","choices":[{"finish_reason":"tool_calls","index":0,"message":{"tool_calls":[{"id":"e8dd156b3","type":"function","function":{"name":"generate","arguments":"{\"prompt\":
-        \"(1 - 10)\\n\"}"}}],"role":"assistant"}}],"created":1732322681,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":218,"completion_tokens":12,"total_tokens":230},"time_info":{"queue_time":3.267e-05,"prompt_time":0.011821513,"completion_time":0.005651439,"total_time":0.03276181221008301,"created":1732322681}}'
+      string: !!binary |
+        ISgJACD+N2dV7c2rYYcvYPhVuxHhu+FMp+wlR8sduPzu7aEt4CwsDcM0SziSQGqPgYa/5eac67ix
+        ofxSdWvDM4ERHyHHYe41VUUV6zJp11ijXayDbtoommpqqrqIrW0iFCzskxV83HCeWXW9O6oJjDxN
+        /TWGvl+h8Gz9CDYKwxMdeMvyfKxiJZWp6VJjCAr5bxYwhhcaqPXAG8YwCBg+6EGg0O1uMLYT5mUa
+        5nwCf5xAmswJO/b9rLBMvYAR1vW55jBmBDbrSpLAVDkyVFdFpTBMSXow+j4MwR5I1y0UfOzPXLvn
+        eJdlXp5jBqObr8lIY6JzjUBhal8Ss7BymL6gVuStApVpuObpU8YVXFCtkM3YQIXCjwcUoWjNrpCf
+        g1yfYzeBN3y95S3X/BwEbA7GGDLkalJEQCeIbFm6sqLjvbl3xjXWswL8T3VZW2ett0VFrnZONrfv
+        Aw==
     headers:
-      Alt-Svc:
-      - h3=":443"; ma=86400
+      CF-RAY:
+      - 91aa73a708cbbd6a-QRO
       Connection:
       - keep-alive
-      Content-Length:
-      - '591'
+      Content-Encoding:
+      - br
       Content-Type:
       - application/json
       Date:
-      - Sat, 23 Nov 2024 00:44:41 GMT
-      Via:
-      - 1.1 18d8a69a30308aa071168e8aed30be36.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - oB0akfTQ5lgbYZp9vWX-idcNvgQc8u1dr8ARySloR4g2LfEAj4OEiQ==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      - Mon, 03 Mar 2025 16:18:47 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=98b5ebZhWS1.hrfChVzdfptDZKSB6qYNvIP6CLQue8w-1741018727-1.0.1.1-Nq_uoYyMlZtE0tKhQk9P97qnHNmmeOQ5F0eCeclXwRkqGKV0r8pPM.WYJAPowukucpbqsLrmK6EuIhvm0PN0N_KC8zis_FeGRY9Dr4HhibM;
+        path=/; expires=Mon, 03-Mar-25 16:48:47 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       referrer-policy:
       - strict-origin-when-cross-origin
-      server:
-      - uvicorn
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -75,15 +81,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14378'
+      - '14397'
       x-ratelimit-remaining-tokens-minute:
       - '60000'
       x-ratelimit-reset-requests-day:
-      - '83718.31832313538'
+      - '27672.328810453415'
       x-ratelimit-reset-tokens-minute:
-      - '18.318323135375977'
+      - '12.328810453414917'
       x-request-id:
-      - oB0akfTQ5lgbYZp9vWX-idcNvgQc8u1dr8ARySloR4g2LfEAj4OEiQ==
+      - 91aa73a708cbbd6a-SJC
     status:
       code: 200
       message: OK

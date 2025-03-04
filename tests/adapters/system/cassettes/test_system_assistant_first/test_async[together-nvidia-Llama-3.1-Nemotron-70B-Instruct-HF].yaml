@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"assistant","content":"Hi"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '135'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"918c66ed09da174a\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703633,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 9793381502621688000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"!\\n\\nHow can I assist you today? Do you have:\\n\\n1. **A question** on
+        a specific topic (e.g., history, science, tech)?\\n2. **A problem** you'd
+        like help solving (e.g., math, logic puzzle)?\\n3. **A topic** you're interested
+        in discussing (e.g., hobbies, news, entertainment)?\\n4. **A creative project**
+        where you need ideas or feedback (e.g., writing, art)?\\n5. **Something else**
+        on your mind (feel free to surprise me)?\\n\\nLet me know, and I'll do my
+        best to help!\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 13,\n    \"completion_tokens\": 124,\n    \"total_tokens\":
+        137\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 918c66ed09da174a-SJC
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 28 Feb 2025 00:47:14 GMT
+      ETag:
+      - W/"3c4-EgM5yj2niBIvfVWhPDlZtmTbeaA"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '964'
+      x-amzn-trace-id:
+      - 32fc98dc-4a93-47b7-9732-c83962b0969f-noamzn
+      x-api-call-end:
+      - '2025-02-28T00:47:14.689Z'
+      x-api-call-start:
+      - '2025-02-28T00:47:13.577Z'
+      x-api-received:
+      - '2025-02-28T00:47:13.573Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1

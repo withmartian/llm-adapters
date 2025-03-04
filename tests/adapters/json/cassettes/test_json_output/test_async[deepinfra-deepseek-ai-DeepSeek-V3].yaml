@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,28 +25,28 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-248f457c52ff44499da286793cf074e4","object":"chat.completion","created":1738285795,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"message":{"role":"assistant","content":"{\n  \"message\":
-        \"Hello, world!\",\n  \"status\": \"success\"\n}","name":null,"tool_calls":[]},"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":28,"completion_tokens":20,"estimated_cost":2.4800000000000003e-05}}'
+      string: '{"id":"chatcmpl-0a76174a91cc4f0caa02a92a80064e5e","object":"chat.completion","created":1740703448,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"message":{"role":"assistant","content":"{\n  \"message\":
+        \"Hello, world!\",\n  \"status\": \"active\",\n  \"count\": 42\n}","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":37,"completion_tokens":28,"estimated_cost":2.933e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '426'
+      - '448'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:09:55 GMT
+      - Fri, 28 Feb 2025 00:44:08 GMT
       server:
       - uvicorn
       x-robots-tag:

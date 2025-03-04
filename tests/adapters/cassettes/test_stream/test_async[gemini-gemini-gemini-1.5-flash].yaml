@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "gemini-1.5-flash",
-      "stream": true}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"gemini-1.5-flash","stream":true}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '94'
+      - '86'
       content-type:
       - application/json
       host:
       - generativelanguage.googleapis.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,29 +25,38 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
   response:
     body:
-      string: "[{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource
-        has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n
-        \ }\n}\n]"
+      string: 'data: {"choices":[{"delta":{"content":"Hi","role":"assistant"},"index":0}],"created":1741061835,"model":"gemini-1.5-flash","object":"chat.completion.chunk"}
+
+
+        data: {"choices":[{"delta":{"content":" there! How can I help you today?\n","role":"assistant"},"finish_reason":"stop","index":0}],"created":1741061835,"model":"gemini-1.5-flash","object":"chat.completion.chunk"}
+
+
+        data: [DONE]
+
+
+        '
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Type:
-      - application/json; charset=UTF-8
+      - text/event-stream
       Date:
-      - Thu, 05 Dec 2024 03:55:59 GMT
+      - Tue, 04 Mar 2025 04:17:15 GMT
       Server:
       - scaffolding on HTTPServer2
       Server-Timing:
-      - gfet4t7; dur=15
+      - gfet4t7; dur=471
       Transfer-Encoding:
       - chunked
       Vary:
@@ -62,8 +70,8 @@ interactions:
       X-XSS-Protection:
       - '0'
       content-length:
-      - '141'
+      - '386'
     status:
-      code: 429
-      message: Too Many Requests
+      code: 200
+      message: OK
 version: 1

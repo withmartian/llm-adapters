@@ -16,7 +16,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,27 +26,33 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-c7608e8f24f9452a85051eec210929df\",\"object\":\"chat.completion\",\"created\":1738285670,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\uFF01\u600E\u4E48\u53EF\u4EE5\u5E2E\u52A9\u5230\u4F60\uFF1F\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"total_tokens\":13,\"completion_tokens\":7,\"estimated_cost\":6.21e-06}}"
+      string: '{"id":"chatcmpl-b206875014974980aea35509978ff2c8","object":"chat.completion","created":1740702518,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"2/\n\nAlright,
+        the user wrote \"Hi 2/\". That''s an unusual greeting. Maybe they meant \"Hi,
+        2!\" or \"Hi 2/\" as a typo. I''ll ask them to clarify what they mean by \"2/\".
+        It could be they''re referring to a fraction or something else. I''ll keep
+        it open-ended so they can explain.\n\nCertainly! Could you clarify what you
+        mean by \"2/\"? Are you referring to a fraction, a date, or something else?
+        Let me know how I can help!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":6,"total_tokens":117,"completion_tokens":111,"estimated_cost":7.797e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '395'
+      - '809'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:07:50 GMT
+      - Fri, 28 Feb 2025 00:28:38 GMT
       server:
       - uvicorn
       x-robots-tag:

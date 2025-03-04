@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "gpt-3.5-turbo-instruct", "prompt": "Hi", "top_p": 0.5}'
+    body: '{"model":"gpt-3.5-turbo-instruct","prompt":"Hi","top_p":0.5}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '65'
+      - '60'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,27 +25,26 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/completions
   response:
     body:
       string: !!binary |
-        IQO4DQBAfH+m7izTf5pcK5tTatedC5wIyEk324HDbpOKAwyCKIkeE00s8IekizAONJ1bIhQGyofr
-        /nDhrwFo9kYW9OqDq094rfcyHq8rh8IPrtbert7PZ6vBjbqr+x9UMwDJy5xflSxI+UsfX8UHxzqT
-        gmoGoF/LGb+RRXvY7bV7g2F3ePeXlzd2ZEF50Hq30a/rMr5IXcioVqBTmb1yIotbAwC/ngdeIQuC
-        iNN5Ddt49njGigLO0kyKZ4fPOFOODRw5fk7MdvcK/43IHzP+TFMg0iBRM3EzQWmqGhK0oMCE/Yks
-        WtGVkzxEeUlkUSydO20Mbt2jWtaRLIjqwVG1/G+A+6brZXrOmWwfGxSi+KCPKgsuElm00SO9PiLm
-        w8Bg3wGYa4YG+Df/xgAD
+        IYwGACD26db3aaqdV8Mhnu6LKgSxgJ+a7cBhd5NtHA6DOCl5TDSDaJBEHHiYnnqI4xENbPmnduGG
+        AZRFxEFh1ZTqvpPvHV7b4+lcLu/rNltbd+GTvaqP3+q7W1IYQPI/F+FAHDSI5fATyqopxZDJmhQG
+        0KvlkYiIw/Bs3dPtwA5if1UyEiVxUNIMqrVw1GHs/qVKZHTJTd20dN+01cnMFqYyC0VPHB8MADaW
+        ovYLcZCCM/xVqMWMLRg860GkVReY/6HiUdpDxrDwV0dNUhbYpj8Th+7dlTJpOvnfE0c9lqXwtLbh
+        hxnrTBw01kEotuwY8HXAeuz/EkG8zwNqOlk1w88gC1H3xGHUShReGOLmKvxtAGKNx4Ad2zEDAw==
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
       CF-RAY:
-      - 8f1b1674abf7ed38-SJC
+      - 918c870b8ef3ce44-SJC
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -55,14 +54,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 14 Dec 2024 03:25:38 GMT
+      - Fri, 28 Feb 2025 01:09:09 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=HBhW8yvtchACd_Tdx6z3k48eYeZ42ENw1sUZm6K3WAs-1734146738-1.0.1.1-6eZqBCZQ9lPxNmMTdRNyyXHVKbi_nuIMZhWeigNgo8IWc98GNqxLDVsznc1W0NM9Nq2ex3F3KhwyBSqTGumqrA;
-        path=/; expires=Sat, 14-Dec-24 03:55:38 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=LiInWHsvNELi92CagJ3PC9pQSHdxmLIFDfB.2pQq4oc-1740704949-1.0.1.1-CYKnaywm32fK.FMIgaU5SOppNYs4_S64pR9RG4xjxMGVsNkyKKkiPoQVaUYeZXHXObLHlMVFuI.WEDPfiVEilw;
+        path=/; expires=Fri, 28-Feb-25 01:39:09 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=pof4rHaMYUjBMZEPVRe5H3i5NDkgcDegB6pi8nCFSg4-1734146738013-0.0.1.1-604800000;
+      - _cfuvid=boVO4CXFjE7eaZm71dsdtSl_DDeVmS9j4WIKhesinmY-1740704949675-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -74,16 +73,22 @@ interactions:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
       openai-model:
-      - gpt-3.5-turbo-instruct
+      - gpt-3.5-turbo-instruct:20230824-v2
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '395'
+      - '336'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      via:
+      - envoy-router-848c66b59c-4l95v
+      x-envoy-upstream-service-time:
+      - '304'
       x-ratelimit-limit-requests:
       - '3500'
       x-ratelimit-limit-tokens:
@@ -97,7 +102,7 @@ interactions:
       x-ratelimit-reset-tokens:
       - 10ms
       x-request-id:
-      - req_932525acbbd02333864e2a991b2dd130
+      - req_ca65664d4f5313b23e06167a07257a8d
     status:
       code: 200
       message: OK

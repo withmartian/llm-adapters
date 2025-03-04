@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "system", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "user", "content": "Hi"}], "model": "google/gemma-2-27b-it"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"google/gemma-2-27b-it"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '301'
+      - '271'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,58 +25,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce28c2ec917dc-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320089,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+      string: "{\n  \"id\": \"918c6f420f7d7bf5\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740703974,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
-        1321939154616359000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
-        {\n        \"role\": \"assistant\",\n        \"content\": \"Hi there! \U0001F44B
-        \\n\\nIs there anything I can help you with today? \U0001F60A\",\n        \"tool_calls\":
-        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 47,\n    \"completion_tokens\":
-        18,\n    \"total_tokens\": 65\n  }\n}"
+        14870547752723150000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Hi! \U0001F44B
+        \\n\\nHow can I help you today? \U0001F60A\",\n        \"tool_calls\": []\n
+        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 46,\n    \"completion_tokens\":
+        14,\n    \"total_tokens\": 60\n  }\n}"
     headers:
+      Access-Control-Allow-Origin:
+      - '*'
       CF-Cache-Status:
       - DYNAMIC
-      CF-RAY:
-      - 8e6ce28c2ec917dc-SJC
+      CF-Ray:
+      - 918c6f420f7d7bf5-LAX
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 23 Nov 2024 00:01:29 GMT
+      - Fri, 28 Feb 2025 00:52:57 GMT
+      ETag:
+      - W/"209-EwAOCntP4wVTjOAIyi5WgUWNk0s"
+      Retry-After:
+      - '2'
       Server:
       - cloudflare
       Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
+      - max-age=15552000; includeSubDomains
       Transfer-Encoding:
       - chunked
-      access-control-allow-origin:
-      - '*'
+      Vary:
+      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
       content-length:
-      - '549'
-      etag:
-      - W/"225-gUCnr0wnzwIHrNLAY3L6XCLEnks"
-      retry-after:
-      - '1'
+      - '521'
+      x-amzn-trace-id:
+      - 9ace8d5c-931b-4302-bd7f-0e7c7d874ac8-noamzn
       x-api-call-end:
-      - '2024-11-23T00:01:29.407Z'
+      - '2025-02-28T00:52:57.210Z'
       x-api-call-start:
-      - '2024-11-23T00:01:29.012Z'
+      - '2025-02-28T00:52:54.812Z'
       x-api-received:
-      - '2024-11-23T00:01:29.005Z'
+      - '2025-02-28T00:52:54.809Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -89,11 +90,11 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '197'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '97710'
+      - '99761'
       x-ratelimit-reset:
-      - '1'
+      - '2'
     status:
       code: 200
       message: OK

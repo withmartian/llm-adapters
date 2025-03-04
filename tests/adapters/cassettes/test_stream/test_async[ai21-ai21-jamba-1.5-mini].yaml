@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "jamba-1.5-mini",
-      "stream": true}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"jamba-1.5-mini","stream":true}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '92'
+      - '84'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,63 +25,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: "data: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\", \"choices\":
-        [{\"index\": 0, \"delta\": {\"role\": \"assistant\"}, \"logprobs\": null,
-        \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"Hello\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"!\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" How\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" can\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" I\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" assist\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" you\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \" today\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"?\"}, \"logprobs\":
-        null, \"finish_reason\": null}]}\r\n\r\ndata: {\"id\": \"chat-53f7fdd3d4eb4f6fa799f997089250a2\",
-        \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}, \"logprobs\":
-        null, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 11, \"completion_tokens\":
-        10, \"total_tokens\": 21}}\r\n\r\ndata: [DONE]\r\n\r\n"
+      string: '{"detail":"Access denied for this feature"}'
     headers:
       CF-RAY:
-      - 8e6d1c9c1efc6420-SJC
+      - 91ae9029987569d2-DFW
       Connection:
       - keep-alive
+      Content-Length:
+      - '43'
       Content-Type:
-      - text/event-stream; charset=utf-8
+      - application/json
       Date:
-      - Sat, 23 Nov 2024 00:41:07 GMT
+      - Tue, 04 Mar 2025 04:17:18 GMT
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       cf-cache-status:
       - DYNAMIC
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - 26e9e791-2666-058b-d4d5-a9dff443b23a
+      - 8c8d6ea2-87b3-f1c6-983e-a3e2266036b8
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,29 +25,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-2d50b45415e64da49860128ad2bc93e9\",\"object\":\"chat.completion\",\"created\":1738285823,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\n\\n</think>\\n\\nHellooo!
-        \U0001F60A Looks like \\\"Hi\\\" is the word of the day! What\u2019s on your
-        mind? Need help, a chat, or just vibing? Let me know! \U0001F680\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":17,\"total_tokens\":64,\"completion_tokens\":47,\"estimated_cost\":0.00013195}}"
+      string: "{\"id\":\"chatcmpl-f348f3ba0a6843458931f2851cbd4f46\",\"object\":\"chat.completion\",\"created\":1740704002,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user keeps saying \\\"Hi\\\". Maybe they're testing if I notice the repetition.
+        Let me respond politely and ask how I can assist them today. Keeping it friendly
+        and open-ended should encourage them to explain what they need help with.
+        Maybe they have a question or a problem to solve. I'll make sure to express
+        readiness to help.\\n</think>\\n\\nHi there! It looks like you're saying \\\"Hi\\\"
+        a lot\u2014is there something specific you'd like help with today? Let me
+        know how I can assist! \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":18,\"total_tokens\":129,\"completion_tokens\":111,\"estimated_cost\":0.00027990000000000003}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '503'
+      - '882'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:10:23 GMT
+      - Fri, 28 Feb 2025 00:53:22 GMT
       server:
       - uvicorn
       x-robots-tag:

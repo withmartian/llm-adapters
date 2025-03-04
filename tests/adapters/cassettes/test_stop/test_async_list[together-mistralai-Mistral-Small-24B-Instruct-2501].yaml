@@ -1,0 +1,108 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"mistralai/Mistral-Small-24B-Instruct-2501","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '119'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"918c7a3b9c2408ce\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1740704424,\n  \"model\": \"mistralai/Mistral-Small-24B-Instruct-2501\",\n
+        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
+        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
+        \       \"content\": \"Hello! How can I help you today? If you're up for it,
+        I'd love to play a little game to get started. Here are a couple of options:\\n\\n1.
+        **20 Questions**: You think of something, and I'll try to guess it by asking
+        up to 20 yes-or-no questions.\\n2. **Trivia**: I can ask you questions on
+        a topic of your choice, or I can select a random topic.\\n3. **Word Association**:
+        I say a word, and you respond with the first word that comes to your mind.
+        We can go back and forth.\\n\\nOr, if you'd prefer, we can just chat about
+        anything you'd like. What do you think?\",\n        \"tool_calls\": []\n      },\n
+        \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 4,\n    \"total_tokens\": 150,\n    \"completion_tokens\":
+        146\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 918c7a3b9c2408ce-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 28 Feb 2025 01:00:26 GMT
+      ETag:
+      - W/"416-cYZBx1uYeXoHU3OasLM2JtshiqQ"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1046'
+      x-amzn-trace-id:
+      - ea28a1e8-0586-4e7d-b829-5c556b6a8a42-noamzn
+      x-api-call-end:
+      - '2025-02-28T01:00:26.199Z'
+      x-api-call-start:
+      - '2025-02-28T01:00:24.452Z'
+      x-api-received:
+      - '2025-02-28T01:00:24.445Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+    status:
+      code: 200
+      message: OK
+version: 1
