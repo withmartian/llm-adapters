@@ -27,6 +27,7 @@ from llm_adapters.types.openai import (
     ChatCompletionUserMessageParam,
     ChoiceChunk,
     ChoiceDelta,
+    FilePurpose,
 )
 
 from llm_adapters.types.request import (
@@ -66,6 +67,9 @@ from llm_adapters.types.response import (
     AdapterStreamAsyncCompletion,
 )
 
+from llm_adapters.types.files import (
+    FileObject,
+)
 
 __all__ = [
     "NotGiven",
@@ -123,4 +127,6 @@ __all__ = [
     "ChatCompletionMessage",
     "CompletionUsage",
     "FunctionToolCall",
+    "FileObject",
+    "FilePurpose",
 ]

@@ -45,6 +45,8 @@ from openai.types.chat.chat_completion import (
 from openai.types.chat.chat_completion_user_message_param import (
     ChatCompletionUserMessageParam,
 )
+from openai.resources.files import FileObject
+from openai.types.file_purpose import FilePurpose
 
 
 Query = Mapping[str, object]
@@ -82,4 +84,6 @@ __all__ = [
     "ChatCompletionUserMessageParam",
     "ChoiceChunk",
     "ChoiceDelta",
+    "FileObject",
+    "FilePurpose",
 ]

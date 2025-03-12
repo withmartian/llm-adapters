@@ -16,7 +16,10 @@ from llm_adapters.types import (
     CompletionCreateArgs,
     AdapterStreamAsyncChatCompletion,
     AdapterStreamAsyncCompletion,
+    FileObject,
+    FilePurpose,
 )
+from llm_adapters.types.files import CreateFileKwargs
 
 
 class Completions:
@@ -167,6 +170,28 @@ class AsyncChatCompletions:
         )
 
 
+class Files:
+    def create(
+        self,
+        *,
+        file: FileObject,
+        purpose: FilePurpose,
+        **kwargs: Unpack[CreateFileKwargs],
+    ) -> FileObject:
+        return OpenAI().files.create(file=file, purpose=purpose, **kwargs)
+
+
+class AsyncFiles:
+    async def create(
+        self,
+        *,
+        file: FileObject,
+        purpose: FilePurpose,
+        **kwargs: Unpack[CreateFileKwargs],
+    ) -> FileObject:
+        return await OpenAI().files.create(file=file, purpose=purpose, **kwargs)
+
+
 class Chat:
     def __init__(self) -> None:
         self._chat_completions = ChatCompletions()
@@ -178,17 +203,18 @@ class Chat:
 
 class AsyncChat:
     def __init__(self) -> None:
-        self._chat_completions = AsyncChatCompletions()
+        self._async_chat_completions = AsyncChatCompletions()
 
     @property
     def completions(self) -> AsyncChatCompletions:
-        return self._chat_completions
+        return self._async_chat_completions
 
 
 class OpenAI:
     def __init__(self, **kwargs: Any) -> None:
         self._chat = Chat()
         self._completions = Completions()
+        self._files = Files()
 
     @property
     def chat(self) -> Chat:
@@ -198,19 +224,28 @@ class OpenAI:
     def completions(self) -> Completions:
         return self._completions
 
+    @property
+    def files(self) -> Files:
+        return self._files
+
 
 class AsyncOpenAI:
     def __init__(self, **kwargs: Any) -> None:
-        self._chat = AsyncChat()
-        self._completions = AsyncCompletions()
+        self._async_chat = AsyncChat()
+        self._async_completions = AsyncCompletions()
+        self._async_files = AsyncFiles()
 
     @property
     def chat(self) -> AsyncChat:
-        return self._chat
+        return self._async_chat
 
     @property
     def completions(self) -> AsyncCompletions:
-        return self._completions
+        return self._async_completions
+
+    @property
+    def files(self) -> AsyncFiles:
+        return self._async_files
 
 
 __all__ = ["OpenAI", "AsyncOpenAI"]
