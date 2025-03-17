@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"hermes3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '67'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"965e425538dc41968da35e2fa04523d6","object":"chat.completion","created":1742235180,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*Hmm,
+        the human has just said \"Hi\". I wonder if they are just being friendly and
+        starting a conversation, or if they have a specific question or request. I
+        should respond in a friendly manner and see where the conversation goes from
+        here.*\n\nHello! It''s nice to meet you. How are you doing today? Is there
+        anything I can assist you with?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":75,"total_tokens":85,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e76261c392e7e-DFW
+      content-length:
+      - '936'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:13:00 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=rseGeWCXxvczXFl4FoaIRPebTNu0JfHLn8yRLRN2FcI-1742235180-1.0.1.1-v.MsWAzNkRPV.5kXub6PZA5zUQjZ53dNjtCr6k8Pe6uuapvvv4Rx7TYPFq2MJB9kbF49BR0OU66RoqCupt4Hv.Y_LnzFNusmX3.MLe0S2GE;
+        path=/; expires=Mon, 17-Mar-25 18:43:00 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 9de72322-acb5-4652-b948-d3cf02b6828e
+      x-response-time:
+      - '2.272'
+    status:
+      code: 200
+      message: OK
+version: 1

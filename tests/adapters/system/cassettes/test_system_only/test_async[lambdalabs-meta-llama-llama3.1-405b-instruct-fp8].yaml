@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"llama3.1-405b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '84'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-181e9d2a-4c6f-49f8-833c-9d4d05fe3020","object":"chat.completion","created":1742234936,"model":"llama3.1-405b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"How''s
+        it going? Is there something I can help you with or would you like to chat?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":31,"completion_tokens":21,"total_tokens":52,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e703dca0669fb-DFW
+      content-length:
+      - '705'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:08:59 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=UbswVSqujdyUXssPW05w3QmZzRzLXScLvNyHjFsAkII-1742234939-1.0.1.1-recKuN9Cn30S8_FNUkdpLyOoHfG74Y9TMRN_nNPKHTsqeE6ZN_IaxPQN8ukSgn6DzNGI1udqbfiiWLfiQstyhv5UCKKi5YJLI7XRNxmsR5g;
+        path=/; expires=Mon, 17-Mar-25 18:38:59 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 181e9d2a-4c6f-49f8-833c-9d4d05fe3020
+      x-response-time:
+      - '3.562'
+    status:
+      code: 200
+      message: OK
+version: 1

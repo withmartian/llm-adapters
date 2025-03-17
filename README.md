@@ -8,7 +8,7 @@ The Adapters package facilitates communication between different language model 
 
 The package can be installed an used via pip:
 
-```
+```bash
 pip install martian-adapters
 ```
 

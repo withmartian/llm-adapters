@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"hermes3-70b","n":2}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '73'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"751d8f79250749249208dba9863029c5","object":"chat.completion","created":1742235079,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*Hmm,
+        that''s a very simple greeting. I wonder if they''re just being polite or
+        if there''s something specific they want to talk about. I should respond in
+        a friendly manner and see where the conversation goes from here.*\n\nHello!
+        It''s nice to meet you. How are you doing today? Is there anything in particular
+        you''d like to chat about?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}},{"index":1,"message":{"role":"assistant","content":"*Hmm,
+        this person has just said \"Hi\". I wonder if they are just being friendly
+        or if there is something specific they want to talk about. I should probably
+        respond in a friendly manner and see where the conversation goes from here.*\n\nHello!
+        It''s nice to meet you. How are you doing today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":138,"total_tokens":148,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e73b098753066-DFW
+      content-length:
+      - '1541'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:11:19 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=qg5NokkHi6q.OzrVT1RMmuZSufsfIRwmeItVZHWgBNQ-1742235079-1.0.1.1-39lZSf3ECqGeF2w4HlOCZVGfp5ypcskvo0D0isoyHVG9QTfDdyXDfL_nmKEx1HMmUq117o9X5gc55lgU7HQP3KkPVB2zvEoCPIPQajl6hMc;
+        path=/; expires=Mon, 17-Mar-25 18:41:19 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 65dc4561-85cb-4411-a515-de944c55e2ce
+      x-response-time:
+      - '2.477'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-8b-instruct","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '375'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-fbb74a0a-0a65-40d9-90b6-74e035638205","object":"chat.completion","created":1742235284,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"chatcmpl-tool-c4a1e3fa6fd642a1b8ee115bb96dfdc8","type":"function","function":{"name":"generate","arguments":"{\"prompt\":
+        \"tools, range 1-10\"}"}}]},"finish_reason":"tool_calls","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":204,"completion_tokens":23,"total_tokens":227,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e78c25b4945e8-DFW
+      content-length:
+      - '796'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:14:45 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=YXIM6On82Buk9aJQJi5HL6HX4npiy5oZiiooJU7FKWQ-1742235285-1.0.1.1-Lpg.9PtEoKi6hF6to6b7OGVqHg8H3RnIhk03wFm1xOjPaeyhj_2JwBo2U_aQQmKhD2x47.TA2P_3SpPy7YsUAY0KgJM6d2sDogjseYvS5f0;
+        path=/; expires=Mon, 17-Mar-25 18:44:45 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - fbb74a0a-0a65-40d9-90b6-74e035638205
+      x-response-time:
+      - '0.211'
+    status:
+      code: 200
+      message: OK
+version: 1

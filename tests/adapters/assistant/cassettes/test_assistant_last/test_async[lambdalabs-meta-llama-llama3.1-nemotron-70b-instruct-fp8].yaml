@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '127'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-9385f897-509b-4e9f-b450-a91de1e64af2","object":"chat.completion","created":1742234788,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"How
+        can I assist you today? Here are some conversation starters to get us going:\n\n1.
+        **Question**: Ask me anything (e.g., science, history, tech, entertainment,
+        etc.)\n2. **Topic Discussion**: Suggest a topic you''d like to explore in-depth
+        (e.g., space exploration, AI, movies, books, etc.)\n3. **Creative Writing**:\n\t*
+        I can start telling a story, and you can continue it.\n\t* You can give me
+        prompts (genre, characters, setting), and I''ll write a short story.\n4. **Games**:\n\t*
+        20 Questions: Think of an object, and I''ll try to guess what it is.\n\t*
+        Hangman: I can generate a word or phrase for you to guess.\n\t* Word Chain:
+        We take turns saying a word that starts with the last letter of the previous
+        word.\n5. **Learning Something New**: Is there a skill or subject you''re
+        interested in learning more about? I can provide resources or a basic overview.\n6.
+        **Just Chat**: We can have a casual, everyday conversation. How''s your day
+        been? Do you have any fun plans or hobbies?\n7. **Generate Ideas**: If you''re
+        stuck on an idea for a project (creative, work, school, etc.), I can help
+        generate some options.\n\nWhich direction would you like our conversation
+        to take, or do you have something entirely different in mind?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":294,"total_tokens":316,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e6ca38c6d6a03-DFW
+      content-length:
+      - '1866'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:06:36 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=zZM8kiHXEJpBi4GhCZNDcFgArltsIOK9FNdL1vr35aA-1742234796-1.0.1.1-9CaUsdkp7DUOQuG1NlUI_zvcwUusnlPM0ASSJ0MIqI1HccMR0JFtz3b6RMBMZCZuQAYo5u3QYGrncaExvYO93Bw3.f988dUiU8ikTsA7fKY;
+        path=/; expires=Mon, 17-Mar-25 18:36:36 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 9385f897-509b-4e9f-b450-a91de1e64af2
+      x-response-time:
+      - '8.465'
+    status:
+      code: 200
+      message: OK
+version: 1

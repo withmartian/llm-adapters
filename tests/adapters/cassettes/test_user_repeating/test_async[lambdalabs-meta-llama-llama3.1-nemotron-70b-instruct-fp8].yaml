@@ -1,0 +1,79 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '121'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-aa131532-e6f6-44ab-a129-bb9fc17a2ac1","object":"chat.completion","created":1742235256,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like we''ve got a double \"Hi\" to get us started!\n\nNow that the greetings
+        are out of the way, how can I assist you today? Please pick one (or more)
+        of the following options, or feel free to suggest something else:\n\n1. **Chat
+        about a topic**:\n\t* Hobbies (e.g., movies, books, sports, music)\n\t* Technology
+        (e.g., AI, gadgets, programming)\n\t* Travel and cultures\n\t* Or something
+        else ( specify!)\n2. **Play a game**:\n\t* 20 Questions\n\t* Word Association\n\t*
+        Hangman\n\t* Would You Rather\n\t* Trivia (on a topic of your choice)\n3.
+        **Generate creative content**:\n\t* Short story (provide a prompt or genre)\n\t*
+        Poetry ( specify a theme or style)\n\t* Character or world-building (for writing
+        or RPGs)\n4. **Get help with a question or problem**:\n\t* Language-related
+        (e.g., grammar, language learning)\n\t* General knowledge or research\n\t*
+        Career or educational guidance\n\t* Or any other challenge you''re facing\n5.
+        **Just have a fun, random conversation**:\n\t* I''ll start with a thought,
+        and we can see where it takes us!\n\nWhich direction would you like to take
+        our conversation?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":279,"total_tokens":301,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e780f6f26f06d-DFW
+      content-length:
+      - '1745'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:14:24 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=dBRd_sdS9_FQgr7GVcwC40SSg.j2me0jMEgf5RyoOdM-1742235264-1.0.1.1-eQ7g1JBFIAHoa9mcwRc9BDofnwgxbHD8skPotJef9pN2zcRtcVS.UOpRJqMbZlCoeUVAESsTz4SDr3RP2jc1xBMQGCo7GopnKf9rkkhuxD0;
+        path=/; expires=Mon, 17-Mar-25 18:44:24 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - aa131532-e6f6-44ab-a129-bb9fc17a2ac1
+      x-response-time:
+      - '7.944'
+    status:
+      code: 200
+      message: OK
+version: 1

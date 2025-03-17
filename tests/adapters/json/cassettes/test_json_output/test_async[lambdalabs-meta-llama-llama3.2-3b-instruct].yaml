@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"llama3.2-3b-instruct","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '137'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"","object":"","created":0,"model":"","choices":null,"usage":{"prompt_tokens":0,"completion_tokens":0,"total_tokens":0,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}
+
+        '
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e6fbbad40ddb0-DFW
+      content-length:
+      - '213'
+      content-type:
+      - text/plain; charset=utf-8
+      date:
+      - Mon, 17 Mar 2025 18:08:35 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=58wdvYT2OV_E_twqRn0M3tn6oeouoqT990rl43KkYSo-1742234915-1.0.1.1-PYaZrDuhchAF2BAKRTqcH8Z43LeMaCmCMBUVAI8mX66Vox3l.gPGe6OEYKFu3fSHR.Kb_YzgUaCAFiz8Cg.cba7VZZeYdRjZbOBN2VPU37U;
+        path=/; expires=Mon, 17-Mar-25 18:38:35 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-content-type-options:
+      - nosniff
+      x-response-time:
+      - '0.155'
+    status:
+      code: 400
+      message: Bad Request
+version: 1

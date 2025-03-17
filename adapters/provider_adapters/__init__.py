@@ -21,9 +21,11 @@ from .perplexity_sdk_chat_provider_adapter import PerplexitySDKChatProviderAdapt
 from .together_sdk_chat_provider_adapter import TogetherSDKChatProviderAdapter
 from .bigmodel_provider_adapter import BigModelSDKChatProviderAdapter
 from .deepseek_sdk_chat_provider_adapter import DeepSeekSDKChatProviderAdapter
+from .lambdalambs_sdk_chat_provider_adapter import LambdaLabsSDKChatProviderAdapter
 
 __all__ = [
     "AI21SDKChatProviderAdapter",
+    "LambdaLabsSDKChatProviderAdapter",
     "AnthropicSDKChatProviderAdapter",
     # "AzureSDKChatProviderAdapter",
     "CerebrasSDKChatProviderAdapter",

@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.3-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '112'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-ba1acc7b-8323-45a1-880a-69bf62aac061","object":"chat.completion","created":1742235253,"model":"llama3.3-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like we''re having a bit of a \"hi\" exchange. How''s your day going
+        so far? Is there something I can help you with or would you like to chat?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":42,"completion_tokens":39,"total_tokens":81,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e77ff5bb46c6c-DFW
+      content-length:
+      - '772'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:14:14 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=nYiJG0cIi2WZ3UaG24QXQJM0Ua70KMNh1NHm95XusFg-1742235254-1.0.1.1-Rq.E0IKnkBOczFEsWBHo4HD0wH0TNYsyZTUbcU_Tbek72Y11_ftGukMYsfuzSJdAmIT8eDBP99EKqOYndrBTdmGi0dXdJz8hZTFUR3Zl89Y;
+        path=/; expires=Mon, 17-Mar-25 18:44:14 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - ba1acc7b-8323-45a1-880a-69bf62aac061
+      x-response-time:
+      - '1.23'
+    status:
+      code: 200
+      message: OK
+version: 1

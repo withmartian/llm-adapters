@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-70b-instruct-fp8","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '401'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-ccf98538-dc83-4897-a9d5-1ae43783bde7","object":"chat.completion","created":1742237514,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"I''ll
+        be using a random number generator. Here''s the result:\n\nThe random number
+        I generated is: 7"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":47,"completion_tokens":24,"total_tokens":71,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921eaf345e82f079-DFW
+      content-length:
+      - '721'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:51:55 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=BiK8_UIxDMpnDyCswizFTTCjuRNgaDageRBLoC8jSpg-1742237515-1.0.1.1-9cO9olBVoosdXVSCsJB6vLmkY1EdgPV8cfozd9qWtKfp_TzP1BDYTRIjueKYSFLhesTEY7vlCiDMMp05Y0fr3C.HzFYhFgJ2rNHLJZjLdYA;
+        path=/; expires=Mon, 17-Mar-25 19:21:55 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - ccf98538-dc83-4897-a9d5-1ae43783bde7
+      x-response-time:
+      - '0.833'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '193'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-a5857b61-866e-440a-bff5-5b90e0f3dc85","object":"chat.completion","created":1742234835,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Seems
+        like we''re having a nice \"Hi\" chain going on!\n\nTo break the chain and
+        start a more meaningful conversation, I''ll ask: \n\n**What brings you here
+        today?**\n\nDo you:\n1. **Have a question** on a specific topic (e.g., tech,
+        history, science, etc.)?\n2. **Want to discuss** a particular subject (e.g.,
+        movies, books, hobbies, etc.)?\n3. **Need assistance** with something (e.g.,
+        language, problem-solving, etc.)?\n4. **Just want to chat** casually and see
+        where the conversation takes us?\n5. **Something else** (please specify!)?\n\nLet
+        me know, and I''ll do my best to help or engage in a fun conversation with
+        you!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":34,"completion_tokens":159,"total_tokens":193,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e6dca8db92e55-DFW
+      content-length:
+      - '1257'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:07:20 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=2gx9eMCcwcHJIV4p.cIic1E7bZrwJEULvZXRUsPgrJg-1742234840-1.0.1.1-r8DhT5DJIt.Xys5f4X2YBDq3Hq6gTghAxl6Hq7L8lb1mXnaEJyX2xehmeYwYPTe_InbWeZuapecn9QigheW2P_.pzODphHQwrrtU.QLiUsQ;
+        path=/; expires=Mon, 17-Mar-25 18:37:20 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - a5857b61-866e-440a-bff5-5b90e0f3dc85
+      x-response-time:
+      - '4.62'
+    status:
+      code: 200
+      message: OK
+version: 1

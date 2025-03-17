@@ -1,0 +1,115 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-llama3.3-70b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '397'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-fcb3d675-f34b-4612-9dbf-5b067b4ff638\",\"object\":\"chat.completion\",\"created\":1742237501,\"model\":\"deepseek-llama3.3-70b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\u003cthink\\u003e\\nI
+        need to generate a random number between 1 and 10 using commonly available
+        tools. \\n\\nFirst, I'll consider using a random number generator tool or
+        website to produce a number within the specified range. \\n\\nIf that's not
+        available, I can use a shuffled deck of cards by shuffling well and drawing
+        the top card. \\n\\nAs another alternative, I can roll a standard 10-sided
+        die. \\n\\nLastly, I could also toss a coin multiple times to create a random
+        selection process within the 1-10 range.\\n\\u003c/think\\u003e\\n\\nCertainly!
+        There are several methods to generate a random number between 1 and 10 using
+        different tools. Here are a few approaches, each explained step-by-step:\\n\\n---\\n\\n###
+        **Method 1: Using a Random Number Generator Tool/Website**\\n**Tools Needed:**
+        Access to a random number generator tool or website (e.g., [Random.org](https://www.random.org/))\\n\\n1.
+        **Open the Random Number Generator:**\\n   - Visit a reliable random number
+        generator website.\\n\\n2. **Set the Range:**\\n   - Specify the minimum value
+        as **1** and the maximum value as **10**.\\n\\n3. **Generate the Number:**\\n
+        \  - Click the \\\"Generate\\\" button to produce a random number within the
+        range.\\n\\n4. **Record the Number:**\\n   - Note down the generated number.\\n\\n**Example:**\\n\\nIf
+        the generator produces **7**, that's your random number.\\n\\n\\\\[\\n\\\\boxed{7}\\n\\\\]\\n\\n---\\n\\n###
+        **Method 2: Using a Shuffled Deck of Cards**\\n**Tools Needed:** A standard
+        deck of 52 playing cards.\\n\\n1. **Shuffle the Deck:**\\n   - Thoroughly
+        shuffle the deck to ensure randomness.\\n\\n2. **Draw the Top Card:**\\n   -
+        Take the top card from the shuffled deck.\\n\\n3. **Determine the Number:**\\n
+        \  - If the card is a number card (2-10), use its face value.\\n   - If the
+        card is a Jack, Queen, King, or Ace, you can assign numbers 11, 12, 13, or
+        14 respectively. Since we need numbers only up to 10, you can either set aside
+        these cards and draw again or adjust the range.\\n\\n4. **Record the Number:**\\n
+        \  - Note down the number corresponding to the drawn card.\\n\\n**Example:**\\n\\nAfter
+        shuffling, if you draw a card with the number **5**, that's your random number.\\n\\n\\\\[\\n\\\\boxed{5}\\n\\\\]\\n\\n---\\n\\n###
+        **Method 3: Using a 10-Sided Die**\\n**Tools Needed:** A 10-sided die (often
+        used in tabletop games like Dungeons \\u0026 Dragons).\\n\\n1. **Roll the
+        Die:**\\n   - Roll the 10-sided die on a flat surface.\\n\\n2. **Observe the
+        Result:**\\n   - The number that appears on the top face of the die is your
+        random number.\\n\\n3. **Record the Number:**\\n   - Note down the number
+        shown on the die.\\n\\n**Example:**\\n\\nAfter rolling, if the die shows **9**,
+        that's your random number.\\n\\n\\\\[\\n\\\\boxed{9}\\n\\\\]\\n\\n---\\n\\n###
+        **Method 4: Using Coin Flips**\\n**Tools Needed:** A coin.\\n\\n1. **Determine
+        the Number Range per Flip:**\\n   - Since a coin has two outcomes (Heads or
+        Tails), you can use multiple flips to cover the range 1-10.\\n\\n2. **Assign
+        Binary Values:**\\n   - Each flip can represent a binary digit (0 for Heads,
+        1 for Tails) in a binary number.\\n\\n3. **Flip the Coin Multiple Times:**\\n
+        \  - Flip the coin up to 4 times (since 2\u2074 = 16, which covers numbers
+        1-10).\\n\\n4. **Convert to Decimal:**\\n   - Convert the binary result to
+        a decimal number.\\n\\n5. **Adjust the Range:**\\n   - If the number exceeds
+        10, you can ignore it and flip again.\\n\\n6. **Record the Number:**\\n   -
+        Note down the final number.\\n\\n**Example:**\\n\\nAfter 4 flips, if the result
+        is **0110** in binary (which is 6 in decimal), that's your random number.\\n\\n\\\\[\\n\\\\boxed{6}\\n\\\\]\\n\\n---\\n\\nEach
+        method provides a straightforward way to generate a random number between
+        1 and 10 using the specified tools. You can choose the method that suits your
+        available tools best.\"},\"finish_reason\":\"stop\",\"content_filter_results\":{\"hate\":{\"filtered\":false},\"self_harm\":{\"filtered\":false},\"sexual\":{\"filtered\":false},\"violence\":{\"filtered\":false},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"profanity\":{\"filtered\":false,\"detected\":false}}}],\"usage\":{\"prompt_tokens\":15,\"completion_tokens\":911,\"total_tokens\":926,\"prompt_tokens_details\":null,\"completion_tokens_details\":null},\"system_fingerprint\":\"\"}"
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921eaede79994756-DFW
+      content-length:
+      - '4339'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:51:54 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=x8sEBR8CUgBqs5ppTrb7nCZWkXQFJPtcDrj5Nb13rFk-1742237514-1.0.1.1-O4svW0DSku7Wee3Po.r8UB3B3CtAO6KIBrcQSRlYHUCYS9SKI_hF0R6DKnzw.MXn3J7ky.qUm.16jRX.n9b_qaHbc.ptrgn6SUsGSksrDSQ;
+        path=/; expires=Mon, 17-Mar-25 19:21:54 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - fcb3d675-f34b-4612-9dbf-5b067b4ff638
+      x-response-time:
+      - '13.406'
+    status:
+      code: 200
+      message: OK
+version: 1

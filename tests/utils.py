@@ -25,6 +25,9 @@ from adapters.provider_adapters.fireworks_sdk_chat_provider_adapter import (
 from adapters.provider_adapters.gemini_sdk_chat_provider_adapter import (
     GeminiSDKChatProviderAdapter,
 )
+from adapters.provider_adapters.lambdalambs_sdk_chat_provider_adapter import (
+    LambdaLabsModel,
+)
 from adapters.provider_adapters.lepton_sdk_chat_provider_adapter import LeptonModel
 from adapters.provider_adapters.moescape_sdk_chat_provider_adapter import MoescapeModel
 from adapters.provider_adapters.moonshot_sdk_chat_provider_adapter import MoonshotModel
@@ -67,6 +70,7 @@ TEST_MODELS = (
     AnthropicModel,
     TogetherModel,
     AI21Model,
+    LambdaLabsModel,
     CerebrasModel,
     CohereModel,
     FireworksModel,

@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"hermes3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '98'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"bb47a9a0e3aa4c97a248551e38846257","object":"chat.completion","created":1742235268,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*Hmm,
+        the human has just greeted me with a simple \"Hi\". I wonder if they are just
+        being friendly or if they have a specific question or topic in mind. Since
+        they haven''t provided any additional context, I should respond in a friendly
+        manner and perhaps try to engage them in further conversation to better understand
+        their intent.*\n\nHello! It''s nice to meet you. How are you doing today?
+        Is there anything in particular I can assist you with or a topic you''d like
+        to discuss? I''m always happy to chat, answer questions, or help out however
+        I can."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":118,"total_tokens":134,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e7842cdb54761-DFW
+      content-length:
+      - '1148'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:14:28 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=2CxE10IXfJ6tXw1aYJHRSP6_a8Xmy6_9DlxaSqPNp5I-1742235268-1.0.1.1-MOiStsPo2vOAYS.lZAw8Wv5giMIJxDn.VIatX2bfbImXzjC2u2xbAhqrefkul4O55K9LspKjRgghbLQ79vltO9OkHWB4kg5Cn2SHXdYnL_I;
+        path=/; expires=Mon, 17-Mar-25 18:44:28 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 44850681-60d9-4b19-8a5e-ce39fa152396
+      x-response-time:
+      - '3.567'
+    status:
+      code: 200
+      message: OK
+version: 1

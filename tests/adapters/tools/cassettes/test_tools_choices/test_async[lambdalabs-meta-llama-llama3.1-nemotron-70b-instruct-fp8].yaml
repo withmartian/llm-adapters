@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-nemotron-70b-instruct-fp8","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '454'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-e30f0913-488c-4bb7-8cd1-08d514ff55be","object":"chat.completion","created":1742235351,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"chatcmpl-tool-38c76785e8b64a1da3b1229f3b8a1e7e","type":"function","function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate random number with tools specified, range 1-10\"}"}}]},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":184,"completion_tokens":18,"total_tokens":202,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e7a610b37c871-DFW
+      content-length:
+      - '842'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:15:53 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=bbEewCSi3rmoZHI3j6PF.yHtXzTx4L0nk2jXA4ch18Q-1742235353-1.0.1.1-fsnDllHo26P5kKOY3jkPyvMI580U5SvxaZKNa.t8nkspsb1Z.vxZBdIAVj5rFzBLso4z4p_OJi6OeqQlW2JLK4Es1p9WXJKZgRJI1q7VztY;
+        path=/; expires=Mon, 17-Mar-25 18:45:53 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - e30f0913-488c-4bb7-8cd1-08d514ff55be
+      x-response-time:
+      - '2.416'
+    status:
+      code: 200
+      message: OK
+version: 1

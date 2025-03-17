@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"hermes3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '226'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"1575e0db06d646dca949d5fbda197ef7","object":"chat.completion","created":1742235005,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"
+        "},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":36,"completion_tokens":2,"total_tokens":38,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e71ef39846c6f-DFW
+      content-length:
+      - '596'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:10:05 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=e3VyVVJ0b2yuT2pyFrfYrY6wh9sLKsj.qfXITKLUNnQ-1742235005-1.0.1.1-pSu3mhlLzSuf_eMFHUZX0x_rBFu0gO5MOyG2qbX41q0ClDSLGd9XJ6nHl._.PCiAgoZOzxag6We8pTfzEPFCUNXX3iYG_K_yPzHGj.HL_a4;
+        path=/; expires=Mon, 17-Mar-25 18:40:05 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - ca37cdea-045a-4dd7-b64c-4493763fdfcc
+      x-response-time:
+      - '0.123'
+    status:
+      code: 200
+      message: OK
+version: 1

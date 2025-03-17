@@ -606,6 +606,6 @@ class SDKChatAdapter(
             except Exception as e:
                 raise AdapterException(f"Error in streaming response: {e}") from e
             finally:
-                response.close()
+                await response.close()
 
         return AdapterStreamAsyncCompletion(response=stream_response())

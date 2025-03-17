@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-nemotron-70b-instruct-fp8","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '389'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-76041089-32a6-4324-bd87-4f95198e01d4","object":"chat.completion","created":1742235290,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Here
+        is the JSON response for the function call with its proper arguments as per
+        your request:\n\n```json\n{\n  \"name\": \"generate\",\n  \"parameters\":
+        {\n    \"prompt\": \"random number in range 1-10 with tools specified\"\n  }\n}\n```\n\nNote
+        that since the `prompt` parameter description includes examples of specific
+        numbers, I''ve phrased the prompt to clearly convey the desire for a random
+        number within a specified range (1-10), while also mentioning \"tools specified\"
+        as per your original prompt. However, please clarify if \"tools specified\"
+        refers to a specific aspect of the generation process, as this detail might
+        not directly influence the number generation logic within this function''s
+        apparent simplexity."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":184,"completion_tokens":148,"total_tokens":332,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e78e76c0b2cbd-DFW
+      content-length:
+      - '1362'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:14:55 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=JF8ZWNDHOo1NyoGyre63R4N.YSkSdko6MVDFNedMmTA-1742235295-1.0.1.1-DLeF8kDyhCyhFTPVqbw0yele1uqNdEqhFFIQN.iBC4T7vqYz5mCsumLixXv0CLpjD6yIf_k143Lf85mZaSUpCzwEaYkhHsUrfnTdNFFE0X4;
+        path=/; expires=Mon, 17-Mar-25 18:44:55 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 76041089-32a6-4324-bd87-4f95198e01d4
+      x-response-time:
+      - '4.252'
+    status:
+      code: 200
+      message: OK
+version: 1

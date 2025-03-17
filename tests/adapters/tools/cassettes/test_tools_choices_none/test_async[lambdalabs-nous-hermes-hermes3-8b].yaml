@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"hermes3-8b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '386'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-555f017b-a460-4fc6-b775-b29eeaf03ab2","object":"chat.completion","created":1742237518,"model":"hermes3-8b","choices":[{"index":0,"message":{"role":"assistant","content":"Sure,
+        I can help you generate a random number between 1 and 10 using common programming
+        tools. Here are examples for a few popular languages:\n\nPython:\n\n```python\nimport
+        random\nrandom_number = random.randint(1, 10)\nprint(random_number)\n```\n\nJavascript:\n\n```javascript\nlet
+        randomNumber = Math.floor(Math.random() * 10) + 1;\nconsole.log(randomNumber);\n```\n\nJava:\n\n```java\nimport
+        java.util.Random;\n\npublic class RandomNumber {\n    public static void main(String[]
+        args) {\n        Random random = new Random();\n        int randomNumber =
+        random.nextInt(10) + 1;\n        System.out.println(randomNumber);\n    }\n}\n```\n\nC#:\n\n```csharp\nusing
+        System;\n\nclass Program\n{\n    static void Main()\n    {\n        Random
+        random = new Random();\n        int randomNumber = random.Next(1, 11);\n        Console.WriteLine(randomNumber);\n    }\n}\n```
+        \n\nDo you need anything else?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":32,"completion_tokens":198,"total_tokens":230,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921eaf473aca478b-DFW
+      content-length:
+      - '1510'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:51:59 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=CMCYf5JkUqKcnNTMW8qNqufIh6R3Iljcc92RirbmLjs-1742237519-1.0.1.1-vq727sdqUJSPSpYgzhG3GBd8mqTNBYKBDFS7l3i8MGd8dJOcJ2xJZoX.bZmgO89_x83fuj3MmhQdvGaT_FqF37yhYTe133qhIkxhn8wzdKM;
+        path=/; expires=Mon, 17-Mar-25 19:21:59 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 555f017b-a460-4fc6-b775-b29eeaf03ab2
+      x-response-time:
+      - '1.419'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-8b-instruct","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '396'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-5ec20e18-c0e1-4016-b686-a74e9dedd981","object":"chat.completion","created":1742235365,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"I
+        can generate a random number between 1 and 10 using Python''s `random` module.\n\n```python\nimport
+        random\n\ndef generate_random_number():\n    \"\"\"Generate a random number
+        between 1 and 10.\"\"\"\n    return random.randint(1, 10)\n\nrandom_number
+        = generate_random_number()\nprint(f\"Random Number: {random_number}\")\n```\n\nAlternatively,
+        if you want to use a JavaScript tool with a random number generator built
+        into browsers:\n\n```javascript\nfunction generateRandomNumber() {\n    return
+        Math.floor(Math.random() * 10) + 1;\n}\n\nlet randomNumber = generateRandomNumber();\nconsole.log(randomNumber);\n```\n\nIn
+        both cases, when you run the code, it will output a random number between
+        1 and 10."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":47,"completion_tokens":155,"total_tokens":202,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e7ab77c074605-DFW
+      content-length:
+      - '1326'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:16:06 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=GQIi_Ax4K.cSFosXabvEUQURXFtRUWKZrK1XuUQY3vU-1742235366-1.0.1.1-XwjNUWYzuhun0NX_bQ28hHaIk1FGl5pFqPCA03K_OnXNx4iF.xHRr_4m1e0SkYxHNmsVWadiQCLsWzNbdqo52JZd.Uw99CzwYMmjcRvbUQk;
+        path=/; expires=Mon, 17-Mar-25 18:46:06 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 5ec20e18-c0e1-4016-b686-a74e9dedd981
+      x-response-time:
+      - '1.096'
+    status:
+      code: 200
+      message: OK
+version: 1

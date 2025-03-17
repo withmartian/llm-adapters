@@ -91,12 +91,12 @@ MODELS: list[Model] = [
     #     context_length=200000,
     #     completion_length=4096,
     # ),
-    AnthropicModel(
-        name="claude-3-sonnet-20240229",
-        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
-        context_length=200000,
-        completion_length=4096,
-    ),
+    # AnthropicModel(
+    #     name="claude-3-sonnet-20240229",
+    #     cost=Cost(prompt=3.00e-6, completion=15.00e-6),
+    #     context_length=200000,
+    #     completion_length=4096,
+    # ),
     # AnthropicModel(
     #     name="claude-3-sonnet-latest",
     #     cost=Cost(prompt=3.0e-6, completion=15.0e-6),

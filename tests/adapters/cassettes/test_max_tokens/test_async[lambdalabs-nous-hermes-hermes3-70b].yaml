@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"hermes3-70b","max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '83'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"86c692a60cb840149abb860765a089a6","object":"chat.completion","created":1742235030,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*The
+        human has greeted me with a simple \""},"finish_reason":"length","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":10,"total_tokens":20,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e728ac98166dd-DFW
+      content-length:
+      - '640'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:10:30 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=UcRd03NIIoLzrQD1u.hw9Ejuwba1Q7n8AVeAdwtKDw8-1742235030-1.0.1.1-H3LXyEhFwEoPr33JtTKavd89yKCftcZeVa4LGjtZUZYnGW_otWjq3F1GkHZMOU6ycMM9A3NMYHsXxo6kIyJhFdczPEUglVwvhWXm4mqGq8g;
+        path=/; expires=Mon, 17-Mar-25 18:40:30 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - d37d7136-1567-43ab-99b9-e922ac45943b
+      x-response-time:
+      - '0.422'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,96 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-nemotron-70b-instruct-fp8","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '410'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-c699e422-2239-43fe-a1d2-44947bc133a9","object":"chat.completion","created":1742237519,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Since
+        you requested a random number with tools specified but didn''t list any specific
+        tools, I''ll outline a few common methods to generate a random number between
+        1 and 10, each using a different \"tool\". Please choose the method that aligns
+        with your requirements or preferences:\n\n### 1. **Online Random Number Generator
+        Tool**\n- **Tool:** Any online random number generator (e.g., Random.org,
+        Google''s \"Random Number Generator\" search feature)\n- **How to:**\n  1.
+        Open a web browser.\n  2. Navigate to an online random number generator (e.g.,
+        https://www.random.org/ or simply type \"random number generator\" in Google
+        and use the featured tool).\n  3. Set the range from 1 to 10.\n  4. Click
+        \"Generate\" to get your random number.\n\n### **Generated Number (hypothetical,
+        as it''s an online tool):** 7\n\n### 2. **Microsoft Excel or Google Sheets**\n-
+        **Tool:** Microsoft Excel or Google Sheets\n- **How to:**\n  1. Open a new
+        spreadsheet in your chosen application.\n  2. In a cell, type `=RANDBETWEEN(1,10)`
+        (for Excel) or `=RANDbetween(1,10)` (for Google Sheets, though `RAND` alone
+        isn''t range-specific, so for a range in Google Sheets, you might need to
+        use `=RANK.RAND()`, but for simplicity and direct range specification, let''s
+        focus on Excel''s direct method for this example).\n  3. Press Enter to generate
+        the number.\n\n### **Generated Number (hypothetical, as it''s software-dependent):**
+        4\n\n### 3. **Command Line (Windows, macOS, Linux)**\n- **Tool:** Command
+        Prompt (Windows), Terminal (macOS, Linux)\n- **How to:**\n  - **Windows (using
+        PowerShell, which is also accessible via Command Prompt):**\n    1. Open Command
+        Prompt and type `powershell -Command \"(Get-Random -Minimum 1 -Maximum 11).ToString()\"`
+        and press Enter.\n  - **macOS/Linux:**\n    1. Open Terminal.\n    2. Type
+        `echo $((RANDOM % 10 + 1))` and press Enter.\n\n### **Generated Number (hypothetical,
+        as it''s command-dependent):** 9\n\n### **Your Random Number (picked for demonstration):**\nGiven
+        the nature of this task, I''ve randomly selected one for demonstration purposes:
+        **5**\n\nIf you have a specific tool in mind and would like tailored instructions,
+        please provide the name or type of tool (e.g., programming language, software,
+        website), and I''ll do my best to assist you!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":27,"completion_tokens":572,"total_tokens":599,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921eaf521b0428ab-DFW
+      content-length:
+      - '2912'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:52:16 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=zFEL8A0RuF3Agcbmc6jDr1DTUiFmFBz_pQynOS94HlM-1742237536-1.0.1.1-mIBi1S6IJkglheqZKfB5yja1O1qv9g04.seIrDqt5AkVyZYxvLuV5WCgCcqy_qiErbIbeGcdkFjyzB6n8kKIe0FkEuW9zEBKfzmB6i6q5rw;
+        path=/; expires=Mon, 17-Mar-25 19:22:16 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - c699e422-2239-43fe-a1d2-44947bc133a9
+      x-response-time:
+      - '16.435'
+    status:
+      code: 200
+      message: OK
+version: 1

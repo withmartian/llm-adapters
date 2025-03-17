@@ -1,0 +1,79 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8","n":2}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '96'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-6fb84683-ac48-44fb-a7df-813c3d9a518a","object":"chat.completion","created":1742235072,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"**Hello!**\n\nIt''s
+        nice to meet you. Is there something I can help you with or would you like
+        to:\n\n1. **Chat about a topic** (e.g., hobbies, movies, books, technology)?\n2.
+        **Ask a question** (e.g., general knowledge, history, science, or more)?\n3.
+        **Play a text-based game** (e.g., 20 Questions, Hangman, Word Chain)?\n4.
+        **Generate creative content** (e.g., story, poem, character backstory)?\n5.
+        **Discuss a problem or project** you''re working on and need advice or guidance
+        on?\n6. **Something else** (please specify, and I''ll do my best to accommodate
+        your request)?\n\nLet me know, and I''ll respond accordingly!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}},{"index":1,"message":{"role":"assistant","content":"**Hello!**\n\nIt''s
+        nice to meet you. Is there something I can help you with or would you like
+        to:\n\n1. **Chat about a topic** (e.g., hobbies, movies, books, technology,
+        etc.)?\n2. **Ask a question** on a specific subject (e.g., history, science,
+        health, etc.)?\n3. **Play a game** (e.g., 20 Questions, Hangman, Word Chain,
+        etc.)?\n4. **Generate ideas** for a project or creative pursuit?\n5. **Something
+        else** (please specify)?\n\nPlease respond with the number of your chosen
+        activity, or describe what''s on your mind!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":297,"total_tokens":313,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e7390dd962e6a-DFW
+      content-length:
+      - '2092'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:11:16 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=E08XMgjeZC7ai66i3SnU33bY9IGlqZvMk.Y1FpY61VE-1742235076-1.0.1.1-bkvOtUZpVDtb3gT1nasddxZMXsKQHomLq34Q3DVKrbvEGdeWYH2yh9032TJ_SQDtgrmHaZ3u2dvz54pS69lZMohBxDpjqmIMAX6vrFy1Ws0;
+        path=/; expires=Mon, 17-Mar-25 18:41:16 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 6fb84683-ac48-44fb-a7df-813c3d9a518a
+      x-response-time:
+      - '4.618'
+    status:
+      code: 200
+      message: OK
+version: 1

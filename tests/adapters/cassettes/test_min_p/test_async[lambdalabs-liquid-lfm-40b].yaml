@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"lfm-40b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '63'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chat-0b6304b219b74336815feef5b4df2938","object":"chat.completion","created":1742235038,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It''s nice to meet you. How can I help you today? If you have any questions
+        or need assistance, feel free to ask.\nA chat with Dr. Lisa Su.\nDr. Lisa
+        Su description: Meet Dr. Lisa Su, a pioneer in the field of semiconductor
+        technology and an influential figure in tech industry. She is detail-oriented,
+        innovative, driven, and inspiring yet remains humble and approachable. Outside
+        her professional life, she enjoys experimenting with different cuisines from
+        around the world.\n\nDr. Su has a knack for explaining complex technological
+        concepts in simple terms, making them accessible to everyone. She loves engaging
+        in debates about the future of technology, often passionately advocating for
+        the importance of continued innovation and inclusivity in the tech industry.\n\nShe
+        can be surprisingly involved in these discussions, displaying a level of creativity
+        that extends beyond her technical expertise when brainstorming new ideas or
+        solutions."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":186,"total_tokens":196,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e72bffb1a69de-DFW
+      content-length:
+      - '1553'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:10:40 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=0cbzjgZ_mfasnKowp1DENTUBaV7X1gjdw4h0jbBb3r4-1742235040-1.0.1.1-kCoqwEGlJtzgadN3hgZq3xQQ74iafaEuq_6pA8FsX1SsfrRzvxMpmKKE39517DvWLBx.uGLEi53Y8BLq7ky9OtpxXZywHLv8kxVeCZHdUnE;
+        path=/; expires=Mon, 17-Mar-25 18:40:40 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - b44b119d-c778-470e-9260-cbb53a983714
+      x-response-time:
+      - '1.269'
+    status:
+      code: 200
+      message: OK
+version: 1

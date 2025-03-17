@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"hermes3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '261'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"46f3033e2f574d738a3df80d1b4cd4f9","object":"chat.completion","created":1742234971,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*The
+        human has greeted me multiple times in a row. I wonder if they are just being
+        friendly or if there is a specific reason they keep saying \"Hi\". In any
+        case, I should respond in a warm and friendly manner to establish a good rapport.*\n\nHi
+        there! It''s nice to meet you. How are you doing today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":46,"completion_tokens":69,"total_tokens":115,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e710f3f15a918-DFW
+      content-length:
+      - '897'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:09:31 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=M9aMu4Fu.E8SedX4aWWKB4DKPksU_0.tNcH_.Ln3zdo-1742234971-1.0.1.1-JvfSXFU7xbVPq_iWBe6yy53oatGn95e5RhAZaquZz0kOBeadiaOpBV0NvUepZkEomNhlul86wddeWo4j0j7q.FNfrIqnZ6NR4I58hxnQgLc;
+        path=/; expires=Mon, 17-Mar-25 18:39:31 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - d9955a59-8c2c-419c-89f7-5370e8e59a97
+      x-response-time:
+      - '2.174'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '284'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-91753000-06fe-43d7-8ca0-00ee04f5e182","object":"chat.completion","created":1742234962,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"**Okay,
+        let''s break the \"Hi\" loop!**\n\nNow that we''ve established a friendly
+        greeting, how about we have a more engaging conversation? Here are some ideas
+        to get us started:\n\n1. **Chat about a topic**:\n\t* Hobbies (e.g., music,
+        movies, books, sports)\n\t* Travel experiences\n\t* Future goals or aspirations\n\t*
+        Favorite foods or cuisines\n2. **Play a game**:\n\t* 20 Questions (think of
+        an object, and I''ll try to guess)\n\t* Hangman (I''ll think of a word, and
+        you try to guess)\n\t* Word Chain (we take turns coming up with words that
+        start with the last letter)\n3. **Generate a story**:\n\t* I''ll start telling
+        a story, and you can continue it\n\t* You can give me a prompt, and I''ll
+        start the story\n4. **Ask me a question**:\n\t* About a particular subject
+        (e.g., history, science, technology)\n\t* For advice or suggestions on something\n\nWhich
+        direction would you like to take our conversation?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":47,"completion_tokens":232,"total_tokens":279,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e70e3ffc56c1f-DFW
+      content-length:
+      - '1544'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:09:29 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=kobmO8fT1JcckVjErMEMGEqnQLfJ7ujEHv9lFBCdvxI-1742234969-1.0.1.1-iSzB_uNWFy4xT8lm2mTD0HdNBwH65BS_aqvwHsL5AaMP5M1u3W3w_HMUZvpelfWE2zCCgWcKP3Smr.cEtu1kcUVwqODcKh1rcVbUmCPovlA;
+        path=/; expires=Mon, 17-Mar-25 18:39:29 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 91753000-06fe-43d7-8ca0-00ee04f5e182
+      x-response-time:
+      - '6.618'
+    status:
+      code: 200
+      message: OK
+version: 1

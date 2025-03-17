@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"hermes3-70b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '387'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"11e107c5bb5f47fc81d5b44062a4e24a","object":"chat.completion","created":1742237545,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"Here
+        are 10 random numbers between 1 and 10, generated using the tools specified:\n\n1.
+        7 (generated using Python''s random.randint(1, 10))\n2. 3 (generated using
+        Google Sheets'' RANDBETWEEN(1, 10))\n3. 9 (generated using Excel''s RANDBETWEEN(1,
+        10))\n4. 2 (generated using JavaScript''s Math.floor(Math.random() * 10) +
+        1)\n5. 5 (generated using R''s sample(1:10, 1))\n6. 1 (generated using MATLAB''s
+        randi([1, 10]))\n7. 8 (generated using C++''s rand() % 10 + 1)\n8. 4 (generated
+        using Java''s new Random().nextInt(10) + 1)\n9. 6 (generated using Ruby''s
+        rand(1..10))\n10. 10 (generated using Swift''s Int.random(in: 1...10))"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":21,"completion_tokens":208,"total_tokens":229,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921eafba9aed474b-DFW
+      content-length:
+      - '1215'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:52:25 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=e6.fGy9U_ot7Y3TeE6KEG.9qYFhPIrVvg4o0_z.2v2s-1742237545-1.0.1.1-GBsfGPE2ob7CPltoefH9I9nLycYbiF4wZdgMZ4tyfFL4rpKbecf9ma7Er1.9sc6aU0zkb6AVFgk6O1rLXomXN5b4FBY3t7qUDcefJMXzStE;
+        path=/; expires=Mon, 17-Mar-25 19:22:25 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - f1491731-af0e-4b0c-b376-972ddb4e1edf
+      x-response-time:
+      - '9.003'
+    status:
+      code: 200
+      message: OK
+version: 1

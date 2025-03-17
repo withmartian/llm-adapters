@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '90'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-51d0a348-e592-4075-9a40-b59d3178fd46","object":"chat.completion","created":1742235232,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It''s nice to meet you. Is there something I can help you with or would you
+        like to:\n\n1. **Chat for fun** (talk about a hobby, favorite movie/TV show,
+        or play a text-based game)?\n2. **Ask a question** (on any topic, from science
+        and history to entertainment and culture)?\n3. **Seek advice** (on a personal
+        or professional matter)?\n4. **Generate ideas** (for a project, story, or
+        creative pursuit)?\n5. **Learn something new** (pick a topic you''re curious
+        about, and I''ll provide an overview)?\n6. **Play a language game** (e.g.,
+        Hangman, Word Chain, or 20 Questions)?\n7. **Something else** (please specify,
+        and I''ll do my best to accommodate your request)?\n\nLet me know, and I''ll
+        get started!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":179,"total_tokens":195,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e77792a12eab4-DFW
+      content-length:
+      - '1340'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:13:57 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=ai.c8KFzCqhJHjEvhSekNeU.YAXgeUPp0G7oezDNnkw-1742235237-1.0.1.1-u3G6mc8da.M6dOf9EIywBeeaqfZZHSAPMZYnzTniiuGMYvJGHYdoKXVuIdhHgDfcuJILNQ46X0UpWwnTLFouzquTsqJuX2J.WfXyCZzemIY;
+        path=/; expires=Mon, 17-Mar-25 18:43:57 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 51d0a348-e592-4075-9a40-b59d3178fd46
+      x-response-time:
+      - '5.201'
+    status:
+      code: 200
+      message: OK
+version: 1

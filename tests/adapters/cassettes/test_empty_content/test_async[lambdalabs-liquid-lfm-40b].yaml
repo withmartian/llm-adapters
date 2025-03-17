@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"lfm-40b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '222'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chat-01cf10ee1eda402bb414cfba468afc8d","object":"chat.completion","created":1742234982,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Sure,
+        I''ll do my best to answer any questions you have or generate examples based
+        on the guidelines provided. Please let me know your specific requests or topics
+        you would like examples of. For instance, if you''re looking for mathematical
+        problems, story prompts, or examples of how to perform certain tasks, just
+        let me know!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":39,"completion_tokens":68,"total_tokens":107,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e71616b96287b-DFW
+      content-length:
+      - '924'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:09:43 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=BffO7YnQ22VSVdGs4ohvnDCf5StIjwBURu81jdYca74-1742234983-1.0.1.1-C9RXUh4ZN7eP8HRgoJ356qeo.y.0TpjSlhFCw6HK5uC_3WzZJtzR71ZMI9P6iutF7HRi72PBlCz2oSn2ZDO3S6Nw8MqA1u4i5O8pL0Yl8nk;
+        path=/; expires=Mon, 17-Mar-25 18:39:43 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - d2c6548d-293c-41fb-bcaf-6efc63c10352
+      x-response-time:
+      - '0.56'
+    status:
+      code: 200
+      message: OK
+version: 1

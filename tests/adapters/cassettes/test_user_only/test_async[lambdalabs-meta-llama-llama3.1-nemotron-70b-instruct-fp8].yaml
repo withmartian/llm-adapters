@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '90'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-54560bc3-2afc-4602-b675-d373ccb38191","object":"chat.completion","created":1742235209,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"**Hi!**\n\nWelcome
+        to our conversation! I''m happy to chat with you. Here are some ways we can
+        get started:\n\n1. **Ask a Question**: Got something on your mind? Ask away,
+        and I''ll do my best to provide a helpful answer.\n2. **Discuss a Topic**:
+        Pick a topic you''re interested in, such as:\n\t* Hobbies (e.g., movies, books,
+        sports, travel)\n\t* Technology (e.g., AI, coding, gadgets)\n\t* Learning
+        (e.g., history, science, languages)\n\t* Creativity (e.g., writing, art, music)\n3.
+        **Play a Game**:\n\t* 20 Questions: Think of an object, and I''ll try to guess
+        what it is.\n\t* Word Chain: We take turns saying a word that starts with
+        the last letter of the previous word.\n\t* Hangman: I''ll think of a word,
+        and you try to guess it by suggesting letters.\n4. **Generate Something**:\n\t*
+        **Story**: I can start telling a story, and you can continue it, or vice versa.\n\t*
+        **Joke**: I''ll share a joke, or you can try to make me laugh with one.\n\t*
+        **Character**: I can generate a character, and you can develop a story around
+        them.\n5. **Just Chat**: Sometimes, no agenda is the best agenda! We can simply
+        have a casual conversation and see where it takes us.\n\nWhat sounds appealing
+        to you, or do you have something entirely different in mind?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":319,"total_tokens":335,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e76e8ada0e966-DFW
+      content-length:
+      - '1880'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:13:38 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=uJLm65wn2iZelciy5NeqAiDtvbpLY5TuvZX2pA.xd.c-1742235218-1.0.1.1-bTJtWgJ4kK1FDsghgTR40s5R.biWSIQY4FbARZc7eE38w5fS7DkahAYfUrwIiMpm.NbtPZ1_3VNviWvhumLkt7JxuNMAUV9KgTtRZYCrec0;
+        path=/; expires=Mon, 17-Mar-25 18:43:38 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 54560bc3-2afc-4602-b675-d373ccb38191
+      x-response-time:
+      - '9.224'
+    status:
+      code: 200
+      message: OK
+version: 1

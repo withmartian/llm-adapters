@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"hermes3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '105'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"d5f81d1791ea456297867ab4b9b2a2bd","object":"chat.completion","created":1742240562,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you haven''t actually typed anything in your message. Is there
+        something specific I can assist you with today? Feel free to ask me any questions
+        or let me know how I can help!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":41,"total_tokens":57,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921ef9915b64e587-DFW
+      content-length:
+      - '784'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 19:42:42 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=2EJ5pYfpDTJyOAphlvYHmGz9MbSGRN34CTYbXyh6jLY-1742240562-1.0.1.1-BOU5nh1wy35ahR0K825MAe4aFQql1QUKZQWl2XRj973u4Ur89PMdLo0h.AGb6iPToHoYbtcyx1ooj6LGNfpefV98x.MK_0MoQVQWZQmNFrg;
+        path=/; expires=Mon, 17-Mar-25 20:12:42 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - ad267d70-c36d-41e9-b3da-f6570fe4359c
+      x-response-time:
+      - '1.32'
+    status:
+      code: 200
+      message: OK
+version: 1

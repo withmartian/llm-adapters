@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"lfm-40b","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '124'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chat-43035868c3e14e6ea5c3c0743ddf3b1b","object":"chat.completion","created":1742234879,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"{\n
+        \t\"name\" \t\t: \t\"John Doe\",\n \t\"age\" \t\t: \t30,\n \t\"isStudent\"\t:
+        \tfalse,\n \t\"courses\" \t: \t[\n    \t\t\t\t\t\"Math\",\n    \t\t\t\t\t\"Physics\",\n    \t\t\t\t\t\"Chemistry\"\n    \t\t\t\t]\n}"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":14,"completion_tokens":102,"total_tokens":116,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e6eda8a374636-DFW
+      content-length:
+      - '813'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:08:18 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=rBYJ6SvBq9IpOFrgVqQqsR9GZqnAShxm9UwIetzUB_c-1742234898-1.0.1.1-hflfIVUYXmUOmPBpd54RsMKllXMcWD6LdyY8PlsH6BRsin2FyglTYaZJx7yRI9Cxdw2FT4tLich03R3dBtzXgz62dlujAwiHFGS1JEBqffY;
+        path=/; expires=Mon, 17-Mar-25 18:38:18 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 8d2d5909-55a8-4567-bad8-e5d46e97e825
+      x-response-time:
+      - '19.14'
+    status:
+      code: 200
+      message: OK
+version: 1

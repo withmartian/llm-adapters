@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"hermes3-405b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '121'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"ef2a6f1b9dd64e7a89bf061ab1210d93","object":"chat.completion","created":1742234851,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"*The
+        human has greeted me twice in a row now. I''m not sure if they are just being
+        friendly or if they are expecting a more substantial response from me. I should
+        probably engage them in some polite conversation.*\n\nHello! It''s nice to
+        meet you. How are you doing today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":60,"total_tokens":76,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e6e234d096902-DFW
+      content-length:
+      - '867'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:07:31 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=D70aHBH..foz8DRawn_fJ_JtZLIUjytVCy8TgpYjN30-1742234851-1.0.1.1-dNdugnzmh82AovuoZA80G8IYGenFQLwvuQdtB5NOnTTcnfqe8MVwnFjpcmo7ui9O630.gxHOC6bQyxg81NhS0uAREqNHVzHPxoMRkwzkEJA;
+        path=/; expires=Mon, 17-Mar-25 18:37:31 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - ad365fd6-248f-453c-ab71-fc87d829c798
+      x-response-time:
+      - '1.851'
+    status:
+      code: 200
+      message: OK
+version: 1

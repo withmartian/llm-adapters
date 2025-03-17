@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"hermes3-70b","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '81'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"message":"json: cannot unmarshal string into Go struct field ChatCompletionRequest.stop
+        of type []string","type":"invalid_request_error"}
+
+        '
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e73e3ee8f6f46-DFW
+      content-length:
+      - '140'
+      content-type:
+      - text/plain; charset=utf-8
+      date:
+      - Mon, 17 Mar 2025 18:11:25 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=.ZmNr4utnmjWGiPelpEHwtIyMaRxuphWtC7hFJ7tBWY-1742235085-1.0.1.1-M.8rhZnCoSefXGHMjNBAdea2j8B2X6J24g69G8mrEEQw8bRPVQrdc90paVnu2y8eh71ElV2qyf1uMAPAARVexNmVw8qEZaUAubASVkIWvZM;
+        path=/; expires=Mon, 17-Mar-25 18:41:25 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 400
+      message: Bad Request
+version: 1

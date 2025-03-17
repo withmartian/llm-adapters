@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"hermes3-70b","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '128'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"8cca0b670ad641ac96b39c2b6a04a1af","object":"chat.completion","created":1742234918,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"Here
+        is a simple JSON object:\n\n{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"city\":
+        \"New York\",\n  \"hobbies\": [\n    \"reading\",\n    \"traveling\",\n    \"photography\"\n  ],\n  \"married\":
+        false\n}"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":14,"completion_tokens":61,"total_tokens":75,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e6fc52f962fd4-DFW
+      content-length:
+      - '808'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:08:38 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=4mwo018F_kpM6AdO8u70hgje1o8dorhUozoUhIkPEa8-1742234918-1.0.1.1-9h7wxHKhVAMxqTaLlO5v2x46SdYpPVHUJJiSm2iKf9GzY8wh2E74AnhNvY5bW4dFAjQSFqQjhO_F8yBVCqXIh8GyxctPDG_uHOXfKgtpBoU;
+        path=/; expires=Mon, 17-Mar-25 18:38:38 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 08f164b0-5e64-4ed9-8fbd-be035fb442ab
+      x-response-time:
+      - '1.769'
+    status:
+      code: 200
+      message: OK
+version: 1

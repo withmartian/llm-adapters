@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.2-3b-instruct","n":2}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '82'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-5df585c0-2bf3-4af4-9073-6c18d2208695","object":"chat.completion","created":1742235071,"model":"llama3.2-3b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}},{"index":1,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":36,"completion_tokens":20,"total_tokens":56,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e738a999cf095-DFW
+      content-length:
+      - '1003'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:11:11 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=R4NZtANW7U5mLG9gaT0r6ZjsyPok2465vUlLeaE3R4s-1742235071-1.0.1.1-yxWliGCtdVYxw5sw72I3FvmTH6zjM94KkGuJc01r02ldR3Z.Ltzdyi61.0oqvXx1JFcJNMBjU6Y9XuJWsFuIDCo3.3hvBIF7_1Q3Q3XlQZg;
+        path=/; expires=Mon, 17-Mar-25 18:41:11 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 5df585c0-2bf3-4af4-9073-6c18d2208695
+      x-response-time:
+      - '0.102'
+    status:
+      code: 200
+      message: OK
+version: 1

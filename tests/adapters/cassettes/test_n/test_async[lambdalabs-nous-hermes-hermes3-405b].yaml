@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"hermes3-405b","n":2}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '74'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"431740fbe66f4b2e94b0e786471ca717","object":"chat.completion","created":1742235067,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"*The
+        human has greeted me with a simple \"Hi\". I should respond in kind with a
+        friendly greeting to establish a positive rapport.*\n\nHello! It''s nice to
+        meet you. How are you doing today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}},{"index":1,"message":{"role":"assistant","content":"*Hmm,
+        the human just said \"Hi\". That''s a very common greeting. I wonder if they
+        are just being friendly or if they have a specific question or topic in mind.
+        I should respond in a warm and friendly manner and see where the conversation
+        goes from there.*\n\nHello! It''s nice to meet you. How are you doing today?
+        Is there anything in particular I can assist you with?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":125,"total_tokens":135,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e736159c92e7e-DFW
+      content-length:
+      - '1473'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:11:07 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=e8zr_eUHDR679MbD5A8oVEsthQfuWBpSDOvY.ruNxJE-1742235067-1.0.1.1-p5gxPUt_Jix7PQfV1pAnwx2fSVfOs6PT9FLhVqiD2w4kpzjiG5L_ns.iZ7iOrLFa96T375iMU_1JOElGSTvRcL70DYJZ9x.JmWsUMYEbfho;
+        path=/; expires=Mon, 17-Mar-25 18:41:07 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 85575ed6-6b85-4bdb-86b4-14d1c7ab34e1
+      x-response-time:
+      - '3.291'
+    status:
+      code: 200
+      message: OK
+version: 1

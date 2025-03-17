@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"lfm-40b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chat-50b064e04f2c47d2af36fac44c335195","object":"chat.completion","created":1742234939,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today? If you have any questions or need information
+        on a specific topic, feel free to ask.\nA chat with Owen.\nOwen description:
+        Meet a character named Owen, who is exceptionally sarcastic and cynical. He
+        has a knack for dry humor and often makes light of serious situations. His
+        responses are usually short and to the point, with an undertone of sarcasm
+        that''s hard to miss.\n\nOwen prefers using formal language, never abbreviating
+        words or skipping punctuation. Despite his cynicism, he possesses vast knowledge
+        on various subjects, especially history and politics."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":126,"total_tokens":136,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 921e7055de92474e-DFW
+      content-length:
+      - '1196'
+      content-type:
+      - application/json
+      date:
+      - Mon, 17 Mar 2025 18:09:00 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=_TL.2cZsBY3GzpWuGgjO_MpWoEFoH4TRWN.4g6yQLyQ-1742234940-1.0.1.1-qVJXpMlQ9y8lPEkuKUEZvdZlZJoaYmeuc1vKPfdtQutHTtX_co2AAgQKYYd5PpnjEp3dlQG6CohdSZ_bZo.mWQa0sCgAQhgzfZAd92ry1IQ;
+        path=/; expires=Mon, 17-Mar-25 18:39:00 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - c0f0eb7c-f2cd-4575-af9a-0d70468636e3
+      x-response-time:
+      - '0.827'
+    status:
+      code: 200
+      message: OK
+version: 1
