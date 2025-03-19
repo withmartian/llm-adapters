@@ -20,6 +20,8 @@ from llm_adapters.types import (
     AdapterCompletionChunk,
 )
 
+CACHED_PROMPT_TOKEN_DISCOUNT = 0.5
+
 
 class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
     def _call_completion_sync(self) -> Callable[..., Any]:
@@ -101,6 +103,13 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
         response: Completion,
     ) -> AdapterCompletion:
         prompt_tokens = response.usage.prompt_tokens if response.usage else 0
+        cached_prompt_tokens = (
+            response.usage.prompt_tokens_details.cached_tokens
+            if response.usage
+            and response.usage.prompt_tokens_details
+            and response.usage.prompt_tokens_details.cached_tokens
+            else 0
+        )
         completion_tokens = response.usage.completion_tokens if response.usage else 0
         reasoning_tokens = (
             response.usage.completion_tokens_details.reasoning_tokens
@@ -110,10 +119,15 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
             else 0
         )
 
+        uncached_prompt_tokens = prompt_tokens - cached_prompt_tokens
+
         cost = (
-            self.get_model().cost.prompt * prompt_tokens
-            + self.get_model().cost.completion * completion_tokens
-            + reasoning_tokens * completion_tokens
+            uncached_prompt_tokens * self.get_model().cost.prompt
+            + cached_prompt_tokens
+            * self.get_model().cost.prompt
+            * (1 - CACHED_PROMPT_TOKEN_DISCOUNT)
+            + completion_tokens * self.get_model().cost.completion
+            + reasoning_tokens * self.get_model().cost.completion
             + self.get_model().cost.request
         )
 
