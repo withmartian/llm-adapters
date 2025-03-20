@@ -64,6 +64,9 @@ from llm_adapters.types import (
     ChatCompletionCreateArgs,
 )
 
+CACHE_PROMPT_TOKEN_PREMIUM = 0.2
+CACHED_PROMPT_TOKEN_DISCOUNT = 0.1
+
 
 class AnthropicModel(Model):
     vendor_name: str = Vendor.anthropic.value
@@ -384,16 +387,30 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
             else:
                 raise ValueError("Unsupported response")
 
+        cached_creation_input_tokens = (
+            response.usage.cache_creation_input_tokens
+            if response.usage.cache_creation_input_tokens
+            else 0
+        )
+        cached_read_input_tokens = (
+            response.usage.cache_read_input_tokens
+            if response.usage.cache_read_input_tokens
+            else 0
+        )
+
+        cost = (
+            cached_creation_input_tokens * CACHE_PROMPT_TOKEN_PREMIUM
+            + cached_read_input_tokens * CACHED_PROMPT_TOKEN_DISCOUNT
+            + self.get_model().cost.prompt
+            * (response.usage.input_tokens - cached_read_input_tokens)
+            + self.get_model().cost.completion * response.usage.output_tokens
+            + self.get_model().cost.request
+        )
+
         usage = CompletionUsage(
             prompt_tokens=response.usage.input_tokens,
             completion_tokens=response.usage.output_tokens,
             total_tokens=response.usage.input_tokens + response.usage.output_tokens,
-        )
-
-        cost = (
-            self.get_model().cost.prompt * usage.prompt_tokens
-            + self.get_model().cost.completion * usage.completion_tokens
-            + self.get_model().cost.request
         )
 
         return AdapterChatCompletion(
