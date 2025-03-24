@@ -17,11 +17,11 @@ FileTypes = Union[
 ]
 
 
-class CreateFileKwargs(TypedDict, total=False):
+class ExtraKwargs(TypedDict, total=False):
     extra_headers: Headers | None
     extra_query: Query | None
     extra_body: Body | None
     timeout: float | httpx.Timeout | None | NotGiven
 
 
-__all__ = ["FileObject", "CreateFileKwargs", "FileTypes"]
+__all__ = ["FileObject", "ExtraKwargs", "FileTypes"]

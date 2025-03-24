@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '193'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-b97ce78c-2344-4bcb-beb3-86e26dafd8cd","object":"chat.completion","created":1742488690,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems we''re stuck in a loop of greetings! Let''s break the cycle. How about
+        we start a conversation? Here are some options to get us going:\n\n1. **Hobbies**:\n\t*
+        What do you enjoy doing in your free time?\n\t* Is there a new hobby you''re
+        looking to try?\n2. **Technology \u0026 Trends**:\n\t* What''s the latest
+        tech gadget or innovation that interests you?\n\t* Are there any emerging
+        trends you''re following?\n3. **Creative Corner**:\n\t* If you could switch
+        lives with a fictional character for a day, who would it be and why?\n\t*
+        Do you have a favorite book, movie, or TV series you''d like to discuss?\n4.
+        **Assistance \u0026 Advice**:\n\t* Is there something on your mind that you''d
+        like advice on?\n\t* Do you need help with a problem or a project?\n5. **Games
+        \u0026 Fun**:\n\t* Would you like to play a text-based game (e.g., Hangman,
+        20 Questions)?\n\t* I can generate a \"Would you rather...\" scenario for
+        us to explore.\n6. **Something Else (Surprise Me!)**:\n\t* Share something
+        completely off the top of your head, and we''ll see where it takes us!\n\nWhich
+        direction sounds appealing to you, or do you have something entirely different
+        in mind?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":34,"completion_tokens":282,"total_tokens":316,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a36a4a1e6719-DFW
+      content-length:
+      - '1796'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:38:18 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=SSVFLrR143Tl7Iw02sAIvItgQQSvQIkFESfzpk7yWz0-1742488698-1.0.1.1-vE2P.kv8uJ8_uG_cgwd2JdzSnqK9bduJiNY_9qYfrogAKs1eEtBjk4AxiQ9rGD26jSyF25PIToMo83TTcU7kaNyMb6tqziLXi1fw1zRiIME;
+        path=/; expires=Thu, 20-Mar-25 17:08:18 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - b97ce78c-2344-4bcb-beb3-86e26dafd8cd
+      x-response-time:
+      - '8.104'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '92'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-3d554f45-e155-4966-8045-a2f69fc11a61","object":"chat.completion","created":1742488771,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"**Hello!**
+        How can I assist you today? Here are some options to get us started:\n\n1.
+        **Ask a Question**: On any topic, from science and history to entertainment
+        and culture.\n2. **Discuss a Topic**: Pick something that interests you, and
+        let''s dive into a conversation.\n3. **Generate Creative Content**: Need a
+        short story, poem, or even a character backstory? Just provide some prompts.\n4.
+        **Solve a Problem**: Whether it''s a logical puzzle, a personal dilemma, or
+        advice on a project, I''m here to help think it through.\n5. **Play a Game**:
+        We can play text-based games like Hangman, 20 Questions, or Word Chain.\n6.
+        **Learn Something New**: Is there a skill or subject you''re keen to learn
+        more about? I can guide you through the basics and beyond.\n7. **Just Chat**:
+        Sometimes, all we need is someone to talk to. I''m all ears... or rather,
+        all text.\n\nWhich direction would you like to take our interaction? Or feel
+        free to suggest something entirely different!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":11,"completion_tokens":224,"total_tokens":235,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a567bc676b50-DFW
+      content-length:
+      - '1603'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:39:38 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=n.8fDCcV7h78KYBEK99pSjR.o_LwRk1JjZBBr4WQpjM-1742488778-1.0.1.1-5p0O8uGan05vmtwZj1sVJjAqnnnNMLqk6.HKbtt_Gr8FqvoQEZTlgvfuJBDfajjTbOz8XapqDfQcx8ZSg7ApE_.41S1x9qD9sTgNzJ8DKEs;
+        path=/; expires=Thu, 20-Mar-25 17:09:38 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 3d554f45-e155-4966-8045-a2f69fc11a61
+      x-response-time:
+      - '6.397'
+    status:
+      code: 200
+      message: OK
+version: 1

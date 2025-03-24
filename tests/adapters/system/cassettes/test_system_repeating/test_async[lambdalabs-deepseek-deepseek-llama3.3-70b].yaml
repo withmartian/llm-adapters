@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-llama3.3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '271'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-c62df97d-67b6-4e57-a840-6bd84c5679ff","object":"chat.completion","created":1742488904,"model":"deepseek-llama3.3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"Hi\n\n\u003c/think\u003e\n\nHello!
+        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":9,"completion_tokens":14,"total_tokens":23,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a8a3cec4143e-DFW
+      content-length:
+      - '680'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:41:44 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=_Re_X1We6.Mznjla2VA5mtAiCBWAR9uhE1eWfw8deAA-1742488904-1.0.1.1-tg0pq4.OlR0LZ1yi8SLpLrRDRxsG3gq10C_nwlVFo82aMaFU_kousxTefk1QUFfvp2eKkmgAZOlqJm4cl7XTc0rTJBtu4rH.Z88Z5oockzY;
+        path=/; expires=Thu, 20-Mar-25 17:11:44 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - c62df97d-67b6-4e57-a840-6bd84c5679ff
+      x-response-time:
+      - '0.346'
+    status:
+      code: 200
+      message: OK
+version: 1

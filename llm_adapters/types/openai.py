@@ -47,7 +47,11 @@ from openai.types.chat.chat_completion_user_message_param import (
 )
 from openai.resources.files import FileObject
 from openai.types.file_purpose import FilePurpose
-
+from openai.types.shared_params.metadata import Metadata
+from openai.resources.batches import Batch
+from openai.pagination import SyncCursorPage, AsyncCursorPage
+from openai._legacy_response import HttpxBinaryResponseContent
+from openai._base_client import AsyncPaginator
 
 Query = Mapping[str, object]
 Body = object
@@ -86,4 +90,10 @@ __all__ = [
     "ChoiceDelta",
     "FileObject",
     "FilePurpose",
+    "Metadata",
+    "Batch",
+    "HttpxBinaryResponseContent",
+    "SyncCursorPage",
+    "AsyncCursorPage",
+    "AsyncPaginator",
 ]

@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '127'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-08846228-55a7-4fd6-b3cb-48d762781162","object":"chat.completion","created":1742488640,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"How
+        can I assist you today? Do you have:\n\n1. **A question** on a specific topic
+        (e.g., history, science, tech, entertainment)?\n2. **A problem** you''d like
+        help solving (e.g., math, logic, personal advice)?\n3. **A topic** you''d
+        like to **discuss** or explore in depth?\n4. **A creative project** (e.g.,
+        writing, storytelling, world-building) you''d like assistance with?\n5. **Something
+        else** on your mind (feel free to surprise me)?\n\nPlease respond with one
+        of the numbers above, a brief description, or just start talking about what''s
+        on your mind!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":139,"total_tokens":161,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a2307cdee74a-DFW
+      content-length:
+      - '1189'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:37:24 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Z8cC7VeLN3IuomkXZbqHJXQ1wPH2SlFd87.MAYRmA.0-1742488644-1.0.1.1-OHwhF6svqZea3C_.zBxHGnjS5QPlgXgxWuUdzHbh6bU2lOGbmHlx9OfoATBQatPeDlakO7yuju7Xy2kguRjYA6v_DAHqqpJacQ8dw1ees_M;
+        path=/; expires=Thu, 20-Mar-25 17:07:24 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 08846228-55a7-4fd6-b3cb-48d762781162
+      x-response-time:
+      - '4.059'
+    status:
+      code: 200
+      message: OK
+version: 1

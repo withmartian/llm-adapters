@@ -7,6 +7,7 @@ from .openai_sdk_chat_provider_adapter import OpenAISDKChatProviderAdapter
 from .gemini_sdk_chat_provider_adapter import GeminiSDKChatProviderAdapter
 from .together_sdk_chat_provider_adapter import TogetherSDKChatProviderAdapter
 from .deepseek_sdk_chat_provider_adapter import DeepSeekSDKChatProviderAdapter
+from .lambdalabs_sdk_chat_provider_adapter import LambdaLabsSDKChatProviderAdapter
 
 # from .xai_sdk_chat_provider_adapter import XAISDKChatProviderAdapter
 
@@ -34,6 +35,7 @@ __all__ = [
     "GeminiSDKChatProviderAdapter",
     "TogetherSDKChatProviderAdapter",
     "DeepSeekSDKChatProviderAdapter",
+    "LambdaLabsSDKChatProviderAdapter",
     # # "AzureSDKChatProviderAdapter",
     # # "DatabricksSDKChatProviderAdapter",
     # "DeepInfraSDKChatProviderAdapter",

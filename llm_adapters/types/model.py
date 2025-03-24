@@ -29,6 +29,7 @@ class Provider(str, Enum):
     tensoropera = "tensoropera"
     xai = "xai"
     deepseek = "deepseek"
+    lambdalabs = "lambdalabs"
 
 
 class Vendor(str, Enum):
@@ -60,6 +61,8 @@ class Vendor(str, Enum):
     bigmodel = "bigmodel"
     deepseek_ai = "deepseek-ai"
     grok = "grok"
+    liquid = "liquid"
+    deepseek = "deepseek"
 
 
 class ConversationRole(str, Enum):

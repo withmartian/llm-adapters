@@ -8,6 +8,7 @@ from llm_adapters.types.openai import (
     Query,
     Body,
     Headers,
+    Metadata,
     ChatModel,
     ChatCompletionAudioParam,
     FunctionCall,
@@ -28,6 +29,11 @@ from llm_adapters.types.openai import (
     ChoiceChunk,
     ChoiceDelta,
     FilePurpose,
+    Batch,
+    HttpxBinaryResponseContent,
+    SyncCursorPage,
+    AsyncCursorPage,
+    AsyncPaginator,
 )
 
 from llm_adapters.types.request import (
@@ -129,4 +135,10 @@ __all__ = [
     "FunctionToolCall",
     "FileObject",
     "FilePurpose",
+    "Metadata",
+    "Batch",
+    "HttpxBinaryResponseContent",
+    "SyncCursorPage",
+    "AsyncCursorPage",
+    "AsyncPaginator",
 ]

@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"llama3.3-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '134'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-7662c766-8ab8-44e1-9ad8-0288da960bec","object":"chat.completion","created":1742488720,"model":"llama3.3-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Hi!
+        How are you today? Is there something I can help you with or would you like
+        to chat?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":38,"completion_tokens":23,"total_tokens":61,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a428fc9d2e67-DFW
+      content-length:
+      - '711'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:38:41 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=dQ7_HVjYZMOu0c.JmfZiBKU84Ghw2dM5q6qUR6TVAJ8-1742488721-1.0.1.1-FhY4VB7DIghCPUrtx8KYHU3Vy0aE3eU5KsOZ6KWvnEZA6eIOflnRFO6LqdbBD63JIRYvQQSnNPjNJwn9_02sQ968EwcNfQvJnm.BIsTHkGk;
+        path=/; expires=Thu, 20-Mar-25 17:08:41 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 7662c766-8ab8-44e1-9ad8-0288da960bec
+      x-response-time:
+      - '0.705'
+    status:
+      code: 200
+      message: OK
+version: 1

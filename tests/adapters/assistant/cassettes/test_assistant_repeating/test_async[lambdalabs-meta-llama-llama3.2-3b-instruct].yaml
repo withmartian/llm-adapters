@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.2-3b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '179'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-b9ee2610-c96d-47e6-bb67-8a610ac689a2","object":"chat.completion","created":1742488689,"model":"llama3.2-3b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello
+        again! How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":54,"completion_tokens":11,"total_tokens":65,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a364ed3f2e4e-DFW
+      content-length:
+      - '658'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:38:09 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=8jH_SIDUVKZiVvX3xdB9Sry5jY38fwdrGLe9cO_376A-1742488689-1.0.1.1-GTASHPt_Gv.fMQxQvifLe_OYej2Ldg..LlNeuy8muIm9ZCpxj4myGbPrCKHwu5T.7KLmZQdR3nUYL12WGZYV2g4Debi0AI4W90wf8qemT7o;
+        path=/; expires=Thu, 20-Mar-25 17:08:09 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - b9ee2610-c96d-47e6-bb67-8a610ac689a2
+      x-response-time:
+      - '0.107'
+    status:
+      code: 200
+      message: OK
+version: 1
