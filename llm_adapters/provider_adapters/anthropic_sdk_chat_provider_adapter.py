@@ -209,7 +209,6 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
                     max_keepalive_connections=MAX_KEEPALIVE_CONNECTIONS_PER_PROCESS,
                 ),
                 timeout=Timeout(timeout=HTTP_TIMEOUT, connect=HTTP_CONNECT_TIMEOUT),
-                http2=True,
             ),
         )
 
@@ -224,7 +223,6 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
                     max_keepalive_connections=MAX_KEEPALIVE_CONNECTIONS_PER_PROCESS,
                 ),
                 timeout=Timeout(timeout=HTTP_TIMEOUT, connect=HTTP_CONNECT_TIMEOUT),
-                http2=True,
             ),
         )
 

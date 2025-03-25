@@ -124,18 +124,20 @@ MODELS: list[Model] = [
         can_empty_content=False,
         can_temperature=False,
     ),
-    OpenAIModel(
-        name="o1-pro",
-        cost=Cost(prompt=150.00e-6, completion=600.00e-6),
-        context_length=200000,
-        completion_length=100000,
-    ),
-    OpenAIModel(
-        name="o1-pro-2025-03-19",
-        cost=Cost(prompt=150.00e-6, completion=600.00e-6),
-        context_length=200000,
-        completion_length=100000,
-    ),
+    # OpenAIModel(
+    #     name="o1-pro",
+    #     cost=Cost(prompt=150.00e-6, completion=600.00e-6),
+    #     context_length=200000,
+    #     completion_length=100000,
+    #     is_response=True,
+    # ),
+    # OpenAIModel(
+    #     name="o1-pro-2025-03-19",
+    #     cost=Cost(prompt=150.00e-6, completion=600.00e-6),
+    #     context_length=200000,
+    #     completion_length=100000,
+    #     is_response=True,
+    # ),
 ]
 
 

@@ -111,6 +111,8 @@ class Model(BaseModel):
     context_length: int
     completion_length: Optional[int] = None
 
+    is_response: bool = False
+
     supports_chat: bool = True
     supports_completion: bool = True
     supports_functions: bool = True
