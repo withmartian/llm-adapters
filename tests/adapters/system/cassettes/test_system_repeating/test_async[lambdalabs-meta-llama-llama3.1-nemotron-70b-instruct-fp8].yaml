@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '284'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-d96ce1a9-cbee-427e-a174-c10fd6a017cc","object":"chat.completion","created":1742488912,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like we''re stuck in a \"Hi\" loop!\n\nLet''s break the cycle! How about
+        we start a conversation? Here are some prompts to get us going:\n\n1. **Hobbies**:
+        What do you enjoy doing in your free time?\n2. **Travel**: Have you traveled
+        to any exciting places recently or have a dream destination?\n3. **Tech**:
+        Are you interested in any new technology trends (AI, Space Exploration, etc.)?\n4.
+        **Games**: Do you have a favorite game (video, board, or otherwise) you''d
+        like to discuss?\n5. **Random Question**: If you could switch lives with someone
+        for a day, who would it be and why?\n\nPick a prompt, or feel free to introduce
+        a topic of your choice!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":47,"completion_tokens":157,"total_tokens":204,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a8d8ef08e7b3-DFW
+      content-length:
+      - '1290'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:41:57 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=tw0EkXy63hdOirfNXJspt2G3Y7MdWwHvgqFIYyiOVt4-1742488917-1.0.1.1-.VH7IMsEtHzEQ5hxRttBvGEGXfnBolkmN1NUjFFmdzE_sOj8PrWFno.2rfLWnUk32NCESTKUnpzDbQf7oEkbBlFiNYvdcPFRvjGz6sNPR.E;
+        path=/; expires=Thu, 20-Mar-25 17:11:57 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - d96ce1a9-cbee-427e-a174-c10fd6a017cc
+      x-response-time:
+      - '4.577'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -29,6 +29,7 @@ class Provider(str, Enum):
     tensoropera = "tensoropera"
     xai = "xai"
     deepseek = "deepseek"
+    lambdalabs = "lambdalabs"
 
 
 class Vendor(str, Enum):
@@ -60,6 +61,8 @@ class Vendor(str, Enum):
     bigmodel = "bigmodel"
     deepseek_ai = "deepseek-ai"
     grok = "grok"
+    liquid = "liquid"
+    deepseek = "deepseek"
 
 
 class ConversationRole(str, Enum):
@@ -107,6 +110,8 @@ class Model(BaseModel):
     cost: Cost
     context_length: int
     completion_length: Optional[int] = None
+
+    is_response: bool = False
 
     supports_chat: bool = True
     supports_completion: bool = True

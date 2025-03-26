@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"qwen25-coder-32b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '240'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-ed95a09a-8c45-4e74-838a-a1555006447a","object":"chat.completion","created":1742488924,"model":"qwen25-coder-32b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It looks like your message got cut off. How can I assist you today? If you
+        have any questions or need information on a specific topic, feel free to let
+        me know!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":35,"completion_tokens":39,"total_tokens":74,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a9228f9b4696-DFW
+      content-length:
+      - '790'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:42:05 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=HMwnKB4obOSdZtrjwqyneCbSIjNLFKhvh0MYuF6UStw-1742488925-1.0.1.1-D1iKaM5QMYcIERFxhgXW_WNC_E2vARyy1yKCozzUmAOe5CClxbKMoFXn8ZOJmMw2XYY.n_KO5lsuy1Zz7RVbtJa.HDW4WS2qT70x5LMr95k;
+        path=/; expires=Thu, 20-Mar-25 17:12:05 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - ed95a09a-8c45-4e74-838a-a1555006447a
+      x-response-time:
+      - '0.771'
+    status:
+      code: 200
+      message: OK
+version: 1

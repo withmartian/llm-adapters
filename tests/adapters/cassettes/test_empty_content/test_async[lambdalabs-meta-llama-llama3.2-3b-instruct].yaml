@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"llama3.2-3b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '235'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-594d3768-e8b9-4b69-8162-00bed5c9d2b4","object":"chat.completion","created":1742488935,"model":"llama3.2-3b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you forgot to ask a question or provide a prompt. If you''d like
+        to chat or ask for help, feel free to do so, and I''ll do my best to assist
+        you!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":55,"completion_tokens":42,"total_tokens":97,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a964df6d2cd0-DFW
+      content-length:
+      - '775'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:42:15 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=5tXm3akU63GhENU16CV_CCbPxglORBBSMTGuVH0.8DA-1742488935-1.0.1.1-6Ouwd8pVuiBIGxQ.z305SXzAi24B8VPInVEkQOuqaYg8unzhtvOo9Bat4khoxxDD.3aCIgK_gsdq3fc1sRVJtBdMknKWcTxHJHq6h5AY64w;
+        path=/; expires=Thu, 20-Mar-25 17:12:15 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 594d3768-e8b9-4b69-8162-00bed5c9d2b4
+      x-response-time:
+      - '0.326'
+    status:
+      code: 200
+      message: OK
+version: 1

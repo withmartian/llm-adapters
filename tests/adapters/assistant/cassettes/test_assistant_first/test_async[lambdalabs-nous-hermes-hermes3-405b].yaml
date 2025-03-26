@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"hermes3-405b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '137'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"d9dad84a0987416398506d150746a90d","object":"chat.completion","created":1742488601,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like you sent an empty message with just a pair of quotation marks.
+        Is there something I can help you with or a topic you''d like to discuss?
+        Feel free to send me a message with your question or comment and I''ll do
+        my best to assist!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":55,"total_tokens":77,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a1340ed6f063-DFW
+      content-length:
+      - '838'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:36:41 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=w3Yt2xB.dZkUSIvgy_kHt452l7CC5mbdL5hIsltKlPw-1742488601-1.0.1.1-9kVGLPdj0faBxsHnW1d0V08wAhhAaByhLb_.pxF_lDMY1o70dQ7RizqZv9TNaPpVigKoc7eTPpFE1oLNyUyYewfw1IZplN2JlJlWmdLPWN0;
+        path=/; expires=Thu, 20-Mar-25 17:06:41 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - fd17f715-4898-47d7-a20d-21b503682a90
+      x-response-time:
+      - '2.253'
+    status:
+      code: 200
+      message: OK
+version: 1
