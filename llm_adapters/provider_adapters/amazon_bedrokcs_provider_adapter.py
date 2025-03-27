@@ -1,21 +1,19 @@
 import json
 import re
-from typing import Any, Pattern
+from typing import Any, Dict, Pattern
 
-import boto3  # type: ignore
+import boto3
 
-from adapters.abstract_adapters.api_key_adapter_mixin import ApiKeyAdapterMixin
-from adapters.abstract_adapters.provider_adapter_mixin import ProviderAdapterMixin
-from adapters.abstract_adapters.sdk_chat_adapter import SDKChatAdapter
-from adapters.types import (
+from llm_adapters.abstract_adapters.api_key_adapter_mixin import ApiKeyAdapterMixin
+from llm_adapters.abstract_adapters.provider_adapter_mixin import ProviderAdapterMixin
+from llm_adapters.abstract_adapters.sdk_chat_adapter import SDKChatAdapter
+from llm_adapters.types import (
+    AdapterChatCompletion,
+    AdapterChatCompletionChunk,
+    AdapterCompletion,
+    AdapterCompletionChunk,
     AdapterException,
-    AdapterStreamResponse,
-    Conversation,
     ConversationRole,
-    Cost,
-    Model,
-    OpenAIChatAdapterResponse,
-    Turn,
 )
 
 PROVIDER_NAME = "bedrock-runtime"
@@ -164,6 +162,11 @@ FINISH_REASON_MAPPING = {
 }
 
 
+FINISH_REASON_MAPPING = {
+    "end_turn": "stop",
+    "max_tokens": "length",
+}
+
 class BedrockSDKChatProviderAdapter(
     ProviderAdapterMixin, ApiKeyAdapterMixin, SDKChatAdapter
 ):
@@ -182,6 +185,10 @@ class BedrockSDKChatProviderAdapter(
     def get_api_key_name() -> str:
         return API_SECRET_KEY_NAME
 
+    @staticmethod
+    def get_api_key_pattern() -> Pattern:
+        return API_KEY_PATTERN
+    
     def get_api_key_id(self) -> str:
         return API_KEY_ID
 
@@ -194,128 +201,119 @@ class BedrockSDKChatProviderAdapter(
     def get_region_name(self) -> str:
         return REGION_NAME
 
-    @staticmethod
-    def get_api_key_pattern() -> Pattern:
-        return API_KEY_PATTERN
-
-    _sync_client: boto3.client
-
-    # TODO: boto3 async support
-    _async_client: boto3.client
-
-    def __init__(
-        self,
-    ):
-        super().__init__()
-        self._sync_client = boto3.client(
+    # New methods required by SDKChatAdapter
+    def _create_client_sync(self, base_url: str, api_key: str):
+        return boto3.client(
             self.get_provider_name(),
             region_name=self.get_region_name(),
             aws_access_key_id=self.get_api_key_id(),
-            aws_secret_access_key=self.get_api_key_name(),
+            aws_secret_access_key=api_key,
         )
+    
+    def _create_client_async(self, base_url: str, api_key: str):
         # TODO: boto3 async support
-
-    def get_async_client(self):
-        return self._async_client
-
-    def get_sync_client(self):
-        return self._sync_client
-
-    def execute_sync(
-        self,
-        llm_input: Conversation,
-        **kwargs,
-    ):
-        params = self.get_params(llm_input, **kwargs)
-        messages = params["messages"]
-
-        # Bedrocks does not support trailing whitespace
-        if messages and messages[-1]["role"] == ConversationRole.assistant:
-            messages[-1]["content"] = messages[-1]["content"].rstrip()
-
-        body_raw = {
-            "anthropic_version": self.get_anthropic_version(),
-            "max_tokens": self.get_max_tokens(),
-            "messages": messages,
-        }
-        body = json.dumps(body_raw)
-
-        model_response = self.get_sync_client().invoke_model(
-            modelId=self.get_model().modelId, body=body
-        )
-
-        response = json.loads(model_response["body"].read())
-
-        if params.get("stream", False):
-
-            def stream_response():
-                try:
-                    for chunk in response:
-                        yield self.extract_stream_response(
-                            request=llm_input, response=chunk
-                        )
-                except Exception as e:
-                    raise AdapterException(f"Error in streaming response: {e}") from e
-                finally:
-                    response.close()
-
-            return AdapterStreamResponse(response=stream_response())
-
-        return self.extract_response(request=llm_input, response=response)
-
-    def extract_response(
-        self, request: Any, response: Any
-    ) -> OpenAIChatAdapterResponse:
+        return self._create_client_sync(base_url, api_key)
+    
+    def _call_sync(self):
+        return self._client_sync.invoke_model
+    
+    def _call_async(self):
+        # TODO: boto3 async support
+        return self._call_sync()
+    
+    def _call_completion_sync(self):
+        # Bedrock doesn't support the completion API separately
+        raise NotImplementedError("Completion API not supported for Bedrock")
+    
+    def _call_completion_async(self):
+        # Bedrock doesn't support the completion API separately
+        raise NotImplementedError("Completion API not supported for Bedrock")
+    
+    def _extract_response(self, request: Any, response: Any) -> AdapterChatCompletion:
+        # Extract from the existing logic
+        body = json.loads(response["body"].read())
+        
         choices = [
             {
                 "message": {
-                    "role": response["role"],
+                    "role": body["role"],
                     "content": choice["text"],
                 },
                 "finish_reason": FINISH_REASON_MAPPING.get(
-                    response["stop_reason"], response["stop_reason"]
+                    body["stop_reason"], body["stop_reason"]
                 ),
             }
-            for choice in response["content"]
+            for choice in body["content"]
         ]
-        prompt_tokens = response["usage"]["input_tokens"]
-        completion_tokens = response["usage"]["output_tokens"]
+        
+        prompt_tokens = body["usage"]["input_tokens"]
+        completion_tokens = body["usage"]["output_tokens"]
+        
+        model = self.get_model()
         cost = (
-            self.get_model().cost.prompt * prompt_tokens
-            + self.get_model().cost.completion * completion_tokens
-            + self.get_model().cost.request
+            model.cost.prompt * prompt_tokens
+            + model.cost.completion * completion_tokens
+            + model.cost.request
         )
-
-        return OpenAIChatAdapterResponse(
-            response=Turn(
-                role=ConversationRole.assistant,
-                content=choices[0]["message"]["content"],  # type: ignore
-            ),  # TODO: Refactor response
+        
+        return AdapterChatCompletion(
+            id=response.get("ResponseMetadata", {}).get("RequestId", ""),
             choices=choices,
+            created=response.get("ResponseMetadata", {}).get("HTTPHeaders", {}).get("date", 0),
+            model=model.name,
+            usage={
+                "prompt_tokens": prompt_tokens,
+                "completion_tokens": completion_tokens,
+                "total_tokens": prompt_tokens + completion_tokens
+            },
             cost=cost,
-            token_counts=Cost(
-                prompt=prompt_tokens,
-                completion=completion_tokens,
-            ),
         )
-
-    def extract_stream_response(self, request, response):
-        content = getattr(getattr(response, "delta", None), "text", "")
-
-        if getattr(response, "type", None) == "message_stop":
-            content = None
-
-        chunk = json.dumps(
-            {
-                "choices": [
-                    {
-                        "delta": {
-                            "role": ConversationRole.assistant,
-                            "content": content,
-                        },
-                    }
-                ]
-            }
+    
+    def _extract_stream_response(
+        self, request: Any, response: Any, state: Dict[str, Any]
+    ) -> AdapterChatCompletionChunk:
+        # New method for handling streaming responses
+        content = None
+        
+        # Initialize state if needed
+        if not state:
+            state["finish_reason"] = None
+            state["content"] = ""
+            state["role"] = ConversationRole.assistant.value
+        
+        chunk_type = getattr(response, "type", None)
+        delta = getattr(response, "delta", None)
+        
+        if delta and hasattr(delta, "text"):
+            content = delta.text
+            state["content"] += content
+        
+        if chunk_type == "message_stop":
+            state["finish_reason"] = "stop"
+        
+        return AdapterChatCompletionChunk(
+            id=getattr(response, "id", ""),
+            choices=[
+                {
+                    "index": 0,
+                    "delta": {
+                        "role": state["role"],
+                        "content": content,
+                    },
+                    "finish_reason": state["finish_reason"],
+                }
+            ],
+            created=0,  # Bedrock doesn't provide this in stream chunks
+            model=self.get_model().name,
         )
-
-        return f"data: {chunk}\n\n"
+    
+    def _extract_completion_response(self, request: Any, response: Any) -> AdapterCompletion:
+        # Bedrock doesn't support the completion API separately
+        raise NotImplementedError("Completion API not supported for Bedrock")
+    
+    def _extract_completion_stream_response(
+        self, request: Any, response: Any, state: Dict[str, Any]
+    ) -> AdapterCompletionChunk:
+        # Bedrock doesn't support the completion API separately
+        raise NotImplementedError("Completion API not supported for Bedrock")
+}
