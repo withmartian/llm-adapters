@@ -47,7 +47,7 @@ try:
         if _version_match:
             __version__ = _version_match.group(1)
         else:
-            __version__ = "8.1.0"  # Current version as fallback
+            __version__ = "unknown"  # Current version as fallback
 except (FileNotFoundError, Exception):
     __version__ = "unknown"  # Current version as fallback
 
