@@ -25,13 +25,13 @@ MODELS: list[Model] = [
         name="jamba-1.5-mini",
         cost=Cost(prompt=0.2e-6, completion=0.4e-6),
         context_length=256000,
-        supports_n=False
+        supports_n=False,
     ),
     AI21Model(
         name="jamba-1.5-large",
         cost=Cost(prompt=2.0e-6, completion=8.0e-6),
         context_length=256000,
-        supports_n=False
+        supports_n=False,
     ),
 ]
 

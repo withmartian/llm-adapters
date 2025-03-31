@@ -12,15 +12,15 @@ async_client = AsyncOpenAI()
 
 # Filter model paths to only include those that support the 'n' parameter
 MODELS_SUPPORTING_N = [
-    model_path for model_path in TEST_CHAT_MODELS
-    if (model := AdapterFactory.get_model_by_path(model_path)) and
-    model.supports_n
+    model_path
+    for model_path in TEST_CHAT_MODELS
+    if (model := AdapterFactory.get_model_by_path(model_path)) and model.supports_n
 ]
+
 
 @pytest.mark.vcr
 @pytest.mark.parametrize("model_path", MODELS_SUPPORTING_N, ids=str)
 async def test_async(vcr: VCR, model_path: str) -> None:
-
     n = 2
 
     adapter_response = await async_client.chat.completions.create(

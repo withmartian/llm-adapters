@@ -8,12 +8,9 @@ from llm_adapters.adapter_factory import AdapterFactory
 from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
     AnthropicSDKChatProviderAdapter,
 )
-from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
-    CohereSDKChatProviderAdapter,
-)
 
 from llm_adapters.provider_adapters.bedrock_sdk_provider_adapter import (
-    BedrockSDKChatProviderAdapter
+    BedrockSDKChatProviderAdapter,
 )
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
@@ -102,7 +99,7 @@ def get_response_content_from_vcr(vcr: VCR, model_path: str) -> Any:
     except Exception as _:  # pylint: disable=W0718
         print("Failed to decompress response")
     response = json.loads(response)
-    
+
     if isinstance(adapter, OpenAISDKChatAdapter):
         return response["choices"][0]["message"]["content"]
     elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
@@ -121,7 +118,7 @@ def get_response_choices_from_vcr(vcr: VCR, model_path: str) -> Any:
     except Exception as _:  # pylint: disable=W0718
         print("Failed to decompress response")
     response = json.loads(response)
-    
+
     if isinstance(adapter, OpenAISDKChatAdapter):
         return response["choices"]
     elif isinstance(adapter, AnthropicSDKChatProviderAdapter):

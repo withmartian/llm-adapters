@@ -11,15 +11,18 @@ async_client = AsyncOpenAI()
 
 # Filter model paths to only include those that support system-last messages
 SYSTEM_LAST_MODELS = [
-    model_path for model_path in TEST_CHAT_MODELS
-    if (model := AdapterFactory.get_model_by_path(model_path)) and 
-       model.supports_chat and model.can_system and model.can_system_last
+    model_path
+    for model_path in TEST_CHAT_MODELS
+    if (model := AdapterFactory.get_model_by_path(model_path))
+    and model.supports_chat
+    and model.can_system
+    and model.can_system_last
 ]
+
 
 @pytest.mark.vcr
 @pytest.mark.parametrize("model_path", SYSTEM_LAST_MODELS, ids=str)
 async def test_async(vcr: VCR, model_path: str) -> None:
-
     response = await async_client.chat.completions.create(
         model=model_path,
         messages=[

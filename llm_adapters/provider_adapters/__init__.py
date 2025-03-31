@@ -9,7 +9,7 @@ from .together_sdk_chat_provider_adapter import TogetherSDKChatProviderAdapter
 from .deepseek_sdk_chat_provider_adapter import DeepSeekSDKChatProviderAdapter
 from .lambdalabs_sdk_chat_provider_adapter import LambdaLabsSDKChatProviderAdapter
 
-from .bedrock_sdk_provider_adapter import  BedrockSDKChatProviderAdapter
+from .bedrock_sdk_provider_adapter import BedrockSDKChatProviderAdapter
 # from .xai_sdk_chat_provider_adapter import XAISDKChatProviderAdapter
 
 # from .azure_sdk_chat_provider_adapter import AzureSDKChatProviderAdapter
