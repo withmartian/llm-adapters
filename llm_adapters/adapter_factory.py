@@ -13,6 +13,7 @@ from llm_adapters.provider_adapters import (
     DeepInfraSDKChatProviderAdapter,
     TogetherSDKChatProviderAdapter,
     DeepSeekSDKChatProviderAdapter,
+    BedrockSDKChatProviderAdapter
 )
 from llm_adapters.types import Model, ModelNotFoundException
 
@@ -26,6 +27,7 @@ ADAPTER_CLASSES: list[type[Adapter]] = [
     CerebrasSDKChatProviderAdapter,
     CohereSDKChatProviderAdapter,
     DeepInfraSDKChatProviderAdapter,
+    BedrockSDKChatProviderAdapter
 ]
 
 

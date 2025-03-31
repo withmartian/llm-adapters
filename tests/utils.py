@@ -11,6 +11,10 @@ from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
 from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
     CohereSDKChatProviderAdapter,
 )
+
+from llm_adapters.provider_adapters.bedrock_sdk_provider_adapter import (
+    BedrockSDKChatProviderAdapter
+)
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
 
@@ -19,6 +23,27 @@ TEST_CHAT_MODELS = [
     model.get_path()
     for model in AdapterFactory.get_supported_models()
     if model.supports_chat
+]
+
+# Models that support system-only messages
+SYSTEM_ONLY_CHAT_MODELS = [
+    model.get_path()
+    for model in AdapterFactory.get_supported_models()
+    if model.supports_chat and model.can_system and model.can_system_only
+]
+
+# Models that support multiple system messages
+MULTIPLE_SYSTEM_CHAT_MODELS = [
+    model.get_path()
+    for model in AdapterFactory.get_supported_models()
+    if model.supports_chat and model.can_system and model.can_system_multiple
+]
+
+# Models that support system messages at the end
+SYSTEM_LAST_CHAT_MODELS = [
+    model.get_path()
+    for model in AdapterFactory.get_supported_models()
+    if model.supports_chat and model.can_system and model.can_system_last
 ]
 
 TEST_COMPLETION_MODELS = [
@@ -92,45 +117,35 @@ SIMPLE_GENERATE_TOOLS = [
 def get_response_content_from_vcr(vcr: VCR, model_path: str) -> Any:
     adapter = AdapterFactory.get_adapter_by_path(model_path)
     response = vcr.responses[-1]["body"]["string"]
-
     try:
         response = brotli.decompress(response)
     except Exception as _:  # pylint: disable=W0718
         print("Failed to decompress response")
-
     response = json.loads(response)
-
+    
     if isinstance(adapter, OpenAISDKChatAdapter):
         return response["choices"][0]["message"]["content"]
     elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
         return response["content"][0]["text"]
-    elif isinstance(adapter, CohereSDKChatProviderAdapter):
-        return (
-            response["message"]["content"][0]["text"]
-            if response.get("message") and response["message"].get("content")
-            else ""
-        )
+    elif isinstance(adapter, BedrockSDKChatProviderAdapter):
+        return response["content"][0]["text"]
     else:
-        raise ValueError("Unknown adapter")
+        raise ValueError(f"Unknown adapter type: {type(adapter).__name__}")
 
 
 def get_response_choices_from_vcr(vcr: VCR, model_path: str) -> Any:
     adapter = AdapterFactory.get_adapter_by_path(model_path)
-
     response = vcr.responses[-1]["body"]["string"]
-
     try:
         response = brotli.decompress(response)
     except Exception as _:  # pylint: disable=W0718
         print("Failed to decompress response")
-
     response = json.loads(response)
-
+    
     if isinstance(adapter, OpenAISDKChatAdapter):
         return response["choices"]
     elif isinstance(adapter, AnthropicSDKChatProviderAdapter):
         anthropic_choices: list[Any] = []
-
         for content in response["content"]:
             if content["type"] == "tool_use":
                 anthropic_choices.append(
