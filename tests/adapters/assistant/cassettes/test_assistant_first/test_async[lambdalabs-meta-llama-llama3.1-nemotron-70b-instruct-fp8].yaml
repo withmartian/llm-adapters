@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '126'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-bd75ada8-1d0b-45ea-9647-218ee0b6e9c6","object":"chat.completion","created":1742488611,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like we''ve got a nice, simple start here. How can I assist you today?
+        Please pick one (or more) from the below options or feel free to suggest something
+        else:\n\n1. **Chat about a Topic**:\n\t* Hobbies (e.g., reading, gaming, travel)\n\t*
+        Technology (e.g., AI, gadgets, software)\n\t* Science (e.g., space, environment,
+        health)\n\t* Entertainment (e.g., movies, TV shows, music)\n\t* Other (specify
+        your interest)\n\n2. **Play a Game**:\n\t* 20 Questions (you think of an object,
+        I guess)\n\t* Hangman (I think of a word or phrase, you guess)\n\t* Word Chain
+        (we take turns with words that start with the last letter of the previous
+        word)\n\t* Trivia (on a topic of your choice)\n\t* Other (suggest a game)\n\n3.
+        **Generate Content**:\n\t* **Story**: I''ll start telling a story, and you
+        can continue it, or vice versa.\n\t* **Poetry**: Provide a theme, and I''ll
+        craft a poem.\n\t* **Character Background**: Give me some traits, and I''ll
+        flesh out a character.\n\t* **World-Building**: Let''s create a world together.\n\n4.
+        **Ask for Advice**:\n\t* General life advice\n\t* Career development\n\t*
+        Educational guidance\n\t* Problem-solving (share a challenge you''re facing)\n\n5.
+        **Learn Something New**:\n\t* A random interesting fact\n\t* In-depth information
+        on a specific subject\n\t* Language lessons (basic phrases, etc.)\n\t* Other
+        (what would you like to learn about?)\n\n6. **Just for Fun**:\n\t* Generate
+        a random joke.\n\t* Create a funny scenario/story together.\n\t* Other playful
+        activities.\n\n**What''s your choice?**"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":392,"total_tokens":414,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a17a9917e976-DFW
+      content-length:
+      - '2173'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:37:02 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=17TMr7Z0dYElhgxQPfFqJoB.oyvcym_iZzFdB6OsD5s-1742488622-1.0.1.1-2Z_WgE6Nv8U92mpLCVaxxJPNECABWB_jLu2xACRllkJTdqX7T8qKEuJhaII3i.9s23dSz.wYYEeXdTq3a3XyKUt5XI1_mHX9XmvskOQy.zU;
+        path=/; expires=Thu, 20-Mar-25 17:07:02 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - bd75ada8-1d0b-45ea-9647-218ee0b6e9c6
+      x-response-time:
+      - '11.147'
+    status:
+      code: 200
+      message: OK
+version: 1

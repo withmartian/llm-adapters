@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"hermes3-405b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '227'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"e9feb6cde3d94b4f9b35d01a42521235","object":"chat.completion","created":1742924492,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"
+        "},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":36,"completion_tokens":2,"total_tokens":38,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      CF-RAY:
+      - 9260331d2a8f8d26-DFW
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 25 Mar 2025 17:41:32 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=4KUbEtdhT.KxW_RYBWarJ0Sm.dVLReEhM7Vtii_0THs-1742924492-1.0.1.1-i2ixj7MJAybfwNIJqGKRP8IX9QqWjwpni6JHZi0tBCtA8BXA_gfdQiQ2RMwH6cK2yc1fkUR.RJA60f4U6Tt.vDa2IaKbiCMucsGpIx2Kthw;
+        path=/; expires=Tue, 25-Mar-25 18:11:32 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '597'
+      x-request-id:
+      - 0f3622ca-afc5-48f6-8cce-e2ccf2c37cfb
+      x-response-time:
+      - '0.231'
+    status:
+      code: 200
+      message: OK
+version: 1

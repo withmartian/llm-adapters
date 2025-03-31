@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '249'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-fbe35857-2580-4f8e-8011-641323460f89","object":"chat.completion","created":1742488938,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like there''s been a series of empty inputs. Let''s get started with
+        something! Please choose one of the following options, or feel free to provide
+        your own topic/question:\n\n**Options:**\n\n1. **General Knowledge Quiz**:
+        I''ll ask you a series of trivia questions on various subjects.\n2. **Language
+        Translation**: Provide a text and a language, and I''ll translate it for you.\n3.
+        **Story Time**: I''ll start telling a story, and then stop at a cliffhanger.
+        You can then continue the story in your own words.\n4. **Tech Support**: Ask
+        for help or guidance on a specific tech-related issue.\n5. **Creative Writing
+        Prompt**: Receive a prompt, and unleash your creativity by writing a short
+        story or poem.\n6. **Conversational Dialogue**: Engage in a natural conversation
+        on a topic of your choice (e.g., hobbies, future tech, travel, etc.).\n7.
+        **Joke Exchange**: Share a joke, and I''ll respond with one. We can keep exchanging
+        jokes!\n8. **Word Games**: Choose from games like Hangman, Word Association,
+        or Word Scramble.\n9. **Learning a New Skill**: Specify a skill or subject
+        you''re interested in learning, and I''ll provide resources and a brief introduction.\n10.
+        **Something Else (Please Specify)**: Have something unique in mind? Please
+        describe it, and I''ll do my best to accommodate your request!\n\n**How to
+        respond:**\n- Type the number of your chosen option.\n- If choosing \"10.
+        Something Else,\" please provide a brief description of your topic/question.\n-
+        For options that require additional context (e.g., language for translation,
+        topic for conversational dialogue), please provide those details after selecting
+        your option."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":35,"completion_tokens":361,"total_tokens":396,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a97b6bd14794-DFW
+      content-length:
+      - '2281'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:42:29 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=DvW.wN108Gq3EYO0W4G_L5krZTgbcBpyxity0mq7.ts-1742488949-1.0.1.1-gooxaeUowRyHr82opzgqDaCK1xWKSblvRMhj5z6H2cdVFycO7jJTn1MZF3il9M1eBjiFo1CPQtf979WXGSo3O5jV5cS9vOYYUnYWvofqWfw;
+        path=/; expires=Thu, 20-Mar-25 17:12:29 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - fbe35857-2580-4f8e-8011-641323460f89
+      x-response-time:
+      - '10.466'
+    status:
+      code: 200
+      message: OK
+version: 1

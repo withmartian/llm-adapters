@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"deepseek-llama3.3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '180'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-a216c525-5736-4641-84b8-4c8a5505a711","object":"chat.completion","created":1742488681,"model":"deepseek-llama3.3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nAlright,
+        the user sent \"Hi\" again. They seem friendly and approachable. I should
+        respond in a warm and welcoming manner to keep the conversation going. Maybe
+        ask how I can assist them today to show I''m ready to help.\n\u003c/think\u003e\n\nHello!
+        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":12,"completion_tokens":62,"total_tokens":74,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a3358a84f044-DFW
+      content-length:
+      - '914'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:38:02 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=mfBVPU9B4MezGl5sbOtFqelNS0MwqSiZMNIX46M8oM8-1742488682-1.0.1.1-YBjdPUaXeFSXP4GOWfJJkGZ.ROHtKhZtS_O1kJ9f4ng7u1Di_ey5rBNRvIMQQlmY6Mw0l0mTApDbwUgTXehqjTP2wC3i8eXfJCpfTdVGYZg;
+        path=/; expires=Thu, 20-Mar-25 17:08:02 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - a216c525-5736-4641-84b8-4c8a5505a711
+      x-response-time:
+      - '1.056'
+    status:
+      code: 200
+      message: OK
+version: 1

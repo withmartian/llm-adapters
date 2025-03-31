@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-405b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '276'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-71a27f54-04b6-495f-95f4-bfc4cd723d77","object":"chat.completion","created":1742488781,"model":"llama3.1-405b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems we''re stuck in a loop of hellos. Is there something I can help you
+        with or would you like to chat about a particular topic? I''m here to listen
+        and assist."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":67,"completion_tokens":40,"total_tokens":107,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236a5a088e12ccc-DFW
+      content-length:
+      - '788'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:39:42 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=ZrlCetxUDP_Z82QhVmLCTmlX8VEXm419zWFq4U8NgpQ-1742488782-1.0.1.1-X4DQwmPUlT8slSUznI5O4nhdO5rEwL5wp_3kc8z277Qvjn7CeGBxnzZIN4GaIz9OuxJ_o838v9Rlv8_KVr0nSarzOn4.6IoXBxxskqr6c3s;
+        path=/; expires=Thu, 20-Mar-25 17:09:42 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 71a27f54-04b6-495f-95f4-bfc4cd723d77
+      x-response-time:
+      - '1.281'
+    status:
+      code: 200
+      message: OK
+version: 1
