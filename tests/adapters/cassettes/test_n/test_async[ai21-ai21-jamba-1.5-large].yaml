@@ -17,13 +17,13 @@ interactions:
       user-agent:
       - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
-      - arm64
+      - x64
       x-stainless-async:
       - async:asyncio
       x-stainless-lang:
       - python
       x-stainless-os:
-      - MacOS
+      - Linux
       x-stainless-package-version:
       - 1.61.0
       x-stainless-retry-count:
@@ -31,33 +31,27 @@ interactions:
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.13.1
+      - 3.12.3
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IbQGACAWzqlsdvrT8gDtJjSngB8Y0RsHjoOdD+Og64IDLnbNg86Trrw7WGeU0TiErS/aAlPkjbrl
-        2rEMlCrLJI7lMK9yGQXDUg6DUSjHZZYEozQo0moEwgj74Irp9ovL9AXTgNAfcYXpFxfLJaZQ12t7
-        vSlzAyE8rjPFumS2A7G2T5ErIzaidEy87V3cbKHeKxBu1vIxV8xXTM2d+U9gW7uLzUgkJKmZ49aq
-        Caa43qzDn2y9EIL3hLuV2l2sdrfjzfaluWIahlDacXlrrZFcFBB+HQAsxeH/bwAD
+      string: '{"detail":"Access denied for this feature"}'
     headers:
       CF-RAY:
-      - 918c76a1eb70ed3f-SJC
+      - 92922bccca1f1a42-TBS
       Connection:
       - keep-alive
-      Content-Encoding:
-      - br
+      Content-Length:
+      - '43'
       Content-Type:
       - application/json
       Date:
-      - Fri, 28 Feb 2025 00:57:57 GMT
+      - Mon, 31 Mar 2025 19:14:41 GMT
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       cf-cache-status:
       - DYNAMIC
       expect-ct:
@@ -65,7 +59,7 @@ interactions:
       referrer-policy:
       - same-origin
       request-id:
-      - 0aaee433-6cfc-206e-6071-8eb40750d5f7
+      - 03bac41e-694d-c93d-bdfd-f5f42e0da002
       via:
       - 1.1 google
       x-content-type-options:
@@ -75,6 +69,6 @@ interactions:
       x-xss-protection:
       - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: '{"anthropic_version": "bedrock-2023-05-31", "max_tokens": 1000, "temperature":
+      0.7, "messages": [{"role": "user", "content": "Hi, output simple json"}]}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '152'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTAwNTE5Wg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        YTk5YzI2OWEtYjIzZS00NGYzLWE4NWEtMWRjODhmNDU4OGYw
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-instant-v1/invoke
+  response:
+    body:
+      string: '{"id":"msg_bdrk_01RVqDZ8i96VBbQ9pjdWydj1","type":"message","role":"assistant","model":"claude-instant-1.2","content":[{"type":"text","text":"Here
+        is a simple JSON object:\n\n```json\n{\n  \"name\": \"John\",\n  \"age\":
+        30,\n  \"city\": \"New York\"\n}\n```\n\nThis JSON represents a person with:\n\n-
+        name: \"John\" \n- age: 30\n- city: \"New York\"\n\nIt contains three key-value
+        pairs with a string, number and string as the values. This is a basic example
+        of representing data in JSON format."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":14,"output_tokens":105}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '594'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:05:21 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '14'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '1564'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '105'
+      x-amzn-RequestId:
+      - 746cb2a2-5fc6-40ef-b6e0-2ad8372cfb07
+    status:
+      code: 200
+      message: OK
+version: 1

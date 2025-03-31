@@ -20,13 +20,13 @@ interactions:
       user-agent:
       - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
-      - arm64
+      - x64
       x-stainless-async:
       - async:asyncio
       x-stainless-lang:
       - python
       x-stainless-os:
-      - MacOS
+      - Linux
       x-stainless-package-version:
       - 1.61.0
       x-stainless-retry-count:
@@ -34,29 +34,27 @@ interactions:
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.13.1
+      - 3.12.3
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: '{"id":"261418c9-960e-49b0-84f8-dbfbf948ef1f","object":"chat.completion","created":1741018717,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"index":0,"id":"call_0_bb16f7cc-8b13-424f-9ada-e2d780ca3b2b","type":"function","function":{"name":"generate","arguments":"{\"prompt\":\"Random
-        number between 1 and 10\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":133,"completion_tokens":24,"total_tokens":157,"prompt_tokens_details":{"cached_tokens":128},"prompt_cache_hit_tokens":128,"prompt_cache_miss_tokens":5},"system_fingerprint":"fp_3a5770e1b4_prod0225"}'
+      string: '{"id":"0730411e-a217-44e5-aced-b4dbadb49920","object":"chat.completion","created":1743429171,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"index":0,"id":"call_0_8dec7566-b567-43f1-ad74-22fa3704d2d2","type":"function","function":{"name":"generate","arguments":"{\"prompt\":\"Random
+        number between 1 and 10\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":133,"completion_tokens":24,"total_tokens":157,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":133},"system_fingerprint":"fp_3d5141a69a_prod0225"}'
     headers:
       CF-RAY:
-      - 91aa7364a8998483-QRO
+      - 929054610ebfeecc-ATH
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Mon, 03 Mar 2025 16:18:37 GMT
+      - Mon, 31 Mar 2025 13:52:51 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - HWWAFSESTIME=1741018715087; path=/
-      - HWWAFSESID=ff1be9d95ea9c89687; path=/
-      - __cf_bm=vwHiE8X_b2plpvTThDLqIXOC0fEOwp.XEMySpldlI64-1741018717-1.0.1.1-ZZYPYNSifhzubWiKQxB8oO6j04gCQ.m6mdVzKK9T.U27uRSB2_wAMNXY6_PSowXTmXum95toz2IE36HLXTj_tKtpZcKuUzmNjooWUhHxEjk;
-        path=/; expires=Mon, 03-Mar-25 16:48:37 GMT; domain=.deepseek.com; HttpOnly;
+      - __cf_bm=4HUimZQcWEHokUh_w8t1BaNzO6httmN1XhR39faXbTg-1743429171-1.0.1.1-dNhrE44JXV55s89On8puRiVrBqv0Alg4v8Nk5nrVgGfW.mFePgVVZztMhlXDvzoek2SN1nK.5uMjXPywGK6a6EAdkJ0PANvcmcwE_i_1WLU;
+        path=/; expires=Mon, 31-Mar-25 14:22:51 GMT; domain=.deepseek.com; HttpOnly;
         Secure; SameSite=None
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
@@ -69,12 +67,11 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '642'
+      - '640'
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-ds-trace-id:
-      - b64caf0f60bf114e2858aab5a394287f
+      - 538c90d34444918ccf916ed518f2f680
     status:
       code: 200
       message: OK

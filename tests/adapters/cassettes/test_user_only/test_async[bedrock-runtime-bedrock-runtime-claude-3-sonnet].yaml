@@ -1,0 +1,53 @@
+interactions:
+- request:
+    body: '{"anthropic_version": "bedrock-2023-05-31", "max_tokens": 1000, "temperature":
+      0.7, "messages": [{"role": "user", "content": "Hi"}]}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '132'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTA1ODM4Wg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        ZmE1ZWY4YzUtYzYyOC00ZDdlLWIxMjgtZmFjYjRmZTk3ZDNh
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-3-sonnet-20240229-v1%3A0/invoke
+  response:
+    body:
+      string: '{"id":"msg_bdrk_01BZZ2PPpeeGD5xF9X8a9CY8","type":"message","role":"assistant","model":"claude-3-sonnet-20240229","content":[{"type":"text","text":"Hello!"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":8,"output_tokens":5}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '248'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:58:39 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '8'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '271'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '5'
+      x-amzn-RequestId:
+      - 7a0e1856-1ac1-479a-89f2-29621dedfdf3
+    status:
+      code: 200
+      message: OK
+version: 1

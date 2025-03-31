@@ -25,26 +25,6 @@ TEST_CHAT_MODELS = [
     if model.supports_chat
 ]
 
-# Models that support system-only messages
-SYSTEM_ONLY_CHAT_MODELS = [
-    model.get_path()
-    for model in AdapterFactory.get_supported_models()
-    if model.supports_chat and model.can_system and model.can_system_only
-]
-
-# Models that support multiple system messages
-MULTIPLE_SYSTEM_CHAT_MODELS = [
-    model.get_path()
-    for model in AdapterFactory.get_supported_models()
-    if model.supports_chat and model.can_system and model.can_system_multiple
-]
-
-# Models that support system messages at the end
-SYSTEM_LAST_CHAT_MODELS = [
-    model.get_path()
-    for model in AdapterFactory.get_supported_models()
-    if model.supports_chat and model.can_system and model.can_system_last
-]
 
 TEST_COMPLETION_MODELS = [
     model.get_path()

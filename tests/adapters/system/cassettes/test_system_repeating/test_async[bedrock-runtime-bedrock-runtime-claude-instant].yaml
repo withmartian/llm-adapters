@@ -1,0 +1,52 @@
+interactions:
+- request:
+    body: '{"anthropic_version": "bedrock-2023-05-31", "max_tokens": 1000, "temperature":
+      0.7, "messages": [{"role": "system", "content": "Hi"}, {"role": "user", "content":
+      "Hi\nHi\nHi\nHi\nHi\nHi\n\"\""}]}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '195'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTA1NzEyWg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        ZTBiNjhmYWMtNTVlOS00NTc3LTg1Y2EtODg2MWU0YmM5OGNk
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-instant-v1/invoke
+  response:
+    body:
+      string: '{"message":"Malformed input request: #: subject must not be valid against
+        schema {\"required\":[\"messages\"]}#/messages/0/role: system is not a valid
+        enum value, please reformat your input and try again."}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '206'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:57:13 GMT
+      x-amzn-ErrorType:
+      - ValidationException:http://internal.amazon.com/coral/com.amazon.bedrock/
+      x-amzn-RequestId:
+      - f53a1177-27e2-46e8-99c9-0ae3bf464515
+    status:
+      code: 400
+      message: Bad Request
+version: 1

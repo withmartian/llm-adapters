@@ -35,9 +35,9 @@ class BedrockModel(Model):
     supports_streaming: bool = False
     supports_tools: bool = False
 
+    supports_n: bool = False
 
     supports_functions: bool = True
-    supports_n: bool = True
     supports_json_output: bool = True
     supports_json_content: bool = True
     can_assistant_first: bool = False
@@ -131,9 +131,9 @@ class BedrockSDKChatProviderAdapter(SDKChatAdapter):
     def get_region_name(self) -> str:
         return REGION_NAME
 
-    # Client creation methods
+
     def _create_client_sync(self, base_url: str, api_key: str):
-        # Get the access key ID from environment
+
         access_key_id = os.environ.get(self.get_api_key_id())
         
         return boto3.client(
@@ -147,7 +147,7 @@ class BedrockSDKChatProviderAdapter(SDKChatAdapter):
         # Reuse sync client since boto3 doesn't support async natively
         return self._create_client_sync(base_url, api_key)
     
-    # Call methods
+
     def _call_sync(self):
         actual_call = self._client_sync.invoke_model
         
@@ -210,10 +210,10 @@ class BedrockSDKChatProviderAdapter(SDKChatAdapter):
             cleaned_message = message.copy()
             
             if isinstance(cleaned_message.get('content'), str):
-                # Remove trailing whitespace from string content
+                # Remove trailing whitespace from string content,nto suported
                 cleaned_message['content'] = cleaned_message['content'].rstrip()
             elif isinstance(cleaned_message.get('content'), list):
-                # Clean list of content items
+
                 cleaned_content = []
                 for item in cleaned_message['content']:
                     if isinstance(item, dict) and 'text' in item:
@@ -247,10 +247,9 @@ class BedrockSDKChatProviderAdapter(SDKChatAdapter):
         # Read the response body
         body = json.loads(response["body"].read())
         
-        # Extract content from Claude response
+
         content = None
-        
-        # Process response content
+
         if "content" in body and isinstance(body["content"], list):
             # Get text content
             text_items = [item for item in body["content"] if item["type"] == "text"]
