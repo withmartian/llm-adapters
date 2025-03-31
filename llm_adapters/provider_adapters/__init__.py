@@ -8,6 +8,7 @@ from .gemini_sdk_chat_provider_adapter import GeminiSDKChatProviderAdapter
 from .together_sdk_chat_provider_adapter import TogetherSDKChatProviderAdapter
 from .deepseek_sdk_chat_provider_adapter import DeepSeekSDKChatProviderAdapter
 
+from .bedrock_sdk_provider_adapter import  BedrockSDKChatProviderAdapter
 # from .xai_sdk_chat_provider_adapter import XAISDKChatProviderAdapter
 
 # from .azure_sdk_chat_provider_adapter import AzureSDKChatProviderAdapter
@@ -34,6 +35,7 @@ __all__ = [
     "GeminiSDKChatProviderAdapter",
     "TogetherSDKChatProviderAdapter",
     "DeepSeekSDKChatProviderAdapter",
+    "BedrockSDKChatProviderAdapter",
     # # "AzureSDKChatProviderAdapter",
     # # "DatabricksSDKChatProviderAdapter",
     # "DeepInfraSDKChatProviderAdapter",

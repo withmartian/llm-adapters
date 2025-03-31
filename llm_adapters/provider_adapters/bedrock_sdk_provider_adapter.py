@@ -14,6 +14,8 @@ from llm_adapters.types import (
     AdapterCompletionChunk,
     AdapterException,
     ConversationRole,
+    Model,
+    Cost
 )
 
 PROVIDER_NAME = "bedrock-runtime"
@@ -167,9 +169,7 @@ FINISH_REASON_MAPPING = {
     "max_tokens": "length",
 }
 
-class BedrockSDKChatProviderAdapter(
-    ProviderAdapterMixin, ApiKeyAdapterMixin, SDKChatAdapter
-):
+class BedrockSDKChatProviderAdapter(SDKChatAdapter):
     @staticmethod
     def get_supported_models():
         return MODELS
@@ -201,7 +201,6 @@ class BedrockSDKChatProviderAdapter(
     def get_region_name(self) -> str:
         return REGION_NAME
 
-    # New methods required by SDKChatAdapter
     def _create_client_sync(self, base_url: str, api_key: str):
         return boto3.client(
             self.get_provider_name(),
@@ -211,15 +210,43 @@ class BedrockSDKChatProviderAdapter(
         )
     
     def _create_client_async(self, base_url: str, api_key: str):
-        # TODO: boto3 async support
+        # Reuse sync client since boto3 doesn't support async natively
         return self._create_client_sync(base_url, api_key)
-    
+
     def _call_sync(self):
         return self._client_sync.invoke_model
     
     def _call_async(self):
-        # TODO: boto3 async support
-        return self._call_sync()
+        sync_call = self._call_sync()
+        
+        async def async_wrapper(**kwargs):
+            loop = asyncio.get_event_loop()
+            if kwargs.get('stream', False):
+                # For streaming, we need to handle it differently
+                response = await loop.run_in_executor(
+                    None, 
+                    partial(sync_call, **kwargs)
+                )
+                
+                # Create an async generator to yield chunks
+                async def stream_generator():
+                    try:
+                        for chunk in response.get('body', []):
+                            yield chunk
+                            await asyncio.sleep(0)
+                    finally:
+                        if hasattr(response.get('body', None), 'close'):
+                            response['body'].close()
+                
+                return stream_generator()
+            else:
+                # For non-streaming responses
+                return await loop.run_in_executor(
+                    None, 
+                    partial(sync_call, **kwargs)
+                )
+        
+        return async_wrapper
     
     def _call_completion_sync(self):
         # Bedrock doesn't support the completion API separately
@@ -229,6 +256,7 @@ class BedrockSDKChatProviderAdapter(
         # Bedrock doesn't support the completion API separately
         raise NotImplementedError("Completion API not supported for Bedrock")
     
+    # Response extraction methods
     def _extract_response(self, request: Any, response: Any) -> AdapterChatCompletion:
         # Extract from the existing logic
         body = json.loads(response["body"].read())
@@ -316,4 +344,3 @@ class BedrockSDKChatProviderAdapter(
     ) -> AdapterCompletionChunk:
         # Bedrock doesn't support the completion API separately
         raise NotImplementedError("Completion API not supported for Bedrock")
-}
