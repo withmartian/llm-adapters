@@ -197,7 +197,7 @@ class SDKChatAdapter(
     ) -> Iterable[ChatCompletionMessageParam]:
         try:
             messages = list(kwargs["messages"])
-        except KeyError as e:
+        except KeyError:
             raise AdapterException("Expected 'messages' keyword argument")
 
         # Check if messages are empty
