@@ -99,6 +99,54 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.18e-6, completion=0.18e-6),
         context_length=128000,
     ),
+    TogetherModel(
+        name="Llama-4-Maverick-17B-128E-Instruct-FP8",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0.27e-6, completion=0.85e-6),
+        context_length=500000,
+        supports_vision=True,
+        can_empty_content=False,
+    ),
+    TogetherModel(
+        name="Llama-4-Scout-17B-16E-Instruct",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0.18e-6, completion=0.59e-6),
+        context_length=300000,
+        supports_vision=True,
+        can_empty_content=False,
+    ),
+    TogetherModel(
+        name="Llama-3.3-70B-Instruct-Turbo-Free",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0, completion=0),  # Free model
+        context_length=8000,
+        supports_json_content=False,
+    ),
+    TogetherModel(
+        name="Llama-Vision-Free",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0, completion=0),  # Free model
+        context_length=128000,
+        supports_vision=True,
+        supports_json_output=False,
+        can_empty_content=False,
+    ),
+    TogetherModel(
+        name="Llama-3.2-11B-Vision-Instruct-Turbo",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0.18e-6, completion=0.18e-6),
+        context_length=128000,
+        supports_vision=True,
+        supports_json_output=False,
+        can_empty_content=False,
+    ),
+    TogetherModel(
+        name="Llama-3.2-90B-Vision-Instruct-Turbo",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=1.20e-6, completion=1.20e-6),
+        context_length=128000,
+        supports_vision=True,
+    ),
 ]
 
 DEFAULT_TEMPERATURE = 0.7

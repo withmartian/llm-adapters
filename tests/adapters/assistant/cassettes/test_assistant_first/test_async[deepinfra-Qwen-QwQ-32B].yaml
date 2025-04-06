@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '137'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RUYLxBGLXm8mFxYZxU8j7ZM9\",\"object\":\"chat.completion\",\"created\":1743942672,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user said \\\"Hi\\\" and I responded with \\\"Hi!\\\" and a prompt for
+        their questions or tasks. Then their next message is just two quote marks.
+        Hmm, maybe they accidentally sent that? I should check if they need help with
+        anything specific. Let me see... perhaps they're testing the bot's response
+        to empty or nonsense inputs. I should acknowledge the empty message and re-prompt
+        them. I need to keep it friendly and encouraging. Let me make sure my response
+        is clear and helpful, without being pushy. Maybe add an emoji to keep it approachable.
+        Alright, I'll respond with something like, \\\"Looks like you might have sent
+        an empty message! How can I assist you today? Let me know if you have any
+        questions or tasks you'd like help with. \U0001F60A\\\"\\n</think>\\n\\nLooks
+        like you might have sent an empty message! How can I assist you today? Let
+        me know if you have any questions or tasks you'd like help with. \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":24,\"total_tokens\":225,\"completion_tokens\":201,\"estimated_cost\":4.38e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1259'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:31:12 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

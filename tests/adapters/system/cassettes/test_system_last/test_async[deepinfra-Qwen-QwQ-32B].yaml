@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '101'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-Rhndfxb73j89UvF1OTaJCkw9\",\"object\":\"chat.completion\",\"created\":1743942994,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user just said \\\"Hi\\\". I need to respond in a friendly way. Let me
+        see what the guidelines are here. The user mentioned using emojis and a warm
+        tone, so I should make sure to include that.\\n\\nFirst, greet them back.
+        Maybe \\\"Hi there! \U0001F60A\\\" sounds friendly. Then ask how I can help,
+        keeping it open-ended. Something like \\\"How can I assist you today?\\\"
+        to encourage them to share what they need. I should keep it simple and approachable.
+        Let me check if that follows all the requirements: engaging, personal, helpful.
+        Yep, that works. Alright, time to put it all together.\\n</think>\\n\\nHi
+        there! \U0001F60A How can I assist you today? Feel free to ask anything!\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":17,\"total_tokens\":170,\"completion_tokens\":153,\"estimated_cost\":3.315e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1014'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:36:34 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
