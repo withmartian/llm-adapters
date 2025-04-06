@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"google/gemma-3-4b-it"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '113'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-Rh6FbMrepNvfrIPG3OZwVwCp\",\"object\":\"chat.completion\",\"created\":1743942753,\"model\":\"google/gemma-3-4b-it\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"How
+        can I help you today? Do you want to:\\n\\n*   **Chat about something?** (Tell
+        me about your day, a hobby, a movie you saw, etc.)\\n*   **Ask me a question?**
+        (About anything - history, science, trivia, etc.)\\n*   **Get some information?**
+        (I can look up facts, definitions, and more.)\\n*   **Generate some text?**
+        (Like a story, poem, or email?)\\n\\nJust let me know what's on your mind!
+        \U0001F60A\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":16,\"total_tokens\":130,\"completion_tokens\":114,\"estimated_cost\":4.88e-06}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '747'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:32:33 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
