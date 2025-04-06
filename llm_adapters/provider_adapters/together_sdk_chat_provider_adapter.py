@@ -99,13 +99,13 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.18e-6, completion=0.18e-6),
         context_length=128000,
     ),
-        TogetherModel(
+    TogetherModel(
         name="Llama-4-Maverick-17B-128E-Instruct-FP8",
         vendor_name=Vendor.meta_llama.value,
         cost=Cost(prompt=0.27e-6, completion=0.85e-6),
         context_length=500000,
         supports_vision=True,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     TogetherModel(
         name="Llama-4-Scout-17B-16E-Instruct",
@@ -113,7 +113,7 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.18e-6, completion=0.59e-6),
         context_length=300000,
         supports_vision=True,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     TogetherModel(
         name="Llama-3.3-70B-Instruct-Turbo-Free",
@@ -129,7 +129,7 @@ MODELS: list[Model] = [
         context_length=128000,
         supports_vision=True,
         supports_json_output=False,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     TogetherModel(
         name="Llama-3.2-11B-Vision-Instruct-Turbo",
@@ -138,7 +138,7 @@ MODELS: list[Model] = [
         context_length=128000,
         supports_vision=True,
         supports_json_output=False,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     TogetherModel(
         name="Llama-3.2-90B-Vision-Instruct-Turbo",

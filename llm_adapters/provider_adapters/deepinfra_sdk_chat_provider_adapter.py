@@ -25,7 +25,6 @@ class DeepInfraModel(Model):
 # TODO: check json support
 # TODO: check function/tools calling support
 MODELS: list[Model] = [
-
     DeepInfraModel(
         name="Llama-3.3-70B-Instruct",
         cost=Cost(prompt=0.23e-6, completion=0.40e-6),
@@ -94,14 +93,14 @@ MODELS: list[Model] = [
         cost=Cost(prompt=20e-6, completion=60e-6),
         context_length=131072,
         vendor_name=Vendor.meta_llama,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     DeepInfraModel(
         name="Llama-4-Scout-17B-16E-Instruct",
         cost=Cost(prompt=10e-6, completion=30e-6),
         context_length=131072,
         vendor_name=Vendor.meta_llama,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     DeepInfraModel(
         name="DeepSeek-R1-Turbo",
@@ -126,21 +125,21 @@ MODELS: list[Model] = [
         cost=Cost(prompt=10e-6, completion=20e-6),
         context_length=131072,
         vendor_name=Vendor.google,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     DeepInfraModel(
         name="gemma-3-12b-it",
         cost=Cost(prompt=5e-6, completion=10e-6),
         context_length=131072,
         vendor_name=Vendor.google,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     DeepInfraModel(
         name="gemma-3-4b-it",
         cost=Cost(prompt=2e-6, completion=4e-6),
         context_length=131072,
         vendor_name=Vendor.google,
-        can_empty_content=False
+        can_empty_content=False,
     ),
     DeepInfraModel(
         name="Phi-4-multimodal-instruct",
@@ -221,6 +220,7 @@ MODELS: list[Model] = [
         vendor_name=Vendor.meta_llama,
     ),
 ]
+
 
 class DeepInfraSDKChatProviderAdapter(OpenAISDKChatAdapter):
     @staticmethod
