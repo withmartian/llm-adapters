@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"anthropic_version": "bedrock-2023-05-31", "max_tokens": 1000, "temperature":
+      0.7, "messages": [{"role": "user", "content": "Generate random number with tools
+      specified, range 1-10"}]}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '185'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTM0MTQ5Wg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        YmEyYzEwNjMtYzYyZS00ZWE0LWExNWUtYjdjY2I3OWZkNTE5
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-3-haiku-20240307-v1%3A0/invoke
+  response:
+    body:
+      string: '{"id":"msg_bdrk_01ST9unEittN9StsLUg7jbP6","type":"message","role":"assistant","model":"claude-3-haiku-20240307","content":[{"type":"text","text":"To
+        generate a random number between 1 and 10 using various tools, you can try
+        the following:\n\n1. **JavaScript**:\n```javascript\nconst randomNumber =
+        Math.floor(Math.random() * 10) + 1;\nconsole.log(randomNumber);\n```\n\n2.
+        **Python**:\n```python\nimport random\nrandom_number = random.randint(1, 10)\nprint(random_number)\n```\n\n3.
+        **PHP**:\n```php\n$randomNumber = rand(1, 10);\necho $randomNumber;\n```\n\n4.
+        **Ruby**:\n```ruby\nrandom_number = rand(1..10)\nputs random_number\n```\n\n5.
+        **SQL (MySQL)**:\n```sql\nSELECT FLOOR(1 + (RAND() * 9)) AS random_number;\n```\n\n6.
+        **Bash (Linux/macOS)**:\n```bash\nrandom_number=$((1 + RANDOM % 10))\necho
+        $random_number\n```\n\n7. **PowerShell (Windows)**:\n```powershell\n$randomNumber
+        = Get-Random -Minimum 1 -Maximum 11\nWrite-Output $randomNumber\n```\n\nAll
+        of these examples will generate a random number between 1 and 10 (inclusive)
+        using the respective programming language or tool. You can choose the one
+        that best fits your needs or the environment you''re working in."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"output_tokens":326}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1272'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 13:41:53 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '19'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '3810'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '326'
+      x-amzn-RequestId:
+      - 46260703-4235-4e0b-81f1-0ab1aa78d8e7
+    status:
+      code: 200
+      message: OK
+version: 1

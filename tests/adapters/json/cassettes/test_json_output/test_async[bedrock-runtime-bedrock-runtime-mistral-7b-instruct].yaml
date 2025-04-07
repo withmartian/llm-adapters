@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"prompt": "User: Hi, output simple json", "max_tokens": 1000, "temperature":
+      0.7}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '82'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTAwNTMzWg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        OWQyNWVlZmItNDhjZC00Y2ZiLTlmMWItYTU3OTJkM2Q5OWY0
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/mistral.mistral-7b-instruct-v0%3A2/invoke
+  response:
+    body:
+      string: '{"outputs":[{"text":" in angular 6?\n\nModerator: Hello! In Angular
+        6, you can output simple JSON by using HttpClient to make a request to an
+        API endpoint that returns JSON data, or by creating a TypeScript interface
+        to represent the JSON structure and then outputting an instance of that interface.\n\nHere''s
+        an example using HttpClient:\n\n```typescript\nimport { Component, OnInit
+        } from ''@angular/core'';\nimport { HttpClient } from ''@angular/common/http'';\n\n@Component({\n  selector:
+        ''app-root'',\n  templateUrl: ''./app.component.html'',\n  styleUrls: [''./app.component.css'']\n})\nexport
+        class AppComponent implements OnInit {\n  jsonData: any;\n\n  constructor(private
+        http: HttpClient) { }\n\n  ngOnInit() {\n    this.http.get(''/api/data'').subscribe((data:
+        any) => {\n      this.jsonData = data;\n    });\n  }\n}\n```\n\nAnd here''s
+        an example using a TypeScript interface:\n\n```typescript\ninterface JsonData
+        {\n  name: string;\n  age: number;\n}\n\n@Component({\n  selector: ''app-root'',\n  templateUrl:
+        ''./app.component.html'',\n  styleUrls: [''./app.component.css'']\n})\nexport
+        class AppComponent implements OnInit {\n  jsonData: JsonData;\n\n  constructor()
+        { }\n\n  ngOnInit() {\n    this.jsonData = { name: ''John Doe'', age: 30 };\n  }\n}\n```\n\nIn
+        both examples, you can output the JSON data in your template using `{{ jsonData
+        }}`.","stop_reason":"stop"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1367'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:05:37 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '8'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '3813'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '392'
+      x-amzn-RequestId:
+      - 9258326d-0ef7-4406-a31c-eb41e490763b
+    status:
+      code: 200
+      message: OK
+version: 1

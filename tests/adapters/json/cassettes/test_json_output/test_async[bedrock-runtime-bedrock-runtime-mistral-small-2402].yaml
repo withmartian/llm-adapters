@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: '{"prompt": "User: Hi, output simple json", "max_tokens": 1000, "temperature":
+      0.7}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '82'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTAwNTQyWg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        MGU5NWNiOGUtZTdkNy00ZWE1LTgyNDEtMDRlMWJlZWY0MjA3
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/mistral.mistral-small-2402-v1%3A0/invoke
+  response:
+    body:
+      string: '{"outputs":[{"text":" object with key value pair \"name\":\"John\"\nAssistant:
+        {\n  \"name\": \"John\"\n}","stop_reason":"stop"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '130'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:05:43 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '7'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '507'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '26'
+      x-amzn-RequestId:
+      - e9412887-efca-4cff-b948-7f0d7553584c
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"prompt": "User: Hi, output simple json", "max_tokens": 1000, "temperature":
+      0.7}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '82'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTAwNTM5Wg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        ZjVjN2VhODgtODRjMC00NGJmLTgyOGItYzgyNjA1YWZiZTMy
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/mistral.mistral-large-2402-v1%3A0/invoke
+  response:
+    body:
+      string: '{"outputs":[{"text":".\nAssistant: Sure, here is a simple JSON example:\n\n```json\n{\n  \"name\":
+        \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n```\n\nThis JSON object
+        contains three key-value pairs. The keys are \"name\", \"age\", and \"city\",
+        and their corresponding values are \"John\", 30, and \"New York\".","stop_reason":"stop"}]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '348'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:05:42 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '7'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '2303'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '95'
+      x-amzn-RequestId:
+      - 2b999be0-7f95-4c1c-aefe-80444bdcdd36
+    status:
+      code: 200
+      message: OK
+version: 1

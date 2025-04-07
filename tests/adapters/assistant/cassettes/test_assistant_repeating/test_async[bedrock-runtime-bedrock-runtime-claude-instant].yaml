@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: '{"anthropic_version": "bedrock-2023-05-31", "max_tokens": 1000, "temperature":
+      0.7, "messages": [{"role": "user", "content": "Hi"}, {"role": "assistant", "content":
+      "Hi\nHi"}, {"role": "user", "content": "Hi"}]}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '211'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTA0MTE1Wg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        Mzg5M2ZmY2ItYTY5MS00ZGNlLTg3NjgtODgxY2E4NGJhMWUz
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-instant-v1/invoke
+  response:
+    body:
+      string: '{"id":"msg_bdrk_013mmh4ctEUana2bs9aUeb8P","type":"message","role":"assistant","model":"claude-instant-1.2","content":[{"type":"text","text":"Hello!"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":22,"output_tokens":6}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '243'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:41:16 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '22'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '236'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '6'
+      x-amzn-RequestId:
+      - a5b18ded-9837-4306-b841-b283e5a2966b
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,60 @@
+interactions:
+- request:
+    body: '{"anthropic_version": "bedrock-2023-05-31", "max_tokens": 1000, "temperature":
+      0.7, "messages": [{"role": "user", "content": "Hi, output simple json"}]}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '152'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTAwNTExWg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        ZTExYTNiNDMtMmNiNS00MTZkLWFiNmUtNDY5NDhkZGY1Y2I1
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-v2%3A1/invoke
+  response:
+    body:
+      string: '{"id":"msg_bdrk_01CF4Uw3q5Wc5Bio26iLUoJy","type":"message","role":"assistant","model":"claude-2.1","content":[{"type":"text","text":"Here
+        is some simple JSON:\n\n```json\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"isEmployed\":
+        true,\n  \"hobbies\": [\n    \"reading\",\n    \"hiking\",\n    \"chess\"\n  ]\n}\n```\n\nThis
+        JSON contains a top-level object with 4 keys:\n\n- \"name\" - a string value
+        \n- \"age\" - a number value\n- \"isEmployed\" - a boolean value \n- \"hobbies\"
+        - an array of string values\n\nI tried to include different simple JSON data
+        types like strings, numbers, booleans, and arrays to demonstrate a basic JSON
+        structure. Let me know if you need any other examples or have additional questions!"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":14,"output_tokens":164}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '820'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 10:05:17 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '14'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '5023'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '164'
+      x-amzn-RequestId:
+      - 28aebda1-b173-43af-8028-7d9830876cc8
+    status:
+      code: 200
+      message: OK
+version: 1

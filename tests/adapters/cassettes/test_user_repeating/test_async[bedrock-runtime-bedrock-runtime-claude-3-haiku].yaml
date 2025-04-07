@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: '{"anthropic_version": "bedrock-2023-05-31", "max_tokens": 1000, "temperature":
+      0.7, "messages": [{"role": "user", "content": "Hi\nHi"}]}'
+    headers:
+      Accept:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      Content-Length:
+      - '136'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24vanNvbg==
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS4zNy4yMyBtZC9Cb3RvY29yZSMxLjM3LjIzIHVhLzIuMSBvcy9saW51eCM2LjguMC01
+        MS1nZW5lcmljIG1kL2FyY2gjeDg2XzY0IGxhbmcvcHl0aG9uIzMuMTIuMyBtZC9weWltcGwjQ1B5
+        dGhvbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS4zNy4yMw==
+      X-Amz-Date:
+      - !!binary |
+        MjAyNTAzMzFUMTEwNzIzWg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        Y2ViYzBmOGYtNWFmYS00NDE3LWIxYmYtMWM5YWE3MjJhMTll
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://bedrock-runtime.us-east-1.amazonaws.com/model/anthropic.claude-3-haiku-20240307-v1%3A0/invoke
+  response:
+    body:
+      string: '{"id":"msg_bdrk_01MEC1bEKpSiC2ev5QPdJHDy","type":"message","role":"assistant","model":"claude-3-haiku-20240307","content":[{"type":"text","text":"Hello!
+        How can I assist you today?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":10,"output_tokens":12}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '277'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Mar 2025 11:07:24 GMT
+      X-Amzn-Bedrock-Input-Token-Count:
+      - '10'
+      X-Amzn-Bedrock-Invocation-Latency:
+      - '217'
+      X-Amzn-Bedrock-Output-Token-Count:
+      - '12'
+      x-amzn-RequestId:
+      - 20e01f78-38a4-4843-9e8f-8c33948f09ea
+    status:
+      code: 200
+      message: OK
+version: 1
