@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"google/gemma-3-27b-it","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '99'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RC26zq8bw48yaGGZpfAcQ3by\",\"object\":\"chat.completion\",\"created\":1744052886,\"model\":\"google/gemma-3-27b-it\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! \U0001F44B \\n\\nHow can I help you today? Just let me know what you're
+        thinking, or if you just wanted to say hi, that's great too! \\n\\nI can do
+        a lot of things, like:\\n\\n* **Answer questions:** About pretty much anything!\\n*
+        **Generate text:**  Stories, poems, articles, code, scripts, musical pieces,
+        email, letters, etc.\\n* **Translate languages:** I can translate between
+        many different languages.\\n* **Summarize text:**  Give you the main points
+        of a longer piece of writing.\\n* **Brainstorm ideas:**  Help you come up
+        with ideas for a project or problem.\\n* **Just chat:** If you're bored and
+        want someone to talk to!\\n\\n\\n\\n\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":171,\"completion_tokens\":161,\"estimated_cost\":3.32e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '989'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:08:06 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

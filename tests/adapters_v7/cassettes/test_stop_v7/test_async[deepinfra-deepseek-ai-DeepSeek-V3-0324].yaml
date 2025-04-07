@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-V3-0324","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '98'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-ReE2cQ2V8m9WC3mj4DI1EUNP\",\"object\":\"chat.completion\",\"created\":1744052867,\"model\":\"deepseek-ai/DeepSeek-V3-0324\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\u4F60\u597D\u5440\uFF01\U0001F60A
+        \u6709\u4EC0\u4E48\u6211\u53EF\u4EE5\u5E2E\u52A9\u4F60\u7684\u5417\uFF1F\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":5,\"total_tokens\":18,\"completion_tokens\":13,\"estimated_cost\":1.357e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '415'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:07:47 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

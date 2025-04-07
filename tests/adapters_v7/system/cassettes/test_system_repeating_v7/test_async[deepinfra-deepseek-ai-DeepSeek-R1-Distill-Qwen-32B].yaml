@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '323'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RHP2h2qlGSO3amfhsjMpDrb0","object":"chat.completion","created":1744052815,"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        so the user has sent a message that consists of multiple \"Hi\"s and then
+        an empty string. I''m trying to figure out what they want. It''s possible
+        they''re just greeting me, but sometimes people use repeated greetings to
+        signal something else, like testing the bot or maybe they''re looking for
+        a conversation starter.\n\nI should consider that maybe they''re not sure
+        how to start a proper conversation, so they just keep saying \"Hi.\" Or perhaps
+        they''re trying to see how I respond to repeated messages. Either way, my
+        goal is to be helpful and encouraging.\n\nI should respond in a friendly manner,
+        acknowledge their message, and perhaps offer assistance or ask how I can help
+        them today. That way, it opens the door for them to share more if they want
+        to. I want to make sure my response is welcoming and encourages further interaction
+        without being overwhelming.\n\nAlso, since they ended with an empty string,
+        maybe they hesitated or changed their mind mid-message. I should be patient
+        and not assume anything negative. Just keep the conversation open and positive.\n\nIn
+        summary, I''ll respond with a friendly greeting, acknowledge their message,
+        and offer my assistance to see how I can help them today. That should cover
+        all bases and make them feel comfortable to continue the conversation if they
+        wish.\n</think>\n\nHello! It seems like you''re saying a quick hello. How
+        can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":300,"completion_tokens":283,"estimated_cost":5.2980000000000004e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1805'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:06:55 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

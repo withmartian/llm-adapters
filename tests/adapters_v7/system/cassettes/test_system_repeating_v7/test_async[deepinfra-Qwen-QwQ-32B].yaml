@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '295'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RwlgsSXdZjJlj5wZXTKhGcTW\",\"object\":\"chat.completion\",\"created\":1744052798,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user started off with four \\\"Hi\\\"s, and then in the next message,
+        they have three \\\"Hi\\\"s followed by an empty line. Maybe they're testing
+        how I respond to multiple greetings or checking if there's a pattern. I should
+        acknowledge their greetings and see if they need anything specific. Let me
+        make sure to keep it friendly and open-ended so they feel comfortable to ask
+        something.\\n\\nHmm, maybe they were practicing hitting enter multiple times
+        by accident? The empty line could be a mistake. I'll respond with a cheerful
+        greeting and invite them to ask a question. That way, it's helpful regardless
+        of their intent.\\n</think>\\n\\nHello! How can I assist you today? \U0001F60AFeel
+        free to ask me any questions or let me know if you need help with anything
+        specific!\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":29,\"total_tokens\":189,\"completion_tokens\":160,\"estimated_cost\":3.635e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1117'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:06:38 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,9 +1,7 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Generate random number with tools
-      specified, range 1-10"}],"model":"deepseek-ai/DeepSeek-R1","tools":[{"type":"function","function":{"description":"Generate
-      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
-      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"}'
     headers:
       accept:
       - application/json
@@ -12,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '378'
+      - '137'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.68.2
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,7 +26,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -39,55 +39,60 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"91aa693f7cb80695\",\n  \"error\": {\n    \"message\":
-        \"Service unavailable\",\n    \"type\": \"service_unavailable\",\n    \"param\":
-        null,\n    \"code\": null\n  }\n}"
+      string: "{\n  \"id\": \"npAyHzr-3NKUce-92cbcccd3e3195a3\",\n  \"error\": {\n
+        \   \"message\": \"You have reached the rate limit specific to this model
+        meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this
+        model is 10.0 queries per minute. This limit differs from the general rate
+        limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits).
+        For inquiries about increasing your model-specific rate limit, please contact
+        our sales team (https://www.together.ai/forms/contact-sales)\",\n    \"type\":
+        \"model_rate_limit\",\n    \"param\": null,\n    \"code\": null\n  }\n}"
     headers:
       Access-Control-Allow-Origin:
       - '*'
       CF-Cache-Status:
       - DYNAMIC
       CF-Ray:
-      - 91aa693f7cb80695-MEX
+      - 92cbcccd3e3195a3-TBS
       Connection:
       - keep-alive
       Content-Length:
-      - '157'
+      - '599'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 03 Mar 2025 16:11:46 GMT
+      - Mon, 07 Apr 2025 19:06:04 GMT
       ETag:
-      - W/"9d-ZrBVAbZB/2sKFGxC5GyiC+/A66E"
+      - W/"257-3U3D6gV7QGJ0vGIBCdCDmbiPZ4s"
       Retry-After:
-      - '1'
+      - '6'
       Server:
       - cloudflare
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains
       Vary:
       - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      x-amzn-trace-id:
+      - 40940dee-f273-4304-a871-3ecc117b0b33-noamzn
       x-api-received:
-      - '2025-03-03T16:11:41.492Z'
-      x-inference-version:
-      - v2
+      - '2025-04-07T19:06:04.491Z'
       x-ratelimit:
-      - 'false'
+      - 'true'
       x-ratelimit-limit:
-      - '10'
+      - '0.1666666667'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '19'
+      - '0'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
-      - '2'
+      - '6'
+      x-request-id:
+      - npAyHzr-3NKUce-92cbcccd3e3195a3
     status:
-      code: 503
-      message: Service Unavailable
+      code: 429
+      message: Too Many Requests
 version: 1

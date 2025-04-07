@@ -115,22 +115,22 @@ MODELS: list[Model] = [
         supports_vision=True,
         can_empty_content=False,
     ),
-    TogetherModel(
-        name="Llama-3.3-70B-Instruct-Turbo-Free",
-        vendor_name=Vendor.meta_llama.value,
-        cost=Cost(prompt=0, completion=0),  # Free model
-        context_length=8000,
-        supports_json_content=False,
-    ),
-    TogetherModel(
-        name="Llama-Vision-Free",
-        vendor_name=Vendor.meta_llama.value,
-        cost=Cost(prompt=0, completion=0),  # Free model
-        context_length=128000,
-        supports_vision=True,
-        supports_json_output=False,
-        can_empty_content=False,
-    ),
+    # TogetherModel(
+    #     name="Llama-3.3-70B-Instruct-Turbo-Free",
+    #     vendor_name=Vendor.meta_llama.value,
+    #     cost=Cost(prompt=0, completion=0),  # Free model
+    #     context_length=8000,
+    #     supports_json_content=False,
+    # ),
+    # TogetherModel(
+    #     name="Llama-Vision-Free",
+    #     vendor_name=Vendor.meta_llama.value,
+    #     cost=Cost(prompt=0, completion=0),  # Free model
+    #     context_length=128000,
+    #     supports_vision=True,
+    #     supports_json_output=False,
+    #     can_empty_content=False,
+    # ),
     TogetherModel(
         name="Llama-3.2-11B-Vision-Instruct-Turbo",
         vendor_name=Vendor.meta_llama.value,

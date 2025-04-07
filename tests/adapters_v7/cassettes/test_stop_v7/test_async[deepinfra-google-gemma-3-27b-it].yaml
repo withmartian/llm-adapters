@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"google/gemma-3-27b-it","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '91'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RlcWH2WMEZKB7L5XcMD1wdLk\",\"object\":\"chat.completion\",\"created\":1744052870,\"model\":\"google/gemma-3-27b-it\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! \U0001F44B \\n\\nHow can I help you today? Are you looking to:\\n\\n*
+        **Chat?** Just want to talk about something?\\n* **Get information?** Do you
+        have a question you need answered?\\n* **Brainstorm ideas?** Need help coming
+        up with something?\\n* **Write something?** Like a story, poem, or email?\\n*
+        **Something else?**\\n\\nJust let me know what you're thinking! I'm here to
+        assist. \U0001F60A\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":115,\"completion_tokens\":105,\"estimated_cost\":2.2000000000000003e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '754'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:07:50 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

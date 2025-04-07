@@ -1,0 +1,62 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '292'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RVdlpGeUQWEed0kysrmI3v9K","object":"chat.completion","created":1744052934,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you''re trying to initiate a conversation, but you haven''t typed
+        anything yet!\n\nIf you''d like to start a conversation, I''m here to chat
+        with you. What''s on your mind?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":31,"total_tokens":73,"completion_tokens":42,"estimated_cost":1.632e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '560'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:08:54 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
