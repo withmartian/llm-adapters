@@ -195,7 +195,10 @@ class SDKChatAdapter(
     def _format_messages(
         self, **kwargs: Unpack[ChatCompletionCreateArgs]
     ) -> Iterable[ChatCompletionMessageParam]:
-        messages = list(kwargs["messages"])
+        try:
+            messages = list(kwargs["messages"])
+        except KeyError:
+            raise AdapterException("Expected 'messages' keyword argument")
 
         # Check if messages are empty
         if len(messages) == 0:
