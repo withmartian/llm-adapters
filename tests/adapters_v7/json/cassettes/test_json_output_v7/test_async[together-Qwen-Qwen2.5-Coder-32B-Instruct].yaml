@@ -1,0 +1,111 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"Qwen/Qwen2.5-Coder-32B-Instruct","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '148'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAFpV3-4yUbBN-92cb07415b511a42\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1744044672,\n  \"model\": \"Qwen/Qwen2.5-Coder-32B-Instruct\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 1435303223858035500,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Sure! Here's a simple JSON example:\\n\\n```json\\n{\\n  \\\"name\\\": \\\"John
+        Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"isStudent\\\": false,\\n  \\\"courses\\\":
+        [\\\"Math\\\", \\\"Science\\\"],\\n  \\\"address\\\": {\\n    \\\"street\\\":
+        \\\"123 Main St\\\",\\n    \\\"city\\\": \\\"Anytown\\\",\\n    \\\"state\\\":
+        \\\"CA\\\"\\n  }\\n}\\n```\\n\\nThis JSON object includes a person's name,
+        age, student status, a list of courses, and an address with street, city,
+        and state.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 34,\n    \"completion_tokens\": 113,\n    \"total_tokens\":
+        147\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cb07415b511a42-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:51:14 GMT
+      ETag:
+      - W/"38d-pB8AuZwb2BhWC1HiPsjWLx0yKLQ"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '909'
+      x-api-call-end:
+      - '2025-04-07T16:51:14.825Z'
+      x-api-call-start:
+      - '2025-04-07T16:51:12.350Z'
+      x-api-received:
+      - '2025-04-07T16:51:12.342Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - npAFpV3-4yUbBN-92cb07415b511a42
+    status:
+      code: 200
+      message: OK
+version: 1

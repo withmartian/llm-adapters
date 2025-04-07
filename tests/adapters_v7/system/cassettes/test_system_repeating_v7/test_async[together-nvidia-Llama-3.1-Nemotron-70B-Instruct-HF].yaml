@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '291'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAFu82-3NKUce-92cb079faf8695a9\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1744044687,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 604688621320445600,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"**BREAKING THE HI LOOP**\\n\\nIt seems we've fallen into a never-ending
+        \\\"Hi\\\" cycle. Let's mix things up! Here are some conversation starters
+        to get us going:\\n\\n1. **Hobbies**: What do you enjoy doing in your free
+        time?\\n2. **Travel**: If you could visit any place in the world right now,
+        where would you go?\\n3. **Tech & Trends**: What's the most interesting tech
+        news or trend you've come across recently?\\n4. **Creative Corner**: If you
+        could create anything (a book, a movie, a game, etc.), what would it be about?\\n5.
+        **Just for Fun**: If you could have any superpower for one day, what would
+        it be and how would you use it?\\n\\nPick a number, or feel free to introduce
+        a topic of your own. Let's have a more engaging conversation!\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 48,\n    \"completion_tokens\":
+        179,\n    \"total_tokens\": 227\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cb079faf8695a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:51:29 GMT
+      ETag:
+      - W/"4e0-ee8jjyX1ky/KD/vu2vA+Rtzras8"
+      Retry-After:
+      - '0'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1248'
+      x-amzn-trace-id:
+      - be19cfb6-9da1-4d46-ad97-b830f663e1fe-noamzn
+      x-api-call-end:
+      - '2025-04-07T16:51:29.940Z'
+      x-api-call-start:
+      - '2025-04-07T16:51:27.950Z'
+      x-api-received:
+      - '2025-04-07T16:51:27.943Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '198'
+      x-ratelimit-remaining-tokens:
+      - '99622'
+      x-ratelimit-reset:
+      - '0'
+      x-request-id:
+      - npAFu82-3NKUce-92cb079faf8695a9
+    status:
+      code: 200
+      message: OK
+version: 1

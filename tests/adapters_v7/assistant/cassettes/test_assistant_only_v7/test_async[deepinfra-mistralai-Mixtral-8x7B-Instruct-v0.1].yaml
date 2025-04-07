@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '130'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-Rg4QUsfvY98CieYzzxhjwCfU","object":"chat.completion","created":1744052817,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"message":{"role":"assistant","content":"
+        Hello! How can I help you today? If you have any questions about a specific
+        topic or need assistance with something, feel free to ask. I''m here to help.\n\nIf
+        you''re looking for general information, here are some facts about me: I''m
+        an AI language model, trained by Mistral AI, and I can assist with a wide
+        range of topics, from answering questions about science and history to providing
+        language translations and generating creative writing prompts. I can also
+        help you with brainstorming ideas, coding, and much more. Just let me know
+        what you need!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":20,"total_tokens":143,"completion_tokens":123,"estimated_cost":3.4320000000000003e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '938'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:06:57 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

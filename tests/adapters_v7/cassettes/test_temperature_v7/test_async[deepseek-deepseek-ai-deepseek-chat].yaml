@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-chat","temperature":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '87'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"d1376667-7a38-4575-a38a-1c8dc3cfba77\",\"object\":\"chat.completion\",\"created\":1744044804,\"model\":\"deepseek-chat\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? \U0001F60A\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4,\"completion_tokens\":11,\"total_tokens\":15,\"prompt_tokens_details\":{\"cached_tokens\":0},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":4},\"system_fingerprint\":\"fp_3d5141a69a_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 92cb0a7aa9be95a6-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:53:24 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=z.JZHAcxHJYysBOdgaK5AICxRIFcNDZ61jbVnBBzpRw-1744044804-1.0.1.1-pbMwmUN8XZqacOHHWAeHbCkG.puDk2mEo22jN4.uuPbvNXgWiDfGxBs0.yGKobbmH4Bv3IMhwLvsls6WpWrM2JvProhMLxnOTkRU4rX0rc0;
+        path=/; expires=Mon, 07-Apr-25 17:23:24 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '479'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - f8cfdd0884ef283a8143ba7a2e515a13
+    status:
+      code: 200
+      message: OK
+version: 1

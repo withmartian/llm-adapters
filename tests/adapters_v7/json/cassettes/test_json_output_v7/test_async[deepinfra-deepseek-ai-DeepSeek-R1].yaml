@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-R1","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '140'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RccHA0kTscc0DV2R9EX8l5dD\",\"object\":\"chat.completion\",\"created\":1744052893,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user just said, \\\"Hi, output simple json.\\\" Let me figure out how
+        to respond.\\n\\nFirst, I need to understand what they're asking for. They
+        want a simple JSON example. Maybe they're learning JSON, testing the API,
+        or need a quick snippet for something else.\\n\\nI should consider what makes
+        a JSON structure simple. Probably a basic object with a few key-value pairs.
+        Common examples include user data, like name, age, email. That's straightforward
+        and easy to understand.\\n\\nWait, should I include different data types?
+        Like a string, number, boolean, maybe an array or nested object? That might
+        make it more illustrative. But the user said \\\"simple,\\\" so maybe keeping
+        it minimal is better.\\n\\nLet me check if there's any specific structure
+        they might expect. The hello world of JSON could be something like {\\\"key\\\":
+        \\\"value\\\"}. But adding a couple more fields would make it more helpful.\\n\\nAlso,
+        I need to ensure proper syntax: curly braces, quotes around keys, correct
+        commas. No trailing commas, as that's invalid in JSON.\\n\\nHmm, maybe something
+        like:\\n\\n{\\n  \\\"message\\\": \\\"Hello, world!\\\",\\n  \\\"status\\\":
+        \\\"success\\\",\\n  \\\"code\\\": 200\\n}\\n\\nOr maybe user info:\\n\\n{\\n
+        \ \\\"name\\\": \\\"John Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"isStudent\\\":
+        false\\n}\\n\\nEither way, both are simple. I'll go with the second one because
+        it includes different data types (string, number, boolean). That might be
+        more educational.\\n\\nWait, the user just said \\\"simple,\\\" so maybe even
+        simpler. Let me stick with the first example with message and status. It's
+        shorter and still meets the request.\\n\\nAlternatively, perhaps the user
+        has no preference. Either example should be fine. I'll present one and offer
+        to adjust if needed.\\n</think>\\n\\nHere's a simple JSON example:\\n\\n```json\\n{\\n
+        \ \\\"message\\\": \\\"Hello, world!\\\",\\n  \\\"status\\\": \\\"success\\\",\\n
+        \ \\\"timestamp\\\": 1681234567\\n}\\n```\\n\\nLet me know if you'd like something
+        more specific! \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":9,\"total_tokens\":444,\"completion_tokens\":435,\"estimated_cost\":0.0009576}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2296'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:08:13 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

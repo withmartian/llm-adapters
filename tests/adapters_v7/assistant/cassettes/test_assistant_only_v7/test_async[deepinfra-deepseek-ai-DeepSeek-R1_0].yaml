@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '117'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RydV5lWA3cgLE9uIUC78JSUW\",\"object\":\"chat.completion\",\"created\":1744044525,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user just sent \\\"Hi\\\" and then another message with just quotation
+        marks. I need to figure out what they're asking for.\\n\\nFirst, they said
+        \\\"Hi,\\\" which is a greeting, so I should respond politely. Maybe they're
+        starting a conversation. The second message is just \\\"\\\", which might
+        be a mistake or they could be testing something. Since there's no clear question,
+        I should ask how I can assist them today. Keep it friendly and open-ended
+        to encourage them to explain their needs.\\n</think>\\n\\nHello! How can I
+        assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":8,\"total_tokens\":128,\"completion_tokens\":120,\"estimated_cost\":0.0002672}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '911'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:48:45 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

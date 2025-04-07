@@ -1,0 +1,124 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '158'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAFnBA-3NKUce-92cb070d180a95a9\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1744044664,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 15324762824902222000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Below is a simple example of JSON (JavaScript Object Notation) output. For
+        the sake of this example, let's say we're outputting information about a book.
+        Here's how it might look:\\n\\n```\\n{\\n  \\\"book\\\": {\\n    \\\"title\\\":
+        \\\"The Great Adventure\\\",\\n    \\\"author\\\": \\\"John Doe\\\",\\n    \\\"publicationYear\\\":
+        2020,\\n    \\\"genres\\\": [\\n      \\\"Fiction\\\",\\n      \\\"Adventure\\\"\\n
+        \   ],\\n    \\\"rating\\\": 4.5\\n  }\\n}\\n```\\n\\nLet me break down the
+        components of this simple JSON for clarity:\\n\\n- **Objects**: Defined by
+        curly braces `{}`. In this example, the entire output is an object, and within
+        it, there's another object named `\\\"book\\\"`.\\n- **Key-Value Pairs**:
+        Within objects, data is represented as key-value pairs, e.g., `\\\"title\\\":
+        \\\"The Great Adventure\\\"`. The key is `\\\"title\\\"`, and the value is
+        `\\\"The Great Adventure\\\"`.\\n- **Arrays**: Defined by square brackets
+        `[]`. The `\\\"genres\\\"` key's value is an array containing two strings:
+        `\\\"Fiction\\\"` and `\\\"Adventure\\\"`.\\n- **Data Types**: This JSON includes
+        the following data types:\\n  - **String** (text): `\\\"The Great Adventure\\\"`,
+        `\\\"John Doe\\\"`, `\\\"Fiction\\\"`, `\\\"Adventure\\\"`\\n  - **Number**:
+        `2020`, `4.5`\\n\\nIf you're looking to **generate** this JSON programmatically
+        or **parse** it in a specific programming language, please let me know the
+        language of interest (e.g., Python, JavaScript, Java), and I can provide a
+        more tailored response.\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 21,\n    \"completion_tokens\": 340,\n
+        \   \"total_tokens\": 361\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cb070d180a95a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:51:08 GMT
+      ETag:
+      - W/"77e-oumFU5NFx3Z2hK7p5kZvIqKwaGQ"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1918'
+      x-amzn-trace-id:
+      - 3c5c278b-c6a6-430c-b24d-f4a438a7b176-noamzn
+      x-api-call-end:
+      - '2025-04-07T16:51:09.123Z'
+      x-api-call-start:
+      - '2025-04-07T16:51:04.581Z'
+      x-api-received:
+      - '2025-04-07T16:51:04.577Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '99830'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - npAFnBA-3NKUce-92cb070d180a95a9
+    status:
+      code: 200
+      message: OK
+version: 1

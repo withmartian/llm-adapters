@@ -1,0 +1,105 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-V3","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '140'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAFk92-zqrih-92cb06e5fd4d95a3\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1744044657,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        8154805707070164000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"{\\n  \\\"message\\\":
+        \\\"Hello, world!\\\"\\n}\",\n        \"tool_calls\": []\n      }\n    }\n
+        \ ],\n  \"usage\": {\n    \"prompt_tokens\": 8,\n    \"completion_tokens\":
+        12,\n    \"total_tokens\": 20,\n    \"cached_tokens\": 0\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cb06e5fd4d95a3-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:51:01 GMT
+      ETag:
+      - W/"22a-l8PFxip/fIoCe/5ymhfEgShgaSE"
+      Retry-After:
+      - '1'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '554'
+      x-amzn-trace-id:
+      - 027e6e61-1d0d-43b1-8198-606aeebf66c1-noamzn
+      x-api-call-end:
+      - '2025-04-07T16:51:01.608Z'
+      x-api-call-start:
+      - '2025-04-07T16:50:57.733Z'
+      x-api-received:
+      - '2025-04-07T16:50:57.725Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '58'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '1'
+      x-request-id:
+      - npAFk92-zqrih-92cb06e5fd4d95a3
+    status:
+      code: 200
+      message: OK
+version: 1

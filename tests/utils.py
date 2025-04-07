@@ -5,15 +5,107 @@ import brotli
 
 from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
 from llm_adapters.adapter_factory import AdapterFactory
-from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
-    AnthropicSDKChatProviderAdapter,
-)
-from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
-    CohereSDKChatProviderAdapter,
-)
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
 
+from adapters.abstract_adapters.base_adapter import BaseAdapter
+from llm_adapters.provider_adapters.ai21_sdk_chat_provider_adapter import AI21Model
+from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
+    AnthropicModel,
+    AnthropicSDKChatProviderAdapter,
+)
+from llm_adapters.provider_adapters.cerebras_sdk_chat_provider_adapter import (
+    CerebrasModel,
+)
+from llm_adapters.provider_adapters.cohere_sdk_chat_provider_adapter import (
+    CohereModel,
+    CohereSDKChatProviderAdapter,
+)
+from llm_adapters.provider_adapters.deepinfra_sdk_chat_provider_adapter import (
+    DeepInfraModel,
+)
+
+# from llm_adapters.provider_adapters.fireworks_sdk_chat_provider_adapter import (
+#     FireworksModel,
+# )
+# from llm_adapters.provider_adapters.gemini_sdk_chat_provider_adapter import (
+#     GeminiSDKChatProviderAdapter,
+# )
+# from llm_adapters.provider_adapters.lambdalambs_sdk_chat_provider_adapter import (
+#     LambdaLabsModel,
+# )
+# from llm_adapters.provider_adapters.lepton_sdk_chat_provider_adapter import LeptonModel
+# from llm_adapters.provider_adapters.moescape_sdk_chat_provider_adapter import MoescapeModel
+# from llm_adapters.provider_adapters.moonshot_sdk_chat_provider_adapter import MoonshotModel
+from llm_adapters.provider_adapters.openai_sdk_chat_provider_adapter import OpenAIModel
+
+# from llm_adapters.provider_adapters.tensoropera_sdk_chat_provider_adapter import (
+# TensorOperaModel,
+# )
+from llm_adapters.provider_adapters.together_sdk_chat_provider_adapter import (
+    TogetherModel,
+)
+# from llm_adapters.provider_adapters.bigmodel_provider_adapter import BigModelModel
+
+# from llm_adapters.provider_adapters.openrouter_sdk_chat_provider_adapter import (
+#     OpenRouterModel,
+# )
+# from llm_adapters.provider_adapters.perplexity_sdk_chat_provider_adapter import (
+#     PerplexityModel,
+# )
+from llm_adapters.provider_adapters.deepseek_sdk_chat_provider_adapter import (
+    DeepSeekModel,
+)
+
+
+class AdapterTestFactory:
+    model_path: str
+
+    def __init__(self, model_path: str):
+        self.model_path = model_path
+
+    def __call__(self) -> BaseAdapter:
+        adapter = AdapterFactory.get_adapter_by_path(self.model_path)
+        if adapter is None:
+            raise ValueError(f"No adapter found for path: {self.model_path}")
+        return adapter
+
+    def __str__(self) -> str:
+        return self.model_path
+
+
+TEST_MODELS = (
+    OpenAIModel,
+    AnthropicModel,
+    TogetherModel,
+    AI21Model,
+    # LambdaLabsModel,
+    CerebrasModel,
+    CohereModel,
+    # FireworksModel,
+    # MoescapeModel,
+    # GeminiModel,
+    # PerplexityModel,
+    # OpenRouterModel,
+    # MoonshotModel,
+    # LeptonModel,
+    DeepInfraModel,
+    # BigModelModel,
+    # TensorOperaModel,
+    DeepSeekModel,
+)
+
+ADAPTER_CHAT_TEST_FACTORIES = [
+    AdapterTestFactory(model.get_path())
+    for model in AdapterFactory.get_supported_models()
+    if isinstance(model, TEST_MODELS) and model.supports_chat
+]
+
+ADAPTER_COMPLETION_TEST_FACTORIES = [
+    AdapterTestFactory(model.get_path())
+    for model in AdapterFactory.get_supported_models()
+    if isinstance(model, TEST_MODELS) and model.supports_completion
+]
 
 TEST_CHAT_MODELS = [
     model.get_path()

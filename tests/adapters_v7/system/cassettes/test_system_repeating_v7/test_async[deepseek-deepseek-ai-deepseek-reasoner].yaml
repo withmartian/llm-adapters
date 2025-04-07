@@ -1,0 +1,97 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"Hi\nHi\nHi\nHi\nHi\nHi\n\"\""}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '132'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"bd0cc381-b9c8-453d-a912-0ddb811b0c90\",\"object\":\"chat.completion\",\"created\":1744044547,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        It looks like you're saying \\\"Hi\\\" a lot\u2014are you testing something,
+        or is there a specific way I can assist you today? Let me know! \U0001F60A
+        (Also, those triple quotes at the end\u2014was there something specific you
+        wanted to share or ask?)\",\"reasoning_content\":\"Okay, let me try to figure
+        out what's going on here. The user sent a bunch of \\\"Hi\\\" messages, like
+        seven times in a row. Then they ended with three quotation marks. Hmm, maybe
+        they're testing how I respond to repeated messages or checking if I notice
+        the pattern.\\n\\nFirst, I should acknowledge all the greetings. Maybe they
+        want a friendly response. But since there are so many, maybe they're expecting
+        something more than just a single \\\"Hi\\\" back. Alternatively, they might
+        be seeing how I handle multiple inputs in one go. \\n\\nI wonder if there's
+        a hidden question or if they just want to chat. The three quotes at the end
+        could be a formatting thing or a way to signal something specific. Maybe they
+        tried to format a code block or a quote but forgot to add content. Or perhaps
+        it's a mistake. \\n\\nI should respond in a friendly manner, address the multiple
+        \\\"Hi\\\"s, and ask if there's something specific they need help with. That
+        way, I cover both possibilities: either they just wanted to say hi a lot,
+        or there's an underlying request. Also, mentioning the quotes might help clarify
+        if that was intentional. \\n\\nLet me put that together: Greet them, mention
+        the many hellos, ask how I can assist, and check about the quotes. Keep it
+        light and helpful.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":20,\"completion_tokens\":335,\"total_tokens\":355,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":275},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":20},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 92cb04336c5e95a3-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:49:07 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=HNrwe7LRw57xXbZOopECkIFugq3E8m75fTnZs3WSPUc-1744044547-1.0.1.1-85dkZ6EnotPvSdXH_PnJ.o6NXQ2BbCy1wYyfm6OXGI8h5DEwlxtQCgSNzd6.5hDWp0GEjgI3_wic3SqPWMG5btlEoJ_pfEsS.RGpuhgn2pY;
+        path=/; expires=Mon, 07-Apr-25 17:19:07 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '2027'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - 87e467981ca7f8c5dc8113e670dc2ce8
+    status:
+      code: 200
+      message: OK
+version: 1

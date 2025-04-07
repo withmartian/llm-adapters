@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Literal, Optional, Unpack, overload
+from typing import Any, Iterable, Literal, Optional, Unpack, overload
 
 from openai import NOT_GIVEN, NotGiven
 
@@ -11,13 +11,15 @@ from llm_adapters.types import (
     AdapterStreamSyncChatCompletion,
     AdapterStreamSyncCompletion,
     Model,
+    ChatCompletionMessageParam,
+    Conversation,
 )
 from llm_adapters.types.request import (
     ChatCompletionCreateArgs,
     CompletionCreateArgs,
 )
 
-# TODO: add Deepske and pricing
+# TODO: add Deepseek and pricing
 
 # DeepSeek-V3 at 50% off
 # DeepSeek-R1 at a massive 75% off
@@ -121,3 +123,63 @@ class Adapter(ABC):
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
         **kwargs: Unpack[ChatCompletionCreateArgs],
     ) -> AdapterChatCompletion | AdapterStreamAsyncChatCompletion: ...
+
+    # V7
+    @overload
+    def execute_sync(
+        self,
+        messages: Iterable[ChatCompletionMessageParam] | Conversation,
+        stream: Literal[True],
+        **kwargs: Any,
+    ) -> AdapterStreamSyncChatCompletion: ...
+    @overload
+    def execute_sync(
+        self,
+        messages: Iterable[ChatCompletionMessageParam] | Conversation,
+        stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
+        **kwargs: Any,
+    ) -> AdapterChatCompletion: ...
+    def execute_sync(
+        self,
+        messages: Iterable[ChatCompletionMessageParam] | Conversation,
+        stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
+        **kwargs: Any,
+    ) -> AdapterChatCompletion | AdapterStreamSyncChatCompletion:
+        if isinstance(messages, Conversation):
+            openai_messages = messages.convert_to_openai_format()
+        else:
+            openai_messages = messages
+
+        return self.execute_chat_completion_sync(
+            messages=openai_messages, stream=stream, **kwargs
+        )
+
+    # V7
+    @overload
+    async def execute_async(
+        self,
+        messages: Iterable[ChatCompletionMessageParam] | Conversation,
+        stream: Literal[True],
+        **kwargs: Any,
+    ) -> AdapterStreamAsyncChatCompletion: ...
+    @overload
+    async def execute_async(
+        self,
+        messages: Iterable[ChatCompletionMessageParam] | Conversation,
+        stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
+        **kwargs: Any,
+    ) -> AdapterChatCompletion: ...
+    async def execute_async(
+        self,
+        messages: Iterable[ChatCompletionMessageParam] | Conversation,
+        stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
+        **kwargs: Any,
+    ) -> AdapterChatCompletion | AdapterStreamAsyncChatCompletion:
+        if isinstance(messages, Conversation):
+            openai_messages = messages.convert_to_openai_format()
+        else:
+            openai_messages = messages
+
+        return await self.execute_chat_completion_async(
+            messages=openai_messages, stream=stream, **kwargs
+        )

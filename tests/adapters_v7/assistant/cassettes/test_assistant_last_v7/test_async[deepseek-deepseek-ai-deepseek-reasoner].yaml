@@ -1,0 +1,91 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "},{"role":"user","content":"\"\""}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '143'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"a0c9433c-6b8d-42b8-99d4-deb060be3b8e","object":"chat.completion","created":1744044330,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","reasoning_content":"Okay, the user just sent
+        a message with two empty quotes. Let me check the history. The previous interaction
+        was a greeting exchange where the user said \"Hi\" and I responded \"Hi\".
+        Now they sent \"\", which is just empty quotes.\n\nHmm, maybe they''re testing
+        if the system is responsive to empty messages or unexpected inputs. Alternatively,
+        it could be a mistake or accidental send. Since the user didn''t provide any
+        content within the quotes, there''s no specific query to address. \n\nI need
+        to respond in a friendly and helpful manner. Perhaps ask how I can assist
+        them today. That way, I invite them to provide more information or clarify
+        their request. It''s important to keep the conversation open and encourage
+        them to ask their question or share what they need help with. Let me make
+        sure my response is welcoming and not dismissive. Something like, \"Hello!
+        How can I assist you today?\" should work. That acknowledges their message
+        and prompts them to engage further."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":12,"completion_tokens":209,"total_tokens":221,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":198},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":12},"system_fingerprint":"fp_5417b77867_prod0225"}'
+    headers:
+      CF-RAY:
+      - 92cafee56bab959f-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:45:30 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=iwX9zqpOT.HI4dC7EeLm8pOWLa1BPzLffPgCubndZmY-1744044330-1.0.1.1-ufBrJAZPIWOo1k0BFmqHdAKPVyJd6yhD6stoqXDv6R0Kq3rxa08apYdyYLOn0BQFke8JR4sD6nGS.4fqs027XDUgNIl5ii0kEqUtsstT_p4;
+        path=/; expires=Mon, 07-Apr-25 17:15:30 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1537'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - 312c3fc5eaeea1b4cffe7991fdb51e00
+    status:
+      code: 200
+      message: OK
+version: 1

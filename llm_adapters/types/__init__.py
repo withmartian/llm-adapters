@@ -45,8 +45,8 @@ from llm_adapters.types.request import (
 
 from llm_adapters.types.exception import (
     AdapterException,
-    ModelNotFoundException,
-    RateLimitException,
+    AdapterModelNotFoundException,
+    AdapterRateLimitException,
 )
 
 from llm_adapters.types.model import (
@@ -71,6 +71,21 @@ from llm_adapters.types.response import (
     AdapterStreamCompletion,
     AdapterStreamSyncCompletion,
     AdapterStreamAsyncCompletion,
+    # Deprecated
+    Turn,
+    FunctionOutputTurn,
+    ToolOutputTurn,
+    ToolsCallTurn,
+    ImageDetailsType,
+    VisionImageDetails,
+    TextContentEntry,
+    ImageContentEntry,
+    ContentTurn,
+    TurnType,
+    Conversation,
+    Prompt,
+    AdapterResponse,
+    AdapterStreamResponse,
 )
 
 from llm_adapters.types.files import (
@@ -103,7 +118,7 @@ __all__ = [
     "Completion",
     "ChatCompletionChunk",
     "AdapterException",
-    "RateLimitException",
+    "AdapterRateLimitException",
     "Provider",
     "Vendor",
     "ConversationRole",
@@ -122,7 +137,7 @@ __all__ = [
     "AdapterStreamCompletion",
     "AdapterStreamSyncCompletion",
     "AdapterStreamAsyncCompletion",
-    "ModelNotFoundException",
+    "AdapterModelNotFoundException",
     "ChatCompletionCreateArgs",
     "CompletionCreateArgs",
     "ChatCompletionUserMessageParam",
@@ -141,4 +156,19 @@ __all__ = [
     "SyncCursorPage",
     "AsyncCursorPage",
     "AsyncPaginator",
+    # Deprecated
+    "Turn",
+    "FunctionOutputTurn",
+    "ToolOutputTurn",
+    "ToolsCallTurn",
+    "ImageDetailsType",
+    "VisionImageDetails",
+    "TextContentEntry",
+    "ImageContentEntry",
+    "ContentTurn",
+    "TurnType",
+    "Conversation",
+    "Prompt",
+    "AdapterResponse",
+    "AdapterStreamResponse",
 ]

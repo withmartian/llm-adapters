@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '106'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RoLsQyvUDzRVIIXCnwX1OcwM\",\"object\":\"chat.completion\",\"created\":1744052792,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user just sent an empty message with quotes. Hmm, maybe they made a typo
+        or their message got cut off. Let me see... The previous messages were in
+        Chinese, so maybe there was an encoding issue?\\n\\nWait, their initial message
+        was \\\"Hi\\\", and then the next one is just empty quotes. Sometimes users
+        do that when they're testing or their browser might have had an issue. I should
+        check if they need help with something specific.\\n\\nI should respond politely,
+        letting them know I noticed the empty message and offer help. Make sure to
+        keep it friendly and open-ended so they feel comfortable asking again. Maybe
+        ask how I can assist them today. That should cover it.\\n</think>\\n\\nIt
+        looks like your message might have been sent accidentally or was incomplete.
+        How can I assist you today? Feel free to ask anything! \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":22,\"total_tokens\":192,\"completion_tokens\":170,\"estimated_cost\":3.7300000000000005e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1187'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:06:32 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '148'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-Rj4IZ933agjSRb89KI9Z1a7D\",\"object\":\"chat.completion\",\"created\":1744044159,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user sent \\\"Hi\\\" and then another message with just quotes. Maybe
+        they're testing how I handle multiple messages or empty inputs. I should acknowledge
+        both and ask how I can assist them today. Keep it friendly and open-ended
+        to encourage them to specify their needs.\\n</think>\\n\\nHi there! It looks
+        like you sent an empty message. How can I assist you today? Let me know what's
+        on your mind. \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":102,\"completion_tokens\":92,\"estimated_cost\":0.00020697999999999997}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '787'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:42:39 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,105 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"google/gemma-2-27b-it"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '271'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAFxid-3NKUce-92cb07eaee7c95a5\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1744044700,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        2567357431829829600,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Hi! \U0001F44B
+        \ \\n\\nHow can I help you today? \U0001F60A \\n\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 46,\n    \"completion_tokens\":
+        16,\n    \"total_tokens\": 62\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cb07eaee7c95a5-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:51:40 GMT
+      ETag:
+      - W/"21b-5Rcc7o65XK2qUWd4ZzlNP84UhfI"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '539'
+      x-amzn-trace-id:
+      - f05ad80a-fe21-4960-b853-5562d6bf7930-noamzn
+      x-api-call-end:
+      - '2025-04-07T16:51:41.113Z'
+      x-api-call-start:
+      - '2025-04-07T16:51:40.049Z'
+      x-api-received:
+      - '2025-04-07T16:51:40.042Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - npAFxid-3NKUce-92cb07eaee7c95a5
+    status:
+      code: 200
+      message: OK
+version: 1

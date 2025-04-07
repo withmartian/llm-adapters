@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '324'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-Rb9zzCwHrHXWOCBPbzsAcK4w","object":"chat.completion","created":1744052871,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        so I''m trying to figure out what the user is asking for here. They just sent
+        a bunch of \"Hi\" messages and then some empty quotes. Maybe they''re testing
+        something or just being playful. I responded with \"Hi\" and an emoji, but
+        they sent a bunch of empty quotes again. Hmm, maybe they want me to say \"Hi\"
+        back each time or perhaps they''re trying to see how I handle multiple messages.\n</think>\n\nHi!
+        It looks like you''re sending multiple \"Hi\" messages. How can I assist you
+        today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":132,"completion_tokens":115,"estimated_cost":8.326e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '880'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:07:51 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
