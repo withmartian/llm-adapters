@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","max_completion_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '124'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RbA3G36BrU8K52plVZwoDxkT","object":"chat.completion","created":1744044698,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\n\n</think>\n\nHello!
+        How can I assist","name":null,"tool_calls":null},"finish_reason":"length","logprobs":null}],"usage":{"prompt_tokens":4,"total_tokens":14,"completion_tokens":10,"estimated_cost":7.82e-06}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '422'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:51:38 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

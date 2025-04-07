@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-chat","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '130'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"6500c1f5-7880-4234-ab0f-ab79547eb6ab","object":"chat.completion","created":1744044677,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"{\n  \"response\":
+        \"Hello! Here''s your simple JSON as requested.\"\n}"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":24,"completion_tokens":21,"total_tokens":45,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":24},"system_fingerprint":"fp_3d5141a69a_prod0225"}'
+    headers:
+      CF-RAY:
+      - 92cb0760dbf1eee8-ATH
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:51:17 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=RXq9giHYuEgB2hQla2R3dywAKSpUx0y1tcDtngeSUCE-1744044677-1.0.1.1-Zc7Z5MEZZ9g6Ahil5Mpa_6UnC3skuPoE5G6evegKEMH3yHd08Rp6YxNK6WwHR.H8Cf6R70n1EEzL_wK0qnTBL8qkHTH_mV7sXXHKc0nL7gg;
+        path=/; expires=Mon, 07-Apr-25 17:21:17 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '512'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - b166716fdf84fac8fa737b9ef4cac132
+    status:
+      code: 200
+      message: OK
+version: 1

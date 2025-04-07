@@ -1,0 +1,123 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-8b","stream":true}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '81'
+      content-type:
+      - application/json
+      host:
+      - api.cerebras.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.cerebras.ai/v1/chat/completions
+  response:
+    body:
+      string: 'data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"role":"assistant"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"content":"How"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"content":"
+        can"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"content":"
+        I"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"content":"
+        assist"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"content":"
+        you"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"content":"
+        today"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{"content":"?"},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{},"index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk"}
+
+
+        data: {"id":"chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2","choices":[{"delta":{},"finish_reason":"stop","index":0}],"created":1744044850,"model":"llama3.1-8b","system_fingerprint":"fp_6ca4989590d512bb18d1","object":"chat.completion.chunk","usage":{"prompt_tokens":36,"completion_tokens":8,"total_tokens":44},"time_info":{"queue_time":0.000440771,"prompt_time":0.001859795,"completion_time":0.003726316,"total_time":0.007640838623046875,"created":1744044850}}
+
+
+        '
+    headers:
+      CF-RAY:
+      - 92cb0ba6cafe959f-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/event-stream; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:54:12 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=A5reMmqnNro9mt0r0TwC2yU3JQOLNncJ8._LdTC_sOA-1744044852-1.0.1.1-GBwxhpOJhioeTri1MvsWlQY7XgMsZC6gAGxoWd2VlgDP33iop2J.nRKZELrIFXg2U76DYMUgVYnwBAbHtEPDrByVmymQGQ40FRuxB1xoSak;
+        path=/; expires=Mon, 07-Apr-25 17:24:12 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      inference-id:
+      - chatcmpl-0362dace-723f-47a3-84ae-ef461a3e89f2
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      strict-transport-security:
+      - max-age=3600; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests-day:
+      - '14400'
+      x-ratelimit-limit-tokens-minute:
+      - '60000'
+      x-ratelimit-remaining-requests-day:
+      - '14371'
+      x-ratelimit-remaining-tokens-minute:
+      - '60000'
+      x-ratelimit-reset-requests-day:
+      - '25547.534163951874'
+      x-ratelimit-reset-tokens-minute:
+      - '47.53416395187378'
+      x-request-id:
+      - 92cb0ba6cafe959f-TBS
+    status:
+      code: 200
+      message: OK
+version: 1

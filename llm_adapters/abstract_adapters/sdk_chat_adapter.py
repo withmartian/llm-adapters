@@ -533,7 +533,7 @@ class SDKChatAdapter(
                 if hasattr(response, "close"):
                     response.close()
 
-        return stream_response()
+        return AdapterStreamSyncChatCompletion(response=stream_response())
 
     @overload
     async def execute_chat_completion_async(
@@ -571,4 +571,4 @@ class SDKChatAdapter(
                     if hasattr(response, "close"):
                         await response.close()
 
-        return stream_response()
+        return AdapterStreamAsyncChatCompletion(response=stream_response())

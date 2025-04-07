@@ -15,7 +15,7 @@ from llm_adapters.provider_adapters import (
     TogetherSDKChatProviderAdapter,
     DeepSeekSDKChatProviderAdapter,
 )
-from llm_adapters.types import Model, ModelNotFoundException
+from llm_adapters.types import Model, AdapterModelNotFoundException
 
 ADAPTER_CLASSES: list[type[Adapter]] = [
     AnthropicSDKChatProviderAdapter,
@@ -78,7 +78,7 @@ class AdapterFactory:
         model = AdapterFactory._model_registry.get(model_path)
 
         if adapter_class is None or model is None:
-            raise ModelNotFoundException()
+            raise AdapterModelNotFoundException()
 
         adapter = adapter_class()
 
@@ -92,7 +92,7 @@ class AdapterFactory:
         adapter_class = AdapterFactory._adapter_registry.get(model.get_path())
 
         if adapter_class is None:
-            raise ModelNotFoundException()
+            raise AdapterModelNotFoundException()
 
         adapter = adapter_class()
 
@@ -106,7 +106,7 @@ class AdapterFactory:
         model = AdapterFactory._model_registry.get(model_path)
 
         if model is None:
-            raise ModelNotFoundException()
+            raise AdapterModelNotFoundException()
 
         return model
 

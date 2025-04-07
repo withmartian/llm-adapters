@@ -1,0 +1,96 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o1-2024-12-17","top_p":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '81'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'top_p'
+        is not supported with this model.\",\n    \"type\": \"invalid_request_error\",\n
+        \   \"param\": \"top_p\",\n    \"code\": \"unsupported_parameter\"\n  }\n}"
+    headers:
+      CF-RAY:
+      - 92cb0c70bb3f95a5-TBS
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '198'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:54:44 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=NtTx4PfSve42Iashz1jvuoFPveGjHUW1qW.SkebKwFo-1744044884-1.0.1.1-OpGr2yn_hAoRqzhuJEYtZl469e5nsMTEIBDN_OevHLUF2FWaBMgtLHP9NjM6PMWReFpeVIX46Ay7tIq.xbli9whpMcCDkoanm6nbJHzCN8M;
+        path=/; expires=Mon, 07-Apr-25 17:24:44 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=HCW8v7rgIFp2A5kffwqV2fg5.wiHREdBmuhqmvfz8RQ-1744044884837-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - martian-4
+      openai-processing-ms:
+      - '10'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '30000000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '29999996'
+      x-ratelimit-reset-requests:
+      - 6ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_858923e3e73e7cb88ecf03c334c2359f
+    status:
+      code: 400
+      message: Bad Request
+version: 1

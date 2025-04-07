@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-R1","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '140'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RDE5Povq4JlhtpdX6E0oAQt2","object":"chat.completion","created":1744044758,"model":"deepseek-ai/DeepSeek-R1","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wants me to output a simple JSON. Let me think about what that means.
+        They probably want a basic example without any complexity.\n\nI should start
+        with the most straightforward JSON structure. Maybe a key-value pair where
+        the value is a string. Or maybe include different data types like a number,
+        boolean, and an array to show some variety.\n\nWait, but the user said \"simple,\"
+        so maybe just a single object with a few fields. Let me make sure the syntax
+        is correct. JSON requires double quotes for keys and string values. No trailing
+        commas. Let me double-check that.\n\nI''ll create an object with a greeting
+        message, a number, a boolean, and a list of fruits. That should cover the
+        basics. Let me format it properly. Yeah, that looks good. I''ll present it
+        in a code block for clarity.\n</think>\n\n```json\n{\n  \"greeting\": \"Hello,
+        world!\",\n  \"number\": 42,\n  \"status\": true,\n  \"fruits\": [\"apple\",
+        \"banana\", \"cherry\"]\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":233,"completion_tokens":224,"estimated_cost":0.00049551}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1332'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:52:38 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

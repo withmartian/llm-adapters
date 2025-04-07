@@ -1,5 +1,5 @@
 from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
-from llm_adapters.types import Cost, Model, Provider, Vendor
+from llm_adapters.types import Model, Provider, Vendor
 
 
 # An average token corresponds to 1 word or 6 characters of English text.
@@ -21,16 +21,16 @@ class AI21Model(Model):
 
 
 MODELS: list[Model] = [
-    AI21Model(
-        name="jamba-1.5-mini",
-        cost=Cost(prompt=0.2e-6, completion=0.4e-6),
-        context_length=256000,
-    ),
-    AI21Model(
-        name="jamba-1.5-large",
-        cost=Cost(prompt=2.0e-6, completion=8.0e-6),
-        context_length=256000,
-    ),
+    # AI21Model(
+    #     name="jamba-1.6-mini",
+    #     cost=Cost(prompt=0.2e-6, completion=0.4e-6),
+    #     context_length=256000,
+    # ),
+    # AI21Model(
+    #     name="jamba-1.6-large",
+    #     cost=Cost(prompt=2.0e-6, completion=8.0e-6),
+    #     context_length=256000,
+    # ),
 ]
 
 
