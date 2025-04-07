@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '295'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RtO5vUwV00GHA2Mp43s7zQv5\",\"object\":\"chat.completion\",\"created\":1743943127,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user sent a message with multiple \\\"Hi\\\"s and then some quotation
+        marks. Let me see... They started with four \\\"Hi\\\"s and then three more
+        \\\"Hi\\\"s followed by empty quotes. Maybe they're testing how I respond
+        to repeated greetings or checking for a specific pattern.\\n\\nHmm, I should
+        acknowledge their greeting in a friendly way. Since they used a lot of \\\"Hi\\\"s,
+        perhaps they want a playful or animated response. Also, the empty quotes at
+        the end might be a typo or trying to see if I notice formatting issues. \\n\\nI
+        need to make sure my reply is welcoming but not overly complicated. Maybe
+        use some emojis to keep it light. Let me count the number of \\\"Hi\\\"s again.
+        First message had four, second had three. Total of seven? Not sure if that's
+        significant, but maybe mirror their enthusiasm with a few \\\"Hi\\\"s back.
+        \\n\\nAlso, the empty quotes could be an accident, so I'll ignore that unless
+        they clarify. I should invite them to ask a question or share what's on their
+        mind. Keep it open-ended and supportive. Alright, time to put it all together.\\n\\n</think>\\n\\nHi
+        there! \U0001F60A How can I assist you today? Feel free to ask anything!\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":29,\"total_tokens\":280,\"completion_tokens\":251,\"estimated_cost\":5.455e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1492'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:38:47 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

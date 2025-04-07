@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-R1-Turbo","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '146'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RH1lHIfHybJiqkbDVSLHFpKH","object":"chat.completion","created":1743942935,"model":"deepseek-ai/DeepSeek-R1-Turbo","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wants a simple JSON example. Let me think about what to include.
+        They might need a basic structure, maybe with some common data types. I''ll
+        start with an object containing a few key-value pairs. Strings, numbers, booleans,
+        arrays, and maybe a nested object. Let me check if all the syntax is correct:
+        curly braces, commas, quotes around keys. Should I add a null value? That
+        could be helpful. Alright, putting it all together. Let me make sure there''s
+        no trailing comma. Yep, looks good. Ready to send.\n</think>\n\nHere''s a
+        simple JSON example:\n\n```json\n{\n  \"name\": \"John Doe\",\n  \"age\":
+        30,\n  \"isStudent\": false,\n  \"hobbies\": [\"reading\", \"gaming\", \"coding\"],\n  \"address\":
+        {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\"\n  }\n}\n```\n\nLet
+        me know if you''d like me to modify or expand it!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":223,"completion_tokens":214,"estimated_cost":0.0006509999999999999}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1231'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:35:35 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

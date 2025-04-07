@@ -1,0 +1,62 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '125'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-R5V50YbhGrLIagPXszVwjP8f","object":"chat.completion","created":1743943021,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"message":{"role":"assistant","content":"
+        How can I help you today? Are you looking to learn or practice English? I''m
+        here to assist you with any questions or problems you may have.\n\nIf you
+        want to introduce yourself, you can say something like:\n\"Hi, I''m (your
+        name). Nice to meet you. How can I help you today?\"\n\nOr if you want to
+        ask a question, you can start with:\n\"Can you...?\" or \"How do I...\"\n\nLet
+        me know how I can assist you!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":120,"completion_tokens":109,"estimated_cost":2.8800000000000002e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '792'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:37:01 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

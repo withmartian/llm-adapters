@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '171'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RdsFcAs8a6eOaM8qCAZ5XKuj\",\"object\":\"chat.completion\",\"created\":1743942864,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user is saying \\\"Hi\\\" again. Let me check the history. The previous
+        interaction was the user greeting twice, and I responded twice. Now they're
+        doing it a third time. Maybe they're testing if I'll keep responding the same
+        way? Or perhaps they want to start a conversation but are unsure how to proceed.\\n\\nI
+        should acknowledge their greeting warmly. Maybe add an emoji to keep it friendly.
+        Let's see, \\\"Hi again! \U0001F60A How can I assist you today?\\\" That sounds
+        good. It's friendly and opens the door for them to ask something. I don't
+        want to just repeat \\\"Hi\\\" again since that might seem unengaged. Adding
+        a question encourages them to elaborate. Alright, that should work.\\n</think>\\n\\nHi
+        again! \U0001F60A How can I assist you today?\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":25,\"total_tokens\":190,\"completion_tokens\":165,\"estimated_cost\":3.6750000000000006e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1102'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:34:24 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"google/gemma-3-4b-it"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '111'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-ReNV4wJWzF7cQ7yytocCV1TI\",\"object\":\"chat.completion\",\"created\":1743943073,\"model\":\"google/gemma-3-4b-it\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay!
+        Just \\\"Hi\\\" is a perfectly fine start. \U0001F60A \\n\\nIs there anything
+        you\u2019d like to talk about, or were you just saying hello? Do you want
+        to:\\n\\n*   Ask me a question?\\n*   Tell me something?\\n*   Play a game?\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":12,\"total_tokens\":73,\"completion_tokens\":61,\"estimated_cost\":2.68e-06}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '566'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:37:53 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

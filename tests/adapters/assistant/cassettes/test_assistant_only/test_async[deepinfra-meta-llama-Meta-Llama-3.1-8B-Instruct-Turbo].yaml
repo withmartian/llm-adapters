@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '137'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-ReMzd6Xu6qAQeilXIVp7SxU9","object":"chat.completion","created":1743942830,"model":"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like we started a conversation but I don''t see any question or statement.
+        Would you like to share something?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":22,"total_tokens":46,"completion_tokens":24,"estimated_cost":1.6400000000000004e-06}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '508'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:33:50 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

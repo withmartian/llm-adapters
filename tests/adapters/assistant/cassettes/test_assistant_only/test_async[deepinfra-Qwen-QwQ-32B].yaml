@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '106'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R2OT4QROJmITrg9Leflkl0zQ\",\"object\":\"chat.completion\",\"created\":1743942803,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user just sent two double quotes. Hmm, that's pretty vague. Maybe they're
+        testing if I'm paying attention or just being playful. Let me think. They
+        started with \\\"Hi\\\" and then followed with the quotes. The quotes could
+        be an attempt to input something but maybe they left it empty. I should respond
+        in a friendly way, encouraging them to ask something or let them know I'm
+        here to help. I don't want to assume too much, so I'll keep it open-ended.
+        Something like \\\"How can I assist you today?\\\" should work. It's simple
+        and invites them to specify their needs. I'll make sure the tone stays welcoming
+        and helpful.\\n\\n</think>\\n\\nIt looks like your message might be incomplete
+        or a placeholder. How can I assist you today? Let me know if you have any
+        questions, need assistance, or just want to chat! \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":22,\"total_tokens\":202,\"completion_tokens\":180,\"estimated_cost\":3.9300000000000007e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1177'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:33:23 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"mistralai/Mistral-Small-24B-Instruct-2501"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '324'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-R6AhLcBXaieRXmXkJiaSeLFM","object":"chat.completion","created":1743943157,"model":"mistralai/Mistral-Small-24B-Instruct-2501","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It seems like you''ve said \"Hi\" a few times. I''m here to assist you. If
+        you''re up for it, let''s try a fun game or an interesting conversation. Here
+        are a few suggestions:\n\n1. **20 Questions**: You think of something, and
+        I''ll try to guess it by asking up to 20 yes-or-no questions.\n2. **Trivia**:
+        I can ask you questions on a topic of your choice, or you can quiz me.\n3.
+        **Word Association**: I say a word, and you respond with the first word that
+        comes to your mind. We can go back and forth.\n4. **Story Building**: We can
+        take turns adding sentences to create a story.\n\nWhat would you like to do?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":19,"total_tokens":175,"completion_tokens":156,"estimated_cost":2.317e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '991'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:39:17 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"mistralai/Mistral-Small-24B-Instruct-2501"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '130'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-R6AtEReWbXiu9XdzQdfftYjQ","object":"chat.completion","created":1743943018,"model":"mistralai/Mistral-Small-24B-Instruct-2501","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How are you today? Is there something you''d like to talk about or ask me?
+        I''m here to help. Here are a few things I can do:\n\n* Answer questions you
+        have\n* Explain concepts in a simple way\n* Provide suggestions and advice
+        within reasonable and ethical boundaries\n* Engage in a conversation on a
+        wide range of topics\n* Help with language translation in multiple languages\n*
+        Offer fun facts and trivia\n* Teach you something new\n\nWhat would you like
+        to do?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":7,"total_tokens":111,"completion_tokens":104,"estimated_cost":1.505e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '846'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:36:58 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
