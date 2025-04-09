@@ -31,6 +31,10 @@ from llm_adapters.types import (
 )
 from llm_adapters.adapter_factory import AdapterFactory
 from llm_adapters.client import OpenAI, AsyncOpenAI
+from llm_adapters.custom_sdk_chat_provider_adapter import (
+    CustomOpenAISDKChatProviderAdapter,
+    CustomAISDKChatProviderAdapter,
+)
 
 __all__ = [
     "OpenAI",
@@ -75,4 +79,6 @@ __all__ = [
     "ContentType",
     "ModelProperties",
     "AdapterFactory",
+    "CustomOpenAISDKChatProviderAdapter",
+    "CustomAISDKChatProviderAdapter",
 ]
