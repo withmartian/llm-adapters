@@ -1,4 +1,4 @@
-from adapters.types import Conversation, ConversationRole, Turn
+from llm_adapters.types import Conversation, ConversationRole, Turn
 
 
 def test_conversation_creation_with_array() -> None:

@@ -1,6 +1,6 @@
 import pytest
 
-from adapters.types import Conversation, ConversationRole, Turn
+from llm_adapters.types import Conversation, ConversationRole, Turn
 from tests.utils import (
     ADAPTER_CHAT_TEST_FACTORIES,
     AdapterTestFactory,
