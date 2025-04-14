@@ -1,0 +1,104 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"gpt-4.1-nano","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '432'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        gxkCAMQ+3fqepnqzNZxJui+mwYLGkBOz7y91P+ITq9TLeEnVtulvYq168DAT0G/xgIY4mNiaW6q1
+        rvwXQKlNqT67c4iQx2CEKAvaSFnpHd/d9qq372n9mM+uLy/H2yI5K9P+bRw8x1u4DhFMWIioral1
+        hhgkudEUeeZylojBqD8djSaT4WQ2A99WJhYSjJDa1ht1+p4OtPEGvcHY6428/kgEMzN5JBow+nGI
+        iHZnR0T4CP4GGPXcUnlIhg9G/BIRaiMFGCFomrxpA93CJUAOu1pGeiEl+Kg1RvIokFK5eKC7a2ix
+        nwZS8vKykt/p4OvpSL88XpvVx/PD9PXkbKVTFG9vrFHKcIyxHAVbxhR2EUEHqj7M+84lciJ09h/B
+        CLtf2Noo2/6C/aLv9Xu/OMALeiiBjf41B3yj/4ZAthNEqLCqf6h2oD0HaVJbm7CpriHpHeEvGNsD
+        RmhaY01zD44Bq1h0p+RLwVtTCpXOdK6KIOSAoM4W+EEECG2augI1np6PNqFThyiIMhFrhDi7DxZx
+        bkDquD3BnonyRddvznW6AzgURcK2IuYJHkd9Biq/WhQiElx0D04/6chKOMjbXNRghOeoSGBtmlYo
+        nuQ6FbWt8zvlBSSWR/0knM17g1kM5+AYAw==
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93060ff58ec095a0-TBS
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Mon, 14 Apr 2025 20:48:08 GMT
+      openai-organization:
+      - martian-4
+      openai-processing-ms:
+      - '153'
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=EXBbBc9rWvNy1dWzEAG1qdtnZ5rvQsy4WNDftcy8unM-1744663688-1.0.1.1-FTj1azprURe25PgwDeF2lefxApcxN.6162D3rSHmu2hS6jY2Kv.6kE6RZplbrf.G3X2ZUQL2lLi3vUhY4pycp39VsAv4QAoYl_b6rfmZ0jk;
+        path=/; expires=Mon, 14-Apr-25 21:18:08 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=4S1vAgT4xge4gAru_OW4XT9B_j9j2R5RjLBXuks.yLw-1744663688944-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '30000'
+      x-ratelimit-limit-tokens:
+      - '150000000'
+      x-ratelimit-remaining-requests:
+      - '29999'
+      x-ratelimit-remaining-tokens:
+      - '149999984'
+      x-ratelimit-reset-requests:
+      - 2ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_b56c96dfec092bf83d360a7870af7b49
+    status:
+      code: 200
+      message: OK
+version: 1
