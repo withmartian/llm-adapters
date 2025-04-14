@@ -8,7 +8,7 @@ from llm_adapters.adapter_factory import AdapterFactory
 from vcr import VCR
 from openai.types.chat import ChatCompletionMessageParam
 
-from adapters.abstract_adapters.base_adapter import BaseAdapter
+from llm_adapters.abstract_adapters.adapter import BaseAdapter
 from llm_adapters.provider_adapters.ai21_sdk_chat_provider_adapter import AI21Model
 from llm_adapters.provider_adapters.anthropic_sdk_chat_provider_adapter import (
     AnthropicModel,

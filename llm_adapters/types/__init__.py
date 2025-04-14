@@ -115,8 +115,6 @@ __all__ = [
     "ChatCompletionToolParam",
     "ChatCompletionCreateKwargs",
     "CompletionCreateKwargs",
-    "Completion",
-    "ChatCompletionChunk",
     "AdapterException",
     "AdapterRateLimitException",
     "Provider",

@@ -183,3 +183,8 @@ class Adapter(ABC):
         return await self.execute_chat_completion_async(
             messages=openai_messages, stream=stream, **kwargs
         )
+
+
+BaseAdapter = Adapter
+
+__all__ = ["BaseAdapter", "Adapter"]

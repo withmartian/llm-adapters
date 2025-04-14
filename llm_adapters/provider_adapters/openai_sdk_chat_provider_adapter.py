@@ -132,6 +132,42 @@ MODELS: list[Model] = [
         can_empty_content=False,
         can_temperature=False,
     ),
+    OpenAIModel(
+        name="gpt-4.1",
+        cost=Cost(prompt=2.00e-6, completion=8.00e-6),
+        context_length=1047576,
+        completion_length=32768,
+    ),
+    OpenAIModel(
+        name="gpt-4.1-2025-04-14",
+        cost=Cost(prompt=2.00e-6, completion=8.00e-6),
+        context_length=1047576,
+        completion_length=32768,
+    ),
+    OpenAIModel(
+        name="gpt-4.1-mini",
+        cost=Cost(prompt=0.40e-6, completion=1.60e-6),
+        context_length=1047576,
+        completion_length=32768,
+    ),
+    OpenAIModel(
+        name="gpt-4.1-mini-2025-04-14",
+        cost=Cost(prompt=0.40e-6, completion=1.60e-6),
+        context_length=1047576,
+        completion_length=32768,
+    ),
+    OpenAIModel(
+        name="gpt-4.1-nano",
+        cost=Cost(prompt=0.10e-6, completion=0.40e-6),
+        context_length=1047576,
+        completion_length=32768,
+    ),
+    OpenAIModel(
+        name="gpt-4.1-nano-2025-04-14",
+        cost=Cost(prompt=0.10e-6, completion=0.40e-6),
+        context_length=1047576,
+        completion_length=32768,
+    ),
     # OpenAIModel(
     #     name="o1-pro",
     #     cost=Cost(prompt=150.00e-6, completion=600.00e-6),

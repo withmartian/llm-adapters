@@ -26,6 +26,8 @@ from openai.types.chat.chat_completion_message import FunctionCall
 
 from llm_adapters.types.model import ConversationRole
 
+from pydantic_core import core_schema
+
 
 class Turn(BaseModel, use_enum_values=True):
     role: Union[ConversationRole]
@@ -63,6 +65,24 @@ class AdapterStreamSyncChatCompletion:
     def close(self) -> None:
         self.response.close()
 
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+
+    @classmethod
+    def __get_pydantic_core_schema__(
+        cls, source_type: Any, handler: Any
+    ) -> core_schema.CoreSchema:
+        # Explicitly tell Pydantic to treat this as an arbitrary type
+        return core_schema.no_info_after_validator_function(
+            cls._validate, core_schema.any_schema()
+        )
+
+    @staticmethod
+    def _validate(value: Any) -> "AdapterStreamSyncChatCompletion":
+        assert isinstance(
+            value, AdapterStreamSyncChatCompletion
+        ), f"Expected AdapterStreamSyncChatCompletion, got {type(value)}"
+        return value
+
 
 # V8
 # AdapterStreamAsyncChatCompletion = AsyncGenerator[AdapterChatCompletionChunk, Any]
@@ -81,6 +101,24 @@ class AdapterStreamAsyncChatCompletion:
 
     async def aclose(self) -> None:
         await self.response.aclose()
+
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+
+    @classmethod
+    def __get_pydantic_core_schema__(
+        cls, source_type: Any, handler: Any
+    ) -> core_schema.CoreSchema:
+        # Explicitly tell Pydantic to treat this as an arbitrary type
+        return core_schema.no_info_after_validator_function(
+            cls._validate, core_schema.any_schema()
+        )
+
+    @staticmethod
+    def _validate(value: Any) -> "AdapterStreamAsyncChatCompletion":
+        assert isinstance(
+            value, AdapterStreamAsyncChatCompletion
+        ), f"Expected AdapterStreamAsyncChatCompletion, got {type(value)}"
+        return value
 
 
 # V8

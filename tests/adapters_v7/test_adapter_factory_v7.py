@@ -1,4 +1,4 @@
-from adapters import AdapterFactory
+from llm_adapters.adapter_factory import AdapterFactory
 
 
 def test_supported_models_length_nonzero() -> None:

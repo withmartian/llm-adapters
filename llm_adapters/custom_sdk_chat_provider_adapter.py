@@ -17,3 +17,8 @@ class CustomOpenAISDKChatProviderAdapter(OpenAISDKChatAdapter):
     @staticmethod
     def get_api_key_name() -> str:
         return ""
+
+
+CustomAISDKChatProviderAdapter = CustomOpenAISDKChatProviderAdapter
+
+__all__ = ["CustomOpenAISDKChatProviderAdapter", "CustomAISDKChatProviderAdapter"]
