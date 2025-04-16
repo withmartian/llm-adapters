@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o3-2025-04-16","max_completion_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '96'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"message\": \"Could not finish the message
+        because max_tokens or model output limit was reached. Please try again with
+        higher max_tokens.\",\n    \"type\": \"invalid_request_error\",\n    \"param\":
+        null,\n    \"code\": null\n  }\n}"
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93166055ad1a95a0-TBS
+      content-length:
+      - '235'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Apr 2025 20:19:13 GMT
+      openai-organization:
+      - martian-4
+      openai-processing-ms:
+      - '555'
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=qkgICWgQ3L68Srtp0zLvaznlF6NWSLRzDkY7N4n3vQs-1744834753-1.0.1.1-25LXpuJWVKex3O83C0wYOHeD7xoHJX9TsS8A.yQ0KfyDT1sm_zqqU_uo27ete3ix7ySaeOgnMNXU01_M6qEoZwkdF1AVvB1IXW3hZ.Hsvqc;
+        path=/; expires=Wed, 16-Apr-25 20:49:13 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=Gu2qf7wF2LB6ywNN3LgENeQVNM0y9T2cWcaFLPfYVAI-1744834753671-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
+      x-request-id:
+      - req_1b746c597cfb6ae0cbffd2cb383dd91d
+    status:
+      code: 400
+      message: Bad Request
+version: 1

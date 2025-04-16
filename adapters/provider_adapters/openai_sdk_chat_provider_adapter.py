@@ -242,6 +242,38 @@ MODELS: list[Model] = [
         context_length=1047576,
         completion_length=32768,
     ),
+    OpenAIModel(
+        name="o4-mini",
+        cost=Cost(prompt=1.10e-6, completion=4.48e-6),
+        context_length=200000,
+        completion_length=100000,
+        supports_stop=False,
+        can_temperature=False,
+    ),
+    OpenAIModel(
+        name="o4-mini-2025-04-16",
+        cost=Cost(prompt=1.10e-6, completion=4.48e-6),
+        context_length=200000,
+        completion_length=100000,
+        supports_stop=False,
+        can_temperature=False,
+    ),
+    OpenAIModel(
+        name="o3",
+        cost=Cost(prompt=10.00e-6, completion=40.00e-6),
+        context_length=200000,
+        completion_length=100000,
+        supports_stop=False,
+        can_temperature=False,
+    ),
+    OpenAIModel(
+        name="o3-2025-04-16",
+        cost=Cost(prompt=10.00e-6, completion=40.00e-6),
+        context_length=200000,
+        completion_length=100000,
+        supports_stop=False,
+        can_temperature=False,
+    ),
 ]
 
 

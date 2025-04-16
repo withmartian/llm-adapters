@@ -1,0 +1,82 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"o3","top_p":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '70'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'top_p'
+        is not supported with this model.\",\n    \"type\": \"invalid_request_error\",\n
+        \   \"param\": \"top_p\",\n    \"code\": \"unsupported_parameter\"\n  }\n}"
+    headers:
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93165f8df85b95a9-TBS
+      content-length:
+      - '198'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Apr 2025 20:18:41 GMT
+      openai-organization:
+      - martian-4
+      openai-processing-ms:
+      - '13'
+      openai-version:
+      - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=QNB5Kfaoef6cqnsGXJqSJ8uF2UBMVlFJD0EEpyMJ7wU-1744834721-1.0.1.1-L1a99RXRqX1h76oyXFTLIbQ3Dh6I4BMUs.efgdMHVijpavuJmNujMxKiYqRc1rF5dzHlKM4LAoS_f1xJ0IHyZqo0ptcEce79AXcLY1gULQ8;
+        path=/; expires=Wed, 16-Apr-25 20:48:41 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=LjrGB4q8OnI9eR24DnzIgBezQ_2jNBLetoZTXULUxlU-1744834721183-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
+      x-request-id:
+      - req_1b10108cef473d548e917b16d594a1d9
+    status:
+      code: 400
+      message: Bad Request
+version: 1
