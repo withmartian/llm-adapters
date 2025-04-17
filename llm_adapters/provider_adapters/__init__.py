@@ -8,6 +8,7 @@ from .gemini_sdk_chat_provider_adapter import GeminiSDKChatProviderAdapter
 from .together_sdk_chat_provider_adapter import TogetherSDKChatProviderAdapter
 from .deepseek_sdk_chat_provider_adapter import DeepSeekSDKChatProviderAdapter
 from .lambdalabs_sdk_chat_provider_adapter import LambdaLabsSDKChatProviderAdapter
+from .groq_sdk_chat_provider_adapter import GroqSDKChatProviderAdapter
 
 # from .xai_sdk_chat_provider_adapter import XAISDKChatProviderAdapter
 
@@ -42,7 +43,7 @@ __all__ = [
     # "FireworksSDKChatProviderAdapter",
     # "MoescapeSDKChatProviderAdapter",
     # "TensorOperaSDKChatProviderAdapter",
-    # "GroqSDKChatProviderAdapter",
+    "GroqSDKChatProviderAdapter",
     # "LeptonSDKChatProviderAdapter",
     # "MoonshotSDKChatProviderAdapter",
     # "OctoaiSDKChatProviderAdapter",
