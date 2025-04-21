@@ -8,6 +8,7 @@ from openai.types.completion import Completion
 
 from llm_adapters.abstract_adapters.sdk_chat_adapter import SDKChatAdapter
 from llm_adapters.constants import (
+    ADAPTERS_ENABLE_CACHE_PRICING,
     HTTP_CONNECT_TIMEOUT,
     HTTP_TIMEOUT,
     MAX_CONNECTIONS_PER_PROCESS,
@@ -20,7 +21,7 @@ from llm_adapters.types import (
     AdapterCompletionChunk,
 )
 
-CACHED_PROMPT_TOKEN_DISCOUNT = 0.5
+CACHED_PROMPT_TOKEN_DISCOUNT = 0.5 if ADAPTERS_ENABLE_CACHE_PRICING else 0
 
 
 class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
@@ -64,7 +65,7 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
             ),
         )
 
-    def _extract_response(
+    def _extract_chat_completion_response(
         self,
         request: Any,
         response: ChatCompletion,
@@ -79,10 +80,22 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
             else 0
         )
 
+        cached_prompt_tokens = (
+            response.usage.prompt_tokens_details.cached_tokens
+            if response.usage
+            and response.usage.prompt_tokens_details
+            and response.usage.prompt_tokens_details.cached_tokens
+            else 0
+        )
+
+        uncached_prompt_tokens = prompt_tokens - cached_prompt_tokens
+
         cost = (
-            self.get_model().cost.prompt * prompt_tokens
-            + self.get_model().cost.completion * completion_tokens
-            + reasoning_tokens * completion_tokens
+            uncached_prompt_tokens * self.get_model().cost.prompt
+            + cached_prompt_tokens
+            * self.get_model().cost.prompt
+            * (1 - CACHED_PROMPT_TOKEN_DISCOUNT)
+            + self.get_model().cost.completion * (completion_tokens + reasoning_tokens)
             + self.get_model().cost.request
         )
 
@@ -124,8 +137,7 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
             + cached_prompt_tokens
             * self.get_model().cost.prompt
             * (1 - CACHED_PROMPT_TOKEN_DISCOUNT)
-            + completion_tokens * self.get_model().cost.completion
-            + reasoning_tokens * self.get_model().cost.completion
+            + self.get_model().cost.completion * (completion_tokens + reasoning_tokens)
             + self.get_model().cost.request
         )
 

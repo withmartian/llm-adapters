@@ -21,3 +21,6 @@ HTTP_TIMEOUT = float(
 HTTP_CONNECT_TIMEOUT = float(
     os.getenv("ADAPTERS_HTTP_CONNECT_TIMEOUT", os.getenv("HTTP_CONNECT_TIMEOUT", "5.0"))
 )
+ADAPTERS_ENABLE_CACHE_PRICING = (
+    os.getenv("ADAPTERS_ENABLE_CACHE_PRICING", "false").lower() == "true"
+)

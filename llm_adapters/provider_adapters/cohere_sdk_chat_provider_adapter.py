@@ -174,7 +174,7 @@ class CohereSDKChatProviderAdapter(SDKChatAdapter[ClientV2, AsyncClientV2]):
 
     #     return params
 
-    def _extract_response(
+    def _extract_chat_completion_response(
         self, request: Any, response: ChatResponse
     ) -> AdapterChatCompletion:
         prompt_tokens = int(

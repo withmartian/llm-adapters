@@ -17,7 +17,7 @@ interactions:
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.45.2
+      - AsyncAnthropic/Python 0.49.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,28 +27,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.45.2
+      - 0.49.0
+      x-stainless-read-timeout:
+      - '600'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
       - 3.13.1
+      x-stainless-timeout:
+      - '600'
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_01B1r6NuFJDjBr8D9KSNKaYv","type":"message","role":"assistant","model":"claude-3-7-sonnet-20250219","content":[{"type":"text","text":"Hello!
-        I see you''ve sent multiple greetings. How can I assist you today?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":22}}'
+      string: '{"id":"msg_01RKLV9QKUyKWWgviwzFAc7c","type":"message","role":"assistant","model":"claude-3-7-sonnet-20250219","content":[{"type":"text","text":"Hello!
+        I see you''ve sent multiple greetings. Is there something specific I can help
+        you with today? I''m here and ready to assist you with any questions or topics
+        you''d like to discuss."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":45}}'
     headers:
       CF-RAY:
-      - 9192d7e79b40e0b7-DTW
+      - 933d19fbaeb1959f-TBS
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Fri, 28 Feb 2025 19:32:56 GMT
+      - Mon, 21 Apr 2025 13:06:57 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -62,25 +68,25 @@ interactions:
       anthropic-ratelimit-input-tokens-remaining:
       - '1000000'
       anthropic-ratelimit-input-tokens-reset:
-      - '2025-02-28T19:32:56Z'
+      - '2025-04-21T13:06:56Z'
       anthropic-ratelimit-output-tokens-limit:
       - '400000'
       anthropic-ratelimit-output-tokens-remaining:
       - '400000'
       anthropic-ratelimit-output-tokens-reset:
-      - '2025-02-28T19:32:56Z'
+      - '2025-04-21T13:06:56Z'
       anthropic-ratelimit-tokens-limit:
       - '1400000'
       anthropic-ratelimit-tokens-remaining:
       - '1400000'
       anthropic-ratelimit-tokens-reset:
-      - '2025-02-28T19:32:56Z'
+      - '2025-04-21T13:06:56Z'
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '373'
+      - '485'
       request-id:
-      - req_012CeqmpgA31nfJtARBo6qq9
+      - req_011CNMvo9W8Rn9GbdJMPLKn3
       via:
       - 1.1 google
     status:

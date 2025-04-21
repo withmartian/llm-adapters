@@ -40,6 +40,7 @@ from openai.types.chat.chat_completion_chunk import Choice as ChoiceChunk, Choic
 
 from llm_adapters.abstract_adapters.sdk_chat_adapter import SDKChatAdapter
 from llm_adapters.constants import (
+    ADAPTERS_ENABLE_CACHE_PRICING,
     HTTP_CONNECT_TIMEOUT,
     HTTP_TIMEOUT,
     MAX_CONNECTIONS_PER_PROCESS,
@@ -64,8 +65,8 @@ from llm_adapters.types import (
     ChatCompletionCreateArgs,
 )
 
-CACHE_PROMPT_TOKEN_PREMIUM = 0.2
-CACHED_PROMPT_TOKEN_DISCOUNT = 0.1
+CACHE_PROMPT_TOKEN_PREMIUM = 1.25 if ADAPTERS_ENABLE_CACHE_PRICING else 0
+CACHED_PROMPT_TOKEN_DISCOUNT = 0.9 if ADAPTERS_ENABLE_CACHE_PRICING else 0
 
 
 class AnthropicModel(Model):
@@ -342,7 +343,7 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
 
         return delete_none_values(cast(dict[str, Any], anthropic_create))
 
-    def _extract_response(
+    def _extract_chat_completion_response(
         self, request: Any, response: Message
     ) -> AdapterChatCompletion:
         finish_reason = FINISH_REASON_MAPPING.get(
@@ -396,11 +397,14 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
             else 0
         )
 
+        uncached_input_tokens = response.usage.input_tokens
+
         cost = (
-            cached_creation_input_tokens * CACHE_PROMPT_TOKEN_PREMIUM
-            + cached_read_input_tokens * CACHED_PROMPT_TOKEN_DISCOUNT
-            + self.get_model().cost.prompt
-            * (response.usage.input_tokens - cached_read_input_tokens)
+            uncached_input_tokens * self.get_model().cost.prompt
+            + cached_creation_input_tokens * CACHE_PROMPT_TOKEN_PREMIUM
+            + cached_read_input_tokens
+            * self.get_model().cost.prompt
+            * (1 - CACHED_PROMPT_TOKEN_DISCOUNT)
             + self.get_model().cost.completion * response.usage.output_tokens
             + self.get_model().cost.request
         )
