@@ -109,7 +109,9 @@ class SDKChatAdapter(
         pass
 
     @abstractmethod
-    def _extract_response(self, request: Any, response: Any) -> AdapterChatCompletion:
+    def _extract_chat_completion_response(
+        self, request: Any, response: Any
+    ) -> AdapterChatCompletion:
         pass
 
     @abstractmethod
@@ -518,7 +520,9 @@ class SDKChatAdapter(
         response = self._call_sync()(**self._get_params(stream=stream, **kwargs))
 
         if not stream:
-            return self._extract_response(request=kwargs, response=response)
+            return self._extract_chat_completion_response(
+                request=kwargs, response=response
+            )
 
         def stream_response() -> Generator[AdapterChatCompletionChunk, Any, None]:
             state: dict[str, Any] = {}
@@ -555,7 +559,9 @@ class SDKChatAdapter(
         response = await self._call_async()(**self._get_params(stream=stream, **kwargs))
 
         if not stream:
-            return self._extract_response(request=kwargs, response=response)
+            return self._extract_chat_completion_response(
+                request=kwargs, response=response
+            )
 
         async def stream_response() -> AsyncGenerator[AdapterChatCompletionChunk, None]:
             state: dict[str, Any] = {}
