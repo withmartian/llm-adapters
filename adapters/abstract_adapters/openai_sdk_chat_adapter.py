@@ -84,8 +84,7 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
 
         cost = (
             self.get_model().cost.prompt * prompt_tokens
-            + self.get_model().cost.completion * completion_tokens
-            + reasoning_tokens * completion_tokens
+            + self.get_model().cost.completion * (completion_tokens + reasoning_tokens)
             + self.get_model().cost.request
         )
 
@@ -128,8 +127,7 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
 
         cost = (
             self.get_model().cost.prompt * prompt_tokens
-            + self.get_model().cost.completion * completion_tokens
-            + reasoning_tokens * completion_tokens
+            + self.get_model().cost.completion * (completion_tokens + reasoning_tokens)
             + self.get_model().cost.request
         )
 
