@@ -38,9 +38,9 @@ class AdapterChatCompletion(ChatCompletion):
     cost: float
 
     # V7
-    response: Optional[Turn] = None
+    response: Turn
     # V7
-    token_counts: Optional[Cost] = None
+    token_counts: Cost
 
 
 class AdapterChatCompletionChunk(ChatCompletionChunk):

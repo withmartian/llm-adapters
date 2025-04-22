@@ -51,7 +51,6 @@ from llm_adapters.types import (
     AdapterChatCompletion,
     AdapterChatCompletionChunk,
     AdapterFinishReason,
-    ConversationRole,
     Cost,
     Model,
     Provider,
@@ -63,6 +62,8 @@ from llm_adapters.types import (
     CompletionUsage,
     NotGiven,
     ChatCompletionCreateArgs,
+    Turn,
+    ConversationRole,
 )
 
 CACHE_PROMPT_TOKEN_PREMIUM = 1.25 if ADAPTERS_ENABLE_CACHE_PRICING else 0
@@ -423,6 +424,16 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
             cost=cost,
             usage=usage,
             choices=choices,
+            # Deprecated
+            response=Turn(
+                role=ConversationRole.assistant,
+                content=choices[0].message.content or "",
+            ),
+            token_counts=Cost(
+                prompt=response.usage.input_tokens,
+                completion=response.usage.output_tokens,
+                request=self.get_model().cost.request,
+            ),
         )
 
     def _extract_stream_response(
