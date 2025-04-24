@@ -27,6 +27,7 @@ MODELS: list[Model] = [
         cost=Cost(prompt=2.50e-6, completion=10.00e-6),
         context_length=128000,
         completion_length=16384,
+        supports_completion=False
     ),
     OpenAIModel(
         name="gpt-4o-2024-11-20",
@@ -51,6 +52,7 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.15e-6, completion=0.60e-6),
         context_length=128000,
         completion_length=16385,
+        supports_completion=False
     ),
     OpenAIModel(
         name="gpt-4o-mini-2024-07-18",
