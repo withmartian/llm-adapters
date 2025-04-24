@@ -1,4 +1,4 @@
-from typing import Any, Callable, Dict, Literal, Optional
+from typing import Any, Callable, Literal, Optional
 
 from openai import NOT_GIVEN, AsyncAzureOpenAI, AzureOpenAI, NotGiven, OpenAI
 from openai.types.chat.chat_completion_chunk import (
@@ -10,7 +10,6 @@ from openai.types.chat.chat_completion_chunk import (
 from llm_adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
 from llm_adapters.types import (
     AdapterChatCompletionChunk,
-    Conversation,
     ConversationRole,
     Cost,
     Model,
@@ -82,7 +81,7 @@ class AzureSDKChatProviderAdapter(OpenAISDKChatAdapter):
         self,
         *,
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
-        **kwargs: Any
+        **kwargs: Any,
     ) -> dict[str, Any]:
         params = super()._get_params(stream=stream, **kwargs)
 

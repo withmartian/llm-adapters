@@ -37,7 +37,7 @@ __all__ = [
     "TogetherSDKChatProviderAdapter",
     "DeepSeekSDKChatProviderAdapter",
     "LambdaLabsSDKChatProviderAdapter",
-    "AzureSDKChatProviderAdapter"
+    "AzureSDKChatProviderAdapter",
     # # "AzureSDKChatProviderAdapter",
     # # "DatabricksSDKChatProviderAdapter",
     # "DeepInfraSDKChatProviderAdapter",

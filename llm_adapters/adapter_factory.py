@@ -14,7 +14,7 @@ from llm_adapters.provider_adapters import (
     DeepInfraSDKChatProviderAdapter,
     TogetherSDKChatProviderAdapter,
     DeepSeekSDKChatProviderAdapter,
-    AzureSDKChatProviderAdapter
+    AzureSDKChatProviderAdapter,
 )
 from llm_adapters.types import Model, AdapterModelNotFoundException
 
@@ -29,7 +29,7 @@ ADAPTER_CLASSES: list[type[Adapter]] = [
     CerebrasSDKChatProviderAdapter,
     CohereSDKChatProviderAdapter,
     DeepInfraSDKChatProviderAdapter,
-    AzureSDKChatProviderAdapter
+    AzureSDKChatProviderAdapter,
 ]
 
 
