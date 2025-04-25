@@ -1,0 +1,123 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""}],"model":"gemini-2.5-pro-preview-03-25"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '263'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"Okay,
+        here are a few ways to write a Python program to calculate the square root
+        of a number provided by the user.\n\n**Method 1: Using the exponentiation
+        operator (`** 0.5`)**\n\nThis is often the simplest way for just calculating
+        a square root, as it doesn''t require importing any modules.\n\n```python\nimport
+        math # Although not strictly needed for **, good practice to mention alternatives\n\n#
+        Get input from the user\ninput_str = input(\"Enter a non-negative number:
+        \")\n\ntry:\n    # Convert the input string to a floating-point number\n    number
+        = float(input_str)\n\n    # Check if the number is non-negative\n    if number
+        < 0:\n        print(\"Error: Cannot calculate the real square root of a negative
+        number.\")\n    else:\n        # Calculate the square root using the exponentiation
+        operator\n        square_root = number ** 0.5\n        # You could also use
+        math.sqrt() which is often preferred for clarity:\n        # square_root =
+        math.sqrt(number)\n\n        # Print the result\n        print(f\"The square
+        root of {number} is {square_root}\")\n\nexcept ValueError:\n    # Handle cases
+        where the input is not a valid number\n    print(f\"Error: Invalid input.
+        ''{input_str}'' is not a valid number.\")\n\n```\n\n**Method 2: Using the
+        `math.sqrt()` function**\n\nThis method uses the dedicated square root function
+        from Python''s built-in `math` module. It''s generally considered good practice
+        when doing mathematical operations.\n\n```python\nimport math\n\n# Get input
+        from the user\ninput_str = input(\"Enter a non-negative number: \")\n\ntry:\n    #
+        Convert the input string to a floating-point number\n    number = float(input_str)\n\n    #
+        math.sqrt() will raise a ValueError for negative numbers automatically\n    #
+        Calculate the square root using math.sqrt()\n    square_root = math.sqrt(number)\n\n    #
+        Print the result\n    print(f\"The square root of {number} is {square_root}\")\n\nexcept
+        ValueError:\n    # Handle cases where the input is not a valid number OR is
+        negative\n    # We can refine this to give a more specific message if needed\n    try:\n        #
+        Try converting again to see if it was a number format issue or negativity\n        num_check
+        = float(input_str)\n        if num_check < 0:\n             print(f\"Error:
+        Cannot calculate the real square root of a negative number ({num_check}).\")\n        else:\n             #
+        If it gets here, something unexpected happened with math.sqrt, but it''s unlikely\n             print(f\"An
+        unexpected error occurred.\")\n    except ValueError:\n        # This means
+        the original error was due to non-numeric input\n        print(f\"Error: Invalid
+        input. ''{input_str}'' is not a valid number.\")\n\n```\n\n**Explanation:**\n\n1.  **`import
+        math` (Method 2):** This line imports Python''s built-in `math` module, which
+        contains various mathematical functions, including `sqrt()`.\n2.  **`input(...)`:**
+        Prompts the user to enter a number and stores their input as a string in the
+        `input_str` variable.\n3.  **`try...except ValueError:`:** This block handles
+        potential errors.\n    *   **`try:`:** The code inside the `try` block is
+        executed.\n    *   **`float(input_str)`:** Attempts to convert the user''s
+        input string into a floating-point number (a number that can have decimal
+        places). If the user enters something that isn''t a number (like \"hello\"),
+        this will raise a `ValueError`.\n    *   **`if number < 0:` (Method 1):**
+        Explicitly checks if the number is negative. Real square roots are not defined
+        for negative numbers.\n    *   **`number ** 0.5` (Method 1):** Calculates
+        the square root by raising the number to the power of 0.5.\n    *   **`math.sqrt(number)`
+        (Method 2):** Calculates the square root using the `sqrt` function. This function
+        *automatically* raises a `ValueError` if you pass it a negative number.\n    *   **`print(f\"...\")`:**
+        Displays the result using an f-string for easy formatting.\n    *   **`except
+        ValueError:`:** If a `ValueError` occurs either during the `float()` conversion
+        *or* (in Method 2) during the `math.sqrt()` call with a negative number, the
+        code inside the `except` block is executed, printing an error message. (The
+        refined error handling in Method 2 tries to give a more specific error message).\n\nChoose
+        the method you find clearer or more appropriate for your needs. Method 1 is
+        slightly shorter if you don''t need other math functions, while Method 2 is
+        arguably more explicit about the mathematical operation being performed.","role":"assistant"}}],"created":1745614058,"model":"gemini-2.5-pro-preview-03-25","object":"chat.completion","usage":{"completion_tokens":1088,"prompt_tokens":12,"total_tokens":2146}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 25 Apr 2025 20:47:38 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=18651
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '4722'
+    status:
+      code: 200
+      message: OK
+version: 1
