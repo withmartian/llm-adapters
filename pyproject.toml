@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "martian-adapters"
-version = "7.12.1"
+version = "7.12.2"
 description = "Adapters as API gateways to Different LLM Models"
 authors = ["Martian team <team@withmartian.com>"]
 readme = "README.md"
@@ -9,20 +9,20 @@ packages = [{ include = "adapters", from = "." }]
 [tool.poetry.dependencies]
 python = "^3.11"
 pydantic = "^2.9.2"
-anthropic = "^0.42.0"
-openai = "^1.59.3"
-cohere = "^5.13.5"
+anthropic = "^0.49.0"
+openai = "^1.68.2"
+cohere = "^5.14.0"
 brotli = "^1.1.0"
-httpx = {version = "^0.28.1", extras = ["http2"]}
+httpx = "^0.28.1"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^8.3.3"
+pytest = "^8.3.5"
 pytest-dotenv = "^0.5.2"
-pytest-asyncio = "^0.24.0"
+pytest-asyncio = "^0.25.2"
 pytest-recording = "^0.13.2"
-mypy = "^1.13.0"
-vcrpy = "^6.0.2"
-ruff = "^0.7.2"
+mypy = "^1.14.1"
+vcrpy = "^7.0.0"
+ruff = "^0.11.2"
 pytest-xdist = "^3.6.1"
 
 
