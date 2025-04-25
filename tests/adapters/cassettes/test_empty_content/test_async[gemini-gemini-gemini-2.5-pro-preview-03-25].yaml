@@ -1,0 +1,172 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""}],"model":"gemini-2.5-pro-preview-03-25"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '263'
+      content-type:
+      - application/json
+      host:
+      - generativelanguage.googleapis.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"Okay,
+        let''s create a simple command-line based Library Management System using
+        Python. This version will focus on managing books: adding, displaying, borrowing,
+        and returning.\n\nWe''ll use a class `Library` to encapsulate the logic and
+        store the books in a dictionary for easy access by ISBN.\n\n```python\nimport
+        time # Optional: To add slight pauses for better readability\n\nclass Library:\n    \"\"\"\n    A
+        simple class to represent a library and manage books.\n    \"\"\"\n    def
+        __init__(self):\n        \"\"\"\n        Initializes the library with an empty
+        collection of books.\n        Books are stored in a dictionary where the key
+        is the ISBN\n        and the value is another dictionary containing book details.\n        \"\"\"\n        self.books
+        = {} # {isbn: {''title'': ''...'', ''author'': ''...'', ''is_available'':
+        True/False}}\n\n    def add_book(self):\n        \"\"\"Prompts the user for
+        book details and adds it to the library.\"\"\"\n        print(\"\\n--- Add
+        New Book ---\")\n        try:\n            title = input(\"Enter book title:
+        \").strip()\n            author = input(\"Enter book author: \").strip()\n            isbn
+        = input(\"Enter book ISBN: \").strip()\n\n            if not title or not
+        author or not isbn:\n                print(\"Error: Title, Author, and ISBN
+        cannot be empty.\")\n                return\n\n            if isbn in self.books:\n                print(f\"Error:
+        Book with ISBN {isbn} already exists.\")\n            else:\n                self.books[isbn]
+        = {\n                    ''title'': title,\n                    ''author'':
+        author,\n                    ''is_available'': True\n                }\n                print(f\"Success:
+        Book ''{title}'' by {author} (ISBN: {isbn}) added.\")\n        except Exception
+        as e:\n            print(f\"An unexpected error occurred: {e}\")\n\n\n    def
+        display_all_books(self):\n        \"\"\"Displays all books in the library
+        collection.\"\"\"\n        print(\"\\n--- All Library Books ---\")\n        if
+        not self.books:\n            print(\"The library is currently empty.\")\n            return\n\n        print(f\"{''ISBN'':<15}
+        {''Title'':<30} {''Author'':<25} {''Status'':<12}\")\n        print(\"-\"
+        * 85)\n        for isbn, details in self.books.items():\n            status
+        = \"Available\" if details[''is_available''] else \"Borrowed\"\n            print(f\"{isbn:<15}
+        {details[''title'']:<30} {details[''author'']:<25} {status:<12}\")\n        print(\"-\"
+        * 85)\n\n    def display_available_books(self):\n        \"\"\"Displays only
+        the books that are currently available.\"\"\"\n        print(\"\\n--- Available
+        Books ---\")\n        available_books_found = False\n        print(f\"{''ISBN'':<15}
+        {''Title'':<30} {''Author'':<25}\")\n        print(\"-\" * 70)\n        for
+        isbn, details in self.books.items():\n            if details[''is_available'']:\n                print(f\"{isbn:<15}
+        {details[''title'']:<30} {details[''author'']:<25}\")\n                available_books_found
+        = True\n\n        if not available_books_found:\n             if not self.books:\n                 print(\"The
+        library is currently empty.\")\n             else:\n                 print(\"No
+        books are currently available.\")\n        else:\n            print(\"-\"
+        * 70)\n\n\n    def borrow_book(self):\n        \"\"\"Prompts for ISBN and
+        marks the book as borrowed if available.\"\"\"\n        print(\"\\n--- Borrow
+        Book ---\")\n        isbn = input(\"Enter the ISBN of the book you want to
+        borrow: \").strip()\n\n        if isbn not in self.books:\n            print(f\"Error:
+        Book with ISBN {isbn} not found in the library.\")\n            return\n\n        book
+        = self.books[isbn]\n        if book[''is_available'']:\n            book[''is_available'']
+        = False\n            print(f\"Success: You have borrowed ''{book[''title'']}''
+        (ISBN: {isbn}).\")\n        else:\n            print(f\"Sorry: ''{book[''title'']}''
+        (ISBN: {isbn}) is already borrowed.\")\n\n    def return_book(self):\n        \"\"\"Prompts
+        for ISBN and marks the book as available if borrowed.\"\"\"\n        print(\"\\n---
+        Return Book ---\")\n        isbn = input(\"Enter the ISBN of the book you
+        are returning: \").strip()\n\n        if isbn not in self.books:\n            print(f\"Error:
+        Book with ISBN {isbn} does not belong to this library.\")\n            return\n\n        book
+        = self.books[isbn]\n        if not book[''is_available'']:\n            book[''is_available'']
+        = True\n            print(f\"Success: Thank you for returning ''{book[''title'']}''
+        (ISBN: {isbn}).\")\n        else:\n            print(f\"Info: ''{book[''title'']}''
+        (ISBN: {isbn}) was already marked as available.\")\n\n# --- Main Program Loop
+        ---\n\ndef display_menu():\n    \"\"\"Prints the main menu options.\"\"\"\n    print(\"\\n=====
+        Library Menu =====\")\n    print(\"1. Add New Book\")\n    print(\"2. Display
+        All Books\")\n    print(\"3. Display Available Books\")\n    print(\"4. Borrow
+        Book\")\n    print(\"5. Return Book\")\n    print(\"6. Exit\")\n    print(\"========================\")\n\ndef
+        run_library():\n    \"\"\"Runs the main library application loop.\"\"\"\n    my_library
+        = Library()\n    # Optional: Add some initial books for testing\n    my_library.books[''978-0321765723'']
+        = {''title'': ''Effective Modern C++'', ''author'': ''Scott Meyers'', ''is_available'':
+        True}\n    my_library.books[''978-0132350884''] = {''title'': ''Clean Code'',
+        ''author'': ''Robert C. Martin'', ''is_available'': True}\n    my_library.books[''978-0201633610'']
+        = {''title'': ''Design Patterns'', ''author'': ''GoF'', ''is_available'':
+        False}\n\n\n    while True:\n        display_menu()\n        choice = input(\"Enter
+        your choice (1-6): \").strip()\n\n        if choice == ''1'':\n            my_library.add_book()\n        elif
+        choice == ''2'':\n            my_library.display_all_books()\n        elif
+        choice == ''3'':\n            my_library.display_available_books()\n        elif
+        choice == ''4'':\n            my_library.borrow_book()\n        elif choice
+        == ''5'':\n            my_library.return_book()\n        elif choice == ''6'':\n            print(\"\\nExiting
+        the Library System. Goodbye!\")\n            break\n        else:\n            print(\"\\nInvalid
+        choice. Please enter a number between 1 and 6.\")\n\n        time.sleep(1)
+        # Optional: Pause briefly before showing the menu again\n\n# Start the application\nif
+        __name__ == \"__main__\":\n    run_library()\n```\n\n**How it works:**\n\n1.  **`Library`
+        Class:**\n    *   `__init__`: Creates an empty dictionary `self.books` to
+        store book data. The key is the ISBN (unique identifier), and the value is
+        another dictionary holding the `title`, `author`, and `is_available` status.\n    *   `add_book`:
+        Takes input for title, author, and ISBN. Checks if the ISBN already exists.
+        If not, it adds the new book details to the `self.books` dictionary with `is_available`
+        set to `True`.\n    *   `display_all_books`: Iterates through the `self.books`
+        dictionary and prints the details of every book, including its availability
+        status.\n    *   `display_available_books`: Similar to `display_all_books`,
+        but only prints books where `is_available` is `True`.\n    *   `borrow_book`:
+        Asks for an ISBN. Checks if the book exists and if it''s available. If both
+        are true, it sets `is_available` to `False`.\n    *   `return_book`: Asks
+        for an ISBN. Checks if the book exists and if it''s currently marked as borrowed
+        (`is_available` is `False`). If both are true, it sets `is_available` back
+        to `True`.\n\n2.  **Helper Functions:**\n    *   `display_menu`: Simply prints
+        the available options to the user.\n    *   `run_library`: This is the main
+        function that creates a `Library` instance, optionally adds some sample books,
+        and then runs the main loop.\n\n3.  **Main Loop (`run_library`)**:\n    *   Continuously
+        displays the menu.\n    *   Takes the user''s choice as input.\n    *   Uses
+        `if/elif/else` to call the appropriate method of the `my_library` object based
+        on the input.\n    *   Includes an option (''6'') to break the loop and exit
+        the program.\n    *   Handles invalid input.\n    *   `time.sleep(1)` is added
+        for a slight pause, making the command-line interaction a bit smoother.\n\n4.  **`if
+        __name__ == \"__main__\":`**: This standard Python construct ensures that
+        the `run_library()` function is called only when the script is executed directly
+        (not when it''s imported as a module).\n\n**To run this code:**\n\n1.  Save
+        it as a Python file (e.g., `library_system.py`).\n2.  Open a terminal or command
+        prompt.\n3.  Navigate to the directory where you saved the file.\n4.  Run
+        the script using: `python library_system.py`\n5.  Follow the on-screen menu
+        prompts.","role":"assistant"}}],"created":1745612355,"model":"gemini-2.5-pro-preview-03-25","object":"chat.completion","usage":{"completion_tokens":2195,"prompt_tokens":12,"total_tokens":3819}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 25 Apr 2025 20:19:15 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Server-Timing:
+      - gfet4t7; dur=30180
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '8828'
+    status:
+      code: 200
+      message: OK
+version: 1
