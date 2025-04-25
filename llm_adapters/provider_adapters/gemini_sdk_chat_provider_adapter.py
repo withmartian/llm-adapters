@@ -73,7 +73,7 @@ MODELS: list[Model] = [
         context_length=1048576,
         completion_length=65536,
         can_assistant_only=False,
-    )
+    ),
 ]
 
 
