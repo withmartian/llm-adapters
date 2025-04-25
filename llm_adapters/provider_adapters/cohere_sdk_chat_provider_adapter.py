@@ -30,7 +30,8 @@ from llm_adapters.types import (
     Model,
     Provider,
     Vendor,
-    # ChatCompletionMessageParam,
+    Turn,
+    Cost,
 )
 from openai.types.chat.chat_completion_message_tool_call import (
     ChatCompletionMessageToolCall,
@@ -271,6 +272,16 @@ class CohereSDKChatProviderAdapter(SDKChatAdapter[ClientV2, AsyncClientV2]):
             cost=cost,
             usage=usage,
             choices=choices,
+            # Deprecated
+            response=Turn(
+                role=ConversationRole.assistant,
+                content=choices[0].message.content or "",
+            ),
+            token_counts=Cost(
+                prompt=prompt_tokens,
+                completion=completion_tokens,
+                request=self.get_model().cost.request,
+            ),
         )
 
     def _extract_stream_response(

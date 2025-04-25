@@ -19,6 +19,9 @@ from llm_adapters.types import (
     AdapterChatCompletionChunk,
     AdapterCompletion,
     AdapterCompletionChunk,
+    Turn,
+    ConversationRole,
+    Cost,
 )
 
 CACHED_PROMPT_TOKEN_DISCOUNT = 0.5 if ADAPTERS_ENABLE_CACHE_PRICING else 0
@@ -99,7 +102,20 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
             + self.get_model().cost.request
         )
 
-        return AdapterChatCompletion.model_construct(**response.model_dump(), cost=cost)
+        return AdapterChatCompletion.model_construct(
+            **response.model_dump(),
+            cost=cost,
+            # Deprecated
+            response=Turn(
+                role=ConversationRole.assistant,
+                content=response.choices[0].message.content or "",
+            ),
+            token_counts=Cost(
+                prompt=prompt_tokens,
+                completion=completion_tokens,
+                request=self.get_model().cost.request,
+            ),
+        )
 
     def _extract_stream_response(
         self, request: Any, response: ChatCompletionChunk, state: dict[str, Any]
