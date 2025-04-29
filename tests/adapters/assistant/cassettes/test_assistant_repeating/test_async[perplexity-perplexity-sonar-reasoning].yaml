@@ -1,0 +1,109 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi\nHi"},{"role":"user","content":"Hi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '142'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "4ff0bd99-e156-45f4-8307-beaae60c7bc2", "model": "sonar-reasoning",
+        "created": 1745833947, "usage": {"prompt_tokens": 5, "completion_tokens":
+        595, "total_tokens": 600, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user wrote
+        \"Hi\" and I need to figure out how to respond. Let''s look at the search
+        results provided. \n\nFirst, result [1] from Dictionary.com defines \"hi\"
+        as an interjection and a simplified spelling of \"high.\" Then result [2]
+        from Vocabulary.com explains that \"hi\" is a casual greeting, more informal
+        than \"hello.\" They mention it''s used in many situations except the most
+        formal ones. Also, the origins trace back to a Native American in Kansas in
+        the 1800s.\n\nResult [3] from Wikipedia expands on the acronym HI, indicating
+        it can refer to various things like a podcast, a song, a magazine, a language
+        code (Hindi), or a cuneiform sign. But the user''s query is just \"Hi,\" so
+        probably more about the greeting. Result [4] is a YouTube video about a kids''
+        greeting song, so maybe not relevant here. Result [5] from Wiktionary gives
+        linguistic details, including Basque pronouns and other language variations,
+        but again, the user is asking about \"Hi\" as a greeting.\n\nPutting this
+        together, the user likely wants a brief explanation of \"hi\" as a greeting.
+        The key points are its casual nature, usage in informal settings, and its
+        origin. The other meanings like acronyms (HI) are less relevant unless specified.
+        I should structure the answer to first explain \"hi\" as a greeting, mention
+        its formality level, and touch on its etymology. Also, note other possible
+        meanings briefly but focus on the greeting. Make sure to cite the sources
+        properly.\n</think>\n\n\"Hi\" is a casual, informal greeting commonly used
+        in English-speaking contexts[2]. It emerged as a simplified alternative to
+        \"hello\" and is suitable for most social interactions except in highly formal
+        situations[1][2]. Linguistically, its origins trace back to Native American
+        usage in the 19th century[2].\n\n### Key characteristics  \n- **Casual tone**:
+        Less formal than \"hello\" or \"good day,\" making it appropriate for conversations
+        with friends, acquaintances, or strangers in relaxed settings[2].  \n- **Versatility**:
+        Widely used across age groups and regions, though regional alternatives like
+        \"hey\" or \"howdy\" may vary[2].  \n- **Cross-cultural applications**: Often
+        taught as a standard greeting in English language learning[4].  \n\n### Additional
+        meanings (via acronyms)  \nWhile primarily a greeting, \"HI\" or \"Hi\" can
+        refer to:  \n| **Category**       | **Examples**                          |  \n|---------------------|--------------------------------------|  \n|
+        **Arts/Entertainment** | Podcast *Hello Internet*, music labels |  \n| **Language**         |
+        ISO code for Hindi, Armenian letter \u0545 |  \n| **Science**          | Hydrogen-1
+        isotope (protium)       | [3]"}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375aa86fcc41a42-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:52:27 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=YWBMn.c8.Fbl4q9foy4P1Kyq2ZH7ZahQmtFnlEuO.xo-1745833947-1.0.1.1-y9xW5EFCNrDWEN_3BqKXqTtRR.iUd3AHl3LwtcDq74DusxvQk1kSGCHNF9PW9vMtH1OdF3pnzAbS9MYRKlFyO49h_0cYX86jHJGjhCc59iM;
+        path=/; expires=Mon, 28-Apr-25 10:22:27 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '3299'
+    status:
+      code: 200
+      message: OK
+version: 1

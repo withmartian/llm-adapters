@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-pro","temperature":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '83'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "1801eb36-332a-4d1c-8bc1-6b8bf7ba7df1", "model": "sonar-pro",
+        "created": 1745834319, "usage": {"prompt_tokens": 1, "completion_tokens":
+        180, "total_tokens": 181, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "**Hi** is a common, informal
+        greeting in English, often used as a casual alternative to \"hello.\" It is
+        suitable for most social interactions, except in very formal situations[2].
+        The word has a long history and is mentioned to have been used by a Native
+        American in Kansas in the 1800s[2].\n\n**Other Meanings and Uses:**\n- **Hi**
+        can also refer to \"high\" in informal contexts, such as \"hi-fi\" for high
+        fidelity[1].\n- In arts and entertainment, \"Hi\" is used in various contexts,
+        including music labels and songs[3].\n- In language, \"hi\" has equivalents
+        in different languages and is also a character in Japanese (\u3072, \u30d2)
+        and Armenian (\u0545)[3].\n- In Basque, \"hi\" is an informal pronoun used
+        between close friends or family members[5]."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b3c1de12a9e9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:58:39 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=Lix_4bFYhL1oRB0nMyV4PrRvkOFu0F7CgDJHgpiaDyU-1745834319-1.0.1.1-ihrmmF.s578XIyxwcVHsdHP8zyBzys_HViPUxVuRpgOMxwpj_slNsrdt_aovdGl3avcyWU5YSZqPgelEDzxYp.uAJq17cYPVeeR2d9KO17I;
+        path=/; expires=Mon, 28-Apr-25 10:28:39 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1354'
+    status:
+      code: 200
+      message: OK
+version: 1

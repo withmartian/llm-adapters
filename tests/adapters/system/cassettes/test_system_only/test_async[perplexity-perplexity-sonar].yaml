@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '96'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "8c9cee53-e250-473b-94cf-48e702e3bdc9", "model": "sonar", "created":
+        1745834057, "usage": {"prompt_tokens": 2, "completion_tokens": 30, "total_tokens":
+        32, "search_context_size": "low"}, "citations": [], "object": "chat.completion",
+        "choices": [{"index": 0, "finish_reason": "stop", "message": {"role": "assistant",
+        "content": "It looks like your message might be empty or unclear. Could you
+        please provide more details or specify what you need assistance with? I''m
+        here to help"}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375ad64cb2895a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:54:17 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=Amvr_RMe80jsf6DyyAPwu4dAKgsufHQdUTZgDBHlJBw-1745834057-1.0.1.1-py2e9_6R2Z_UgfGQ3Y0iW2tE9is9O60NoBBn4A7xhIgBtTR7fF4oRyzh8EHV5kUj2xdpq35kcDBEXSL_w1q_56sm8XRY9tl_2gWjhp_74OM;
+        path=/; expires=Mon, 28-Apr-25 10:24:17 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '537'
+    status:
+      code: 200
+      message: OK
+version: 1

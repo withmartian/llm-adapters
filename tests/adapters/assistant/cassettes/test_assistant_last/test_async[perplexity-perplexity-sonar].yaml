@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "},{"role":"user","content":"\"\""}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '131'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "3dfb8679-5008-4a9c-8de6-4346b94a0951", "model": "sonar", "created":
+        1745833861, "usage": {"prompt_tokens": 3, "completion_tokens": 268, "total_tokens":
+        271, "search_context_size": "low"}, "citations": ["https://tandem.net/blog/20-greetings-in-english",
+        "https://preply.com/en/blog/22-useful-english-greetings-for-every-day/", "https://www.fluentu.com/blog/english/english-greetings-expressions/",
+        "https://www.clearenglishcorner.com/blog/64", "https://en.amazingtalker.com/blog/en/english/47217/"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "It seems like you''re looking
+        for a response or perhaps information on greetings in English. Here''s a list
+        of common greetings in English to help you:\n\n## Informal Greetings\n- **Hi**
+        - Simple and versatile, used among friends, coworkers, or family[1].\n- **Hey,
+        Heya, or Hey there** - Useful for friends or acquaintances[1].\n- **Morning**
+        (or **Afternoon**, **Evening**) - A casual way to greet someone based on the
+        time of day[2].\n- **What''s up? / What\u2019s happening?** - Used among friends
+        or in casual settings[1].\n- **Yo** - A very informal greeting often used
+        with friends[1].\n\n## Formal Greetings\n- **Good morning/afternoon/evening**
+        - Suitable for professional or formal situations.\n- **Hello** - Can be used
+        in both formal and informal settings[5].\n\n## Special Occasions\n- **Good
+        to see you/Nice to see you** - Expressing warmth when meeting someone you
+        haven''t seen in a while[3][5].\n- **How are you doing? / How\u2019s it going?**
+        - Shows interest and is often used after the initial greeting[2][5].\n\nIf
+        you need specific advice on greetings or something else, please let me know"},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375a888bcd495a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:51:01 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=Qgt36ZNt9MBY09ORwWFeErEUSyz24tkErT6LGlYhXNI-1745833861-1.0.1.1-AeYvruhBqBb8t0lcL9RIB_sF5fj0cAeJVU9tDSd_q9pax6HycEmUGeQhEO7HerLNFXAlewyhPa5OQ3vMxGbhleYiK9etfa.n1R3f7hV7Vew;
+        path=/; expires=Mon, 28-Apr-25 10:21:01 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1790'
+    status:
+      code: 200
+      message: OK
+version: 1

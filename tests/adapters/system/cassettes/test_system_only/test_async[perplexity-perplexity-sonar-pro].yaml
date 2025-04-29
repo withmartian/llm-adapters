@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '100'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "5ac381e3-549f-41dc-a887-1aeb1928f5f3", "model": "sonar-pro",
+        "created": 1745834059, "usage": {"prompt_tokens": 2, "completion_tokens":
+        53, "total_tokens": 55, "search_context_size": "low"}, "citations": [], "object":
+        "chat.completion", "choices": [{"index": 0, "finish_reason": "stop", "message":
+        {"role": "assistant", "content": "I''m here to assist you! Feel free to ask
+        me any question or tell me how I can help you today. Whether you need information,
+        advice, or just want to have a conversation, I''m ready to engage with you
+        in a helpful and informative way."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375ad6cce1a95a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:54:19 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=YnIumtdPhMZVifWnkwLazYJ5.qDbTj6y480oIzsHypI-1745834059-1.0.1.1-V7supiAUodG_xFKJbs7W3jMplrUu7snsCusfrSyW36D6s7yV9eM7kr6aZqcJS25_Gq33Pu_JLmEPS6pKtcwLvKUm7bexNvyHMErGUZcQ9Eo;
+        path=/; expires=Mon, 28-Apr-25 10:24:19 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '622'
+    status:
+      code: 200
+      message: OK
+version: 1
