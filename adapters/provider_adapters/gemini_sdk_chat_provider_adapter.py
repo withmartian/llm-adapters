@@ -62,6 +62,20 @@ MODELS: list[Model] = [
         context_length=1048576,
         completion_length=8192,
     ),
+    GeminiModel(
+        name="gemini-2.5-pro-preview-03-25",
+        cost=Cost(prompt=0.15e-6, completion=0.6e-6),
+        context_length=1048576,
+        completion_length=65536,
+        can_assistant_only=False,
+    ),
+    GeminiModel(
+        name="gemini-2.5-flash-preview-04-17",
+        cost=Cost(prompt=1.25e-6, completion=10.0e-6),
+        context_length=1048576,
+        completion_length=65536,
+        can_assistant_only=False,
+    ),
 ]
 
 

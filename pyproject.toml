@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "martian-adapters"
-version = "7.12.2"
+version = "7.13.0"
 description = "Adapters as API gateways to Different LLM Models"
 authors = ["Martian team <team@withmartian.com>"]
 readme = "README.md"
@@ -13,7 +13,7 @@ anthropic = "^0.49.0"
 openai = "^1.68.2"
 cohere = "^5.14.0"
 brotli = "^1.1.0"
-httpx = "^0.28.1"
+httpx = {extras = ["http2"], version = "^0.28.1"}
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.5"
