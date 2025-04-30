@@ -1,0 +1,142 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning","temperature":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '89'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "75fc3911-ac19-43e8-ad1f-66c77b327cd6", "model": "sonar-reasoning",
+        "created": 1745834335, "usage": {"prompt_tokens": 1, "completion_tokens":
+        1200, "total_tokens": 1201, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user is asking
+        about \"Hi\". Let me look through the search results to figure out what they
+        need.\n\nFirst, result [1] from Dictionary.com says \"hi\" is an interjection
+        and a simplified spelling of \"high\". But then [2] from Vocabulary.com explains
+        it''s a casual greeting, more common than \"hello\". That makes sense because
+        \"hi\" is definitely a common greeting. They mention it''s appropriate in
+        most situations except very formal ones, like meeting the Queen. Also, it''s
+        been around since the 1800s, attributed to a Kansas Native American.\n\nResult
+        [3] from Wikipedia lists various meanings of \"HI\" or \"Hi\". It includes
+        arts and entertainment, like the podcast \"Hello Internet\", a song by Ofra
+        Haza, and a music label. Then there''s language references: cuneiform signs,
+        Japanese kana, Armenian letters, and the ISO code for Hindi. Also mentions
+        a song by Texas and other music entries. Plus, in astronomy, H I regions are
+        interstellar hydrogen clouds, and Hydrogen-1 is an isotope.\n\nResult [4]
+        is a YouTube video about a greeting song for kids, which is more about teaching
+        the greeting \"hi\" in educational contexts. Result [5] from Wiktionary covers
+        Basque pronouns, showing \"hi\" as an informal pronoun with different verb
+        agreements. It also lists other languages where \"hi\" is a variation of greeting.\n\nSo
+        the user wants a comprehensive answer about \"Hi\". They might be looking
+        for its meanings in different contexts. The answer should cover the greeting,
+        other linguistic uses, cultural references, and technical terms.\n\nI need
+        to structure the answer clearly. Start with the primary meaning as a greeting,
+        then other language aspects, then other uses like in arts, science, etc. Make
+        sure to cite the sources properly. For example, when talking about the greeting,
+        cite [2], for Basque pronouns cite [5], for H I regions cite [3]. Also mention
+        the song and other cultural references from [3] and [4].\n\nCheck if there
+        are any contradictions. The main points are consistent across sources. The
+        greeting is informal, used in casual settings. Other meanings include specific
+        terms in various fields. Need to present this in sections with headers, maybe
+        \"Primary Meaning as a Greeting\", \"Linguistic Uses\", \"Cultural and Artistic
+        References\", \"Scientific and Technical Terms\". Use bullet points where
+        possible, and tables if needed. But since the user didn''t specify a format,
+        follow the general instructions for clarity.\n\nMake sure to avoid markdown
+        headers at the start. Begin with a brief introduction, then sections. Each
+        section should have concise points with citations. For example, in the greeting
+        section, mention it''s casual, used in most situations except formal ones,
+        and its origin from the 1800s. Cite [2] and [1]. Then in linguistic uses,
+        mention Basque pronouns from [5], Japanese kana and Armenian letters from
+        [3]. For cultural references, list the podcast, songs, albums, and the YouTube
+        song from [3] and [4]. Scientific terms would include H I regions and Hydrogen-1
+        from [3].\n\nAlso, note that \"HI\" can be an abbreviation for various things,
+        like the podcast, the state abbreviation (though not mentioned in the results,
+        but maybe the user is aware). However, the search results don''t mention state
+        abbreviations, so focus on the provided info.\n\nDouble-check citations. For
+        example, when talking about Basque pronouns, cite [5]. When mentioning the
+        song by Ofra Haza, cite [3]. The YouTube song is from [4]. The H I regions
+        and Hydrogen-1 are both in [3].\n\nMake sure the answer is concise but covers
+        all aspects from the search results. Avoid unnecessary details. Use examples
+        where possible, like the podcast name, song titles, and specific language
+        examples. Keep the tone expert and journalistic, as per instructions.\n</think>\n\n\"Hi\"
+        primarily functions as an informal English greeting, more casual than \"hello\"
+        and appropriate in most non-formal contexts[2]. It originated in the 1800s,
+        with early documented use among Native Americans in Kansas[2].  \n\n### Linguistic
+        Variations  \n- **Basque Pronoun**: In Basque, *hi* serves as an informal
+        second-person singular pronoun requiring allocutive verb agreement (e.g.,
+        *Mahaia handia d*uk* for male addressee vs. *d*un* for female)[5].  \n- **Japanese
+        Kana**: Represents the syllables \u3072 or \u30d2 in Japanese writing[3].  \n-
+        **Armenian Letter**: \u0545 (Hi) is a letter in the Armenian alphabet[3].  \n\n###
+        Cultural and Artistic References  \n- **Music**:  \n  - *Hi* (song by Ofra
+        Haza, Israel\u2019s 1983 Eurovision entry)[3].  \n  - *Hi* (2021 album by
+        Scottish band Texas)[3].  \n  - *Hi~* (2015 repackage of Lovelyz\u2019 album
+        *Girls'' Invasion*)[3].  \n- **Media**:  \n  - *Hello Internet* (podcast by
+        CGP Grey and Brady Haran)[3].  \n  - *Hi* (EP by Psapp, 2006)[3].  \n- **Education**:
+        A YouTube song teaching greetings to children[4].  \n\n### Scientific and
+        Technical Terms  \n- **Astronomy**: H I regions refer to interstellar clouds
+        of neutral hydrogen[3].  \n- **Physics**: Hydrogen-1 (H-1) is the most common
+        isotope of hydrogen, consisting of one proton and no neutrons[3].  \n\nFor
+        formal settings, alternatives like \"hello\" or \"good morning\" are preferred[2]."},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b3d4d96295a3-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:58:55 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=jEzgcuOBd0.s182E_fRleAUoZ4n7CZJzd1cBCAbR_7k-1745834335-1.0.1.1-0ebY0T8W3SxHMnlwiD0vBPjrOnrNeMq1t0sGzCHiVi28mBQGTy_e5YXX7aXbnaMmz07HTMNschkgmwx_GTOGkzRbfNSZkVuUaB7h.9boq08;
+        path=/; expires=Mon, 28-Apr-25 10:28:55 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5835'
+    status:
+      code: 200
+      message: OK
+version: 1

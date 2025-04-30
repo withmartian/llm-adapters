@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '69'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "80ce299c-428a-40bb-b469-2a94aef28e4e", "model": "sonar-pro",
+        "created": 1745834415, "usage": {"prompt_tokens": 3, "completion_tokens":
+        155, "total_tokens": 158, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk", "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "It seems like you''re referencing
+        something called \"Hi, Hi, Hi,\" which is likely the song by Wings, written
+        by Paul and Linda McCartney. The song \"Hi, Hi, Hi\" was released in 1972
+        as part of a double A-side single with \"C Moon\" and became a significant
+        track for Wings in the 1970s[1]. If you intended something else, please provide
+        more details \n\nAdditionally, there''s a recent remix of \"Hi, Hi, Hi\" by
+        Lil Jay Bingerack and Rayvanny, released in 2023, which is a different interpretation
+        and not related to the original Wings song[5]. \n\nIf you have any more specific
+        questions or need further information about either of these topics, feel free
+        to ask"}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b6173ec0959d-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 10:00:15 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=M6LyMqx.igcnhuu57vCvsmhc.jGrqC9zdlsukufxLaI-1745834415-1.0.1.1-oiae7si69qwNEDYBkPlDhWUsLs3VggF5JlYf0AlAx1v7r3v_8LdsP53UAh_qgHnNSNWSG6Op3eglMnneJEooRMGQXxMmuu38oInTBHjn7J4;
+        path=/; expires=Mon, 28-Apr-25 10:30:15 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1307'
+    status:
+      code: 200
+      message: OK
+version: 1

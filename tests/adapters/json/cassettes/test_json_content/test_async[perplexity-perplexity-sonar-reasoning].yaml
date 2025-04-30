@@ -1,0 +1,133 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '124'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "762dbfbc-fd84-4e70-91d0-2ac4e977c76c", "model": "sonar-reasoning",
+        "created": 1745833986, "usage": {"prompt_tokens": 2, "completion_tokens":
+        1118, "total_tokens": 1120, "search_context_size": "low"}, "citations": ["https://hellohihi.com",
+        "https://en.wiktionary.org/wiki/hihi", "https://www.instagram.com/hihitoys/",
+        "https://hihi2.com", "https://en.wikipedia.org/wiki/Hihi_(disambiguation)"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, I need to figure
+        out what the user is asking about with \"HiHi\". Let me look through the search
+        results to see what''s relevant.\n\nFirst, result [1] is a website called
+        hellohihi.com which seems to be a store selling anime-related products like
+        figures, plushies, Sanrio characters, etc. They have locations in Royal Oak
+        and Midtown Detroit. Prices are listed in dollars, so it''s a US-based store.
+        They mention a Sonny Angel 20th Anniversary Tote Bag, which is limited edition.
+        So \"HiHi\" here is part of the store''s name, Hello Hi Hi.\n\nResult [2]
+        is from Wiktionary, explaining that \"hihi\" can be an interjection similar
+        to \"hehe\" in English, or a noun referring to a stitchbird in Maori. There''s
+        also a Chinese slang usage as a euphemism for \"\u4ec6\u8857\" (which translates
+        to a vulgar term). So here \"hihi\" has multiple meanings depending on context.\n\nResult
+        [3] is an Instagram account for hihitoys, which is another name for the shop
+        from [1], as the link to hellohihi.com is in the bio. So this reinforces that
+        HiHi is part of their branding.\n\nResult [4] is a sports news site in Arabic,
+        haihi.com, covering football (soccer) news. The content here is about recent
+        matches and news. So this seems to be a different entity using \"HiHi\" in
+        their domain.\n\nResult [5] is a Wikipedia disambiguation page for \"Hihi\".
+        It lists various meanings: a bird species, a place in New Zealand, a song,
+        a TV series, and a comedy duo. So \"HiHi\" here refers to different entities,
+        including the bird, media titles, and a place.\n\nPutting this all together,
+        the user''s query \"HiHi\" could refer to:\n\n1. A retail store focusing on
+        anime and kawaii culture, with physical locations in Michigan.\n2. An interjection
+        or slang term in various languages.\n3. A sports news website focused on football.\n4.
+        A bird species from New Zealand or a place named after it.\n5. Media titles
+        like a song or TV show.\n\nThe user didn''t specify which \"HiHi\" they''re
+        asking about, so I need to cover all possible interpretations based on the
+        search results. The answer should categorize these meanings clearly, citing
+        the relevant sources for each. Since the search results include both the store
+        and the bird, as well as other references, I should structure the answer into
+        sections for each main category. Make sure to mention the store details with
+        locations and products, the linguistic meanings from Wiktionary, the sports
+        site, and the bird/place/media disambiguation. Need to check if any of the
+        results are duplicates or same entities. The Instagram and hellohihi.com are
+        the same business. The sports site is different. The bird and media are from
+        Wikipedia.\n\nSo the answer should have sections for each distinct entity,
+        using headers, and bullet points where appropriate. Each section cites the
+        relevant search result numbers. Need to avoid any markdown headers at the
+        start, so start with a brief intro. Make sure each citation is correctly placed
+        after the relevant sentence.\n</think>\n\nThe term \"HiHi\" has multiple meanings
+        depending on context:  \n\n## **Retail Store (Hello Hi Hi)**  \nA Michigan-based
+        retailer specializing in **anime, kawaii, art toys, and Sanrio merch** (e.g.,
+        Hello Kitty, My Melody). It operates physical stores in:  \n- **Royal Oak**:
+        228 W 4th St. (hours: Mon-Thu 11 AM\u20138 PM, Fri-Sat 11 AM\u20139 PM, Sun
+        11 AM\u20137 PM)[1].  \n- **Midtown Detroit**: 4240 Cass Ave (hours: Wed-Thu
+        12\u20137 PM, Fri-Sat 12\u20138 PM, Sun 12\u20137 PM; closed Mondays/Tuesdays)[1][3].  \nThey
+        sell limited editions like the **Sonny Angel 20th Anniversary Tote Bag** ($20)[1].  \n\n##
+        **Linguistic References**  \n- **English**: An interjection (\"hihi\") similar
+        to \"hehe\" or onomatopoeia for laughter[2].  \n- **Maori**: A noun (*hihi*)
+        meaning \"stitchbird\" (a New Zealand bird species)[2].  \n- **Hong Kong Cantonese**:
+        Slang used euphemistically to replace vulgar terms like \u4ec6\u8857 (*p\u016b
+        ji\u0113*) for \"f*** off\"[2].  \n\n## **Sports News Platform**  \nHihi2.com
+        is an **Arabic-language football news site** covering European leagues, Champions
+        League, and Middle Eastern teams (e.g., Al-Nassr, Al-Hilal). Recent articles
+        include match updates and analyses[4].  \n\n## **Disambiguation**  \n- **Bird/Place**:
+        The **hihi** (stitchbird) is a New Zealand endemic species, while Hihi, New
+        Zealand, is a community named after it[5].  \n- **Media**: Terms like *\"Hi
+        Hi\"* (song by Puffy AmiYumi), *Hi Hi Puffy AmiYumi* (TV show), and Hi-Hi
+        (Japanese comedy duo) also exist[5].  \n\nFor clarity, verify context-specific
+        usage."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375ab45be60959f-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:53:06 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=MI43JFvy7z9oz5d5U6ZuNvWPHEbj1fFttsxc0UULB_s-1745833986-1.0.1.1-E2xyI6lAMSM1i2Qz2_ZoyROJHJxOrQ1B9VLUTFwkFVQGoozsPLD6Vo9mPMBcH8w9YC6VICdjXjRkIwu938u7perMAYPkCkddPEqBKRoOmTo;
+        path=/; expires=Mon, 28-Apr-25 10:23:06 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5164'
+    status:
+      code: 200
+      message: OK
+version: 1
