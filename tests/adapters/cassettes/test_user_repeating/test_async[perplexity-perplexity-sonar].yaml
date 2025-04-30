@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "9dc7e2c5-900a-4ca8-8e8e-57677dc46efd", "model": "sonar", "created":
+        1745834412, "usage": {"prompt_tokens": 3, "completion_tokens": 116, "total_tokens":
+        119, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk", "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "It seems like your query is \"Hi
+        Hi,\" which could refer to a variety of things. However, a notable reference
+        is the song \"**Hi, Hi, Hi**\" by Wings, a band formed by Paul McCartney.
+        The song, co-written with Linda McCartney, was released in 1972 as a double
+        A-side single with \"C Moon\" and became a hit, peaking at number one in Spain
+        and reaching the top ten in the United States[1]. \n\nIf you''re referring
+        to something else or want more information on a different topic, please provide
+        more details"}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b601de6f1a42-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 10:00:12 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=pVXRZGuUW0khQ4elglvdxUbrkAVPBSq0n_K7cEldT2c-1745834412-1.0.1.1-dviIw9lnFOo01g4C8bu.tcvq_2KU5Ve8GRzSrzPxE1Tp2tgxXx5GiDdNbwtiTjWXkWNLER5bkk8Cv.oBAO5ph.anhWWvhQVKMiCxDP.2ifw;
+        path=/; expires=Mon, 28-Apr-25 10:30:12 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1144'
+    status:
+      code: 200
+      message: OK
+version: 1

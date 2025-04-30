@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "c018755a-93f4-4295-b115-e3b569618c1c", "model": "sonar-pro",
+        "created": 1745834364, "usage": {"prompt_tokens": 1, "completion_tokens":
+        214, "total_tokens": 215, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "The word **\"hi\"** has several
+        meanings and uses:\n\n1. **Greeting**: The most common use of \"hi\" is as
+        a casual greeting in English, more informal than \"hello.\" It is suitable
+        for most situations except the most formal ones[2].\n\n2. **Informal \"high\"**:
+        It can also be used as an informal or simplified spelling of \"high,\" as
+        in \"hi fidelity\" for \"high fidelity\"[1].\n\n3. **Arts and Entertainment**:
+        The term is used in various contexts within arts and entertainment, such as
+        song titles, albums, and magazines[3].\n\n4. **Language Elements**: In other
+        languages, \"hi\" can refer to different linguistic elements, such as the
+        Japanese kana character (\u3072, \u30d2), an Armenian letter (\u0545), and
+        a Basque pronoun[3][5].\n\n5. **Geography and Science**: HI is also an abbreviation
+        for Hawaii, a state in the United States, and can refer to scientific concepts
+        like hydrogen-1 (protium)[3]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b4d17b1e95a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:59:24 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=vg.IOLfgMm9tV5XxPa7EG3E4UszWLqbC6T1GJt9dQ3A-1745834364-1.0.1.1-HK46FJzbFfuu8XfOU.T2FY9yVK9WZ2smTFliT0vvCucCo1FxVz1v6ZF48ekxnYGaEVXWNDvfZR674LsIpB7FVdIR6nqJM6UwtJYa65Xo7YQ;
+        path=/; expires=Mon, 28-Apr-25 10:29:24 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1505'
+    status:
+      code: 200
+      message: OK
+version: 1

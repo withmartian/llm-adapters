@@ -30,7 +30,7 @@ from pydantic_core import core_schema
 
 
 class Turn(BaseModel, use_enum_values=True):
-    role: Union[ConversationRole]
+    role: Union[ConversationRole, str]
     content: str
 
 
@@ -38,9 +38,9 @@ class AdapterChatCompletion(ChatCompletion):
     cost: float
 
     # V7
-    response: Optional[Turn] = None
+    response: Turn
     # V7
-    token_counts: Optional[Cost] = None
+    token_counts: Cost
 
 
 class AdapterChatCompletionChunk(ChatCompletionChunk):
@@ -232,13 +232,16 @@ class Conversation(BaseModel):
         turns: Union[
             "Conversation",
             List[TurnType],
-            Dict[str, List[TurnType]],
+            Dict[str, List[Union[TurnType, Dict[str, Any]]]],
         ],
     ):
         if isinstance(turns, Conversation):
             turns = turns.turns
         elif isinstance(turns, dict) and "turns" in turns:
-            turns = turns["turns"]
+            turns = [
+                Turn(**turn) if isinstance(turn, dict) else turn
+                for turn in turns["turns"]
+            ]
         super().__init__(turns=turns)
 
     def __getitem__(self, index: int) -> TurnType:

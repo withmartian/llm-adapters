@@ -13,6 +13,7 @@ from llm_adapters.types import (
     Model,
     ChatCompletionMessageParam,
     Conversation,
+    Prompt,
 )
 from llm_adapters.types.request import (
     ChatCompletionCreateArgs,
@@ -35,6 +36,13 @@ class Adapter(ABC):
     @abstractmethod
     def get_model(self) -> Model:
         pass
+
+    # Deprecated
+    @staticmethod
+    def convert_to_input(llm_input: Conversation | Prompt) -> Conversation:
+        if isinstance(llm_input, Conversation):
+            return llm_input
+        return llm_input.convert_to_conversation()
 
     @overload
     def execute_completion_sync(

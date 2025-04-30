@@ -15,6 +15,7 @@ from llm_adapters.provider_adapters import (
     TogetherSDKChatProviderAdapter,
     DeepSeekSDKChatProviderAdapter,
     GroqSDKChatProviderAdapter,
+    PerplexitySDKChatProviderAdapter,
 )
 from llm_adapters.types import Model, AdapterModelNotFoundException
 
@@ -30,6 +31,7 @@ ADAPTER_CLASSES: list[type[Adapter]] = [
     CohereSDKChatProviderAdapter,
     DeepInfraSDKChatProviderAdapter,
     GroqSDKChatProviderAdapter,
+    PerplexitySDKChatProviderAdapter,
 ]
 
 

@@ -1,0 +1,78 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '132'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "1b387fae-98e2-4e42-b2da-f862954b20b6", "model": "sonar", "created":
+        1745833902, "usage": {"prompt_tokens": 3, "completion_tokens": 51, "total_tokens":
+        54, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "It seems like your query is incomplete.
+        Could you provide more details or clarify what information you''re looking
+        for? Whether it''s about the greeting \"hi,\" a place, an organization, or
+        something else, let me know so I can assist you better."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375a9968c2d959d-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:51:42 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=SwdoXXUS90z8nUxb5b6YZYBKzzh0WOea7emy9eF9_jo-1745833902-1.0.1.1-6oMttKvgWfDcQORnzIyT6Uzj_QwGY8eBOR21Q.l.D0tbWsd4KhljJpN34XgoEe5ec5UcfWww3bTt9Txpld7xrpR19hChCYs5Ya0jsUyp8C4;
+        path=/; expires=Mon, 28-Apr-25 10:21:42 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '832'
+    status:
+      code: 200
+      message: OK
+version: 1

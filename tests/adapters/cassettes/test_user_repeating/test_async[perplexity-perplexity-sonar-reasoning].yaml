@@ -1,0 +1,103 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '75'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "58beee10-70ca-485b-a209-33b92f4e63c4", "model": "sonar-reasoning",
+        "created": 1745834423, "usage": {"prompt_tokens": 3, "completion_tokens":
+        510, "total_tokens": 513, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk", "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user just
+        typed \"Hi\" and then \"Hi\" again. Let me check the search results to see
+        what they might be referring to. All the search results are about the song
+        \"Hi, Hi, Hi\" by Wings, written by Paul and Linda McCartney. The first result
+        is from Wikipedia, giving details about the song''s release as a double A-side
+        with \"C Moon\" in 1972. It mentions the release dates, charts, and albums
+        it''s included in. The second and fourth results are Spotify links, which
+        probably just play the song. The third result is a YouTube video of the song,
+        and the fifth is a remix by Lil Jay Bingerack and Rayvanny from 2023.\n\nSo
+        the user might be asking about the song \"Hi, Hi, Hi\" since \"Hi\" is part
+        of the title. Alternatively, they could just be saying hello, but given the
+        search results, it''s more likely related to the song. Since the search results
+        are all about the song, I should focus on that. Let me structure the answer
+        with the song''s details. Mention the artists, release info, chart performance,
+        and the remix. Need to cite the sources properly. The Wikipedia entry is [1],
+        Spotify links are [2][4], YouTube is [3], and the remix is [5]. Make sure
+        to include the key facts from each source. Also, note the different versions
+        and albums it''s featured in. Avoid any irrelevant info. Keep it concise but
+        informative.\n</think>\n\n\"Hi, Hi, Hi\" is a 1972 glam rock song by Wings,
+        written and produced by Paul McCartney with co-writing credits for Linda McCartney[1].
+        Released as a double A-side single with \"C Moon,\" it debuted on December
+        1, 1972, in the UK and charted internationally, reaching No. 5 in the UK and
+        No. 10 in the US[1]. The track became a staple of Wings'' live performances
+        during the 1970s and has since appeared on compilation albums like *Wingspan:
+        Hits and History* (2001), *Pure McCartney* (2016), and *Red Rose Speedway*
+        reissues[1][3].\n\nIn 2023, the song gained new attention through a global
+        remix collaboration between Tanzanian artist Rayvanny and Ivory Coast''s Lil
+        Jay Bingerack, blending original elements with contemporary sounds[5]. The
+        original recording remains available on streaming platforms like Spotify[2][4]."},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b6299978959f-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 10:00:23 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=bsPK7zSI_Xg66YPBPNzN5bFD.ZSzFzRmKR46E01TvlQ-1745834423-1.0.1.1-fVn2oQkBZgHC6ULolDz37J5DKrZcyYsRQIMJ7wwT9fZhdXNkCQoNya6oeerprv1i5f9RhSmUhTHSob19C4QKZ.urVwLN65Sbov1jkLEKhuM;
+        path=/; expires=Mon, 28-Apr-25 10:30:23 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '2826'
+    status:
+      code: 200
+      message: OK
+version: 1
