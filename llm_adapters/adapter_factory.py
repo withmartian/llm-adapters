@@ -14,6 +14,7 @@ from llm_adapters.provider_adapters import (
     DeepInfraSDKChatProviderAdapter,
     TogetherSDKChatProviderAdapter,
     DeepSeekSDKChatProviderAdapter,
+    AzureSDKChatProviderAdapter,
     GroqSDKChatProviderAdapter,
     PerplexitySDKChatProviderAdapter,
 )
@@ -30,6 +31,7 @@ ADAPTER_CLASSES: list[type[Adapter]] = [
     CerebrasSDKChatProviderAdapter,
     CohereSDKChatProviderAdapter,
     DeepInfraSDKChatProviderAdapter,
+    AzureSDKChatProviderAdapter,
     GroqSDKChatProviderAdapter,
     PerplexitySDKChatProviderAdapter,
 ]
