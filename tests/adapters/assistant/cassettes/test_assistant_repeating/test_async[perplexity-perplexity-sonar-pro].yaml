@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi\nHi"},{"role":"user","content":"Hi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '136'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "251312c0-28fa-4c36-8e66-9efc765bdb57", "model": "sonar-pro",
+        "created": 1745833938, "usage": {"prompt_tokens": 5, "completion_tokens":
+        183, "total_tokens": 188, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Hi is a common, informal greeting
+        in English, used similarly to \"hello\" but typically considered a bit more
+        casual[2][3]. It is appropriate in most everyday situations, though it might
+        be too informal for very formal occasions or when addressing someone of high
+        status, such as royalty[2].\n\nBeyond being a greeting, \"Hi\" has several
+        other meanings:\n\n- It can be an abbreviation for Hawaii, especially in postal
+        codes[1][3].\n- In the Basque language, \"hi\" is an informal pronoun used
+        between close friends or family members[5].\n- \"Hi\" also appears in various
+        languages, scripts (like Japanese kana \u3072/\u30d2), and in cultural references
+        such as song titles and media[3][5].\n\nIn summary, \"hi\" is mainly recognized
+        as an everyday greeting, but it also carries significance in other contexts
+        and languages[2][3][5]."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375aa70ae8395a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:52:18 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=IfZt8_T9JmVhFg6PC41TzymgyZEHQqEy6uk2zUJe3l0-1745833938-1.0.1.1-0D0.JASomnIANlxB_rAuUd6.3cVpCuI2wBvhd1HRwOVdjAilB97xsMj54dv2ox5LRh2oG9IVJ.sif_iMs0Y5iRo7Wu0zX6rGKoTfx6yUlcU;
+        path=/; expires=Mon, 28-Apr-25 10:22:18 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1428'
+    status:
+      code: 200
+      message: OK
+version: 1

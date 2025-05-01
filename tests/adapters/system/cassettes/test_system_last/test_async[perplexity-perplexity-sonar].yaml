@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "8046ce0d-34af-4444-b5f4-a27438ffc739", "model": "sonar", "created":
+        1745834023, "usage": {"prompt_tokens": 3, "completion_tokens": 174, "total_tokens":
+        177, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk", "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Hi! If you were referring to
+        \"Hi, Hi, Hi,\" it is a song written by Paul and Linda McCartney and performed
+        by Wings. It was released as a double A-side single with \"C Moon\" in 1972.
+        The single came out on December 1, 1972, in the UK and reached high chart
+        positions\u2014number one in Spain, number five in the UK, and number 10 in
+        the US. The track became a staple in Wings'' live shows throughout the 1970s
+        and has been included on several Paul McCartney compilations such as *Wingspan:
+        Hits and History* (2001), the deluxe edition of *Pure McCartney* (2016), and
+        reissues of *Red Rose Speedway*[1][2][3].\n\nIf you meant a simple greeting,
+        then hello! How can I assist you today?"}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375ac7cfcfe95a0-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:53:43 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=_p0yKYjZJwpE5EnSOxStwg3.z7Kb51vCnPQylnfRhwc-1745834023-1.0.1.1-I2B3.UIfADRm4h.sBsg_mYCm5rkNexoXJ9kErCAWfl5Ab_5bxwCXN5yDsut.X3lCuWYxBSWGaAFZcONLy89m4Z5ZwbNx71OczWdHWIQo6kI;
+        path=/; expires=Mon, 28-Apr-25 10:23:43 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1323'
+    status:
+      code: 200
+      message: OK
+version: 1

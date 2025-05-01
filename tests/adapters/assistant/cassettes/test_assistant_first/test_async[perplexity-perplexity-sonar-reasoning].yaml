@@ -1,0 +1,134 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi\n\"\""}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '146'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "b62cfbb8-5282-438c-b079-5ea3cfa9ec4e", "model": "sonar-reasoning",
+        "created": 1745833837, "usage": {"prompt_tokens": 5, "completion_tokens":
+        1082, "total_tokens": 1087, "search_context_size": "low"}, "citations": ["https://preply.com/en/blog/22-useful-english-greetings-for-every-day/",
+        "https://www.englishalex.com/post/life-beyond-how-are-you-the-most-common-english-greetings-and-how-to-answer-them-audio-gifs",
+        "https://www.indeed.com/career-advice/career-development/greeting-from-email",
+        "https://www.clearenglishcorner.com/blog/64", "https://cursa.app/en/page/common-greetings-and-responses"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user just
+        said \"Hi\" and provided some search results about English greetings. I need
+        to figure out how to respond appropriately. Let me look at the search results
+        to find relevant information.\n\nLooking at the first result from Preply,
+        they mention various greetings like \"How do you do?\" and casual phrases
+        such as \"Morning/Afternoon/Evening\" as friendly options. They also talk
+        about responses to \"How are you?\" using examples like \"I''m good, thanks.\"
+        The second link from EnglishAlex expands on common responses to \"How are
+        you doing?\" with a list of possible answers. The third link from Indeed discusses
+        email greetings, both formal and informal, but since the user just said \"Hi,\"
+        maybe the informal ones are more relevant here. The fourth result from Clear
+        English Corner categorizes responses into those for when you''re doing well
+        and when you''re so-so. The fifth link from Cursa lists various greetings
+        like \"Good Morning,\" \"How are you?\" and informal options like \"Hey,\"
+        which is very casual for close friends.\n\nThe user''s query is \"Hi,\" which
+        is a common greeting. The appropriate response would depend on the context,
+        but since they used \"Hi,\" I should consider both formal and informal alternatives.
+        However, since \"Hi\" itself is somewhat informal, maybe suggest varying levels
+        of formality based on the situation. \n\nI need to structure the answer to
+        cover different types of greetings. From the search results, formal greetings
+        include \"Good Morning/Afternoon/Evening,\" while informal ones include \"How''s
+        it going?\" or \"Hey.\" The user might want examples of both. Also, responses
+        to \"How are you?\" are covered, so including common replies like \"I''m good,
+        thanks\" would be helpful.\n\nI should make sure to cite the sources properly.
+        For example, \"Good Morning/Afternoon/Evening\" is from [1][5], \"How are
+        you?\" responses from [2][4], and \"How\u2019s it going?\" from [2]. The informal
+        \"Hey\" is mentioned in [5]. Email greetings from [3] might not be necessary
+        here unless the user is emailing, but since the query is just \"Hi,\" maybe
+        focus on spoken interactions. \n\nSo, the answer should list different types
+        of greetings (formal, informal, neutral) with examples and responses. Use
+        headers for each section, maybe Formal Greetings, Informal Greetings, Neutral/Casual
+        Options, and Response Examples. Each point should have a couple of examples
+        and citations from the sources. Make sure the examples are clear and concise,
+        pulling from the provided search results without copying text verbatim. Also,
+        check that all citations are correctly numbered based on the provided search
+        indices.\n</think>\n\nHere are common English greetings and responses, organized
+        by formality and context:\n\n## **Formal Greetings**  \n**Time-based greetings**
+        are polite and widely used:  \n- **\"Good Morning\"** (early until noon),
+        **\"Good Afternoon\"** (noon until ~5 PM), **\"Good Evening\"** (after 5 PM)[1][5].  \n  *Example:*
+        \"Good Morning, John. How are you?\"  \n\n**Neutral formal greetings** include:  \n-
+        **\"How do you do?\"** (a traditional option in introductions)[1].  \n- **\"Pleased
+        to meet you\"** (common when meeting someone new)[1].  \n\n---\n\n## **Informal
+        Greetings**  \n**Casual alternatives** for friends or close contacts:  \n-
+        **\"Hey\"** (very relaxed, among peers)[5].  \n- **\"How\u2019s it going?\"**
+        (similar to \"How are you?\" but more conversational)[2].  \n- **\"What\u2019s
+        up?\"** or **\"What\u2019s new with you?\"** (friendly, less formal)[1].  \n\n**Friendly
+        follow-ups** after basic greetings:  \n- **\"How have you been?\"** (to reconnect
+        after time apart)[1].  \n- **\"Nice to see you\"** (if meeting unexpectedly)[1].  \n\n---\n\n##
+        **Neutral/Casual Options**  \n**Simple greetings** work in most situations:  \n-
+        **\"Hi\"** (universal, non-contextual)[5].  \n- **\"Hello\"** (slightly more
+        formal than \"Hi\")[5].  \n\n**Acknowledgment with a brief follow-up**:  \n-
+        **\"Hey there! Just checking in\"** (for informal communication).  \n\n---\n\n##
+        **Common Responses**  \n**To \"How are you?\" / \"How are you doing?\"** (neutral
+        or casual contexts):  \n- **Positive:** \"I\u2019m good/great, thanks!\"[2][4].  \n-
+        **Neutral:** \"Can\u2019t complain\" or \"Not bad\"[2][4].  \n- **Brief exchanges:**
+        \"Good. You?\"[2].  \n\n**Avoid over-explaining** unless the conversation
+        expects deeper discussion. For example:  \n- *A: \"Hi, how\u2019s it going?\"*  \n-
+        *B: \"It\u2019s going well. Just busy with work. How about you?\"*[2].  \n\nFormal
+        responses in emails typically use **\"I hope this email finds you well\"**
+        or **\"Dear [Name]\"**[3]."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375a7aefcb495a5-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:50:37 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=qKVEwqRqL36qxTvi4w0vbJwz_z8cBaPa2blRDFACU7M-1745833837-1.0.1.1-W7kkPxIbWmYJPDxqXHYXNNXt9n9bd4hUY_AgPmx_7FQyjXtHIm_13AG8PQefBw5pqJaRrgro5jr_b_EDC88i27Oef6yzHFM8YpfN9UWORt8;
+        path=/; expires=Mon, 28-Apr-25 10:20:37 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5440'
+    status:
+      code: 200
+      message: OK
+version: 1

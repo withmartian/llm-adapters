@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '136'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "670d1492-f2b7-4431-a02f-2cee39b17649", "model": "sonar-pro",
+        "created": 1745833907, "usage": {"prompt_tokens": 3, "completion_tokens":
+        269, "total_tokens": 272, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "The word \"hi\" is a common,
+        informal greeting in English, typically used in everyday and casual situations
+        to acknowledge or welcome someone[2][1][3]. It is less formal than \"hello\"
+        and is widely used across English-speaking countries. The first recorded use
+        of \"hi\" dates back to the 1800s and is attributed to a Native American in
+        Kansas[2].\n\nBeyond its common use as a greeting, \"hi\" can have other meanings
+        or uses:\n- In language contexts, \"hi\" refers to a cuneiform sign, a character
+        in the Japanese script (\u3072, \u30d2), and is the ISO 639-1 code for the
+        Hindi language[3].\n- In Basque, \"hi\" is an informal second-person singular
+        pronoun used among close friends or family, with specific verb conjugations[5].\n-
+        \"Hi\" appears in various arts and entertainment contexts, including song
+        titles, albums, and as the name of characters or magazines[3].\n- Scientifically,
+        \"HI\" can refer to neutral atomic hydrogen in astronomy (HI region) or the
+        isotope Hydrogen-1[3].\n\nIn summary, although \"hi\" is best known as a casual
+        English greeting, it has a range of other linguistic, cultural, and scientific
+        uses, depending on the context[3][5]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375a9a4cf5e95a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:51:47 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=EVzE1QV39_NQ3AXzpVh0XEhaDOCA8BvztThbGjJk1p4-1745833907-1.0.1.1-xS5naaiE9g1_o4Aqv_IsAprCPE7NRrzgT06OY8Dr2osfGEKABn.uiKjYaAZ9AGiP9zeEBQvzg1FmSTFqbiG4eI508Nb.pUZhMG1YNbnGk6k;
+        path=/; expires=Mon, 28-Apr-25 10:21:47 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1760'
+    status:
+      code: 200
+      message: OK
+version: 1
