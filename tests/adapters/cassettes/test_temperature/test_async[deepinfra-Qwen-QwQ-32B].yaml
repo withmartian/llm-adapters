@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B","temperature":0.25}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '87'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RLPq8lz7QYrV6A1mZSINnC3V","object":"chat.completion","created":1743943487,"model":"Qwen/QwQ-32B","choices":[{"index":0,"message":{"role":"assistant","content":"Okay,
+        the user said \"Hi\". I should respond in a friendly way. Let me think of
+        a simple greeting. Maybe \"Hello! How can I assist you today?\" That sounds
+        good. It''s polite and opens the conversation for them to explain what they
+        need help with. I''ll go with that.\n</think>\n\nHello! How can I assist you
+        today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":84,"completion_tokens":73,"estimated_cost":1.6250000000000002e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '673'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:44:47 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

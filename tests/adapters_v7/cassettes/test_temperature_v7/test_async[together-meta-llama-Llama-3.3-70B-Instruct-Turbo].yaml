@@ -1,0 +1,106 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-3.3-70B-Instruct-Turbo","temperature":0.25}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '114'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAGTvR-2j9zxn-92cb0a51fe13959f\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1744044798,\n  \"model\": \"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 14817262933672219000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"It's nice to meet you. Is there something I can help you with or would you
+        like to chat?\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 36,\n    \"completion_tokens\": 23,\n    \"total_tokens\":
+        59,\n    \"cached_tokens\": 0\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cb0a51fe13959f-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:53:18 GMT
+      ETag:
+      - W/"26f-0uINewgasg9VLyNFaGrg58p3ggc"
+      Retry-After:
+      - '2'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '623'
+      x-amzn-trace-id:
+      - 4b67c917-af9d-4f29-b1c8-ac1bd1942648-noamzn
+      x-api-call-end:
+      - '2025-04-07T16:53:18.477Z'
+      x-api-call-start:
+      - '2025-04-07T16:53:18.290Z'
+      x-api-received:
+      - '2025-04-07T16:53:18.282Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - npAGTvR-2j9zxn-92cb0a51fe13959f
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '110'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-R8Lyb1Dfd3m26jveoufA2z33","object":"chat.completion","created":1744052876,"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nAlright,
+        the user wrote \"Hi\". Looks like they''re just starting a conversation.\n\nI
+        should respond in a friendly and welcoming manner.\n\nMaybe ask them how I
+        can assist them today to keep the chat going.\n\nKeep it open-ended so they
+        feel comfortable sharing what they need help with.\n</think>\n\nHello! How
+        can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":4,"total_tokens":74,"completion_tokens":70,"estimated_cost":1.3080000000000002e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '731'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:07:56 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

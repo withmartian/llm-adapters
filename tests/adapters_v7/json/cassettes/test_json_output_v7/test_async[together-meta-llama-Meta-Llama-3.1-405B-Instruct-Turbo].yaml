@@ -1,0 +1,116 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '162'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAFouK-3NKUce-92cb0732b999a9e9\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1744044670,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 12282930747272688000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Here's a simple JSON object:\\n\\n```\\n{\\n  \\\"name\\\": \\\"John Doe\\\",\\n
+        \ \\\"age\\\": 30,\\n  \\\"city\\\": \\\"New York\\\"\\n}\\n```\\n\\nIf you
+        want to generate this JSON object using a programming language, here are a
+        few examples:\\n\\n**Python**\\n```python\\nimport json\\n\\ndata = {\\n  \\\"name\\\":
+        \\\"John Doe\\\",\\n  \\\"age\\\": 30,\\n  \\\"city\\\": \\\"New York\\\"\\n}\\n\\nprint(json.dumps(data,
+        indent=2))\\n```\\n\\n**JavaScript**\\n```javascript\\nconst data = {\\n  name:
+        \\\"John Doe\\\",\\n  age: 30,\\n  city: \\\"New York\\\"\\n};\\n\\nconsole.log(JSON.stringify(data,
+        null, 2));\\n```\\n\\n**Java**\\n```java\\nimport org.json.JSONObject;\\n\\npublic
+        class Main {\\n  public static void main(String[] args) {\\n    JSONObject
+        data = new JSONObject();\\n    data.put(\\\"name\\\", \\\"John Doe\\\");\\n
+        \   data.put(\\\"age\\\", 30);\\n    data.put(\\\"city\\\", \\\"New York\\\");\\n\\n
+        \   System.out.println(data.toString(2));\\n  }\\n}\\n```\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 40,\n    \"completion_tokens\":
+        221,\n    \"total_tokens\": 261\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cb0732b999a9e9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 16:51:12 GMT
+      ETag:
+      - W/"565-Rx9l/qvoJFIRTyIIaXKpGGdMYBo"
+      Retry-After:
+      - '1'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      content-length:
+      - '1381'
+      x-amzn-trace-id:
+      - 858232f4-7f28-49b9-a125-4d28de93b695-noamzn
+      x-api-call-end:
+      - '2025-04-07T16:51:12.188Z'
+      x-api-call-start:
+      - '2025-04-07T16:51:10.394Z'
+      x-api-received:
+      - '2025-04-07T16:51:10.386Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '198'
+      x-ratelimit-remaining-tokens:
+      - '99589'
+      x-ratelimit-reset:
+      - '1'
+      x-request-id:
+      - npAFouK-3NKUce-92cb0732b999a9e9
+    status:
+      code: 200
+      message: OK
+version: 1

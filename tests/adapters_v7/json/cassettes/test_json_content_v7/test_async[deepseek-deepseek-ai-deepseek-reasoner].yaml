@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '126'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"48a393ad-9abe-4fe4-bb16-dcdd984b23ba","object":"chat.completion","created":1744044663,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello
+        again! How can I assist you today?","reasoning_content":"Okay, the user sent
+        \"Hi\" and I responded with \"Hi\". Now they''ve sent another \"Hi\". Hmm,
+        maybe they want to continue the conversation. I should acknowledge their greeting
+        again but also prompt them to ask a question or share what they need help
+        with. Keep it friendly and open-ended. Let me say something like, \"Hello
+        again! How can I assist you today?\" That should encourage them to specify
+        their request."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"completion_tokens":101,"total_tokens":109,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":89},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":8},"system_fingerprint":"fp_5417b77867_prod0225"}'
+    headers:
+      CF-RAY:
+      - 92cb07080eed317c-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:51:03 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=AjxTCde8YT9astvuwvO_isix5AD9rNgeTJnX24_0yQs-1744044663-1.0.1.1-riGfQIX1VOjj7WazYHHOsHWxKvj8CuMiDqdlzIYUyL1FwjLX2lESuCLiB2tqz0_1OoKbQb7AMZmhkErr1eBK4Flpy1BCehgt6h95jxPDaNU;
+        path=/; expires=Mon, 07-Apr-25 17:21:03 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '974'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - 8a07b04c519a469ba253b624c1268926
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '125'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RuvqI2wiQP369DP1l0cz0Ci4","object":"chat.completion","created":1744052816,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"message":{"role":"assistant","content":"
+        How can I help you today?\n\nI''m here to answer questions about technology,
+        coding, and related topics. Let me know what''s on your mind and I''ll do
+        my best to assist you.\n\n(If you''re looking for technical support or have
+        a specific question, just let me know and I''ll do my best to help.)\n\nTo
+        get started, here are a few tips for using this chat interface:\n\n* To send
+        a message, just type it in the text box at the bottom of the screen and hit
+        enter.\n* To format your text, you can use markdown syntax. For example, to
+        make text bold, surround it with asterisks (e.g. `*like this*`), or to create
+        a link, surround the text with square brackets and follow it with the URL
+        in parentheses (e.g. `[link text](http://example.com)`).\n* If you want to
+        include code in your message, you can use triple backticks (```) to create
+        a code block. For example:\n\n```\n```\ndef hello_world():\n  print(\"Hello,
+        world!\")\n```\n\n```\n\nThis will format the text as a code block, with syntax
+        highlighting for a variety of languages.\n\nLet me know if you have any questions
+        about how to use these features. I''m here to help!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":318,"completion_tokens":307,"estimated_cost":7.632e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1491'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:06:56 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

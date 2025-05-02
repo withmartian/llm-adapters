@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"user","content":"\"\""}],"model":"google/gemma-3-12b-it"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '289'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RGuUa5kdgj87Q0wW9rHhCkX8","object":"chat.completion","created":1743944492,"model":"google/gemma-3-12b-it","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you''re just sending empty strings. Is there anything I can help
+        you with? Do you want to:\n\n*   Start a conversation?\n*   Ask a question?\n*   Tell
+        me something?\n\n\n\nLet me know!","name":null,"tool_calls":[]},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":42,"total_tokens":94,"completion_tokens":52,"estimated_cost":7.3e-06}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '549'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 13:01:32 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

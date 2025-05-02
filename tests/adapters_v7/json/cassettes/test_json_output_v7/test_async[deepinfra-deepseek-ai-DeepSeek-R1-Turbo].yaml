@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-R1-Turbo","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '146'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-Rc8Ok5Ci6ZYFLQhRYW9K8bpT","object":"chat.completion","created":1744052900,"model":"deepseek-ai/DeepSeek-R1-Turbo","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wants a simple JSON. Let me think about what that means. They probably
+        want a basic example without any complex structures. Maybe something with
+        a few key-value pairs. Let me start with a basic structure.\n\nI should include
+        some common keys like \"name\", \"age\", maybe a boolean like \"isStudent\",
+        and an array for \"hobbies\". That should cover the basics. Let me check the
+        syntax to make sure there are no errors. Keys in quotes, proper commas, and
+        the right brackets. Yeah, that looks good. Let me present it clearly.\n</think>\n\n```json\n{\n  \"name\":
+        \"John Doe\",\n  \"age\": 30,\n  \"isStudent\": false,\n  \"hobbies\": [\"reading\",
+        \"gaming\", \"coding\"]\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":175,"completion_tokens":166,"estimated_cost":0.000507}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1066'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:08:20 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "f558e106-4e3f-42eb-8c10-bfd3cf6f8168", "model": "sonar", "created":
+        1745834360, "usage": {"prompt_tokens": 1, "completion_tokens": 241, "total_tokens":
+        242, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "The term \"hi\" can refer to
+        several different things, but most commonly, it is used as a casual greeting
+        similar to \"hello.\" Here are some key interpretations of \"hi\":\n\n1. **Greeting**:
+        \"Hi\" is a common, informal way to greet someone, more casual than \"hello.\"
+        It is widely used in many situations but is generally avoided in formal settings[2].\n\n2.
+        **Arts and Entertainment**: There are various references to \"hi\" in media,
+        including music (e.g., Ofra Haza''s song \"Hi,\" Texas''s album \"Hi\"), podcasts
+        (e.g., \"Hello Internet\"), and publications[3].\n\n3. **Language**: Apart
+        from English, \"hi\" can also refer to the Japanese kana character \"\u3072\"
+        or \"\u30d2\" and is a part of the Basque language where it is used as a pronoun[5].\n\n4.
+        **Informal Spellings**: \"Hi\" can also be used as a simplified spelling for
+        \"high,\" such as in \"hi fidelity\" for high fidelity audio equipment[1].
+        \n\nOverall, \"hi\" is versatile, meaning different things depending on the
+        context in which it is used."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b4b65f9495a9-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:59:20 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=hWh1bpmCri.3tTs2INh32A8w3sjXXOl.jR1_enm40L4-1745834360-1.0.1.1-paOHYneNyUUWTCpniKMuOWbiMpBWRQxCO1rGFdrdF1R3byhWYWjTBTESg_QlIMw.UrrBTWRWjTVpozzHCuHhRvbMhKtyOU9pZ6D7uXADKcs;
+        path=/; expires=Mon, 28-Apr-25 10:29:20 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1611'
+    status:
+      code: 200
+      message: OK
+version: 1

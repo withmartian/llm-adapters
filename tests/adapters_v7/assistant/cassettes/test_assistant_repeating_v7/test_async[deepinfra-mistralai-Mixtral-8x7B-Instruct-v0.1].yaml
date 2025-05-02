@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '195'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RaCJmyHYeKRxjwA3nzF5LEyV\",\"object\":\"chat.completion\",\"created\":1744053004,\"model\":\"mistralai/Mixtral-8x7B-Instruct-v0.1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"
+        Hello! How can I help you today? If you have any questions, big or small,
+        feel free to ask. I'm here to provide information and try to answer your questions
+        to the best of my ability. \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":22,\"total_tokens\":68,\"completion_tokens\":46,\"estimated_cost\":1.632e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '560'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:10:04 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

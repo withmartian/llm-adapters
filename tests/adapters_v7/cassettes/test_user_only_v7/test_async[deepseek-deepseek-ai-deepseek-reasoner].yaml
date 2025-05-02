@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '73'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"04113372-ed92-4add-8e9b-dc8c160c18d5\",\"object\":\"chat.completion\",\"created\":1744044883,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay, the
+        user said \\\"Hi\\\". That's a friendly greeting. I should respond in a welcoming
+        manner. Maybe say hello and offer assistance. Keep it open-ended so they feel
+        comfortable asking for help. Use a smiley to keep the tone positive. Let me
+        check if that makes sense.\\n\\n\\\"Hello! How can I assist you today? \U0001F60A\\\"\\n\\nYeah,
+        that sounds good. It's simple, friendly, and invites them to ask anything
+        they need.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":106,\"total_tokens\":112,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":93},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 92cb0c66a9c395a6-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:54:43 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=ikilspwBwl9BnLXcLwHrLeImzzu7MMp9W7VW7lBUf9k-1744044883-1.0.1.1-74y9S5d9tbmFUbpc58YAcEAsm0O6R5wOqENE1Jo2p5ItSndd2H_hwDhPRaoy4OKv5ROmwlaid6g8nk1Z8rVP6VYMPc8UTkaQpTAKnSvuTP4;
+        path=/; expires=Mon, 07-Apr-25 17:24:43 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '969'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - df2763cd065908a38abd99d985203de7
+    status:
+      code: 200
+      message: OK
+version: 1

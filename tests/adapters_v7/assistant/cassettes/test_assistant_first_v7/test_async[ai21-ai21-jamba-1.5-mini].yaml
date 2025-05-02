@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"jamba-1.5-mini"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '106'
+      content-type:
+      - application/json
+      host:
+      - api.ai21.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.ai21.com/studio/v1/chat/completions
+  response:
+    body:
+      string: '{"detail":"Access denied for this feature"}'
+    headers:
+      CF-RAY:
+      - 92caf6fcf96dda74-IST
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '43'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:40:06 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      cf-cache-status:
+      - DYNAMIC
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
+      request-id:
+      - f7e1681e-5f9a-6b20-bb61-e1db007d63f3
+      via:
+      - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 403
+      message: Forbidden
+version: 1

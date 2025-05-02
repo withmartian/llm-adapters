@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '240'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "c0321d65-a91f-4f62-8fdb-5467a67fd552", "model": "sonar", "created":
+        1745834131, "usage": {"prompt_tokens": 6, "completion_tokens": 39, "total_tokens":
+        45, "search_context_size": "low"}, "citations": [], "object": "chat.completion",
+        "choices": [{"index": 0, "finish_reason": "stop", "message": {"role": "assistant",
+        "content": "It seems like you haven''t provided any specific information or
+        question. Could you please clarify what you''re looking for? I''m here to
+        help with any questions or topics you''d like to discuss."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375af326a18959d-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:55:31 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=44BJP65LKjJ8_LRHHZr83lZGxkHg2WEHI6ZD5kO8WRo-1745834131-1.0.1.1-Cqj_WpSUXZsOsMos5CuCHdl6DC7rDIWJeuy6QxbCFR4l36ITirt4VaWFtcIjfWSzQA5_AUttoUUh_RYhBWG8OLnDGUJmSFvOI7KkDOFpdDA;
+        path=/; expires=Mon, 28-Apr-25 10:25:31 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '578'
+    status:
+      code: 200
+      message: OK
+version: 1

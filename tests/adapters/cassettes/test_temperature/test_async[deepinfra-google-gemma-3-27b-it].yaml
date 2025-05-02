@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"google/gemma-3-27b-it","temperature":0.25}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '96'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R6kPNaC1pdwEjSnfKoV6X803\",\"object\":\"chat.completion\",\"created\":1743943498,\"model\":\"google/gemma-3-27b-it\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! \U0001F44B \\n\\nHow can I help you today? Just let me know what you're
+        thinking, or if you just wanted to say hi, that's great too! \\n\\nI can:\\n\\n*
+        **Answer questions:** About pretty much anything!\\n* **Generate text:** Like
+        stories, poems, articles, code, etc.\\n* **Translate languages:**  I can help
+        with translations.\\n* **Summarize text:**  Give you the key points of a longer
+        piece.\\n* **Brainstorm ideas:**  If you're stuck, I can help you come up
+        with some.\\n* **Just chat:** If you're bored and want to talk!\\n\\n\\n\\n\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":153,\"completion_tokens\":143,\"estimated_cost\":2.96e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '882'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:44:58 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,62 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '99'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R8EkmEnlhdTCQJU7J5F1isJ2\",\"object\":\"chat.completion\",\"created\":1743943601,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user just said \\\"Hi\\\". I should respond politely. Let me keep it friendly
+        and open-ended. Maybe ask how I can assist them today. That way, they can
+        let me know what they need help with. Let me check for any typos. All good.
+        Alright, send the response.\\n\\n</think>\\n\\nHi there! How can I assist
+        you today? If you have any questions or need help with something, just let
+        me know! \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":13,\"total_tokens\":106,\"completion_tokens\":93,\"estimated_cost\":2.0549999999999998e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '753'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:46:41 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

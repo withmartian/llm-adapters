@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '319'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-Rr1NJlV1gblp4BBNxo8IehZ3","object":"chat.completion","created":1743943161,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"message":{"role":"assistant","content":"
+        Hello! It seems like you''re saying hello to me. Is there something specific
+        you would like to talk about or ask me? I''m here to help with any questions
+        you might have.\n\nIf you''re just looking to chat, that''s okay too. I''m
+        happy to just have a conversation with you. Is there anything on your mind
+        that you''d like to talk about? I''ll do my best to respond in a way that
+        is appropriate and helpful.\n\nIn the meantime, here''s a fun fact: Did you
+        know that the average person says \"hello\" over 12,000 times in their lifetime?
+        It''s a common greeting in many parts of the world, and it''s a great way
+        to start a conversation or show that you''re friendly and approachable. I
+        hope you have a great day!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":23,"total_tokens":206,"completion_tokens":183,"estimated_cost":4.944000000000001e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1084'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:39:21 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,93 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"gpt-4o","tool_choice":"none","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      api-key:
+      - b22bea4270b74a7e9eb3b2c74ee66db9
+      connection:
+      - keep-alive
+      content-length:
+      - '382'
+      content-type:
+      - application/json
+      host:
+      - martiantest.openai.azure.com
+      user-agent:
+      - AsyncAzureOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://martiantest.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-06-01
+  response:
+    body:
+      string: '{"choices":[{"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}},"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"Let''s
+        generate a random number in the range 1-10.\n\nI''ll use the `multi_tool_use.parallel`
+        function to call the `functions.generate` tool.","refusal":null,"role":"assistant"}}],"created":1745501095,"id":"chatcmpl-BPqrPooZxfbUxwXWHl8xegYlgHLbv","model":"gpt-4o-2024-05-13","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"system_fingerprint":"fp_ee1d74bde0","usage":{"completion_tokens":33,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens":72,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":105}}
+
+        '
+    headers:
+      Content-Length:
+      - '1157'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 24 Apr 2025 13:24:56 GMT
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      apim-request-id:
+      - c295cc0c-bc6a-4de6-b358-46cfceb091c6
+      azureml-model-session:
+      - v20250415-3-168426324-2
+      cmp-upstream-response-duration:
+      - '419'
+      ms-azureml-model-time:
+      - '452'
+      x-accel-buffering:
+      - 'no'
+      x-content-type-options:
+      - nosniff
+      x-envoy-upstream-service-time:
+      - '454'
+      x-ms-client-request-id:
+      - c295cc0c-bc6a-4de6-b358-46cfceb091c6
+      x-ms-deployment-name:
+      - gpt-4o
+      x-ms-rai-invoked:
+      - 'true'
+      x-ms-region:
+      - East US
+      x-ratelimit-limit-requests:
+      - '150'
+      x-ratelimit-limit-tokens:
+      - '150000'
+      x-ratelimit-remaining-requests:
+      - '148'
+      x-ratelimit-remaining-tokens:
+      - '146755'
+      x-request-id:
+      - 5d08a23a-42e8-4342-aeb9-83fae53a2c3a
+    status:
+      code: 200
+      message: OK
+version: 1

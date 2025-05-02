@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '324'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R9BFZi8JWLdQm8LcK4L5eDgd\",\"object\":\"chat.completion\",\"created\":1744044636,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Llama-70B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        so the user sent a message with multiple \\\"Hi\\\"s, and I responded with
+        four \\\"Hi\\\"s followed by an empty quote. Hmm, I need to figure out what's
+        going on here. Maybe the user is testing me or just being friendly. Since
+        they repeated \\\"Hi\\\" four times and I did the same, it seems like a playful
+        exchange.\\n\\nThe user then included an empty string \\\"\\\" at the end,
+        which is unusual. I wonder if that was intentional or a typo. Maybe they were
+        trying to send a message but it didn't come through properly. I should consider
+        that and think about how to respond appropriately.\\n\\nI should keep the
+        tone light and friendly since the initial exchange was all \\\"Hi\\\"s. Perhaps
+        I can acknowledge the repetition in a humorous way or offer assistance since
+        the empty quote might indicate something went wrong. It's important to be
+        approachable and ready to help if they have a question or need something.\\n\\nI'll
+        go with a friendly response that invites them to ask questions or share more.
+        Maybe something like, \\\"Hi! \U0001F60A It looks like you're saying hello
+        a lot! How can I assist you today?\\\" That way, I'm keeping the conversation
+        going and making sure they feel comfortable to continue.\\n</think>\\n\\nHi!
+        \U0001F60A It looks like you're saying hello a lot! How can I assist you today?\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":17,\"total_tokens\":291,\"completion_tokens\":274,\"estimated_cost\":0.00019297}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1665'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:50:36 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

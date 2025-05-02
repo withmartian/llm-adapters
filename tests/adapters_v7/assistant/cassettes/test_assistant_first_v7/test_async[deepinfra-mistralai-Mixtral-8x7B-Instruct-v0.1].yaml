@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '161'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RxFBMYuTWJBbXLWBnOPj0cY9","object":"chat.completion","created":1744052941,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"message":{"role":"assistant","content":"
+        Hello! How can I help you today? Is there something specific you would like
+        to know or discuss? I''m here to answer any questions you have to the best
+        of my ability. Just let me know what''s on your mind. Is there a particular
+        topic you would like to talk about? I''m happy to help with questions about
+        a wide variety of subjects, including (but not limited to) science, technology,
+        math, history, and language. Just let me know what you''re interested in,
+        and I''ll do my best to provide you with helpful and accurate information.
+        I''m here to assist you, so please don''t hesitate to ask me anything. I look
+        forward to hearing from you! Is there something you would like to know or
+        talk about?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":22,"total_tokens":183,"completion_tokens":161,"estimated_cost":4.392e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1062'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:09:01 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

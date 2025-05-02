@@ -17,7 +17,7 @@ interactions:
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.45.2
+      - AsyncAnthropic/Python 0.49.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,30 +27,32 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.45.2
+      - 0.49.0
+      x-stainless-read-timeout:
+      - '600'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
       - 3.13.1
+      x-stainless-timeout:
+      - '600'
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_01SYbye38g5za9cwrZYBxCc9","type":"message","role":"assistant","model":"claude-3-opus-20240229","content":[{"type":"text","text":"Is
-        there something I can assist you with today, or did you just want to exchange
-        greetings? I''m happy to chat, but if there''s a specific topic or question
-        you had in mind, feel free to let me know."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":51}}'
+      string: '{"id":"msg_01DcPirLAavFNQJMQqpVnup5","type":"message","role":"assistant","model":"claude-3-opus-20240229","content":[{"type":"text","text":"Hello!
+        How can I assist you today?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":12}}'
     headers:
       CF-RAY:
-      - 918c6df83df0f7d9-LAX
+      - 933d19baef83959f-TBS
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Fri, 28 Feb 2025 00:52:04 GMT
+      - Mon, 21 Apr 2025 13:06:46 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -64,25 +66,25 @@ interactions:
       anthropic-ratelimit-input-tokens-remaining:
       - '5000000'
       anthropic-ratelimit-input-tokens-reset:
-      - '2025-02-28T00:52:02Z'
+      - '2025-04-21T13:06:46Z'
       anthropic-ratelimit-output-tokens-limit:
       - '1000000'
       anthropic-ratelimit-output-tokens-remaining:
       - '1000000'
       anthropic-ratelimit-output-tokens-reset:
-      - '2025-02-28T00:52:04Z'
+      - '2025-04-21T13:06:46Z'
       anthropic-ratelimit-tokens-limit:
       - '6000000'
       anthropic-ratelimit-tokens-remaining:
       - '6000000'
       anthropic-ratelimit-tokens-reset:
-      - '2025-02-28T00:52:02Z'
+      - '2025-04-21T13:06:46Z'
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '494'
+      - '331'
       request-id:
-      - req_01JW5PGnQps8saZEVQgZoHot
+      - req_011CNMvnPFM39AWfb9ho5RLg
       via:
       - 1.1 google
     status:

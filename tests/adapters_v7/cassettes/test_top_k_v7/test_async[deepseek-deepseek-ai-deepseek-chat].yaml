@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-chat","top_k":5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '79'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"62bd219c-f2b1-4b8c-8e54-019df87068e1\",\"object\":\"chat.completion\",\"created\":1744044823,\"model\":\"deepseek-chat\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        \U0001F60A How can I assist you today?\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4,\"completion_tokens\":11,\"total_tokens\":15,\"prompt_tokens_details\":{\"cached_tokens\":0},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":4},\"system_fingerprint\":\"fp_3d5141a69a_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 92cb0aeecf6c38d4-ATH
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:53:43 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=vZlt6dwNdjN0sH4_2_XLV4UZ4ryGQEtAzJnTh2Pxz5U-1744044823-1.0.1.1-8dby05GhJfVFXqme.dYHEWdQjaRAecshyYFApmnKZACwNnYfEqWQPhK5QCikadIRKkgFUMx5Vakz62HPoDcH1UVnbxlgqVq_Br4KefbAgk4;
+        path=/; expires=Mon, 07-Apr-25 17:23:43 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '479'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - f864a7bc48ac7e938b6b600b9c299a9f
+    status:
+      code: 200
+      message: OK
+version: 1

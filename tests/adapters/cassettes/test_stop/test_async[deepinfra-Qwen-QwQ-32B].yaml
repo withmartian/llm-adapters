@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '82'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RRJvPPx6yJgcNFMXuFa5G1pv","object":"chat.completion","created":1743943271,"model":"Qwen/QwQ-32B","choices":[{"index":0,"message":{"role":"assistant","content":"Okay,
+        the user just said \"Hi\". I need to respond in a friendly way. Let''s see,
+        they might be starting a conversation. I should greet them back and maybe
+        ask how I can assist them. Keep it simple and open-ended so they feel comfortable
+        to ask anything. Maybe something like, \"Hi! How are you today?\" Wait, but
+        the query example shows the assistant just says \"Hi!\" and maybe adds a question.
+        Let me check the example again.\n\nIn the example, the user says \"Hi\" and
+        the response is \"Hi there! How can I assist you today?\" So maybe I should
+        follow that structure. Be polite and offer help. Yeah, that makes sense. Let
+        me go with that.\n</think>\n\nHi there! How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":170,"completion_tokens":159,"estimated_cost":3.345e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1041'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:41:11 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

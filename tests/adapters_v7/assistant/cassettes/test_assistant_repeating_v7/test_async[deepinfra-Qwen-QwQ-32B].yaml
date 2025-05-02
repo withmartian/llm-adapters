@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '171'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R7pVPxTw1qQenN84WXe6wJoR\",\"object\":\"chat.completion\",\"created\":1744052983,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user has sent \\\"Hi\\\" three times in a row now. Let me check the history.
+        The first interaction was them saying \\\"Hi\\\", I responded with \\\"Hi\\\".
+        Then they tried again with \\\"Hi\\\" again, and my second response was just
+        \\\"Hi\\\" again. Now they've sent \\\"Hi\\\" a third time. \\n\\nHmm, maybe
+        they're testing how I handle repeated messages or looking for a more detailed
+        response. Since my previous answers were too brief, perhaps I should provide
+        a more engaging reply this time. I need to acknowledge their repeated greetings
+        and maybe ask how I can assist them today. That way, it encourages them to
+        elaborate on what they need help with. \\n\\nI should also ensure that my
+        response is friendly and open-ended to invite further conversation. Let me
+        make sure not to just repeat \\\"Hi\\\" again but instead offer assistance.
+        Something like, \\\"Hi again! It seems like you're saying hello a few times.
+        How can I assist you today?\\\" That should work. It addresses the repetition
+        and moves the conversation forward.\\n</think>\\n\\nHi again! It seems like
+        you're saying hello a few times. How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":25,\"total_tokens\":264,\"completion_tokens\":239,\"estimated_cost\":5.1550000000000006e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1474'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:09:43 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

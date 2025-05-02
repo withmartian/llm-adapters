@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"google/gemma-3-27b-it"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '146'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RbKUmmiv9fafYjLcy3ymoNL3","object":"chat.completion","created":1743942691,"model":"google/gemma-3-27b-it","choices":[{"index":0,"message":{"role":"assistant","content":"Okay!
+        Just letting you know I''m here. Is there anything I can help you with? Even
+        just a blank message lets me know you''re still there. \n\nDo you want to:\n\n*
+        **Chat?** We can talk about anything.\n* **Brainstorm ideas?**\n* **Write
+        something?** (a story, poem, email, etc.)\n* **Get information?**\n* **Just
+        have me be quiet?** (I can do that too!)\n\n\n\n","name":null,"tool_calls":[]},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":22,"total_tokens":126,"completion_tokens":104,"estimated_cost":2.3000000000000003e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '728'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:31:31 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

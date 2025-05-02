@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '306'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RndUdjmYYd3d2PXEIoq53nfS\",\"object\":\"chat.completion\",\"created\":1744052866,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user keeps saying \\\"Hi\\\" over and over. Maybe they're testing if I
+        notice the repetition. Let me check the history.\\n\\nFirst message: \\\"Hi\\\"\\n\\nSecond:
+        \\\"Hi\\\"\\n\\nThird: \\\"Hi\\\"\\n\\nFourth: \\\"Hi\\\"\\n\\nFifth: \\\"Hi\\\"\\n\\nAnd
+        the latest one: \\\"Hi\\\"\\n\\nHmm, they might be trying to see how I handle
+        multiple greetings. I should respond politely each time, but maybe vary my
+        replies a bit to keep the conversation engaging. Alternatively, they could
+        be checking if there's a limit to how many times I respond. Let me make sure
+        to stay friendly and perhaps ask if there's something specific they need help
+        with after acknowledging their greeting again.\\n</think>\\n\\nHi there! It
+        looks like you're saying \\\"Hi\\\" a lot. \U0001F60A How can I assist you
+        today?\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":18,\"total_tokens\":189,\"completion_tokens\":171,\"estimated_cost\":0.00038439}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1119'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:07:46 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

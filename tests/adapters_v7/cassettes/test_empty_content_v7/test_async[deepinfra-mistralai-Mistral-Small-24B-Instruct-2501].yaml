@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"mistralai/Mistral-Small-24B-Instruct-2501"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '289'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-R7gA2X6DHxX0IJKmAk1YWA5i","object":"chat.completion","created":1744052936,"model":"mistralai/Mistral-Small-24B-Instruct-2501","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you''re trying to start a conversation, but your messages are empty.
+        How can I assist you? If you''re up for it, let''s play a game! I can tell
+        jokes, provide fun facts, or we can even do a word association game. What
+        would you like to do?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":173,"total_tokens":235,"completion_tokens":62,"estimated_cost":2.0790000000000003e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '641'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:08:56 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

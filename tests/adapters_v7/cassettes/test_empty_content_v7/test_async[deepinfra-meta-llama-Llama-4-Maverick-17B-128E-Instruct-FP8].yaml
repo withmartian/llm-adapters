@@ -1,0 +1,62 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"user","content":"\"\""}],"model":"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '317'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RRlpYjt7TSME0hZoYTwLZf6n","object":"chat.completion","created":1744054735,"model":"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like you''re trying to send me a blank message or maybe you''re testing
+        the limits of our conversation. That''s perfectly fine! I''m here to chat
+        with you, and I can handle a blank message. If you''re ready to talk, I''ll
+        respond. If not, that''s okay too. How can I assist you today?","name":null,"tool_calls":[]},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":47,"total_tokens":111,"completion_tokens":64,"estimated_cost":4.78e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '668'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:38:55 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

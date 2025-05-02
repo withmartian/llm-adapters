@@ -2,16 +2,16 @@ class AdapterException(Exception):
     pass
 
 
-class ModelNotFoundException(AdapterException):
+class AdapterModelNotFoundException(AdapterException):
     pass
 
 
-class RateLimitException(AdapterException):
+class AdapterRateLimitException(AdapterException):
     pass
 
 
 _all_ = [
     "AdapterException",
-    "ModelNotFoundException",
-    "RateLimitException",
+    "AdapterModelNotFoundException",
+    "AdapterRateLimitException",
 ]

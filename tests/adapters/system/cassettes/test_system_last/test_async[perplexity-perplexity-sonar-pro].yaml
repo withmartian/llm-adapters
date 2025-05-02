@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '69'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "6b898db6-9ce3-4dec-a836-20d41f64ddfe", "model": "sonar-pro",
+        "created": 1745834027, "usage": {"prompt_tokens": 3, "completion_tokens":
+        101, "total_tokens": 104, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk", "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Hello! How can I help you today?\n\nIf
+        you\u2019re referring to \u201cHi, Hi, Hi,\u201d it\u2019s notably a 1972
+        single by Paul McCartney and Wings, released as a double A-side with \u201cC
+        Moon.\u201d The track became a staple of their live performances and achieved
+        considerable chart success, especially in Spain, the UK, and the US[1][2][3][4].\n\nLet
+        me know if you\u2019d like more information about the song or if you had something
+        else in mind!"}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375ac9a2b581a42-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:53:47 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=gN_iYwm.XWYbT.0e.grcO4DkTDd9m1URRtcEscfTyNk-1745834027-1.0.1.1-E85U45x27vTHQArUz4R8iuRtsGR3F8FSaCw2dtAPjjdu9JyLhoZTbRwN4KIEIeWgM7CmJIbWmakFEhbbey1YGzfT2UCHsH8.rpGyxUDv5mQ;
+        path=/; expires=Mon, 28-Apr-25 10:23:47 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1095'
+    status:
+      code: 200
+      message: OK
+version: 1

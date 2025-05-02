@@ -1,0 +1,60 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '143'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RWhJfRWJSfgo9WcsEph6u8og","object":"chat.completion","created":1744052784,"model":"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you''re trying to communicate something, but the quotation marks
+        are empty. Is there something you would like to say or ask? I''m here to help!","name":null,"tool_calls":[]},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":50,"completion_tokens":33,"estimated_cost":2.32e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '536'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:06:24 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

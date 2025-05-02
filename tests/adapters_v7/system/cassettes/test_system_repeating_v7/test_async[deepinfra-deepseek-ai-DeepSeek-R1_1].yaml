@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '306'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-Rg1Cf6lbdUjjU9YmKmCbvFlC\",\"object\":\"chat.completion\",\"created\":1744044613,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nAlright,
+        the user keeps saying \\\"Hi\\\" repeatedly. I should acknowledge their greeting
+        and maybe ask how I can assist them today. Let me make sure my response is
+        friendly and open-ended to encourage them to share what they need help with.
+        Also, since there are multiple \\\"Hi\\\" messages, I should respond once
+        to avoid spamming.\\n</think>\\n\\nHi there! It looks like you're saying \\\"Hi\\\"
+        a lot. \U0001F60A How can I assist you today? Let me know if you need help
+        with anything!\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":18,\"total_tokens\":125,\"completion_tokens\":107,\"estimated_cost\":0.00024423}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '838'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:50:13 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

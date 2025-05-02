@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-chat","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '368'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"5447c92c-a050-4d6e-82bb-7385b457e540","object":"chat.completion","created":1744044958,"model":"deepseek-chat","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"index":0,"id":"call_0_1ab5f3c5-3825-4b13-95d8-286683fe0385","type":"function","function":{"name":"generate","arguments":"{\"prompt\":\"Random
+        number between 1 and 10\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":132,"completion_tokens":25,"total_tokens":157,"prompt_tokens_details":{"cached_tokens":128},"prompt_cache_hit_tokens":128,"prompt_cache_miss_tokens":4},"system_fingerprint":"fp_3d5141a69a_prod0225"}'
+    headers:
+      CF-RAY:
+      - 92cb0e3efe091a42-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:55:58 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=mNLlEcC9b9VF3tTsqXjy6QjOy_S5RpQHUCeIReZ8LTM-1744044958-1.0.1.1-m8RQmNJLoh3A.GQGbRo0eajk5aw4E2FrMJcHt7FYA6Luy8W5xk..i58U2Kkvk1N6HIW9OrDSDaOIYL1_oNKQdG3BWpRN9KHcuXeFll_jDAs;
+        path=/; expires=Mon, 07-Apr-25 17:25:58 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '642'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - c6d47a3f24bcad93e0781096ca4d9803
+    status:
+      code: 200
+      message: OK
+version: 1

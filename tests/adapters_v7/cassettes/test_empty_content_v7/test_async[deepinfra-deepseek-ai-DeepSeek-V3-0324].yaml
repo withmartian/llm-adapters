@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-V3-0324"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '276'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RsZyq5r7a24jq4fAQnaS7UCb\",\"object\":\"chat.completion\",\"created\":1744052907,\"model\":\"deepseek-ai/DeepSeek-V3-0324\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\u4F60\u597D\uFF01\u4F60\u7684\u6D88\u606F\u4F3C\u4E4E\u662F\u7A7A\u7684\uFF0C\u6216\u8005\u6211\u53EF\u80FD\u6CA1\u6709\u7406\u89E3\u4F60\u7684\u95EE\u9898\u3002\u5982\u679C\u4F60\u6709\u4EFB\u4F55\u95EE\u9898\u6216\u9700\u8981\u5E2E\u52A9\uFF0C\u8BF7\u968F\u65F6\u544A\u8BC9\u6211\uFF01\U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":9,\"total_tokens\":38,\"completion_tokens\":29,\"estimated_cost\":2.941e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '510'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:08:27 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

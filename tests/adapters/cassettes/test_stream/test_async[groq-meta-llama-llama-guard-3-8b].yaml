@@ -1,0 +1,96 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama-guard-3-8b","stream":true}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '86'
+      content-type:
+      - application/json
+      host:
+      - api.groq.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.groq.com/openai/v1/chat/completions
+  response:
+    body:
+      string: 'data: {"id":"chatcmpl-8076a2d3-c402-4017-84bd-530596878cc1","object":"chat.completion.chunk","created":1744889523,"model":"llama-guard-3-8b","system_fingerprint":"fp_60081290c2","choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"x_groq":{"id":"req_01js1raamye48v0ysbskdk9yxp"}}
+
+
+        data: {"id":"chatcmpl-8076a2d3-c402-4017-84bd-530596878cc1","object":"chat.completion.chunk","created":1744889523,"model":"llama-guard-3-8b","system_fingerprint":"fp_60081290c2","choices":[{"index":0,"delta":{"content":"safe"},"logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"chatcmpl-8076a2d3-c402-4017-84bd-530596878cc1","object":"chat.completion.chunk","created":1744889523,"model":"llama-guard-3-8b","system_fingerprint":"fp_60081290c2","choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}],"x_groq":{"id":"req_01js1raamye48v0ysbskdk9yxp","usage":{"queue_time":0.158411362,"prompt_tokens":202,"prompt_time":0.005400661,"completion_tokens":2,"completion_time":0.002052662,"total_tokens":204,"total_time":0.007453323}}}
+
+
+        data: [DONE]
+
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 931b997cf81695a5-TBS
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/event-stream
+      Date:
+      - Thu, 17 Apr 2025 11:32:03 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=1VQcJQwXgKnRVinwwBG5c9Akrzn2KX2Xd..3f6.jvu4-1744889523-1.0.1.1-BR9SoxGVDhaORlZVyqTqrR8OVHAVWM5eHCDOXfHVDH9M.dJRREaAv_V0IgToIh8w22ARIwVui1XXMsE8hxZLzkSq_lAP0FfQlc6C1OwP2yA;
+        path=/; expires=Thu, 17-Apr-25 12:02:03 GMT; domain=.groq.com; HttpOnly; Secure;
+        SameSite=None
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin, Accept-Encoding
+      X-Groq-Region:
+      - gcp-europe-west3
+      X-Ratelimit-Limit-Requests:
+      - '14400'
+      X-Ratelimit-Limit-Tokens:
+      - '15000'
+      X-Ratelimit-Remaining-Requests:
+      - '14399'
+      X-Ratelimit-Remaining-Tokens:
+      - '14995'
+      X-Ratelimit-Reset-Requests:
+      - 6s
+      X-Ratelimit-Reset-Tokens:
+      - 20ms
+      X-Request-Id:
+      - req_01js1raamye48v0ysbskdk9yxp
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 200
+      message: OK
+version: 1

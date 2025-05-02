@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '137'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-Ry1AVobKs2xikZTXQ5hTCKKl\",\"object\":\"chat.completion\",\"created\":1744052803,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user started with just \\\"Hi\\\" and I responded with \\\"Hi! \U0001F60A
+        How can I assist you today?\\\" Now the user wrote \\\"Hi\\\" again, followed
+        by empty quotes \\\"\\\". Hmm, that's a bit confusing. Maybe they were testing
+        if I notice the empty message or just trying to get a reaction. Let me think
+        about possible reasons.\\n\\nFirst, could there be a formatting error? The
+        empty quotes might be an accident. They might have intended to write something
+        else but sent it by mistake. Alternatively, they could be checking if I can
+        handle empty inputs. I should respond politely to encourage them to clarify
+        their needs. Maybe they just wanted to say hi again and are feeling shy? Or
+        perhaps there's a language barrier. I should keep the reply friendly and open-ended.
+        Let me make sure to ask how I can help again without seeming repetitive. Maybe
+        add an emoji to keep it warm. Yeah, that should work.\\n</think>\\n\\nHi again!
+        \U0001F60A How can I assist you today? Feel free to ask anything!\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":24,\"total_tokens\":235,\"completion_tokens\":211,\"estimated_cost\":4.580000000000001e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1337'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 19:06:43 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

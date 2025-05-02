@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"microsoft/Phi-4-multimodal-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '194'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RILYiAekpD9svwSGCbKOTyD7","object":"chat.completion","created":1743942876,"model":"microsoft/Phi-4-multimodal-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"This
+        is a simple dialogue where someone greets you with \"Hi\" and you might repeat
+        the greeting in response. The format implies that a second \"Hi\" attempt
+        could be a repetitive action, a welcomed repetition in conversation, or an
+        attempt to grab someone''s attention. They could also be trials in AI or drafting
+        scenarios where multiple \"Hi\" prompts need to be tested in conversation
+        models. However, since this exchange was truncated, the context is speculative.
+        In ordinary conversation, this exchange might end there, with the next interaction
+        depending on the response desired.","name":null,"tool_calls":[]},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":13,"total_tokens":124,"completion_tokens":111,"estimated_cost":1.1750000000000001e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '968'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 06 Apr 2025 12:34:36 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

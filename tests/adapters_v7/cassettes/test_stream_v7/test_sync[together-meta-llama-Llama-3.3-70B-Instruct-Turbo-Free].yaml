@@ -1,0 +1,97 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-3.3-70B-Instruct-Turbo-Free","stream":true}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '114'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - OpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"npAzXsQ-4Yz4kd-92cbd2b81f7e317c\",\n  \"error\": {\n
+        \   \"message\": \"You have reached the rate limit specific to this model
+        meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this
+        model is 10.0 queries per minute. This limit differs from the general rate
+        limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits).
+        For inquiries about increasing your model-specific rate limit, please contact
+        our sales team (https://www.together.ai/forms/contact-sales)\",\n    \"type\":
+        \"model_rate_limit\",\n    \"param\": null,\n    \"code\": null\n  }\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 92cbd2b81f7e317c-TBS
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '599'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2025 19:10:06 GMT
+      ETag:
+      - W/"257-W8Ko0UShRyFcTRS2tdE2Xs1A/Ew"
+      Retry-After:
+      - '5'
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      alt-svc:
+      - h3=":443"; ma=86400
+      x-amzn-trace-id:
+      - 4fafdcee-6de6-4fa3-a1d1-2c8a31a65780-noamzn
+      x-api-received:
+      - '2025-04-07T19:10:06.267Z'
+      x-ratelimit:
+      - 'true'
+      x-ratelimit-limit:
+      - '0.1666666667'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '0'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '5'
+      x-request-id:
+      - npAzXsQ-4Yz4kd-92cbd2b81f7e317c
+    status:
+      code: 429
+      message: Too Many Requests
+version: 1

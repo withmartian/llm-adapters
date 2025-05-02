@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '108'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: '{"id":"d1d3329f-4914-42b2-b276-f05aa0d1ddf2","object":"chat.completion","created":1744044568,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","reasoning_content":"Okay, the user just said
+        \"Hi\". That''s a friendly greeting. I should respond in a welcoming manner.
+        Maybe say hello back and ask how I can assist them today. Keep it open-ended
+        to encourage them to ask for help. Make sure the tone is warm and approachable.\n\nHmm,
+        maybe something like, \"Hello! How can I assist you today?\" That''s straightforward
+        and inviting. Alternatively, could add a smiley emoji to make it more personable.
+        But since the previous response didn''t use emojis, maybe stick to text only.
+        Yeah, keep it simple and professional but friendly."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"completion_tokens":136,"total_tokens":144,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":125},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":8},"system_fingerprint":"fp_5417b77867_prod0225"}'
+    headers:
+      CF-RAY:
+      - 92cb04b60ddf1a42-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:49:28 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=kjZ8BivhTP_x5ZHdoLIxR63eMbWli3OyVMXxddvnGvc-1744044568-1.0.1.1-T5wdBta2g8xSI1ELn3_Gy.4ZCD9uNFxkMJ7uSDmir3YD_fT_VIKkKRbnhGp_9V7hfWmPVixec5OqoGb6jNIscRtwF1KV0NqdQRsFdxmHQHY;
+        path=/; expires=Mon, 07-Apr-25 17:19:28 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1116'
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      x-ds-trace-id:
+      - c1a0f9d219e55398b064476f1fc59c95
+    status:
+      code: 200
+      message: OK
+version: 1

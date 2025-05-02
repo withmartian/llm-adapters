@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B-Preview"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '114'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RkArtdr4WZINzmD16emnDUwi","object":"chat.completion","created":1744044520,"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user simply said \"Hi\". That''s a friendly greeting. I should respond
+        in a welcoming manner.\n\nI want to make sure they feel comfortable asking
+        for help.\n\nI''ll keep it open-ended so they know they can ask anything they
+        need.\n\nLet me go with, \"Hello! How can I assist you today?\" That should
+        work.\n</think>\n\nHello! How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":8,"total_tokens":91,"completion_tokens":83,"estimated_cost":1.59e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '743'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:48:40 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

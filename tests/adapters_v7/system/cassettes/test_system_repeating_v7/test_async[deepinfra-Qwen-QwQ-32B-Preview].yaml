@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B-Preview"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '303'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R3MaKs8XyBTUWD4OSzmDds5u\",\"object\":\"chat.completion\",\"created\":1744044596,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        so I'm trying to figure out what the user is asking here. They sent a bunch
+        of \\\"Hi\\\"s and then something in quotes with \\\"Hi\\\" again. Maybe they're
+        just greeting me or maybe they want to test if I'm working properly. I should
+        probably respond in a friendly way. They might be looking for a conversation
+        starter or just checking how I handle repeated messages. I'll make sure to
+        keep it welcoming and see where they lead the conversation next.\\n</think>\\n\\nHello!
+        It seems like you're saying \\\"Hi\\\" a few times. How can I assist you today?
+        \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":17,\"total_tokens\":141,\"completion_tokens\":124,\"estimated_cost\":2.4360000000000004e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '949'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 07 Apr 2025 16:49:56 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

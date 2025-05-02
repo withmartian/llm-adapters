@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi\nHi"},{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '132'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "2a1f16d6-c736-428e-9375-9224295961b4", "model": "sonar", "created":
+        1745833935, "usage": {"prompt_tokens": 5, "completion_tokens": 230, "total_tokens":
+        235, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "**\"Hi\"** is a common English
+        greeting, more casual than \"hello,\" often used in informal settings like
+        small towns where people frequently exchange brief acknowledgments[2]. The
+        term can also refer to multiple concepts:  \n- **Language**:  \n  - **Basque**:
+        *Hi* functions as an informal second-person singular pronoun, used only between
+        close friends or family (with verb forms adapting for gender: \"duk\" for
+        males, \"dun\" for females)[5].  \n  - **Hindi**: Represented by the ISO 639-1
+        code **HI**[3].  \n- **Culture**:  \n  - **Music**: The 1983 Eurovision song
+        \"Hi\" by Ofra Haza[3], or the Memphis-based **Hi Records** label[3].  \n  -
+        **Comics**: *Hi and Lois*, a comic strip character[3].  \n- **Science**: **H
+        I region** in astronomy denotes interstellar clouds of neutral atomic hydrogen[3].  \n\nA
+        children''s song titled *\"Hi, Hello Song!\"* serves as an educational greeting
+        tool for English learners[4]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375aa545c7c317b-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:52:15 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=WhKAFmV3F6P2IeDtC.doqDv3gCjZH21mwv2sFhwGxFE-1745833935-1.0.1.1-eoLP.oI2UgkYI5SxIYKDZgHzmBo.dZaVcFf.e.4ZpCu3KdeAm13G.f9v.uh4XGNsoQPvx4qAOd0juojq_ARXOrvypgHgzzPvXpsSWxNQh4c;
+        path=/; expires=Mon, 28-Apr-25 10:22:15 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1514'
+    status:
+      code: 200
+      message: OK
+version: 1
