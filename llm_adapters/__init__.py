@@ -1,3 +1,6 @@
+import os
+import re
+
 from llm_adapters import general_utils
 
 from llm_adapters.abstract_adapters import (
@@ -93,7 +96,25 @@ from llm_adapters.custom_sdk_chat_provider_adapter import (
     CustomAISDKChatProviderAdapter,
 )
 
+# Get version from pyproject.toml
+try:
+    # Find the project root directory
+    _root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    _pyproject_path = os.path.join(_root_dir, "pyproject.toml")
+
+    # Read the version from pyproject.toml using regex
+    with open(_pyproject_path, "r", encoding="utf-8") as f:
+        _content = f.read()
+        _version_match = re.search(r'version\s*=\s*["\']([^"\']+)["\']', _content)
+        if _version_match:
+            __version__ = _version_match.group(1)
+        else:
+            __version__ = "unknown"  # Current version as fallback
+except (FileNotFoundError, Exception):
+    __version__ = "unknown"  # Current version as fallback
+
 __all__ = [
+    "__version__",
     "OpenAI",
     "AsyncOpenAI",
     "general_utils",
