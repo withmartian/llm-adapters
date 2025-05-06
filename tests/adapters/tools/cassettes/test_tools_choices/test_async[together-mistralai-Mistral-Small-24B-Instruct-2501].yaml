@@ -41,13 +41,24 @@ interactions:
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"nszo83e-3NKUce-93bb32e17a73cf22\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1746563042,\n  \"model\": \"mistralai/Mistral-Small-24B-Instruct-2501\",\n
+      string: "{\n  \"id\": \"nszzKvP-3NKUce-93bb68417bd8eb24\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746565227,\n  \"model\": \"mistralai/Mistral-Small-24B-Instruct-2501\",\n
         \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"logprobs\":
-        null,\n      \"finish_reason\": \"stop\",\n      \"seed\": null,\n      \"message\":
-        {\n        \"role\": \"assistant\",\n        \"content\": \"[\\n ]\",\n        \"tool_calls\":
-        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 425,\n    \"total_tokens\":
-        430,\n    \"completion_tokens\": 5\n  }\n}"
+        null,\n      \"finish_reason\": \"tool_calls\",\n      \"seed\": null,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\":
+        [\n          {\n            \"index\": 0,\n            \"id\": \"call_t7gp1nnpxubuckwiv73sf940\",\n
+        \           \"type\": \"function\",\n            \"function\": {\n              \"arguments\":
+        \"{\\\"prompt\\\":\\\"4\\\"}\",\n              \"name\": \"generate\"\n            }\n
+        \         },\n          {\n            \"index\": 1,\n            \"id\":
+        \"call_jsqmj4y4cihou3mpbncr8dn7\",\n            \"type\": \"function\",\n
+        \           \"function\": {\n              \"arguments\": \"{\\\"prompt\\\":\\\"2,4,7,10\\\"}\",\n
+        \             \"name\": \"generate\"\n            }\n          },\n          {\n
+        \           \"index\": 2,\n            \"id\": \"call_1sd4lm880syghvkkmivs0nz2\",\n
+        \           \"type\": \"function\",\n            \"function\": {\n              \"arguments\":
+        \"{\\\"prompt\\\":\\\"3,7,8\\\"}\",\n              \"name\": \"generate\"\n
+        \           }\n          }\n        ]\n      }\n    }\n  ],\n  \"usage\":
+        {\n    \"prompt_tokens\": 425,\n    \"total_tokens\": 579,\n    \"completion_tokens\":
+        154\n  }\n}"
     headers:
       access-control-allow-origin:
       - '*'
@@ -56,15 +67,15 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb32e17a73cf22-SJC
+      - 93bb68417bd8eb24-SJC
       content-length:
-      - '503'
+      - '1289'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 06 May 2025 20:24:02 GMT
+      - Tue, 06 May 2025 21:00:50 GMT
       etag:
-      - W/"1f7-g9/uxaUaiNh9+le/H3LLWdiIbwU"
+      - W/"509-OA+t5cADR3U/eZbK5wYPSA0KF3k"
       retry-after:
       - '2'
       server:
@@ -74,13 +85,13 @@ interactions:
       vary:
       - Accept-Encoding
       x-amzn-trace-id:
-      - 1210cda6-b829-4a5e-932e-b92f91dd5834-noamzn
+      - 9ac382f9-996d-4e69-87cd-c46abf5e76fa-noamzn
       x-api-call-end:
-      - '2025-05-06T20:24:02.785Z'
+      - '2025-05-06T21:00:50.695Z'
       x-api-call-start:
-      - '2025-05-06T20:24:02.030Z'
+      - '2025-05-06T21:00:28.209Z'
       x-api-received:
-      - '2025-05-06T20:24:02.005Z'
+      - '2025-05-06T21:00:28.184Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -96,7 +107,7 @@ interactions:
       x-ratelimit-reset:
       - '2'
       x-request-id:
-      - nszo83e-3NKUce-93bb32e17a73cf22
+      - nszzKvP-3NKUce-93bb68417bd8eb24
     status:
       code: 200
       message: OK

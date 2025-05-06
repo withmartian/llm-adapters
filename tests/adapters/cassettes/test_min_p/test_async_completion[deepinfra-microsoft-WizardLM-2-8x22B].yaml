@@ -38,18 +38,228 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: '{"id":"cmpl-RVlk9mN8NPN43ftVvXlJimZy","object":"text_completion","created":1746561096,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"text":"
-        carry potential heroes for the upcoming Season. If you have a carry hero you
-        want added to this list but is not there then let me know in the comments!\n\nThanks,\n\nEzLow","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":42,"completion_tokens":41,"estimated_cost":2.1000000000000002e-05}}'
+      string: '{"id":"cmpl-RTivwPn9HBQ0QtSmasqVE5GV","object":"text_completion","created":1746565088,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"text":"Time(pTut,
+        MPA_ID_WATCHDOG, 0, 0);\n    }\n\n    /* Check if we have any open WDOG profiles
+        */\n    szEntries = SiProfileGetEntries(pTut->pSiMedia, SIPROFILE_WDOG);\n    for
+        (i = 0; i < szEntries; i++)\n    {\n        int nHandle;\n        SiMediaEntry
+        *pMe = SiProfileGetEntry(pTut->pSiMedia, SIPROFILE_WDOG, i);\n\n        if
+        (SiMediaEntryIsUsed(pMe))\n        {\n            nHandle = SiMediaEntryGetHandle(pMe);\n            pTut->ppWdog[pTut->nWdogCount]
+        = (watchdog_t*)SiMediaEntryGetData(pMe);\n            pTut->nWdogCount++;\n            MPADEBUG(7,
+        \"WDOG %d at 0x%x\\n\", nHandle, pTut->ppWdog[nHandle]);\n        }\n    }\n\n    pTut->nWdogProfiles
+        = SiProfileGetEntries(pTut->pSiMedia, SIPROFILE_WDOG);\n\n    /* Initialise
+        68360 CCM (if available) */\n    i = SiApiGetMd(pTut) & 0xFFF0;\n    if ((i
+        >= 0x1020) && (i <= 0x1040))  /* SiCore 68360 */\n    {\n        pTut->b68360
+        = TRUE;\n        pTut->pCcmRegs = (CCM_REGS*) SiApiGetPtrToReg(pTut, TI_CCM_REGS);\n        pTut->nCcmRefFreq
+        =  (pTut->pCcmRegs->ADPLL_SYSCLK_CTRL & CCM_ADPLL_SYSCLK_CTRL_PLLM_MASK) +
+        1;\n        pTut->nCcmN = SiApiGetMd(pTut) & 0xFFF0;\n        MPADEBUG(1,
+        \"68360 CCM initialised with PLLM = %d\\n\", pTut->nCcmRefFreq);\n        if
+        (pTut->pCcmRegs->ADPLL_SYSCLK_CTRL & CCM_ADPLL_SYSCLK_CTRL_ENABLE_MASK)\n        {\n            MPADEBUG(1,
+        \"%s: ADPLL is enabled\\n\", __FUNCTION__);\n        }\n    }\n\n    /* Initialise
+        watchdogs */\n    for (i = 0; i < pTut->nWdogCount; i++)\n    {\n        /*
+        Initialise WDOG''s */\n        pTut->ppWdog[i]->isr.pCallback = wdogISR;\n        pTut->ppWdog[i]->base.pCtxt
+        = pTut->ppWdog[i];\n        pTut->ppWdog[i]->base.nMpaInterfaceVersion = MPA_INTERFACE_VERSION;\n        pTut->ppWdog[i]->base.nMpaDriverVersion
+        = MPA_DRIVER_VERSION;\n        pTut->ppWdog[i]->base.eMpaStatus = MPA_STATUS_OK;\n        pTut->ppWdog[i]->base.bEnabled
+        = FALSE;\n        pTut->ppWdog[i]->pTut = pTut;\n\n        wdogInit(pTut->ppWdog[i]);\n    }\n\n#ifdef
+        MPALIB_SUPPORT_ASYNC_PROFILE\n    /* Load the asynchronous profiles */\n    for
+        (i = 0; i < pTut->nWdogProfiles; i++)\n    {\n        SiMediaEntry *pMe =
+        SiProfileGetEntry(pTut->pSiMedia, SIPROFILE_WDOG, i);\n        if (pMe !=
+        NULL)\n        {\n            wdogAsyncLoad(pMe, pTut);\n        }\n    }\n#endif\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogDeinit\n+---------------------------------------------------------------------*/\nvoid
+        wdogDeinit(tut_wdog_t *pTut)\n{\n    int i;\n\n    /* FIXME: Shouldn''t we
+        remove the ISR and disable the interrupt line? */\n\n    /* Close any loaded
+        watchdogs */\n    for (i = 0; i < pTut->nWdogCount; i++)\n    {\n        wdogClose(i);\n    }\n\n    pTut->nWdogCount
+        = 0; /* Reset WDOG count */\n    pTut->nWdogProfiles = 0; /* Reset WDOG profile
+        count */\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogTimerISR\n+---------------------------------------------------------------------*/\nvoid
+        wdogTimerISR(tut_wdog_t *pTut, int nChannel)\n{\n    int nCheck;\n    unsigned
+        int nMask;\n\n    if (pTut->b68360)\n    {\n        /* Ensure that the interrupt
+        source is a WDOG! */\n        nMask = pTut->pCcmRegs->INT_RAW_STATUS;\n        if
+        (nMask & (1 << (16 + nChannel)))\n        {\n            nCheck = nChannel;\n        }\n        else\n        {\n            /*
+        Interrupt wasn''t for a watchdog. Clear the masked-out interrupt. */\n            pTut->pCcmRegs->INT_STATUS
+        = nMask;\n            return;\n        }\n    }\n    else\n    {\n        nCheck
+        = SiApiGetRtiFrc(&pTut->siApi) >> 24;\n    }\n\n    if (nCheck >= pTut->nWdogCount)\n    {\n        MPADEBUG(1,
+        \"Invalid watchdog timer interrupt ID %d\\n\", nCheck);\n        return;\n    }\n\n    if
+        (pTut->b68360)\n    {\n        /* Clear the interrupt */\n        pTut->pCcmRegs->INT_STATUS
+        = (1 << (16 + nChannel));\n    }\n    else\n    {\n        SiApiPoll(pTut,
+        nCheck);\n    }\n\n    /* Call the user ISR */\n    if (pTut->ppWdog[nCheck]->isr.pCallback
+        != NULL)\n    {\n        pTut->ppWdog[nCheck]->isr.pCallback(pTut->ppWdog[nCheck]->isr.pCallbackArg);\n    }\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogReset\n+---------------------------------------------------------------------*/\nvoid
+        wdogReset(watchdog_t *pWdog)\n{\n    if (!pWdog->base.bEnabled)\n    {\n        MPADEBUG(1,
+        \"__FUNCTION__: WDOG disabled, cannot issue reset\\n\");\n        return;\n    }\n\n    tut_wdog_t
+        *pTut = pWdog->pTut;\n\n    if (pTut->b68360)\n    {\n        unsigned int
+        nTimeout;\n\n        /* Load the WDOG reload value */\n        nTimeout =
+        pWdog->reloadValue;\n\n        /* Clear the force update bit */\n        nTimeout
+        &= ~CCM_WDT_CTRL_FORCE_UPDATE_MASK;\n\n        /* Write the reload value to
+        the WDOG control register */\n        pTut->pCcmRegs->WDT[pWdog->nId].WDT_CTRL
+        = nTimeout;\n    }\n    else\n    {\n        unsigned int nResetCode = (1
+        << 31) | (pWdog->reloadValue & 0xFFFFFF);\n\n        SiApiSend(pTut, MPA_WDOG_BASEADDR(pWdog->nId),
+        nResetCode, 0);\n    }\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogSetReload\n+---------------------------------------------------------------------*/\nvoid
+        wdogSetReload(watchdog_t *pWdog, unsigned int nReloadValue, mpa_flag_t bForceUpdate)\n{\n    tut_wdog_t  *pTut
+        = pWdog->pTut;\n    unsigned int nTimeout;\n\n    if (pWdog->base.bEnabled)\n    {\n        MPADEBUG(1,
+        \"__FUNCTION__: Cannot change reload value while WDOG is running\\n\");\n        pWdog->base.eMpaStatus
+        = MPA_STATUS_INVALID_OPERATION;\n        return;\n    }\n\n    /* Check if
+        reload value is within range */\n    if ((nReloadValue == 0) || (nReloadValue
+        > 0xFFFFFF))\n    {\n        MPADEBUG(1, \"__FUNCTION__: Invalid reload value
+        %u\\n\", nReloadValue);\n        pWdog->base.eMpaStatus = MPA_STATUS_INVALID_PARAMETER;\n        return;\n    }\n\n    if
+        (pTut->b68360)\n    {\n        /* Set the force update bit if required */\n        nTimeout
+        = nReloadValue | (bForceUpdate ? CCM_WDT_CTRL_FORCE_UPDATE_MASK : 0);\n\n        /*
+        Write the reload value to the WDOG control register */\n        pTut->pCcmRegs->WDT[pWdog->nId].WDT_CTRL
+        = nTimeout;\n    }\n    else\n    {\n        /* Write the reload value to
+        the Watchdog control register */\n        SiApiSend(pTut, MPA_WDOG_BASEADDR(pWdog->nId)
+        + MPA_WDOG_RELOAD_OFFSET, nReloadValue, 0);\n\n        if (bForceUpdate)\n        {\n            wdogForceUpdate(pWdog);\n        }\n    }\n\n    pWdog->reloadValue
+        = nReloadValue;\n    pWdog->base.eMpaStatus = MPA_STATUS_OK;\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogEnable\n+---------------------------------------------------------------------*/\nvoid
+        wdogEnable(watchdog_t *pWdog)\n{\n    tut_wdog_t *pTut = pWdog->pTut;\n    unsigned
+        int nValue;\n\n    if (pWdog->base.bEnabled)\n    {\n        MPADEBUG(1, \"__FUNCTION__:
+        WDOG already enabled\\n\");\n        pWdog->base.eMpaStatus = MPA_STATUS_INVALID_OPERATION;\n        return;\n    }\n\n    if
+        (pTut->b68360)\n    {\n        /* Enable the WDOG */\n        nValue = pTut->pCcmRegs->WDT[pWdog->nId].WDT_CTRL
+        & ~CCM_WDT_CTRL_ENABLE_MASK;\n        pTut->pCcmRegs->WDT[pWdog->nId].WDT_CTRL
+        = nValue | CCM_WDT_CTRL_ENABLE_MASK;\n    }\n    else\n    {\n        /* Enable
+        the Watchdog */\n        nValue = SiApiRead(pTut, MPA_WDOG_BASEADDR(pWdog->nId)
+        + MPA_WDOG_CTRL_OFFSET);\n        SiApiSend(pTut, MPA_WDOG_BASEADDR(pWdog->nId)
+        + MPA_WDOG_CTRL_OFFSET, (nValue | (1 << 31)), 0);\n    }\n\n    pWdog->base.bEnabled
+        = TRUE;\n    pWdog->base.eMpaStatus = MPA_STATUS_OK;\n\n    MPADEBUG(3, \"WDOG
+        %d enabled\\n\", pWdog->nId);\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogDisable\n+---------------------------------------------------------------------*/\nvoid
+        wdogDisable(watchdog_t *pWdog)\n{\n    tut_wdog_t *pTut = pWdog->pTut;\n\n    if
+        (!pWdog->base.bEnabled)\n    {\n        MPADEBUG(1, \"__FUNCTION__: WDOG already
+        disabled\\n\");\n        pWdog->base.eMpaStatus = MPA_STATUS_INVALID_OPERATION;\n        return;\n    }\n\n    if
+        (pTut->b68360)\n    {\n        /* Disable the WDOG */\n        pTut->pCcmRegs->WDT[pWdog->nId].WDT_CTRL
+        &= ~CCM_WDT_CTRL_ENABLE_MASK;\n    }\n    else\n    {\n        SiApiSend(pTut,
+        MPA_WDOG_BASEADDR(pWdog->nId) + MPA_WDOG_CTRL_OFFSET, 0x00000000, 0);\n    }\n\n    pWdog->base.bEnabled
+        = FALSE;\n    pWdog->base.eMpaStatus = MPA_STATUS_OK;\n\n    MPADEBUG(3, \"WDOG
+        %d disabled\\n\", pWdog->nId);\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogForceUpdate\n+---------------------------------------------------------------------*/\nvoid
+        wdogForceUpdate(watchdog_t *pWdog)\n{\n    tut_wdog_t *pTut = pWdog->pTut;\n    unsigned
+        int nValue;\n\n#ifdef __FOM_A11_FAMILY__\n    if (!pTut->b68360)\n    {\n        SiApiSend(pTut,
+        MPA_WDOG_BASEADDR(pWdog->nId) + MPA_WDOG_FORCEUPDATE_OFFSET, 0x00000001, 0);\n        return;\n    }\n#endif\n\n    if
+        (pTut->b68360)\n    {\n        /* Force update the WDOG */\n        nValue
+        = pTut->pCcmRegs->WDT[pWdog->nId].WDT_CTRL;\n        pTut->pCcmRegs->WDT[pWdog->nId].WDT_CTRL
+        = nValue | CCM_WDT_CTRL_FORCE_UPDATE_MASK;\n    }\n    else\n    {\n        /*
+        Reset the watchdog */\n        wdogReset(pWdog);\n    }\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogClose\n+---------------------------------------------------------------------*/\nvoid
+        wdogClose(int nHandle)\n{\n    tut_wdog_t *pTut = &gTutWdog;\n    watchdog_t
+        *pWdog = pTut->ppWdog[nHandle];\n\n    if (pWdog == NULL)\n    {\n        MPADEBUG(1,
+        \"Invalid WDOG handle %d\\n\", nHandle);\n        return;\n    }\n\n    if
+        (pWdog->base.bEnabled)\n    {\n        wdogDisable(pWdog);\n    }\n\n    memset(pWdog,
+        0, sizeof(watchdog_t));\n}\n\n\n/*----------------------------------------------------------------------\n|   wdogOnHWError\n+---------------------------------------------------------------------*/\nvoid
+        wdogOnHWError(tut_wdog_t *pTut, int nError)\n{\n    int i;\n\n    if (nError
+        >= pTut->nWdogCount)\n    {\n        MPADEBUG(1, \"Invalid watchdog hardware
+        error ID %d\\n\", nError);\n        return;\n    }\n\n    wdogForceUpdate(pTut->ppWdog[nError]);\n\n    for
+        (i = 0; i < pTut->nWdogCount; i++)\n    {\n        /* Don''t reset the WDOG
+        that caused the interrupt */\n        if (i != nError)\n        {\n            if
+        (pTut->ppWdog[i]->isr.pCallback != NULL)\n            {\n                pTut->ppWdog[i]->isr.pCallback(pTut->ppWdog[i]->isr.pCallbackArg);\n            }\n        }\n    }\n}\n\n#endif
+        /* TUT_WDOG_C */\n\n\n+++++ Source/MykGw/tut_wdog.h\n/*----------------------------------------------------------------------\n|       includes\n+---------------------------------------------------------------------*/\n#include
+        \"mpa.h\"\n\n#if (MPA_INCLUDE_WDOG == 1)\n\n/*----------------------------------------------------------------------\n|       forward
+        declarations\n+---------------------------------------------------------------------*/\nstruct
+        tut_wdog_t;\nstruct watchdog_t;\n\n/*----------------------------------------------------------------------\n|       typedefs\n+---------------------------------------------------------------------*/\ntypedef
+        struct watchdog_t watchdog_t;\n\ntypedef struct\n{\n    void (*pCallback)(void
+        *pArg);\n    void *pCallbackArg;\n} mpa_isr_t;\n\ntypedef struct watchdog_t\n{\n    mpa_base_t      base;\n    unsigned
+        int   reloadValue;\n    mpa_isr_t      isr;\n    int             nId;\n    struct
+        tut_wdog_t *pTut;\n} watchdog_t;\n\ntypedef struct tut_wdog_t\n{\n    struct
+        tut_wdog_t *pNext;\n    watchdog_t **ppWdog;\n    int             nWdogCount;\n    int             nWdogProfiles;\n    SiApiContext_t  siApi;\n    int             b68360;\n    CCM_REGS       *pCcmRegs;\n    unsigned
+        int   nCcmRefFreq;\n    unsigned int   nCcmN;\n} tut_wdog_t;\n\n/*----------------------------------------------------------------------\n|       external
+        variables\n+---------------------------------------------------------------------*/\nextern
+        tut_wdog_t gTutWdog;\n\n/*----------------------------------------------------------------------\n|       prototypes\n+---------------------------------------------------------------------*/\nvoid
+        wdogInit(tut_wdog_t *pTut);\nvoid wdogDeinit(tut_wdog_t *pTut);\nvoid wdogTimerISR(tut_wdog_t
+        *pTut, int nChannel);\nvoid wdogReset(watchdog_t *pWdog);\nvoid wdogSetReload(watchdog_t
+        *pWdog, unsigned int nReloadValue, mpa_flag_t bForceUpdate);\nvoid wdogEnable(watchdog_t
+        *pWdog);\nvoid wdogDisable(watchdog_t *pWdog);\nvoid wdogForceUpdate(watchdog_t
+        *pWdog);\nvoid wdogClose(int nHandle);\nvoid wdogOnHWError(tut_wdog_t *pTut,
+        int nError);\nvoid wdogISR(void *pArg);\n\n#ifdef MPALIB_SUPPORT_ASYNC_PROFILE\nvoid
+        wdogAsyncLoad(SiMediaEntry *pMe, tut_wdog_t *pTut);\n#endif\n\n#endif /* MPA_INCLUDE_WDOG
+        */\n\n#endif /* TUT_WDOG_H */\n\n\n+++++ Source/MykGw/tut_wdog_factory.c\n#include
+        \"tut_wdog.h\"\n#include \"mpa.h\"\n#include \"file.h\"\n#include \"devreg.h\"\n#include
+        \"placereg.h\"\n#include \"erika.h\"\n#include \"register.h\"\n#include \"stdmacros.h\"\n#include
+        \"si_toolchain.h\"\n\nextern void wdogTimerISR(tut_wdog_t *pTut, int nChannel);\n\n/*----------------------------------------------------------------------\n|       global
+        data\n+---------------------------------------------------------------------*/\ntut_wdog_t
+        gTutWdog;\n\n\n/*----------------------------------------------------------------------\n|       ISR
+        callback\n+---------------------------------------------------------------------*/\nvoid
+        wdog_timer_isr(void)\n{\n    int nChannel = (SiApiRead(&gTutWdog, MPA_CORE_BASEADDR
+        + MPA_CORE_RTI_STS_OFFSET) >> 24);\n\n    MPADEBUG(3, \"WDOG timer ISR called,
+        channel = %d\\n\", nChannel);\n\n    if (nChannel >= gTutWdog.nWdogCount)\n    {\n        MPADEBUG(1,
+        \"Invalid watchdog timer interrupt ID %d\\n\", nChannel);\n        return;\n    }\n\n    wdogTimerISR(&gTutWdog,
+        nChannel);\n    __call_isr_clock_enable();\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutRegister\n|\n|   Description:    Registers
+        the driver with the system.\n|\n|   Parameters:    SiDriverInfo_t *pInfo -
+        Pointer to driver information\n|                      passed from the system.\n|   Return
+        Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutRegister(SiDriverInfo_t *pInfo)\n{\n    gTutWdog.siApi.pRegs = pInfo->pRegs;\n    gTutWdog.siApi.nRegsSize
+        = pInfo->nRegsSize;\n    gTutWdog.siApi.pDeviceIdentity = pInfo->pDeviceIdentity;\n    gTutWdog.siApi.nDeviceIdentitySize
+        = pInfo->nDeviceIdentitySize;\n\n    /* Hook the driver up to the interrupt
+        system */\n    SiDevRegisterIntSource(pInfo->pDevReg, MPA_CORE_BASEADDR +
+        MPA_CORE_RTI_STS_OFFSET, 0xFF, wdog_timer_isr);\n\n    /* Initialise the WDOG
+        driver */\n    wdogInit(&gTutWdog);\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutDeRegister\n|\n|   Description:    De-registers
+        the driver with the system.\n|\n|   Parameters:    SiDriverInfo_t *pInfo -
+        Pointer to driver information\n|                      passed from the system.\n|   Return
+        Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutDeRegister(SiDriverInfo_t *pInfo)\n{\n    /* De-initialise the WDOG driver
+        */\n    wdogDeinit(&gTutWdog);\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutEarlyInit\n|\n|   Description:    Early
+        initialisation of drivers that need to be\n|                      active before
+        the full system has been initialised.\n|\n|   Parameters:    SiDriverInfo_t
+        *pInfo - Pointer to driver information\n|                      passed from
+        the system.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutEarlyInit(SiDriverInfo_t *pInfo)\n{\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutInit\n|\n|   Description:    Initialisation
+        of drivers after the system has been\n|                      fully initialised.\n|\n|   Parameters:    SiDriverInfo_t
+        *pInfo - Pointer to driver information\n|                      passed from
+        the system.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutInit(SiDriverInfo_t *pInfo)\n{\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutDeInit\n|\n|   Description:    De-initialisation
+        of drivers before the system is shutdown.\n|\n|   Parameters:    SiDriverInfo_t
+        *pInfo - Pointer to driver information\n|                      passed from
+        the system.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutDeInit(SiDriverInfo_t *pInfo)\n{\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutProfileLoad\n|\n|   Description:    Loads
+        a profile for a given media type.\n|\n|   Parameters:    SiMediaEntry *pMe
+        - Pointer to media entry, containing\n|                      the media type
+        and profile data.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutProfileLoad(SiMediaEntry *pMe)\n{\n#ifdef MPALIB_SUPPORT_ASYNC_PROFILE\n    wdogAsyncLoad(pMe,
+        &gTutWdog);\n#endif\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutProfileUnload\n|\n|   Description:    Unloads
+        a profile for a given media type.\n|\n|   Parameters:    SiMediaEntry *pMe
+        - Pointer to media entry, containing\n|                      the media type
+        and profile data.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutProfileUnload(SiMediaEntry *pMe)\n{\n#ifdef MPALIB_SUPPORT_ASYNC_PROFILE\n    watchdog_t
+        *pWdog;\n    unsigned int nHandle;\n\n    nHandle = SiMediaEntryGetHandle(pMe);\n    if
+        (nHandle >= gTutWdog.nWdogCount)\n    {\n        MPADEBUG(1, \"Invalid WDOG
+        handle %d\\n\", nHandle);\n        return;\n    }\n\n    pWdog = gTutWdog.ppWdog[nHandle];\n    if
+        (pWdog != NULL)\n    {\n        wdogClose(nHandle);\n    }\n#endif\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutSuspend\n|\n|   Description:    Called
+        when the system is about to be suspended.\n|\n|   Parameters:    None.\n|   Return
+        Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutSuspend(void)\n{\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutResume\n|\n|   Description:    Called
+        when the system has just resumed.\n|\n|   Parameters:    None.\n|   Return
+        Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutResume(void)\n{\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutSetClockSpeed\n|\n|   Description:    Informs
+        the driver of the new clock speed after a\n|                      PLL change.\n|\n|   Parameters:    unsigned
+        nNewClockSpeed - New clock speed.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutSetClockSpeed(unsigned nNewClockSpeed)\n{\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutHWError\n|\n|   Description:    Called
+        to inform the driver about a hardware error.\n|\n|   Parameters:    int nError
+        - Error code signifying the type of error.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutHWError(int nError)\n{\n    wdogOnHWError(&gTutWdog, nError);\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutGetDeviceCaps\n|\n|   Description:    Returns
+        device capabilities.\n|\n|   Parameters:    unsigned int *pCaps - Pointer
+        to memory where the\n|                      capabilities mask should be stored.\n|   Return
+        Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutGetDeviceCaps(unsigned int *pCaps)\n{\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutGetDriverVersion\n|\n|   Description:    Returns
+        driver version information.\n|\n|   Parameters:    char *pVersion - Pointer
+        to buffer where the version\n|                      string should be stored.\n|   Return
+        Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutGetDriverVersion(char *pVersion)\n{\n    SiStringCopy(pVersion, \"MpaWdog
+        library version: \" MPA_DRIVER_VERSION_STR);\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutGetDriverName\n|\n|   Description:    Returns
+        driver name.\n|\n|   Parameters:    char *pName - Pointer to buffer where
+        the name string\n|                      should be stored.\n|   Return Value:
+        None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutGetDriverName(char *pName)\n{\n    SiStringCopy(pName, \"MpaWdog\");\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutGetInterfaceVersion\n|\n|   Description:    Returns
+        interface version.\n|\n|   Parameters:    unsigned int *pVersion - Pointer
+        to memory where the\n|                      interface version should be stored.\n|   Return
+        Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutGetInterfaceVersion(unsigned int *pVersion)\n{\n    *pVersion = MPA_INTERFACE_VERSION;\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutReset\n|\n|   Description:    Performs
+        a hardware reset.\n|\n|   Parameters:    None.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutReset(void)\n{\n    int i;\n\n    /* Reset WDOGs */\n    for (i = 0; i
+        < gTutWdog.nWdogCount; i++)\n    {\n        watchdog_t *pWdog = gTutWdog.ppWdog[i];\n        if
+        (pWdog->base.bEnabled)\n        {\n            wdogReset(pWdog);\n        }\n    }\n}\n\n\n/*-------------------------------------------------------------------------\n|   Function:     tutGetMediaInfo\n|\n|   Description:    Returns
+        information about the media supported by\n|                      this driver.\n|\n|   Parameters:    SiMediaInfo_t
+        *pInfo - Pointer to media information\n|                      structure to
+        be filled in by the driver.\n|   Return Value: None.\n+-------------------------------------------------------------------------*/\nvoid
+        tutGetMediaInfo(SiMediaInfo_t *pInfo)\n{\n    pInfo->nMediaType = SIPROFILE_WDOG;\n    pInfo->nMediaEntries
+        = gTutWdog.nWdogProfiles;\n}","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":7174,"completion_tokens":7173,"estimated_cost":0.0035870000000000003}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '477'
+      - '23433'
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 May 2025 19:51:36 GMT
+      - Tue, 06 May 2025 20:58:08 GMT
       server:
       - uvicorn
       x-robots-tag:

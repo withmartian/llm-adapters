@@ -38,35 +38,35 @@ interactions:
     uri: https://wizardlm-2-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-pXVRM9cJ39iRrrVKCKDSC7","object":"chat.completion","created":1746555161,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"2
-        It seems like you''re looking for a way to convert a string that represents
-        a date in the format \"YYYY-MM-DD\" to a `DateTime` object in Java. The `SimpleDateFormat`
-        class can be used to parse such strings into `DateTime` objects. Here''s how
-        you can do it:\n\n```java\nimport java.text.ParseException;\nimport java.text.SimpleDateFormat;\nimport
-        java.time.LocalDate;\nimport java.time.format.DateTimeFormatter;\n\npublic
-        class DateConverter {\n    public static void main(String[] args) {\n        String
-        dateString = \"2023-04-01\"; // Example date string\n        DateTimeFormatter
-        formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd\");\n        LocalDate
-        date = LocalDate.parse(dateString, formatter);\n\n        // If you need a
-        java.util.Date or java.time.ZonedDateTime, you can do the following:\n        java.util.Date
-        utilDate = Date.from(date.atStartOfDay(ZoneId.systemDefault()).toInstant());\n        java.time.Z","tool_calls":null},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
+      string: '{"id":"chatcmpl-HtoAooWQaF5QYYQkQtdcdU","object":"chat.completion","created":1746564396,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"2
+        It seems like you''re looking for a way to convert a `DataFrame` from a `pandas`
+        object to a `numpy` array. This can be done using the `to_numpy()` method,
+        which is available in both `pandas` 0.24.0 and later versions. Here''s how
+        you can do it:\n\n```python\nimport pandas as pd\nimport numpy as np\n\n#
+        Assuming `df` is your DataFrame\nnumpy_array = df.to_numpy()\n```\n\nThis
+        will convert the entire DataFrame into a NumPy array. If you want to convert
+        only specific columns, you can use the `.loc` or `.iloc` accessors to select
+        the columns first and then call `to_numpy()`:\n\n```python\n# Convert only
+        specific columns to a NumPy array\nnumpy_array = df[[''column1'', ''column2'']].to_numpy()\n```\n\nIf
+        you''re using an older version of pandas that doesn''t have the `to_numpy()`
+        method, you can achieve the same result with `","tool_calls":null},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93ba7280dc85f957-SJC
+      - 93bb53f7e83b15eb-SJC
       content-length:
-      - '1237'
+      - '1137'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 18:12:43 GMT
+      - Tue, 06 May 2025 20:46:38 GMT
       server:
       - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1240'
+      - '1256'
     status:
       code: 200
       message: OK

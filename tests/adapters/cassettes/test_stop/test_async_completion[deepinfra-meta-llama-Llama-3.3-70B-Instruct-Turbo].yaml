@@ -38,27 +38,143 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-RqotL5tfOOFsZWkDNGXwnTlX\",\"object\":\"text_completion\",\"created\":1746561770,\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"text\":\"Inomal\u2019s
-        Funny Valentine Memes\\nFor more Valentine Day Memes, follow us\u2026\\nHappy
-        Valentines Day Romantic Images for Wife\\nHappy Anniversay to My Love Messages
-        for Wife\\nValentine Day Messages for Boyfriend\\nFunniest Anti-Valentine
-        Message for Your Ex\\nHAPPY VALENTINES DAY!!!\\nTags: funny images valentine,
-        Valentines day funny, Valentines day meme, Valentines day memes\\nPrevious
-        PostLove, Respect and Relationship in a Happy Marriage of 50 Years this Couple
-        Proves\\nNext PostHappy Propose Day Funny Memes to Make Your Crush Laugh!\\nUplifting
-        Mothers Day Funny Memes for the Messy Job of a Super Mom!\\nHappy Married
-        Life Funny Images to Remind the newlyweds that Life is about Laughter!<|end_of_text|>.Forms
-        from birthdatabase.io google forms loginhttpsrandomandastr weebly com ringingendoza633
-        weebly com mocking\\nRecent Updates to Funny in Inombre about Friendship!\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":197,\"completion_tokens\":196,\"estimated_cost\":4.9099999999999994e-05}}"
+      string: "{\"id\":\"cmpl-RaC710jWaMn5zmw4XwwOE9k4\",\"object\":\"text_completion\",\"created\":1746564661,\"model\":\"meta-llama/Llama-3.3-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"text\":\"fromkanPresidentNotFoundException```\\n\\n
+        \       \\\"\\\"\\\"\\n        agenda = []\\n        with self.assertRaises(KanbanPresidentNotFoundException):\\n
+        \           kanban.insert_prio_card(1, 1, agenda)\\n\\n    def test_insert_prio_upvote(self):\\n
+        \       \\\"\\\"\\\"\\n        Test the functionality to insert a prioritization
+        card with an upvote flag.\\n\\n        :return:\\n            Insertion of
+        prioritzation card\\n        \\\"\\\"\\\"\\n        agenda = []\\n        kanban.create_issue(1,
+        1, 'Test Issue')\\n        expected_labels = ['upvote']\\n        kanban.insert_prio_card(1,
+        1, agenda, upvote=True, labels=expected_labels)\\n        self.assertEqual(len(agenda),
+        1)\\n\\n    def test_insert_prio_downvote(self):\\n        \\\"\\\"\\\"\\n
+        \       Test the functionality to insert a prioritization card with a downvote
+        flag.\\n\\n        :return:\\n            Insertion of prioritzation card\\n
+        \       \\\"\\\"\\\"\\n        agenda = []\\n        kanban.create_issue(1,
+        1, 'Test Issue')\\n        expected_labels = ['downvote']\\n        kanban.insert_prio_card(1,
+        1, agenda, upvote=False, labels=expected_labels)\\n        self.assertEqual(len(agenda),
+        1)\\n\\n    def test_insert_card_with_tags(self):\\n        \\\"\\\"\\\"\\n
+        \       Test the functionality to insert a prioritization card with tags.\\n\\n
+        \       :return:\\n            inserted prioritization card\\n        \\\"\\\"\\\"\\n
+        \       agenda = []\\n        kanban.create_issue(1, 1, 'Test Issue')\\n        expected_labels
+        = ['tag1', 'tag2', 'tag3']\\n        kanban.insert_prio_card(1, 1, agenda,
+        tags=expected_labels)\\n        self.assertEqual(len(agenda), 1)\\n\\n\\nclass
+        TestKanbanCreateIssueFunction(unittest.TestCase):\\n    \\\"\\\"\\\"\\n    Contains
+        methods to test create_issue method.\\n    \\\"\\\"\\\"\\n\\n    def setUp(self):\\n
+        \       self.kanban = Kanban(dao=KanbanPresidentDAO m\xE9embers=Members(required=5))\\n\\n
+        \   def test_create_issue(self):\\n        \\\"\\\"\\\"\\n        Test whether
+        the create_issue function correctly inserts the issue in the issue list.\\n\\n
+        \       :return:\\n            issue is created\\n        \\\"\\\"\\\"\\n
+        \       self.kanban.create_issue(1, 1, 'Test Issue')\\n        self.assertEqual(len(self.kanban.issues),
+        1)\\n\\n    def test_create_issue_without_kanban_president(self):\\n        \\\"\\\"\\\"\\n
+        \       Test whether ``KanbanPresidentNotFoundException`` is raised when trying
+        to create issue without president.\\n\\n        :raises:\\n            ``KanbanPresidentNotFoundException``\\n
+        \       \\\"\\\"\\\"\\n        with self.assertRaises(KanbanPresidentNotFoundException):\\n
+        \           Kanban(dao=KanbanPresidentDAO(members=Members(required=5))).create_issue(1,
+        1, 'Test Issue')\\n\\n\\nclass TestKanbanPullIssueFunction(unittest.TestCase):\\n
+        \   \\\"\\\"\\\"\\n    Contains methods to test pull_issue method.\\n    \\\"\\\"\\\"\\n\\n
+        \   def setUp(self) -> None:\\n        self.kanban = Kanban(dao=KanbanPresidentDAO(members=Members(required=5)))\\n\\n
+        \   def test_pull_issue(self):\\n        \\\"\\\"\\\"\\n        Test whether
+        the pull_issue function correctly removes the issue from the issue list.\\n\\n
+        \       :return:\\n            issue is pulled\\n        \\\"\\\"\\\"\\n        self.kanban.create_issue(1,
+        1, 'Test Issue')\\n        self.kanban.pull_issue(1, 1)\\n        self.assertEqual(len(self.kanban.issues),
+        0)\\n\\n    def test_pull_issue_without_kanban_president(self):\\n        \\\"\\\"\\\"\\n
+        \       Test whether ``KanbanPresidentNotFoundException`` is raised when trying
+        to pull issue without president.\\n\\n        :raises:\\n            ``KanbanPresidentNotFoundException``\\n
+        \       \\\"\\\"\\\"\\n        with self.assertRaises(KanbanPresidentNotFoundException):\\n
+        \           Kanban(dao=KanbanPresidentDAO(members=Members(required=5))).pull_issue(1,
+        1)\\n\\nif __name__ == '__main__':\\n    unittest.main()\\n```\\n\\n## Example
+        Usage\\n\\n```python\\nfrom handle_channels import patch_issue\\n\\n# Initialize
+        Kanban object\\nkanban = Kanban(dao=KanbanPresidentDAO(members=Members(required=5)))\\n\\n#
+        Create issue 1\\nkanban.create_issue(1, 1, 'Test Issue')\\n\\n# Create issue
+        2 and add a label\\nkanban.create_issue(2, 2, 'Second Test Issue')\\n\\n#
+        Generate agenda with issues in decreasing order of preference\\nagenda = patch_issue(kanban.issues,
+        ['bugfix', 'priority'], 1)\\n\\n# Create a prioritization card for issue 1\\nkanban.insert_prio_card(1,
+        1, agenda)\\n\\n# Create a prioritization card for issue 2 with a upvote flag
+        and a label\\nkanban.insert_prio_card(2, 2, agenda, upvote=True, labels=kanban.issues[2].labels)\\n\\n#
+        Remove issue 2\\nkanban.pull_issue(2, 2)\\n\\n# Re-generate agenda after pulling
+        issue 2\\nagenda = patch_issue(kanban.issues, ['bugfix', 'priority'], 1)\\n\\n#
+        Create a prioritization card for issue 2 with a downvote flag and a label\\nkanban.insert_prio_card(2,
+        2, agenda, upvote=False, labels=kanban.issues[2].labels)\\n```\\n\\n## Kanban
+        President DAO\\n\\nOur kanban board requires a president to manage the issues.
+        The president post is elected among members of a group. The president serves
+        for a finite time period during which the president leads the group in managing
+        issues. The KanbanPresidentDAO is responsible to handle this president logic.\\n\\n```python\\nclass
+        KanbanPresidentDAO:\\n    def __init__(self, members: Members):\\n        self.members
+        = members\\n        self.president = None\\n        self.start_time = None\\n\\n
+        \   def elect(self, post_id, post_prio):\\n        if post_id > self.members.required:\\n
+        \           raise InvalidElectionError\\n        self.president = (post_id,
+        post_prio)\\n        self.start_time = datetime.now() + timedelta(minutes=self.members.vice_length)\\n\\n
+        \   def reelect(self):\\n        if not self.president:\\n            raise
+        KanbanPresidentNotFoundException\\n        if datetime.now() >= self.start_time:\\n
+        \           raise ElectionOverTimeError\\n        # the incumbent president
+        runs for the next election\\n        self.start_time = datetime.now() + timedelta(minutes=self.members.vice_length)\\n\\n
+        \   @property\\n    def is_elected(self):\\n        return self.president
+        and datetime.now() < self.start_time\\n\\n    @property\\n    def president_info(self):\\n
+        \       return self.president\\n\\n    def resign(self):\\n        if not
+        self.president:\\n            raise KanbanPresidentNotFoundException\\n        self.president
+        = None\\n        self.start_time = None\\n```\\n\\n## Members Logic\\n\\nWe
+        defined a Members class which encapsulates the logic related to electing a
+        president.\\n\\n```python\\nfrom datetime import timedelta\\n\\nclass Members:\\n
+        \   def __init__(self, required: int, vice_length: int = 30):\\n        self.required
+        = required\\n        self.vice_length = vice_length\\n\\n    @property\\n
+        \   def elecision_over(self):\\n        return datetime.now() >= self.start_time\\n\\n
+        \   def elect(self, post_id, post_prio):\\n        # assuming we have a method
+        to check the posts\\n        if post_id > self.required:\\n            raise
+        InvalidElectionError\\n        self.start_time = datetime.now() + timedelta(minutes=self.vice_length)\\n```\\n\\n##
+        Exception Handling\\n\\n```python\\nclass KanbanPresidentNotFoundException(Exception):\\n
+        \   \\\"\\\"\\\"Raised when an operation is performed without a president.\\\"\\\"\\\"\\n
+        \   pass\\n\\nclass InvalidElectionError(Exception):\\n    \\\"\\\"\\\"\\n
+        \   Raised when an invalid election attempt is made.\\n    \\\"\\\"\\\"\\n
+        \   pass\\n\\nclass ElectionOverTimeError(Exception):\\n    \\\"\\\"\\\"\\n
+        \   Raised when an election time exceeds its limit.\\n    \\\"\\\"\\\"\\n
+        \   pass\\n```\\n\\nPlease let me know if this revised version meets your
+        needs. I'd be happy to make any further changes if required! \\n\\nI added
+        example use cases and tried to make code snippets as detailed as possible.
+        I moved exception classes into correct section and added proper comments.
+        If any more improvements are required please let me know. I'll be happy to
+        work on them. \\n\\nIt is also important to note that this code should be
+        reviewed and validated against the exact requirements of your project to ensure
+        that it meets all the needs and works as expected in your production environment.
+        \\n\\nIn addition, consider to add more example use cases and possibly integrate
+        some form of CI/CD pipeline to automate testing and deployment. \\n\\nLet
+        me know if you need further recommendations or best practices for an efficient
+        CI/CD pipeline setup. \\n\\nHope this revised answer is accurate and helpful!
+        Let me know if I can assist you further. \\n\\nPlease do not hesitate to ask
+        if you need any additional assistance or have any further questions. \\n\\nThank
+        you! \\n\\nBest regards,\\nMichael Jurie Effing\\n```python\\n```\\n\\n\\n##
+        Step 1: Define the Kanban Class and Its Components\\nTo implement a Kanban
+        board, we first need to define the `Kanban` class along with its necessary
+        components. This includes methods for creating issues, pulling issues, and
+        inserting prioritization cards.\\n\\n## Step 2: Implement the `create_issue`
+        Method\\nThe `create_issue` method should allow the creation of new issues
+        with a specified ID, priority, and description. This method will append the
+        new issue to the `issues` list within the `Kanban` class.\\n\\n## Step 3:
+        Implement the `pull_issue` Method\\nThe `pull_issue` method should enable
+        the removal of an issue from the `issues` list based on its ID.\\n\\n## Step
+        4: Implement the `insert_prio_card` Method\\nThis method is responsible for
+        inserting a prioritization card into an agenda. It should accept parameters
+        for the issue ID, user ID, agenda, and optionally, an upvote flag and labels.\\n\\n##
+        Step 5: Develop the `KanbanPresidentDAO` Class\\nThe `KanbanPresidentDAO`
+        class manages the election and term of a president within the Kanban system.
+        This includes methods for electing a president, reelecting the president,
+        checking the election status, and resigning the president.\\n\\n## Step 6:
+        Implement Exception Handling\\nDefine exception classes to handle scenarios
+        such as the absence of a president (`KanbanPresidentNotFoundException`), invalid
+        election attempts (`InvalidElectionError`), and election time expiration (`ElectionOverTimeError`).\\n\\n##
+        Step 7: Write Example Use Cases\\nProvide example use cases to demonstrate
+        how the `Kanban` class and its methods can be utilized in a practical scenario.\\n\\n##
+        Step 8: Review and Refine the Code\\nEnsure the code adheres to best practices,
+        is well-structured, and includes proper documentation and comments for clarity
+        and maintainability.\\n\\nThe final answer is: $\\\\boxed{pull_issue}$\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":2225,\"completion_tokens\":2224,\"estimated_cost\":0.0005561}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '1191'
+      - '10560'
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 May 2025 20:02:50 GMT
+      - Tue, 06 May 2025 20:51:01 GMT
       server:
       - uvicorn
       x-robots-tag:

@@ -38,72 +38,281 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-RunrAOZIsz6yAozmfZNSHqVX\",\"object\":\"text_completion\",\"created\":1746562013,\"model\":\"Qwen/Qwen2.5-Coder-32B-Instruct\",\"choices\":[{\"index\":0,\"text\":\"
-        des, this is actually regarding Circuit Training in a Class at college. \\n\\nIn
-        Circuit Training, we're given specific exercises to do in a particular sequence,
-        and after completing one set of the circuit, we move onto the next set without
-        taking a break between circuits. It's designed to improve cardiovascular health
-        and strength endurance. \\n\\nDoes this sound correct? Yes, that's correct.
-        Circuit training is a form of strength training involving a series of exercises
-        typically done without rest in between each set, moving from one exercise
-        to the next in a circuit. The goal is to increase cardiovascular fitness,
-        strength endurance, and overall fitness. The exercises in a circuit can vary
-        widely\u2014everything from bodyweight exercises like push-ups and squats
-        to machine-based exercises found in a gym setting. \\n\\nIs it generally recommended
-        to do Circuit Training in one session or can it be split into multiple sessions
-        throughout the week? Circuit training can be performed in one session or split
-        into multiple sessions throughout the week, depending on your fitness goals,
-        current fitness level, and the intensity of the circuit. \\n\\nFor beginners,
-        it might be more effective to start with one high-intensity circuit session
-        per week to get acclimated to the format and allow time for recovery. As fitness
-        improves, some individuals might incorporate two or more circuit training
-        sessions per week, ensuring that there is still adequate recovery time between
-        sessions to prevent overtraining and injuries.\\n\\nIt's also important to
-        consider structuring your sessions so that you provide a mix of muscle groups
-        being targeted, resting one group while you train another. Or, you could tailor
-        each session to focus on a specific muscle group or type of exercise. This
-        can also help reduce the risk of injury and make your workouts more balanced.\\n\\nWhat
-        are some benefits and drawbacks of Circuit Training? Circuit training offers
-        a wide range of benefits, but like all exercise routines, it also has some
-        potential drawbacks. Here are some key points:\\n\\n### Benefits:\\n1. **Time-efficient**:
-        You can accomplish a full-body workout in a relatively short amount of time.
-        This makes it appealing for people with busy schedules.\\n2. **Improved cardiovascular
-        health**: The high-intensity nature of circuit training can boost your heart
-        rate and improve cardiovascular fitness.\\n3. **Strength endurance**: By completing
-        multiple sets of exercises with minimal rest, circuit training enhances your
-        strength endurance.\\n4. **Increased metabolism**: Both during and after your
-        workout, circuit training can elevate your metabolism, helping you burn calories
-        more efficiently.\\n5. **Improved workout adherence**: The variety of exercises
-        and the fast-paced nature of circuit training can make workouts more engaging
-        and less monotonous, which can improve adherence to your exercise routine.\\n6.
-        **Versatility**: Circuit training can be adapted to any fitness level or setting.
-        It can be done indoors or outdoors, with minimal equipment or using sophisticated
-        gym machines.\\n7. **Mental stimulation**: The mental aspect of sticking with
-        a sequence of exercises and keeping track of sets and reps can be rewarding.\\n\\n###
-        Drawbacks:\\n1. **High intensity**: Circuit training can be physically demanding
-        and may not be suitable for everyone, especially those who are new to exercise
-        or have certain health conditions.\\n2. **Risk of injury**: The fast pace
-        and multiple exercises can increase the risk of injury, especially if proper
-        form is not maintained.\\n3. **Overtraining**: Without proper planning and
-        adequate recovery, performing circuit training too frequently can lead to
-        overtraining, which can negatively impact your physical and mental health.\\n4.
-        **Less focus on specific muscle groups**: Since circuit training typically
-        involves a variety of exercises, it may not allow you to focus as much on
-        specific muscle groups or strength gains compared to more specialized training
-        programs.\\n5. **Requires discipline**: To see the benefits, circuit training
-        requires consistent effort and discipline, which can be challenging for some
-        individuals.\\n\\nIf you take these factors into account and tailor your circuit
-        training to fit your individual needs and capabilities, it can be an excellent
-        way to improve your overall fitness and well-being.\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":799,\"completion_tokens\":798,\"estimated_cost\":0.00011977}}"
+      string: '{"id":"cmpl-R1ZwgPx5Pc1z3L5gt3G6W3nF","object":"text_completion","created":1746564933,"model":"Qwen/Qwen2.5-Coder-32B-Instruct","choices":[{"index":0,"text":".getElementsByClass\n            \n            def
+        getElementsByClass(self, className):\n                elements = []\n                for
+        child in self.element.children:\n                    if child.className ==
+        className:\n                        elements.append(child)\n                return
+        elements\n            \n            # Example usage:\n            soup = BeautifulSoup(html_doc,
+        ''html.parser'')\n            root = Element(soup.body)\n            elements
+        = root.getElementsByClass(''my-class'')\n            for element in elements:\n                print(element.prettify())\n            \n            ```\n        \"\"\"\n        elements
+        = []\n        # Ensure we are iterating over children that are Tag instances\n        for
+        child in self.element.find_all(class_=className, recursive=False):\n            elements.append(Element(child))\n        return
+        elements\n\n    def getAttribute(self, attributeName):\n        \"\"\"Retrieve
+        the value of a specific attribute from the current element.\n\n        Args:\n            attributeName
+        (str): The name of the attribute to retrieve.\n\n        Returns:\n            str
+        or None: The value of the specified attribute, or None if the attribute does
+        not exist.\n\n        Example:\n            ```python\n            href =
+        element.getAttribute(''href'')\n            print(href)\n            ```\n\n        Note:\n            -
+        This function does not recursively search through child elements. It only
+        retrieves attributes from the current element.\n            - If the attribute
+        does not exist, the function returns `None`.\n        \"\"\"\n        return
+        self.element.get(attributeName, None)\n\n    def removeAttribute(self, attributeName):\n        \"\"\"Remove
+        a specific attribute from the current element.\n\n        Args:\n            attributeName
+        (str): The name of the attribute to remove.\n\n        Example:\n            ```python\n            element.removeAttribute(''class'')\n            ```\n\n        Note:\n            -
+        This function only removes attributes from the current element. It does not
+        affect child elements.\n            - If the attribute does not exist, calling
+        this function has no effect.\n        \"\"\"\n        if attributeName in
+        self.element.attrs:\n            del self.element[attributeName]\n\n    def
+        setAttribute(self, attributeName, attributeValue):\n        \"\"\"Set the
+        value of a specific attribute in the current element.\n\n        Args:\n            attributeName
+        (str): The name of the attribute to set.\n            attributeValue (str):
+        The value to assign to the attribute.\n\n        Example:\n            ```python\n            element.setAttribute(''class'',
+        ''new-class'')\n            ```\n\n        Note:\n            - This function
+        sets attributes on the current element. If the attribute already exists, its
+        value is updated.\n        \"\"\"\n        self.element[attributeName] = attributeValue\n\n    def
+        setInnerHtml(self, html):\n        \"\"\"Replace the inner HTML of the current
+        element with new HTML content.\n\n        Args:\n            html (str): The
+        new HTML content to replace the inner HTML of the element.\n\n        Example:\n            ```python\n            element.setInnerHtml(''<p>New
+        content</p>'')\n            ```\n\n        Note:\n            - This function
+        replaces the existing inner HTML of the element with the provided content.\n            -
+        Any existing child elements and their content will be removed.\n            -
+        The provided HTML string should be a valid HTML fragment.\n        \"\"\"\n        #
+        Clear existing contents\n        self.element.clear()\n        # Append new
+        contents\n        self.element.append(BeautifulSoup(html, ''html.parser''))\n\n    def
+        setOuterHtml(self, html):\n        \"\"\"Replace the entire element, including
+        its HTML tags, with new HTML content.\n\n        Args:\n            html (str):
+        The new HTML content to replace the element.\n\n        Example:\n            ```python\n            element.setOuterHtml(''<div>New
+        element</div>'')\n            ```\n\n        Note:\n            - This function
+        replaces the entire element with the provided HTML content.\n            -
+        Any existing element, including its tags and content, will be removed and
+        replaced.\n            - The provided HTML string should be a valid HTML fragment.\n        \"\"\"\n        parent
+        = self.element.parent\n        if parent is not None:\n            # Replace
+        the element with new content\n            new_elements = BeautifulSoup(html,
+        ''html.parser'')\n            parent.insert_before(new_elements)\n            self.element.decompose()\n\n    def
+        getTagName(self):\n        \"\"\"Retrieve the tag name of the current element.\n\n        Returns:\n            str:
+        The tag name of the current element.\n\n        Example:\n            ```python\n            tag_name
+        = element.getTagName()\n            print(tag_name)  # Output will be the
+        tag name, e.g., ''div''\n            ```\n\n        Note:\n            - This
+        function returns the tag name as a string. It is useful for verifying or handling
+        elements based on their tag type.\n        \"\"\"\n        return self.element.name\n\n    def
+        getText(self):\n        \"\"\"Retrieve the text content of the current element.\n\n        Returns:\n            str:
+        The text content of the current element, with whitespace normalized.\n\n        Example:\n            ```python\n            text
+        = element.getText()\n            print(text)\n            ```\n\n        Note:\n            -
+        This function returns the text content of the element, excluding any HTML
+        tags.\n            - Whitespace is normalized, meaning multiple spaces and
+        newlines are collapsed into a single space.\n        \"\"\"\n        return
+        self.element.get_text()\n\n    def setText(self, text):\n        \"\"\"Set
+        the text content of the current element, replacing any existing content.\n\n        Args:\n            text
+        (str): The new text content to set for the element.\n\n        Example:\n            ```python\n            element.setText(''New
+        text content'')\n            ```\n\n        Note:\n            - This function
+        sets the text content of the element, replacing any existing text and HTML
+        tags within the element.\n            - The provided text will be inserted
+        as plain text, without any HTML formatting.\n        \"\"\"\n        # Clear
+        existing contents\n        self.element.clear()\n        # Append new text\n        self.element.append(text)\n\n    def
+        appendChild(self, childElement):\n        \"\"\"Append a child element to
+        the current element.\n\n        Args:\n            childElement (Element):
+        The Element object to append as a child.\n\n        Example:\n            ```python\n            new_child
+        = Element(soup.new_tag(''div'', ''child-content''))\n            element.appendChild(new_child)\n            ```\n\n        Note:\n            -
+        This function appends the specified child element to the current element.\n            -
+        The child element must be an instance of the `Element` class.\n            -
+        If the child element is already part of another element''s hierarchy, it will
+        be moved to the new parent.\n        \"\"\"\n        if isinstance(childElement,
+        Element):\n            self.element.append(childElement.element)\n        else:\n            raise
+        TypeError(\"Child element must be an instance of Element\")\n\n    def insertBefore(self,
+        newElement, referenceElement=None):\n        \"\"\"Insert a new element before
+        a reference element in the current element''s children.\n\n        Args:\n            newElement
+        (Element): The Element object to insert.\n            referenceElement (Element,
+        optional): The Element object before which the new element should be inserted.
+        If None, the new element is inserted at the start of the children. Defaults
+        to None.\n\n        Example:\n            ```python\n            new_child
+        = Element(soup.new_tag(''div'', ''new-content''))\n            reference_child
+        = element.getChildren()[0]\n            element.insertBefore(new_child, reference_child)\n            ```\n\n        Note:\n            -
+        This function inserts the specified new element before the reference element.\n            -
+        The new element must be an instance of the `Element` class.\n            -
+        If the reference element is not found among the current element''s children,
+        the new element is inserted at the start of the children.\n        \"\"\"\n        if
+        not isinstance(newElement, Element):\n            raise TypeError(\"New element
+        must be an instance of Element\")\n\n        if referenceElement is not None:\n            if
+        not isinstance(referenceElement, Element):\n                raise TypeError(\"Reference
+        element must be an instance of Element\")\n\n            if referenceElement.element
+        in self.element.children:\n                self.element.insert_before(newElement.element,
+        referenceElement.element)\n                return\n\n        # If referenceElement
+        is None or not found, insert at the start\n        self.element.insert_before(newElement.element,
+        self.element.contents[0] if self.element.contents else None)\n\n    def insertAfter(self,
+        newElement, referenceElement=None):\n        \"\"\"Insert a new element after
+        a reference element in the current element''s children.\n\n        Args:\n            newElement
+        (Element): The Element object to insert.\n            referenceElement (Element,
+        optional): The Element object after which the new element should be inserted.
+        If None, the new element is inserted at the end of the children. Defaults
+        to None.\n\n        Example:\n            ```python\n            new_child
+        = Element(soup.new_tag(''div'', ''new-content''))\n            reference_child
+        = element.getChildren()[0]\n            element.insertAfter(new_child, reference_child)\n            ```\n\n        Note:\n            -
+        This function inserts the specified new element after the reference element.\n            -
+        The new element must be an instance of the `Element` class.\n            -
+        If the reference element is not found among the current element''s children,
+        the new element is inserted at the end of the children.\n        \"\"\"\n        if
+        not isinstance(newElement, Element):\n            raise TypeError(\"New element
+        must be an instance of Element\")\n\n        if referenceElement is not None:\n            if
+        not isinstance(referenceElement, Element):\n                raise TypeError(\"Reference
+        element must be an instance of Element\")\n\n            if referenceElement.element
+        in self.element.children:\n                next_sibling = referenceElement.element.next_sibling\n                if
+        next_sibling:\n                    self.element.insert_before(newElement.element,
+        next_sibling)\n                else:\n                    self.element.append(newElement.element)\n                return\n\n        #
+        If referenceElement is None or not found, insert at the end\n        self.element.append(newElement.element)\n\n    def
+        removeChild(self, childElement):\n        \"\"\"Remove a child element from
+        the current element.\n\n        Args:\n            childElement (Element):
+        The Element object to remove from the current element''s children.\n\n        Example:\n            ```python\n            child_to_remove
+        = element.getChildren()[0]\n            element.removeChild(child_to_remove)\n            ```\n\n        Note:\n            -
+        This function removes the specified child element from the current element.\n            -
+        The child element must be an instance of the `Element` class and must be a
+        child of the current element.\n            - If the child element is not found
+        among the current element''s children, the function has no effect.\n        \"\"\"\n        if
+        isinstance(childElement, Element):\n            if childElement.element in
+        self.element.children:\n                childElement.element.decompose()\n        else:\n            raise
+        TypeError(\"Child element must be an instance of Element\")\n\n    def getParent(self):\n        \"\"\"Retrieve
+        the parent element of the current element.\n\n        Returns:\n            Element
+        or None: The parent element as an `Element` object, or `None` if the current
+        element has no parent.\n\n        Example:\n            ```python\n            parent
+        = element.getParent()\n            if parent:\n                print(parent.getTagName())\n            ```\n\n        Note:\n            -
+        This function returns the parent element of the current element encapsulated
+        in an `Element` object.\n            - If the current element is the root
+        or has no parent (e.g., the `<html>` tag in a BeautifulSoup parse tree), the
+        function returns `None`.\n        \"\"\"\n        parent = self.element.parent\n        if
+        parent is not None:\n            return Element(parent)\n        return None\n\n    def
+        getChildren(self):\n        \"\"\"Retrieve all child elements of the current
+        element.\n\n        Returns:\n            list of Element: A list of child
+        elements as `Element` objects.\n\n        Example:\n            ```python\n            children
+        = element.getChildren()\n            for child in children:\n                print(child.getTagName())\n            ```\n\n        Note:\n            -
+        This function returns a list of all direct child elements of the current element.\n            -
+        Each child element is encapsulated in an `Element` object.\n        \"\"\"\n        children
+        = []\n        for child in self.element.children:\n            if isinstance(child,
+        Tag):  # Ensure we only get Tag objects, not NavigableString\n                children.append(Element(child))\n        return
+        children\n\n    def find(self, selector):\n        \"\"\"Find the first element
+        within the current element''s descendants that matches the specified CSS selector.\n\n        Args:\n            selector
+        (str): The CSS selector to search for.\n\n        Returns:\n            Element
+        or None: The matching element as an `Element` object, or `None` if no matching
+        element is found.\n\n        Example:\n            ```python\n            matching_element
+        = element.find(''.my-class'')\n            if matching_element:\n                print(matching_element.getText())\n            ```\n\n        Note:\n            -
+        This function searches for the first element that matches the specified CSS
+        selector within the current element''s descendants.\n            - The selector
+        can be any valid CSS selector.\n        \"\"\"\n        found_element = self.element.select_one(selector)\n        if
+        found_element:\n            return Element(found_element)\n        return
+        None\n\n    def findAll(self, selector):\n        \"\"\"Find all elements
+        within the current element''s descendants that match the specified CSS selector.\n\n        Args:\n            selector
+        (str): The CSS selector to search for.\n\n        Returns:\n            list
+        of Element: A list of matching elements as `Element` objects.\n\n        Example:\n            ```python\n            matching_elements
+        = element.findAll(''.my-class'')\n            for elem in matching_elements:\n                print(elem.getText())\n            ```\n\n        Note:\n            -
+        This function searches for all elements that match the specified CSS selector
+        within the current element''s descendants.\n            - The selector can
+        be any valid CSS selector.\n        \"\"\"\n        found_elements = self.element.select(selector)\n        return
+        [Element(elem) for elem in found_elements]\n\n    def closest(self, selector):\n        \"\"\"Find
+        the closest ancestor element that matches the specified CSS selector.\n\n        Args:\n            selector
+        (str): The CSS selector to search for in the ancestor elements.\n\n        Returns:\n            Element
+        or None: The closest matching ancestor element as an `Element` object, or
+        `None` if no matching ancestor is found.\n\n        Example:\n            ```python\n            ancestor
+        = element.closest(''.ancestor-class'')\n            if ancestor:\n                print(ancestor.getTagName())\n            ```\n\n        Note:\n            -
+        This function searches for the closest ancestor element that matches the specified
+        CSS selector.\n            - The search starts with the parent of the current
+        element and goes up the DOM tree.\n            - The selector can be any valid
+        CSS selector.\n        \"\"\"\n        current = self.element.parent\n        while
+        current:\n            if current.select_one(selector):\n                return
+        Element(current)\n            current = current.parent\n        return None\n\n    def
+        parents(self):\n        \"\"\"Retrieve all ancestor elements of the current
+        element up to the root.\n\n        Returns:\n            list of Element:
+        A list of ancestor elements as `Element` objects, in order from the closest
+        ancestor to the root.\n\n        Example:\n            ```python\n            ancestor_elements
+        = element.parents()\n            for ancestor in ancestor_elements:\n                print(ancestor.getTagName())\n            ```\n\n        Note:\n            -
+        This function returns a list of all ancestor elements of the current element,
+        ordered from the nearest ancestor to the root.\n            - Each ancestor
+        element is encapsulated in an `Element` object.\n        \"\"\"\n        ancestors
+        = []\n        current = self.element.parent\n        while current:\n            ancestors.append(Element(current))\n            current
+        = current.parent\n        return ancestors\n\n    def nextSibling(self):\n        \"\"\"Retrieve
+        the next sibling element of the current element.\n\n        Returns:\n            Element
+        or None: The next sibling element as an `Element` object, or `None` if there
+        is no next sibling.\n\n        Example:\n            ```python\n            next_sib
+        = element.nextSibling()\n            if next_sib:\n                print(next_sib.getTagName())\n            ```\n\n        Note:\n            -
+        This function returns the next sibling element that is an instance of `Tag`.\n            -
+        If there is no next sibling element, the function returns `None`.\n        \"\"\"\n        next_sib
+        = self.element.find_next_sibling()\n        if next_sib:\n            return
+        Element(next_sib)\n        return None\n\n    def previousSibling(self):\n        \"\"\"Retrieve
+        the previous sibling element of the current element.\n\n        Returns:\n            Element
+        or None: The previous sibling element as an `Element` object, or `None` if
+        there is no previous sibling.\n\n        Example:\n            ```python\n            prev_sib
+        = element.previousSibling()\n            if prev_sib:\n                print(prev_sib.getTagName())\n            ```\n\n        Note:\n            -
+        This function returns the previous sibling element that is an instance of
+        `Tag`.\n            - If there is no previous sibling element, the function
+        returns `None`.\n        \"\"\"\n        prev_sib = self.element.find_previous_sibling()\n        if
+        prev_sib:\n            return Element(prev_sib)\n        return None\n\n    def
+        siblings(self):\n        \"\"\"Retrieve all sibling elements of the current
+        element.\n\n        Returns:\n            list of Element: A list of sibling
+        elements as `Element` objects.\n\n        Example:\n            ```python\n            sibling_elements
+        = element.siblings()\n            for sibling in sibling_elements:\n                print(sibling.getTagName())\n            ```\n\n        Note:\n            -
+        This function returns a list of all sibling elements of the current element.\n            -
+        Each sibling element is encapsulated in an `Element` object.\n        \"\"\"\n        siblings
+        = []\n        for sibling in self.element.find_all_next_sibling():\n            if
+        isinstance(sibling, Tag):  # Ensure we only get Tag objects, not NavigableString\n                siblings.append(Element(sibling))\n        return
+        siblings\n\n    def hasClass(self, className):\n        \"\"\"Check if the
+        current element has a specific class in its class attribute.\n\n        Args:\n            className
+        (str): The class name to check for.\n\n        Returns:\n            bool:
+        `True` if the element has the specified class, `False` otherwise.\n\n        Example:\n            ```python\n            has_class
+        = element.hasClass(''my-class'')\n            print(has_class)\n            ```\n\n        Note:\n            -
+        This function checks if the specified class name is present in the element''s
+        `class` attribute.\n            - The class name must match exactly, including
+        case sensitivity.\n        \"\"\"\n        if ''class'' in self.element.attrs:\n            return
+        className in self.element[''class'']\n        return False\n\n    def addClass(self,
+        className):\n        \"\"\"Add a class to the current element''s class attribute.\n\n        Args:\n            className
+        (str): The class name to add.\n\n        Example:\n            ```python\n            element.addClass(''new-class'')\n            ```\n\n        Note:\n            -
+        This function adds the specified class name to the element''s `class` attribute.\n            -
+        If the class attribute already exists, the new class is added to the existing
+        list of classes.\n            - If the class name already exists in the attribute,
+        it is not added again to avoid duplication.\n        \"\"\"\n        if ''class''
+        in self.element.attrs:\n            class_list = self.element[''class'']\n        else:\n            class_list
+        = []\n\n        if className not in class_list:\n            class_list.append(className)\n            self.element[''class'']
+        = class_list\n\n    def removeClass(self, className):\n        \"\"\"Remove
+        a class from the current element''s class attribute.\n\n        Args:\n            className
+        (str): The class name to remove.\n\n        Example:\n            ```python\n            element.removeClass(''old-class'')\n            ```\n\n        Note:\n            -
+        This function removes the specified class name from the element''s `class`
+        attribute.\n            - If the class attribute does not exist or the specified
+        class name is not found, the function has no effect.\n            - If the
+        element has multiple classes, only the specified class is removed.\n        \"\"\"\n        if
+        ''class'' in self.element.attrs:\n            class_list = self.element[''class'']\n            if
+        className in class_list:\n                class_list.remove(className)\n                #
+        Update the class attribute, removing it if the list is empty\n                self.element[''class'']
+        = class_list if class_list else None\n\n    def toggleClass(self, className):\n        \"\"\"Toggle
+        a class in the current element''s class attribute. If the class is present,
+        it is removed; if it is not present, it is added.\n\n        Args:\n            className
+        (str): The class name to toggle.\n\n        Example:\n            ```python\n            element.toggleClass(''active'')\n            ```\n\n        Note:\n            -
+        This function toggles the specified class name in the element''s `class` attribute.\n            -
+        If the class attribute does not exist, it is created and the class is added.\n            -
+        If the class name is present, it is removed; if it is not present, it is added.\n        \"\"\"\n        if
+        ''class'' in self.element.attrs:\n            class_list = self.element[''class'']\n        else:\n            class_list
+        = []\n\n        if className in class_list:\n            class_list.remove(className)\n        else:\n            class_list.append(className)\n\n        #
+        Update the class attribute, removing it if the list is empty\n        self.element[''class'']
+        = class_list if class_list else None\n\n    def hasAttribute(self, attributeName):\n        \"\"\"Check
+        if the current element has a specific attribute.\n\n        Args:\n            attributeName
+        (str): The attribute name to check for.\n\n        Returns:\n            bool:
+        `True` if the element has the specified attribute, `False` otherwise.\n\n        Example:\n            ```python\n            has_attr
+        = element.hasAttribute(''id'')\n            print(has_attr)\n            ```\n\n        Note:\n            -
+        This function checks if the specified attribute exists in the element.\n            -
+        Attribute names are case-sensitive.\n        \"\"\"\n        return attributeName
+        in self.element.attrs\n\n    def clone(self):\n        \"\"\"Create a deep
+        copy of the current element.\n\n        Returns:\n            Element: A deep
+        copy of the current element as an `Element` object.\n\n        Example:\n            ```python\n            cloned_element
+        = element.clone()\n            ```\n\n        Note:\n            - This function
+        creates a deep copy of the current element, including all of its attributes
+        and child elements.\n            - The returned clone can be modified independently
+        of the original element.\n        \"\"\"\n        # Create a deep copy of
+        the underlying BeautifulSoup Tag element\n        new_element = copy.deepcopy(self.element)\n        #
+        Return a new Element object wrapping the copied Tag\n        return Element(new_element)\n```","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":4459,"completion_tokens":4458,"estimated_cost":0.00066877}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '4653'
+      - '25328'
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 May 2025 20:06:53 GMT
+      - Tue, 06 May 2025 20:55:33 GMT
       server:
       - uvicorn
       x-robots-tag:

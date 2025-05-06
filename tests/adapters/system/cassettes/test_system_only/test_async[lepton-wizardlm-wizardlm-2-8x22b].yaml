@@ -38,39 +38,35 @@ interactions:
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-kbbNCUEgxBje9L58v8pW5a","object":"chat.completion","created":1746555163,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems like you''re working on a program or script that involves a function
-        called `optimize_selection`. This function appears to be part of a larger
-        system, possibly for selecting the best configuration (`best_sel`) based on
-        a selection (`sel`) and using a feature vector (`hits`) and a configuration
-        (`hconf`).\n\nThe `optimize_selection` function is not a standard function
-        in any programming language or library, so it''s likely a custom function
-        defined within the codebase you''re working with. The purpose of this function
-        is to take a `sel` and `hconf` as inputs and return an optimized selection
-        based on some criteria or cost function.\n\nHere''s a breakdown of the parameters
-        and the return statement:\n\n- `sel`: This is the input selection that the
-        function will use as a starting point.\n- `hconf`: This is the configuration
-        associated with the selection. It''s not clear what `hconf` stands for, but
-        it could be a handle to configuration data or a configuration object.\n- `best_sel`:
-        This is the output of the function, which is presumably the best selection
-        found by the `optimize_","tool_calls":null},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
+      string: '{"id":"chatcmpl-kW5GCdGduna9EKRAnHBadD","object":"chat.completion","created":1746564398,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you''re trying to write a program that takes a string input and
+        determines if it''s a valid binary number. A binary number is valid if it
+        only contains ''0'' and ''1'' and does not start with ''0'' unless it''s just
+        ''0''. Here''s a simple Python function that checks for binary validity:\n\n```python\ndef
+        is_valid_binary(s):\n    # Check if the string is empty or just ''0''\n    if
+        not s or s == ''0'':\n        return True\n    \n    # Check if the string
+        starts with ''0'' and contains more digits\n    if s.startswith(''0'') and
+        len(s) > 1:\n        return False\n    \n    # Check if all characters are
+        ''0'' or ''1''\n    return all(c in ''01'' for c in s)\n\n# Examples\nprint(is_valid_binary(\"101\"))  #
+        True\nprint(is_valid_binary(\"01\"))  # True\nprint(is_valid_binary(\"1\"))  #
+        True\nprint(is_valid_binary(\"0\"))  # True","tool_calls":null},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93ba728a3f1dcf72-SJC
+      - 93bb5400fc68fb30-SJC
       content-length:
-      - '1408'
+      - '1138'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 18:12:46 GMT
+      - Tue, 06 May 2025 20:46:41 GMT
       server:
       - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '3102'
+      - '3095'
     status:
       code: 200
       message: OK

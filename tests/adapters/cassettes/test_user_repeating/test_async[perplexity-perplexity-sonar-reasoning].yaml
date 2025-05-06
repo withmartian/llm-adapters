@@ -38,63 +38,74 @@ interactions:
     uri: https://api.perplexity.ai/chat/completions
   response:
     body:
-      string: '{"id": "efbb9302-0a5b-4b37-a3c1-27f9be77befc", "model": "sonar-reasoning",
-        "created": 1746561600, "usage": {"prompt_tokens": 3, "completion_tokens":
-        601, "total_tokens": 604, "search_context_size": "low"}, "citations": ["https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
-        "https://en.wikipedia.org/wiki/Hi,_Hi,_Hi", "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+      string: '{"id": "44842256-33fc-4db6-81f6-855fdb3d2bea", "model": "sonar-reasoning",
+        "created": 1746564904, "usage": {"prompt_tokens": 3, "completion_tokens":
+        768, "total_tokens": 771, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
         "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
         "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
-        "message": {"role": "assistant", "content": "<think>\nOkay, the user''s query
-        is just \"Hi\". That''s pretty short. Let me look at the search results to
-        see what they might be referring to. The search results all mention a song
-        called \"Hi, Hi, Hi\" by Wings. The first result is a Spotify link to the
-        song, the second is a Wikipedia page with details about the song, and there
-        are also YouTube links. There''s a remix mentioned in result 5 with Rayvanny
-        and Lil Jay Bingerack.\n\nSo, the user might be asking about the song \"Hi,
-        Hi, Hi\" by Wings. But since the query is just \"Hi\", maybe they''re not
-        sure how to phrase it. Alternatively, they could be greeting, but given the
-        context of the search results, it''s more likely related to the song.\n\nLooking
-        at the information, \"Hi, Hi, Hi\" was released in 1972 as a double A-side
-        with \"C Moon\". It was a hit, reaching number 5 in the UK and 10 in the US.
-        The song was part of Wings'' discography, written by Paul and Linda McCartney.
-        There''s also a 2023 remix by Lil Jay Bingerack featuring Rayvanny, which
-        might be a cover or a twist on the original.\n\nI need to structure the answer
-        to address both the original song and the remix. The user probably wants a
-        brief overview of the song, its release, chart performance, and any notable
-        versions or covers. Since the search results include multiple sources, I should
-        cite them appropriately.\n\nFirst, I''ll mention the original song by Wings,
-        its release date, chart positions, and artists. Then, touch on the 2023 remix.
-        Make sure to include the necessary citations from the search results. The
-        answer should be concise, as the query is short, but informative enough to
-        cover the key points.\n</think>\n\n\"Hi, Hi, Hi\" is a glam rock song by Wings,
-        released in December 1972 as part of a double A-side single with \"C Moon.\"
-        Written by Paul and Linda McCartney, it reached number 5 in the UK and number
-        10 in the US, becoming a staple in Wings'' 1970s live performances[2][3].
-        The track has been included in compilations like *Wingspan: Hits and History*
-        (2001) and *Pure McCartney* (2016)[2][4].  \n\nA recent remix by **Lil Jay
-        Bingerack** featuring **Rayvanny** was released in 2023, blending Afrobeat
-        influences with the original''s upbeat energy. The music video promotes themes
-        of love and positivity[5].  \n\nFor the original version:  \n**Artist**: Wings
-        (Paul McCartney & Linda McCartney)  \n**Release**: 1972  \n**Chart Performance**:
-        UK #5, US #10[2]  \n\nThe song''s glam-rock style and energetic hooks remain
-        iconic in Paul McCartney''s post-Beatles work."}, "delta": {"role": "assistant",
-        "content": ""}}]}'
+        "message": {"role": "assistant", "content": "<think>\nOkay, let''s tackle
+        this query. The user just wrote \"Hi,\" which is pretty vague. The search
+        results provided are all about the song \"Hi, Hi, Hi\" by Paul McCartney and
+        Wings, and a remix by other artists. But since the user''s query is just \"Hi,\"
+        they might not be asking about the song specifically. Maybe they just said
+        \"Hi\" as a greeting.\n\nFirst, I need to check if the user intended to ask
+        about the song. The search results are all related to the song, so maybe they
+        made a typo or sent a partial query. But without more context, it''s hard
+        to tell. Since the instructions say to use the search results provided, I
+        should stick to that.\n\nLooking at the search results, the primary information
+        is about the Wings song. There''s also a remix by Rayvanny and Lil Jay Bingerack.
+        The answer needs to address both the original song and any notable covers
+        or remixes. The user might be looking for information on the song \"Hi, Hi,
+        Hi\" or just greeted with \"Hi.\"\n\nBut according to the guidelines, if the
+        query is just \"Hi,\" and the search results are about a song, I should present
+        the information from the search results. However, the user''s intent isn''t
+        clear. Since the search results are focused on the song, the best approach
+        is to assume the user is asking about the song, maybe due to a typo (like
+        missing commas or a period).\n\nSo, structuring the answer: start by introducing
+        the song, mention it''s by Wings, written by Paul and Linda McCartney, released
+        as a double A-side with \"C Moon\" in 1972. Include chart performance, albums
+        it''s featured on, and any notable covers or remixes, like the 2023 remix
+        by Rayvanny and Lil Jay Bingerack. Cite the relevant sources for each piece
+        of information.\n\nNeed to make sure not to include any headers at the beginning.
+        Use sections like Song Details and Notable Covers if needed. Keep the answer
+        concise but informative, using bullet points where possible. Check all the
+        search results to ensure all relevant info is covered. Also, avoid any markdown
+        headers as per the instructions. Use bold for subsections if needed but keep
+        it simple.\n</think>\n\nThe song **\"Hi, Hi, Hi\"** by Paul McCartney and
+        Wings was released in 1972 as a double A-side single with \"C Moon.\" Written
+        by Paul and Linda McCartney, it achieved chart success, peaking at No. 1 in
+        Spain, No. 5 in the UK, and No. 10 in the U.S.[1]. The glam-rock track became
+        a staple in Wings'' 1970s live performances and has been included in multiple
+        compilation albums, including *Wingspan: Hits and History* (2001) and *Pure
+        McCartney* (2016)[1][3].\n\nA **2023 remix** of the song features Tanzanian
+        artist Rayvanny and Ivory Coast''s Lil Jay Bingerack, blending the original
+        melody with contemporary African influences and themes of love and joy[5].
+        This version diverges from the original''s rock style, highlighting the song''s
+        adaptability across genres.\n\n| Original Version | 2023 Remix |\n|-------------------|------------|\n|
+        Genre: Glam rock | Genre: Afrobeats/R&B fusion |\n| Released: 1972 | Released:
+        2023 |\n| Notable features: Live band arrangement | Notable features: Collaborative
+        vocals, rhythmic beats |\n\nThe original remains a key part of McCartney''s
+        post-Beatles discography, while the remix demonstrates its enduring relevance
+        in new musical contexts[1][5]. Both versions are available on platforms like
+        Spotify and YouTube[2][3][4]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb0f7babd167f6-SJC
+      - 93bb601cca14f977-SJC
       content-length:
-      - '3174'
+      - '4042'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 20:00:00 GMT
+      - Tue, 06 May 2025 20:55:04 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=qe7Y2yjStoWluYpCysys7z8dlCUnvsHynHEldPD8t6I-1746561600-1.0.1.1-_nTh4KEiTWkLJdnxyJDgF_axZGpB7vvhuL5sqqu0yyEkkbR0WrCN6lOY83r_BNnDBPGj8o8wJ8pb5wmiU1Q19vUDzEyRAwmSME2elGizxOI;
-        path=/; expires=Tue, 06-May-25 20:30:00 GMT; domain=.perplexity.ai; HttpOnly;
+      - __cf_bm=JMHkh9CWK3f9OAWYZYylclVwiFXW14AygxktrIT84w0-1746564904-1.0.1.1-32pW5W9KEBqqCSXmPx4Jm4pFQktjfDBjqYH6OwgFEdVK5qgufa1yAxq.9kqanOwRTAiLMqiEVlFiLDbehGTLynwW.3R6NJw9v886JNfhw74;
+        path=/; expires=Tue, 06-May-25 21:25:04 GMT; domain=.perplexity.ai; HttpOnly;
         Secure; SameSite=None
       strict-transport-security:
       - max-age=15552000; includeSubDomains; preload

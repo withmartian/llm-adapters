@@ -41,28 +41,32 @@ interactions:
     uri: https://wizardlm-2-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-sKm9AWuprGpYxnLCrUsT49","object":"chat.completion","created":1746561660,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
-        \"Generate a random number between 1 and 10, like 5, 4, 3, 10, 11, and provide
-        an explanation of how the number was generated.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
-        \"Generate a random number between 1 and 10, like 5, 4, 3, 10, 11, and provide
-        an explanation of how the number was generated.\"}"},"id":"call-hiGzJynirrc957hubUmpmU","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":20,"total_tokens":67,"completion_tokens":47}}'
+      string: '{"id":"chatcmpl-2eQJ8LniEGMzj2oxX59f4S","object":"chat.completion","created":1746565126,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Generate a random number between 1 and 10. If the tool I used to generate
+        this number is not specified or hullucinated, I will provide the tool''s name
+        alongside the number. If the number generated is outside the range of 1 to
+        10, I will generate a new number within the specified range.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate a random number between 1 and 10. If the tool I used to generate
+        this number is not specified or hullucinated, I will provide the tool''s name
+        alongside the number. If the number generated is outside the range of 1 to
+        10, I will generate a new number within the specified range.\"}"},"id":"call-sfGcUZkFvDph8FwJ6ogYFj","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":20,"total_tokens":95,"completion_tokens":75}}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb1129be2715b4-SJC
+      - 93bb65c61fed229f-SJC
       content-length:
-      - '701'
+      - '1025'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 20:01:00 GMT
+      - Tue, 06 May 2025 20:58:46 GMT
       server:
       - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '263'
+      - '404'
     status:
       code: 200
       message: OK

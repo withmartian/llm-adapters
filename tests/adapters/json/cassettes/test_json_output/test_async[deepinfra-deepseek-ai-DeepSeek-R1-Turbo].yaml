@@ -38,24 +38,26 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-RLZy0Pxr6O0Lp0GA3zlFOTWY","object":"chat.completion","created":1746555115,"model":"deepseek-ai/DeepSeek-R1-Turbo","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
-        the user wants me to output a simple JSON. Let me think about what they need.
-        They didn''t specify any particular data, so I should create a basic example.
-        Maybe a person object with some common fields like name, age, and city. That''s
-        straightforward. I''ll make sure the syntax is correct: curly braces, proper
-        commas, quotes around the keys and string values. Let me check if there are
-        any errors. Name as a string, age as a number, city as a string. Yeah, that
-        should work. Alright, here''s the JSON.\n</think>\n\n```json\n{\n  \"name\":
-        \"John Doe\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":160,"completion_tokens":151,"estimated_cost":0.0004619999999999999}}'
+      string: '{"id":"chatcmpl-RKwGZsjZyQCN0svZDh34H57y","object":"chat.completion","created":1746564681,"model":"deepseek-ai/DeepSeek-R1-Turbo","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wants a simple JSON. Let me think about what that means. They probably
+        want a basic example without any complex structures. Maybe a key-value pair.
+        Let me start with something like {\"key\": \"value\"}. But maybe they want
+        a bit more structure. How about a person object? Like name, age, maybe a list
+        of hobbies. That''s still simple. Let me check if there''s any specific requirements.
+        The user didn''t mention any, so I''ll go with a common example. Make sure
+        the syntax is correct: curly braces, proper commas, quotes around keys and
+        string values. Numbers don''t need quotes. Alright, here''s an example. Let
+        me verify it again. Yep, that should work.\n</think>\n\n```json\n{\n  \"message\":
+        \"Hello, world!\",\n  \"status\": \"success\",\n  \"count\": 42\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":196,"completion_tokens":187,"estimated_cost":0.00057}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '993'
+      - '1148'
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 May 2025 18:11:55 GMT
+      - Tue, 06 May 2025 20:51:21 GMT
       server:
       - uvicorn
       x-robots-tag:

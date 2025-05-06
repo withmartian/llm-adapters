@@ -38,110 +38,80 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: '{"id":"cmpl-Rt1hAoWbxcRnacQiwWmw0ET0","object":"text_completion","created":1746561123,"model":"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8","choices":[{"index":0,"text":"
-        = 1\nLo = 0\n\ndef isBitSet(x, n):\n    if x & (1 << n):\n        return True\n    return
-        False\n\ndef isBitClear(x, n):\n    if x & (1 << n):\n        return False\n    return
-        True\n\ndef setBit(x, n):\n    return x | (1 << n)\n\ndef clearBit(x, n):\n    return
-        x & ~(1 << n)\n\ndef toggleBit(x, n):\n    return x ^ (1 << n)\n\ndef turnOn(x,
-        n):\n    return x | (1 << n)\n\ndef turnOff(x, n):\n    return x & ~(1 <<
-        n)\n\ndef isOn(x, n):\n    if x & (1 << n):\n        return True\n    return
-        False\n\ndef isOff(x, n):\n    if x & (1 << n):\n        return False\n    return
-        True\n\ndef getBit(x, n):\n    return (x >> n) & 1\n\ndef setBitValue(x, n,
-        v):\n    if v:\n        return x | (1 << n)\n    else:\n        return x &
-        ~(1 << n)\n\ndef getBitValue(x, n):\n    return (x >> n) & 1\n\ndef countSetBits(x):\n    count
-        = 0\n    while x:\n        count += x & 1\n        x >>= 1\n    return count\n\ndef
-        countClearBits(x, n):\n    count = 0\n    for i in range(n):\n        if not
-        (x & (1 << i)):\n            count += 1\n    return count\n\ndef countBits(x):\n    count
-        = 0\n    while x:\n        count += 1\n        x >>= 1\n    return count\n\ndef
-        isPowerOfTwo(x):\n    if x and (not (x & (x - 1))):\n        return True\n    return
-        False\n\ndef isPowerOfTwoAlt(x):\n    if x == 0:\n        return False\n    while
-        x != 1:\n        if x % 2 != 0:\n            return False\n        x = x //
-        2\n    return True\n\ndef isEven(x):\n    if x & 1:\n        return False\n    return
-        True\n\ndef isOdd(x):\n    if x & 1:\n        return True\n    return False\n\ndef
-        swapBits(x, i, j):\n    if ((x >> i) & 1) != ((x >> j) & 1):\n        x ^=
-        (1 << i) | (1 << j)\n    return x\n\ndef swapNumbers(x, y):\n    x = x ^ y\n    y
-        = x ^ y\n    x = x ^ y\n    return x, y\n\ndef rotateLeft(x, n, bits):\n    n
-        = n % bits\n    return ((x << n) | (x >> (bits - n))) & ((1 << bits) - 1)\n\ndef
-        rotateRight(x, n, bits):\n    n = n % bits\n    return ((x >> n) | (x << (bits
-        - n))) & ((1 << bits) - 1)\n\ndef reverseBits(x, bits):\n    result = 0\n    for
-        i in range(bits):\n        result = (result << 1) | (x & 1)\n        x >>=
-        1\n    return result\n\ndef binaryRepresentation(x, bits):\n    return bin(x)[2:].zfill(bits)\n\ndef
-        main():\n    print(\"Bit Manipulation Library\")\n    print(\"-------------------------\")\n    print(\"1.
-        Check if a bit is set\")\n    print(\"2. Check if a bit is clear\")\n    print(\"3.
-        Set a bit\")\n    print(\"4. Clear a bit\")\n    print(\"5. Toggle a bit\")\n    print(\"6.
-        Turn on a bit\")\n    print(\"7. Turn off a bit\")\n    print(\"8. Check if
-        a bit is on\")\n    print(\"9. Check if a bit is off\")\n    print(\"10. Get
-        a bit\")\n    print(\"11. Set a bit to a value\")\n    print(\"12. Get a bit
-        value\")\n    print(\"13. Count set bits\")\n    print(\"14. Count clear bits\")\n    print(\"15.
-        Count bits\")\n    print(\"16. Check if a number is a power of two\")\n    print(\"17.
-        Check if a number is even\")\n    print(\"18. Check if a number is odd\")\n    print(\"19.
-        Swap two bits\")\n    print(\"20. Swap two numbers\")\n    print(\"21. Rotate
-        left\")\n    print(\"22. Rotate right\")\n    print(\"23. Reverse bits\")\n    print(\"24.
-        Binary representation\")\n    while True:\n        choice = input(\"Enter
-        your choice (1-24), or ''q'' to quit: \")\n        if choice.lower() == ''q'':\n            break\n        try:\n            choice
-        = int(choice)\n        except ValueError:\n            print(\"Invalid choice.
-        Please enter a number between 1 and 24.\")\n            continue\n        if
-        choice < 1 or choice > 24:\n            print(\"Invalid choice. Please enter
-        a number between 1 and 24.\")\n            continue\n        if choice ==
-        1:\n            x = int(input(\"Enter a number: \"))\n            n = int(input(\"Enter
-        the bit position: \"))\n            print(isBitSet(x, n))\n        elif choice
-        == 2:\n            x = int(input(\"Enter a number: \"))\n            n = int(input(\"Enter
-        the bit position: \"))\n            print(isBitClear(x, n))\n        elif
-        choice == 3:\n            x = int(input(\"Enter a number: \"))\n            n
-        = int(input(\"Enter the bit position: \"))\n            print(setBit(x, n))\n        elif
-        choice == 4:\n            x = int(input(\"Enter a number: \"))\n            n
-        = int(input(\"Enter the bit position: \"))\n            print(clearBit(x,
-        n))\n        elif choice == 5:\n            x = int(input(\"Enter a number:
-        \"))\n            n = int(input(\"Enter the bit position: \"))\n            print(toggleBit(x,
-        n))\n        elif choice == 6:\n            x = int(input(\"Enter a number:
-        \"))\n            n = int(input(\"Enter the bit position: \"))\n            print(turnOn(x,
-        n))\n        elif choice == 7:\n            x = int(input(\"Enter a number:
-        \"))\n            n = int(input(\"Enter the bit position: \"))\n            print(turnOff(x,
-        n))\n        elif choice == 8:\n            x = int(input(\"Enter a number:
-        \"))\n            n = int(input(\"Enter the bit position: \"))\n            print(isOn(x,
-        n))\n        elif choice == 9:\n            x = int(input(\"Enter a number:
-        \"))\n            n = int(input(\"Enter the bit position: \"))\n            print(isOff(x,
-        n))\n        elif choice == 10:\n            x = int(input(\"Enter a number:
-        \"))\n            n = int(input(\"Enter the bit position: \"))\n            print(getBit(x,
-        n))\n        elif choice == 11:\n            x = int(input(\"Enter a number:
-        \"))\n            n = int(input(\"Enter the bit position: \"))\n            v
-        = int(input(\"Enter the value: \"))\n            print(setBitValue(x, n, v))\n        elif
-        choice == 12:\n            x = int(input(\"Enter a number: \"))\n            n
-        = int(input(\"Enter the bit position: \"))\n            print(getBitValue(x,
-        n))\n        elif choice == 13:\n            x = int(input(\"Enter a number:
-        \"))\n            print(countSetBits(x))\n        elif choice == 14:\n            x
-        = int(input(\"Enter a number: \"))\n            n = int(input(\"Enter the
-        number of bits: \"))\n            print(countClearBits(x, n))\n        elif
-        choice == 15:\n            x = int(input(\"Enter a number: \"))\n            print(countBits(x))\n        elif
-        choice == 16:\n            x = int(input(\"Enter a number: \"))\n            print(isPowerOfTwo(x))\n        elif
-        choice == 17:\n            x = int(input(\"Enter a number: \"))\n            print(isEven(x))\n        elif
-        choice == 18:\n            x = int(input(\"Enter a number: \"))\n            print(isOdd(x))\n        elif
-        choice == 19:\n            x = int(input(\"Enter a number: \"))\n            i
-        = int(input(\"Enter the first bit position: \"))\n            j = int(input(\"Enter
-        the second bit position: \"))\n            print(swapBits(x, i, j))\n        elif
-        choice == 20:\n            x = int(input(\"Enter the first number: \"))\n            y
-        = int(input(\"Enter the second number: \"))\n            x, y = swapNumbers(x,
-        y)\n            print(\"x =\", x)\n            print(\"y =\", y)\n        elif
-        choice == 21:\n            x = int(input(\"Enter a number: \"))\n            n
-        = int(input(\"Enter the number of positions to rotate: \"))\n            bits
-        = int(input(\"Enter the number of bits: \"))\n            print(rotateLeft(x,
-        n, bits))\n        elif choice == 22:\n            x = int(input(\"Enter a
-        number: \"))\n            n = int(input(\"Enter the number of positions to
-        rotate: \"))\n            bits = int(input(\"Enter the number of bits: \"))\n            print(rotateRight(x,
-        n, bits))\n        elif choice == 23:\n            x = int(input(\"Enter a
-        number: \"))\n            bits = int(input(\"Enter the number of bits: \"))\n            print(reverseBits(x,
-        bits))\n        elif choice == 24:\n            x = int(input(\"Enter a number:
-        \"))\n            bits = int(input(\"Enter the number of bits: \"))\n            print(binaryRepresentation(x,
-        bits))\n\nif __name__ == \"__main__\":\n    main()\n```","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":2039,"completion_tokens":2037,"estimated_cost":0.0012225400000000003}}'
+      string: '{"id":"cmpl-RogZFV4QwweZ1q8j8oLGMsW9","object":"text_completion","created":1746565101,"model":"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8","choices":[{"index":0,"text":",
+        I''m AMICUS. Your friendly legal assistant.\nHow may I assist you in the realm
+        of law today?\nWhat''s your legal question or concern?\nDo you need help with
+        a specific case or legal document?\nLet''s explore your legal issue together.\nNavigating
+        legal complexities can be challenging. I''m here to help simplify the process
+        for you.\nIntroduction to AMICUS\nAMICUS is a specialized legal assistant
+        designed to provide comprehensive support in navigating legal complexities.
+        Its primary function is to offer guidance, information, and assistance in
+        understanding legal matters, preparing legal documents, and providing insights
+        into legal processes. AMICUS is built to be informative, helpful, and user-friendly,
+        ensuring that users can access the legal information they need in a clear
+        and understandable manner. For example, AMICUS can assist in drafting a basic
+        contract by outlining essential elements such as parties involved, terms of
+        agreement, and obligations of each party. It can also provide an overview
+        of legal procedures for filing a complaint in a civil court, including necessary
+        documents and steps to follow.\nMain Functions of AMICUS\nProviding Legal
+        Information\nExplaining the differences between various types of legal documents
+        such as affidavits, declarations, and notarized statements.\nA user is unsure
+        about the appropriate document to use in a legal proceeding and seeks clarification
+        on the distinctions and uses of each.\nAssisting in the preparation of legal
+        documents like demand letters, simple contracts, or wills by offering templates
+        and guidance on what information to include.\nA small business owner needs
+        to draft a contract for services and seeks help in understanding the necessary
+        clauses and legal language.\nOffering insights into legal processes such as
+        the steps involved in a civil lawsuit, from filing a complaint to trial.\nAn
+        individual is considering legal action against another party and needs to
+        understand the procedural steps and what to expect during the litigation process.\nIndividuals
+        who are not legal professionals but are dealing with legal issues, such as
+        drafting contracts, understanding legal rights, or navigating legal proceedings.
+        They benefit from AMICUS by gaining access to clear, understandable legal
+        information and guidance.\nOwners of small businesses or startups who may
+        need assistance with legal documents, understanding legal obligations, or
+        navigating legal processes related to their business operations. AMICUS can
+        provide them with the necessary legal insights and document preparation support.\nStudents
+        studying law or related fields who are looking for additional resources to
+        understand legal concepts, processes, and document preparation. AMICUS serves
+        as a supplementary educational tool, offering practical examples and explanations.\nHow
+        to Use AMICUS\nStart by visiting yeschat.ai to access AMICUS for a free trial,
+        no login or ChatGPT Plus subscription required.\nIdentify your legal need
+        or question. AMICUS can assist with a wide range of legal inquiries, from
+        document preparation to understanding legal processes.\nUse the chat interface
+        to describe your legal issue or question. Be as specific as possible to ensure
+        accurate and relevant guidance.\nReview the information and guidance provided
+        by AMICUS. You can ask follow-up questions or request further clarification
+        on any points.\nFor complex legal issues, consider consulting a legal professional.
+        AMICUS is designed to provide general guidance and support, not to replace
+        professional legal advice.\nAI-powered Personalized Career Coaching\nEmpowering
+        your career with AI-driven insights.\nCrafting Your Story, AI-Enhanced\nWhat
+        is AMICUS?\nAMICUS is an AI-powered legal assistant designed to provide guidance
+        and support on a variety of legal matters. It can help with understanding
+        legal processes, preparing legal documents, and offering insights into legal
+        issues.\nCan AMICUS draft legal documents?\nYes, AMICUS can assist in drafting
+        basic legal documents such as contracts, demand letters, and simple wills.
+        However, it''s essential to review these documents with a legal professional
+        for complex or high-stakes matters.\nIs AMICUS a substitute for a lawyer?\nNo,
+        AMICUS is not a substitute for a lawyer. While it can provide valuable guidance
+        and information, it cannot offer the personalized advice and representation
+        that a qualified legal professional can.\nHow accurate is the information
+        provided by AMICUS?\nAMICUS strives to provide accurate and up-to-date information
+        based on its training data. However, the accuracy can depend on the complexity
+        of the legal issue and the specificity of the information available to AMICUS.\nCan
+        I use AMICUS for legal research?\nYes, AMICUS can be a useful tool for legal
+        research, providing summaries of legal concepts, processes, and relevant information.
+        It''s a good starting point for further research or to gain a basic understanding
+        of a legal topic.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":920,"completion_tokens":918,"estimated_cost":0.00055114}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '8248'
+      - '5281'
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 May 2025 19:52:03 GMT
+      - Tue, 06 May 2025 20:58:21 GMT
       server:
       - uvicorn
       x-robots-tag:

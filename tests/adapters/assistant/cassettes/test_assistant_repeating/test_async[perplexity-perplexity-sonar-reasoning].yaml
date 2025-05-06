@@ -38,67 +38,92 @@ interactions:
     uri: https://api.perplexity.ai/chat/completions
   response:
     body:
-      string: '{"id": "7166ce4d-19e0-4bfd-857d-f4404526af55", "model": "sonar-reasoning",
-        "created": 1746554999, "usage": {"prompt_tokens": 5, "completion_tokens":
-        629, "total_tokens": 634, "search_context_size": "low"}, "citations": ["https://promova.com/confusing-words/hi-hello",
-        "https://www.vocabulary.com/dictionary/hi", "https://www.dictionary.com/e/hello/",
-        "https://dictionary.cambridge.org/us/dictionary/english/hi"], "object": "chat.completion",
-        "choices": [{"index": 0, "finish_reason": "stop", "message": {"role": "assistant",
-        "content": "<think>\nOkay, the user just said \"Hi,\" and I need to respond
-        based on the search results provided. Let me look through the search results
-        to understand the difference between \"hi\" and \"hello.\"\n\nFrom the first
-        result, it''s clear that \"hi\" is informal and used with friends, family,
-        or coworkers. Examples include casual greetings. The second result mentions
-        that \"hi\" is more casual than \"hello\" and can be used in almost all situations
-        except very formal ones. The third result adds that \"hi\" is a bit more informal
-        than \"hello,\" which aligns with the first two. The fourth result from Cambridge
-        confirms that \"hi\" is an informal greeting.\n\nSo, putting this together,
-        the user''s \"Hi\" is a casual greeting. My response should acknowledge that
-        and perhaps explain the difference between \"hi\" and \"hello\" using the
-        information from the search results. The user might be testing if I can provide
-        a detailed answer based on the sources. I need to structure the answer clearly,
-        using sections for \"Hi\" and \"Hello\" with their meanings and usage examples.
-        Also, include when to use each, as per the FAQs in the first search result.
-        Make sure to cite the sources properly after each relevant sentence. Since
-        all the search results support the same points, I can cite multiple sources
-        where applicable. Avoid any markdown headers at the start. Use bold for subsections
-        if needed, but keep the explanation concise. Check for any additional info
-        in the search results, like synonyms or historical notes from the second result.
-        Include examples from the search results as well. Alright, time to draft the
-        answer.\n</think>\n\n**Hi** is an informal greeting commonly used in casual
-        conversations. It conveys friendliness and is appropriate for interactions
-        with familiar individuals, such as friends, family, or colleagues[1][3]. Examples
-        include phrases like \"Hi there, how are you?\" or \"Hi, I''m Steve\"[1].
-        While suitable for most social scenarios, **hi** is less common in highly
-        formal settings, such as addressing authoritative figures or in strict business
-        contexts[1][2].\n\nIn contrast, **hello** serves as a slightly more formal
-        alternative, often used to greet strangers, clients, or in professional environments.
-        It\u2019s also a versatile greeting that can express surprise or initiate
-        polite dialogue[1][3]. For instance, \"Hello, how can I help you?\" demonstrates
-        its formal utility[1].\n\n**Key differences**:  \n| **Aspect**       | **Hi**                          |
-        **Hello**                     |\n|-------------------|---------------------------------|-------------------------------|\n|
-        **Formality**     | Informal, casual[1][4]         | Neutral/semi-formal[1][3]     |\n|
-        **Usage Context** | Social and professional peers   | Strangers, clients,
-        formal settings[1][3] |\n| **Tone**          | Friendly, relaxed              |
-        Polite, approachable          |  \n\nWhile both greetings are interchangeable
-        in many cases, **heya** or **hey** are even more casual alternatives to **hi**[2][4]."},
+      string: '{"id": "55acf49b-a5e8-4538-a1c3-da7144c4e7d9", "model": "sonar-reasoning",
+        "created": 1746564226, "usage": {"prompt_tokens": 5, "completion_tokens":
+        1052, "total_tokens": 1057, "search_context_size": "low"}, "citations": ["https://promova.com/confusing-words/hi-hello",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.dictionary.com/e/hello/"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user just
+        sent \"Hi\" and that''s their query. Let me check what the search results
+        say about it.\n\nFirst, looking at the search results. The first result from
+        Promova explains that \"Hi\" is an informal greeting, used in friendly contexts.
+        It gives examples like \"Hi there, how are you?\" and mentions it''s suitable
+        for friends, family, coworkers. The second source from Vocabulary.com also
+        notes that \"hi\" is a casual greeting, more common in informal settings.
+        It even mentions that \"hi\" might not be the best choice for very formal
+        situations, like meeting the Queen. The third result from Dictionary.com confirms
+        that \"hi\" is more informal than \"hello,\" which is the formal alternative.\n\nSo
+        the user''s query is just \"Hi,\" which is a greeting. But since they''re
+        asking for information, maybe they''re confused about how to use \"hi\" properly
+        or want to know its meaning. The answer should probably explain what \"hi\"
+        means, its usage, and compare it to \"hello\" since the search results highlight
+        that contrast.\n\nI need to structure the answer clearly. Start by defining
+        \"hi\" as an informal greeting. Then mention its common usage in casual settings
+        with friends or coworkers. Compare it to \"hello,\" which is more formal.
+        Use examples from the search results to illustrate the difference. Also, note
+        that \"hi\" is appropriate in most but not all formal situations.\n\nWait,
+        the user might be a non-native English speaker trying to understand when to
+        use \"hi\" versus \"hello.\" The answer should be concise but cover the key
+        points: definition, formality level, usage contexts, and the comparison with
+        \"hello.\" Including examples from the search results will make it clearer.\n\nMake
+        sure to cite the sources properly. Each point should have the relevant citations.
+        For example, when stating that \"hi\" is informal, cite [1][2]. When comparing
+        to \"hello,\" cite [1][3]. Examples given in the search results should be
+        cited as well.\n\nAvoid any markdown headers as per the instructions. Just
+        start with a brief explanation, then the sections on usage, comparison, and
+        examples. Use bullet points or bold headings for subsections if needed, but
+        keep it simple. No references section at the end.\n\nCheck if there''s any
+        other info in the search results. The third result mentions that \"hi\" was
+        first recorded in the 1800s by a Kansas Native American, but maybe that''s
+        too detailed. Focus on the practical usage advice the user might need.\n\nSo
+        the final answer would look something like:\n\n\"Hi\" is an informal greeting
+        used in friendly or casual contexts. It is commonly used among friends, family,
+        coworkers, or in relaxed environments[1][2]. Compared to \"hello,\" which
+        is more formal and suitable for strangers, business settings, or formal interactions,
+        \"hi\" offers a warmer and more approachable salutation[1][3].\n\nExamples:\n-
+        Casual conversation: \"Hi there, how are you?\"[1]\n- Introducing oneself:
+        \"Hi, I''m Steve.\"[1]\n- Starting a conversation with someone you know: \"Hi
+        everyone, welcome to the party!\"[1]\n\nIn contrast, \"hello\" is typically
+        Used for formal greetings or when addressing individuals you don''t know well,
+        such as colleagues, customers, or in professional scenarios[1][3].\n\nCitations
+        are added after each relevant sentence. Keep the answer straightforward, using
+        the info from the search results without adding external knowledge. Make sure
+        each cited source is correctly referenced based on the content.\n</think>\n\n\"Hi\"
+        is an informal greeting used in friendly or casual contexts. It is commonly
+        employed among friends, family, coworkers, or in relaxed environments[1][2].
+        Compared to \"hello,\" which is more formal and suitable for strangers, business
+        settings, or formal interactions, \"hi\" offers a warmer and more approachable
+        salutation[1][3].\n\n**Key Usage**\n- **Casual Settings**: Appropriate for
+        addressing peers, acquaintances, or in social situations like parties or community
+        gatherings (\"Hi everyone, welcome to the party!\")[1].\n- **Informal Introductions**:
+        Often used when introducing oneself in relaxed scenarios (\"Hi, I''m Steve\")[1].\n-
+        **Daily Interactions**: Frequently used in everyday conversations (\"Hi there,
+        how are you?\")[1].\n\n**Comparison with Hello**\n| Aspect          | Hi                          |
+        Hello                   |\n|------------------|-----------------------------|-------------------------|\n|
+        **Formality**    | Informal, casual[1][2]      | Formal, professional[1][3]
+        |\n| **Relational Context** | Friends/family[1]        | Strangers/colleagues[1][3]
+        |\n| **Tone**         | Warm, approachable[2]       | Polite, neutral[3]      |\n\nWhile
+        \"hi\" is versatile, it may not be suitable for highly formal events (e.g.,
+        official ceremonies) or interactions involving significant social hierarchy[2].
+        For instance, it would be less appropriate when addressing high-ranking officials
+        or in strict professional environments where \"hello\" is preferable[1][3]."},
         "delta": {"role": "assistant", "content": ""}}]}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93ba6e5baa7b9e52-SJC
+      - 93bb4f7ad8062518-SJC
       content-length:
-      - '3624'
+      - '5539'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 18:09:59 GMT
+      - Tue, 06 May 2025 20:43:46 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=fqENz641Zrd.tG8Hd.5Kj87rCzHg.jsCwlVxy2IQldg-1746554999-1.0.1.1-_ps1Mhx7ACMYNIQiBW61bPslIk.2OVO8EDG0uSjtPHM6xj1WJtaD5FMbdUkFDl8oosFIz0FNBO.8DD19.jKiIXYh7EKoOB2XZZ9opr42esw;
-        path=/; expires=Tue, 06-May-25 18:39:59 GMT; domain=.perplexity.ai; HttpOnly;
+      - __cf_bm=F7LjY_S_RQ8gXRxi89CgIqeKJzB0Z_HaJbSt5G7Wn1E-1746564226-1.0.1.1-dhALctAe74nPAhQYQRSMCkEX2cCxNeHNfp.V9t3CnwiOUP7RhwmOdD.3U2m7sov4cey9IuxUb9QGMRsCdEkpS4b3V.q1r8cV5jqvF4Vay3Y;
+        path=/; expires=Tue, 06-May-25 21:13:46 GMT; domain=.perplexity.ai; HttpOnly;
         Secure; SameSite=None
       strict-transport-security:
       - max-age=15552000; includeSubDomains; preload

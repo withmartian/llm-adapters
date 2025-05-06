@@ -38,23 +38,26 @@ interactions:
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-R8atkSvRHZV6VxTJ0nyhean1","object":"chat.completion","created":1746555099,"model":"deepseek-ai/DeepSeek-R1","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
-        the user wants a simple JSON. Let me think about what to include. They didn''t
-        specify any details, so I should probably create a basic example. Maybe a
-        person''s information? Like name, age, and city. That''s common. Let me check
-        the syntax. Keys in quotes, proper commas, and curly braces. Make sure there''s
-        no trailing commas. Alright, that should work. Let me put it together.\n</think>\n\n```json\n{\n  \"message\":
+      string: '{"id":"chatcmpl-RDItjLHJXFQpGBrq1ybxYp5k","object":"chat.completion","created":1746564664,"model":"deepseek-ai/DeepSeek-R1","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user asked for a simple JSON. Let me think about what they might need.
+        They didn''t specify any particular data, so maybe they just want an example.
+        I should create a basic structure that''s easy to understand. Let''s go with
+        something like a person''s information. Include a few common fields: name,
+        age, maybe a boolean for student status, and a list of hobbies. That should
+        cover it. Make sure the syntax is correct, with proper commas and brackets.
+        Double-check for any errors. Alright, here''s a straightforward JSON example.\n</think>\n\n```json\n{\n  \"message\":
         \"Hello! Here''s a simple JSON example:\",\n  \"data\": {\n    \"name\": \"John
-        Doe\",\n    \"age\": 30,\n    \"city\": \"New York\"\n  }\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":155,"completion_tokens":146,"estimated_cost":0.00032278}}'
+        Doe\",\n    \"age\": 30,\n    \"isStudent\": false,\n    \"hobbies\": [\"reading\",
+        \"gaming\", \"coding\"]\n  }\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":195,"completion_tokens":186,"estimated_cost":0.00040998}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '937'
+      - '1144'
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 May 2025 18:11:39 GMT
+      - Tue, 06 May 2025 20:51:04 GMT
       server:
       - uvicorn
       x-robots-tag:

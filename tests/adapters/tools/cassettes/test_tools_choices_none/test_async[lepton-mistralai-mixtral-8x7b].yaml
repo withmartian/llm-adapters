@@ -41,32 +41,44 @@ interactions:
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-NWx9LpLvtDEXqoDh9eKBxV","object":"chat.completion","created":1746561696,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
-        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n1. Google:
-        Search ''random number between 1 and 10'' \\\\n2. Online random number generator:
-        e.g. https://www.random.org/integers/ \\\\n3. Use programming language: e.g.
-        Python, Java, JavaScript, etc. \\\\n\\\\nExample results: 5, 4, 3, 10, 11\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
-        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n1. Google:
-        Search ''random number between 1 and 10'' \\\\n2. Online random number generator:
-        e.g. https://www.random.org/integers/ \\\\n3. Use programming language: e.g.
-        Python, Java, JavaScript, etc. \\\\n\\\\nExample results: 5, 4, 3, 10, 11\"}"},"id":"call-oBLTypzywMonYM6Lkac5Ze","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":21,"total_tokens":128,"completion_tokens":107}}'
+      string: '{"id":"chatcmpl-u2CJMyHBmWzSs4tJJaq2b9","object":"chat.completion","created":1746565200,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Generate random number with specified tools in range 1-10: \\\\n\\\\nTool
+        1: Google Sheets \\\\n\\\\nProcedure: \\\\n1. Open Google Sheets \\\\n2. Click
+        on ''F5'' or ''Formulas'' -> ''Random'' -> ''RANDBETWEEN'' \\\\n3. Enter the
+        range 1 and 10 \\\\n4. Press Enter \\\\n\\\\nTool 2: Python \\\\n\\\\nProcedure:
+        \\\\n1. Open Python IDE \\\\n2. Write the following code: import random; print(random.randint(1,
+        10)) \\\\n3. Run the code \\\\n\\\\nTool 3: Excel \\\\n\\\\nProcedure: \\\\n1.
+        Open Excel \\\\n2. Click on ''Formulas'' -> ''Random Number'' \\\\n3. Enter
+        the range 1 and 10 \\\\n4. Press Enter \\\\n\\\\nTool 4: Online Random Number
+        Generator \\\\n\\\\nProcedure: \\\\n1. Open any web browser \\\\n2. Search
+        for ''Online Random Number Generator'' \\\\n3. Enter the range 1","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate random number with specified tools in range 1-10: \\\\n\\\\nTool
+        1: Google Sheets \\\\n\\\\nProcedure: \\\\n1. Open Google Sheets \\\\n2. Click
+        on ''F5'' or ''Formulas'' -> ''Random'' -> ''RANDBETWEEN'' \\\\n3. Enter the
+        range 1 and 10 \\\\n4. Press Enter \\\\n\\\\nTool 2: Python \\\\n\\\\nProcedure:
+        \\\\n1. Open Python IDE \\\\n2. Write the following code: import random; print(random.randint(1,
+        10)) \\\\n3. Run the code \\\\n\\\\nTool 3: Excel \\\\n\\\\nProcedure: \\\\n1.
+        Open Excel \\\\n2. Click on ''Formulas'' -> ''Random Number'' \\\\n3. Enter
+        the range 1 and 10 \\\\n4. Press Enter \\\\n\\\\nTool 4: Online Random Number
+        Generator \\\\n\\\\nProcedure: \\\\n1. Open any web browser \\\\n2. Search
+        for ''Online Random Number Generator'' \\\\n3. Enter the range 1"},"id":"call-gPu3QAZYLKBvAKLL9MkezT","type":"function"}]},"logprobs":{"content":null},"finish_reason":"length"}],"usage":{"prompt_tokens":21,"total_tokens":277,"completion_tokens":256}}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb120b7980faaa-SJC
+      - 93bb679848c117ec-SJC
       content-length:
-      - '1070'
+      - '1982'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 20:01:37 GMT
+      - Tue, 06 May 2025 21:00:02 GMT
       server:
       - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '779'
+      - '1807'
     status:
       code: 200
       message: OK

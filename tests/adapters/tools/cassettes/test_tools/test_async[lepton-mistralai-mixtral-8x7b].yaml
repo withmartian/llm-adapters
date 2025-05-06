@@ -41,44 +41,46 @@ interactions:
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-ZAMMcLco9wx3PYta3eDYyJ","object":"chat.completion","created":1746561633,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
-        \"Generate random number with specified tools in the range of 1 to 10: \\\\n\\\\nTool
-        1: Google Sheets \\\\n\\\\nProcedure: \\\\n1. Open Google Sheets\\\\n2. Click
-        on ''New''\\\\n3. In cell A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5.
-        The value generated is a random number between 1 and 10.\\\\n\\\\nTool 2:
-        Python \\\\n\\\\nProcedure:\\\\n1. Open your Python IDE\\\\n2. Type ''import
-        random''\\\\n3. Type ''random.randint(1,10)''\\\\n4. Press Enter\\\\n5. The
-        value generated is a random number between 1 and 10.\\\\n\\\\nTool 3: Excel
-        \\\\n\\\\nProcedure:\\\\n1. Open Excel\\\\n2. Click on ''New''\\\\n3. In cell
-        A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5. The value generated
-        is a random number between 1 and ","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
-        \"Generate random number with specified tools in the range of 1 to 10: \\\\n\\\\nTool
-        1: Google Sheets \\\\n\\\\nProcedure: \\\\n1. Open Google Sheets\\\\n2. Click
-        on ''New''\\\\n3. In cell A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5.
-        The value generated is a random number between 1 and 10.\\\\n\\\\nTool 2:
-        Python \\\\n\\\\nProcedure:\\\\n1. Open your Python IDE\\\\n2. Type ''import
-        random''\\\\n3. Type ''random.randint(1,10)''\\\\n4. Press Enter\\\\n5. The
-        value generated is a random number between 1 and 10.\\\\n\\\\nTool 3: Excel
-        \\\\n\\\\nProcedure:\\\\n1. Open Excel\\\\n2. Click on ''New''\\\\n3. In cell
-        A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5. The value generated
-        is a random number between 1 and "},"id":"call-4uwXViSzzj7b93ZHKENmHK","type":"function"}]},"logprobs":{"content":null},"finish_reason":"length"}],"usage":{"prompt_tokens":21,"total_tokens":277,"completion_tokens":256}}'
+      string: '{"id":"chatcmpl-2m23SKANLuKeiZHySnaQVZ","object":"chat.completion","created":1746565021,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Generate random number with tools specified, range 1-10. Here are some tools
+        you can use: \\\\n- Windows: press ''Windows + R'' keys to open the Run dialog
+        box, type ''cmd'' and press Enter to open Command Prompt, then type ''rand''
+        followed by the range in the format ''1 10'' and press Enter. The output will
+        be a random number between 1 and 10. \\\\n- Mac: open Terminal, type ''open
+        -a Calculator'' and press Enter to open Calculator, then select ''Random Number
+        Generator'' from the ''Calculate'' menu and enter the range 1-10. The output
+        will be a random number between 1 and 10. \\\\n- Linux: open Terminal, type
+        ''kdialog --intrange 1 10'' and press Enter. The output will be a random number
+        between 1 and 10. \\\\n- Online: visit websites like random.org or random.org/integers/?num=1&min=1&max=10&col=1&base=10&format=html&rnd=new
+        to generate","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate random number with tools specified, range 1-10. Here are some tools
+        you can use: \\\\n- Windows: press ''Windows + R'' keys to open the Run dialog
+        box, type ''cmd'' and press Enter to open Command Prompt, then type ''rand''
+        followed by the range in the format ''1 10'' and press Enter. The output will
+        be a random number between 1 and 10. \\\\n- Mac: open Terminal, type ''open
+        -a Calculator'' and press Enter to open Calculator, then select ''Random Number
+        Generator'' from the ''Calculate'' menu and enter the range 1-10. The output
+        will be a random number between 1 and 10. \\\\n- Linux: open Terminal, type
+        ''kdialog --intrange 1 10'' and press Enter. The output will be a random number
+        between 1 and 10. \\\\n- Online: visit websites like random.org or random.org/integers/?num=1&min=1&max=10&col=1&base=10&format=html&rnd=new
+        to generate"},"id":"call-hrgvkNuTWphU5WsAFo3qyb","type":"function"}]},"logprobs":{"content":null},"finish_reason":"length"}],"usage":{"prompt_tokens":21,"total_tokens":277,"completion_tokens":256}}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb107fb8df15ef-SJC
+      - 93bb6335d9109434-SJC
       content-length:
-      - '1898'
+      - '2122'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 20:00:35 GMT
+      - Tue, 06 May 2025 20:57:02 GMT
       server:
       - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1797'
+      - '1807'
     status:
       code: 200
       message: OK
