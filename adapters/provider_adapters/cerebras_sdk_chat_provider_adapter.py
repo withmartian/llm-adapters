@@ -19,20 +19,20 @@ MODELS: list[Model] = [
         name="llama3.1-8b",
         vendor_name=Vendor.meta_llama.value,
         cost=Cost(prompt=0.10e-6, completion=0.10e-6),
-        context_length=128000,
-        completion_length=8192,
-        supports_n=False,
-        supports_vision=False,
+        context_length=32768,
     ),
     CerebrasModel(
-        name="llama3.1-70b",
+        name="llama3.3-70b",
         vendor_name=Vendor.meta_llama.value,
-        cost=Cost(prompt=0.60e-6, completion=0.60e-6),
-        context_length=128000,
-        completion_length=8192,
-        supports_n=False,
-        supports_vision=False,
+        cost=Cost(prompt=0.85e-6, completion=1.20e-6),
+        context_length=32768,
     ),
+    # CerebrasModel(
+    #     name="deepseek-r1-distill-llama-70b",
+    #     vendor_name=Vendor.deepseek.value,
+    #     cost=Cost(prompt=0.85e-6, completion=1.20e-6),
+    #     context_length=65536,
+    # ),
 ]
 
 
