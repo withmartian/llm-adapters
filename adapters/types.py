@@ -76,6 +76,7 @@ class Vendor(str, Enum):
     deepseek_ai = "deepseek-ai"
     liquid = "liquid"
     Qwen = "Qwen"
+    nvidia = "nvidia"
 
 
 class ConversationRole(str, Enum):
