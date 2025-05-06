@@ -1,0 +1,109 @@
+interactions:
+- request:
+    body: '{"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '66'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-R6Op0rDCwn6OtdvH2YynZcMW","object":"text_completion","created":1746566951,"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","choices":[{"index":0,"text":"\nI
+        need help in writing a code to find sum of even numbers in a list.\n\nI don''t
+        know much about Python, but I know a bit about loops and functions.\n\nI think
+        I can start by creating a list of numbers. Maybe using list = [1,2,3,4,5,6].
+        Then, I need to loop through each number in the list and check if it''s even.
+        If it is, add it to the sum.\n\nWait, how do I check if a number is even in
+        Python? Oh right, using modulus operator. So num % 2 == 0 would be true if
+        the number is even.\n\nSo I''ll initialize a variable called sum_even and
+        set it to 0. Then, for each number in the list, I''ll check if it''s even.
+        If yes, I add it to sum_even.\n\nLet me outline the steps:\n\n1. Create the
+        list.\n2. Initialize sum_even to 0.\n3. Loop over each element in the list:\n   a.
+        Check if the number is even.\n   b. If yes, add to sum_even.\n4. After the
+        loop, print sum_even.\n\nI think I can make this into a function to make it
+        reusable. The function will take a list as an argument and return the sum
+        of even numbers.\n\nLet me think about possible mistakes. What if the list
+        is empty? Then the function should return 0, which my code handles because
+        sum_even is initialized to 0.\n\nWhat if there are no even numbers? Then sum_even
+        remains 0, which is correct.\n\nSo putting it all together, the code would
+        look something like:\n\ndef sum_even_numbers(numbers):\n    sum_even = 0\n    for
+        num in numbers:\n        if num % 2 == 0:\n            sum_even += num\n    return
+        sum_even\n\n# Test the function\nnumbers = [1,2,3,4,5,6]\nprint(\"Sum of even
+        numbers:\", sum_even_numbers(numbers))\n\nWait, let''s test it with the sample
+        list. The even numbers are 2,4,6. Sum is 12. The code should output 12.\n\nLet
+        me think if I can make this more Pythonic. Maybe using list comprehension
+        and sum function.\n\nsum_even = sum(num for num in numbers if num % 2 == 0)\n\nBut
+        since the user is just starting, maybe it''s better to use the explicit loop
+        for clarity.\n\nI think that''s the plan. So the code would be as above.\n</think>\n\nTo
+        solve this problem, we need to find the sum of even numbers in a given list.
+        The approach will involve iterating through each element of the list, checking
+        if the element is even, and accumulating the sum of these even numbers.\n\n###
+        Approach\n1. **Create the List**: Start by defining the list of numbers for
+        which we need to compute the sum of even numbers.\n2. **Initialize Sum Variable**:
+        Create a variable to keep track of the sum of even numbers, initialized to
+        0.\n3. **Loop Through the List**: Iterate over each number in the list.\n4.
+        **Check Even Numbers**: For each number, check if it is even using the modulus
+        operator (`%`). If the number is even, add it to the sum.\n5. **Return the
+        Sum**: After processing all elements, return the accumulated sum.\n\nThis
+        method ensures that we handle all edge cases such as an empty list or a list
+        with no even numbers gracefully, as the sum will correctly default to 0.\n\n###
+        Solution Code\n\n```python\ndef sum_even_numbers(numbers):\n    sum_even =
+        0\n    for num in numbers:\n        if num % 2 == 0:\n            sum_even
+        += num\n    return sum_even\n\n# Test the function\nnumbers = [1, 2, 3, 4,
+        5, 6]\nprint(\"Sum of even numbers:\", sum_even_numbers(numbers))\n```\n\n###
+        Explanation\n- **Function Definition**: The function `sum_even_numbers` takes
+        a list of numbers as its argument.\n- **Sum Initialization**: `sum_even` is
+        initialized to 0 to start accumulating the sum of even numbers.\n- **Loop
+        Through Numbers**: Using a `for` loop, each number in the input list is checked.\n-
+        **Even Check**: The modulus operator (`%`) is used to determine if a number
+        is even. If `num % 2 == 0`, the number is even, so it is added to `sum_even`.\n-
+        **Return Result**: After all numbers are processed, the function returns the
+        total sum of even numbers.\n\nThis approach is straightforward and efficient
+        for the task, ensuring clarity and correctness for beginning programmers.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":960,"completion_tokens":959,"estimated_cost":0.00017274}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4262'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:29:11 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

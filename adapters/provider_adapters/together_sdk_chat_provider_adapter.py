@@ -13,7 +13,9 @@ from openai.types.chat import ChatCompletionMessageParam
 class TogetherModel(Model):
     provider_name: str = Provider.together.value
 
+    supports_n: bool = False
     supports_completion: bool = False
+
     can_min_p: bool = False
     can_top_k: bool = False
 

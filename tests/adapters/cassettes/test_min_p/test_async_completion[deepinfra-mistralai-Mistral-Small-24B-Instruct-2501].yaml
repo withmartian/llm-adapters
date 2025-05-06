@@ -1,0 +1,122 @@
+interactions:
+- request:
+    body: '{"model":"mistralai/Mistral-Small-24B-Instruct-2501","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '67'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-R7Dr5awNmcVS25XepDoNT1hR\",\"object\":\"text_completion\",\"created\":1746568588,\"model\":\"mistralai/Mistral-Small-24B-Instruct-2501\",\"choices\":[{\"index\":0,\"text\":\"!
+        \    Enjoy your day! >_<\\n\\nEsperabe los v\xEDdeos dentro de poco.\\n\\n\\n+++++
+        content/posts/2018-03-20-working-on-the-new-webbiz.t-Render\\n---\\ntitle:
+        Working on the new Webbiz\\nlayout: post\\nauthor: Vishnu\\ncategories:\\n
+        \   - news\\n    - webbiz\\n    - overview-tutorials\\ntags:\\n    - ios\\n
+        \   -pro-t-seo-t3\\ndate:  \\\"2018-03-20T16:12:09.000Z\\\"\\n\\n---\\nWe
+        are doing a huge website upgrade in partnership with SEO Consulting Team.
+        This will include: A new, faster API A new, more responsive design Regular
+        updates More features\\n\\n<img src=\\\"https://static.tumblr.com/1d78ab002a08c1acdeeb49aa5bd664f1/5zdxurr/LN5o25vcht/tumblr_pmuvgnhdCf1tyeq4bo1_r1_400.png\\\"
+        alt=\\\"\\\" title=\\\"\\\" ml-render=\\\"primaryImage\\\">\\n\\nSEO, Social
+        Media Setup, Testing, and much more...\\n\\nCurrently, the place where you
+        are going to submit your URLs is down for updating. Sorry about that!\\n\\nQuestions?
+        ;) #highPerformanceWords #cse #seo\\n\\n\\n+++++ swiftcross/data-types/data-types.md\\n---\\ntitle:
+        Data Types\\nlayout: page\\nauthor: Vishnu\\ndescription: The basics of Swift
+        programming includes understanding how swift for my other programming language
+        web beings.\\ntwitterDescription: \\\"\\\"<!-- -> The Swift programming series
+        tutorials provides the basic data types/Python Types.-->\\nmetaPlatform:\\nplatforms:\\n---\\n\\nIf
+        you are new to swift programming, then make sure to go through [Swift introduction](swift-introduction).\\n\\nSwift
+        Data Types are powerful, and designed to eventually replace/enhance existing
+        types in C and Objective-C. If you only use data types from the Swift standard,
+        this section will help you understand the basic types you may want to use.\\n\\n**In
+        this tutorial we shall discuss:**\\n- Basic Types\\n- Collection Types\\n-
+        Tuple\\n\\n---\\n---\\n---\\n---\\n### **1. Basics**\\n\\n### Basic Types\\nWith
+        the exception of empty types, every basic datatype has a default value that
+        once allocates is set. This means even if you haven\u2019t defined the content
+        at the time of creation, you won\u2019t get crash/deadly error! Defaults is
+        zero only for types that can be zeroed.\\n\\nFirst, create a variable **animal**,
+        that has no initialization value.\\n\\n````swift\\nvariabel animal: string!\\n````\\n\\nAs
+        a Bonus we will create dictionary so in order to add switch statement to do
+        operations.\\n\\n````swift\\nvar animal: [Int: String] = [1: \\\"Dog\\\",
+        2: \\\"cat\\\"]\\n````\\n\\nSwift\u2019s example appears to have values for
+        structure records (like a computer programmer record player). Sets of Close
+        choices (arrays, tuples, and classes) feature simple equality:\\n\\nSets collections
+        of Types (Optional, Tuple, Collections) also allow Swift-generated values.
+        Specifically bool are generally expressly written as true or false.\\n\\n````swift\\nvar
+        i = 1\\nvar hello: Bool\\n````\\n\\n\\n\\nSwitch needs to provide a tree like
+        values and scope:\\n\\nMost Collections expressly support the \\\"cases\\\".
+        However, when it comes to struct, generics can be written just like C99 (which
+        lets you know specific details).\\n\\n### Collection Types\\n\\n#### Arrays\\n\\nIn
+        swift, an array has an indexes starting from \\\"0\\\".\\n\\n````swift\\nvar
+        array = [1, 2, 3, 4, \\\"Apple\\\", \\\"Banana\\\"]\\nprint(array.count) //1st
+        elt\\nprint(array[0]) //1st elt\\nprint(array[5]) //6th elt\\n````\\n\\n####
+        Type Annotations\\n\\nAlthough you can create new array without explicitly
+        specifying its datatype (like above), you have to cast the type if your array
+        consists of mixed types:\\n\\n````swift\\nlet fibonacciNumbers = [0, 1, 1,
+        2, 3, 5, 8, 13, 21, 89, 144] as [Int] //or without [as Int]\\n````\\n\\n#####
+        **Array Modifiers**\\n\\n##### **Items Count**\\n``` swift\\n    let myArray
+        = [\\\"Apple\\\", \\\"Banana\\\"]\\n    let count = myArray.count\\n```\\n\\n**Equality**\\n```swift\\n
+        \   let myArray = [\\\"Words\\\", \\\"Number\\\"]\\n    if myArray == String
+        {\\n//        arrayOfWords == equalloStrings\\n    }\\n```\\n\\n\\n##### **New
+        Item**\\n\\nBy using append, you may add an item:\\n\\n```swift\\nlet arrayCount
+        = [1, 2, 3] //or [anArray append: @\\\"three\\\"]\\narrayCount.append[4] //or
+        arrayCount += [4]\\nlet FavoriteThings = [\\\"color\\\", \\\"number\\\", \\\"animal\\\",
+        \\\"dog\\\"]\\nFavoritesThings.insert @\\\"superAduperFamily\\\", atIndex:0
+        //starts from the zero index\\nlet myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+        10]\\nmyArray.range(MyArray.Index[7, 9].sort(decal) //creates a slice of array(range(of:2
+        to 5), including the two endpoint, producing an array of [2, 3, 3])\\n```\\n\\n#####
+        **popLast()**\\n\\nBy using popLast, you may delete an item:\\n\\n```swift\\nvar
+        arrayCount = [\\\"Words\\\", \\\"Number\\\", \\\"WordsOnGoldMarch\\\"]\\narrayCount.popLast()\\n//or
+        arrayCount.removeLast(int) <= remove at last index //Shifts\\nmyArray.removeFirst(2)
+        //remove first\\n```\\n##### **popFirst()**\\n\\n```\\nlet cart = [\\\"bread\\\",
+        \\\"Chips\\\", \\\"Orange\\\", \\\"Pills\\\", \\\"KhalksPerpowedd\\\"] //originalArray:
+        cart\\ncart.removeAll() //continues forever\\nlet newCart = cart.popLast()
+        // cart.cart[:cart.endIndex]\\ncart.popFirst() // cart.cquit == cart[cart.responsive()]\\n```\\n\\nWould
+        you like a lesson on [Swift By Example](swift-by-example)?\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":1337,\"completion_tokens\":1336,\"estimated_cost\":0.00018711}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5301'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:56:28 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

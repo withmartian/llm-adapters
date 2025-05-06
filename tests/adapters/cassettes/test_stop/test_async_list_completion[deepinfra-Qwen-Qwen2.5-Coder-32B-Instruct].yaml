@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: '{"model":"Qwen/Qwen2.5-Coder-32B-Instruct","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '79'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RwsoWiGmOmkW8gcS6wQwzMiD","object":"text_completion","created":1746567086,"model":"Qwen/Qwen2.5-Coder-32B-Instruct","choices":[{"index":0,"text":"
+        313!\\nI see you''re fond of 313! Let''s make a math problem for you.\\nFind
+        the remainder when \\\\(\\\\displaystyle \\\\left(\\\\frac{3}{4}\\\\right)^{313}\\\\)
+        is divided by 7.\\nWell, \\\\(\\\\dfrac{3}{4}\\\\equiv\\\\dfrac{3}{-3}\\\\equiv-1\\\\pmod7\\\\).\\nSo,
+        \\\\(\\\\left(\\\\dfrac{3}{4}\\\\right)^{313}\\\\equiv(-1)^{313}\\\\equiv-1\\\\equiv6\\\\pmod7\\\\).\\nTherefore,
+        the remainder is \\\\(6\\\\). Nice job! How about you try this one?\\nFind
+        the remainder when \\\\(\\\\left(\\\\dfrac{5}{6}\\\\right)^{313}\\\\) is divided
+        by 7. Here''s the attempt:\\n\\\\(\\\\dfrac{5}{6}\\\\equiv\\\\dfrac{5}{-1}\\\\equiv-5\\\\equiv2\\\\pmod7\\\\).\\nThus,
+        \\\\(\\\\left(\\\\dfrac{5}{6}\\\\right)^{313}\\\\equiv2^{313}\\\\pmod7\\\\).\\nUsing
+        Fermat''s Little Theorem, we find that \\\\(2^6\\\\equiv1\\\\pmod7\\\\), so
+        \\\\(2^{312}\\\\equiv(2^6)^{52}\\\\equiv1^{52}\\\\equiv1\\\\pmod7\\\\).\\nTherefore,
+        \\\\(2^{313}\\\\equiv2\\\\cdot1\\\\equiv2\\\\pmod7\\\\).\\nThus, the remainder
+        is \\\\(2\\\\). Great job!\\nHow about trying to find the remainder when \\\\(
+        \\\\left(\\\\frac{2}{3}\\\\right)^{313} \\\\mod 7 \\\\)?\\nSure! Let''s solve
+        it step by step.\\nFirst, we need to find the equivalent of \\\\(\\\\frac{2}{3}
+        \\mod 7\\\\). To do this, we need to find the modular inverse of 3 modulo
+        7. The modular inverse of 3 modulo 7 is a number \\(x\\) such that \\(3x \\equiv
+        1 \\pmod{7}\\\\).\n\nWe can find this by checking the multiples of 3 modulo
+        7:\n\n\\[\n\\\\begin{align*}\n3 \\\\cdot 1 &\\\\equiv 3 \\\\pmod{7}, \\\\\\\\\n3
+        \\\\cdot 2 &\\\\equiv 6 \\\\pmod{7}, \\\\\\\\\n3 \\\\cdot 3 &\\\\equiv 9 \\\\equiv
+        2 \\\\pmod{7}, \\\\\\\\\n3 \\\\cdot 4 &\\\\equiv 12 \\\\equiv 5 \\\\pmod{7},
+        \\\\\\\\\n3 \\\\cdot 5 &\\\\equiv 15 \\\\equiv 1 \\\\pmod{7}, \\\\\\\\\n3
+        \\\\cdot 6 &\\\\equiv 18 \\\\equiv 4 \\\\pmod{7}.\n\\\\","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":635,"completion_tokens":634,"estimated_cost":9.516000000000002e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2125'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:31:26 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: '{"model":"deepseek-ai/DeepSeek-R1","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RtsULPBSihOXyrwQ2O23t8VH\",\"object\":\"text_completion\",\"created\":1746566948,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"text\":\"
+        Musicians,\\n\\nI\u2019m trying to figure out how to use the new MIDI 2.0
+        features in JUCE. I\u2019ve read through the documentation and some of the
+        code, but I\u2019m still a bit confused. Specifically, I want to understand
+        how to handle MIDI 2.0 messages like Universal MIDI Packet (UMP) and how to
+        work with the new features like per-note controllers and higher resolution
+        velocity. Can someone provide a simple example or point me to the right part
+        of the JUCE codebase where MIDI 2.0 is implemented?\\n\\nAlso, are there any
+        specific considerations or best practices when transitioning from MIDI 1.0
+        to MIDI 2.0 in JUCE? Any help would be greatly appreciated!\\n\\nThanks in
+        advance!\\n\\nHi there,\\n\\nJUCE has started adding support for MIDI 2.0,
+        but it's still a work in progress. For handling Universal MIDI Packets (UMP),
+        you'll want to look at the `juce::MidiMessage` class, which has been updated
+        to parse UMP data. Check out the `MidiMessage::getUniversalPacket` method
+        to extract UMP information from incoming messages.\\n\\nRegarding per-note
+        controllers and higher resolution velocity, these are part of the MIDI 2.0
+        spec, and JUCE's `MidiBuffer` can handle these messages. You might need to
+        use the new `MidiMessage` constructors that take UMP-formatted data. For example,
+        creating a note-on message with 32-bit velocity would involve constructing
+        a `MidiMessage` with the appropriate UMP type and data.\\n\\nAs for best practices,
+        ensure your code checks the MIDI protocol version and handles both MIDI 1.0
+        and 2.0 messages appropriately. Also, test with MIDI 2.0 hardware or software
+        to verify compatibility. The JUCE team is actively working on this, so keep
+        an eye on their GitHub repo for updates.\\n\\nHope this helps!\\n\\nHi,\\n\\nThanks
+        for the response! I looked into the `MidiMessage` class and found the `getUniversalPacket`
+        method. However, when I try to process incoming MIDI 2.0 messages, I'm not
+        getting the expected data. Here's a snippet of my code:\\n\\n```cpp\\nvoid
+        processMidiMessage(const MidiMessage& message) {\\n    if (message.isUniversal())
+        {\\n        auto ump = message.getUniversalPacket();\\n        if (ump.getMessageType()
+        == MidiUniversalPacket::MessageType::Utility) {\\n            // Handle utility
+        message\\n        } else if (ump.getMessageType() == MidiUniversalPacket::MessageType::System)
+        {\\n            // Handle system message\\n        }\\n    }\\n}\\n```\\n\\nBut
+        when I s\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":566,\"completion_tokens\":564,\"estimated_cost\":0.0012305200000000001}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2698'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:29:08 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

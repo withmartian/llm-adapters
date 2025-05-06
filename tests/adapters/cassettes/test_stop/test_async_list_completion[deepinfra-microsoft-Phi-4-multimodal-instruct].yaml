@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/Phi-4-multimodal-instruct","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '83'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RoVIaDftmp0WY8EZQuUV2pLJ\",\"object\":\"text_completion\",\"created\":1746566875,\"model\":\"microsoft/Phi-4-multimodal-instruct\",\"choices\":[{\"index\":0,\"text\":\",
+        I need some help testing functions for a cluster setup I'm working on in Julia.
+        It's got this library called Minizinc, and I'm creating packages with it.
+        The setup I'm simulating uses a supernode and multiple worker nodes. I need
+        to test the MinizincDriver's functions, namely `deploy`, `getCurrentPackage`,
+        and `setupOtherPackages`. I\u2019m also supposed to support different system
+        architectures.\\n\\nThe tests should run concurrently, but I want to check
+        if the deployed package on the supernode and each worker node matches. I also
+        need to set random statuses and system properties on the supernode, then get
+        a package and make sure its binaries are there on all the workers.\\n\\nFor
+        `setupOtherPackages`, I'm supposed to test that it creates the correct number
+        of worker nodes, waits for all packages, and sets up their binaries correctly.
+        It\u2019s also essential to ensure that the function sets the start and \",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":187,\"completion_tokens\":186,\"estimated_cost\":1.8650000000000003e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1228'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:27:55 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '84'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RoGIv6GxhpoDuWEOlpJJXCke\",\"object\":\"text_completion\",\"created\":1746568510,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\"choices\":[{\"index\":0,\"text\":\"OKRailPortlet=Hola
+        + ) +)\\nWhat\u2019s happening is that the last token, \u201CPortlet\u201D,
+        is being treated as the next part of the URL path because the + character
+        indicates that the preceding token, \u201CHelloWorldPortlet\u201D, is a path
+        token. What we need to do is to introduce a separator token to separate the
+        path from the query parameters. By default, Liferay Portal treats the \u201C?\u201D
+        character as the separator token for query parameters. We also need to replace
+        the \u201C+\u201D character with the encoded \u201C%20\u201D so that it\u2019s
+        treated as a space character instead of a path delimiter.\\nAfter modification,
+        the JSP code should look like this:\\nString queryString = \\\"greeting=\\\"
+        + request.getParameter(\\\"greeting\\\") + \\\"?\\\" + \\\"add=1&portletAction=printMessage&message=Hello+World\\\";\\nBut
+        how can we encode the \u201C+\u201D character so that it\u2019s treated as
+        a space character instead of a path delimiter? This is where the URLEncoder
+        comes in handy. We can use the URLEncoder to encode the \u201C+\u201D character
+        as \u201C%20\u201D, like this:\\nString greeting = request.getParameter(\\\"greeting\\\");\\nString
+        encodedGreeting = URLEncoder.encode(greeting, \\\"UTF-8\\\").replace(\\\"+\\\",
+        \\\"%20\\\");\\nString queryString = \\\"greeting=\\\" + encodedGreeting +
+        \\\"?\\\" + \\\"add=1&portletAction=printMessage&message=Hello+World\\\";\\nThe
+        URL will then be constructed as follows:\\n/greeting=Hello%20World?add=1&portletAction=printMessage&message=Hello+World\\nAs
+        you can see, the encoded \u201C+\u201D character is now treated as a space
+        character instead of a path delimiter.\\nThat\u2019s it for now. I hope this
+        helps clarify how Liferay Portal treats path and query parameters. Thanks
+        for your patience, and please let me know if you have any questions or need
+        further clarification.\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":389,\"completion_tokens\":388,\"estimated_cost\":0.00010874}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2051'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:55:10 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

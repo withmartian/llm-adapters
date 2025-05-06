@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"model":"Qwen/QwQ-32B-Preview","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '68'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RNP06E92f9QT6XKn749ZUy1F","object":"text_completion","created":1746567074,"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B","choices":[{"index":0,"text":"\nOkay,
+        so I need to figure out how to solve this problem. Hmm, let me read it again.
+        It says, \"Jordan wants to save $5,000 in 3 years. How much should he save
+        each month if he can earn an annual interest rate of 4% compounded monthly?\"
+        Alright, so Jordan is trying to save $5,000, and he wants to do this over
+        3 years. He''s going to be putting money aside each month, and this money
+        will earn 4% interest annually, compounded monthly. So, I guess I need to
+        find out how much he should save each month to reach his goal. \n\nOkay, let''s
+        break it down. The key things here are the amount he wants to save, which
+        is $5,000. The time period is 3 years, and the interest rate is 4% per annum,
+        compounded monthly. Since he''s saving each month, the type of annuity here
+        is an ordinary annuity where payments are made at the ","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":214,"completion_tokens":213,"estimated_cost":3.846e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1128'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:31:14 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

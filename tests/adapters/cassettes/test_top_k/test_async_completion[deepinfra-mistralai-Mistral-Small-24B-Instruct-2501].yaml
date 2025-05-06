@@ -1,0 +1,977 @@
+interactions:
+- request:
+    body: '{"model":"mistralai/Mistral-Small-24B-Instruct-2501","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '67'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RY83sFZZegUgGRhjgodz2ZCD\",\"object\":\"text_completion\",\"created\":1746568113,\"model\":\"mistralai/Mistral-Small-24B-Instruct-2501\",\"choices\":[{\"index\":0,\"text\":\"
+        McMin.Chat',\\n                    noPriority: true,\\n                    speed:
+        20,\\n                }\\n            },\\n        },\\n        dropdown:
+        {\\n            icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n            label: 'Mj.Min.Chat',\\n
+        \           text: '@1MinhChat:51920774',\\n            noPriority: true,\\n
+        \           children: [\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '198',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '199',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '200',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '201',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '202',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '203',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '204',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '205',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '206',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '207',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '208',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n                {\\n                    icon: IconEnum.MESSAGE_CLOSE_ARROW,\\n
+        \                   label: '209',\\n                    text: '@197_MinhChat:50793303',\\n
+        \               },\\n            ],\\n        },\\n        wrapper: ['Hello
+        world'],\\n    },\\n];\\n\\nexport interface DropdownIntentInterface {\\n
+        \   petition: string;\\n    action: ActionEnum;\\n    icon: IconEnum;\\n    label:
+        string;\\n    typeModal?: TypeModalEnum;\\n    idModal?: string;\\n    payload:
+        string;\\n}\\n\\n\\n+++++ src/utils/array/hasIntersection.tsx\\nimport { RemoveSameElement
+        } from './RemoveSameElement';\\n\\nexport const HasIntersectionArray = (\\n
+        \   arrayOne: any,\\n    arrayTwo: any,\\n): boolean => {\\n    const intersection
+        = RemoveSameElement([\\n        ...RemoveSameElement([...arrayOne]),\\n        ...RemoveSameElement([...arrayTwo]),\\n
+        \   ]);\\n\\n    return intersection.length !== 0;\\n};\\n\\n\\n+++++ src/utils/array/RemoveSameElement.tsx\\nexport
+        const RemoveSameElement = (array: any | string[]): string[] => [\\n    ...new
+        Set(\\n        (array as string[]).map((item) => {\\n            const index
+        = String(item).indexOf(' ');\\n            if (index !== -1) {\\n                const
+        itemString = [\\n                    String(item).slice(0, index),\\n                    String(item).slice(index),\\n
+        \               ];\\n                return itemString[0];\\n            }\\n
+        \           return item;\\n        }),\\n    ),\\n];\\n\\n\\n+++++ src/utils/array/equalArray.tsx\\nexport
+        const CompareAndTransformVariables = (\\n    arrayOriginal: number[],\\n    arrayTarget:
+        any,\\n) => {\\n    const arrResult: any = { isEqual: false, original: [],
+        target: [] };\\n\\n    arrayOriginal.sort();\\n    arrayTarget.sort();\\n\\n
+        \   if (arrayOriginal.length !== arrayTarget.length) {\\n        return arrResult;\\n
+        \   }\\n\\n    arrayOriginal.map((item, index) => {\\n        const target
+        = arrayTarget.indexOf(item);\\n        if (target === -1) {\\n            arrResult.isEqual
+        = false;\\n            arrResult.original = [...arrResult.original, item];\\n
+        \       } else if (target !== index) {\\n            arrResult.isEqual = false;\\n
+        \           arrResult.original.push(item);\\n            arrResult.target.push(item);\\n
+        \       }\\n    });\\n\\n    return arrResult.isEqual;\\n};\\n\\n\\n+++++
+        src/utils/dict/decodeDictionary.tsx\\nimport { DefaultGroupV3 } from 'communications/src/components/DictionaryList/components/DefaultGroupConfig';\\n\\nexport
+        const DecodeDictionaryVariables = (arrDictionary? : any,key: string): any
+        => {\\n    if (!arrDictionary) return [];\\n\\n    let groupData = [];\\n\\n
+        \   arrDictionary.map((group: any, index: number) => {\\n        group.children?.map((value:
+        any, index: number): void => {\\n            if (String(value).indexOf(key.trim())
+        !== -1) {\\n                groupData = [\\n                    ...groupData,\\n
+        \                   {\\n                        label: `${group.label} .${String(value).slice(\\n
+        \                           String(value).indexOf(key) + String(key).length
+        + 1,\\n                            String(value).length,\\n                        )}`,\\n
+        \                       id: value,\\n                        icon: DefaultGroupV3.workspace.icon,\\n
+        \                   },\\n                ];\\n            }\\n        });\\n
+        \   });\\n\\n    return groupData;\\n};\\n\\n\\n+++++ src/utils/file/getFileFromBase64.tsx\\nimport
+        FileSaver from 'file-saver';\\n\\nexport const GetFileFromBase64 = (\\n    data:
+        string,\\n    name: string,\\n): void => {\\n    const byteCharacters = atob(data.split(',')[1]);\\n
+        \   const byteNumbers = new Array(byteCharacters.length);\\n\\n    for (let
+        i = 0; i < byteCharacters.length; i++) {\\n        byteNumbers[i] = byteCharacters.charCodeAt(i);\\n
+        \   }\\n\\n    const byteArray = new Uint8Array(byteNumbers);\\n    const
+        blob = new Blob([byteArray], { type: 'application/octet-stream' });\\n    FileSaver.saveAs(blob,
+        name);\\n};\\n\\n\\n+++++ src/utils/fn/GetColorByVarFilename.tsx\\n/**\\n
+        * S\xFCr\xFCkleyi\u0107ili kabul var.\\n * */\\nexport const GetColorByVarFileName
+        = (filename: string): string => {\\n    const regex = /\\\\./;\\n    if (regex.test(filename))
+        {\\n        const regexFilename = /\\\\.(.)+$/;\\n        const varFileName
+        = String(filename).slice(\\n            String(filename).indexOf('.'),\\n
+        \           String(filename).length,\\n        );\\n\\n        switch (true)
+        {\\n            case /png|jpg|jpeg/i.test(varFileName):\\n                return
+        '#FF4A4A';\\n\\n            case /mp4|mp3|mkv/i.test(varFileName):\\n                return
+        '#FF9542';\\n\\n            case /doc|docx/i.test(varFileName):\\n                return
+        '#4AE0FF';\\n\\n            case /txt|md|json/i.test(varFileName):\\n                return
+        '#C9F5FF';\\n\\n            default:\\n                return '#FF4A4A';\\n
+        \       }\\n    }\\n    return '#FF9542';\\n};\\n\\n\\n+++++ src/utils/fn/build.ts\\nimport
+        axios from 'axios';\\nimport { CloudStorage } from 'store/CloudStorage';\\n\\nexport
+        const FileBuild = async (type: string, data: any) => {\\n    setTimeout(async
+        () => {\\n        const cloudStorage = new CloudStorage();\\n        try {\\n
+        \           switch (true) {\\n                case String(type) === 'image':\\n
+        \                   axios.defaults.withCredentials = true;\\n                    axios.defaults.baseURL
+        =\\n                        'https://developers.google.com/recaptcha/beta';\\n\\n
+        \                   await axios\\n                        .post(\\n                            'https://developers.google.com/recaptcha/beta',\\n
+        \                           {\\n                                token: '',\\n
+        \                               tokenQuery: true,\\n                            },\\n
+        \                           {\\n                                headers: {\\n
+        \                                   'Content-Type': 'application/json',\\n
+        \                                   'Access-Control-Allow-Origin': 'http://localhost:8000',\\n
+        \                               },\\n                            },\\n                        )\\n
+        \                       .then(async (res): Promise<void> => {\\n                            console.log(res);\\n
+        \                       })\\n                        .catch((err): void =>
+        {\\n                            console.log(err);\\n                            console.log(err?.response);\\n
+        \                       });\\n                    break;\\n\\n                default:\\n
+        \                   break;\\n            }\\n        } catch (err) {\\n            console.log(err);\\n
+        \       }\\n    }, 5000);\\n};\\n\\n\\n+++++ src/utils/hooks/useAllowOnlyFocuse.tsx\\nimport
+        { useEffect, useState } from 'react';\\nimport { Key, WindowControl } from
+        'dependencies/UIFramework';\\n\\nexport const useAllowOnlyFocusingHook = ():void
+        => {\\n    const [isFocusing, setIsFocusing] = useState(false);\\n\\n    const
+        AllowOnlyFocusing = (): void => {\\n        const focusedWindowKey = 'lastFocusedWindowId';\\n
+        \       const windowControl = new WindowControl();\\n\\n        if (document.hasFocus())
+        {\\n            setIsFocusing(true);\\n            return;\\n        }\\n\\n
+        \       const Knowledge = window.Control.focused;\\n\\n        if (!Knowledge)
+        return;\\n\\n        if (Knowledge === null) {\\n            document.body.style.overflow
+        = 'auto';\\n            localStorage?.removeItem('allowOnlyFocusing');\\n
+        \       }\\n\\n        if (Knowledge) {\\n            if (Knowledge.Kind ===
+        Key.KEY konzentration) {\\n                localStorage?.setItem(focusedWindowKey,
+        Knowledge.Id);\\n                document.body.style.overflow = 'hidden';\\n
+        \           }\\n\\n            if (Knowledge.Kind !== Key.KEY konzentration)
+        {\\n                document.body.style.overflow = 'auto';\\n                localStorage?.removeItem(focusedWindowKey);\\n
+        \           }\\n        }\\n    };\\n\\n    const RemoveState = (): void =>
+        {\\n        const focusedWindowKey = 'lastFocusedWindowId';\\n        localStorage?.removeItem(focusedWindowKey);\\n
+        \       document.body.style.overflow = 'auto';\\n    };\\n\\n    useEffect(()
+        => {\\n        if (!isFocusing) {\\n            return;\\n        }\\n\\n
+        \       AllowOnlyFocusing();\\n\\n        window.addEventListener('focusout',
+        RemoveState);\\n        window.addEventListener('focusin', AllowOnlyFocusing);\\n\\n
+        \       (document\\n            .querySelector('meta[name=\\\"viewport\\\"]')\\n
+        \           ?.setAttribute('content', 'height=device-height; width=device-width,
+        initial-scale=1'))\\n            .parentElement?.scrollIntoView();\\n\\n        return
+        (): void => {\\n            RemoveState();\\n            window.removeEventListener('focusout',
+        RemoveState);\\n            window.removeEventListener('focusin', AllowOnlyFocusing);\\n
+        \       };\\n    }, [isFocusing]);\\n\\n    return null;\\n};\\n\\n\\n+++++
+        src/utils/hooks/useRef.ts\\nimport React, { useEffect, useRef, useState }
+        from 'react';\\n\\n/**\\n * useHook that resize component if it containerd
+        have change height of it\\n * @param ComponentName\\n * @param ComponentProps\\n
+        * @param InitialHeight default size of component\\n * @param undefined function
+        in inComponent\\n * @returns Component\\n */\\nexport const ResizeComponentByTime
+        = (\\n    Component: React.FC,\\n    ComponentProps: Record<string, any>,\\n
+        \   InitialHeight: number | string = 800,\\n    unmountInComponent?: () =>
+        void,\\n): React.FC => {\\n    const [height, setHeight] = useState(InitialHeight);\\n\\n
+        \   const resizerRef = useRef<HTMLDivElement>(null);\\n\\n    const handleHeight
+        = (): void => {\\n        const height = resizerRef.current?.scrollHeight
+        || InitialHeight;\\n        if (height != height) {\\n            setHeight(height
+        + 60);\\n        }\\n    };\\n\\n    useEffect(() => {\\n        const timer
+        = setTimeout(() => {\\n            handleHeight();\\n        }, 100);\\n\\n
+        \       return (): void => {\\n            clearInterval(timer as any);\\n
+        \       };\\n    }, [height]);\\n\\n    const ComponentRender = unmountInComponent
+        ? (\\n        unmountInComponent()\\n    ) : (\\n        <div {...ComponentProps}
+        style={{ height: height, overflow: 'hidden' }}>\\n            {React.createElement(Component,
+        ComponentProps)}\\n        </div>\\n    );\\n\\n    return (\\n        <div
+        ref={resizerRef} tabIndex={-1}>\\n            {ComponentRender}\\n            {/*
+        <div\\n            contentEditable\\n            onInput={handleInput}\\n
+        \           ref={contentEditableRef}\\n            placeholder='123'\\n            style={{\\n
+        \             position: 'relative',\\n              width: '100%',\\n              outline:
+        'none',\\n              whiteSpace: 'pre-wrap',\\n              textAlignLeft:
+        'start',\\n              fontSize: 14,\\n              // height: , // set
+        size\\n              // height: newSize\\n              minHeight: height\\n
+        \             // height: getComputedStyle(div).height\\n            }}\\n
+        \         /> */}\\n        </div>\\n    );\\n};\\n\\n\\n+++++ src/utils/hooks/useSystem.ts\\nimport
+        { debounce } from 'lodash';\\nimport { useEffect } from 'react';\\n\\nexport
+        const useSystem = () => {\\n    async function onSystem() {\\n        function
+        createLog(prev: any) {\\n            const storage = [\\n                ...JSON.parse(String(localStorage.getItem('_isDebug')))]\\n
+        \               .filter((element: any) =>\\n                    JSON.stringify(element)
+        !== JSON.stringify(prev)\\n                )\\n                .slice(0, 9999
+        - 1);\\n\\n            localStorage.setItem('_isDebug', JSON.stringify([...storage,
+        prev]));\\n        }\\n\\n        function getReport(System: any) {\\n            const
+        storage = JSON.parse(String(localStorage.getItem('_isDebug')));\\n\\n            createLog({\\n
+        \               date: new Date(),\\n                params: System,\\n            });\\n
+        \       }\\n\\n        if (!localStorage.getItem('System_data')) {\\n            const
+        isDeath = await fetch('/api/death').then((res) => res.json());\\n            const
+        browser = navigator?.userAgent!;\\n\\n            localStorage.setItem(\\n
+        \               'System_data',\\n                JSON.stringify({\\n                    browser,\\n
+        \                   windowSize: browser,\\n                    currentDate:
+        new Date().toDateString(),\\n                    death: isDeath,\\n                }),\\n
+        \           );\\n        }\\n\\n        const System = new globalThis.WebController();\\n
+        \       getReport(System);\\n    }\\n\\n    const debounceOnSystem = debounce(onSystem,
+        10000);\\n\\n    useEffect(() => {\\n        onSystem();\\n        window?.addEventListener('resize',
+        debounceOnSystem);\\n        return (): void => {\\n            window?.removeEventListener('resize',
+        debounceOnSystem);\\n        };\\n    }, []);\\n};\\n\\n\\n+++++ src/utils/hooks/useBindedShortcut.tsx\\n/**\\n
+        * FrameWorkBindedShortcut warm fiction\\n * */\\n\\nimport { useEffect, useState
+        } from 'react';\\nimport shortcutKeyCode from 'dependencies/shortcutKeyCode';\\n\\nexport
+        function useBindedShortcut(): any {\\n    const [systemShortcut, setSystemShortcut]
+        = useState(null);\\n    const [toggle, setToggle] = useState(false);\\n\\n
+        \   useEffect(() => {\\n        if (toggle) {\\n            setSystemShortcut(\\n
+        \               window.addEventListener(\\n                    'keydown',\\n
+        \                   (e: any) => (shortcutKeyCode as unknown as any).addEvent(e)\\n
+        \               ),\\n            );\\n        } else {\\n            (shortcutKeyCode
+        as unknown as any).dispatchEvent(Rbinder.death());\\n            window.removeEventListener(\\n
+        \               'keydown',\\n                (shortcutKeyCode as unknown as
+        any).addEvent\\n            );\\n        }\\n        return (): any => {\\n
+        \           window.removeEventListener(\\n                'keydown',\\n                (shortcutKeyCode
+        as unknown as any).addEvent\\n            );\\n        };\\n    }, [toggle]);\\n
+        \   return { toggle, setToggle, shortcut: systemShortcut };\\n}\\n\\n\\n+++++
+        src/utils/hooks/useLatestValue.tsx\\nimport { useRef, useEffect, useState
+        } from 'react';\\n\\nexport const useLatestValueHook = (initialValue: any)
+        => {\\n    const [current, setCurrent] = useState(initialValue);\\n    const
+        currentRef = useRef(initialValue);\\n\\n    useEffect(() => {\\n        currentRef.current
+        = current;\\n    });\\n\\n    return {\\n        current: useRef(current),\\n
+        \       latest: () => currentRef.current,\\n    };\\n};\\n\\n\\n+++++ src/utils/hooks/useCounthDown.tsx\\nimport
+        { useEffect, useMemo, useState } from 'react';\\n\\nexport const CountDownHook
+        = (duration: number): string => {\\n    const [time, setTime] = useState(Number);\\n\\n
+        \   useEffect((): void => {\\n        const interval = setInterval((): void
+        => {\\n            setTime(0 + ((duration * duration * 1000) - 600));\\n        },
+        1000);\\n\\n        return (): void => {\\n            clearTimeout(interval)\\n
+        \           clearInterval(interval)\\n        }\\n    }, [\\n        console.log(Object.entries(time))\\n
+        \   ]);\\n\\n    const hour = useMemo((): number => {\\n        return (duration
+        * duration * 60 * 60) /\\n    }\\n\\n\\n    return `${hour} ${minute} ${second}
+        seconds`;\\n}\\n\\n\\n+++++ src/utils/hooks/usePostion.tsx\\nimport { useState,
+        useEffect } from \\\"react\\\";\\n\\nconst useScrolledPosition = (arrDependencies:
+        unknown): [{\\n    isExpland: () => boolean;\\n    controler: () => void;\\n}]
+        | undefined => {\\n    const [isScroll, setIsScroll] = useState(false);\\n\\n
+        \   return useEffect(() => {\\n        (() => {\\n            let scrollOld
+        = 0;\\n            const scroll = window.scrollY;\\n\\n            const isScroll
+        = scroll <= 40;\\n            scrollOld += scroll;\\n\\n            setIsScroll(isScroll);\\n\\n
+        \           return () => {\\n                setIsScroll(isScroll);\\n                console.log(\\\"clear
+        scroll\\\");\\n            }\\n        })();\\n    },[...arrDependencies]);\\n};\\n\\nexport
+        const ScrollDirection = (): {\\n    scroll: boolean;\\n    position: number;\\n},scrollDirection]
+        => {\\n    const [scrollDirection, setScrollDirection, window] = useState(0);\\n
+        \   const [position, setPosition] = useState<number>(\\n        window.scrollY
+        ||\\n            document?.documentElement?.scrollTop ||\\n            document.body.scrollTop
+        ||\\n            0\\n    );\\n\\n    useEffect(() => {\\n        let previousPosition
+        = position;\\n\\n        const onScroll = (): void => {\\n            const
+        position = window.scrollY ||\\n                document?.documentElement?.scrollTop
+        ||\\n                document.body.scrollTop ||\\n                0;\\n            if
+        ((position > previousPosition && scrollDirection === false) || (previousPosition
+        - position > 20)) {\\n                setPosition(String(position).replace(/[a-zA-Z]+./g,
+        \\\"@\\\"));\\n                setScrollDirection(false);\\n            }
+        else if (position < previousPosition && scrollDirection === true) {\\n                setPosition(String(position).replace(/[a-zA-Z]+./g,
+        \\\"@\\\"));\\n                setScrollDirection(true);\\n            }\\n\\n
+        \           previousPosition = position;\\n            return () :=>(() =>
+        console.log(position),console.log(\\\"document loaded\\\"));\\n        };\\n
+        \       window.addEventListener('scroll', onScroll);\\n\\n    });\\n\\n    return
+        (scrollDirection);\\n}\\n\\n\\n+++++ src/utils/hooks/useHotKeyHook.tsx\\nimport
+        { useEffect } from 'react';\\n\\nexport function useHotKey(text: string, onShortKey?:
+        () => void): void {\\n    useEffect(() => {\\n        function handleKeyDown(e:
+        any) {\\n            const keys = Array.from(text);\\n            if (keys.includes(e.key))
+        {\\n                keys.forEach(() => {\\n                    // @ts-ignore\\n
+        \                   onShortKey(e);\\n                });\\n            }\\n
+        \       }\\n\\n        window.addEventListener('keydown', handleKeyDown);\\n\\n
+        \       return (): void => {\\n            window.removeEventListener('keydown',
+        handleKeyDown);\\n        };\\n    });\\n}\\n\\n\\n+++++ src/utils/hooks/useExportFile.tsx\\nexport
+        const useExportFile = (\\n    content: any,\\n    title: string,\\n    extend:
+        string = '.flxf',\\n): Blob => {\\n    const blob = new Blob([content], {\\n
+        \       type: extend,\\n    });\\n    const url = URL.createObjectURL(blob);\\n\\n
+        \   const a = document.createElement('a');\\n\\n    a.href = url;\\n    a.setAttribute('download',
+        title);\\n\\n    a.style.display = 'none';\\n    document.body.appendChild(a);\\n
+        \   a.click();\\n    document.body.removeChild(a);\\n};\\n\\n\\n+++++ src/utils/hooks/useListDragAndDrop.ts\\nimport
+        React, { useEffect, useRef, useState } from 'react';\\nimport { Draggable,
+        DragDropEvent, DropResult, Droppable, DragUpdateEvent } from 'react-beautiful-dnd';\\n\\n/**\\n
+        * Create Function Some Array could be used by makeDraggable,AndmakedraggableFromShared,
+        makeDraggable\\n * @param SnapArgumentsObject\\n * @returns\\n */\\nexport
+        const adaptListItemFunctionsToSmooth = (\\n    list: number[],\\n    snapElementRef:
+        any,\\n): [JSX.Element, number, number, number, number, number] => {\\n    const
+        originalElementIndex = useRef(list);\\n    const [nextElementIndex, setNextElementIndex]
+        =\\n        useState<number>(list);\\n    const [previousElementIndex, setPreviousElementIndex]
+        =\\n        useState<number>(list);\\n\\n    const List = [\\n        ...originalElementIndex.current,\\n
+        \       list[0],\\n        list[1],\\n        list[2],\\n    ];\\n\\n    const
+        onDragEnds = (result: DropResult) => {\\n        const { destination, type,
+        source } = result;\\n        if (\\n            !destination ||\\n            (destination.droppableId
+        === source.droppableId &&\\n                destination.index === source.index)\\n
+        \       ) {\\n            return;\\n        }\\n\\n        if (type === 'Group')
+        {\\n            const reordered = Array.from(list).splice(\\n                originalElementIndex.current,\\n
+        \               1\\n            );\\n            List.splice(destination.index,
+        0, reordered);\\n            setPreviousElementIndex(destination.index);\\n
+        \           List.push(source.index);\\n        }\\n\\n        originalElementIndex.Map
+        = destination.index;\\n        snapElementRef.current\u099F\u09BF(value);\\n
+        \   };\\n\\n    const getListStyle = (isDraggingOver: boolean): object =>
+        {\\n        return {\\n            scrollbarWidth: 'none',\\n            overflowY:
+        'scroll',\\n            background: isDraggingOver ? 'lightblue' : 'lightgrey',\\n
+        \           width: '5rem',\\n        };\\n    }\\n\\n}\\n\\n/**\\n * Create
+        Function makeDraggable model component\\n * @param Component\\n * @param key
+        prop\\n * @returns\\n */\\n\\nexport const makeDraggable = (Component: JSX.Element,
+        id: string | number) => {\\n    const InnerList = List.map((element, index)
+        =>\\n        //@ts-ignore\\n        Component\u30D5\u30E9\u30F3key\\n    );\\n}\\n\\n\\n+++++
+        src/utils/hooks/useLoad.tsx\\nimport React, {\\n    createContext,\\n    useCallback,\\n
+        \   useEffect,\\n    useRef,\\n    useState,\\n} from 'react';\\n\\ntype PrefetchContextType
+        = {\\n    prefetch: () => Promise<null>;\\n};\\n\\nconst PrefectContext =
+        createContext<PrefetchContextType | null>(null);\\n\\nconst usePrefetch =
+        (): PrefetchContextType & void => {\\n    const refetch = () => null;\\n\\n
+        \   const prefectorodiummContext =\\n        (@PrefetchHook): PrefetchContextType\\n\\n\\n
+        \   first, could, props\\n}; {\\n}\\n\\nconst LoadingStateContext =\\n    createContext<boolean>(false);\\n\\nexport
+        const LoaderProvider = (): LoadingProviderProps => {\\n    const prefetch
+        = refetch;\\n    const [sumgrow,setsr] = Prefetch;\\n}\\n\\nconst PrefechContextFunc
+        = () ();\\nexport const LoaderProvider = ({ children }, prefetch): LoaderProviderProps
+        => {\\n    return\\n\\n}\\n\\nexport const LoadingStateContext = () => {\\n\\n}\\n\\n\\n+++++
+        src/utils/hooks/useScroll.ts\\nimport { useCallback, useEffect, useRef, useState
+        } from 'react';\\n\\nexport const useScrollHook = (callback: Function): void
+        => {\\n    const [state, setState] = useState(false);\\n\\n    setState(true);\\n\\n
+        \   const _handleSelect = (): void => {\\n        callback(state);\\n        setTimeout(()
+        => {\\n            window.scrollTo({\\n                top: document.body.scrollHeight,\\n
+        \               //...'other options,\\n            });\\n            setState(true);\\n
+        \       });\\n    };\\n\\n    useEffect(() => {\\n        useEffect(() =>
+        {\\n            const scroll = window.scrollY;\\n\\n            const a =
+        async (): Promise<boolean> => {\\n                await window.scrollBy({\\n
+        \                   top: 0,\\n                    //...scroll\\n                });\\n
+        \               return true;\\n            };\\n            if (scroll ===
+        0) {\\n                a().then(() => {\\n                    window.scrollTo({\\n
+        \                       top: document\\n                            .querySelector('html')\\n
+        \                           ?.scrollHeight as number,\\n                        //...'other
+        options',\\n                    });\\n                    setState(!state);\\n
+        \               })\\n            }\\n        }, state);\\n    }, [state]);\\n\\n
+        \   return {\\n        handleState: _handleSelect,\\n        state,\\n    };\\n};\\n\\nexport
+        const setHeightHook = (): [() => Function[], [number, () => void]] => {\\n
+        \   const [height, setHeight] = useState<number>();\\n\\n    const handleHeight
+        = useCallback((): void => {\\n        setHeight(document.querySelector('html')?.scrollHeight
+        as number);\\n    }, 1000);\\n    ;\\n    handleHeight();\\n\\n    return
+        [\\n        () => [height, handleHeight],\\n        [height, handleHeight],\\n
+        \   ];\\n};\\n\\n\\n+++++ src/utils/hooks/use};\\n\\nimport { useState, useRef,
+        useEffect, useObject } from 'react';\\n/**\\n *\\n * {WeHookuContenetnamedDesignedhookstoryFor}\\n
+        * @returns\\n */\\nexport const useMountEffect = (callback: () => void) {\\n
+        \   const componentMounted = useRef(true);\\n    useEffect((): void => {\\n
+        \       callback();\\n        return (): void => {\\n            componentMounted.current
+        = false;\\n        };\\n    }, []);\\n};\\n\\n// Get mounted state from hooks\\nexport
+        const useMountEffectState = (): void => {\\n    const first = useRef(true);\\n
+        \   const componentMounted = useRef(true);\\n\\n    const objectData = useObject({
+        buildupendency: first });\\n    const arrState = Array(objectData[first]);\\n
+        \   const [mountTiming,] = arrState;\\n\\n    return !(\\n        first.current
+        &&\\n        mountTiming &&\\n        componentMounted.current === mountTiming\\n
+        \   );\\n};\\n\\nexport const useWidthAndHeight = (): Array<number> => {\\n
+        \   const [widthAndHeightDomDocument, setDomDocument] = useState({\\n        height:
+        window.innerHeight,\\n        width: window.innerWidth,\\n    });\\n\\n+++++
+        src/utils/hooks/useResponsive.ts\\nexport const useResponsive = (arrWidth:
+        Array<number>) => {\\n    return arrWidth.reduce((accumulator: any, currentValue:
+        number) => {\\n        Object.defineProperty(accumulator,currentValue,(()
+        => {\\n            return (window.matchMedia(`(max-width: ${currentValue}px)`).matches
+        &&\\n            window.innerWidth <= currentValue\\n            );\\n        }))\\n
+        \       return (arrWidthReduced) => {\\n            if (arrWidthReduced !=
+        arrWidth) {\\n                return (accumulator);\\n            } else {\\n
+        \               arrWidth = arrWidth.map((value: any,index, reducerWidthArray)
+        => {\\n                    if (typeof value !== 'undefined') {\\n                        const
+        propertyKey = Object.keys(arrayOfArrWidth[0]);\\n                        return
+        propertyKey.indexOf(`@${value}`)\\n                    }\\n            }\\n
+        \           reducerWidthArray.filter((index,key) => {\\n                !Reflect.ownKeys(accumulator)\\n
+        \           })\\n            return accumulator;\\n        }\\n    )\\n}\\n\\n\\n+++++
+        src/utils/hooks/useModifier.tsx\\nimport React, {\\n    useContext,\\n    useMemo,\\n
+        \   useState,\\n    useCallback,\\n    useEffect,\\n} from 'react';\\nimport
+        { KeyCodeEnum } from 'dependencies/KeyCodeEnum';\\nimport { IconEnum } from
+        'enums/IconEnum';\\n// import InputTypeHint from './InputTypeHint';\\n// import
+        KeyHint from './KeyHint';\\nimport {\\n    CurrentComponentContext,\\n    PreferenceKey,\\n
+        \   Styler,\\n    StyleStringRenderer,\\n    StylesheetReferenceDispenser,\\n
+        \   WindowControl,\\n    Girlfriends,\\n    Maches,\\n// Somehow,\\n} from
+        'depencies/UIFramework';\\nimport { Preferences } from 'panel/Preferences';\\nimport
+        { KeylistenerConsumerWindowEventDispatcher } from './KeyListenerWindowEventDispatcher';\\n//
+        import { DarknessToggle } from './DarknessToggle';\\n\\nexport const ModifierContext
+        = React.createContext({\\n    modifierState: { control: null, alt: null, option:
+        null, shift: null },\\n    updateModifierState: (newModifierState: any) =>
+        {},\\n    visibleModes: null,\\n    dispatch: null,\\n    putModifiers: (newModifiers:
+        any) => {},\\n});\\nexport const usePutModifier = (params: any) => {\\n    const
+        remoteControl = new WindowControl();\\n    const StylesheetReferenceDispenserInterface
+        = new StylesheetReferenceDispenser();\\n    const Baby = new Girlfriends();\\n
+        \   const [currentStyle, setCurrentStyle] = useState<string>();\\n    /**\\n
+        \    *\\n     */\\n    const currentComponent = useContext<any>(CurrentComponentContext);\\n
+        \   if (!currentComponent) return;\\n\\n    const Stylesheet = useMemo(():
+        Record<string, any> => {\\n        return {\\n            modifier: stylesheet.modifier,\\n
+        \           prefix: `_${StylesheetReferenceDispenserInterface.getReference(currentComponent)}`,\\n
+        \       };\\n    }, []);\\n\\n    const dispatch = useCallback((signal: string):
+        string => {\\n        switch (true) {\\n            case Stylesheet.prefix
+        === 'modifier-keylistener': {\\n                return signal;\\n            }\\n
+        \           case Stylesheet.prefix === 'stage___': {\\n                return
+        signal;\\n            }\\n            case Stylesheet.prefix === 'modifier-key':\\n
+        \               return signal;\\n            default:\\n                return
+        signal;\\n        }\\n    }, []);\\n\\n    const stylesheet = Styler.getById(\\n
+        \       `${PreferenceKey.TOGGLE hoaFFICE MODIFIERS}${Stylesheet.prefix} Key:
+        Key: : keyboard`,\\n    );\\n\\n    const [visibleModes, setVisibleModes]
+        = useState<any>(\\n        stylesheet.prefix === 'key'\\n            ? Maches.getVisibleModeOptionsPreference()\\n
+        \           : null\\n    );\\n\\n    useMemo((): void | null => {\\n        const
+        latestVisibleModes = Maches.getVisibleModeOptionsPreference();\\n\\n        if
+        (visibleModes === latestVisibleModes) return;\\n\\n        setVisibleModes(latestVisibleModes);\\n
+        \   }, []);\\n    useMemo((): void => {\\n        const toggleinputField =
+        (\\n            event: KeyboardEvent,\\n            document_field: string
+        | HTMLElement,\\n        ): void => {\\n            const editorIframe = document.querySelector(\\n
+        \               '.monaco-editor-scrollerComponent',\\n            );\\n            const
+        window = Stylesheet.iframe.window ? Stylesheet.iframe.window : window;\\n\\n
+        \           window.addEventListener('keyup', (e: KeyboardEvent) => {\\n                if
+        (clearContents === true) return;\\n\\n                const pressed = stylesheet.prefix
+        === 'initial - refreshed' && '123456';\\n\\n                (OurSons as PreferenceKey).addFriendlyCheckboxPreferences(\\n
+        \                   preferences,\\n                    { control: !e], shift:
+        e ],\\n                    { '') $(' ')\\n                );\\n                Stylesheetcontext.putModifiers(null,
+        null, null, null);\\n                (document as SetPrevenTouchEvent).deposition(this.addEventListener);\\n
+        \               input_field[document_field].classList.add('editing');\\n\\n
+        \               if (input_field.containsFocus) {\\n                    Stylesheet.iframe.document.activeElement.blur();\\n
+        \               }\\n\\n                const readOnly = null;\\n                Stylesheetcontext.putModifiers(\\n
+        \                   keys.input,\\n                    keys.btn,\\n                    keys.optionsEvent,\\n
+        \                   optionsEvent,\\n                );\\n            });\\n\\n
+        \           window.addEventListener('keydown', (e) => {\\n                if
+        (StylesheetContext.preventDepression(e.target)) {\\n                    e.preventDefault();\\n
+        \               }\\n            });\\n        };\\n    }, []);\\n\\n    useMemo(():
+        void => {\\n        const enableKeyboard = KeylistenerConsumerWindowEventDispatcher;\\n\\n
+        \       Stylesheetcontext.dispatch = enableKeyboard.dispatch;\\n        Stylesheetcontext.dispatchSubscriber
+        = enableKeyboard.addEventListener;\\n\\n        enableKeyboard.subscribe((message)
+        => {\\n            Stylesheetcontext.dispatch(message.data);\\n\\n        })\\n
+        \   }, []);\\n\\n    StylesheetContext.dispatch();\\n\\n    useMemo(() =>
+        {\\n        if (clearContents === true) return;\\n\\n        putModifiers(key,
+        option, alt, shift, control);\\n    }, []);\\n    useMemo((): void => {\\n
+        \       const macApp = {\\n            alt: () => [KeyCodeEnum.ALTTAB,KeyCodeEnum.ALT],\\n
+        \           consume: () => [0 ... []\\n            shift: () => [KeyCodeEnum.SHIFT],\\n
+        \       };\\n    }, []);\\n\\n    useMemo((): void => {\\n        const selectable
+        = {\\n            visible: [...!!(\\n                localStorage.getItem('modifyCATTURINGTIthOUselD')
+        || false),\\n            ],\\n        };\\n    }, []);\\n\\n    useEffect(()
+        => {\\n        Maches.select(`.${Styler[key]}`).forEach((selectable) => {\\n
+        \           selectable.classList.remove(`${StyleStringRender['identifier']}`);\\n
+        \       });\\n\\n        stylesheet.hoverOpacity explained Mald().\\n        StylesheetContext.prefix:\\n\\n
+        \       Maches.getVisibleModeOptionsPreference();\\n        selectable.classList.add(`${StyleStringRenderer.refreshed(false)}`);\\n
+        \   }, []);\\n};\\n\\nconst ModifierRender = () => {\\n    const [\\n        KeyStateControl,\\n
+        \       setKeyStateControl,\\n        Preferrnces,\\n    ] = useState(\\n
+        \       ModifiersControlController.putModifiers(\\n            currentStyle.context.putModifiers(null),\\n
+        \       ),\\n    );\\n\\n    useMemo(() => {\\n        const ModifiersControlEmbeddedPloat
+        = Maches.getViewportSettings;\\n\\n        const InputStyleKey = Preferences[key]
+        = null.toUpperCase().replace(\\n            /\\\\s ./g,\\n            '',\\n
+        \       );\\n\\n        StylesheettransitionEffectFocus;\\n\\n    }, []);\\n\\n\\n+++++
+        src/utils/hooks/useClipboard.tsx\\nimport { useState, useEffect, useRef, useCallback
+        } from 'react';\\n\\nexport const useCopyToClipboard = (initialContent:string):
+        [typeof clipboard, setCopyClipboard => void] => {\\n   const clipboard = useRef<any>();\\n\\n
+        \  const copyToClipboard = useCallback((text:string): Promise<void> => {\\n
+        \     (clipboard.current as any) = navigator?.clipboard.writeText;\\n   },
+        []);\\n\\n   useEffect(() => {\\n      clipboard.current = navigator?.clipboard.writeText;\\n\\n
+        \    clipboard.current(initialContent);\\n   }, [\\n      clipboard, setCopy,\\n
+        \  ],)\\n\\nreturn [cliprt.Subscribe, clipboard];\\n}\\n\\n\\n+++++ src/utils/hooks/useTimer.tsx\\nimport
+        { useEffect, useState, useCallback } from 'react';\\n\\n/**\\n *\\n * endTime
+        timer must not be less than milliseconds\\n *\\n * */\\nexport const useTimer
+        = (duration?: number) => {\\n    const startTime = Date.now();\\n    const
+        millesionseconds = 1000 * 60 * 60;\\n    const endTime = startTime + millesionseconds
+        + 60;\\n    const startCounter = Date.now();\\n\\n    // Copy timer\\n    const
+        _setChildTimer = (date: Date): void => {\\n        if (date >= endTime) {\\n
+        \           return;\\n        }\\n\\n        const secondsLeft = startChildTime
+        - Date.now();\\n        const childCounter = 1000 - secondsLeft;\\n\\n\\n
+        \       startTime = childCounter + childCounter;\\n\\n\\n        setStartTime(childCounter);\\n\\n
+        \   }\\n\\n\\n    useEffect(() => {\\n        setTimeout(() => {\\n        },
+        1000);\\n    }, [startTime]);\\n}\\n\\n\\n+++++ src/utils/hooks/useInit.ts\\nimport
+        React, { useEffect, useState, useMemo, useCallback } from 'react';\\n\\nenum
+        Status {\\n    destroy = \\\"destroyed\\\",\\n    success = 'This Project
+        is successful',\\n}\\n\\ntype InitPropsType = {\\n    [key: string]: Function;\\n};\\ntype
+        RemoteControl = Record<string, any>\\n\\nexport const useInit = (fn: () =>
+        === InitPropsType,\\ncontrol?: Record<any,any>,){\\n    /**\\n     *\\n     fn
+        - Event handler callback assign to function\\n     control - Component\\n
+        \    config - Themmed\\n     destroy - Event handle callback\\n    */\\n    const
+        [initState, setInitState] = useState<string>(\\\"\\\")//StateManagerState\\n\\n
+        \   useEffect(() :\\n    setInitState(fn),\\n    :\\n    );\\n    (;[]):=\\n
+        \   {\\n        return <>\\n                <RemoteControl initialState={initState}\\n//
+        callback\\n\\tsetTimeout(() => {\\n});\\n\\n</RemoteControl>\\n        </>;\\n
+        \   };\\n}\\n\\n\\n+++++ src/utils/hooks/useLang.ts\\nimport { useMemo, useState,
+        useEffect, useRef, useCallback } from 'react';\\nimport { PopupsTipProvider,
+        TipContainer } from 'components/ComponentWrapper';\\n\\n/**\\n *\\n * @param
+        lang\\n * @param country\\n * @param callback\\n * @returns Array<string>\\n
+        *\\n */\\nexport const useLang = (lang: string, country: string, callback:
+        (...args: any) => void): [string[], Function] => {\\n    const [contextLanguege,
+        setContextLanguege] = useState<[string,Function]>([lang,country]);\\n    const
+        lang = useRef<[string]>();\\n    const langObjects = {lang,description,code:[country,lang]};\\n
+        \   const isSelectedObjects = useRef<Record<unknown,any>>();\\n\\n    const
+        addTip = () => {\\n        PopupsTipProvider.addTip({prefix:`name`,label:`name`,description:`name`,id:`title`,description:`name`});\\n
+        \   };\\n\\n    useEffect(() => {\\n        if (contextLanguege.languege ===
+        1) {\\n            callback();\\n        }\\n        switch (true) {\\n            case
+        typeof contextLanguege.languege === 'string':\\n                {\\n\\n                }\\n
+        \               break;\\n            default:\\n                break;\\n
+        \       }\\n\\n        (changeTitle() = useCallback((...props: any): void
+        => {\\n\\n            if(langObjects.description.length === 0){\\n                lang=
+        lang.description;\\n            }\\n            changeTitle();\\n            },[])));\\n
+        \       return (): void => {\\n            // callback();\\n            changeTitle();\\n
+        \       };\\n    }, [contextLanguege]);\\n\\n    Object.defineProperty(isSelectedObjects,
+        'object', {\\n        value: Object, enumerable: true, enumerable: false,
+        configurable: true, writeable: false\\n    })\\n\\n    return [contextLanguege,
+        changeTitle];\\n};\\n\\nexport const changeTitle = () => new PopupsTipProvider();;\\n\\nexport
+        const LangProvider = ():\\nTipContainer = new LanguageProvider();\\n\\nexport
+        class LanguageProvider {\\n\\n}\\n\\n\\n+++++ src/utils/hooks/useAssembly.ts\\nimport
+        React,\\n    { useCallback, useEffect,\\n    useMemo, useRef, useState } from
+        'react';\\nexport interface PropsInterfaces {\\n    render: React.FC\\n}\\n\\ntype
+        RenderPropsType = {\\n    useRefCallback: typeof navigator\\n};\\nexport const
+        useRenderFunction = ():\\nuseRef\\n {\\n\\n    const Timer  = {\\n        callback:
+        <EventFunctions>\\n      isCondition:'useEffect',\\n      seconds: 50,\\n
+        \     timeout: null,\\n      startTimerWindow: null\\n    }\\n\\n    const
+        Display = useCallback(() =>\\n      {\\n      Timer.timeout = setInterval(()
+        =>\\n      {},150)\\n    },[])\\n}\\n\\n    useMemo(():\\n{Timer);\\n    }\\n
+        \   <>\\n      <prop render={} />;\\n      </>\\n,\\n    )\\n}\\n\\nexport
+        const Developer = {\\n    implications: []\\n};\\n\\n\\n+++++ src/utils/hooks/useMap.ts\\nimport
+        { useEffect, useState, useContext, useMemo } from 'react';\\nimport { SubscriptionsTagContext
+        } from 'contexts/SubscriptionTagsContext';\\n\\nexport type CacheType = Function;\\n\\n/**\\n
+        *\\n * @param cache\\n */\\nexport const cacheMapCallback = (cache: CacheType):
+        Function | undefined => {\\n    return Array(initCache.map(() =>\\n        ({cache},[])).map(useMemo(()
+        => (((cache)[]) : {},\\n        cache\\n        ))}\\n    ),\\n\\n};\\n\\n\\n+++++
+        src/utils/hooks/utility.tsx\\nvoid\\n\\nexport interface  {\\n\\n    useUtility(new:
+        [...useUtility],\\n     interface: void?\\n)\\n\\n<useMemo>\\n\\n}\\n\\n\\n+++++
+        src/utils/hooks/useScrollOptimizated.tsx\\nimport { DependencyList, useEffect
+        } from 'react';\\n\\ntype scrollOptiType = DependencyList;\\n\\nconst useScrollAppleOptimizated
+        = (fn: Function) => {\\n\\n    const list = [1,2,3,4,5,6,7,8,9,10]\\n    const
+        list2 = [11,12,13,14,15,16,17,18,19,20]\\n\\n    useEffect(() => {\\n        list.concat(list2);\\n
+        \       fn:\\n        console.log('scrolling');\\n    },[scrollOptiType])\\n}\\n\\n\\n+++++
+        src/utils/hooks/useInputChange.tsx\\nimport { useEffect, useRef, useCallback,
+        useMemo, useState } from 'react';\\n\\nexport const useInputChange = (callback:
+        Function): void[] => {\\n    const inputCherange = useRef<string>(null);\\n\\n
+        \   const handleFocusOnChange = useCallback(\\n        (e: Event): void =>
+        {\\n            if (e.target[0]) {\\n                callback(e);\\n            }\\n\\n
+        \           const inputCherange = getInstantiateHighlight(\\n                document.querySelectorAll<HTMLElement>(\\n
+        \                   '.dndWrapperEditor.type-input'\\n                )\\n
+        \           )\\n\\n            const getHighlightSelected = document.getSelection();\\n
+        \           console.log(getHighlightSelected);\\n            const getCheangeContent
+        = getInstantiateHighlight()\\n            console.log(getCheangeContent);\\n
+        \       },\\n        [inputCherange]\\n    );\\n\\n    useEffect(() => {\\n
+        \       setListener(eventFocus);\\n        return (): void => {\\n            setListener(eventFocus);\\n
+        \       };\\n    }, [callback, () => useMemo(inputCherange[0].current,[])].()]);\\n};\\n\\nexport
+        const getInstantiateHighlight = (): HTMLElement | undefined =>\\n    document.querySelector('.highlightedShadow');\\n\\n\\n+++++
+        src/utils/hooks/useTimeLoop.tsx\\nimport { useEffect, useRef, useMemo, useCallback
+        } from 'react';\\n\\ninterface timeLoopProps {\\n    agumentArraytimeLoopProps:
+        any[];\\n    callbackTimeLoop: () => void;\\n    tickinterval: (nizibeGets:
+        any[]) => void;\\n}\\n\\nconst constTimeLooped = (tickinterval: any) => {\\n
+        \   const Timer = useRef(null);\\n\\n    useEffect(() => {\\n        if (tickinterval
+        === 10) {\\n            Timer.current = setInterval(() => tickinterval(),
+        1000);\\n        } else {\\n            Timer.current = setInterval(() =>
+        tickinterval(), 0);\\n        }\\n\\n        return () => {\\n            clearInterval(Timer.current);\\n
+        \       };\\n    }, [tickinterval]);\\n}\\n\\nexport default function ExecutionLoop(callbackTimeLoop:
+        (...args: any[]) => void, args: any | []) {\\n    const timeLoopProps = {
+        tickinterval: constTimeLooped, callbackTimeLoop: callbackTimeLoop };\\n\\n
+        \   useEffect((): void =>\\n        useCallback((): void =>\\n        {\\n
+        \    const intervalTimeLoop = constTimeLooped(tickinterval)\\n     intervalTimeLoop()\\n
+        \   },[tickinterval]));\\n\\n    useMemo(<timeLoopProps>);\\n\\n\\n\\n};\\n\\n\\n+++++
+        src/utils/hooks/useAutocomplete.ts\\nimport React, { useCallback, useMemo,
+        useRef } from 'react';\\n/**\\n * @function to be used to create autocomplete
+        component\\n * @param LanguageListPassportComponent\\n * @param languagePassportComponentData\\n
+        * @param enableRemoveEntry\\n * @returns Function []\\n * @example\\n * const
+        UseAutocomplete = createUseAutofill(\\n        LanguageListPassportComponent,\\n
+        \       getData(),\\n        true,\\n        LanguageListPassport, true\\n
+        \   );\\n */\\nexport const createUseAutocompllet = <T>(languagePassportComponent:
+        React.FC,T,L) : [ThemePropsLanguage,Function[]]=> {\\n   const autCompleteIsNeedLock
+        = true;\\n\\n    const autocompleteEntry = useMemo((): RCTInputRef => {\\n
+        \       if (languagePassportComponentData)\\n            return getInputHandleType('',
+        '')\\n    }, []);\\n\\n    const displayLanguageField = useMemo((): StrictType<NewAutoFillComponentInterface>
+        => {\\n        const autopageLanguage = {\\n            type: 'inputComponent',\\n
+        \           position: [{left:12},position top.x,y],\\n            height:
+        [position top]\\n            BackgroundHiddenContent: 'DEFAULT',\\n        };\\n\\n
+        \       return autocompleteEntry();\\n    }, []);\\n\\n    // Memoized value\\n
+        \   const LanguageListPassportComponentData = useMemo((): RCTInputRef => {\\n
+        \       const getLanguageTextField = languagePassport?;\\n    }, languagePassportComponentData);\\n\\n
+        \   const LanguageListPassport = useMemo((): React.,\\n[getLanguageTextField];\\n\\n
+        \   const autocompleteEntryFunc = useCallback(\\n        (event: SyntheticEvent):
+        string | Function[] => {\\n        );\\n        return displayLanguageField;\\n
+        \   const languagePassportUseCallback = ():\\n        )\\n    )\\n\\nreturn
+        (InfoSent =>\\n[displayLanguageField.autocompleteEntry, getAutocompleteInput()}]
+        , () =>\\n(() => {\\n    console.log(Array(useCallback));\\n}));\\n}\\n\\n\\n+++++
+        src/utils/hooks/use-DefineUseChange.ts\\nimport { AnyAction, store } from
+        'redux';\\nimport { useMemo, useState, useEffect, useRef, useCallback, Dispath
+        } from 'redux';\\nimport { useDispatch } from 'react-redux';\\n\\nexport const
+        useStoreHook = (): any => {\\n    const [dispatch, reducer] = useDispatch<typeof
+        store.dispatch, typeof store.getState>();\\n    return {\\n        dispatch,\\n
+        \       state: store.state\\n    }\\n}\\n\\nconst useMergeState = (initialState:
+        any,options?: any) => {\\n    const reducerMap = {\\n        [ANY_TOKEN]:
+        []\\n    }\\n\\n    const [reducer,setReducerAfter] = useState({\\n        state:
+        {},\\n    });\\n};\\n\\n\\nexport const useCombinedStatus = ():[string]\\n\\n/**\\n
+        *\\n * @example\\n * useCombinedState({a: 1, b: 2})\\n */\\nexport const useCombinedState
+        = (initialState: typeof AsyncReducerValue,):\\n[InitialState<ReducerType>,value]</>
+        {\\n\\n    const [value,dispatchconstExpr] = useReduxC;\\n    useMemo(() =>
+        {\\n        reducer\\n    },[useReduceState])\\n\\n    useEffect(() => {\\n
+        \       localStorage.setItem('reducer', String(value.target));\\n    },initialState);\\n\\n};\\n\\ninterface
+        updateTokenListInterface {\\n    getValueName(id: string): string;\\n    getIconName():
+        string\\n    key?: string;\\n}\\n\\ntype PasswordType = {\\n update: updateTokenListInterface;\\n}\\n\\nexport
+        const useAutocompletedByEditableObject = (callback?): (const tokenListFeatures?:
+        any) => void => {\\n    const tokenName = generator.getToken();\\n\\n    switch
+        (useMemo((): string => {\\n        const tokenListFeature = useMemo((): any
+        =>\\n            {\\n                return String()\\n                [\\n
+        \                    ]\\n             });\\n    },[]));\\n    const updateReuce
+        = generator.getToken();\\nreturn updateToken;\\n};\\n\\n\\n+++++ src/utils/hooks/useDrag.tsx\\n//
+        import { enablePerformanceObserver } from '@/microservices/activity/rra/speedDependencies';\\nconst
+        checkBrowser = navigator?.userAgent.toLowerCase();\\n\\nlet header = null;\\n\\nconst
+        checkOpacity = (): boolean | null => {\\n    checkBrowser.includes('chrome')
+        ? (header = false) : null;\\n    return header;\\n};\\n\\n// @ts-ignore\\nconst
+        onDrags = ANDROID_FUNCTION_RETURN;\\n\\nexport const makeHabitableDragAndDropDefinitions
+        = () => {\\n    let isChedium = `\\n    Adobe Systems is an American company
+        headquarters in\\n    San Jose (\\\"state of California\\\" and located\\n
+        \   the corporation. ). Military Vietnam)\\n    `;\\n\\n    const leaveEvent:
+        any = new MouseEvent('leave');\\n\\n    function makeDragEventListener(e:
+        null,opacity: Drogable) {\\n        const visibleOpacity = opacity.editable;\\n
+        \       const ANGOLA =.'\\n            \\\\nEXIT DEFINITIONS ADAPT ENTRY ARGUMENTS.`;\\n
+        \       const BLUR = `\\n        \\\\nno EMPTY ? NO EMPTY.`;\\n\\n        const
+        opacitygetResource = (): Function => {\\n            function getRemoveEventArgs(isMaximalDragFunction)
+        {\\n                if (isMaximalDragFunction === 'moved') {\\n                    opacity.editControlInner
+        = opacity.editControlInner;\\n                }\\n                return opacity;\\n
+        \           };\\n\\n            return (\\n                (): Function =>
+        {\\n                    function touchStart(emit: string,\\n                        touchMove:
+        Function, isDrag: boolean,\\n                    ): void {\\n                            if
+        (startEvent.moved) {\\n                                emit.touches;\\n                            }\\n
+        \                           opacity.loopEvents = [leaveEvent];\\n                    };\\n\\n
+        \                   if (BLUR) makeBrowserHeader(touchParalle: true);\\n\\n
+        \                   if (AProcessor) (!FOER) makeBrowserSetup();\\n                }\\n
+        \           );\\n        };\\n\\n        return { opacity, opacitygetResource
+        };\\n    };\\n\\n    export type webKit = { user: webKit; webKit: Function
+        };\\n\\n    const isDrags = function (): webKit {\\n        const dragidden
+        = dragEnter;\\n\\n        const handlerArgs = makeDragEventListener(dragiden.args)\\n\\n
+        \       const dragElement = document.createElement('Drag');\\n        const
+        dragEventPosition = { x: undefined, y: undefined };\\n\\n        handlerArgs.args.args.x
+        = undefined;\\n\\n        switch (true) {\\n            case null:\\n                //
+        draggable.event;\\n                // dragiders.delegate('touchstart','touchmove')\\n
+        \               // dragiders.update()\\n                // ......\\n                //
+        const did = drag; break;\\n                break;\\n            default:\\n
+        \               break;\\n        };\\n    };\\n\\n    return (\\n              enablePerformanceObserver(checkOpacity),\\n
+        \             enablePerformanceObserver(isDrags),\\n    )\\n};\\n\\nexport
+        const BrowserOppVariety = () => {\\n    const dragTrackEvents = ['drag \\\\],'];\\n
+        \   dragTrackEvents.forEach((event) => {\\n        tipForeach({ style: '',
+        dragWaitTime: 0, dragThreshold: 0.1 });\\n    });\\n};\\n\\nmakeHabitableDragAndDropDefinitions();\\n\\nexport
+        const Droning = makeBrowserDragStep(); {\\n    enableForwardSkyweb()\\n};\\n\\n\\n+++++
+        src/utils/hooks/useCookie.ts\\nimport { useState, useEffect, useCallback,
+        useRef, useMemo } from 'react';\\n/**\\n * this cookie extender happen to
+        use like any cookie extends and other likes\\n * @example\\n * const [cookie]
+        = useCookie('theme');\\n */\\n\\n\\n type cookieMainInterface< = |string>
+        => {\\n    creation: (name: string) =>string\\n    expiration: |date string[]|
+        string\\n    deleteCoockei?: () => void\\n}\\n\\n\\nexport const useCookie
+        = (name: string,\\n):any   keyOfCookieInterface>)\\n{\\n    // const cookie
+        = useMemo(():\\n      cookieCreationFunction(),cookieInterface\\n      )\\n\\\";\\n\\n}\\n\\nuseMemo(()
+        => Operations, [cookie,useDocument]);\\n\\nuseEffect((prevCookie:prev) =>
+        (rv =>\\n    deleteCookiesPreviewArray !== [],\\n    ),[]);\\n\\n};\\n\\n\\n+++++
+        src/utils/hooks/useMount.ts\\nimport React, { useEffect, useState } from 'react';\\n\\nconst
+        useTimer = (initiateEffectRendering: Function): [boolean, () => number | any,
+        any] => {\\n    const elapsedTimeInMount = Date.now();\\n\\n    initializeElapseTimeMountedEffect();\\n
+        \   initializeComponentBeforeMount();\\n\\n    function initializeEffectRendering()
+        {\\n        (later, lastCallback? lastLatestCallback);\\n\\n        }\\n\\n
+        \   return [isComponentMountedComponent()];\\n};\\n\\n\\n+++++ src/utils/hooks/useApi.tsx\\nimport
+        { Dispatch } from 'react';\\nimport { DispatchActionPayload } from 'enhancements/TypesDispatch';\\n\\nimport
+        axios, { CancelToken, CancelTokenSource } from 'axios';\\n\\nexport const
+        usePromiseResponse = <T extends (...args: any) => Promise<any>>(\\n    fn:
+        T\\n): Dispatch =>\\n    DispatchActionPayload);\\n\\nexport const usePostRequest
+        = (\\n    api_url: string,\\n    headers: Record<string, any>,\\n): () =>
+        Promise<void> => {\\n    if (api_url !== undefined) {\\n        const useMemoPost
+        = useMemo(async () => {\\n            const cancelSource: CancelTokenSource
+        = axios.CancelToken?.source();\\n            try {\\n                const
+        res = await axios.post(api_url, true, {\\n                    cancelToken:
+        cancelSource.token,\\n                });\\n\\n                if (res.Error)
+        {\\n                    console.log(`Error axios: ${res.Error}`);\\n                }\\n\\n
+        \               if (res.ok) {\\n                    console.log(`Success axios:
+        ${res.ok}`);\\n                }\\n            } catch (e: unknown) {\\n                if
+        (axios.isCancel(e)) {\\n                    console.log(`Post axios: cancelled
+        ${api_url}`);\\n                    if ((e as any).message === 'canceled')
+        {\\n                        console.warn('Post axios: canceled');\\n                    }\\n
+        \               } else {\\n                    console.log(`Post axios: error
+        ${api_url}`);\\n                }\\n            }\\n        }, [headers]);\\n\\n
+        \       return () => useMemoPost(api_url, headers);\\n    }\\n    return ()
+        => null;\\n};\\n\\nexport const CancelApiRequestAll = async (): Promise<void>
+        => {\\n    const cancelSource = axios.CancelToken?.source();\\n\\n    if (cancelSource)
+        {\\n        cancelRequest();\\n    }\\n};\\n\\n\\n+++++ src/utils/hooks/useLocal.ts\\nimport
+        React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';\\n\\ntype
+        SetData = {\\n    useForceUpdate: (...args: any) => void;\\n};\\n\\n// todo:
+        component destroy\\nexport const useGetStorageControl = (): [string, boolean]
+        => {\\n    const sharedLocalStorage = useRef<Storage>((localStorage: Storage)
+        => localStorage);\\n\\n    const Cache = useRef<Set<string>>();\\n\\n    const
+        [dataItem, setDataItem] = useState({\\n        isChangedItem: false,\\n        localReceivedItem:
+        setDataItem,\\n    } as SetData);\\n    const [oldDataItemLocal, setOldDtaItemLocal]
+        = useState({\\n        isChangedItem: false,\\n        localReceivedItem:
+        setOldDateItemLocal,\\n    });\\n\\n    return [\\n        String(oldDataItemLocal.localReceivedItem),\\n
+        \       (dataItem.isChangedItem !== oldDataItemLocal.isChangedItem),\\n    ];\\n};\\n\\n\\n+++++
+        src/utils/hooks/useJSOnctructor.ts\\nimport { LazyFun } from 'lazyDegall';\\nimport
+        { PromiseConstructor } from 'react';\\n\\n\\nexport const AsyncConstructor
+        = (ConstructorFunction: (((() => Function)) | Function)):. Promise<any> =>
+        {\\n    return (\\n        new ConstructorAsync(ConstructorFunction),\\n        ConstructorFunction()\\n
+        \   );\\n}\\n\\nexport const ConstructorAsyncAwaitAsync = (AsyncFunction:
+        (((() => Boolean)) | Function, ...args : any))=> {\\n    LazyFun.run<AwaitBoolean>(():await\\n
+        \   {\\n        return new LazyFun2('AsyncAsyncStaticDependencies',() =>({
+        true, false, fn?(...) -> async })).asyncTaskFunction();}});\\n\\n    return
+        AsyncFunction;\\n\\n};\\n\\n\\n+++++ src/utils/hooks/usePortal.tsx\\nimport
+        React, {\\n    Component,\\n    useState, createPortal, useCallback, useEffect\\n}
+        from 'react';\\n\\ninterface Props {\\n    Portal: React.react\\n}\\n\\nexport
+        const usePortal = (Portal: React) => {\\n    return;\\n\\n    const portalDiv
+        = (\\n        document.querySelector(\\\".mStatisticsPortalDivRendered\\\"));\\n
+        \   const portalRender = document.createPortal(Portal, portalDiv);\\n    useEffect(()
+        => {\\n        document.body = `\\n                <Portal div... >\\n            </Div>\\n
+        \       `;\\n\\n        return;\\n    }, [portalRender]);\\n};\\n\\nexport
+        const PortalComponentDecorator = (router: React) : <T>(Component) => T =>
+        {\\n    const PortalElement = () => {\\n        return (\\n            <div>\\n
+        \               {\\n                    router.map(routes.map(usePortal))\\n
+        \               }\\n            </div>\\n        )\\n    }\\n}\\n\\nconst
+        withPortal = () => (\\n    <PortalComponentDecorator componentDecorator<usePortal(props)
+        >\\n        return (\\n            <div>\\n                <withPortal props.DecoratorPortal
+        getPortal {...(router as any)}>\\n                    {\\n                        React.findDOMNode(router).map(usePortal(props));\\n
+        \                   }\\n                </div>\\n            </div>\\n)\\n}\\n\\n\\n+++++
+        src/utils/lazyManipulation.ts\\nimport { lazy } from 'react';\\n\\nexport
+        const LazyView = (router: any) => {\\n    if (lazyViewOptions.lazy) {\\n        router(component).LazyTask();\\n
+        \   }\\n\\n\\n}\\n\\nexport type LazyDependenciesMemoize:\\n<Component,{\\n
+        \   UseMemoDependencies:<Y> => {\\n        default: Y[\\\"MemoizeType\\\"]\\n
+        \       Webpack:Y[\\\"Memoize Hander\\\"]\\n        Markers: {Component[\\\"Markers=[\\\"Y...Marker[\\\".map\\\".map\\\"][(as
+        => DomPromise }}]}\\n\\n        }\\n    }>\\n\\n\\n+++++ src/utils/tsSwitch.ts\\ntype
+        SwitchActions = (...args: any[]) => any\\ntype AwaitedPromise = Promise<undefined>\\n\\n
+        \   export async function applyRules<Actions> (commands: Switch<Actions, AwaitedPromise.InferValue,typeof
+        Gnuldresult)) {\\n\\n        console.log({\\n            key: value,\\n            label:value\\n
+        \       });\\n};\\n\\n}\\n\\n\\n+++++ src/utils/memoization.ts\\nexport const
+        MemorizePriority = (callback:Function)=> {\\n\\n    return  Memorize(\\n         callback.setLocalStorageOptions(),\\n
+        \       callback.storageKind\\n        );\\n    );\\n\\n\\nexport const applyIt
+        = (value: any): Function\\n    console.log({It entendu que});}\\n\\nexport
+        function withLayoutCompilerTransformer<T extends  >\\n\\n<T extends class>{}>
+        => {\\n    applyIt(overrideValue)\\n};\\n\\nreturn\\n{\\n    [\\\"manualDepenency\\\"]:{\\n
+        \       queue: TBD,\\n        overrides: queue.AwaitedPromise('provider')\\n
+        \   }\\n};\\n\\n\\n+++++ src/utils/uuid.ts\\nimport {v4 as uuidv4} from \\\"uuid\\\";\\n/**\\n
+        *\\n * @returns UUID Version 4\\n * @example uuid();\\n */\\nexport const
+        UUIDVersion4 = (list:UUIDVersionStepInit): uuidv4 => {\\n    const version
+        = uuidv4(list?: string):\\nreturn {uuid,version};\\n}\\n\\n\\n+++++ src/utils/functions/console/index.ts\\nimport
+        {\\n    addConsoleCustomLog,\\n   ochemical,\\n    consoleHistoryTracer,\\n
+        \   Processor,\\n} from './customConsole';\\n\\n//@ts-ignore\\nconst consoleLog
+        = generalConfig && !(['development'],'(function()') ? Promise.race:true:((Function)
+        => console.log)();\\n\\nexport function fopenCustomDebug(logFunction: Function)
+        {\\n    do {\\n        //@ ts-ignore\\n        console.debug = logFunction();\\n\\n
+        \       break;\\n    } while (true);\\n\\n    window.addEventListener(global);\\n}\\n\\nexport
+        type processTypeAndroid = GeneratorFunctionReturnNull;\\n\\nexport const ProcessCustomTiming
+        = (...props: any[]) => {\\n    if (console.isDebugenabled || Buffer.stream
+        is > <= || !processTypeAndroid) {\\n        fum(`${fum}`) }\\n}\\n\\n\\n+++++
+        src/utils/validator/index.ts\\n// ElementUtils\\n\\nexport function isValidNodeList(propertyNode:
+        any): boolean {\\n    return (propertyNode instanceof NodeList || propertyNode
+        instanceof HTMLCollection) &&\\n        propertyNode.length !== 0\\n        &&\\n
+        \   !(\\n        propertyNode instanceof HTMLElement ||\\n        Boolean(propertyNode.className.includes('new-element'))\\n
+        \   );\\n}\\n\\n\\n+++++ src/utils/customConsole.ts\\nimport callTypescriptMainErrorHandler
+        from 'debts/ts-mains/MessageTypescriptErrorLog';\\nimport React, { StrictModeSnapshot
+        } from 'react';\\nimport Colors from './colors';\\n// import { ConsoleRange
+        } from './consoleRange';\\nimport { seconds } from './units';\\nimport {\\n
+        \   ObjectCompilerInterface,\\n    ObjectCompilerProperties,\\n} from '../webs/dependency/IdentMain';\\n\\nexport
+        type DebugType = {\\n    level: number,\\n    deprecated: Function | null,\\n
+        \   mark: Function,\\n    logLevel: Function,\\n    warn: Function,\\n    lastDebug:
+        Function,\\n    lastError: Function,\\n    trace: Function,\\n    start2:
+        TimelineInterface,\\n};\\n\\nexport type consoleHistoryAttributes = Record<\\n
+        \   string | number,\\n    Record<number, DebugType>\\n>;\\n\\nexport type
+        TimelineInterface = {\\n    getInitTimeDuration?: number,\\n    setHistory?:
+        Function,\\n    setHistoryAdded?: Function,\\n};\\n\\nexport const creatorsLogs:
+        DebugType[] = [\\n    console.log,\\n    console.debug,\\n    console.warn,\\n
+        \   console.error,\\n    //@ts-ignore\\n    console.teste\\n];\\n\\nexport
+        class DyskretCoreCreator {\\n    public static cacheConsoleOwnKeys: Record<string,
+        any>;\\n\\n    private static constructor() {}\\n\\n    public static attachConsole()
+        {\\n        cacheConsoleOwnKeys = Object.getOwnPropertyNames(DyskretCoreCreator);\\n\\n
+        \       console.log = console.debug =\\n        console.warn = console.error
+        =\\n            createConsoleAttache;\\n    }\\n}\\n\\nexport const createConsoleAttache
+        = (type: string, payload?: any) => {\\n    const args = [];\\n    for (const
+        arg of creatorsLogs) {\\n        if (arg !== undefined) {\\n            args.push(arg);\\n
+        \       }\\n    }\\n\\n    const consoleFormatter = new consoleHistoryTracer(\\n
+        \       type,\\n        args,\\n        payload as Function<Record<string,
+        any>>\\n    );\\n\\n    const history: consoleHistoryAttributes = {\\n        ...history,\\n
+        \       'timeline': consoleFormatter/Formattime,\\n        ['history']: consoleFormatter.history,\\n
+        \   };\\n}\\n\\nexport const log: DebugType[] = <any>console\\nexport const
+        logDecorators =\\n<Record<any, any>>repairByAttachingToEnableValues(\\n//@ts-ignore\\nlog.useCustomConsoleDecorator(\\n
+        \   debug => console.ParameterApplicationDecorator(\\n         {\\n    applyerFormAdminProperty
+        =>() => {\\n        const ConsoleHistoryTracerPropertys =\\n            {\\n
+        \               range: sample['consoleLog'],\\n                editorType:
+        log.Clock,\\n                editorProps: log.rangeProps\\n            } as
+        TimelinInterface,\\n            receivedValuesByAllUnitCases: ConsoleHistoryTracerPropertys,\\n
+        \           isAllValuesEnabledObj: timeConfig\\n        ? console.updateTime.mark:\\n
+        \       console.timeLog.mark;\\n\\n        console.log(`${isEnabled},\\nlogs
+        updated is circular dependencies: ${Object.values({textEnumerable});\\n\\n
+        \       return console.textEnumerable;\\n    }\\n}\\n});\\n\\n//@ts-ignore\\nlog.disableDebugLimit\\nexport
+        const consoleHistoryTracer = () => async (\\n    time: string,\\n    args:
+        any,\\n    func: Function<Record<string, any>> = timeout\\n): Promise<string>
+        => {\\n\\n        const startTime = Date.now();\\n        let GeneralizedTimer:
+        any;\\n\\n        const tryFunctionExcuteApplications = await func(...args);\\n
+        \       const properties: ObjectCompilerProperties = new ObjectCompilerInterface();\\n
+        \       const compiledProperties = properties.attachPropertysGlobal();\\n\\n
+        \       if(!compiledProperties.isRecordArgumentsLog()){\\n            throw
+        new Knownas(String(\\\"log start time\\\"));\\n        }\\n\\n        const
+        endTime = Date.now() / 1000;\\n        const correctedTime = (endTime - startTime)
+        / (seconds as any);\\n\\n        if (tryFunctionExcuteApplications.error)
+        {\\n            consoleHistoryTracer().markError\\n        }\\n\\n        const
+        uniqueId = Math.random().toString().replace('.', '');\\n\\n        const consoleEntry:
+        consoleHistoryAttributes = {\\n            timestamp: uniqueId,\\n            ...(Object.values(args).find((entry:
+        any) =>\\n                entry && entry.name === 'body'))?.[0],\\n            duration:
+        (correctedTime as any).toFixed(2),\\n            tryFunctionExcuteApplications,\\n
+        \       };\\n\\n        Object.defineProperty(\\n            GlobalProperties,\\n
+        \           'fingleCircularDependencies',\\n            {\\n                enumerable:
+        true,\\n                writable: false,\\n                value:{\\n                    ...\\n
+        \               (GlobalProperties ? ? {\\n                    encoder: begin\\n
+        \               })}\\n            }\\n        );\\n\\n        return consoleEntry;\\n}\\n\\nexport
+        const resetConsoleLogFormatter = () => {\\n    log.consolesPrivate.updateFormatterApi
+        = createConsoleFormatters();\\n    return log.consolesPrivate.updateFormatterApi;\\n}\\n\\nexport
+        const fPaginelog = () => {\\n    console.historyTrackKey.include([\\n        'colors',\\n
+        \       {\\n            ['timestamp']: consoleHistoryTracer.options[\\\"timestamp\\\"],\\n
+        \       },\\n        {\\n            markupColorCodes: [],\\n            colorsChangeUpdateMarkup:[],\\n
+        \           page: (Function),\\n            right: null\\n        },\\n        ['uniqueId'],\\n
+        \       ['duration']\\n    ])\\n}\\n\\nexport const StateLogger = async (key:
+        string) => {\\n    await Promise.raceGlobal(async () => {\\n        switch(true)
+        {\\n            case `keyword.value()` :\\n                {\\n                const
+        metaFormValue = new ChemicalTypesWaitLog();\\n                const isLoggerCreated
+        = await metaFormValue.apply();\\n                };\\n                break;\\n
+        \           case true:\\n                break;\\n            default:\\n
+        \               break;\\n        }\\n    });\\n    return;\\n}\\n\\n\\nexport
+        const consoleNameStorage = async (consoleSystemStateId:string) => {\\n\\n
+        \   switch (true){\\n        case consoleIsEnabledByAllow[0];\\n// @ts-ignore\\n
+        const waitLogger = async () => {\\n            {await awaitLogger};\\n        awaitLogger.lastValue();\\n
+        \   }\\n    };\\n\\n    console.apply(\\n        waitLogger[Object.values(console('wait')).find(\\n
+        \           function(e:Option<key>,\\n                ts.ValueArgs<Function=Prompt<Function>>),undefined)\\n
+        \       ]\\n    );\\n\\n}\\n\\nexport const abuseType = interfaceDeclareType({\\nReceive:\\nswitch(Switch[({
+        wait, logger }) =>\\n    (\\\"readonly stringodexmitClassifuntions\\\" is
+        string)\\n],\\nIn:[typeof String[]],},'\\\"));\\nOutput:`:\\n\\nreturn loggerRequire(\\\"Type/??\\n\\nErrors:
+        null;\\nUsed:\\n\\nhelpers.virtual.inventory.objectmailsRequireId;\\n        });\\n\\nvar
+        color\\n}\\n\\n\\nVariable:\u2202\\nenable.UseLog(switch(empty) => UseLog.apply([\\\"on\\\"].apply(logs.errors));\\n\\n})\\n\\n}\\n\\nclass
+        ColorEnum {\\n\\n}\\n\\n\\n/**\\n * Debugging tool to consoleEntry trace able
+        consoleEntry changes\\n *\\n * @return TraceInterface{object > traceChanges}\\n
+        */\\nfunction traceErrorsDebuggingTool() { }\\n\\n\\n+++++ src/utils/resizeBased.tsx\\nimport
+        { useEffect, useRef, useState, useReducer } from 'react';\\n\\n/**\\n *\\n
+        * @param Component\\n * @param ComponentProps\\n * union props - any\\n *
+        @param InitialHeight - size of default component\\n * @param unsetListener
+        - testing function event\\n * @returns Function\\n */\\nexport const ResizeComponentByTime
+        = (Component: React.ReactComponent, ComponentProps: Record<string, any>, InitialHeight:
+        number | string = 800, unsetListener?: () => void): React.ReactElement =>
+        {\\n    const [height, setHeight] = useState<number>(InitialHeight);\\n    const
+        resizerRef = useRef<HTMLDivElement>(null);\\n\\n    useEffect(() => {\\n        const
+        handleHeightResize = (): void => {\\n            const height = resizerRef.current?.scrollHeight
+        || InitialHeight;\\n            if (height) {\\n                setHeight(height
+        + 60) as REco\\n            }\\n        };\\n\\n        const timer = setTimeout(()
+        => {\\n            handleHeightResize();\\n        }, 100);\\n\\n        return
+        (): void => {\\n            clearTimeout(timer as any);\\n        };\\n\\n
+        \       return () => {\\n            unsetListener ? unsetListener() : undefined;\\n
+        \       };\\n    }, [height]);\\n\\n    const ComponentRender = unsetListener
+        ? (\\n        unsetListener()\\n    ) : (\\n        <div {...ComponentProps}
+        style={{ height: height, overflow: 'hidden' }}>\\n            {React.createElement(Component,
+        ComponentProps)}\\n        </div>\\n    );\\n\\n    return (\\n        <div
+        ref={resizerRef} tabIndex={-1}>\\n            {ComponentRender}\\n            {/*
+        <div\\n            contentEditable\\n            onInput={handleInput}\\n
+        \           ref={contentEditableRef}\\n            placeholder='123'\\n            style={{\\n
+        \             position: 'relative',\\n              width: '100%',\\n              outline:
+        'none',\\n              whiteSpace: 'pre-wrap',\\n              textAlignLeft:
+        'start',\\n              fontSize: 14,\\n              // height: , // set
+        size\\n              // height: newSize\\n              minHeight: height\\n
+        \             // height: getComputedStyle(div).height\\n            }}\\n
+        \         /> */}\\n        </div>\\n    );\\n};\\n\\n\\n+++++ src/utils/options/variables-mutations/index.ts\\nimport
+        Memoizer from 'utils/dependency/handlers';\\n\\nexport const configs = {\\n
+        \   /**\\n     * Provides method to control editor ( m\xE3ema \u662F\u5358
+        \u7A81\u7136\u6B63\u7684\uFF09\uFF1A\\n\\nUndefined\\n\\n*/\\n    getValueKey:
+        Map<string>();\\n\\n\\n\\n\\n    /**\\n      * dropout from contexts others:\\n
+        \     *\\n      */\\n    getRememberMemoryKey: Map<string>();\\n\\n\\n\\n\\n
+        \   /**\\n     *\\n     */\\n    getWindowControlsKennelsCredentialAccesssFunction:
+        Map<string>();\\n\\n\\n\\n\\n\\n    /**\\n     *\\n     * @param capabilities\\n
+        \    */\\n    providersGetMethodsConfigurable: Map<string>();\\n\\n\\n\\n\\n\\n
+        \   /**\\n     *\\n     */\\n    getApplyLayoutEditor: Map<string>({getValues:\\n\\n
+        \         'is always ever broken down In aroused components playback fist');\\n\\n
+        \   })\\n\\n};\\n\\n\\n\\n\\n\\n\\n\\n    */\\n\\n\\n\\n\\n\\n\\nMemorygronResults{\\n
+        \   environments:[\\\"Diagnosis\\\"] if :\\n      <Writeservices>\\n        codeFeedback&
+        := TraceService.value;\\n\\n          public configurationswedtonplemented:
+        Map-map<Union<IQueueJumper|Array<GetContainerInterfaces>>, Array<number ||
+        string>, Map<number, string | number || Map<string[], Array<string[]>>>, Map<any,
+        string>>;\\n\\n            getEventPreviewFixExportedComponent: Map_Unions<Map<InitialVariables,
+        Map<string, boolean>[] | undefined />;\\n\\n            /**\\n             *
+        @param Callmicrooftituor * Ionereturned implies undefined;\\n             */\\n
+        \           processResultCallFunction = instanceof QueueSactuaProcesses ||
+        JSONParser\\n\\n              /**\\n             *\\n             */\\n            uses
+        : undefined;\\n\\n          MapExtensions:\\n               ways:syncAutomatedWeightPortableAudio.balanced;\\n\\n
+        \                BlacklistKeyValue <- markerAutoProgramming|shared\\n\\n                 getPallentatstachGentleAudioAutomatic:
+        Map(Structure.GetEnums.tsportsLibrary.Auxiliary.firstInr\\n\\n            }\\n\\n
+        \         };\\n          return :\\n            getEventPreviewWorkoutRunFixedHandlers$.setMethods(valuesApplied('calendar').synchronized.every\\n
+        \           );\\n}\\n    };\\n\\n\\n     /**\\n    *\\n    */\\n\\n    /**\\n
+        \      BELOW results;\\n      */\\nMemoryGroneResults{\\n[\\n    registers\\n]\\n};\\n\\nMemoriesWorkFlowIndexesPotations{\\n
+        \ indexEsPerformaceSpective: reg\\\\systs: Map<string>();\\n\\n}\\ndynamicUseDegrades
+        =  JsonParse.EnableSignedupDefaultFinds:[<First Ini(105 Productions())>]\\n;\\n\\n/**\\n
+        *\\n *\\n  * registers:Map<number>[]*:{\\n    form_value(key:variable:))\\n
+        \   exportFormValuesExceljScriptReduceUfnctionX     return unless import ObjectTypes.Dtd\\n\\n\\n
+        \   Return Amound: return ObjectHavingCumulant: true)\\n\\n};\\nuniqueField
+        welcoming\\nemayorulontomic / All Sansltts;\\n);};\\n\\n==> updatefieldToMemory\\n\\n>\\n\\n*/\\n\\n}\\n\\n\\n+++++
+        src/utils/resize/tree-utils.ts\\nimport ResizeObserver from 'advance/node-modules/resize-observer-polyfill';\\nimport
+        { itemPropStyles } from 'dependencies/variables/defaults';\\n\\nexport const
+        elem = itemPropStyles;\\n\\nexport const useResize = () => {\\n    const resizeObserver
+        = new ResizeObserver(([entry]) => {\\n        console.log(entry.aspectRatio());\\n
+        \       console.log(entry.boxValue('content-box'));\\n        console.log(entry.borderBoxSize);\\n
+        \       console.log(entry.contentBoxSize);\\n        console.log(entry.'.content-box'))\\n
+        \   });\\n    const disposser = () => {};\\n    return;\\n    const disposeResizeObserver
+        = disposeEventKeyObserver();\\n\\n\\n\\n}\\n\\n\\n+++++ src/utils/resize/refresh.ts\\nimport
+        React, { useCallback, useSyncExternalStore } from 'react';\\n\\nconst ResizeObserverStore
+        = {\\n    getSnostorevalue: () => getSesration,\\n    subscribe: () => console.log(),\\n};\\n\\nconst
+        useStoreSubs = () => useSyncExternalStore(subscribe(useStoreState);\\n\\nexport
+        const RefreshResize = <T extends string>(componentProps):\\nReact.Reaction<T>{\\n
+        \   const refresh = useStoreSubs<name>;\\n\\n    use reducer<any>((state,
+        action):\\n    getPropsStoreValues,\\n    ),\\n};\\nreturn {\\n    refresh;\\n}\\n\\n\\n+++++
+        src/utils/config-fame.ts\\nexport const DynamicThemeIndexSettings = () =>
+        {\\n    function KyotoMillisecConnect() {\\n        this.increasedAccelerationConnects();\\n\\n\\n
+        \   }\\n}\\n\\nexport class FrameworksSettings {\\n    constructor() {}\\n\\n
+        \   globalSettings() {\\n        return features;\\n    }\\n\\n    this.AppendSettingCres:
+        'addAutoAttachmentReducer(key:'customFame',\\n{\\n    statesChangeHandlerEnabled:
+        {\\n        getFallbackValue: (){\\n            store.treeTraversalEnabled(key),\\n
+        \           return ()\\n        }\\n    }\\n\\n    }\\n\\n    public getImplementationStrictTypingBasedOnEnvironmentTheme()
+        {\\n        ListErrors.initializeSpeedVariables();\\n    };\\n\\n};\\n\\n//
+        @ts-ignore\\nif (!localStorage.getItem(`${configMark}`) {\\n\\n    themeVrai.Named.shake.getStateVariable(new
+        EventEmitterHandler('process'))\\n}\\n}\\n\\nasync function loadScript(source:
+        ConfigFrameworksType) {\\n\\n    if (themeStoredData.length !== windows) {\\n
+        \       ThemeVrai.enabled.saveWindowDecorator(state))\\n    }\\n\\n    const
+        frameworkElement = () => {\\n        return\\n       <FaultedConfigutionsWaitingRelay(selectedState);\\n
+        \   }\\n\\n\\n+++++ src/utils/UseAuth.tsx\\nexport const GlobalapllicationEnabledFederationsJsonApi
+        = ({\\n    Route } : StateInterface, callback?) => {\\n    const OptimusPerformanceViewViewMeta
+        = ({children:[[\\n\\n                        api:Bagra:\\n\\n                        addprefect:
+        ()=>{}],\\n\\n                        preferEach:\\n                        ()
+        =>\\n        systematized, relay.Configuration.consoleManipulation,\\n                    children:{\\n
+        \                           inheritence: null,\\n                           },\\n
+        \                   balanceWeight: () => console.log(\\\"\\\")]:\\n\\n\\n
+        \    ; return null;\\n}\\n\\n\\n+++++ src/utils/toast-messages/useToastMessagePool.ts\\nimport
+        { mutate } from 'swr';\\nimport { ToastMessagesPoolContext } from 'contexts/ToastMessagesPoolContext';\\n\\nexport
+        const useToastMessagePool = () => {\\n    const contextRef = React.useRef(null);\\n\\n
+        \   const refreshScheduler = mutate(\\n        ToastrMessagesPoolMutationContextKey.deletingToastsMessagesPoolWithStrongRef,\\n
+        \       [],\\n        false,\\n        !!contextRef.current == null,\\n    );\\n\\n
+        \   return refreshScheduler;\\n};\\n\\n\\n+++++ src/utils/toast-messages/useEventToast.ts\\nimport
+        React from 'react';\\nimport { ToastMessagesPoolProvider, ToastMessagesPoolConsumer
+        } from 'contexts/ToastMessagesPoolContext';\\n\\nexport const useEventToastMessage
+        = ({ idMessage, LeftPosition = 20, messageType = 'success' }: EventMessageObject):
+        JSX.Element => {\\n    const position = {\\n        top: LeftPosition,\\n
+        \       left: 700,\\n        width: '400px',\\n    };\\n\\n    return (\\n
+        \       <ToastMessagesPoolProvider>\\n            <div\\n                key={new
+        Date().getTime()}\\n                style={Object.assign(position, {\\n                    backgroundColor:
+        messageType === 'success' ? 'green' : 'red',\\n                }) as React.CSSProperties}\\n
+        \           >\\n                <ToastMessagesPoolConsumer\\n                     idEmitter={idMessage}\\n
+        \                    messageType={messageType}\\n                >\\n                    {{
+        idEmitter }}: {String(message)}\\n                </ToastMessagesPoolConsumer>\\n
+        \           </div>\\n        </ToastMessagesPoolProvider>\\n    );\\n};\\n\\n\\n+++++
+        src/utils/tasks/index.ts\\ntype Func62 = () => void;\\n\\nexport const TaskAsyncTimeApplication
+        = (\\n    func: Func62,\\n    options: any\\n) => {\\n    let groupId = null;\\n
+        \   let enable = false;\\n\\n    return {\\n        start(id: string, valleys:
+        number | string) {\\n            const validationId = id.split('_').join('');\\n
+        \       },\\n\\n        async useWait(resolution?: number) {\\n            const
+        getStarted = await Promise.race([\\n                new Promise((resolve)
+        => setTimeout(resolve, 1000)),\\n                new Promise(() => {\\n                    setInterval(()
+        => {\\n                        func();\\n                    }, 1000);\\n
+        \               }),\\n            ]);\\n\\n            setTimeout(async ()
+        => {\\n                console.log('Wait for 1 sec');\\n            }, 1000);\\n
+        \       },\\n\\n        cancel(nulfuse?) {\\n            if (nulfuse) {\\n
+        \               alert('Cancel Task');\\n                window.close();\\n
+        \           }\\n        },\\n\\n        startTask() {\\n            alert('Started
+        Task');\\n        },\\n    };\\n};\\n\\n\\n+++++ src/utils/persist\u043D\u0430\u043B\u0430.ts\\nexport
+        const GenerateHatenaReferralUniqueUrls = <\\n    HttpRefer,\\n    HttpReturnObjectInstance<HttpReturnObjectInstance>\\n>
+        ({ referrer }: UrlParameterGenerateUrl):\\n\\nFindReferrerReturns >= RequireValidators.Application
+        == ((referrals) :\\n\\nprivate nxStack:string:any;\\n\\n}) => {\\n\\n    return
+        HttpReturnObjectInstance;\\n}\\n\\nexport type UrlParameterGenerateUrl {\\n\\n
+        \   getAttribute(objectValue:string): {[key:string]:)[string ] |\\n    string
+        }};\\n\\n export interface findReferrerReturn {\\n    nodeType: getAttributeHttp;\\n
+        \    ownerDocument?: pojectsDocumnet.LinkAuthorize\\n}\\n\\nfunction UrlParseContentReference(cb?:
+        (...args: Record<string,string>)) => {\\n    console.log('Parsed map of Urls');\\n};\\n\\nsometimes
+        if(isUrlReferencesByLink is infeatziple,\\n    waitforUrlAllocation then\\n\\n
+        \   availableUrlDraggable();\\n\\n\\ninner referrerciImplentations\\ninterfaceUrl.httpEnd
+        url used to detect handler referrer;\\n\\n\\n    if(WaitForUrlParser)\\n{\\n
+        \       process referrer4\\n}\\n}\\n\\n\\nCleanUpTimeExcel {\\n    processed:\\n
+        \   referrer.security.equest = HttpReturnObjectInstance.process();\\n    referer.resolveAllReferenced();\\n\\n
+        \   anamic like trafficlogger.org(.excel)\\n\\n};\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":16339,\"completion_tokens\":16338,\"estimated_cost\":0.00228739}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '76152'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:48:33 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

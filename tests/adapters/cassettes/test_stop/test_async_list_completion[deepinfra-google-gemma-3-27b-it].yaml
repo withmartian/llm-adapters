@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-27b-it","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '69'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RZDOhcz9yRAWl85Q78dzrE9k","object":"text_completion","created":1746567180,"model":"google/gemma-3-27b-it","choices":[{"index":0,"text":",
+        I''g using the `predict` function in a TimeSeries forecasting model in Python.
+        I''m getting an error that says \"TypeError: ''list'' object cannot be interpreted
+        as an integer\". I suspect this is related to how I''m passing the period
+        or horizon to the `predict` function.\n\nHere''s my code and the error message:\n\n```python\nfrom
+        statsmodels.tsa.arima.model import ARIMA\nimport pandas as pd\n\n# Sample
+        data (replace with your actual data)\ndata = [10, 12, 15, 13, 17, 20, 18,
+        22, 25, 23]\nindex = pd.date_range(start=''2023-01-01'', periods=len(data),
+        freq=''D'')\nseries = pd.Series(data, index=index)\n\n# Fit the ARIMA model\nmodel
+        = ARIMA(series, order=(5,1,0))\nmodel_fit = model.fit()\n\n# Issue: predict
+        with a list\nfuture_periods = [1, 2, 3]  # I want to predict for the next
+        3 days\npredictions = model_fit.predict(start=len(series), ","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":276,"completion_tokens":274,"estimated_cost":5.500000000000001e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1144'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:33:00 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

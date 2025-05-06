@@ -1,0 +1,147 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-4b-it","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '46'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RYrSqOy2Ko97fihIQ6XnG8D6","object":"text_completion","created":1746567187,"model":"google/gemma-3-4b-it","choices":[{"index":0,"text":"TheBug/app/src/main/java/com/example/thebug/MainActivity.java\npackage
+        com.example.thebug;\n\nimport androidx.appcompat.app.AppCompatActivity;\nimport
+        androidx.constraintlayout.widget.ConstraintLayout;\n\nimport android.os.Bundle;\nimport
+        android.view.View;\nimport android.widget.Button;\n\npublic class MainActivity
+        extends AppCompatActivity {\n\n    private ConstraintLayout constraintLayout;\n    private
+        Button bugButton;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState)
+        {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        constraintLayout
+        = findViewById(R.id.constraintLayout);\n        bugButton = findViewById(R.id.bugButton);\n\n        bugButton.setOnClickListener(new
+        View.OnClickListener() {\n            @Override\n            public void onClick(View
+        v) {\n                moveBug();\n            }\n        });\n    }\n\n    private
+        void moveBug() {\n        // Simple bug movement for demonstration\n        float
+        bugX = (float) (Math.random() * constraintLayout.getWidth());\n        float
+        bugY = (float) (Math.random() * constraintLayout.getHeight());\n\n        constraintLayout.post(()
+        -> { // Post to the main thread to avoid UI issues\n            constraintLayout.animate().x(bugX).y(bugY).setDuration(500).start();\n        });\n    }\n}\n```\n\n**Explanation:**\n\n1.
+        **Imports:**\n   - `androidx.appcompat.app.AppCompatActivity`:  Base class
+        for Activities in Android.\n   - `androidx.constraintlayout.widget.ConstraintLayout`:
+        The layout used to contain the bug and the button.\n   - `android.os.Bundle`:  Used
+        to store and retrieve activity data.\n   - `android.view.View`:  The base
+        class for all UI components.\n   - `android.widget.Button`: The button that
+        triggers the bug movement.\n\n2. **Variables:**\n   - `constraintLayout`:  A
+        reference to the `ConstraintLayout` in the layout file.\n   - `bugButton`:  A
+        reference to the `Button` in the layout file.\n\n3. **`onCreate()` Method:**\n   -
+        `super.onCreate(savedInstanceState)`:  Calls the `onCreate()` method of the
+        parent class.\n   - `setContentView(R.layout.activity_main)`:  Sets the layout
+        for the Activity.  `activity_main.xml` (which we''ll discuss below) contains
+        the ConstraintLayout and Button.\n   - `constraintLayout = findViewById(R.id.constraintLayout)`:  Finds
+        the `ConstraintLayout` by its ID (`constraintLayout`) and stores it in the
+        `constraintLayout` variable.\n   - `bugButton = findViewById(R.id.bugButton)`:  Finds
+        the `Button` by its ID (`bugButton`) and stores it in the `bugButton` variable.\n   -
+        `bugButton.setOnClickListener(...)`: Sets an `OnClickListener` for the `bugButton`.  This
+        means that when the button is clicked, the code inside the `onClick()` method
+        will be executed.\n\n4. **`onClick()` Method:**\n   - `public void onClick(View
+        v)`:  This method is called when the button is clicked.  The `v` parameter
+        is the `View` that was clicked (in this case, the `bugButton`).\n   - `moveBug()`:  Calls
+        the `moveBug()` method to move the bug.\n\n5. **`moveBug()` Method:**\n   -
+        `float bugX = (float) (Math.random() * constraintLayout.getWidth());`: Generates
+        a random X coordinate for the bug within the width of the constraint layout.\n   -
+        `float bugY = (float) (Math.random() * constraintLayout.getHeight());`: Generates
+        a random Y coordinate for the bug within the height of the constraint layout.\n   -
+        `constraintLayout.post(() -> { ... });`: This is *crucial* for UI updates.  `constraintLayout.post()`
+        schedules a callback to be executed on the main thread.  This is necessary
+        because Android handles UI updates on a separate thread. Without `post()`,
+        the `animate()` call might happen before the layout has finished rendering,
+        leading to UI glitches or the bug appearing to jump.\n     - `constraintLayout.animate().x(bugX).y(bugY).setDuration(500).start();`:
+        This line animates the bug''s position.\n       - `animate()`: Starts an animation.\n       -
+        `x(bugX)`: Sets the X coordinate of the constraint layout to the random `bugX`
+        value.\n       - `y(bugY)`: Sets the Y coordinate of the constraint layout
+        to the random `bugY` value.\n       - `setDuration(500)`: Sets the duration
+        of the animation to 500 milliseconds (0.5 seconds).\n       - `start()`: Starts
+        the animation.\n\n**activity_main.xml (Layout File):**\n\n```xml\n<?xml version=\"1.0\"
+        encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\">\n\n    <Button\n        android:id=\"@+id/bugButton\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Move
+        Bug\"\n        android:layout_margin=\"32dp\" />\n\n    <com.example.thebug.BugView\n        android:id=\"@+id/bugView\"\n        android:layout_width=\"50dp\"\n        android:layout_height=\"50dp\"\n        android:background=\"@drawable/bug\"\n        android:layout_margin=\"32dp\"\n        />\n</androidx.constraintlayout.widget.ConstraintLayout>\n```\n\n**BugView.java
+        (A simple class to represent the bug)**\n\n```java\npackage com.example.thebug;\n\nimport
+        android.content.Context;\nimport android.graphics.Bitmap;\nimport android.graphics.BitmapFactory;\nimport
+        android.graphics.drawable.Drawable;\nimport android.util.AttributeSet;\nimport
+        android.view.View;\n\npublic class BugView extends View {\n\n    private Bitmap
+        bugBitmap;\n\n    public BugView(Context context) {\n        super(context);\n        initializeBugBitmap();\n    }\n\n    public
+        BugView(Context context, AttributeSet attrs) {\n        super(context, attrs);\n        initializeBugBitmap();\n    }\n\n    private
+        void initializeBugBitmap() {\n        // Load the bug image from drawable
+        resources\n        bugBitmap = BitmapFactory.decodeResource(getResources(),
+        R.drawable.bug);\n    }\n\n    @Override\n    protected void onDraw(android.graphics.Canvas
+        canvas) {\n        super.onDraw(canvas);\n\n        // Draw the bug image
+        in the center of the view\n        int width = getWidth();\n        int height
+        = getHeight();\n        int bugWidth = bugBitmap.getWidth();\n        int
+        bugHeight = bugBitmap.getHeight();\n\n        float x = (width - bugWidth)
+        / 2f;\n        float y = (height - bugHeight) / 2f;\n\n        canvas.drawBitmap(bugBitmap,
+        x, y, null);\n    }\n}\n```\n\n**bug.xml (Image resource for the bug)**\n\n```xml\n<?xml
+        version=\"1.0\" encoding=\"utf-8\"?>\n<bitmap xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:width=\"50dp\"\n    android:height=\"50dp\"\n    android:src=\"@drawable/bug_icon\"
+        />\n```\n\n**bug_icon.png (The image of the bug)**\n\nPlace a suitable image
+        of a bug (e.g., a simple square) in the `drawable` folder of your project
+        and name it `bug_icon.png`.\n\n**Key Improvements and Considerations:**\n\n*
+        **`ConstraintLayout`:** Using `ConstraintLayout` provides a flexible and efficient
+        way to position the bug and button.\n* **`post()` Method:**  The most important
+        improvement!  `constraintLayout.post(() -> { ... });` ensures that UI updates
+        (like animation) happen on the main thread, avoiding crashes and UI glitches.\n*
+        **Random Coordinates:** Uses `Math.random()` to generate random X and Y coordinates
+        for the bug''s position.\n* **Animation:**  Uses `constraintLayout.animate()`
+        to smoothly move the bug.\n* **BugView Class:** Added a `BugView` class for
+        a simple representation of the bug. This makes it easier to draw the bug onto
+        the screen.\n* **Clearer Code:**  Improved code readability and commenting.\n*
+        **Resource Management:**  Uses `BitmapFactory.decodeResource()` to load the
+        bug image from a drawable resource.  This is generally better than loading
+        images from a URL.\n* **Error Handling:**  In a real-world app, you would
+        want to add error handling (e.g., what if the bug image fails to load?).\n*
+        **Customization:** You can customize the bug''s appearance (color, shape,
+        size) by modifying the `BugView` class and the `activity_main.xml` layout.\n\nThis
+        comprehensive example provides a functional and well-structured solution for
+        moving a bug using Android UI components and animation.  Remember to create
+        the `bug.xml` file and the `bug_icon.png` image in your project''s `drawable`
+        folder.\n","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":2111,"completion_tokens":2109,"estimated_cost":8.439999999999999e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '8622'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:33:07 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

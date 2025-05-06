@@ -1,5 +1,5 @@
 from adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
-from adapters.types import Cost, Model, Provider, Vendor
+from adapters.types import Model, Provider
 
 
 class LeptonModel(Model):
@@ -20,43 +20,43 @@ class LeptonModel(Model):
 
 
 MODELS: list[Model] = [
-    LeptonModel(
-        name="mistral-7b",
-        cost=Cost(prompt=0.07e-6, completion=0.07e-6),
-        context_length=8192,
-        vendor_name=Vendor.mistralai.value,
-    ),
-    LeptonModel(
-        name="mixtral-8x7b",
-        cost=Cost(prompt=0.50e-6, completion=0.50e-6),
-        context_length=32768,
-        vendor_name=Vendor.mistralai.value,
-    ),
-    LeptonModel(
-        name="qwen2-72b",
-        cost=Cost(prompt=0.8e-6, completion=0.8e-6),
-        context_length=128000,
-        vendor_name=Vendor.qwen.value,
-    ),
-    LeptonModel(
-        name="wizardlm-2-7b",
-        cost=Cost(prompt=0.07e-6, completion=0.07e-6),
-        context_length=32000,
-        vendor_name=Vendor.wizardlm.value,
-    ),
-    LeptonModel(
-        name="wizardlm-2-8x22b",
-        cost=Cost(prompt=1.0e-6, completion=1.0e-6),
-        context_length=64000,
-        vendor_name=Vendor.wizardlm.value,
-        supports_tools_choice_required=False,
-    ),
-    LeptonModel(
-        name="dolphin-mixtral-8x7b",
-        cost=Cost(prompt=0.5e-6, completion=0.5e-6),
-        context_length=32000,
-        vendor_name=Vendor.mistralai.value,
-    ),
+    # LeptonModel(
+    #     name="mistral-7b",
+    #     cost=Cost(prompt=0.07e-6, completion=0.07e-6),
+    #     context_length=8192,
+    #     vendor_name=Vendor.mistralai.value,
+    # ),
+    # LeptonModel(
+    #     name="mixtral-8x7b",
+    #     cost=Cost(prompt=0.50e-6, completion=0.50e-6),
+    #     context_length=32768,
+    #     vendor_name=Vendor.mistralai.value,
+    # ),
+    # LeptonModel(
+    #     name="qwen2-72b",
+    #     cost=Cost(prompt=0.8e-6, completion=0.8e-6),
+    #     context_length=128000,
+    #     vendor_name=Vendor.qwen.value,
+    # ),
+    # LeptonModel(
+    #     name="wizardlm-2-7b",
+    #     cost=Cost(prompt=0.07e-6, completion=0.07e-6),
+    #     context_length=32000,
+    #     vendor_name=Vendor.wizardlm.value,
+    # ),
+    # LeptonModel(
+    #     name="wizardlm-2-8x22b",
+    #     cost=Cost(prompt=1.0e-6, completion=1.0e-6),
+    #     context_length=64000,
+    #     vendor_name=Vendor.wizardlm.value,
+    #     supports_tools_choice_required=False,
+    # ),
+    # LeptonModel(
+    #     name="dolphin-mixtral-8x7b",
+    #     cost=Cost(prompt=0.5e-6, completion=0.5e-6),
+    #     context_length=32000,
+    #     vendor_name=Vendor.mistralai.value,
+    # ),
 ]
 
 

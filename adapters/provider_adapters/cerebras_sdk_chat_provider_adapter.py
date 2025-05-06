@@ -7,6 +7,8 @@ class CerebrasModel(Model):
 
     supports_max_completion_tokens: bool = False
 
+    supports_n: bool = False
+
     can_min_p: bool = False
     can_top_k: bool = False
 

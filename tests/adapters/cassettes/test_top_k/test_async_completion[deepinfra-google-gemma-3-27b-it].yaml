@@ -1,0 +1,171 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-27b-it","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '47'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RUBaJ2BxsPcqiTwdaG1ks4Jk\",\"object\":\"text_completion\",\"created\":1746567076,\"model\":\"google/gemma-3-27b-it\",\"choices\":[{\"index\":0,\"text\":\",\\n\\nI
+        am trying to GIF my screen recording from OBS Studio. However, when I render
+        the recording as a GIF, it always ends up choppy and jittery. It doesn't capture
+        the smooth flow of the original recording.\\n\\nHere's what I've tried:\\n\\n*
+        **OBS Studio Settings:**  I record at 60fps, 1920x1080 (though I've tried
+        lower resolutions to see if that helps), using the \\\"High Quality\\\" setting.
+        File format is MP4.\\n* **Using OBS' built-in GIF creation:**  This produces
+        the worst results - super choppy.\\n* **Using other GIF creators:** I've tried:\\n
+        \   * **EZGif.com:**  I've experimented with different frame rates (from 5
+        to 30 fps), and different quantization methods. Still choppy.\\n    * **Giphy
+        Capture (desktop app):**  Slightly better, but still noticeable jitter.\\n
+        \   * **ScreenToGif (desktop app):**  Improved, but still not perfectly smooth.\\n*
+        **FFmpeg:** I've attempted some basic FFmpeg commands found online to convert
+        the MP4 to GIF, also with varying framerates. No luck.\\n\\nI'm starting to
+        suspect the issue isn't necessarily with the GIF creator itself, but with
+        something related to the MP4 recording from OBS.\\n\\nHere's a sample of my
+        workflow:\\n\\n1. Record a short clip (e.g., 10 seconds) of screen activity
+        in OBS Studio.\\n2. Export/Save the recording as an MP4.\\n3. Use a GIF creator
+        (EZGif, Giphy Capture, ScreenToGif, FFmpeg) to convert the MP4 to a GIF.\\n\\n**Questions:**\\n\\n*
+        Is there a specific OBS setting I'm missing that might be causing the issue?\\n*
+        Could the problem be related to variable frame rate (VFR) in the MP4?  How
+        do I address this, if so?\\n* Are there recommended FFmpeg commands specifically
+        for converting screen recordings to smooth GIFs?\\n* Any other suggestions
+        for achieving a smooth GIF from an OBS screen recording?\\n\\n\\n\\nAny help
+        would be greatly appreciated!\\nOkay, this is a common problem with screen
+        recordings and GIF creation.  Here's a breakdown of the issues and how to
+        address them, covering OBS settings, VFR, and FFmpeg:\\n\\n**1. Understanding
+        the Problem: Why GIFs Are Choppy**\\n\\n* **Limited Color Palette:** GIFs
+        have a limited color palette (256 colors). This can cause banding and make
+        gradients look blocky, especially in screen recordings with lots of color
+        detail.\\n* **Low Frame Rates:** GIFs often use lower frame rates than video
+        (10-20 fps is common).  This inherently reduces smoothness. You're trying
+        to bump it up, but the underlying problem is potentially how those frames
+        are handled.\\n* **Variable Frame Rate (VFR):** *This is likely your biggest
+        issue.* Screen recordings, especially from OBS, often have a VFR.  Meaning
+        the time between frames isn't consistent.  GIF creators are often very sensitive
+        to VFR and don't handle it well, resulting in the jittering you see.\\n* **Scaling/Resizing:**
+        \ Resizing the video during the GIF creation can introduce artifacts and further
+        degrade quality.\\n* **Compression:** GIF compression is lossless, but it's
+        still limited and can have a visual impact.\\n\\n\\n\\n**2. OBS Studio Settings
+        - Optimize for GIF Creation**\\n\\n* **Recording Format:**  Stick with MP4
+        (to simplify things) for now.  Don't use MKV, even though it might be slightly
+        better for recording directly.  We'll fix the VFR *before* GIF conversion.\\n*
+        **Video Bitrate:**  **Increase the bitrate significantly.**  A higher bitrate
+        means more information is preserved in the MP4, giving the GIF creator more
+        data to work with.  Try **50 Mbps - 100 Mbps**. This might result in larger
+        MP4 files, but it's necessary.\\n* **Encoder:**  H.264 is fine, but consider
+        **NVENC H.264** (if you have an NVIDIA GPU) or **x264** (CPU) for potentially
+        better quality.  NVENC often performs better with screen recordings.\\n* **FPS:**
+        \ Keep it at **60 FPS**.  Don't lower this initially. We'll deal with it later
+        if needed.\\n* **Keyframe Interval:** **Set this to 2.** This is crucial for
+        editing and smooth GIF creation. (Defaults to 2 seconds, which is bad for
+        GIFs!)  This ensures a frame is available every 2 seconds, which helps the
+        GIF creator synchronize things better.\\n* **Resolution:** 1920x1080 is fine
+        if that's what you need for the GIF. However, a smaller resolution (e.g.,
+        1280x720) will significantly reduce file size and processing time, possibly
+        without a huge visual difference.\\n\\n**3. Fixing Variable Frame Rate (VFR)
+        \u2013 Critical Step!**\\n\\nThis is where most of the improvement will come
+        from.  You need to convert the MP4 to a Constant Frame Rate (CFR) MP4 *before*
+        creating the GIF.  **Handbrake** is an excellent free tool for this.\\n\\n*
+        **Download and Install Handbrake:**  [https://handbrake.fr/](https://handbrake.fr/)\\n\\n*
+        **Handbrake Settings (for VFR to CFR):**\\n    1.  **Open your MP4 file in
+        Handbrake.**\\n    2.  **Preset:** Choose a General preset like \\\"Fast 1080p30\\\"
+        or \\\"Fast 720p30\\\" as a starting point. Adjust as needed.\\n    3.  **Video
+        Tab:**\\n        *   **Video Codec:**  H.264 (x264) is a safe bet. NVENC is
+        fine if you have an NVIDIA card.\\n        *   **Framerate (FPS):** *Select
+        **Constant Framerate***.  **Important!**  This is the crucial setting.  Keep
+        it at 60 or whatever your original recording was.\\n        *   **Constant
+        Quality:**  Set this to RF 20-23. Lower RF values mean higher quality (and
+        larger files).\\n    4.  **Audio Tab:** Copy the original audio track (usually
+        the best option).\\n    5.  **Start Encode:**  This will create a new MP4
+        file with a Constant Frame Rate.\\n\\n**4. FFmpeg Commands (Alternative to
+        Handbrake)**\\n\\nIf you prefer FFmpeg, here are some commands.  This assumes
+        you have FFmpeg installed and added to your system path:\\n\\n```bash\\n#
+        Convert to CFR, keeping the original framerate (60fps in this example)\\nffmpeg
+        -i input.mp4 -vsync vfr -r 60 -c:v libx264 -crf 23 -preset medium -c:a copy
+        output_cfr.mp4\\n\\n# Alternatively, try specifying a constant frame rate
+        using the -r flag:\\nffmpeg -i input.mp4 -r 60 -c:v libx264 -crf 23 -preset
+        medium -c:a copy output_cfr.mp4\\n```\\n\\n* `-i input.mp4`: Input MP4 file.\\n*
+        `-vsync vfr`:  Tell FFmpeg to handle the variable frame rate correctly. (May
+        not be needed if using -r.)\\n* `-r 60`: Sets the output frame rate to 60
+        fps.\\n* `-c:v libx264`:  Video codec (H.264)\\n* `-crf 23`: Constant Rate
+        Factor (controls quality). Lower = better quality, larger file size.  23 is
+        a good starting point.\\n* `-preset medium`: Encoding speed/quality trade-off.
+        \ \\\"medium\\\" is a good balance.\\n* `-c:a copy`: Copy the audio stream
+        without re-encoding.\\n\\n**5. GIF Creation (After VFR Correction)**\\n\\nNow
+        that you have a CFR MP4, try *again* with your GIF creators:\\n\\n* **EZGif.com:**
+        Use a frame rate of 10-20 fps.  Try different quantization methods (e.g.,
+        adaptive) to find the best balance between quality and file size.  Resize
+        if necessary. **Most importantly: Ensure \\\"Smooth Transitions\\\" or similar
+        option is selected where available.**\\n* **Giphy Capture / ScreenToGif:**
+        These should perform better with the CFR MP4. Experiment with frame rate and
+        quantization.  Look for options to optimize for screen recordings.\\n* **FFmpeg
+        (GIF Creation):**\\n\\n```bash\\nffmpeg -i output_cfr.mp4 -vf \\\"fps=15,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse\\\"
+        -loop 0 output.gif\\n```\\n\\n* `-i output_cfr.mp4`: Input CFR MP4.\\n* `-vf
+        \\\"...\\\"`: Video filter chain.\\n    * `fps=15`: Sets the output frame
+        rate to 15 fps.\\n    * `scale=640:-1:flags=lanczos`:  Resizes the video to
+        a width of 640 pixels, maintaining the aspect ratio.  `lanczos` is a good
+        scaling algorithm.\\n    * `split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse`:
+        This is the key to good GIF color optimization.  It generates a palette specifically
+        for your video.\\n* `-loop 0`:  Loops the GIF indefinitely.\\n\\n**Troubleshooting
+        Tips:**\\n\\n* **Test with a Simple Recording:** Record a very simple screen
+        activity (e.g., moving a window) to isolate the problem.\\n* **Isolate Steps:**
+        \ Try each step separately to identify where the issue arises (OBS settings,
+        VFR correction, GIF creation).\\n* **File Size:** GIFs can be large, especially
+        with high frame rates and good quality.  Be prepared to compromise on either
+        size or smoothness.\\n\\n\\n\\n**In Summary:**\\n\\n1. **Optimize OBS:**  High
+        bitrate, keyframe interval of 2, 60 FPS.\\n2. **Fix VFR:**  Use Handbrake
+        or FFmpeg to convert to CFR MP4. This is the most important step.\\n3. **Create
+        GIF:**  Use a GIF creator, experiment with settings, and consider FFmpeg for
+        more control.\\n\\nLet me know how these steps work for you!  If you're still
+        having trouble, please provide more details about your OBS settings, the specific
+        GIF creator you're using, and the FFmpeg commands you've tried.  Also, a link
+        to a sample MP4 (if possible) would be very helpful.\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":2352,\"completion_tokens\":2350,\"estimated_cost\":0.00047020000000000005}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '8995'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:31:16 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

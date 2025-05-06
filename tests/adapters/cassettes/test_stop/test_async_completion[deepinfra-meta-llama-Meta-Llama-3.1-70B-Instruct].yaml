@@ -1,0 +1,155 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '78'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RivqFofjfJd6bRUmkF41GbPy","object":"text_completion","created":1746568043,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","choices":[{"index":0,"text":"defTECH
+        Wizard Interface\nOnce the interface has been loaded, the main TECH Wizard
+        form will be displayed. This form is used to control the entire design process.
+        Each of the buttons located on this form will be discussed below.\n### Creating
+        a New Design\nTo start a new design, click on the _New Design_ button. This
+        will display the New Design Wizard form shown below.\nThe New Design Wizard
+        form is used to define the basic design parameters of the circuit. Each of
+        the required parameters can be selected from the associated drop-down list
+        box. The following parameters need to be defined:\n* **Design frequency**:
+        This is the frequency at which the design is to operate.\n* **Saturating material**:
+        This is the type of material used for the saturating core. For example, garnet,
+        ferrite, etc.\n* **Core type**: This defines the type of core to be used,
+        such as a pot core, PCP core, etc.\n* **Package type**: This defines the type
+        of package to be used for the component. For example, a TO-220 package, a
+        SIP package, etc.\n* **Construction type**: This defines the type of construction
+        used for the component. For example, a switched mode construction, a linear
+        construction, etc.\n* **Design type**: This defines the type of design. For
+        example, a simple design, a design with built-in voltage and current limiting,
+        etc.\n* **Switching waveform**: This defines the type of switching waveform
+        used in the circuit. For example, a square wave, a sine wave, etc.\nOnce all
+        of the design parameters have been defined, click on the _Next_ button to
+        proceed with the design.\n### Defining Component Values\nThe next form displayed
+        will be the Define Components Wizard form.\nThis form is used to define the
+        values of the individual components used in the circuit. Depending on the
+        design type selected, the required components may include resistors, capacitors,
+        inductors, etc. The following components need to be defined:\n* **Saturating
+        inductor**\n* **Filter capacitor**\n* **Decoupling capacitor**\n* **Current
+        limiting resistor**\n* **Voltage limiting resistor**\n* **Load resistor**\n*
+        **Filter resistor**\n* **Feedback resistor**\n* **Bias resistor**\n* **Switching
+        transistor**\nOnce all of the component values have been defined, click on
+        the _Next_ button to proceed with the design.\n### Defining the Circuit Schematic\nThe
+        next form displayed will be the Circuit Schematic Wizard form.\nThis form
+        is used to define the circuit schematic. The circuit is defined in terms of
+        a series of rows and columns. Each row and column represents a specific point
+        in the circuit. For example, a row may represent the drain of the switching
+        transistor, while a column may represent the collector of the switching transistor.
+        Once all of the points in the circuit have been defined, click on the _Next_
+        button to proceed with the design.\n### Defining the Circuit Parameters\nThe
+        next form displayed will be the Circuit Parameters Wizard form.\nThis form
+        is used to define the circuit parameters. The circuit parameters are used
+        to calculate the value of the components in the circuit. The following parameters
+        need to be defined:\n* **Supply voltage**\n* **Output voltage**\n* **Output
+        current**\n* **Switching frequency**\n* **Duty cycle**\n* **Efficiency**\n*
+        **Magnetic material permeability**\n* **Magnetic material saturation point**\n*
+        **Wire diameter**\n* **Number of turns**\n* **Core area**\n* **Core volume**\n*
+        **Thermal resistance**\n* **Ambient temperature**\n* **Number of layers**\nOnce
+        all of the circuit parameters have been defined, click on the _Next_ button
+        to proceed with the design.\n### Viewing the Design Results\nThe final form
+        displayed will be the Design Results Wizard form.\nThis form is used to view
+        the results of the design. The design results include a summary of the component
+        values, a schematic of the circuit, and a list of warnings and errors encountered
+        during the design process. Once the design results have been viewed, click
+        on the _Finish_ button to exit the design process.\n### Saving the Design\nThe
+        design can be saved by clicking on the _Save Design_ button. This will save
+        the design parameters, component values, and circuit schematic to a file.
+        The file can be loaded later to resume the design process.\n### Loading a
+        Design\nA previously saved design can be loaded by clicking on the _Load Design_
+        button. This will load the design parameters, component values, and circuit
+        schematic from a file.\n### Printing the Design\nThe design can be printed
+        by clicking on the _Print Design_ button. This will print the design parameters,
+        component values, and circuit schematic.\n### Exiting the Program\nThe program
+        can be exited by clicking on the _Exit_ button.\n### TECH Wizard Context Sensitive
+        Help\nContext sensitive help is available for each of the forms in the TECH
+        Wizard. To access the help for a specific form, click on the _Help_ button
+        located on the form. This will display the help file for the form.\n### Application
+        Example\nThe TECH Wizard can be used to design a wide range of switched mode
+        power supplies. For example, the TECH Wizard can be used to design a buck
+        converter, a boost converter, a buck-boost converter, a flyback converter,
+        a forward converter, a half-bridge converter, a full-bridge converter, etc.\nTo
+        design a buck converter using the TECH Wizard, the following steps can be
+        taken:\n* Click on the _New Design_ button to start a new design.\n* Select
+        the design parameters, such as the design frequency, saturating material,
+        core type, package type, construction type, design type, and switching waveform.\n*
+        Define the component values, such as the saturating inductor, filter capacitor,
+        decoupling capacitor, current limiting resistor, voltage limiting resistor,
+        load resistor, filter resistor, feedback resistor, bias resistor, and switching
+        transistor.\n* Define the circuit schematic.\n* Define the circuit parameters,
+        such as the supply voltage, output voltage, output current, switching frequency,
+        duty cycle, efficiency, magnetic material permeability, magnetic material
+        saturation point, wire diameter, number of turns, core area, core volume,
+        thermal resistance, ambient temperature, and number of layers.\n* View the
+        design results.\n* Save the design.\n* Load the design.\n* Print the design.\n*
+        Exit the program.\nBy following these steps, the TECH Wizard can be used to
+        design a buck converter or any other type of switched mode power supply.\n###
+        Troubleshooting the TECH Wizard\nIf the TECH Wizard is not functioning correctly,
+        the following troubleshooting steps can be taken:\n* Check the design parameters
+        to ensure that they are correct.\n* Check the component values to ensure that
+        they are correct.\n* Check the circuit schematic to ensure that it is correct.\n*
+        Check the circuit parameters to ensure that they are correct.\n* Check the
+        warnings and errors encountered during the design process.\n* Consult the
+        help file for the TECH Wizard.\nBy following these steps, the TECH Wizard
+        can be used to design a wide range of switched mode power supplies.\nConclusion\nIn
+        conclusion, the TECH Wizard is a powerful tool for designing switched mode
+        power supplies. It provides a user-friendly interface for defining the design
+        parameters, component values, and circuit schematic. The TECH Wizard also
+        provides a number of features for viewing the design results, saving the design,
+        loading a design, printing the design, and exiting the program. The TECH Wizard
+        is an essential tool for any power supply designer.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":1549,"completion_tokens":1548,"estimated_cost":0.00061943}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '7826'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:47:23 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

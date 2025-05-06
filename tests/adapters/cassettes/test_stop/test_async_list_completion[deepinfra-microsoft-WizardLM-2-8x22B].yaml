@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/WizardLM-2-8x22B","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '74'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RESMmD9WzWtdQ5lUp3p2AVd2","object":"text_completion","created":1746567127,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"text":"ser,\"
+        September 1, 2004, http://www.nytimes.com/2004/09/01/arts/dance/01schi.html?_r=0.\n\n20.
+        Project Muse, \"frankO: A Fusion of Dance Disciplines,\" Johns Hopkins University
+        Press, video clip, http://muse.jhu.edu/article/18359.\n\n21. Br","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":105,"completion_tokens":104,"estimated_cost":5.25e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '534'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:32:07 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Llama-3.2-90B-Vision-Instruct","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '66'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-R5DobhU4O3J3NmymUE3oFy66","object":"text_completion","created":1746568614,"model":"meta-llama/Llama-3.2-90B-Vision-Instruct","choices":[{"index":0,"text":"Question
+        Daniel Stanley2016-05-02T15:13:35+00:00\n4. What is the purpose of the bottom
+        stop in the floating shaft [3]?\nThe purpose is to maintain the correct oil
+        clearance between the shaft and the bearings at the bottom, so that the shaft
+        can operate satisfactorily when the top and bottom clearances are increased
+        and decreased.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":79,"completion_tokens":78,"estimated_cost":3.155e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '637'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:56:54 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
