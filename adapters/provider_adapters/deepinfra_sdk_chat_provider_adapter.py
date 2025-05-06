@@ -5,18 +5,25 @@ from adapters.types import Cost, Model, Provider, Vendor
 class DeepInfraModel(Model):
     provider_name: str = Provider.deepinfra.value
 
+    supports_completion: bool = False
     supports_vision: bool = False
     supports_tools: bool = False
     supports_json_content: bool = False
+    supports_n: bool = False
 
+    can_assistant_only: bool = False
     can_system_only: bool = False
     can_min_p: bool = False
     can_top_k: bool = False
 
-    def _get_api_path(self) -> str:
+    def get_api_path(self) -> str:
         return f"{self.vendor_name}/{self.name}"
 
 
+# TODO: check completion length
+# TODO: try lower case model names
+# TODO: check json support
+# TODO: check function/tools calling support
 MODELS: list[Model] = [
     DeepInfraModel(
         name="Llama-3.3-70B-Instruct",
@@ -57,12 +64,12 @@ MODELS: list[Model] = [
         vendor_name=Vendor.deepseek_ai.value,
         can_system_only=False,
     ),
-    DeepInfraModel(
-        name="QwQ-32B-Preview",
-        cost=Cost(prompt=0.12e-6, completion=0.18e-6),
-        context_length=32768,
-        vendor_name=Vendor.Qwen,
-    ),
+    # DeepInfraModel(
+    #     name="QwQ-32B-Preview",
+    #     cost=Cost(prompt=0.12e-6, completion=0.18e-6),
+    #     context_length=32768,
+    #     vendor_name=Vendor.Qwen,
+    # ),
     DeepInfraModel(
         name="Qwen2.5-Coder-32B-Instruct",
         cost=Cost(prompt=0.07e-6, completion=0.16e-6),
@@ -140,12 +147,12 @@ MODELS: list[Model] = [
         context_length=131072,
         vendor_name=Vendor.microsoft,
     ),
-    DeepInfraModel(
-        name="DeepSeek-R1-Distill-Qwen-32B",
-        cost=Cost(prompt=12e-6, completion=18e-6),
-        context_length=131072,
-        vendor_name=Vendor.deepseek_ai,
-    ),
+    # DeepInfraModel(
+    #     name="DeepSeek-R1-Distill-Qwen-32B",
+    #     cost=Cost(prompt=12e-6, completion=18e-6),
+    #     context_length=131072,
+    #     vendor_name=Vendor.deepseek_ai,
+    # ),
     DeepInfraModel(
         name="Meta-Llama-3.1-405B-Instruct",
         cost=Cost(prompt=80e-6, completion=80e-6),
