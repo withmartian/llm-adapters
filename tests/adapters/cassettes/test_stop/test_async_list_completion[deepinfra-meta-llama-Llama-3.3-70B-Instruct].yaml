@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Llama-3.3-70B-Instruct","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '81'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RnJkfSCSQqJlIHO5gWc0keBm","object":"text_completion","created":1746565511,"model":"meta-llama/Llama-3.3-70B-Instruct","choices":[{"index":0,"text":"#def
+        publication_or_vision\n```\ndef publication_or_visioniks_year(year):\n    if
+        year % 4 == 0: \n        if year % 100 == 0: \n            if year % 400 ==
+        0: \n                leaps = \"leap year\" \n            else: \n                leaps
+        = \"common year\" \n        else: \n            leaps = \"leap year\" \n    else:
+        \n        leaps = \"common year\" \n    return leaps\n```\n\n### Example use
+        case \n```\nprint(publication_or_visioniks_year(1999))\n```\n\n### Explanation
+        \n*   The solution begins by defining a function `publication_or_visioniks_year(year)`
+        that takes one argument, `year`.\n*   Then it uses conditional statements
+        to check the rules for determining whether a year is a leap year or a common
+        year.\n*   If the year is evenly divisible by 4, it checks the next condition.\n*   If
+        the year is a century year (i.e., it is divisible by 100), it must also be
+        divisible by 400. This is the rule that was introduced to eliminate 3 leap
+        years every 400 years.\n*   If none of the above conditions are met, the year
+        is a common year.\n*   Finally, it returns whether the year is a leap year
+        or a common year. \n\nYou can ask for any modifications or improvements if
+        needed. \n\nFeel free to ask for any clarification.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":301,"completion_tokens":300,"estimated_cost":0.00012023}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1539'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:05:11 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

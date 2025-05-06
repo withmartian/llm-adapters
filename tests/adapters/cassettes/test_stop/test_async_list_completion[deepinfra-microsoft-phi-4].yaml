@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/phi-4","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '63'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RuCEppOaz2yWiZulHim1yiCA","object":"text_completion","created":1746565517,"model":"microsoft/phi-4","choices":[{"index":0,"text":",
+        I''m trying to implement two genetic algorithm operations using the given
+        code snippet: `cross` and `mut`. However, I am not getting the correct outputs.
+        Here''s the buggy version of my code:\n\n```python\ndef cross(self, x_i, y_i):\n    x,
+        y = self.population[x_i], self.population[y_i]\n    slnx = self.adj_matrix(x)\n    slny
+        = self.adj_matrix(y)\n    union = self.union_adj_matrix(slnx, slny)\n    new_sln
+        = []\n    city_choice = np.random.randint(0, 9846)\n    while len(new_sln)
+        < self.m:\n        print(len(new_sln))\n        new_sln.app","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":146,"completion_tokens":145,"estimated_cost":2.0370000000000003e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '840'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:05:17 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

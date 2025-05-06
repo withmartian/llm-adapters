@@ -1,0 +1,156 @@
+interactions:
+- request:
+    body: '{"model":"deepseek-ai/DeepSeek-R1","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '49'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-Rhuj4QGNyGuPvk8kEpUm5mBA","object":"text_completion","created":1746565572,"model":"deepseek-ai/DeepSeek-R1","choices":[{"index":0,"text":"
+        All,\n\nI have a problem with the code below. The code is supposed to be a
+        solution to problem 3 on Project Euler. I think the code is logically correct
+        but whenever I run it, the program just freezes. I am new to programming and
+        I can''t figure out what is wrong. Please help.\n\nThe problem is: The prime
+        factors of 13195 are 5, 7, 13 and 29. What is the largest prime factor of
+        the number 600851475143 ?\n\nThe code is as follows:\n\n#include <iostream>\nusing
+        namespace std;\n\nlong long num = 600851475143;\nlong long prime = 1;\nlong
+        long i = 1;\n\nint main()\n{\n    while (i < num)\n    {\n        if (num
+        % i == 0)\n        {\n            for (long long x = 1; x <= i; x++)\n            {\n                if
+        (i % x == 0 && x != 1 && x != i)\n                {\n                    break;\n                }\n                else
+        if (x == i)\n                {\n                    prime = i;\n                }\n            }\n        }\n        i++;\n    }\n    cout
+        << prime << endl;\n    return 0;\n}\nWhat I have tried:\n\nI have tried to
+        use smaller numbers instead of 600851475143 and the code works. For example,
+        when I use 13195, the code outputs 29. But when I use the actual number, the
+        code just freezes. I think the problem is that the code is taking too long
+        to run but I don''t know how to optimize it. Please help.\n\nPosted\n\nUpdated
+        1-Jul-23 23:01pm\n\nComments\n\njeron1 2-Jul-23 3:53am\n\nThe code is taking
+        too long. For example, the outer loop (while (i < num)) will loop 600,851,475,142
+        times. Each time through the loop, the inner for loop (for (long long x =
+        1; x <= i; x++)) will loop up to i times. So even if i is 2, the inner loop
+        runs 2 times, but when i is 600,851,475,142, the inner loop runs 600,851,475,142
+        times. So the total number of operations is roughly (600,851,475,142)^2, which
+        is a huge number. Even if each operation takes a nanosecond, it would take
+        about 3.6e+18 seconds, which is way longer than the age of the universe. So
+        you need a better algorithm.\n\n## 3 solutions\n\n## Solution 1\n\nThe code
+        is taking too long. For example, the outer loop (while (i < num)) will loop
+        600,851,475,142 times. Each time through the loop, the inner for loop (for
+        (long long x = 1; x <= i; x++)) will loop up to i times. So even if i is 2,
+        the inner loop runs 2 times, but when i is 600,851,475,142, the inner loop
+        runs 600,851,475,142 times. So the total number of operations is roughly (600,851,475,142)^2,
+        which is a huge number. Even if each operation takes a nanosecond, it would
+        take about 3.6e+18 seconds, which is way longer than the age of the universe.
+        So you need a better algorithm.\n\nComments\n\nmerano99 2-Jul-23 4:34am\n\nYes,
+        the code is not efficient. But even with a better algorithm, the code would
+        have to be adjusted. For example, the code does not check whether the divisor
+        found is a prime number. The code checks whether the divisor is a prime number.
+        But even that is not done correctly. For example, the code checks for x=1
+        and x=i, but in the loop x runs from 1 to i. So for i=2, x would be 1 and
+        2. The code would check if x is 1 or i. For x=1, the code breaks. For x=2,
+        x==i, so prime is set to i. But 2 is a prime number, so that''s correct. But
+        for i=4, the code would check x=1, 2, 3, 4. For x=2, which is a divisor of
+        4, the code breaks. So the code correctly identifies that 4 is not a prime
+        number. So the code for checking if i is a prime number is correct. But the
+        problem is that the code is checking every number up to num, which is way
+        too big. So the code is correct but not efficient. The solution is to find
+        a better algorithm.\n\n## Solution 2\n\nThe code is correct but not efficient.
+        The problem is that the code checks every number up to num to see if it is
+        a factor and a prime. For large numbers like 600851475143, this is not feasible.
+        A better approach is to factorize the number by dividing it by primes starting
+        from the smallest. Here''s a better algorithm:\n\n1. Start with the smallest
+        prime, 2.\n\n2. While the number is divisible by the current prime, divide
+        the number by the prime.\n\n3. Move to the next prime.\n\n4. The largest prime
+        factor is the remaining number when it''s no longer divisible by any primes.\n\nHere''s
+        the code implementing this approach:\n\n#include <iostream>\nusing namespace
+        std;\n\nlong long largestPrimeFactor(long long n) {\n    long long largest
+        = -1;\n    while (n % 2 == 0) {\n        largest = 2;\n        n /= 2;\n    }\n    for
+        (long long i = 3; i*i <= n; i += 2) {\n        while (n % i == 0) {\n            largest
+        = i;\n            n /= i;\n        }\n    }\n    if (n > 2) {\n        largest
+        = n;\n    }\n    return largest;\n}\n\nint main() {\n    long long num = 600851475143;\n    cout
+        << largestPrimeFactor(num) << endl;\n    return 0;\n}\nThis code first handles
+        the factor 2 separately, then checks odd numbers up to the square root of
+        n. This is much more efficient because it reduces the number of iterations
+        significantly.\n\nComments\n\nmerano99 2-Jul-23 4:35am\n\nThis is a better
+        approach. The code first divides out all factors of 2, then checks odd numbers
+        starting from 3. For each odd number, it divides n by the number as long as
+        it is divisible. The loop runs up to sqrt(n) because any factor larger than
+        sqrt(n) would have a corresponding factor smaller than sqrt(n). If after processing
+        all possible factors up to sqrt(n), n is still greater than 2, then n itself
+        is a prime number and the largest prime factor. This approach is O(sqrt(n))
+        which is manageable even for large numbers like 600851475143.\n\n## Solution
+        3\n\nThe code is correct but not efficient. The problem is that the code checks
+        every number up to num to see if it is a factor and a prime. For large numbers
+        like 600851475143, this is not feasible. A better approach is to factorize
+        the number by dividing it by primes starting from the smallest. Here''s a
+        better algorithm:\n\n1. Start with the smallest prime, 2.\n\n2. While the
+        number is divisible by the current prime, divide the number by the prime.\n\n3.
+        Move to the next prime.\n\n4. The largest prime factor is the remaining number
+        when it''s no longer divisible by any primes.\n\nHere''s the code implementing
+        this approach:\n\n#include <iostream>\nusing namespace std;\n\nlong long largestPrimeFactor(long
+        long n) {\n    long long largest = -1;\n    while (n % 2 == 0) {\n        largest
+        = 2;\n        n /= 2;\n    }\n    for (long long i = 3; i*i <= n; i += 2)
+        {\n        while (n % i == 0) {\n            largest = i;\n            n /=
+        i;\n        }\n    }\n    if (n > 2) {\n        largest = n;\n    }\n    return
+        largest;\n}\n\nint main() {\n    long long num = 600851475143;\n    cout <<
+        largestPrimeFactor(num) << endl;\n    return 0;\n}\nThis code first handles
+        the factor 2 separately, then checks odd numbers up to the square root of
+        n. This is much more efficient because it reduces the number of iterations
+        significantly.\n\nComments\n\nmerano99 2-Jul-23 4:35am\n\nThis is a better
+        approach. The code first divides out all factors of 2, then checks odd numbers
+        starting from 3. For each odd number, it divides n by the number as long as
+        it is divisible. The loop runs up to sqrt(n) because any factor larger than
+        sqrt(n) would have a corresponding factor smaller than sqrt(n). If after processing
+        all possible factors up to sqrt(n), n is still greater than 2, then n itself
+        is a prime number and the largest prime factor. This approach is O(sqrt(n))
+        which is manageable even for large numbers like 600851475143.\n\nThis content,
+        along with any associated source code and files, is licensed under The Code
+        Project Open License (CPOL)\n\nCodeProject, 20 Bay Street, 11th Floor Toronto,
+        Ontario, Canada M5J 2N8 +1 (416) 849-8900","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":1995,"completion_tokens":1993,"estimated_cost":0.00434574}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '8015'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:06:12 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

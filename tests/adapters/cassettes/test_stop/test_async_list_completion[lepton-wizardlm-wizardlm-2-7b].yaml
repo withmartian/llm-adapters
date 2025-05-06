@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"model":"wizardlm-2-7b","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - wizardlm-2-7b.lepton.run
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://wizardlm-2-7b.lepton.run/api/v1/completions
+  response:
+    body:
+      string: '{"id":"cmpl-p3RevcWR7EGdjQFP4kM7pq","object":"text_completion","created":1746566127,"model":"wizardlm-2-7b","choices":[{"index":0,"text":"DPI
+        (2x) mode, which I have set up in Windows Display settings. But when I try
+        to run my game in borderless window mode, it still doesn''t display in HiDPI
+        mode. The game runs in fullscreen mode with HiDPI support, but in borderless
+        window mode, it just looks blurry as if it''s running at a lower resolution.\n\nI''ve
+        tried setting the DPI scaling override in the game''s .ini file to 2, but
+        it didn''t change anything. I''ve also tried changing the system DPI settings
+        and running the game as an administrator, but nothing seems to work.\n\nIs
+        there a way to force the game to use HiDPI scaling in borderless window mode
+        on Windows 10?\n\nComment: Have you tried running the game with the borderless
+        window forced by a launch parameter or an ini setting? Some games have this
+        feature built-in but it''s disabled by default or not enabled for borderless
+        window mode.\n\nComment: Yes, I''ve tried running the game with borderless
+        window forced by the ini settings, but it didn''t help with the HiDPI scaling
+        issue. The game runs","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb7e36fe1d232b-SJC
+      content-length:
+      - '1273'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 21:15:28 GMT
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-envoy-upstream-service-time:
+      - '1248'
+    status:
+      code: 200
+      message: OK
+version: 1

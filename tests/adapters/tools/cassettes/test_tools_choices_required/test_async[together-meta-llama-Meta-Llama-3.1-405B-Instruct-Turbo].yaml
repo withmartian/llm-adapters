@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"required"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '425'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nt11fVT-2j9zxn-93bb6ea27f997ace\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746565489,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n
+        \     \"seed\": 13693790675374380000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n
+        \           \"id\": \"call_gu56re3l6hj0ssww87j8ukyo\",\n            \"type\":
+        \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"prompt\\\":\\\"10\\\"}\",\n
+        \             \"name\": \"generate\"\n            }\n          }\n        ]\n
+        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 204,\n    \"completion_tokens\":
+        17,\n    \"total_tokens\": 221,\n    \"cached_tokens\": 0\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb6ea27f997ace-SJC
+      content-length:
+      - '814'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 21:04:49 GMT
+      etag:
+      - W/"32e-efxP7p0koO1Mkp1CxpZsZIe4mrk"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 912f9d1f-e6ce-458b-a356-8746f3588550-noamzn
+      x-api-call-end:
+      - '2025-05-06T21:04:49.526Z'
+      x-api-call-start:
+      - '2025-05-06T21:04:49.144Z'
+      x-api-received:
+      - '2025-05-06T21:04:49.130Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nt11fVT-2j9zxn-93bb6ea27f997ace
+    status:
+      code: 200
+      message: OK
+version: 1

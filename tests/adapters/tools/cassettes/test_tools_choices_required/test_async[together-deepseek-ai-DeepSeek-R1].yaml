@@ -1,0 +1,162 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-ai/DeepSeek-R1","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"required"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '403'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nt11dhm-zqrih-93bb6e7d1c6eebed\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746565483,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        7693210138866685000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"<think>\\nOkay,
+        the user wants to generate a random number between 1 and 10 using specified
+        tools. Let me see what tools they might have in mind. Since they didn't mention
+        any specific tools, maybe they're referring to common command-line tools or
+        programming languages.\\n\\nFirst, I should consider different methods. For
+        example, in Bash, using $RANDOM is a common way. The $RANDOM variable gives
+        a number between 0 and 32767. To get it within 1-10, I can use modulo 10 and
+        add 1. So the command would be something like echo $(( (RANDOM % 10) + 1 )).
+        But wait, I should check if that's correct. Modulo 10 gives 0-9, adding 1
+        makes it 1-10. Yeah, that works.\\n\\nAlternatively, using Python. Python's
+        random module can do this. The command would be python -c \\\"import random;
+        print(random.randint(1,10))\\\". That's straightforward. But maybe the user
+        doesn't have Python installed, so the Bash method is more universal.\\n\\nAnother
+        option is using shuf in Linux. The shuf command can generate a random permutation.
+        So shuf -i 1-10 -n 1 would shuffle numbers 1-10 and pick the first one. That's
+        another valid method.\\n\\nIf they're on macOS, maybe they have jot? But jot
+        is less common. Or maybe using awk: awk 'BEGIN { srand(); print int(1 + rand()
+        * 10) }'. But srand() might need a seed, though in some implementations it
+        uses the current time. Hmm, but maybe not as reliable as other methods.\\n\\nAlso,
+        in PowerShell, it's Get-Random -Minimum 1 -Maximum 11. Wait, because in PowerShell
+        the maximum is exclusive, so 11 would include 10. That's another way for Windows
+        users.\\n\\nBut the user didn't specify the OS, so maybe stick to Bash and
+        Python as common tools. Let me list a few methods with different tools. Let
+        me check each command to make sure they work. For example, in Bash, the $RANDOM
+        approach, shuf, Python, maybe even Perl one-liner. Also, using od for getting
+        bytes from /dev/urandom, but that's more complicated. For example: od -An
+        -N1 -tu1 /dev/urandom gives a number 0-255, then modulo 10 +1. But that's
+        more involved.\\n\\nSo the main methods would be:\\n\\n1. Bash arithmetic:
+        $(( (RANDOM % 10) + 1 ))\\n2. shuf: shuf -i 1-10 -n 1\\n3. Python: python
+        -c \\\"import random; print(random.randint(1,10))\\\"\\n4. Perl: perl -e 'print
+        int(rand(10)) + 1'\\n\\nI should present these options, explaining each briefly.
+        Also, note that $RANDOM might not be perfectly uniform, but for most purposes
+        it's sufficient. The shuf method is good. Python and Perl are reliable if
+        installed. Maybe mention that if they need cryptographic security, /dev/urandom
+        methods are better, but that's probably beyond the scope here.\\n\\nSo the
+        answer should list these methods with examples. Let me make sure each command
+        works. Testing in my head: RANDOM is a Bash variable, modulo 10 gives 0-9,
+        add 1. Yes. Shuf with -i 1-10 and -n 1. Python's randint(1,10) includes both
+        endpoints. Perl's rand(10) gives 0-10, but int(rand(10)) gives 0-9, then +1.
+        Correct.\\n\\nAlright, that's covered. Let me put it all together in a clear
+        way.\\n</think>\\n\\nHere are several ways to generate a random number between
+        1 and 10 using common tools:\\n\\n---\\n\\n### **1. Using Bash (Terminal)**\\n```bash\\necho
+        $(( (RANDOM % 10) + 1 ))\\n```\\n- `RANDOM` is a built-in Bash variable that
+        generates a pseudorandom integer between 0 and 32767.  \\n- `% 10` restricts
+        the range to 0\u20139, and `+ 1` shifts it to 1\u201310.\\n\\n---\\n\\n###
+        **2. Using `shuf` (Linux/macOS)**\\n```bash\\nshuf -i 1-10 -n 1\\n```\\n-
+        `shuf` shuffles numbers in the specified range (`1-10`).  \\n- `-n 1` selects
+        the first result from the shuffled list.\\n\\n---\\n\\n### **3. Using Python**\\n```bash\\npython
+        -c \\\"import random; print(random.randint(1, 10))\\\"\\n```\\n- Uses Python's
+        `random.randint()` to generate a random integer between 1 and 10 (inclusive).\\n\\n---\\n\\n###
+        **4. Using Perl**\\n```bash\\nperl -e 'print int(rand(10)) + 1'\\n```\\n-
+        `rand(10)` generates a float between 0 and 10.  \\n- `int()` truncates it
+        to 0\u20139, and `+ 1` shifts to 1\u201310.\\n\\n---\\n\\n### **5. Using PowerShell
+        (Windows)**\\n```powershell\\nGet-Random -Minimum 1 -Maximum 11\\n```\\n-
+        `-Maximum 11` ensures the range is inclusive of 10 (since PowerShell's `-Maximum`
+        is exclusive).\\n\\n---\\n\\n### **6. Using `/dev/urandom` (Advanced)**\\n```bash\\necho
+        $(( $(od -An -N1 -tu1 /dev/urandom) % 10 + 1 ))\\n```\\n- Reads 1 byte from
+        `/dev/urandom` (a cryptographically secure random source).  \\n- `% 10 + 1`
+        converts it to the range 1\u201310.\\n\\n---\\n\\nChoose the method that best
+        fits your environment! \U0001F3B2\",\n        \"tool_calls\": []\n      }\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 15,\n    \"completion_tokens\":
+        1258,\n    \"total_tokens\": 1273\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb6e7d1c6eebed-SJC
+      content-length:
+      - '4982'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 21:05:15 GMT
+      etag:
+      - W/"1376-XsOI5aoLWOlW4EWZ/24WyNhKWM0"
+      retry-after:
+      - '30'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 6d43a78c-ab2c-428b-9640-b482ddc62917-noamzn
+      x-api-call-end:
+      - '2025-05-06T21:05:15.524Z'
+      x-api-call-start:
+      - '2025-05-06T21:04:43.128Z'
+      x-api-received:
+      - '2025-05-06T21:04:43.116Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '20'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '599'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '30'
+      x-request-id:
+      - nt11dhm-zqrih-93bb6e7d1c6eebed
+    status:
+      code: 200
+      message: OK
+version: 1

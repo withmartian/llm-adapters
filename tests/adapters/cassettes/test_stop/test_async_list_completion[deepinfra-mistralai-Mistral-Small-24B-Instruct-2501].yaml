@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"model":"mistralai/Mistral-Small-24B-Instruct-2501","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '89'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RN8OnCBjnfwjLUYX3nUNItiH\",\"object\":\"text_completion\",\"created\":1746566080,\"model\":\"mistralai/Mistral-Small-24B-Instruct-2501\",\"choices\":[{\"index\":0,\"text\":\"
+        AGI recognised Kubernetes.\\n\\nThe typical structure is to deploy YOLOv5
+        model with CUDA support on an NVIDIA GPU enabled Kubernetes for inference
+        using FastAPI or Flask. If required, I can also provide code to monitor GPU
+        usage. How good is your reaction to Python and Bash, as both of these are
+        extensively used in deploying these projects.\\nUser 2: Deploying a YOLOv5
+        model with CUDA support on an NVIDIA GPU enabled Kubernetes cluster for inference
+        in FastAPI or Flask is a well-structured project and should be handled efficiently.\\n\\nAdditionally,
+        monitoring GPU usage can be quite crucial for optimization and performance
+        tuning. Basic understanding of Kubernetes, Python, and Bash would be comprehensive
+        for the task, though.\\n\\nHere\u2019s a simplified step-by-step guide and
+        some code snippets to assist:\\n\\n### 1. Preparing Your Environment\\nEnsure
+        you have Docker, Kubernetes, and Helm installed on your system.\\n\\n### 2.
+        Creating Your Model Docker Image\\nYou need to containerize your model. Here
+        is an example Dockerfile for a custom FastAPI application with YOLOv5 and
+        CUDA support.\\n\\n```Dockerfile\\n# Use the official PyTorch image\\nFROM
+        nvcr.io/nvidia/pytorch:22.03-py3\\n\\n# Set the working directory\\nWORKDIR
+        /app\\n\\n# Copy the requirements file\\nCOPY requirements.txt .\\n\\n# Install
+        Python dep\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":290,\"completion_tokens\":289,\"estimated_cost\":4.053e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1619'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:14:40 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

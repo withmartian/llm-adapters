@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: '{"model":"deepseek-ai/DeepSeek-V3","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RJeIPzwqBAqsGoX1Zh90uKfr\",\"object\":\"text_completion\",\"created\":1746565562,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"text\":\"
+        Desmond,\\n\\nI have a question about the following code in the book:\\n\\n```rust\\nfn
+        main() {\\n    let mut s = String::from(\\\"hello\\\");\\n\\n    let r1 =
+        &s; // no problem\\n    let r2 = &s; // no problem\\n    println!(\\\"{} and
+        {}\\\", r1, r2);\\n    // r1 and r2 are no longer used after this point\\n\\n
+        \   let r3 = &mut s; // no problem\\n    println!(\\\"{}\\\", r3);\\n}\\n```\\n\\nThe
+        book mentions that \\\"r1 and r2 are no longer used after this point,\\\"
+        which allows the mutable reference r3 to be created without any issues. However,
+        I'm a bit confused about how the compiler determines that r1 and r2 are no
+        longer used. Is it based on the scope, or is there some other mechanism at
+        play?\\n\\nThanks for your help!\\n\\nBest regards,\\n[Your Name]\\n\\n---\\n\\nHi
+        [Your Name],\\n\\nGreat question! The behavior you're observing is indeed
+        related to how the Rust compiler tracks the usage of references, but it's
+        not solely based on scope. Let's break it down:\\n\\n### Non-Lexical Lifetimes
+        (NLL)\\n\\nRust uses a feature called **Non-Lexical Lifetimes (NLL)** to determine
+        when references are no longer needed. NLL allows the compiler to be more precise
+        about the lifetimes of references, rather than relying strictly on lexical
+        scope (i.e., the block of code where the variable is declared).\\n\\n### How
+        NLL Works in Your Example\\n\\nIn your code:\\n\\n```rust\\nfn main() {\\n
+        \   let mut s = String::from(\\\"hello\\\");\\n\\n    let r1 = &s; // no problem\\n
+        \   let r2 = &s; // no problem\\n    println!(\\\"{} and {}\\\", r1, r2);\\n
+        \   // r1 and r2 are no longer used after this point\\n\\n    let r3 = &mut
+        s; // no problem\\n    println!(\\\"{}\\\", r3);\\n}\\n```\\n\\nHere\u2019s
+        what happens step-by-step:\\n\\n1. **Immutable References (`r1` and `r2`)**:\\n
+        \  - `r1` and `r2` are created as immutable references to `s`.\\n   - These
+        references are used in the `println!` macro.\\n   - After the `println!` macro,
+        the compiler can determine that `r1` and `r2` are no longer needed because
+        they are not used again in the code.\\n\\n2. **Mutable Reference (`r3`)**:\\n
+        \  - Since `r1` and `r2` are no longer in use, the compiler allows the creation
+        of a mutable reference `r3` to `s`.\\n   - This is safe because there are
+        no active immutable references that could conflict with the mutable reference.\\n\\n###
+        Why Scope Alone Isn\u2019t Enough\\n\\nIf Rust relied solely on lexical scope,
+        `r1` and `r2` would be considered \\\"in use\\\" until the \",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":613,\"completion_tokens\":611,\"estimated_cost\":0.00054455}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2674'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:06:02 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

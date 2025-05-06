@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '91'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-R21p1C9uXUDmnA7szM0WMXTc","object":"text_completion","created":1746566074,"model":"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo","choices":[{"index":0,"text":"OO\")\n\n**5.
+        External Factors**\n\nExternal factors such as user activity, network conditions,
+        or external integrations can significantly impact system performance and logging
+        requirements.\n\n**Guidelines**\n\n1.  Use a monitor or Log-based orchestration
+        to dynamically adjust logging levels and rotation in real-time to respond
+        to changes in user activity.\n2.  Utilize an external logging service to allow
+        for ad-hoc and scale-out logging arrangements.\n\n**Conclusion**\n\nIn this
+        case study, I applied a structured approach to design a scalable logging system,
+        following SOLID principles and controlling external factors.\n\n**Design Elements**\n\n1.  **Class
+        Relationships**: Maintained a clear and direct relationship between the Logger,
+        LoggerConfiguration, and LogEntry classes, minimizing complexity.\n2.  **Abstraction**:
+        Introduced a high-level logger interface with variable logging levels, increasing
+        flexibility and adaptability.\n3.  **Encapsulation**: Designed a LoggerConfiguration
+        class to hide implementation details and variations in logging settings.\n4.  **Dep","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":199,"completion_tokens":198,"estimated_cost":8.930000000000001e-06}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1407'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:14:34 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

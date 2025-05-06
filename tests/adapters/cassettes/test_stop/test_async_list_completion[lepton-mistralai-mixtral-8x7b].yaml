@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"model":"mixtral-8x7b","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '60'
+      content-type:
+      - application/json
+      host:
+      - mixtral-8x7b.lepton.run
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://mixtral-8x7b.lepton.run/api/v1/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-2vCoyzikBgKZDGBvKQLVeo\",\"object\":\"text_completion\",\"created\":1746566125,\"model\":\"mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"\\nQ:
+        I'm looking to make a PC with a 6800XT GPU. I want a CPU that is at least
+        8 core. I have a budget of 450 USD. Any suggestions?\\nUser 3: What about
+        the Ryzen 7 5700x or 5600x? They\u2019re a little over your budget but are
+        a great choice\\nUser 0: >5700x\\n\\n5700x isn't real. You meant 5800x.\\n\\nBut
+        the 5800x is $360 at Amazon.\\n\\nI would look at the 5600.\\nUser 3: Ah my
+        bad I didn\u2019t see that they had the 5800x in stock at Amazon!\\n\\nBut
+        I wouldn\u2019t go for the 5600 if I was getting a 6800xt, it would bottleneck
+        a lot more\\nUser 0: It will not bottleneck much, if at all.\\nUser 3: It\u2019s
+        still better to have the 5800x because it has more cores, which\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":257,\"completion_tokens\":256}}"
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb7e28d92beb2c-SJC
+      content-length:
+      - '911'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 21:15:26 GMT
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-envoy-upstream-service-time:
+      - '1837'
+    status:
+      code: 200
+      message: OK
+version: 1

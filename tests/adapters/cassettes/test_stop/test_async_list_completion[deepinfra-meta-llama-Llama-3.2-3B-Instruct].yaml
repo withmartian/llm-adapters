@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Llama-3.2-3B-Instruct","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '80'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RVpdllkvE5f5ha3zjQFxCQbR","object":"text_completion","created":1746566123,"model":"meta-llama/Llama-3.2-3B-Instruct","choices":[{"index":0,"text":"
+        redeem} = \\binom{n}{n/2} \\cdot 2^{n/2} \\left( 1 + \\frac{\\sqrt{2}}{2}
+        \\, \\sqrt{\\frac{2}{n}} \\right)$$\n\nUsing this approach, we get:\n\n\\begin{align*}\n\\text{Pr}\\left(\\text{Redeem}
+        \\, \\text{Anke}\\right) & = \\frac{\\binom{20}{10} \\cdot 2^{10} \\left(
+        1 + \\frac{\\sqrt{2}}{2} \\, \\sqrt{\\frac{2}{20}} \\right)}{\\binom{40}{20}
+        \\cdot 2^{20} \\left( 1 + \\frac{\\sqrt{2}}{2} \\, \\sqrt{\\frac{2}{40}} \\right)}
+        \\\\ & = \\frac{\\binom{20}{10} \\cdot 2^{10} \\left( 1 + \\frac{\\sqrt{2}}{2}
+        \\, \\sqrt{\\frac{1}{10}} \\right)}{\\binom{40}{20} \\cdot 2^{20} \\left(
+        1 + \\frac{\\sqrt{2}}{2} \\, \\sqrt{\\frac{1}{20}} \\right)} \\\\ & = \\frac{\\binom{20}{10}
+        \\cdot 2^{10} \\left( 1 + \\frac{\\sqrt{2}}{10} \\right)}{\\binom{40}{20}
+        \\cdot 2^{20} \\left( 1 + \\frac{\\sqrt{2}}{20} \\right)} \\\\ & = \\frac{20!
+        \\cdot 2^{10} \\left( 1 + \\frac{\\sqrt{2}}{10} \\right)}{40! \\cdot 2^{20}
+        \\left( 1 + \\frac{\\sqrt{2}}{20} \\right)} \\\\ & = \\frac{2^{10} \\cdot
+        \\frac{20!}{40!}}{2^{20} \\left( 1 + \\frac{\\sqrt{2}}{20} \\right)} \\\\
+        & = \\frac{\\frac{20!}{40!}}{2^{10} \\left( 1 + \\frac{\\sqrt{2}}{20} \\right)}
+        \\\\ & = \\frac{1}{2^{10} \\left( 1 + \\frac{\\sqrt{2}}{20} \\right)} \\\\
+        & = \\frac{1}{1024 \\left( 1 + \\frac{\\sqrt{2}}{20} \\right)} \\\\ & = \\frac{1}{1024
+        \\left( \\frac{21 + \\sqrt{2}}{20} \\right)} \\\\ & = \\boxed{\\frac{5}{64}}\n\\","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":600,"completion_tokens":599,"estimated_cost":1.499e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1673'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:15:23 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

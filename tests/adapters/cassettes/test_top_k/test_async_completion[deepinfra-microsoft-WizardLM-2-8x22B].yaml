@@ -1,0 +1,374 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/WizardLM-2-8x22B","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '52'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RGCyIKzbogmQKl5UmMPGEy1c","object":"text_completion","created":1746565850,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"text":"
+        Questionnaire and the Substance Use Risk Profile Scale to assess the psychosocial
+        variables. Linear discriminant analysis and cross-validation were used to
+        derive the best-fitting model to classify clients into motivational groups.
+        The final model included the Distress, Emotional/Physical Pain, Lifestyle
+        Instability, and Social Networks scales of the ASI, years of education, and
+        the Interpersonal Relationships and Aggression scales of the SURPS. The model
+        correctly classified 76.4% of clients, with sensitivity to external motivation
+        of 59.4% and internal motivation of 90.0%. The results have implications for
+        the assessment of motivation for treatment as a dynamic, multidimensional
+        process that can be reliably and validly measured and that varies across different
+        treatment settings. Implications for improving treatment matching and outcomes
+        are discussed.\n\nmotivation; substance abuse treatment; assessment; treatment
+        matching; psychosocial +\n\n+\n\n+\n\n## Introduction\n\nThe substance abuse
+        treatment literature highlights the importance of motivation as a determinant
+        of treatment readiness and outcome [1, 2]. Models of motivation have evolved
+        to include more dynamic and multidimensional conceptualizations that consider
+        the influence of contextual factors such as treatment setting [3, 4]. Within
+        this context, client motivation is increasingly being recognized as a key
+        construct in understanding and improving treatment engagement and outcomes.
+        In fact, the matching of clients to treatment intensity and type based on
+        their motivation levels has been proposed as an essential component of effective
+        substance abuse treatment [5]. Empirical studies have provided support for
+        the proposition that treatment outcomes are enhanced when the intensity and
+        type of treatment are matched to the client''s level of motivation [6, 7,
+        8, 9, 10].\n\nDespite the acknowledged importance of motivation for treatment
+        engagement and outcome, there is no consensus on how to best operationalize
+        and measure this construct. Previous research on motivation has typically
+        characterized motivation as a unidimensional construct using either a client''s
+        self-report of desire for change [11] or an observer''s rating of the client''s
+        apparent readiness for treatment [12]. While useful, these approaches may
+        not capture the complexity of the motivation construct, particularly in regard
+        to the factors that mediate the relationship between motivation and treatment
+        outcome. For example, research has demonstrated that external motivators such
+        as legal pressures or family coercion can lead to improved treatment outcomes,
+        even when internal motivation appears to be low [13, 14]. These findings suggest
+        that motivation for treatment may be a multidimensional construct, influenced
+        by a variety of factors including client characteristics, contextual variables,
+        and specific treatment modalities [4, 15].\n\nRyan and colleagues'' self-determination
+        theory [16, 17] provides a useful framework for conceptualizing motivation
+        as a multidimensional construct that includes both intrinsic and extrinsic
+        motivation. According to this theory, behaviors that are intrinsically motivated
+        are performed out of interest or personal satisfaction, whereas behaviors
+        that are extrinsically motivated are performed to obtain an outcome that is
+        separable from the behavior itself, such as a reward or the avoidance of punishment.
+        Although the value of self-determination theory in understanding substance
+        abuse treatment motivation has been acknowledged [18], few studies have applied
+        this model to the assessment of motivation for substance abuse treatment.\n\nIn
+        the current study, we examined the usefulness of a multidimensional model
+        of motivation for classifying clients in substance abuse treatment. We hypothesized
+        that client characteristics and contextual factors (e.g., legal pressure)
+        would be differentially related to intrinsic and extrinsic motivation for
+        treatment. Using a combination of self-report and observer-rated measures,
+        we sought to classify clients into motivational groups using linear discriminant
+        analysis (LDA). LDA is a statistical technique that identifies the linear
+        combination of variables that best separates known groups, which in this study
+        were groups defined by clients'' motivation for treatment. In contrast to
+        logistic regression, LDA can be used when there are more than two groups and
+        when the independent variables are not necessarily categorical. It is also
+        less sensitive to small deviations from normality in the independent variables
+        [19]. With its ability to handle multicollinearity among predictors and to
+        provide cross-validation to assess the stability of the classification function,
+        LDA is ideally suited for the present research.\n\nThe specific goals of the
+        study were: (1) to develop a multidimensional model of motivation that incorporatesclient
+        characteristics and contextual factors; (2) to identify the best combination
+        of variables for classifying clients into motivational groups; and (3) to
+        assess the stability and validity of the classification model through cross-validation.
+        The results of this study have the potential to inform the development of
+        more effective assessment tools and treatment matching strategies that take
+        into account the multidimensional nature of motivation for substance abuse
+        treatment.\n\n## Methods\n\n### Participants\n\nThe sample consisted of 450
+        clients entering substance abuse treatment programs at three different treatment
+        facilities in California. These facilities included a therapeutic community
+        (TC) for adults, a community-based outpatient program for adults, and an adolescent
+        outpatient program. Clients were eligible for participation if they were seeking
+        treatment for substance abuse, were at least 14 years of age, and were able
+        to provide informed consent (or assent, in the case of minors, with parental
+        consent). Clients who were cognitively impaired or who did not speak English
+        were excluded from the study. The sample was 67.8% male, with a mean age of
+        31.7 years (SD = 11.1). The racial/ethnic composition of the sample was 44.9%
+        Caucasian, 24.4% African American, 21.8% Hispanic, 4.0% Asian/Pacific Islander,
+        1.8% Native American, and 3.1% other or mixed race. The majority of clients
+        (85.6%) reported alcohol as their primary substance of abuse, followed by
+        methamphetamine (5.8%), heroin (3.3%), marijuana (2.7%), cocaine (1.6%), and
+        other substances (1.1%).\n\n### Measures\n\n#### Motivation for Treatment\n\nThe
+        University of Rhode Island Change Assessment Scale (URICA) [20] was used to
+        measure clients'' readiness to change their substance use behavior. The URICA
+        consists of 32 items that assess four stages of change: precontemplation (PC),
+        contemplation (C), action (A), and maintenance (M). For the purposes of this
+        study, we focused on the PC and A subscales as indicators of low and high
+        motivation for treatment, respectively. The PC subscale assesses a lack of
+        recognition of a problem and lack of intention to change, while the A subscale
+        assesses active engagement in treatment and efforts to change behavior. Clients
+        were classified into one of three motivational groups based on their URICA
+        scores: external motivation (high PC, low A), internal motivation (low PC,
+        high A), and mixed motivation (high PC, high A or low PC, low A). The URICA
+        has demonstrated good reliability and validity in substance-abusing populations
+        [20, 21].\n\n#### Psychological Assessment\n\nThe Addiction Severity Index
+        (ASI) [22] is a semi-structured interview that assesses seven potential problem
+        areas in substance-abusing individuals: medical status, employment and support,
+        drug use, alcohol use, legal status, family/social relationships, and psychiatric
+        status. The ASI provides both quantitative and qualitative information and
+        has been widely used in both clinical and research settings. In the current
+        study, we used the composite scores from the ASI to represent the severity
+        of problems in each of the seven areas.\n\nThe Substance Use Risk Profile
+        Scale (SURPS) [23] is a 23-item self-report measure that assesses four personality
+        dimensions related to risk for substance abuse: anxiety sensitivity, hopelessness,
+        impulsivity, and sensation seeking. The SURPS has been shown to have good
+        reliability and validity in both clinical and nonclinical populations [23,
+        24]. For the current study, we included two additional scales from the SURPS
+        based on theoretical and empirical considerations: interpersonal relationship
+        problems and aggression. These scales were developed to assess constructs
+        that are relevant to substance abuse treatment motivation and outcomes [25,
+        26].\n\n#### Procedure\n\nClients were approached for participation in the
+        study within the first week of entering treatment. After providing informed
+        consent (or assent, with parental consent for minors), clients completed the
+        URICA, ASI, and SURPS as part of their initial assessment battery. Trained
+        research staff administered the ASI, while the URICA and SURPS were self-administered.
+        All data were collected as part of the routine intake process at each treatment
+        facility. The study was approved by the Institutional Review Boards at each
+        of the participating institutions.\n\n### Data Analysis\n\nLDA was used to
+        derive the best-fitting model to classify clients into motivational groups
+        based on their scores on the ASI and SURPS scales. The URICA-defined groups
+        served as the criterion variable, with external motivation (high PC, low A),
+        internal motivation (low PC, high A), and mixed motivation (high PC, high
+        A or low PC, low A) as the three groups.\n\nIn the first step of the analysis,
+        we conducted a series of univariate analyses of variance (ANOVAs) to identify
+        which ASI and SURPS scales significantly differentiated among the three motivational
+        groups. Variables that were significant at \\(p<.05\\) were retained for inclusion
+        in the LDA.\n\nIn the second step, we performed LDA using the significant
+        variablesfrom the univariate ANOVAs to develop the classification model. We
+        used Wilks'' lambda to determine the overall significance of each function
+        and the squared canonical correlations to assess the strength of the relationship
+        between the discriminant function and the grouping variable. Variables were
+        entered into the model using a stepwise procedure based on their F-to-enter
+        values.\n\nIn the third step, we conducted a cross-validation of the classification
+        model using the leave-one-out method, which involves systematically leaving
+        out one case from the dataset, re-estimating the discriminant functions, and
+        then classifying the left-out case based on the re-estimated functions. This
+        process is repeated for each case in the dataset, and the resulting classification
+        accuracy is used to assess the stability and predictive validity of the model.\n\nFinally,
+        we examined the sensitivity and specificity of the classification model for
+        each motivational group. Sensitivity refers to the proportion of true positives
+        that are correctly identified by the model, while specificity refers to the
+        proportion of true negatives that are correctly identified.\n\n## Results\n\n###
+        Univariate Analyses\n\nThe univariate ANOVAs revealed significant differences
+        among the three motivational groups on several ASI and SURPS scales (Table
+        1). Specifically, the motivational groups differed significantly on the ASI
+        scales assessing psychiatric status (\\(F(2,447)=12.99,p<.001\\)), employment
+        and support (\\(F(2,447)=10.85,p<.001\\)), drug use (\\(F(2,447)=4.90,p=.007\\)),
+        and legal status (\\(F(2,447)=4.15,p=.016\\)). They also differed significantly
+        on the SURPS scales assessing interpersonal relationship problems (\\(F(2,447)=13.58,p<.001\\))
+        and aggression (\\(F(2,447)=11.03,p<.001\\)). The years of education variable
+        was also significant (\\(F(2,447)=4.26,p=.015\\)).\n\n### Linear Discriminant
+        Analysis\n\nThe LDA using the stepwise procedure resulted in a model that
+        included four ASI scales (Distress, Emotional/Physical Pain, Lifestyle Instability,
+        and Social Networks), two SURPS scales (Interpersonal Relationships and Aggression),
+        and years of education (Table 2). The overall model was statistically significant,
+        Wilks'' lambda =.75, \\(\\chi^{2}(14)=135.27,p<.001\\), with a squared canonical
+        correlation of.25, indicating that 25% of the variance in group membership
+        was accounted for by the model.\n\nThe standardized canonical discriminant
+        function coefficients indicated that the Distress scale of the ASI was the
+        strongest predictor, followed by the Emotional/Physical Pain scale, years
+        of education, the Interpersonal Relationships scale of the SURPS, the Aggression
+        scale of the SURPS, the Lifestyle Instability scale of the ASI, and the Social
+        Networks scale of the ASI.\n\n### Cross-Validation\n\nThe cross-validation
+        results indicated that the model correctly classified 76.4% of clients into
+        the three motivational groups (Table 3). The sensitivity of the model to external
+        motivation was 59.4%, and the specificity was 87.5%. The sensitivity to internal
+        motivation was 90.0%, and\n\n\\begin{table}\n\\begin{tabular}{l c c c} \\hline
+        \\hline  & \\multicolumn{3}{c}{Motivational Group} \\\\ \\cline{2-4} Variable
+        & External & Mixed & Internal \\\\ \\hline ASI scales & & & \\\\ Medical status
+        & 0.14 & 0.08 & 0.05 \\\\ Employment and support & 0.32*** & 0.25*** & 0.20***
+        \\\\ Drug use & 0.23** & 0.23** & 0.18** \\\\ Alcohol use & 0.19* & 0.15 &
+        0.12 \\\\ Legal status & 0.16* & 0.12 & 0.08 \\\\ Family/social relationships
+        & 0.27*** & 0.23*** & 0.22*** \\\\ Psychiatric status & 0.45*** & 0.35***
+        & 0.28*** \\\\ SURPS scales & & & \\\\ Anxiety sensitivity & 0.56*** & 0.53***
+        & 0.55*** \\\\ Hopelessness & 0.56*** & 0.52*** & 0.54*** \\\\ Impulsivity
+        & 0.48*** & 0.46*** & 0.46*** \\\\ Sensation seeking & 0.36*** & 0.35*** &
+        0.35*** \\\\ Interpersonal relationship problems & 0.62*** & 0.55*** & 0.50***
+        \\\\ Aggression & 0.54*** & 0.47*** & 0.42*** \\\\ Education (years) & 12.29***
+        & 12.84*** & 13.57*** \\\\ \\hline \\hline \\end{tabular} Note.: ASI = Addiction
+        Severity Index; SURPS = Substance Use Risk Profile Scale. Means with different
+        subscripts are significantly different at \\(p<.05\\).\n\n\\(*p<.05\\), **\\(p<.01\\),
+        ***\\(p<.001\\).\n\n\\end{table}\nTable 1: Means for ASI and SURPS scales
+        by motivational group the specificity was 78.7%. The sensitivity to mixed
+        motivation was 63.2%, and the specificity was 88.8%.\n\n## Discussion\n\nThe
+        results of this study support the utility of a multidimensional model of motivation
+        for classifying clients in substance abuse treatment. The final LDA model
+        included variables from both the ASI and the SURPS, as well as years of education,
+        suggesting that a combination of client characteristics and contextual factors
+        is important for understanding motivation for treatment. The cross-validation
+        results indicated that the model had good overall classification accuracy,
+        with particularly high sensitivity and specificity for the internal motivation
+        group.\n\nThe inclusion of the Distress, Emotional/Physical Pain, Lifestyle
+        Instability, and Social Networks scales from the ASI in the final model highlights
+        the importance of psychological and social factors in treatment motivation.
+        Clients with higher levels of distress and emotional/physical pain may be
+        more inclined to seek treatment as a way to alleviate their discomfort, while
+        those with more unstable lifestyles and smaller social networks may be more
+        susceptible to external pressures to enter treatment. These findings are consistent
+        with prior research showing that negative emotional states and social instability
+        are significant predictors of treatment entry and engagement [27, 28].\n\nThe
+        SURPS scales assessing interpersonal relationship problems and aggression
+        were also significant predictors of motivational group membership. These findings
+        suggest that clients with difficulties in interpersonal relationships and
+        a propensity for aggression may be more likely to experience external pressures
+        to enter treatment, such as legal problems or family coercion. This is in
+        line with research indicating that external motivators can play a critical
+        role in treatment initiation and may contribute to positive outcomes, even
+        in the absence of strong internal motivation [13, 14].\n\nYears of education
+        emerged as a significant predictor in the model, with higher levels of education
+        associated with greater internal motivation for treatment. This finding is
+        consistent with research showing that higher educational attainment is related
+        to better treatment outcomes [29] and may reflect greater awareness of the
+        need for treatment and a stronger internal commitment to change among more
+        educated clients.\n\nThe current study has several important implications
+        for clinical practice and research. First, the results underscore the importance
+        of assessing a broad range of client characteristics and contextual factors
+        when evaluating motivation for substance abuse treatment. Clinicians and researchers
+        should consider using multidimensional assessment tools, such as the ASI and
+        the SURPS, to obtain a comprehensive understanding of a client''s motivation
+        for treatment. Second, the findings suggest that treatment matching strategies
+        could be improved by taking into account the specific client characteristics
+        and contextual factors that are associated with different types of motivation.
+        For example, clients with high levels of distress and emotional/physical pain
+        may benefit from treatments that address these issues directly, such as cognitive-behavioral
+        therapy or trauma-informed care. Similarly, clients with significant interpersonal
+        problems and aggression might be better served by treatments that include
+        a strong focus on social skills training and anger management.\n\nFinally,
+        the study demonstrates the potential utility of LDA for developing empirically
+        based classification models to inform treatment matching. The high degree
+        of accuracy observed in the cross-validation analysis suggests that LDA can
+        be a valuable tool for identifying the combination of variables that best
+        predict group membership, in this case, motivational grouping. Future research
+        should continue to explore the use of advanced statistical techniques, such
+        as LDA, to refine our understanding of the factors that influence motivation
+        for treatment and to develop more effective treatment matching strategies.\n\nSeveral
+        limitations of the current study should be noted. First, the results are based
+        on a cross-sectional design, which limits the ability to draw causal inferences
+        about the relationship between the predictor variables and motivation for
+        treatment. Longitudinal studies are needed to examine the stability of the
+        classification model over time and to assess the impact of changes in client
+        characteristics and contextual factors on motivation and treatment outcomes.
+        Second, the study sample was drawn from three treatment facilities in California,
+        which may limit the generalizability of the findings to other settings and
+        populations. Future research should include a more diverse range of treatment
+        facilities and clients to enhance the external validity of the results. Third,
+        the classification model was based on a priori definitions of motivational
+        groups using the URICA. Although the URICA is a widely used and validated
+        measure of motivation for treatment, it is possible that other conceptualizations
+        of motivation could yield different results. Further research is needed to
+        explore alternative models of motivation and their implications for treatment
+        matching.\n\nIn conclusion, the present study provides evidence for the utility
+        of a multidimensional approach to assessing motivation for substance abuse
+        treatment. The findings suggest that a combination of client characteristics
+        and contextual factors, as measured by the ASI and the SURPS, along with years
+        of education, can be used to accurately classify clients into motivational
+        groups. These results have important implications for improving treatment
+        matching and outcomes by tailoring interventions to the specific needs and
+        motivational profiles of individual clients.\n\n## Declaration of Interest\n\nThe
+        authors have no relevant financial or non-financial interests to disclose.
+        The authors have no conflicts of interest to declare that are directly relevant
+        to the content of this article.\n\n## Funding\n\nThis work was supported by
+        the National Institute on Drug Abuse (grant number R01 DA022788).\n\n* (2)
+        Simpson DD. Treatment retention and follow-up of drug-dependent individuals:
+        overview of research findings and implications. In: Miller NS, Carroll KM,
+        eds. Rethinking substance abuse: what the science shows, and what we should
+        do about it. New York: Guilford Press; 2006:309-326.\n* (3) Miller WR, Zweben
+        JE. Motivational enhancement therapy with drug-abusing clients. In: Miller
+        NS, Carroll KM, eds. Rethinking substance abuse: what the science shows, and
+        what we should do about it. New York: Guilford Press; 2006:281-308.\n* (4)
+        Cocrane D, Cockburn J. The changing nature of motivation in substance abuse
+        treatment. In: Miller NS, Carroll KM, eds. Rethinking substance abuse: what
+        the science shows, and what we should do about it. New York: Guilford Press;
+        2006:167-188.\n* (5) National Institute on Drug Abuse. Principles of drug
+        addiction treatment: a research-based guide. NIH Publication No. 09-4180.
+        Rockville, MD: National Institutes of Health; 2009.\n* (6) Project MATCH Research
+        Group. Matching alcoholism treatments to client heterogeneity: project MATCH
+        posttreatment drinking outcomes. J Stud Alcohol. 1997;58:7-29.\n* (7) Connors
+        GJ, Donovan DM, DiClemente CC. The prediction of relapse in treated alcoholics.
+        In: Marlatt GA, Baer JS, eds. Relapse prevention: maintenance strategies in
+        the treatment of addictive behaviors. 2nd ed. Needham Heights, MA: Allyn &
+        Bacon; 1993:134-153.\n* (8) Longabaugh R, Wirtz PW, Zweben A, Stout RL. Treatment
+        matching with substance abusers: effectiveness of a research protocol. J Consult
+        Clin Psychol. 1998;66:431-440.\n* (9) McCaul M, Svikis D, Geary M. Matching
+        alcoholics to coping skills or interactional therapies: a test of the relapse
+        prevention model. J Consult Clin Psychol. 1991;59: 504-513.\n* (10) Kadden
+        RM, Cooney NL, Getz A, DiClemente C, Hesselbrock V, Litt MD, et al. Cognitive-behavioral
+        therapy and motivational enhancement therapy for alcoholdependent individuals:
+        a comparison of clinical efficacy. J Stud Alcohol. 1995;56:408-417.\n* (11)
+        DiClemente CC, Prochaska JO, Fairhurst SK, Velicer WF, Rossi JS, Hansen J.
+        The question of stages of change: a methodological analysis. Psychotherapy:
+        Theory, Research, Practice, Training. 1991;28:405-414.\n* (12) Carroll KM,
+        Kmutz A, May EC, Gallop R, Litynski P, Rossi JS, et al. The Addiction Severity
+        Index at 25: origins, contributions, limitations, and prospects. J Subst Abuse
+        Treat. 2009;36:186-196.\n* (13) Joe GW, Simpson DD. Social support, coercion,
+        and retention in outpatient drug-free treatment. J Subst Abuse Treat. 1995;12:361-366.\n*
+        (14) Weisner C, Matzger H, Tam TW. Mandated substance abuse treatment for
+        women: does it work? J Subst Abuse Treat. 2002;23:279-287.\n* (15) Simpson
+        DD, Joe GW. Previous treatment, coercion, and retention in drug abuse treatment.
+        Am J Drug Alcohol Abuse. 1993;19:457-465.\n* (16) Ryan RM, Deci EL. Self-determination
+        theory and the facilitation of intrinsic motivation, social development, and
+        well-being. Am Psychol. 2000;55:68-78.\n* (17) Deci EL, Ryan RM. Intrinsic
+        and extrinsic motivations: classic definitions and new directions. Contemp
+        Educ Psychol. 2000;25:54-67.\n* (18) Kanfer FH, Vitanza CJ, Karoly P. Self-regulatory
+        mechanisms across addiction and mental disorders. Clin Psychol Rev. 2008;28:
+        198-212.\n* (19) Harris RJ. Applying discrete multivariate analysis. London:
+        Chapman & Hall; 2001.\n* (20) McConnaughy EA, Prochaska JO, Velicer WF. Stages
+        of change in psychotherapy: measurement and sample profiles. Psychotherapy:
+        Theory, Research, Practice, Training. 1983;20:368-375.\n* (21) DiClemente
+        CC. Stages of change. In: Miller NS, Carroll KM, eds. Rethinking substance
+        abuse: what the science shows, and what we should do about it. New York: Guilford
+        Press; 2006:71-92.\n* (22) McLellan AT, Luborsky L, Woody GE, O''Brien CP.
+        An improved diagnostic evaluation instrument for substance abuse patients:
+        the Addiction Severity Index. J Nerv Ment Dis. 1980;168:26-33.\n* (23) Woicik
+        WF, Stewart SH, Zvolensky TG, Feldner MT, Babson KA,","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":6091,"completion_tokens":6090,"estimated_cost":0.0030455}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '24870'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:10:50 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

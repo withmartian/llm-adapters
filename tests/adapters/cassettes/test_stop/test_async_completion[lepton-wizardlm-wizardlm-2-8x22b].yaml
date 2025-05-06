@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"model":"wizardlm-2-8x22b","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '56'
+      content-type:
+      - application/json
+      host:
+      - wizardlm-2-8x22b.lepton.run
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://wizardlm-2-8x22b.lepton.run/api/v1/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-NTRtJA3Bw7s8DSQJgUz3Yt\",\"object\":\"text_completion\",\"created\":1746565473,\"model\":\"wizardlm-2-8x22b\",\"choices\":[{\"index\":0,\"text\":\"and
+        welcome to the site! You may also find [this](http://mathematica.stackexchange.com/q/18393/193)
+        and [this](http://mathematica.stackexchange.com/q/21265/193) helpful.\\n\\n##
+        Answer (2)\\n\\nYou can use `GeoListPlot` to plot lists of geographic locations.
+        Here's an example using your data:\\n\\n```\\ndata = {\\n        {\\\"Buenos
+        Aires\\\", -34.6037, -58.3816},\\n        {\\\"C\xF3rdoba\\\", -31.4158, -64.1814},\\n
+        \       {\\\"La Plata\\\", -34.9211, -57.9544},\\n        {\\\"Rosario\\\",
+        -32.9454, -60.6319},\\n        {\\\"Salta\\\", -24.7861, -65.4075}\\n        };\\n\\ngeoData
+        = Reverse /@ data; (*\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":257,\"completion_tokens\":256}}"
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb6e421c3eeb1e-SJC
+      content-length:
+      - '832'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 21:04:37 GMT
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-envoy-upstream-service-time:
+      - '3354'
+    status:
+      code: 200
+      message: OK
+version: 1

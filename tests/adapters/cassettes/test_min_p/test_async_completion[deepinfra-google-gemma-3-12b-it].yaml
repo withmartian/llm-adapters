@@ -1,0 +1,112 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-12b-it","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '47'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RnnZuvlF5N5VlALVcVIGbONw","object":"text_completion","created":1746566126,"model":"google/gemma-3-12b-it","choices":[{"index":0,"text":"\"\n      ]\n    },\n    {\n      \"cell_type\":
+        \"markdown\",\n      \"metadata\": {},\n      \"source\": \"## Overview\\n\\nThis
+        notebook will demonstrate how to use the `requests` library to interact with
+        a simple API. We''ll be using the public API from [Open Brewery DB](https://openbrewerydb.org/)
+        to fetch information about breweries.\\n\\n**Objective:**\\n\\n*   Learn how
+        to make GET requests using `requests`.\\n*   Parse JSON responses from an
+        API.\\n*   Extract specific data from the JSON response.\\n*   Handle potential
+        errors (e.g., API not found).\\n\\n**Prerequisites:**\\n\\n*   Python 3 installed\\n*   `requests`
+        library installed (`pip install requests`) \"\n    },\n    {\n      \"cell_type\":
+        \"code\",\n      \"metadata\": {},\n      \"source\": \"import requests\\nimport
+        json\"\n    },\n    {\n      \"cell_type\": \"markdown\",\n      \"metadata\":
+        {},\n      \"source\": \"## 1. Making a GET Request\\n\\nLet''s start by making
+        a simple GET request to the Open Brewery DB API to retrieve a list of breweries.  We''ll
+        use the endpoint `/breweries` without any specific filters for now.\"\n    },\n    {\n      \"cell_type\":
+        \"code\",\n      \"metadata\": {},\n      \"source\": \"url = \\\"https://api.openbrewerydb.org/breweries\\\"\\n\\ntry:\\n    response
+        = requests.get(url)\\n    response.raise_for_status()  # Raise HTTPError for
+        bad responses (4xx or 5xx)\\n\\n    breweries = response.json()\\n\\n    print(\\\"Successfully
+        fetched breweries:\\\")\\n    print(breweries[0]) # Print the first brewery
+        to show an example\\n\\nexcept requests.exceptions.RequestException as e:\\n    print(f\\\"An
+        error occurred: {e}\\\")\"\n    },\n    {\n      \"cell_type\": \"markdown\",\n      \"metadata\":
+        {},\n      \"source\": \"## 2. Parsing the JSON Response\\n\\nThe `response.json()`
+        method converts the JSON response from the API into a Python list of dictionaries.  Each
+        dictionary represents a brewery and contains information like its name, type,
+        city, state, and country.\"\n    },\n    {\n      \"cell_type\": \"code\",\n      \"metadata\":
+        {},\n      \"source\": \"url = \\\"https://api.openbrewerydb.org/breweries\\\"\\n\\ntry:\\n    response
+        = requests.get(url)\\n    response.raise_for_status()\\n    breweries = response.json()\\n\\n    #
+        Accessing specific data\\n    for brewery in breweries[:3]: # Print first
+        3 breweries for brevity\\n        print(f\\\"Name: {brewery[''name'']}\\\")\\n        print(f\\\"Type:
+        {brewery[''brewery_type'']}\\\")\\n        print(f\\\"City: {brewery[''city'']}\\\")\\n        print(f\\\"State:
+        {brewery[''state'']}\\\")\\n        print(\\\"---\\\")\\n\\nexcept requests.exceptions.RequestException
+        as e:\\n    print(f\\\"An error occurred: {e}\\\")\"\n    },\n    {\n      \"cell_type\":
+        \"markdown\",\n      \"metadata\": {},\n      \"source\": \"## 3. Filtering
+        the API Request (Optional)\\n\\nYou can filter the API request by adding query
+        parameters to the URL.  For example, to get breweries in a specific city,
+        you can use the `by_city` parameter.\"\n    },\n    {\n      \"cell_type\":
+        \"code\",\n      \"metadata\": {},\n      \"source\": \"city = \\\"Denver\\\"\\nurl
+        = f\\\"https://api.openbrewerydb.org/breweries?by_city={city}\\\"\\n\\ntry:\\n    response
+        = requests.get(url)\\n    response.raise_for_status()\\n    breweries = response.json()\\n\\n    print(f\\\"Breweries
+        in {city}:\\\")\\n    for brewery in breweries:\\n        print(f\\\"- {brewery[''name'']}\\\")\\n\\nexcept
+        requests.exceptions.RequestException as e:\\n    print(f\\\"An error occurred:
+        {e}\\\")\"\n    },\n    {\n      \"cell_type\": \"markdown\",\n      \"metadata\":
+        {},\n      \"source\": \"## 4. Error Handling\\n\\nIt''s crucial to handle
+        potential errors when making API requests.  The `requests` library provides
+        exception handling for various errors, such as network issues and HTTP errors.\"\n    },\n    {\n      \"cell_type\":
+        \"code\",\n      \"metadata\": {},\n      \"source\": \"url = \\\"https://api.openbrewerydb.org/breweries/invalid-id\\\"\\n\\ntry:\\n    response
+        = requests.get(url)\\n    response.raise_for_status()\\n    breweries = response.json()\\n\\n    print(breweries)\\n\\nexcept
+        requests.exceptions.HTTPError as e:\\n    print(f\\\"HTTP Error: {e}\\\")\\nexcept
+        requests.exceptions.RequestException as e:\\n    print(f\\\"An error occurred:
+        {e}\\\")\\nexcept json.JSONDecodeError as e:\\n    print(f\\\"JSON Decode
+        Error: {e}\\\")\"\n    },\n    {\n      \"cell_type\": \"markdown\",\n      \"metadata\":
+        {},\n      \"source\": \"## Conclusion\\n\\nThis notebook has demonstrated
+        how to use the `requests` library to interact with a simple API. You''ve learned
+        how to make GET requests, parse JSON responses, extract data, and handle potential
+        errors.  You can adapt these concepts to interact with various APIs to retrieve
+        and process data for different purposes.\"\n    }\n  ]\n}\n```","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":1334,"completion_tokens":1332,"estimated_cost":0.0001333}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5156'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:15:26 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

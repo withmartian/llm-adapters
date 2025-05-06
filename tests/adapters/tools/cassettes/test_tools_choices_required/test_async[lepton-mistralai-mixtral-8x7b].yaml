@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"mixtral-8x7b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"required"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '392'
+      content-type:
+      - application/json
+      host:
+      - mixtral-8x7b.lepton.run
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-2GTDvjgzHTnmNTq2tb6gXB","object":"chat.completion","created":1746565469,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n- Open
+        a new private window in your web browser.\\\\n- Go to the web address (URL)
+        ''https://www.random.org/integers/''.\\\\n- In the textbox labeled ''Range:'',
+        enter ''1-10''.\\\\n- Click on ''Generate''.\\\\n- The randomly generated
+        number within the range 1-10 will be displayed.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n- Open
+        a new private window in your web browser.\\\\n- Go to the web address (URL)
+        ''https://www.random.org/integers/''.\\\\n- In the textbox labeled ''Range:'',
+        enter ''1-10''.\\\\n- Click on ''Generate''.\\\\n- The randomly generated
+        number within the range 1-10 will be displayed.\"}"},"id":"call-HqurNhZBzhD6Enc6JATcr3","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":21,"total_tokens":126,"completion_tokens":105}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb6e276a8a67a5-SJC
+      content-length:
+      - '1138'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 21:04:30 GMT
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-envoy-upstream-service-time:
+      - '883'
+    status:
+      code: 200
+      message: OK
+version: 1

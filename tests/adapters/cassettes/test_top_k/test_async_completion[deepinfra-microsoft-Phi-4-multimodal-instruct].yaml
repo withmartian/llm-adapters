@@ -1,0 +1,104 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/Phi-4-multimodal-instruct","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RgSQ7EAPQr82aVz8TVxr6sZM","object":"text_completion","created":1746565465,"model":"microsoft/Phi-4-multimodal-instruct","choices":[{"index":0,"text":"
+        follows, I''m currently developing my Ada programming skills and need to sort
+        out some data structures for my latest project. Could someone help me out?
+        Here''s the thing, I need to create two types: one is a binary tree with integer
+        values and the other is a doubly linked list with integers as well. Each node
+        in the binary tree and each node in the doubly linked list should possess
+        pointers to their left/right child and list neighbors respectively. Also,
+        I want to organize a priority queue using Ada::String, where the T_Set should
+        keep integers ordered, you know, with all dynamics like insertion, popping
+        the max, and peeking at the next item included. Oh, and we need some CONSTRAINT
+        declarations, say, for integers fitting in signed 32 bits; that should cover
+        me for comparison. Once we have those types and constraints set up, we''ll
+        need enum for list node flags and a custom object type with flags and an integer.
+        And, if possible, also include procedures to get starting and end nodes in
+        a list node, as well as equivalent for binary trees. Could you structure it
+        following Ada standards for reusability and encapsulation? package MyStructures
+        is abstract; -- Binary tree skeleton -- Binary tree abstract operation. possibly
+        this could be what I''m looking for: tree_t is new trees with ... It''s gotta
+        contain some internals like an entry with Array_Interned rationals without
+        Tree_Type and where we could store rational values realistically. Then I''d
+        like a transition from one Node_Type value to Contract Assertions. Have a
+        moment to solve this? Certainly! Sure, to deal with floating-point numbers,
+        we''ll need to use Ada''s Floating Point package for the Node_Type and adjust
+        our constraints to reflect floating-point operations. I''ll add a Fibonacci
+        sequence function to our linked list package. Rust is quite different from
+        Ada, but I can show you the translated linked list in Rust while keeping some
+        Ada features discussed previously. Regarding Fibonacci, I would instead recommend
+        implementing it in Rust, as it''s a best-in-class choice for that kind of
+        computation. For the Ada part, here''s how you can adapt the Node_Type for
+        floating-point numbers and add a sequence generation stage:\n\n```ada\n--
+        we are using the Float package for our Node_Type declaration.\ntype Float_Node
+        is new Integer port;\n\npackage List_Relates is\n    type Negative is new
+        Float;\n    -- constructions for lists will now support float nodes, etc.\n\n    --
+        Generating a sequence from 1 to n using the new Node_Type.\n    procedure
+        Generate_Fibonacci_N(n : Natural; First_Node : out Float_Node; Last_Node :
+        out Float_Node);\nend List_Relates;\n...\n```\n\nFor the doubly linked list
+        with Rust, here''s a simplistic snippet demonstrating how such a structure
+        could look, while Rust developers can easily incorporate more elaborate logic:\n\n```rust\nstruct
+        ListNode<T> {\n    data: T,\n    next: Option<Box<ListNode<T>>>,\n    prev:
+        Option<Box<ListNode<T>>>,\n}\n\nimpl<T> ListNode<T> {\n    fn new(data: T)
+        -> Self {\n        ListNode { data, next: None, prev: None }\n    }\n\n    //
+        Add more methods as needed\n}\n\nfn main() {\n    // Use ListNode to create
+        and chain linked elements\n}\n```\n\nAgain, this should be integrated within
+        your Ada package structuring. Perhaps we can work together to explore how
+        these Rust code parts could interflow with Ada; it would certainly add a layer
+        of cryptic ingenuity! Consider that we''re expositionary cases, Ada-ity needs
+        to be beyond the common.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":724,"completion_tokens":723,"estimated_cost":7.235e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3793'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 21:04:25 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

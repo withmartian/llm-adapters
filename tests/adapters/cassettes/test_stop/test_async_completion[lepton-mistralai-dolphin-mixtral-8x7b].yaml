@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: '{"model":"dolphin-mixtral-8x7b","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '60'
+      content-type:
+      - application/json
+      host:
+      - dolphin-mixtral-8x7b.lepton.run
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/completions
+  response:
+    body:
+      string: '{"id":"cmpl-CzxmuKGRAcDnxgnbKVpqcP","object":"text_completion","created":1746565478,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":",
+        I am trying to solve a problem on Codewars. Here is the problem:\n\nThe goal
+        of this kata is to implement the following operation on a singly linked list.\nThe
+        delete operation: It deletes a node from a singly linked list given its key.
+        If the key doesn''t exist in the linked list, return false. Otherwise, return
+        true.\nGiven a linked list, implement the delete function.\nclass Node {\n    constructor(data,
+        next = null) {\n        this.data = data;\n        this.next = next;\n    }\n}\n\nfunction
+        delete(head, key) {\n    // ...\n}\n\nNote that the head represents the first
+        node of the list.\n\nHere is the solution I wrote:\n\nclass Node {\n    constructor(data,
+        next = null) {\n        this.data = data;\n        this.next = next;\n    }\n}\n\nfunction
+        delete(head, key) {\n    let current = head;\n\n    if (current.data === key)
+        {\n        return head = current.next;\n    }\n\n    while (current.next !==
+        null) {","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb6e5dc9ba9e58-SJC
+      content-length:
+      - '1185'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 21:04:39 GMT
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-envoy-upstream-service-time:
+      - '1780'
+    status:
+      code: 200
+      message: OK
+version: 1
