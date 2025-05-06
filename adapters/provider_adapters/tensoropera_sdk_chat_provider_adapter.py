@@ -1,5 +1,5 @@
 from adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
-from adapters.types import Cost, Model, Provider, Vendor
+from adapters.types import Model, Provider, Vendor
 
 
 class TensorOperaModel(Model):
@@ -12,13 +12,13 @@ class TensorOperaModel(Model):
 
 
 MODELS: list[Model] = [
-    TensorOperaModel(
-        name="euryale",
-        api_name="tensoropera-yodayo/L3.1-70B-Euryale-v2.2_gpu4",
-        cost=Cost(prompt=0, completion=0),
-        context_length=12288,
-        can_system_only=False,
-    ),
+    # TensorOperaModel(
+    #     name="euryale",
+    #     api_name="tensoropera-yodayo/L3.1-70B-Euryale-v2.2_gpu4",
+    #     cost=Cost(prompt=0, completion=0),
+    #     context_length=12288,
+    #     can_system_only=False,
+    # ),
 ]
 
 
