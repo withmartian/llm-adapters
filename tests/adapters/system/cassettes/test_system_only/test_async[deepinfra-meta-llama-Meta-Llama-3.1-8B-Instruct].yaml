@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "user", "content":
-      "\"\""}], "model": "meta-llama/Meta-Llama-3.1-8B-Instruct"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"meta-llama/Meta-Llama-3.1-8B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '138'
+      - '128'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,28 +25,31 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-3d8248acef0948fe9a0ca916636577d0","object":"chat.completion","created":1733375348,"model":"meta-llama/Meta-Llama-3.1-8B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems like you started to type something but didn''t finish. What''s on your
-        mind? Do you want to talk about something specific or just chat? I''m here
-        to listen!","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":17,"total_tokens":54,"completion_tokens":37,"estimated_cost":2.3600000000000003e-06}}'
+      string: '{"id":"chatcmpl-RFQ7cyHTjdnemjeEbT2ZUC3x","object":"chat.completion","created":1746555100,"model":"meta-llama/Meta-Llama-3.1-8B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like you started to type something, but it got cut off. Could you finish
+        your thought? What''s on your mind?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":44,"completion_tokens":27,"estimated_cost":1.86e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '539'
+      - '487'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 05:09:08 GMT
+      - Tue, 06 May 2025 18:11:40 GMT
       server:
       - uvicorn
       x-robots-tag:

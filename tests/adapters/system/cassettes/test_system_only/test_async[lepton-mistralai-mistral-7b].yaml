@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}], "model": "mistral-7b"}'
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"mistral-7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '74'
+      - '68'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,39 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-Wj4tsMsZteziMYUk4SDWbk","object":"chat.completion","created":1733368731,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Q:
-        Simplify ((s/s**(2/7))/(s/(s**(2/5)/s*s))*s**(1/6)/(s**(1/5)/s))/((s*s*s**(2/7)*s*s)/s*s*s**(2/5)*(s/s**(2/7))**(4/7))
-        assuming s is positive.\nA: s**(-659/420)","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":1,"total_tokens":112,"completion_tokens":111}}'
+      string: '{"id":"chatcmpl-HDHudpBNJNhdvphMNM48aZ","object":"chat.completion","created":1746555157,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Q:
+        Let i = -14 + 14. Let y = 1 + i. Let b = 0.05 + -0.05. What is the closest
+        to b in y, -2/11, 2/11?\nA: 2/11","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":67,"completion_tokens":66}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e42d6ffa7ac4-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:18:52 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba7267989a909c-SJC
       content-length:
-      - '500'
+      - '413'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:38 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1197'
+      - '1121'
     status:
       code: 200
       message: OK

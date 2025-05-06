@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '142'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "925149ca-207d-451c-b48e-ce6c541252f9", "model": "sonar-reasoning",
+        "created": 1746561457, "usage": {"prompt_tokens": 3, "completion_tokens":
+        311, "total_tokens": 314, "search_context_size": "low"}, "citations": ["https://preply.com/en/blog/22-useful-english-greetings-for-every-day/",
+        "https://www.fluentu.com/blog/english/english-greetings-expressions/", "https://www.clearenglishcorner.com/blog/64",
+        "https://en.amazingtalker.com/blog/en/english/47217/", "https://famworld.com/blogs/tipos-de-saludo-en-ingles-y-otras-frases-utiles"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user just
+        sent a query with an empty string. Hmm, maybe they wanted to ask something
+        but forgot to type it out. Since the search results are all about English
+        greetings, I should check if that''s related. But since the query is empty,
+        I can''t directly address it. Let me look at the search results again.\n\nThe
+        search results list various common English greetings, examples for different
+        times of day, casual vs formal, and phrases like \"How are you?\" and \"Nice
+        to see you.\" The user might have intended to ask about greetings but didn''t
+        complete the query. Without specific context, it''s tricky to give a meaningful
+        answer.\n\nI need to follow the instructions. For an empty query, the answer
+        should be helpful but can''t use search results because there''s nothing to
+        cite. The user might have made a mistake, so I''ll acknowledge that and offer
+        assistance if they provide more details. Since there''s no query, I can''t
+        generate a meaningful response based on the search results provided. I''ll
+        have to inform them that their query was empty and encourage them to rephrase
+        it.\n</think>\n\nYour query was empty. Please provide specific details or
+        questions so I can assist you effectively. For example, you might ask:  \n-
+        *\"How to greet someone informally in English?\"* [1][4]  \n- *\"What are
+        common morning greetings?\"* [1][4]  \n- *\"Casual vs formal greetings comparison\"*
+        [2][5]  \n\nFeel free to clarify or refine your request!"}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0c13ccd367a7-SJC
+      content-length:
+      - '2178'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:57:37 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=9spz48BUIDs4VMs_IzuX3lYmBu_oJhsxwvGZJY3ngZo-1746561457-1.0.1.1-v15yX0YvGHMssiQXeT9Ln7mDP7J9fPkvq.9.qus81cyXSs7S8YJrtECKh80.bk3tYreLSno76rJtJXBd8_xEdLFPN4rroyhOZ6_S6H_Gp00;
+        path=/; expires=Tue, 06-May-25 20:27:37 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

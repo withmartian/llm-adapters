@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,76 +25,72 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a592999d277aec\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283214,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
-        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
-        \       \"role\": \"assistant\",\n        \"content\": \"Hello! How can I
-        assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      },\n      \"logprobs\":
-        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        12,\n    \"total_tokens\": 24,\n    \"completion_tokens\": 12\n  }\n}"
+      string: "{\n  \"id\": \"nsz5w9x-zqrih-93ba6eb15dd49459\",\n  \"error\": {\n
+        \   \"message\": \"Service unavailable\",\n    \"type\": \"service_unavailable\",\n
+        \   \"param\": null,\n    \"code\": null\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a592999d277aec-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:26:55 GMT
-      ETag:
-      - W/"1e3-ZhsDJTklbBlLapRSTG/rqoTxRhQ"
-      Retry-After:
-      - '2'
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6eb15dd49459-SJC
       content-length:
-      - '483'
-      x-api-call-end:
-      - '2025-01-31T00:26:54.967Z'
+      - '171'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:10:07 GMT
+      etag:
+      - W/"ab-gXkSM3Y5R8WAmU2XW3UkjT6dvBM"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 2e7fffbd-d69e-4872-91f3-2b2fd8357540-noamzn
       x-api-call-start:
-      - '2025-01-31T00:26:51.829Z'
+      - '2025-05-06T18:10:06.674Z'
       x-api-received:
-      - '2025-01-31T00:26:51.815Z'
+      - '2025-05-06T18:10:05.775Z'
+      x-api-retries:
+      - '5'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '100'
+      - '50'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '199'
+      - '99'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nsz5w9x-zqrih-93ba6eb15dd49459
     status:
-      code: 200
-      message: OK
+      code: 503
+      message: Service Unavailable
 version: 1

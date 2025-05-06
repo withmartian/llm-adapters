@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "\"\""}, {"role": "assistant",
-      "content": "Hi"}, {"role": "user", "content": "Hi\n\"\""}], "model": "mistral-7b"}'
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi\n\"\""}],"model":"mistral-7b"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '155'
+      - '141'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,39 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-BsvU8UV2unTiMPdGhXmTSB","object":"chat.completion","created":1733446028,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I help you today? If you have any questions or need assistance with
-        something, feel free to ask. I''m here to help.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":11,"total_tokens":44,"completion_tokens":33}}'
+      string: '{"id":"chatcmpl-bz7PGDgxCH7HVE493EpJn9","object":"chat.completion","created":1746555059,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"How
+        can I help you today? If you have any questions or need assistance with something,
+        feel free to ask! I''m here to help.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":11,"total_tokens":42,"completion_tokens":31}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed8434a8ecd67c1-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 06 Dec 2024 00:47:08 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba70005fb2f95f-SJC
       content-length:
-      - '465'
+      - '426'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:59 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '511'
+      - '533'
     status:
       code: 200
       message: OK

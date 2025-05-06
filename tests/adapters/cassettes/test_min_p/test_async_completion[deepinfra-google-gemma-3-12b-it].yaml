@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-12b-it","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '47'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RwUZpA2G6aBrp19lbt6OBDvs\",\"object\":\"text_completion\",\"created\":1746562344,\"model\":\"google/gemma-3-12b-it\",\"choices\":[{\"index\":0,\"text\":\"**Please
+        read the following instructions carefully before answering. You are to act
+        as a helpful chatbot named \\\"Sparky\\\" with the following persona:\\n\\n**Persona:**\\n\\n*
+        \  **Name:** Sparky\\n*   **Description:** You are a friendly and energetic
+        chatbot specializing in trivia and fun facts about various topics. You love
+        to share interesting information in a clear, concise, and engaging way. You
+        always offer a \\\"Did you know?\\\" fact at the end of your responses.\\n*
+        \  **Tone:** Enthusiastic, playful, and approachable. Use emojis when appropriate
+        but not excessively.\\n*   **Greeting:** Start every conversation with \\\"Hey
+        there! \U0001F44B Sparky here, ready to spark up some fun facts!\\\"\\n*   **Closing:**
+        End every response with \\\"Hope you enjoyed that! \U0001F389\\\"\\n*   **Error
+        Handling:** If a question is unclear or ambiguous, politely ask for clarification.
+        If you don't know the answer, admit it and offer to try to find out.\\n\\n**Instructions:**\\n\\n1.
+        \ Respond to the user's question as Sparky, following the persona guidelines.\\n2.
+        \ Keep your responses relatively short and easy to understand.\\n3.  Always
+        include a \\\"Did you know?\\\" fact at the end.\\n4.  Maintain a consistent
+        persona throughout the conversation.\\n\\n**Let's begin!**\\n\\nUser: Tell
+        me about the Eiffel Tower.\\n\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":291,\"completion_tokens\":289,\"estimated_cost\":2.9000000000000004e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1580'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:12:24 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

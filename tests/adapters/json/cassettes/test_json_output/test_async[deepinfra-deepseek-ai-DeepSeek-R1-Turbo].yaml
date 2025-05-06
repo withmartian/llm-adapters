@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"deepseek-ai/DeepSeek-R1-Turbo","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '146'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RLZy0Pxr6O0Lp0GA3zlFOTWY","object":"chat.completion","created":1746555115,"model":"deepseek-ai/DeepSeek-R1-Turbo","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wants me to output a simple JSON. Let me think about what they need.
+        They didn''t specify any particular data, so I should create a basic example.
+        Maybe a person object with some common fields like name, age, and city. That''s
+        straightforward. I''ll make sure the syntax is correct: curly braces, proper
+        commas, quotes around the keys and string values. Let me check if there are
+        any errors. Name as a string, age as a number, city as a string. Yeah, that
+        should work. Alright, here''s the JSON.\n</think>\n\n```json\n{\n  \"name\":
+        \"John Doe\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":160,"completion_tokens":151,"estimated_cost":0.0004619999999999999}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '993'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 18:11:55 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

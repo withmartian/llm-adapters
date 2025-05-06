@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/yi-01-ai/models/yi-large", "prompt": "Hi"}'
+    body: '{"model":"accounts/yi-01-ai/models/yi-large","prompt":"Hi"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '62'
+      - '59'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: '{"id":"1f515cd8-eb45-4f08-98f8-9f3db568b95a","object":"text_completion","created":1734146416,"model":"accounts/yi-01-ai/models/yi-large","choices":[{"index":0,"text":")
-        / Fd Fd = sqrt( Fc^2 + F","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":18,"completion_tokens":16}}'
+      string: '{"id":"0738e625-b615-47d4-8621-96b86e93aef7","object":"text_completion","created":1746563306,"model":"accounts/yi-01-ai/models/yi-large","choices":[{"index":0,"text":"
+        the best way to save money is to save change.\nI recently was looking","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":18,"completion_tokens":16}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f1b0e9c7a5a1567-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 14 Dec 2024 03:20:16 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=338.0,total;dur=393.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb39567f9315d0-SJC
       content-length:
-      - '307'
+      - '351'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:28:26 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,9 +64,15 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.281'
+      - '0.260'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=424.0,total;dur=676.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '283'
+      - '263'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -90,7 +88,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '29998'
       x-request-id:
-      - 1f515cd8-eb45-4f08-98f8-9f3db568b95a
+      - 0738e625-b615-47d4-8621-96b86e93aef7
     status:
       code: 200
       message: OK

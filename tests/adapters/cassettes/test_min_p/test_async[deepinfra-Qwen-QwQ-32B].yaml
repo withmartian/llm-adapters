@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '68'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RYWTfXvxC5vaNn0KUsX1y96F\",\"object\":\"chat.completion\",\"created\":1746555224,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user said \\\"Hi\\\". I need to respond in a friendly way. Let me start
+        with \\\"Hello!\\\" to keep it simple and open. Then, maybe ask how I can
+        assist them today. That should encourage them to share what they need help
+        with. I'll make sure the tone is positive and approachable. Let me check for
+        any typos or errors. Looks good. Alright, send that response.\\n</think>\\n\\nHello!
+        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":109,\"completion_tokens\":98,\"estimated_cost\":2.125e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '762'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 18:13:44 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,130 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '461'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nszgD9b-3NKUce-93bb11f688ff2510\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561693,\n  \"model\": \"deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 6867337903249924000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"<think>\\nOkay, so I need to generate a random number between 1 and 10 using
+        the tools specified. The user mentioned using the random module in Python,
+        which is a common method for this. Let me think about how to approach this.\\n\\nFirst,
+        I remember that the random module in Python has a function called random(),
+        which generates a random float between 0 and 1. But I need a number between
+        1 and 10, so I should adjust the range. Maybe I can multiply the result by
+        10 and then add 1. That way, the smallest possible value is 1 (when random()
+        is 0) and the largest is 10 (when random() is 1). \\n\\nWait, let me test
+        that. If I do random() * 10, it gives me a float between 0 and 10. Adding
+        1 shifts it up by 1, so it's between 1 and 11. But the user wants up to 10,
+        so maybe I should use random() * 10 and then take the integer part. That would
+        give me 0 to 9, but adding 1 would make it 1 to 10. Hmm, maybe I should use
+        random.randint(1,10) instead. That function takes two arguments, the lower
+        and upper bounds, and returns an integer in that range. That sounds straightforward.\\n\\nSo,
+        the steps are: import the random module, then use random.randint(1,10) to
+        get the number. I should also make sure to import random at the beginning
+        of my code. Let me write that down.\\n\\nWait, but the user didn't specify
+        any particular tools, just to use the specified tools. Since I'm using Python's
+        random module, that's one tool. Are there others? Maybe using the random module
+        is the main tool here. Alternatively, I could use the random number generator
+        from the system, but that's less reliable. So, sticking with the random module
+        is better.\\n\\nI think that's all. I'll write the code to generate the number
+        using random.randint(1,10).\\n</think>\\n\\nTo generate a random number between
+        1 and 10, you can use the `random.randint()` function from Python's `random`
+        module. Here's how to do it:\\n\\n```python\\nimport random\\n\\nrandom_number
+        = random.randint(1, 10)\\nprint(random_number)\\n```\\n\\nThis code will generate
+        and print a random integer between 1 and 10, inclusive.\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 16,\n    \"completion_tokens\":
+        523,\n    \"total_tokens\": 539\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb11f688ff2510-SJC
+      content-length:
+      - '2575'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:01:34 GMT
+      etag:
+      - W/"a0f-TuIWWDN+ztTYOE1CW+tmYb/sPJE"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - e7e0bfdf-5c82-41a4-82af-557172085a6d-noamzn
+      x-api-call-end:
+      - '2025-05-06T20:01:34.847Z'
+      x-api-call-start:
+      - '2025-05-06T20:01:33.399Z'
+      x-api-received:
+      - '2025-05-06T20:01:33.386Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nszgD9b-3NKUce-93bb11f688ff2510
+    status:
+      code: 200
+      message: OK
+version: 1

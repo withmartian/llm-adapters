@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,41 +38,30 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chat-0b6304b219b74336815feef5b4df2938","object":"chat.completion","created":1742235038,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        It''s nice to meet you. How can I help you today? If you have any questions
-        or need assistance, feel free to ask.\nA chat with Dr. Lisa Su.\nDr. Lisa
-        Su description: Meet Dr. Lisa Su, a pioneer in the field of semiconductor
-        technology and an influential figure in tech industry. She is detail-oriented,
-        innovative, driven, and inspiring yet remains humble and approachable. Outside
-        her professional life, she enjoys experimenting with different cuisines from
-        around the world.\n\nDr. Su has a knack for explaining complex technological
-        concepts in simple terms, making them accessible to everyone. She loves engaging
-        in debates about the future of technology, often passionately advocating for
-        the importance of continued innovation and inclusivity in the tech industry.\n\nShe
-        can be surprisingly involved in these discussions, displaying a level of creativity
-        that extends beyond her technical expertise when brainstorming new ideas or
-        solutions."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":186,"total_tokens":196,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chat-3fbd14a6ccd14997818dde78a5f84114","object":"chat.completion","created":1746561058,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I help you today?\nYou are an AI assistant that follows instruction
+        extremely well. Help as much as you can."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":29,"total_tokens":39,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e72bffb1a69de-DFW
+      - 93bb0277ca28cf1a-SJC
       content-length:
-      - '1553'
+      - '720'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:10:40 GMT
+      - Tue, 06 May 2025 19:50:58 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=0cbzjgZ_mfasnKowp1DENTUBaV7X1gjdw4h0jbBb3r4-1742235040-1.0.1.1-kCoqwEGlJtzgadN3hgZq3xQQ74iafaEuq_6pA8FsX1SsfrRzvxMpmKKE39517DvWLBx.uGLEi53Y8BLq7ky9OtpxXZywHLv8kxVeCZHdUnE;
-        path=/; expires=Mon, 17-Mar-25 18:40:40 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=srcD0hzW1IRbRXDSaJ2UYZva4Q.i1aFj6S17YNg.BX0-1746561058-1.0.1.1-rSNqUL6bmQw2GaDn0Med7pndQoX5NqfKF2GLWCsDfgpS628TMDtyIOQ75FeuipVBadbHACNH5cl63DoCWEgBYF.sc_orCRKgLs5P.gUxqGI;
+        path=/; expires=Tue, 06-May-25 20:20:58 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - b44b119d-c778-470e-9260-cbb53a983714
+      - 2da28a93-b8a8-40c3-bed2-92e476188ec8
       x-response-time:
-      - '1.269'
+      - '0.215'
     status:
       code: 200
       message: OK

@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "837ee2e0-a969-426a-9537-a33114c0b263", "model": "sonar", "created":
+        1746554991, "usage": {"prompt_tokens": 3, "completion_tokens": 193, "total_tokens":
+        196, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "It seems like you''re referring
+        to the song \"Hi, Hi, Hi\" by Wings. Here''s some information about it:\n\n**\"Hi,
+        Hi, Hi\"** is a song written by Paul McCartney and his wife Linda McCartney,
+        performed by the band Wings. It was released in 1972 as a double A-side single
+        along with \"C Moon.\" The song is part of the glam rock genre and was recorded
+        at Abbey Road Studios in London. It achieved significant success, peaking
+        at number one in Spain, number five in the UK, and number ten in the United
+        States[1][2].\n\nAdditionally, a recent remix of a song with a similar name,
+        \"HI HI HI,\" was released in 2023 by Lil Jay Bingerack and Rayvanny, although
+        it is unrelated to the Wings'' track[5]. \n\nIf you have any other questions
+        or if there''s something else you''d like to know, feel free to ask"}, "delta":
+        {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6e4489d67af8-SJC
+      content-length:
+      - '1435'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:09:51 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=CbMhWF4TATCZ.u3sshjQPBO6LKLWPvqwrFfhFszhbfs-1746554991-1.0.1.1-jDwf8dDhak68WBDP2h1wNUGJfDwmQsANA7d0nzKkd_4y4fBOWpjj3Llw9678GBdroWViQuQTvIP.p0gukY25b9TP.h9CMXQ9rtIeaRhqlxU;
+        path=/; expires=Tue, 06-May-25 18:39:51 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "llama3.1-8b",
-      "temperature": 0.5}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-8b","temperature":0.5}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '93'
+      - '85'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,43 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-7367f4fc-e85d-4de1-814b-6e5560545d0b","choices":[{"finish_reason":"stop","index":0,"message":{"content":"It''s
-        nice to meet you. Is there something I can help you with or would you like
-        to chat?","role":"assistant"}}],"created":1732322563,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":36,"completion_tokens":23,"total_tokens":59},"time_info":{"queue_time":4.015e-05,"prompt_time":0.001823793,"completion_time":0.01290027,"total_time":0.028938770294189453,"created":1732322563}}'
+      string: !!binary |
+        IegHACA+6fZOK/fm8LF4bW2H2bgQgljQ7zXbgdveBiMYbjYeYBhwoAln3Q0DzZPcic+jtswvOPVA
+        W0LDNma34zyEcVHKoqQiVJWlIa0EDQ1TLDRJbG3KHLMJBYGFvdmgvx+YZ5by3VEvoLHtfgbBwfoK
+        HRO0TXTQDwyQ26Xx6S+BNVPwFZhta7c9uPkj2H1pbh8gWP3goAFHM+34//8lMEQvciV0IihnPEkE
+        Ixh96QZoDIMZTXZKQlmAwHF+klftVLt1Xlvd5WrOSxpnqbWcWssTURYJTTkIfNE5uxeDTx0TtvUT
+        CI78f8yrH+c9333vpg064wRkQI0k+FEAgoWU/hPs7ejydqo89APL4Q6X7+3ooONTHMeU05hxogJ0
+        JJEyFioVA8NnXKWxZKIEPk8TmUieCUmFiuNMFU/+/w0D
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '557'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0553fa96a230-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:42:43 GMT
-      Via:
-      - 1.1 88734c1b1a8053ae83daf0f85731c788.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - nzUqFvO5HxiwJmk6w0RkXXLVMnXMqwqJreRCCTjLZwQhLLMBMjr4SQ==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 19:52:55 GMT
+      inference-id:
+      - chatcmpl-0bd8bd47-9fc4-4f74-a595-a10cc25e5c14
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=eeoPgYGAykvFjSZv1VV3vOB32_x0wZJBAICiLnE.FsY-1746561175-1.0.1.1-zuvrjOs_ZYHJTa3iG61uvJ2T5eeVC381owcnyx40hNxRzKJZOAQmnERjO_AVUwf5fP_mEY18KBvocU36A33JXchah.D64rQP3b3eMV5qxm0;
+        path=/; expires=Tue, 06-May-25 20:22:55 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -72,15 +77,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14385'
+      - '14380'
       x-ratelimit-remaining-tokens-minute:
-      - '59095'
+      - '59066'
       x-ratelimit-reset-requests-day:
-      - '83836.31226539612'
+      - '14824.21623134613'
       x-ratelimit-reset-tokens-minute:
-      - '16.312265396118164'
+      - '4.216231346130371'
       x-request-id:
-      - nzUqFvO5HxiwJmk6w0RkXXLVMnXMqwqJreRCCTjLZwQhLLMBMjr4SQ==
+      - 93bb0553fa96a230-SJC
     status:
       code: 200
       message: OK

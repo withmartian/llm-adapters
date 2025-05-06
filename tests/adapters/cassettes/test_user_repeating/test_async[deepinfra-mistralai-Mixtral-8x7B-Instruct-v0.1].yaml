@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '123'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RryjmUAaM06FuKr9rpiemJtT","object":"chat.completion","created":1746561551,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"message":{"role":"assistant","content":"
+        How can I help you today? I''m here to answer any questions you have about
+        writing, editing, or publishing.\n\nTo get started, what is the topic of your
+        manuscript? Is it fiction or nonfiction? And what stage of the writing process
+        are you in?\n\nI''m here to help you in any way I can, so don''t hesitate
+        to ask me anything. I''ll do my best to provide useful and actionable advice.\n\nI''m
+        looking forward to working with you!\n\nBest,\nJulia.","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":130,"completion_tokens":119,"estimated_cost":3.12e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '813'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 19:59:11 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

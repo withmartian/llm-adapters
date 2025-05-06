@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi "}], "model": "nephara"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"llama3-8b-instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '110'
+      - '111'
       content-type:
       - application/json
       host:
       - jtwtcue2-llama3-8b-instruct.tin.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,40 +26,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://jtwtcue2-llama3-8b-instruct.tin.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-mWJdDq7x6y7aiy6wu47nGi","object":"chat.completion","created":1733351018,"model":"nephara","choices":[{"index":0,"message":{"role":"assistant","content":"How
-        can I assist you today? I''m here to chat if you have questions, want to discuss
-        a topic, or just need some conversation!","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":17,"total_tokens":47,"completion_tokens":30}}'
+      string: ''
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ecf33b778e92349-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 04 Dec 2024 22:23:38 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba6dc6799667e5-SJC
       content-length:
-      - '457'
-      vary:
-      - Accept-Encoding
+      - '0'
+      date:
+      - Tue, 06 May 2025 18:09:28 GMT
+      server:
+      - cloudflare
       x-envoy-upstream-service-time:
-      - '279'
+      - '1'
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "user", "content": "\"\""}], "model": "glm-4-flash"}'
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"user","content":"\"\""}],"model":"glm-4-flash"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '309'
+      - '279'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,33 +25,35 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
       string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"It
-        seems you''re sending a series of empty quotes. If you have a specific question
-        or topic in mind, please let me know, and I''ll be happy to help with an answer
-        or discussion.","role":"assistant"}}],"created":1733771211,"id":"20241210030650efc514c81e5742ed","model":"glm-4-flash","request_id":"20241210030650efc514c81e5742ed","usage":{"completion_tokens":42,"prompt_tokens":24,"total_tokens":66}}'
+        seems like you''re sending an empty or null string repeatedly. If you have
+        a specific question or message you''d like to have answered or discussed,
+        please feel free to provide it, and I''ll be happy to assist you.","role":"assistant"}}],"created":1746555191,"id":"20250507021310e801bd2bcc8e42a5","model":"glm-4-flash","request_id":"20250507021310e801bd2bcc8e42a5","usage":{"completion_tokens":48,"prompt_tokens":24,"total_tokens":72}}'
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-length:
+      - '503'
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:06:51 GMT
-      Set-Cookie:
-      - acw_tc=2f6a1fa817337712102846486e0852c096a03deb3596a61e0781a15b78f299;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:13:11 GMT
+      set-cookie:
+      - acw_tc=0ae5a82317465551901655127e0054f217b8f5e263e70e75a872a1825b9213;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
+      vary:
       - Accept-Encoding
       - Origin
       - Access-Control-Request-Method
@@ -62,10 +61,8 @@ interactions:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 20241210030650efc514c81e5742ed
-      content-length:
-      - '464'
+      x-log-id:
+      - 20250507021310e801bd2bcc8e42a5
     status:
       code: 200
       message: OK

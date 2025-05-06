@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "Qwen/Qwen2.5-72B-Instruct"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '92'
+      - '86'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,27 +25,32 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-05b739f7eadb47ac913ceeaedcf0e388","object":"chat.completion","created":1733368496,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"
-        there! It looks like your message may have been cut off. Could you please
-        provide more information so I can assist you better?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":9,"total_tokens":35,"completion_tokens":26,"estimated_cost":1.2470000000000001e-05}}'
+      string: '{"id":"chatcmpl-RZD70HcOdR5650SLbxmgPzm6","object":"chat.completion","created":1746561114,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"
+        there! It looks like your message got cut off. Could you please provide more
+        details or clarify what you need help with? I''m here to assist you with any
+        questions or information you''re looking for!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":50,"completion_tokens":41,"estimated_cost":1.707e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '491'
+      - '557'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:14:56 GMT
+      - Tue, 06 May 2025 19:51:54 GMT
       server:
       - uvicorn
       x-robots-tag:

@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-27b-it","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RAMrpdN6lfZEYjCnxzflQCPV","object":"text_completion","created":1746563470,"model":"google/gemma-3-27b-it","choices":[{"index":0,"text":",\n\nI''m
+        running into an issue with a script I''m writing that scrapes data from a
+        website. The website has a fairly complex JavaScript front-end that dynamically
+        generates content.  I''m using `requests` and `BeautifulSoup4` to scrape the
+        initial HTML, but I need to execute the JavaScript to get the full content.  I''ve
+        started using `selenium` to simulate a browser, but I''m hitting issues with
+        getting the full rendered HTML after the JavaScript has finished executing.\n\nHere''s
+        a summary of the problem and my current approach:\n\n*   **Website Structure:**
+        The site loads a base HTML, then JavaScript dynamically adds content through
+        asynchronous requests.  The final content isn''t present in the initial HTML.\n*   **My
+        Goal:**  I need the fully rendered HTML, *after* all JavaScript has completed
+        and the dynamic content has loaded.\n*   **Current Approach:**\n    1.  Use
+        `requests` to get the initial HTML. (Not ideal, but a starting point)\n    2.  Use
+        `selenium` to load the page in a browser instance.\n    3.  Wait for specific
+        elements to appear (using `WebDriverWait` and `expected_conditions`) to ensure
+        the content has loaded.\n    4.  Try to get the rendered HTML using `driver.page_source`.
+        This is where the problem occurs.\n\nThe `driver.page_source` doesn''t always
+        contain the fully rendered HTML. Sometimes it''s missing elements that I know
+        are loaded after the waits. I suspect it''s a timing issue, or maybe there''s
+        a better way to get the complete HTML.\n\nHere''s a simplified example of
+        my code:\n\n```python\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by
+        import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support
+        import expected_conditions as EC\nimport requests\nfrom bs4 import BeautifulSoup\n\n#
+        Website URL\nurl = \"https://www.example.com/dynamic_page\"  # Replace with
+        actual URL\n\n# 1. Initial HTML with requests (optional)\n# response = requests.get(url)\n#
+        soup = BeautifulSoup(response.content, ''html.parser'')\n# print(\"Initial
+        HTML loaded with requests\")\n\n\n# 2. Selenium setup\ndriver = webdriver.Chrome()  #
+        Or Firefox, Edge, etc.\ndriver.get(url)\n\n# 3. Wait for dynamic content to
+        load\ntry:\n    element = WebDriverWait(driver, 10).until(\n        EC.presence_of_element_located((By.ID,
+        \"dynamic-content\"))\n    )\n    print(\"Dynamic content loaded\")\nexcept
+        Exception as e:\n    print(f\"Error waiting for dynamic content: {e}\")\n    driver.quit()\n    exit()\n\n#
+        4. Get the rendered HTML\nhtml = driver.page_source\n#print(\"HTML retrieved.\")\n\n#
+        5. Parse with BeautifulSoup\nsoup = BeautifulSoup(html, ''html.parser'')\n\n#
+        Check if the dynamic element is present in the soup\ndynamic_element = soup.find(id=\"dynamic-content\")\nif
+        dynamic_element:\n    print(\"Dynamic content found in BeautifulSoup\")\nelse:\n    print(\"Dynamic
+        content NOT found in BeautifulSoup\")\n\n\ndriver.quit()\n```\n\n**Questions:**\n\n1.  What
+        are the common causes of `driver.page_source` not containing the fully rendered
+        HTML after waiting for elements?\n2.  Are there better ways to ensure I get
+        the complete HTML from Selenium?  Should I consider using `driver.execute_script`
+        to wait for specific JavaScript events, or other techniques?\n3.  Are there
+        any potential issues with using `driver.page_source` in general that I should
+        be aware of?\n4.  Could asynchronous loading after the initial wait be the
+        cause? How can I handle that?\n\nAny advice or suggestions would be greatly
+        appreciated!\n","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":845,"completion_tokens":843,"estimated_cost":0.00016879999999999998}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3804'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:31:10 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

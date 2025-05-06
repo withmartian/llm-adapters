@@ -1,8 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "assistant", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -11,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '208'
+      - '190'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,58 +25,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cbd238a3424e2-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732318556,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 6329407236403430000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nsz5wax-4yUbBN-93ba6eba9fdf1576\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746555007,\n  \"model\": \"Qwen/Qwen2.5-72B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 17649378131199414000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         \"Hello! How can I assist you today?\",\n        \"tool_calls\": []\n      }\n
         \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 48,\n    \"completion_tokens\":
         10,\n    \"total_tokens\": 58\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6cbd238a3424e2-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 22 Nov 2024 23:35:57 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6eba9fdf1576-SJC
       content-length:
-      - '524'
+      - '537'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:10:07 GMT
       etag:
-      - W/"20c-dY1uxgaobsSCwx9wuTGaDS8tQtQ"
+      - W/"219-5ikTQlHYFx4V+rK3STnu9YXypCo"
       retry-after:
-      - '1'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-call-end:
-      - '2024-11-22T23:35:57.120Z'
+      - '2025-05-06T18:10:07.439Z'
       x-api-call-start:
-      - '2024-11-22T23:35:56.758Z'
+      - '2025-05-06T18:10:07.253Z'
       x-api-received:
-      - '2024-11-22T23:35:56.751Z'
+      - '2025-05-06T18:10:07.225Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -88,11 +88,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '189'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99447'
+      - '100000'
       x-ratelimit-reset:
-      - '1'
+      - '2'
+      x-request-id:
+      - nsz5wax-4yUbBN-93ba6eba9fdf1576
     status:
       code: 200
       message: OK

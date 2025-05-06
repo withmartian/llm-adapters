@@ -1,8 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "assistant", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -11,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '222'
+      - '204'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,72 +25,76 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cde527e0567f1-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732319915,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 5616698459709258000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nsz5y5o-3NKUce-93ba6ed818a4fada\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746555012,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 4398235527262981000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         \"How are you today?\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
-        \ \"usage\": {\n    \"prompt_tokens\": 55,\n    \"completion_tokens\": 6,\n
-        \   \"total_tokens\": 61\n  }\n}"
+        \ \"usage\": {\n    \"prompt_tokens\": 54,\n    \"completion_tokens\": 6,\n
+        \   \"total_tokens\": 60,\n    \"cached_tokens\": 0\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6cde527e0567f1-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 22 Nov 2024 23:58:36 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6ed818a4fada-SJC
       content-length:
-      - '521'
+      - '557'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:10:12 GMT
       etag:
-      - W/"209-rPHa+doQwUVi/TVWxoZh4s6WFSo"
+      - W/"22d-4BrPypfpeMGPV5L8pVNa42XWFI8"
       retry-after:
-      - '2'
+      - '1'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 3c18e6a4-d442-4995-b14e-603ebe5fd62a-noamzn
       x-api-call-end:
-      - '2024-11-22T23:58:36.700Z'
+      - '2025-05-06T18:10:12.681Z'
       x-api-call-start:
-      - '2024-11-22T23:58:35.946Z'
+      - '2025-05-06T18:10:12.273Z'
       x-api-received:
-      - '2024-11-22T23:58:35.934Z'
+      - '2025-05-06T18:10:12.262Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '10'
+      - '100'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '19'
+      - '198'
       x-ratelimit-remaining-tokens:
-      - '100000'
+      - '99718'
       x-ratelimit-reset:
-      - '2'
+      - '1'
+      x-request-id:
+      - nsz5y5o-3NKUce-93ba6ed818a4fada
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}], "model": "wizardlm-2-8x22b"}'
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"wizardlm-2-8x22b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '80'
+      - '74'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,53 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-mMaWbMo5hoaGmyMikhcFuR","object":"chat.completion","created":1733368737,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Your
-        email could be structured in the following way:\n\n---\n\nSubject: Follow-up
-        on Project Status Update\n\nDear [Recipient''s Name],\n\nI hope this email
-        finds you well.\n\nI am writing to follow up on the status update for [Project
-        Name], which was due on [Previous Due Date]. As we have not yet received the
-        latest information, I wanted to kindly remind you of the importance of keeping
-        all stakeholders informed about the project''s progress.\n\nUnderstanding
-        the current status is crucial for us to provide the necessary support and
-        resources, and to ensure that the project remains on track to meet its deadlines.
-        The timely dissemination of updates also allows for better coordination among
-        team members and helps in addressing any potential issues proactively.\n\nCould
-        you please provide us with the updated project status by [New Due Date]? The
-        following points would be particularly helpful:\n\n1. Current phase of the
-        project and progress on key deliverables.\n2. Any challenges or obstacles
-        that the team is facing.\n3. Upcoming milestones and expected completion dates.\n4.
-        Resource needs or support required from other departments.\n5. Risk assessment
-        and","tool_calls":null},"logprobs":null,"finish_reason":"length","audio":null,"asr_results":null}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
+      string: '{"id":"chatcmpl-kbbNCUEgxBje9L58v8pW5a","object":"chat.completion","created":1746555163,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you''re working on a program or script that involves a function
+        called `optimize_selection`. This function appears to be part of a larger
+        system, possibly for selecting the best configuration (`best_sel`) based on
+        a selection (`sel`) and using a feature vector (`hits`) and a configuration
+        (`hconf`).\n\nThe `optimize_selection` function is not a standard function
+        in any programming language or library, so it''s likely a custom function
+        defined within the codebase you''re working with. The purpose of this function
+        is to take a `sel` and `hconf` as inputs and return an optimized selection
+        based on some criteria or cost function.\n\nHere''s a breakdown of the parameters
+        and the return statement:\n\n- `sel`: This is the input selection that the
+        function will use as a starting point.\n- `hconf`: This is the configuration
+        associated with the selection. It''s not clear what `hconf` stands for, but
+        it could be a handle to configuration data or a configuration object.\n- `best_sel`:
+        This is the output of the function, which is presumably the best selection
+        found by the `optimize_","tool_calls":null},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e4521e461732-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:19:16 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba728a3f1dcf72-SJC
       content-length:
-      - '1515'
+      - '1408'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:46 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '18571'
+      - '3102'
     status:
       code: 200
       message: OK

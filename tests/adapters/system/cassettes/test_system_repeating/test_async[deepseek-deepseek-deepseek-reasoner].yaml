@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,66 +25,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"d8e3ea02-6ff7-4d70-b0b0-7faaf96a04ff\",\"object\":\"chat.completion\",\"created\":1738793723,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
-        there! \U0001F44B That's seven \\\"Hi\\\"s\u2014someone's excited to chat!
-        How can I help you today? \U0001F60A\",\"reasoning_content\":\"Okay, so the
-        user just sent \\\"Hi\\\" seven times in a row. Hmm, that's a lot of greetings.
-        Let me see. Maybe they're testing if I notice the repetition? Or perhaps they're
-        just being playful. I should respond in a friendly way.\\n\\nFirst, I should
-        acknowledge all the \\\"Hi\\\"s. Counting them, there are seven. Maybe mention
-        that number to show I paid attention. Then, add something light-hearted to
-        keep the conversation going. Maybe ask how they're doing or if there's something
-        specific they need help with. But keep it open-ended so they can guide the
-        conversation. Let me check for any hidden meaning. Seven times... Is there
-        a cultural reference or something related to the number seven? Not sure. Probably
-        just being repetitive for fun. Alright, craft a response that's cheerful and
-        invites them to ask for help. Avoid being too robotic. Use an emoji to keep
-        it friendly. Yeah, that should work.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":20,\"completion_tokens\":225,\"total_tokens\":245,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":196},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":20},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+      string: "{\"id\":\"4603971d-c6c2-4403-95bc-da121284beff\",\"object\":\"chat.completion\",\"created\":1746561051,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"That's
+        a lot of hellos! \U0001F604 How can I assist you today?\",\"reasoning_content\":\"Okay,
+        let's see. The user sent \\\"Hi\\\" seven times in a row. That's a lot of
+        greetings. I need to figure out why they did that. Maybe they're testing how
+        I respond to repeated messages? Or perhaps they're just being playful.\\n\\nFirst,
+        I should acknowledge all their messages. But responding to each \\\"Hi\\\"
+        individually would be redundant. Maybe a friendly reply that covers all the
+        greetings at once. Also, I should keep the tone light and maybe add a bit
+        of humor. Let me check if there's a pattern or hidden meaning in seven \\\"Hi\\\"s.
+        Sometimes numbers have significance, but I'm not sure. Seven is a common number
+        in many contexts, like days of the week, lucky number, etc. But maybe it's
+        just random.\\n\\nI should respond in a way that shows I noticed the repetition
+        and am engaging with it. Maybe something like, \\\"That's a lot of hellos!
+        \U0001F604 How can I assist you today?\\\" That way, I acknowledge their messages
+        and prompt them to state their request. Keep it simple and welcoming. Avoid
+        being too technical or verbose. Yeah, that should work.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":20,\"completion_tokens\":251,\"total_tokens\":271,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":232},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":20},\"system_fingerprint\":\"fp_5417b77867_prod0425fp8\"}"
     headers:
-      CF-RAY:
-      - 90d64242de5896de-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 22:15:23 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESTIME=1738793722458; path=/
-      - HWWAFSESID=9ceba8863661d6e644; path=/
-      - __cf_bm=5hmZB5x4CV3aTtaJrezgGjwsUzOVS52Z3_KMsxvnNdw-1738793723-1.0.1.1-xy2hA7GDLbzwPyUWrQKoWQQ2Pr6UtGe5aGcUFGXm.yNlCWRid1w4Y90Az.VZbFSA8rqRCBSHyFjNoJPiViVruA;
-        path=/; expires=Wed, 05-Feb-25 22:45:23 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb024dbbc469a2-SJC
       content-length:
-      - '1507'
+      - '1629'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:50:52 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=npkHprjklj3tn6BOQMLrtLBMFbe4KMxDaEZXYPtiwg0-1746561052-1.0.1.1-VzoL.s8smgOdQ1qw4bYW7xt5Tou3eHas6e8PFG5WnEtOnHwgoFtddj.gc_Nf1WJ8e7GAl2thBN6N12VvOrw1kRwQDWjBM7IzRWMxZvbZcdY;
+        path=/; expires=Tue, 06-May-25 20:20:52 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - 479914ad86066022f32a91233fbbb413
+      - 9723c3540db6efa9806e5a8966dbf5a1
     status:
       code: 200
       message: OK

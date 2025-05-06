@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,34 +38,40 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-f8684f9b-d255-47c9-9653-8aabd617893e","object":"chat.completion","created":1742234929,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It''s
-        nice to meet you. Is there something I can help you with or would you like
-        to:\n\n1. **Chat about a topic** (e.g., hobbies, movies, books, tech)?\n2.
-        **Ask a question** on a specific subject (e.g., history, science, entertainment)?\n3.
-        **Play a game** (e.g., 20 Questions, Hangman, Word Chain)?\n4. **Generate
-        ideas** for a project or story?\n5. **Something else** (please specify)?\n\nChoose
-        a number, or just start talking, and I''ll do my best to assist you!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":125,"total_tokens":147,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-664c61ec-8e70-4214-856c-4d0d7c450bbd","object":"chat.completion","created":1746554936,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"**Welcome
+        to our conversation!**\n\nHow can I assist you today? Please pick one (or
+        more) of the following options, or feel free to suggest something else:\n\n1.
+        **Ask a Question**: Got a question on a specific topic (e.g., history, science,
+        tech, entertainment, etc.)?\n2. **Discuss a Topic**: Want to engage in a discussion
+        on a particular subject (e.g., news, trends, hobbies, etc.)?\n3. **Generate
+        Ideas**: Need help brainstorming ideas for a project, story, or creative endeavor?\n4.
+        **Play a Game**: Interested in playing a text-based game (e.g., 20 Questions,
+        Hangman, Word Chain, etc.)?\n5. **Learn Something New**: Would you like me
+        to share a fun fact, a brief tutorial, or an educational tidbit on a random
+        topic?\n6. **Chat for Fun**: Just want to have a casual, get-to-know-you conversation?\n7.
+        **Something Else**: Please specify (e.g., language practice, proofreading,
+        etc.)...\n\nType your response, and I''ll do my best to help!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":231,"total_tokens":253,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e7015af8ff081-DFW
+      - 93ba6cffba2d15fb-SJC
       content-length:
-      - '1099'
+      - '1578'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:08:53 GMT
+      - Tue, 06 May 2025 18:09:01 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=sfPRJZULOdByZ0uZRj.UlOdWFPQ4RGXqwBYEjcVypv0-1742234933-1.0.1.1-3CJlUeb4Wi1vGeBtPCeIVRYFsO2Oq3_IXoevt849CQHjIysbdJSGtJU1GpDtkMRvRhHwk7hLFe.myUlt7VetqHadn2xaad0RjNO9kiy5vSs;
-        path=/; expires=Mon, 17-Mar-25 18:38:53 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=XpGrftdIWMLSgj35FP07m9FSv7.nFWL6ycOw.3kBAoM-1746554941-1.0.1.1-3Sp51Sv1_R2._7X6E8kFZds5l0jU_4vtyRuEYUjHSAxj6a3ixXMp33zZPpWreQUaY9qZ.KGtkvKGvIAS.ywOAv37SFFkYe5RlymtQPsMdqw;
+        path=/; expires=Tue, 06-May-25 18:39:01 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - f8684f9b-d255-47c9-9653-8aabd617893e
+      - 664c61ec-8e70-4214-856c-4d0d7c450bbd
       x-response-time:
-      - '3.593'
+      - '4.803'
     status:
       code: 200
       message: OK

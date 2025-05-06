@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "command-r-plus", "messages": [{"role": "user", "content": "Hi"}],
-      "stream": true}'
+    body: '{"model":"command-r-plus","messages":[{"role":"user","content":"Hi"}],"stream":true}'
     headers:
       accept:
       - '*/*'
@@ -10,26 +9,26 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '92'
+      - '84'
       content-type:
       - application/json
       host:
       - api.cohere.com
       user-agent:
-      - python-httpx/0.27.2
+      - python-httpx/0.28.1
       x-fern-language:
       - Python
       x-fern-sdk-name:
       - cohere
       x-fern-sdk-version:
-      - 5.11.3
+      - 5.15.0
     method: POST
     uri: https://api.cohere.com/v2/chat
   response:
     body:
       string: 'event: message-start
 
-        data: {"id":"0fee8043-5c62-4ccb-a002-0337b8dd88bf","type":"message-start","delta":{"message":{"role":"assistant","content":[],"tool_plan":"","tool_calls":[],"citations":[]}}}
+        data: {"id":"f167b82a-43a9-43fe-851d-5857daf0a74f","type":"message-start","delta":{"message":{"role":"assistant","content":[],"tool_plan":"","tool_calls":[],"citations":[]}}}
 
 
         event: content-start
@@ -95,7 +94,7 @@ interactions:
 
         event: message-end
 
-        data: {"type":"message-end","delta":{"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":1,"output_tokens":9},"tokens":{"input_tokens":194,"output_tokens":9}}}}
+        data: {"type":"message-end","delta":{"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":1,"output_tokens":9},"tokens":{"input_tokens":67,"output_tokens":9}}}}
 
 
         data: [DONE]
@@ -116,7 +115,7 @@ interactions:
       content-type:
       - text/event-stream
       date:
-      - Sat, 23 Nov 2024 00:47:45 GMT
+      - Tue, 06 May 2025 19:53:07 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 UTC
       pragma:
@@ -128,9 +127,9 @@ interactions:
       x-accel-expires:
       - '0'
       x-debug-trace-id:
-      - e995901f3793513c8dd720296500da31
+      - 4bfb4cf6713598db4687d6af745eaf8c
       x-envoy-upstream-service-time:
-      - '13'
+      - '75'
     status:
       code: 200
       message: OK

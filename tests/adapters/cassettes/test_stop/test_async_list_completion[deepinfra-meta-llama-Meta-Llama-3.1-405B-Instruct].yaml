@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "meta-llama/Meta-Llama-3.1-405B-Instruct", "prompt": "Hi", "stop":
-      ["stop", "end"]}'
+    body: '{"model":"meta-llama/Meta-Llama-3.1-405B-Instruct","prompt":"Hi","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '93'
+      - '87'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,45 +25,84 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: '{"id":"cmpl-cae058cbf93a4503a8c0fef46589522e","object":"text_completion","created":1734127156,"model":"meta-llama/Meta-Llama-3.1-405B-Instruct","choices":[{"index":0,"text":"<|start_header_id|>
-        om/debmirror): Reloading debmirror... (due to 6 delayed apt-updates)\n2022-07-22
-        15:15:35,692 INFO     omv.extraindices  omv-extraindices: Creating index of
-        OpenMediaVault plugins...\n2022-07-22 15:15:39,866 INFO     omv.extraindices  omv-extraindices:
-        Reload repos\n```\nAnd here is what I get from \"apt update\"\n```\nGet:1
-        file:/var/cache/openmediavault/archives  InRelease\nIgn:1 file:/var/cache/openmediavault/archives  InRelease\nGet:2
-        file:/var/cache/openmediavault/archives  Release [598 B]\nGet:2 file:/var/cache/openmediavault/archives  Release
-        [598 B]\nGet:3 file:/var/cache/openmediavault/archives  Release.gpg [481 B]\nGet:3
-        file:/var/cache/openmediavault/archives  Release.gpg [481 B]\nGet:4 http://httpredir.debian.org/debian
-        buster InRelease [122 kB]\nGet:5 http://httpredir.debian.org/debian buster-updates
-        InRelease [51.9 kB]\nGet:6 http://httpredir.debian.org/debian buster-backports
-        InRelease [46.7 kB]\nGet:7 http://httpredir.debian.org/debian-security buster/updates
-        InRelease [65.4 kB]\nGet:8 http://httpredir.debian.org/debian buster/main
-        Sources [7,834 kB]\nGet:9 http://httpredir.debian.org/debian buster/main Translation-en
-        [5,969 kB]\nGet:10 http://httpredir.debian.org/debian buster/contrib Sources
-        [46.1 kB]\nGet:11 http://httpredir.debian.org/debian buster/contrib Translation-en
-        [43.7 kB]\nGet:12 http://httpredir.debian.org/debian buster/non-free Sources
-        [106 kB]\nGet:13 http://httpredir.debian.org/debian buster/non-free Translation-en
-        [87.9 kB]\nGet:14 http://httpredir.debian.org/debian buster-updates/main Sources
-        [28.8 kB]\nGet:15 http://httpredir.debian.org/debian buster-updates/main Translation-en
-        [23.7 kB]\nGet:16 http://httpredir.debian.org/de","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":513,"completion_tokens":512,"estimated_cost":0.0004617}}'
+      string: '{"id":"cmpl-RoXRwg8CTCkeY8o2WpCTyNdN","object":"text_completion","created":1746561944,"model":"meta-llama/Meta-Llama-3.1-405B-Instruct","choices":[{"index":0,"text":"<|start_header_id|>80%}{Colorfang12345}{Ddruid75}{254}{3}{\"Mythic
+        Guild\"}''\nversion: 1\nlogin:\n  password: $apr1$................\n  username:
+        DRUID75\n```\n\nA trained model should be able to predict the `login` section,
+        which contains the username and password hash. The prediction should be in
+        the following format:\n```\nlogin:\n  password: $apr1$................\n  username:
+        DRUID75\n```\nNote that the password hash is not the actual password, but
+        rather a hashed version of it.\n\n### Step 4: Define the Model Architecture\n\nTo
+        predict the `login` section, we can use a sequence-to-sequence model with
+        an encoder and a decoder. The encoder will take the input sequence (the WoW
+        character profile) and output a fixed-length vector representation. The decoder
+        will then take this vector representation and generate the output sequence
+        (the `login` section).\n\nWe can use a transformer-based architecture, which
+        is well-suited for sequence-to-sequence tasks. The transformer model will
+        consist of an encoder and a decoder, each with a stack of identical layers.
+        Each layer will have two sub-layers: a multi-head self-attention mechanism
+        and a position-wise fully connected feed-forward network.\n\n### Step 5: Train
+        the Model\n\nTo train the model, we will need a large dataset of WoW character
+        profiles with their corresponding `login` sections. We can use a dataset of
+        publicly available WoW character profiles and their corresponding login information.\n\nOnce
+        we have the dataset, we can train the model using a masked language modeling
+        objective. We will mask out the `login` section in the input sequence and
+        train the model to predict it.\n\n### Step 6: Evaluate the Model\n\nTo evaluate
+        the model, we can use a metric such as accuracy or F1 score. We will evaluate
+        the model on a test set of WoW character profiles and their corresponding
+        `login` sections.\n\nIf the model achieves a high accuracy or F1 score, it
+        means that it is able to predict the `login` section accurately. However,
+        if the model achieves a low accuracy or F1 score, it means that it is not
+        able to predict the `login` section accurately, and we may need to adjust
+        the model architecture or training parameters.\n\n### Step 7: Use the Model\n\nOnce
+        the model is trained and evaluated, we can use it to predict the `login` section
+        for new WoW character profiles. We can input a new character profile into
+        the model, and it will output the predicted `login` section.\n\nNote that
+        this model should not be used to actually login to WoW accounts, as that would
+        be a violation of Blizzard''s terms of service. Instead, this model can be
+        used for research purposes or to generate synthetic login data for testing
+        purposes.\n\nHere is some sample Python code for the model:\n```python\nimport
+        torch\nimport torch.nn as nn\nimport torch.optim as optim\nfrom transformers
+        import TransformerModel\n\nclass WoWLoginPredictor(nn.Module):\n    def __init__(self):\n        super(WoWLoginPredictor,
+        self).__init__()\n        self.encoder = TransformerModel(num_layers=6, num_heads=8,
+        hidden_size=512)\n        self.decoder = TransformerModel(num_layers=6, num_heads=8,
+        hidden_size=512)\n    \n    def forward(self, input_seq):\n        encoder_output
+        = self.encoder(input_seq)\n        decoder_output = self.decoder(encoder_output)\n        return
+        decoder_output\n\nmodel = WoWLoginPredictor()\ncriterion = nn.CrossEntropyLoss()\noptimizer
+        = optim.Adam(model.parameters(), lr=0.001)\n\n# Train the model\nfor epoch
+        in range(10):\n    for input_seq, target_seq in train_data:\n        optimizer.zero_grad()\n        output
+        = model(input_seq)\n        loss = criterion(output, target_seq)\n        loss.backward()\n        optimizer.step()\n    \n    print(f''Epoch
+        {epoch+1}, Loss: {loss.item()}'')\n\n# Evaluate the model\nmodel.eval()\ntest_loss
+        = 0\ncorrect = 0\nwith torch.no_grad():\n    for input_seq, target_seq in
+        test_data:\n        output = model(input_seq)\n        loss = criterion(output,
+        target_seq)\n        test_loss += loss.item()\n        _, predicted = torch.max(output,
+        1)\n        correct += (predicted == target_seq).sum().item()\n\naccuracy
+        = correct / len(test_data)\nprint(f''Test Loss: {test_loss / len(test_data)}'')\nprint(f''Test
+        Accuracy: {accuracy:.2f}%'')\n```\nNote that this is just a sample code, and
+        you will need to modify it to suit your specific use case. You will also need
+        to preprocess the data, create a dataset class, and define the `train_data`
+        and `test_data` variables.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":978,"completion_tokens":977,"estimated_cost":0.0007824}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2026'
+      - '4790'
       Content-Type:
       - application/json
       Date:
-      - Fri, 13 Dec 2024 21:59:16 GMT
+      - Tue, 06 May 2025 20:05:44 GMT
       server:
       - uvicorn
       x-robots-tag:

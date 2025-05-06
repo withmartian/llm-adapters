@@ -1,0 +1,112 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"Qwen/Qwen2.5-Coder-32B-Instruct","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '407'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nszgQAq-4yUbBN-93bb12df0ffe22ba\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561730,\n  \"model\": \"Qwen/Qwen2.5-Coder-32B-Instruct\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 17066395784018428000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Sure! If you want to generate a random number between 1 and 10 using different
+        tools, here are a few methods:\\n\\n### Using Python:\\n```python\\nimport
+        random\\n\\nrandom_number = random.randint(1, 10)\\nprint(random_number)\\n```\\n\\n###
+        Using JavaScript:\\n```javascript\\nlet randomNumber = Math.floor(Math.random()
+        * 10) + 1;\\nconsole.log(randomNumber);\\n```\\n\\n### Using Bash:\\n```bash\\nrandom_number=$((
+        ( RANDOM % 10 )  + 1 ))\\necho $random_number\\n```\\n\\n### Using Excel:\\nYou
+        can use the `RANDBETWEEN` function:\\n```excel\\n=RANDBETWEEN(1, 10)\\n```\\n\\n###
+        Using Online Tools:\\nYou can use an online random number generator like [Random.org](https://www.random.org/integers/).\\n\\nChoose
+        the tool that best fits your needs!\",\n        \"tool_calls\": []\n      }\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 42,\n    \"completion_tokens\":
+        186,\n    \"total_tokens\": 228\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb12df0ffe22ba-SJC
+      content-length:
+      - '1225'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:02:13 GMT
+      etag:
+      - W/"4c9-a5Dh1AN+1Vsi0JGCqT1Pq6Ixwr8"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-api-call-end:
+      - '2025-05-06T20:02:12.971Z'
+      x-api-call-start:
+      - '2025-05-06T20:02:10.500Z'
+      x-api-received:
+      - '2025-05-06T20:02:10.462Z'
+      x-content-type-options:
+      - nosniff
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nszgQAq-4yUbBN-93bb12df0ffe22ba
+    status:
+      code: 200
+      message: OK
+version: 1

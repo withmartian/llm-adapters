@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "dolphin-mixtral-8x7b", "prompt": "Hi"}'
+    body: '{"model":"dolphin-mixtral-8x7b","prompt":"Hi"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '49'
+      - '46'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,39 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-Ue3SoqPPyqDGazaVQ87gjp","object":"text_completion","created":1734142858,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":",
-        Dolly.\n\nThe most important thing to remember about the Dolly is that it
-        is a tool to help you make","logprobs":null,"finish_reason":"stop","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":28,"completion_tokens":27}}'
+      string: "{\"id\":\"cmpl-RN5xUnNbkCfjc46AguSqrA\",\"object\":\"text_completion\",\"created\":1746561344,\"model\":\"dolphin-mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\",
+        I\u2019m Katrina, and I\u2019m the editor of the website. I\u2019ve been in
+        the fitness industry for many years, and I\u2019m passionate about helping
+        people reach their fitness goals. I\u2019ve had a lot of experience in the
+        gym, and I\u2019ve learned a lot about what works and what doesn\u2019t. I\u2019m
+        always keeping up with the latest trends in the fitness industry, and I\u2019m
+        always looking for new ways to help people get in shape. When I\u2019m not
+        in the gym, I enjoy spending time with my family and friends. I also love
+        to hike and explore new places.\\n\\nI\u2019m excited to be a part of the
+        website, and I\u2019m looking forward to helping people reach their fitness
+        goals. I know that with the right information and the right motivation, anyone
+        can achieve their fitness goals. I\u2019m here to help you every step of the
+        way.\\nI hope you enjoy the website, and I hope you find the information you
+        need to reach your fitness goals. If you have any questions or comments, please
+        feel free to contact me. I\u2019m always happy to help.\\nThank you for choosing
+        the website, and I hope to see you in the gym soon\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":257,\"completion_tokens\":256}}"
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f1ab7c0abd91679-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 14 Dec 2024 02:20:58 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0974ce7215fd-SJC
       content-length:
-      - '372'
+      - '1347'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:46 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '500'
+      - '1771'
     status:
       code: 200
       message: OK

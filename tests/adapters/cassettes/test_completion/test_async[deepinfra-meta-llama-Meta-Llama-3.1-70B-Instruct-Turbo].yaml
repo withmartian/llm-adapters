@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo","prompt":"Hi","max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '86'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RSijinYHQxbHXBLn9O38VNQQ","object":"text_completion","created":1746555095,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo","choices":[{"index":0,"text":"Question
+        50\nCategorize this web article","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10,"estimated_cost":2.9e-06}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '350'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 18:11:35 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

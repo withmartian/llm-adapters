@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,62 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"c35ef394-f2be-4fb9-9d22-a911843e9f83\",\"object\":\"chat.completion\",\"created\":1738792061,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay, the
-        user just said \\\"Hi\\\". That's pretty straightforward. I need to respond
-        in a friendly and welcoming manner. Maybe start with a greeting like \\\"Hello!\\\"
-        to mirror their message. Then, offer assistance by asking how I can help them
-        today. Keeping it open-ended encourages them to ask whatever they need. Let
-        me make sure the tone is warm and approachable. No need for any complicated
-        stuff here. Just a simple, friendly reply.\\n\\nAlso, I should check if there
-        are any specific guidelines about responding to greetings, but I think the
-        standard approach is fine. Avoid using any markdown as instructed. Alright,
-        time to put it all together.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":147,\"total_tokens\":153,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":134},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+      string: '{"id":"e75e8eb9-cc09-4ada-b5ce-080492347442","object":"chat.completion","created":1746562047,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","reasoning_content":"Alright, the user just said
+        \"Hi\". That''s a friendly greeting. I should respond in a warm and welcoming
+        manner. Maybe say something like, \"Hello! How can I assist you today?\" to
+        invite them to ask for help. Keep it open-ended so they feel comfortable to
+        ask whatever they need. No need for anything complicated here. Just be approachable."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":6,"completion_tokens":85,"total_tokens":91,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":74},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":6},"system_fingerprint":"fp_5417b77867_prod0425fp8"}'
     headers:
-      CF-RAY:
-      - 90d619affe77cf8b-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 21:47:41 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESTIME=1738792057126; path=/
-      - HWWAFSESID=b72e5c7c89cce3e53b; path=/
-      - __cf_bm=uAglgeDNmb8f4hRzKqXxtISuugd4cfg9J5w3CCI.Wcg-1738792061-1.0.1.1-segvwBgDlScbQRhurYkBsRd6aUwrZrPlP.0GzUQ6liMWd5nKqiPunYUFWueGgmQfiZjB72.sRDb4jcimIL8DLw;
-        path=/; expires=Wed, 05-Feb-25 22:17:41 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb1a9ddd50ebe2-SJC
       content-length:
-      - '1199'
+      - '897'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:07:27 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=kgvHLDjZHWZgnwaYSkJWwz.X1HugnDI8KZgZPQKx7NQ-1746562047-1.0.1.1-y4btbo6Vbnhk5p.ScxIoxhkjfuEQQlbyyZcvLNao0kYXId2d01MhV0scyb45AakXNH11FmeEAS2WJci35him.5HtjWGL7vq2SIl541rXqK0;
+        path=/; expires=Tue, 06-May-25 20:37:27 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - af8967aa2cd76571cc0c348afa58562d
+      - 02f6f2531ad96f40fbbcc5c5da35dc58
     status:
       code: 200
       message: OK

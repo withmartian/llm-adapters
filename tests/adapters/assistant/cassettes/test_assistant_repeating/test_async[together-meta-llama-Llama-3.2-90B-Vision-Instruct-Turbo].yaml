@@ -1,8 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "assistant", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -11,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '223'
+      - '205'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,59 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cbd180e6615ea-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732318554,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
-        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
-        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
-        \       \"content\": \"It looks like we've got a hi-loop going on! Would you
-        like to chat about something in particular or just see where the conversation
-        takes us?\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n
-        \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        29,\n    \"total_tokens\": 60,\n    \"completion_tokens\": 31\n  }\n}"
+      string: "{\n  \"id\": \"nszciv9-2j9zxn-93bb015adb6acf23\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561013,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Hi! It looks like
+        we've got a friendly conversation going on here. Is there anything on your
+        mind that you'd like to chat about, or is it just a nice day for saying hello?\",\n
+        \       \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
+        \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        29,\n    \"total_tokens\": 70,\n    \"completion_tokens\": 41\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6cbd180e6615ea-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 22 Nov 2024 23:35:55 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb015adb6acf23-SJC
       content-length:
-      - '639'
+      - '673'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:50:14 GMT
       etag:
-      - W/"27f-X8yfgPcS19Luf8dc8MW6ufanHWE"
+      - W/"2a1-MyYqQjqdPr5+vh1fxVIdzrLW8rM"
       retry-after:
       - '1'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - a2b5b0c5-ad7d-458b-ad9a-a11c53c615dc-noamzn
       x-api-call-end:
-      - '2024-11-22T23:35:55.731Z'
+      - '2025-05-06T19:50:14.833Z'
       x-api-call-start:
-      - '2024-11-22T23:35:54.916Z'
+      - '2025-05-06T19:50:13.091Z'
       x-api-received:
-      - '2024-11-22T23:35:54.906Z'
+      - '2025-05-06T19:50:13.078Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -89,11 +89,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '185'
+      - '197'
       x-ratelimit-remaining-tokens:
-      - '97747'
+      - '100000'
       x-ratelimit-reset:
       - '1'
+      x-request-id:
+      - nszciv9-2j9zxn-93bb015adb6acf23
     status:
       code: 200
       message: OK

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "google/gemma-2-27b-it",
-      "temperature": 0.5}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"google/gemma-2-27b-it","temperature":0.25}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '103'
+      - '96'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,58 +25,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce4db099317ec-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320183,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+      string: "{\n  \"id\": \"nszepjG-4Yz4kd-93bb0b5b8ad45c1f\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561422,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
-        17065248328977201000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        3726012558971972600,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
         {\n        \"role\": \"assistant\",\n        \"content\": \"Hi there! \U0001F44B\\n\\nWhat
         can I do for you today? \U0001F60A\",\n        \"tool_calls\": []\n      }\n
-        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 11,\n    \"completion_tokens\":
-        15,\n    \"total_tokens\": 26\n  }\n}"
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 10,\n    \"completion_tokens\":
+        15,\n    \"total_tokens\": 25\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6ce4db099317ec-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:03:04 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0b5b8ad45c1f-SJC
       content-length:
-      - '533'
+      - '543'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:57:03 GMT
       etag:
-      - W/"215-a2yJ/jakSGKfBvG6yHf7DOqM0p8"
+      - W/"21f-d8R+LF8du0KZJwHM1+I+55ju6o8"
       retry-after:
       - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 17586aab-522d-405d-9d42-183cde62c90b-noamzn
       x-api-call-end:
-      - '2024-11-23T00:03:04.191Z'
+      - '2025-05-06T19:57:03.164Z'
       x-api-call-start:
-      - '2024-11-23T00:03:03.557Z'
+      - '2025-05-06T19:57:02.879Z'
       x-api-received:
-      - '2024-11-23T00:03:03.551Z'
+      - '2025-05-06T19:57:02.855Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -87,11 +88,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '198'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99932'
+      - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nszepjG-4Yz4kd-93bb0b5b8ad45c1f
     status:
       code: 200
       message: OK

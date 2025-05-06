@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/fireworks/models/qwen2p5-72b-instruct", "prompt": "Hi",
-      "max_tokens": 10}'
+    body: '{"model":"accounts/fireworks/models/qwen2p5-72b-instruct","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '93'
+      - '88'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: '{"id":"a0c77e2d-08ea-4f70-8dec-ca84eceac7f4","object":"text_completion","created":1733365211,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"text":"
-        all, I''m looking for a suggestion on a","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10}}'
+      string: '{"id":"4f9927ac-fe0e-4eb4-a92e-9805c2ec39a0","object":"text_completion","created":1746555106,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"text":"
+        guys, I was wondering if someone could explain the","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8ed08e3a5ba7cfac-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 02:20:11 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=241.0,total;dur=295.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba71242a24689a-SJC
       content-length:
-      - '333'
+      - '345'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:11:46 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -73,11 +64,33 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.168'
+      - '0.174'
+      fireworks-server-time-to-first-token:
+      - '0.047'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=385.0,total;dur=465.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '170'
+      - '176'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59999'
       x-request-id:
-      - a0c77e2d-08ea-4f70-8dec-ca84eceac7f4
+      - 4f9927ac-fe0e-4eb4-a92e-9805c2ec39a0
     status:
       code: 200
       message: OK

@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"model":"deepseek-ai/DeepSeek-R1-Turbo","prompt":"Hi","max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - OpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-R0l6CsWEHsnJwKnWhyuSdnXJ","object":"text_completion","created":1746555123,"model":"deepseek-ai/DeepSeek-R1-Turbo","choices":[{"index":0,"text":",
+        what are you looking for?\n\n","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":9,"completion_tokens":7,"estimated_cost":2.3e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '324'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 18:12:03 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/fireworks/models/llama-v3p1-70b-instruct", "prompt":
-      "Hi", "max_tokens": 10, "stream": true}'
+    body: '{"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '112'
+      - '105'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,49 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: "data: {\"id\":\"92061a57-2191-4169-b4dc-1df0f538d84a\",\"object\":\"text_completion\",\"created\":1733910365,\"model\":\"accounts/fireworks/models/llama-v3p1-70b-instruct\",\"choices\":[{\"index\":0,\"text\":\".S\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
-        {\"id\":\"92061a57-2191-4169-b4dc-1df0f538d84a\",\"object\":\"text_completion\",\"created\":1733910365,\"model\":\"accounts/fireworks/models/llama-v3p1-70b-instruct\",\"choices\":[{\"index\":0,\"text\":\"chool
-        \u2013 Love\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
-        {\"id\":\"92061a57-2191-4169-b4dc-1df0f538d84a\",\"object\":\"text_completion\",\"created\":1733910365,\"model\":\"accounts/fireworks/models/llama-v3p1-70b-instruct\",\"choices\":[{\"index\":0,\"text\":\"
-        On episode \",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
-        {\"id\":\"92061a57-2191-4169-b4dc-1df0f538d84a\",\"object\":\"text_completion\",\"created\":1733910365,\"model\":\"accounts/fireworks/models/llama-v3p1-70b-instruct\",\"choices\":[{\"index\":0,\"text\":\"11
-        review\\n\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
-        {\"id\":\"92061a57-2191-4169-b4dc-1df0f538d84a\",\"object\":\"text_completion\",\"created\":1733910365,\"model\":\"accounts/fireworks/models/llama-v3p1-70b-instruct\",\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":12,\"completion_tokens\":10}}\n\ndata:
-        [DONE]\n\n"
+      string: 'data: {"id":"43b2ba63-79ba-4179-9b64-305fc72d0782","object":"text_completion","created":1746555145,"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","choices":[{"index":0,"text":"|","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"43b2ba63-79ba-4179-9b64-305fc72d0782","object":"text_completion","created":1746555145,"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","choices":[{"index":0,"text":"Low\nGet","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"43b2ba63-79ba-4179-9b64-305fc72d0782","object":"text_completion","created":1746555145,"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","choices":[{"index":0,"text":"
+        today''s weather forecast for Athens","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"43b2ba63-79ba-4179-9b64-305fc72d0782","object":"text_completion","created":1746555145,"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","choices":[{"index":0,"text":"","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}
+
+
+        data: [DONE]
+
+
+        '
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f048ba6feedcfe5-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:46:05 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=380.0,total;dur=413.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba72153e6b15da-SJC
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:12:24 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -78,25 +77,31 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-time-to-first-token:
-      - '0.241'
+      - '0.248'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=327.0,total;dur=394.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '243'
+      - '250'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-limit-tokens-prompt:
-      - '30000'
+      - '60000'
       x-ratelimit-over-limit:
       - 'no'
       x-ratelimit-remaining-requests:
       - '59'
       x-ratelimit-remaining-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-remaining-tokens-prompt:
-      - '29998'
+      - '59998'
       x-request-id:
-      - 92061a57-2191-4169-b4dc-1df0f538d84a
+      - 43b2ba63-79ba-4179-9b64-305fc72d0782
     status:
       code: 200
       message: OK

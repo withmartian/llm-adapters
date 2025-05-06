@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"b28afc78-ce0c-46b6-abc3-7fa39b7ed3ce","object":"chat.completion","created":1738285163,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"message":{"role":"assistant","content":"
-        {\n}\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":12,"completion_tokens":4}}'
+      string: '{"id":"8a816dc3-908a-42f0-bc97-ba447c58bdb0","object":"chat.completion","created":1746555167,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wants a simple JSON. Let me think about what that means. They probably
+        just need a basic example without any complex structures.\n\nFirst, I should
+        start with a JSON object, using curly braces. The simplest example might have
+        a few key-value pairs. Common keys could be \"name\", \"age\", \"city\", or
+        something like that. \n\nLet me pick some sample data. Maybe \"name\": \"John
+        Doe\", \"age\": 30, \"is_student\": false, and \"hobbies\" as an array. For
+        hobbies, let''s say [\"reading\", \"cycling\", \"gaming\"]. Make sure to use
+        double quotes around the keys and string values. \n\nCheck the formatting:
+        commas after each entry except the last one, numbers and booleans without
+        quotes. Also, ensure the JSON is valid. Wait, the user said \"output simple
+        json\" without any specific details, so this should work.\n\nBut let me double-check.
+        No nested objects unless necessary. The example here is straightforward. Arrays
+        are okay. Yep, this should be good. Alright, time to write that out.\n</think>\n{\n\"name\":
+        \"John Doe\",\n\"age\": 30,\n\"is_student\": false,\n\"hobbies\": [\"reading\",
+        \"cycling\", \"gaming\"]\n}"},"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":278,"completion_tokens":270}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c2396e77eb29-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 00:59:24 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=1987.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba729bacf1944c-SJC
       content-length:
-      - '307'
+      - '1450'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:50 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,11 +78,17 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '1.497'
-      fireworks-speculation-generated-tokens:
-      - '1'
+      - '3.977'
+      fireworks-server-time-to-first-token:
+      - '0.364'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=4558.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1499'
+      - '3982'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -92,7 +104,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59992'
       x-request-id:
-      - b28afc78-ce0c-46b6-abc3-7fa39b7ed3ce
+      - 8a816dc3-908a-42f0-bc97-ba447c58bdb0
     status:
       code: 200
       message: OK

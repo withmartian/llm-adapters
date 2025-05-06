@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,76 +25,87 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a592b0de00f9f9\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283217,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
-        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
-        \       \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHi
-        there! How can I assist you today? \U0001F60A\",\n        \"tool_calls\":
-        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
-        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 12,\n    \"total_tokens\":
-        29,\n    \"completion_tokens\": 17\n  }\n}"
+      string: "{\n  \"id\": \"nsz5uRc-zqrih-93ba6e8d48eb7af1\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746554999,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        9167016479137894000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"<think>\\nOkay,
+        the user keeps saying \\\"Hi\\\" over and over. Let me check the history.\\n\\nFirst
+        message: \\\"Hi\\\"\\n\\nI responded with \\\"Hi! How can I assist you today?\\\"\\n\\nThen
+        the user sent \\\"Hi\\\" again, and I replied with \\\"Hi! How can I assist
+        you today?\\\" once more.\\n\\nNow the user sent \\\"Hi\\\" a third time.
+        Maybe they're testing if I'll respond the same way each time or if there's
+        a different reaction. Alternatively, they might be having trouble getting
+        their message across or just being playful.\\n\\nI should consider varying
+        my response slightly to acknowledge the repetition without being rude. Maybe
+        add a friendly emoji or ask if they need help with something specific. Let
+        me think of a response that's welcoming but encourages them to ask their question.\\n</think>\\n\\nHi
+        there! \U0001F60A It looks like you're saying hello\u2014how can I help you
+        today? Let me know what's on your mind!\",\n        \"tool_calls\": []\n      }\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 12,\n    \"completion_tokens\":
+        195,\n    \"total_tokens\": 207\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a592b0de00f9f9-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:26:57 GMT
-      ETag:
-      - W/"1fd-t0VD28eqNskIDTAY/tQUXdnNdpI"
-      Retry-After:
-      - '2'
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6e8d48eb7af1-SJC
       content-length:
-      - '509'
+      - '1384'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:10:05 GMT
+      etag:
+      - W/"568-eFFZLByzTZHFuGRppBBmKUmIB0E"
+      retry-after:
+      - '3'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 96d11fa5-fd33-44ee-b044-957c29a1ffc0-noamzn
       x-api-call-end:
-      - '2025-01-31T00:26:57.673Z'
+      - '2025-05-06T18:10:05.525Z'
       x-api-call-start:
-      - '2025-01-31T00:26:55.564Z'
+      - '2025-05-06T18:09:59.969Z'
       x-api-received:
-      - '2025-01-31T00:26:55.547Z'
+      - '2025-05-06T18:09:59.955Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '2'
+      - '20'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '3'
+      - '598'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
-      - '2'
+      - '3'
+      x-request-id:
+      - nsz5uRc-zqrih-93ba6e8d48eb7af1
     status:
       code: 200
       message: OK

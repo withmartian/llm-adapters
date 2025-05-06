@@ -16,7 +16,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,62 +26,68 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"1e2616cb-bb41-497e-a88d-553d9846a89f\",\"object\":\"chat.completion\",\"created\":1738285134,\"model\":\"accounts/fireworks/models/deepseek-r1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
-        the user sent \\\"Hi\\\" and then \\\"Hi\\\" again. Seems like they're just
-        being friendly.\\n\\nI should respond in a warm and welcoming way. Maybe ask
-        how I can assist them today.\\n\\nKeep it simple and open-ended to encourage
-        them to share what they need help with.\\n</think>\\n\\nHi there! How can
-        I assist you today? \U0001F60A\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"total_tokens\":85,\"completion_tokens\":77}}"
+      string: '{"id":"2b1ef942-3dea-4bcc-8ee4-32359ee0ec8f","object":"chat.completion","created":1746554951,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"message":{"role":"assistant","content":"<div
+        id=\"user-header\" style=\"-webkit-touch-callout: none; -webkit-user-select:
+        none; user-select: none;\">\n    <div class=\"guild-icon-container\">\n        <div
+        class=\"guild-icon\">\n            <div class=\"guild-icon-wrapper\">\n                <svg
+        class=\"guild-icon-image\" aria-hidden=\"false\" width=\"40\" height=\"40\">\n                    <foreignObject
+        x=\"0\" y=\"0\" width=\"40\" height=\"40\" mask=\"url(#svg-mask-avatar-default)\">\n                        <div
+        class=\"avatar-stack\">\n                            <div class=\"avatar\"
+        style=\"width: 100%; height: 100%; background-image: url({{user.avatarURL}});
+        background-color: #{{user.accentColor}};\" aria-label=\"{{user.tag}}\"></div>\n                        </div>\n                    </foreignObject>\n                </svg>\n            </div>\n        </div>\n    </div>\n    <div
+        class=\"divider\"></div>\n    <span class=\"header-name\">\n        {{#if
+        user.bot}}<div class=\"bot-tag\">{{#if verified}}<img src=\"/assets/verified.svg\"
+        draggable=\"false\" class=\"verified\" alt=\" \">{{/if}} BOT</div>{{/if}}\n        <div
+        class=\"name-wrapper\">\n            <span class=\"name\">{{user.tag}}</span>\n            {{#if
+        hasActivity}} <span class=\"name-tag\">{{activity}}</span>{{/if}}\n        </div>\n    </span>\n</div>"},"finish_reason":"stop"}],"usage":{"prompt_tokens":7,"total_tokens":331,"completion_tokens":324}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c183da0beb36-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 00:58:55 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=2172.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6d5af94950a1-SJC
       content-length:
-      - '629'
+      - '1614'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:09:14 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
-      - '8'
+      - '7'
       fireworks-sampling-options:
       - '{"max_tokens": 2048, "temperature": 1.0, "top_k": 0, "top_p": 1.0, "min_p":
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '1.680'
-      fireworks-speculation-generated-tokens:
-      - '47'
+      - '3.478'
+      fireworks-server-time-to-first-token:
+      - '0.287'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=4068.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1682'
+      - '3481'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -95,9 +101,9 @@ interactions:
       x-ratelimit-remaining-tokens-generated:
       - '6000'
       x-ratelimit-remaining-tokens-prompt:
-      - '59992'
+      - '59993'
       x-request-id:
-      - 1e2616cb-bb41-497e-a88d-553d9846a89f
+      - 2b1ef942-3dea-4bcc-8ee4-32359ee0ec8f
     status:
       code: 200
       message: OK

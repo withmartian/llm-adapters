@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "wizardlm-2-7b", "prompt": "Hi", "stop": ["stop", "end"]}'
+    body: '{"model":"wizardlm-2-7b","prompt":"Hi","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '67'
+      - '61'
       content-type:
       - application/json
       host:
       - wizardlm-2-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,47 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-7b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-K7JAtUnLPjYcT34QszGdh8","object":"text_completion","created":1734127200,"model":"wizardlm-2-7b","choices":[{"index":0,"text":"-
-        Q. Which of the following is true about the relationship between entropy and
-        energy distribution in a system?\nA. Entropy increases as energy becomes more
-        evenly distributed among the system''s states.\nB. Entropy decreases as energy
-        becomes more evenly distributed among the system''s states.\nC. Entropy increases
-        as energy becomes less evenly distributed among the system''s states.\nD.
-        Entropy decreases as energy becomes less evenly distributed among the system''s
-        states.\n\nThe answer is A. Entropy increases as energy becomes more evenly
-        distributed among the system''s states. This is a fundamental principle of
-        thermodynamics known as the second law of thermodynamics, which states that
-        the entropy of an isolated system not in equilibrium will t","logprobs":null,"finish_reason":"end","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":161,"completion_tokens":160}}'
+      string: '{"id":"cmpl-6eokAHryt2cazoaSq2t4xT","object":"text_completion","created":1746561423,"model":"wizardlm-2-7b","choices":[{"index":0,"text":",
+        #5763:\n\n### Description\n\nI have an issue with the `has_capability` function
+        when checking for capabilities for roles. I''m using BuddyPress and bbPress
+        and it seems that `has_cap` doesn''t properly recognize roles added by these
+        plugins when checking against the `$capabilities` array.\n\nHere''s a simplified
+        example of the issue:\n\n```php\nif ( current_user_can( ''edit_posts'' ) )
+        {\n    $roles = wp_get_current_user()->roles;\n    foreach ( $roles as $role
+        ) {\n        if ( user_can( $role, ''edit_posts'' ) ) {\n            echo
+        ''User can edit posts.'';\n        } else {\n            echo ''User cannot
+        edit posts.'';\n        }\n    }\n}\n```\n\nIn this example, `current_user_can(
+        ''edit_posts'' )` returns `true` because the user has the `edit_posts` capability
+        through a role that has been assigned by BuddyPress/bbPress. However, when
+        looping through the roles and checking `user_","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f19397b9ae71601-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 22:00:02 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0b5f99c46434-SJC
       content-length:
-      - '1017'
+      - '1141'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:57:04 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1675'
+      - '1182'
     status:
       code: 200
       message: OK

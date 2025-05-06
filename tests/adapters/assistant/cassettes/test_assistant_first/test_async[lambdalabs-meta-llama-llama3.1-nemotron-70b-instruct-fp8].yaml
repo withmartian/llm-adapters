@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,50 +38,43 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-5bd5beb0-8d68-43c5-bfc1-2200788bd2bd","object":"chat.completion","created":1742234754,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like we''re off to a friendly start. What would you like to do or talk
-        about? I can assist with a wide range of topics and activities. Here are some
-        ideas to get you started:\n\n1. **Converse on a Topic**:\n\t* Hobbies (e.g.,
-        reading, gaming, traveling)\n\t* Technology (e.g., AI, space exploration,
-        gadgets)\n\t* Science (e.g., biology, physics, environment)\n\t* Entertainment
-        (e.g., movies, TV shows, music)\n\t* Culture (e.g., traditions, languages,
-        history)\n\n2. **Play Text-Based Games**:\n\t* 20 Questions: You think of
-        an object, and I try to guess what it is.\n\t* Hangman: Guess a word or phrase
-        by suggesting letters.\n\t* Word Chain: We take turns saying a word that starts
-        with the last letter of the previous word.\n\t* Adventure Game: I describe
-        a scenario, and you decide what actions to take.\n\n3. **Generate Content**:\n\t*
-        **Storytelling**: I start telling a story, and you can then continue it, or
-        vice versa.\n\t* **Poetry or Song Lyrics**: Provide a theme, and I''ll generate
-        a poem or song lyrics for you.\n\t* **Character Profile**: Give me some traits,
-        and I''ll create a character profile.\n\n4. **Learn Something New**:\n\t*
-        **Language Lessons**: Basic phrases in a language of your choice.\n\t* **Trivia**:
-        Questions on various subjects.\n\t* **How-To Guides**: Simplified guides on
-        doing something (e.g., a craft, a recipe, setting up a device).\n\n5. **Other**:\n\t*
-        **Jokes**: Share some laughs.\n\t* **Would You Rather**: Interesting dilemmas
-        to ponder.\n\t* **Two Truths and a Lie**: Guess the false statement among
-        three.\n\nWhat sparks your interest, or do you have something entirely different
-        in mind?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":402,"total_tokens":424,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-2c74f5f3-8295-4bf0-b27a-258798ea8ed0","object":"chat.completion","created":1746555052,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like we''ve got a friendly hello exchange going on. Now, how can I assist
+        you today? Please pick one (or more) from the options below, or feel free
+        to suggest something else:\n\n1. **Chat Games**:\n\t* 20 Questions\n\t* Hangman\n\t*
+        Word Chain\n\t* Would You Rather\n2. **Conversational Topics**:\n\t* Hobbies
+        (share or discover new ones)\n\t* Travel (plan a hypothetical trip or discuss
+        destinations)\n\t* Technology (latest trends, gadgets, etc.)\n\t* Books/Movies/TV
+        Shows (recommendations or discussions)\n3. **Learning \u0026 Self-Improvement**:\n\t*
+        Language learning (basic phrases in a new language)\n\t* General knowledge
+        (trivia on a topic of your choice)\n\t* Career advice (resume building, interviewing,
+        etc.)\n\t* Mindfulness and wellness tips\n4. **Creative Corner**:\n\t* Storytelling
+        (start a story, and I''ll continue)\n\t* Poetry (generate a poem on a theme
+        you choose)\n\t* Character development (for writing or role-playing)\n5. **Something
+        Else (please specify)**:\n\t* Got a different idea for how you''d like to
+        interact? Share it!\n\nWhich direction would you like our conversation to
+        take?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":269,"total_tokens":291,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6bccbbcfc86f-DFW
+      - 93ba6fd538ff22c6-SJC
       content-length:
-      - '2280'
+      - '1755'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:06:05 GMT
+      - Tue, 06 May 2025 18:10:58 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=_PoJiB2Nu7mmnX_Pe1vmiCYzfszqZa_mfLI_6jsbK2w-1742234765-1.0.1.1-YdgFE0GBptUkWqkdYSEW.MrCHQyXqnCIdKQbUQkzTgNzicbFxGB3a4qHSK3wL4As8SJXrnWRPaGz2hBOhXOTeVNeOxd0BFvfEkZQnRJ7fPA;
-        path=/; expires=Mon, 17-Mar-25 18:36:05 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=PCM5xTgjZQZAfgc56jPwoiRsowV.kUNXqR1rINH7TJE-1746555058-1.0.1.1-3YH7XaOxRYHhtimyc0v6Cqf6B.pSIoV.yf54WIF24vIXPISNwqEqPxnW6YNNB16aY1nAOjXVEUMa09QC3Fpi7Cz9d1xjwks5RxZwfot.Hds;
+        path=/; expires=Tue, 06-May-25 18:40:58 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 5bd5beb0-8d68-43c5-bfc1-2200788bd2bd
+      - 2c74f5f3-8295-4bf0-b27a-258798ea8ed0
       x-response-time:
-      - '11.414'
+      - '5.597'
     status:
       code: 200
       message: OK

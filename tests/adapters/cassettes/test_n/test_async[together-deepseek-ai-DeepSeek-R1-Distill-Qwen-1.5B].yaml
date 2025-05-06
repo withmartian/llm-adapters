@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,51 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a59dbb1ec5cfe1\",\n  \"error\": {\n    \"message\":
-        \"temperature must be set to a value > 0 when `n` > 1.\",\n    \"type\": \"invalid_request_error\",\n
-        \   \"param\": \"temperature\",\n    \"code\": null\n  }\n}"
+      string: "{\n  \"id\": \"nszcncf-3NKUce-93bb01a939b52536\",\n  \"error\": {\n
+        \   \"message\": \"temperature must be set to a value > 0 when `n` > 1.\",\n
+        \   \"type\": \"invalid_request_error\",\n    \"param\": \"temperature\",\n
+        \   \"code\": null\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a59dbb1ec5cfe1-SJC
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '201'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:34:27 GMT
-      ETag:
-      - W/"c9-7kmz/MInHK8pz0FAgxcAvnghi9U"
-      Retry-After:
-      - '1'
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb01a939b52536-SJC
+      content-length:
+      - '216'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:50:25 GMT
+      etag:
+      - W/"d8-eDub837KEi7lcsMoftLTystBVHo"
+      retry-after:
+      - '0'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-amzn-trace-id:
-      - afacc87c-6030-4712-b419-4e34104cdf5a-noamzn
+      - 1272093b-bc93-464b-b604-19a74f4ca55a-noamzn
       x-api-received:
-      - '2025-01-31T00:34:28.020Z'
+      - '2025-05-06T19:50:25.520Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -79,11 +80,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '198'
+      - '197'
       x-ratelimit-remaining-tokens:
-      - '100000'
+      - '99791'
       x-ratelimit-reset:
-      - '1'
+      - '0'
+      x-request-id:
+      - nszcncf-3NKUce-93bb01a939b52536
     status:
       code: 400
       message: Bad Request

@@ -1,9 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": ""}, {"role": "user", "content":
-      ""}, {"role": "assistant", "content": " "}, {"role": "user", "content": ""},
-      {"role": "assistant", "content": " "}, {"role": "user", "content": "\n"}], "model":
-      "accounts/fireworks/models/llama-v3-70b-instruct"}'
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"accounts/fireworks/models/llama-v3-70b-instruct"}'
     headers:
       accept:
       - application/json
@@ -12,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '288'
+      - '262'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,63 +26,42 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"3283faa6-871f-4fb4-a7ec-66c8bdd58477","object":"chat.completion","created":1732323162,"model":"accounts/fireworks/models/llama-v3-70b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems like you didn''t input anything. If you''d like to have a conversation,
-        feel free to ask me a question or share your thoughts! I''m here to help and
-        provide information on a wide range of topics."},"finish_reason":"stop"}],"usage":{"prompt_tokens":35,"total_tokens":81,"completion_tokens":46}}'
+      string: '{"error":"Model not found, inaccessible, and/or not deployed"}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8e6d2d94cc077aec-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:52:42 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=443.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-ray:
+      - 93ba72dc9d78d03d-SJC
       content-length:
-      - '513'
+      - '62'
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Tue, 06 May 2025 18:12:56 GMT
       fireworks-middleware-version:
       - v2
-      fireworks-prompt-tokens:
-      - '35'
-      fireworks-sampling-options:
-      - '{"max_tokens": 2048, "temperature": 1.0, "top_k": 0, "top_p": 1.0, "min_p":
-        0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
-        "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
-      fireworks-server-processing-time:
-      - '0.325'
-      x-envoy-upstream-service-time:
-      - '327'
-      x-request-id:
-      - 3283faa6-871f-4fb4-a7ec-66c8bdd58477
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=21.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

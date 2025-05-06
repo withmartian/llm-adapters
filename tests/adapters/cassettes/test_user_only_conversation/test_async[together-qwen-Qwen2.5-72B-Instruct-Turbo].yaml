@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '93'
+      - '87'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,57 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8ec7f6497f6224f7-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1733275101,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 4922242394556065000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nszfZtT-4yUbBN-93bb0ee79b001749\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561568,\n  \"model\": \"Qwen/Qwen2.5-72B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 5505588713693559000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         \"Hello! How can I assist you today? Feel free to ask me any questions or
         let me know if you need help with anything specific.\",\n        \"tool_calls\":
         []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 30,\n    \"completion_tokens\":
         29,\n    \"total_tokens\": 59\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8ec7f6497f6224f7-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 04 Dec 2024 01:18:22 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0ee79b001749-SJC
       content-length:
-      - '614'
+      - '626'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:59:28 GMT
       etag:
-      - W/"266-1uCVUoAiTwH+qHHhRmgj3Fl6DpM"
+      - W/"272-743ATaL8HU3E7manYS7rWsF2mbw"
       retry-after:
-      - '0'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-call-end:
-      - '2024-12-04T01:18:22.302Z'
+      - '2025-05-06T19:59:28.751Z'
       x-api-call-start:
-      - '2024-12-04T01:18:21.702Z'
+      - '2025-05-06T19:59:28.068Z'
       x-api-received:
-      - '2024-12-04T01:18:21.694Z'
+      - '2025-05-06T19:59:28.040Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -85,11 +89,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '195'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99820'
+      - '100000'
       x-ratelimit-reset:
-      - '0'
+      - '2'
+      x-request-id:
+      - nszfZtT-4yUbBN-93bb0ee79b001749
     status:
       code: 200
       message: OK

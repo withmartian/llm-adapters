@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '70'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-Rv4F0vVLvAcyhbNJeW5RV27w","object":"text_completion","created":1746563087,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo","choices":[{"index":0,"text":"Question
+        then keep getting output 0.0\n---> 12     if flight_price == float(''inf''):\n     13         print(\"solution:
+        \",solution )\n     14         return solution \n     15     else:\n     16         return
+        flight_price\nTypeError: unsupported operand type(s) for ==: ''float'' and
+        ''str''\n\nThe bug in the code is that the variable `flight_price` is being
+        assigned a string value of ''inf'' instead of a float value of `float(''inf'')`.
+        This is because the `min` function in Python returns a string when the input
+        iterable contains non-numeric values.\n\nTo fix this bug, we need to ensure
+        that the `flight_price` variable is always a numeric value. Here''s the corrected
+        code:\n```python\nimport math\n\ndef findCheapestPrice( n, flights, src, dst,
+        K):\n    #edge case\n    if n == 0 or len(flights) == 0:\n        return -1\n\n    graph
+        = dict()\n    for flight in flights:\n        start = flight[0]\n        end
+        = flight[1]\n        price = flight[2]\n        if start not in graph:\n            graph[start]
+        = []\n        graph[start].append((end,price))\n\n    # Queue for BFS, contains
+        cells in the form [city, cost, stops]\n    q = [(0, src, K + 1)]\n    visited
+        = set()\n    res = float(''inf'')\n\n    while q:\n        price, city, stops
+        = min(q)\n        q.remove((price, city, stops))\n\n        if city == dst:\n            res
+        = min(res, price)\n\n        if stops > 0:\n            for neighbor, p in
+        graph.get(city, []):\n                if (neighbor, stops - 1) not in visited:\n                    visited.add((neighbor,
+        stops - 1))\n                    q.append((price + p, neighbor, stops - 1))\n\n    if
+        res == float(''inf''):\n        return -1\n    return res\n\nn = 3\nflights
+        = [[0,1,100],[1,2,100],[0,2,500]]\nsrc = 0\ndst = 2\nK = 1\n\nprint(findCheapestPrice(n,
+        flights, src, dst, K))  # output: 200\n```\nThe only change made was in the
+        `findCheapestPrice` function where `flight_price` was removed and the `res`
+        variable was directly compared to `float(''inf'')`. The rest of the code remains
+        the same.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":530,"completion_tokens":529,"estimated_cost":0.00014822000000000001}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2348'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:24:47 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

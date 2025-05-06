@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "mistral-7b", "prompt": "Hi"}'
+    body: '{"model":"mistral-7b","prompt":"Hi"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '39'
+      - '36'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,46 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-nC5iwT93rXZoAhv6NupaeH","object":"text_completion","created":1734142839,"model":"mistral-7b","choices":[{"index":0,"text":",
-        I''m using Rails 3.1.3 and I have a problem with my custom form. I have the
-        following code:\n\n```\n<%= form_for(@user, :url => user_path(@user), :html
-        => {:class => \"form-horizontal\"}) do |f| %>\n  <%= f.error_messages %>\n\n  <div
-        class=\"control-group\">\n    <%= f.label :name, :class => \"control-label\"
-        %>\n    <div class=\"controls\">\n      <%= f.text_field :name, :class =>
-        \"input-xlarge\" %>\n    </div>\n  </div>\n\n  <div class=\"control-group\">\n    <%=
-        f.label :email, :class => \"control-label\" %>\n    <div class=\"controls\">\n      <%=
-        f.email_field :email, :class => \"input-xlarge\" %>\n    </div>\n  </div>\n\n  <div
-        class=\"control-group\">\n    <%= f.label :password, :class =>","logprobs":null,"finish_reason":"length","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
+      string: "{\"id\":\"cmpl-dw9Pjv7ULL4vTYhGXmmTh2\",\"object\":\"text_completion\",\"created\":1746561331,\"model\":\"mistral-7b\",\"choices\":[{\"index\":0,\"text\":\"I
+        just finished reading this book and the whole time I was reading I felt like
+        you were talking about my life. I have 4 kids with a husband that travels
+        a lot for work. We have always struggled with our marriage and sex life. It
+        is so bad that I haven\u2019t had sex in years. I just started reading the
+        book and was shocked to read about the first sex story that was so much like
+        my marriage. I really needed to hear what you said. I just can\u2019t figure
+        out what is wrong with us. My husband is the only man I have ever slept with
+        and he was my first kiss. We got married very young and he never really was
+        able to connect with me sexually. We had sex and then he left to go back to
+        school. He came home and we were so busy raising kids that sex just fell by
+        the wayside. I thought if we waited until the kids were older and the house
+        was paid off things would get better but they just keep getting worse. I think
+        that I just have to get out of the mindset that he is my husband and try to
+        see him as a lover again. Thank you for your advice. I just need to learn
+        how to communicate with him.\\n\\nCongratulations on\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":257,\"completion_tokens\":256}}"
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f1ab74baf88ebed-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 14 Dec 2024 02:20:42 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb091f79adf555-SJC
       content-length:
-      - '971'
+      - '1363'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:35 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '2583'
+      - '4257'
     status:
       code: 200
       message: OK

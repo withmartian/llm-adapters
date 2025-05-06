@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '98'
+      - '92'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,62 +25,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cde32b923aaac-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732319910,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 3385654085072981500,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nsz5TnH-4yUbBN-93ba6c723a3d24fa\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746554913,\n  \"model\": \"Qwen/Qwen2.5-72B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 14851795331547566000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \" there! I'm Qwen, a large language model created by Alibaba Cloud. I'm here
-        to assist you with a wide range of tasks, from answering questions and providing
-        information to helping with creative projects and technical challenges. How
-        can I assist you today? Feel free to ask me anything or let me know if you
-        need help with a specific task!\",\n        \"tool_calls\": []\n      }\n
-        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 25,\n    \"completion_tokens\":
-        71,\n    \"total_tokens\": 96\n  }\n}"
+        \"Hello! How can I assist you today? I'm here to help with a wide range of
+        topics, from answering questions and providing information to assisting with
+        creative tasks and more. Feel free to ask me anything!\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 30,\n    \"completion_tokens\":
+        43,\n    \"total_tokens\": 73\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6cde32b923aaac-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 22 Nov 2024 23:58:31 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6c723a3d24fa-SJC
       content-length:
-      - '829'
+      - '707'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:08:34 GMT
       etag:
-      - W/"33d-ZAMBk5whBXghPd4LNpzBav/7Iqw"
+      - W/"2c3-WdIxvsvf8qLYdHrUGno78IPeN7o"
       retry-after:
-      - '1'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-call-end:
-      - '2024-11-22T23:58:31.955Z'
+      - '2025-05-06T18:08:34.464Z'
       x-api-call-start:
-      - '2024-11-22T23:58:30.861Z'
+      - '2025-05-06T18:08:33.732Z'
       x-api-received:
-      - '2024-11-22T23:58:30.854Z'
+      - '2025-05-06T18:08:33.690Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -90,11 +90,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '198'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '95812'
+      - '100000'
       x-ratelimit-reset:
-      - '1'
+      - '2'
+      x-request-id:
+      - nsz5TnH-4yUbBN-93ba6c723a3d24fa
     status:
       code: 200
       message: OK

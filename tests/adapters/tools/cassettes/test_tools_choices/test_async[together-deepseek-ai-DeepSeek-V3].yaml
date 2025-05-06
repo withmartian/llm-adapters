@@ -18,7 +18,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,51 +28,80 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5a080ce1024de\",\n  \"error\": {\n    \"message\":
-        \"deepseek-ai/DeepSeek-V3 is not supported for JSON mode/function calling\",\n
-        \   \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\":
-        \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"nszgAUZ-zqrih-93bb11be7ed6eb2a\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561684,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n      \"seed\":
+        12049702198755566000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"tool_calls\":
+        [\n          {\n            \"index\": 0,\n            \"id\": \"call_u3814uzvgump2wzs7ykpg1po\",\n
+        \           \"type\": \"function\",\n            \"function\": {\n              \"arguments\":
+        \"{\\\"prompt\\\":\\\"Random number between 1 and 10\\\"}\",\n              \"name\":
+        \"generate\"\n            }\n          }\n        ]\n      }\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 208,\n    \"completion_tokens\": 33,\n
+        \   \"total_tokens\": 241\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5a080ce1024de-SJC
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '226'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:36:21 GMT
-      ETag:
-      - W/"e2-w/Iou6WthpuQhmYZ2mg+1640S00"
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb11be7ed6eb2a-SJC
+      content-length:
+      - '795'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:01:32 GMT
+      etag:
+      - W/"31b-3/OrP7PrAKxSgTPvWJ31XsTbx+8"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 78efd0f0-0e66-47a3-9251-8e97a2f5d55c-noamzn
+      x-api-call-end:
+      - '2025-05-06T20:01:32.690Z'
+      x-api-call-start:
+      - '2025-05-06T20:01:24.407Z'
       x-api-received:
-      - '2025-01-31T00:36:21.277Z'
+      - '2025-05-06T20:01:24.394Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '50'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '99'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nszgAUZ-zqrih-93bb11be7ed6eb2a
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

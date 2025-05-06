@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "command-r", "messages": [{"role": "system", "content": "Hi"},
-      {"role": "user", "content": "\"\""}], "stream": false}'
+    body: '{"model":"command-r","messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"stream":false}'
     headers:
       accept:
       - '*/*'
@@ -10,30 +9,32 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '127'
+      - '115'
       content-type:
       - application/json
       host:
       - api.cohere.com
       user-agent:
-      - python-httpx/0.27.2
+      - python-httpx/0.28.1
       x-fern-language:
       - Python
       x-fern-sdk-name:
       - cohere
       x-fern-sdk-version:
-      - 5.9.4
+      - 5.15.0
     method: POST
     uri: https://api.cohere.com/v2/chat
   response:
     body:
-      string: '{"id":"b2a629f3-05cd-4afe-bf67-a9b191c3f7ff","message":{"role":"assistant","content":[{"type":"text","text":"Hello!
-        How can I assist you today?"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":2,"output_tokens":9},"tokens":{"input_tokens":11,"output_tokens":10}}}'
+      string: '{"id":"873edf56-dc69-4d2c-b7f8-f838f503f3e3","message":{"role":"assistant","content":[{"type":"text","text":"Hello!
+        How can I assist you today? Do you have any questions or topics you''d like
+        to discuss? Remember, I''m here to help and provide useful information and
+        insights."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":2,"output_tokens":36},"tokens":{"input_tokens":11,"output_tokens":36}}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Length:
-      - '285'
+      - '417'
       Via:
       - 1.1 google
       access-control-expose-headers:
@@ -43,13 +44,13 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 04 Dec 2024 22:31:52 GMT
+      - Tue, 06 May 2025 18:11:18 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 UTC
       num_chars:
       - '173'
       num_tokens:
-      - '11'
+      - '38'
       pragma:
       - no-cache
       server:
@@ -59,9 +60,9 @@ interactions:
       x-accel-expires:
       - '0'
       x-debug-trace-id:
-      - 7dee54feea481b1575cd5a9bda37fc04
+      - 853d3b391dc3db9cd86ad525ea7bcdf8
       x-envoy-upstream-service-time:
-      - '137'
+      - '345'
     status:
       code: 200
       message: OK

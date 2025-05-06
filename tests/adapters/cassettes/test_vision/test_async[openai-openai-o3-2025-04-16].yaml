@@ -17,7 +17,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.68.2
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,7 +27,7 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.68.2
+      - 1.76.0
       x-stainless-read-timeout:
       - '600.0'
       x-stainless-retry-count:
@@ -40,56 +40,60 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        MYAUACC+qervWqZ3mGU7pWr7pVUfJUISI5hwSDClD2uGYY3Pc7nnB3wAdmJzNTb1orF0/qtth6e1
-        8fA8XAM0DLgsvOxsrq1n3xaAwrBeAud7LyuAgqcG1I3OutVaZo/fb38PX7/+Kl9ePDn4wvvHj/a8
-        TN3HRxwfb1JdAaTtEXcmqc23GGSDRhYuc/k+9tRgc39n52B7Z3/7gPjkSj0LNSDdnm1tbO3ONnZm
-        m3uCe0cNHWdq8KcCgMsnF0DQ9yvUYKN+y23ESFDDGBBASYWpAbmcQzYXjWoGqFx3tgG9WrmBsdn8
-        jY+Qm1p9XY1enD3c3Wc7F0YOMmphM4b2cBEsvB5dNORN/yhDIxy8SxOc+jWGpCV6SIicxzYch6wS
-        PCQMoz3c3Rs7QZ7O5/g6smr/kNEXkXMAk9SR4/3/6DXBIYc4CON0DMawkidUM97qSjphIP0hn7rk
-        53hlGZZKnDC6OGR4PY2nLnnki1w0ciLQDGxwwTLMBQGfGUefIaqZ5Rx9qJbmf+Pf6C9iS2tT4XfX
-        6Fwy1Xj/2IbkETLyqKcRkCnPax+E0bsuxAHCvfUKOzmCtWxppTBGdtN71FyQGg5W0nHRkBkti5zP
-        0ukAOdIBbcW2cBri4AFPPeGUgQAyor01uVa9a/Mtu8n0FuEhwyW+OLU2oBCst2e8GnLvy1nXDJ/z
-        PHjguAL8nVCDWESIsFjpsFX/BaN2zaZRnb+JZU+1zdSAsumaYrZ4XQH/An+6xPJOWiddrW1pOrHq
-        7N7m1rATtMyAg9za2IZjMQDiooPN3VqptqxKOJnXjhd1rhvZi8NC23bFByVOVib2mVJf/Yz5rhCH
-        2cX3dtzYewwgdnUdr439srCl3W5gpZb4iDut8jVxzVdj7Fxa4EQN6P/BMOw7z8arZR/iwGmdwrei
-        MRaR6royAAM=
+      string: "{\n    \"error\": {\n        \"message\": \"Request too large for o3
+        in organization org-EohclM7n5UCFBEOi5KYeiEb4 on tokens per min (TPM): Limit
+        0, Requested 1541. The input or output tokens must be reduced in order to
+        run successfully. Visit https://platform.openai.com/account/rate-limits to
+        learn more.\",\n        \"type\": \"tokens\",\n        \"param\": null,\n
+        \       \"code\": \"rate_limit_exceeded\"\n    }\n}\n"
     headers:
-      access-control-expose-headers:
-      - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93165ff799d0317b-TBS
-      content-encoding:
-      - br
+      - 93bb0fa0cfa2f9dc-SJC
+      content-length:
+      - '396'
       content-type:
-      - application/json
+      - application/json; charset=utf-8
       date:
-      - Wed, 16 Apr 2025 20:19:04 GMT
-      openai-organization:
-      - martian-4
-      openai-processing-ms:
-      - '6229'
-      openai-version:
-      - '2020-10-01'
+      - Tue, 06 May 2025 19:59:57 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=_lCb.JOC5O1M7wnWkCigIk_jan9tzCKxI1BIM_PnlKE-1744834744-1.0.1.1-xQd6TkNV2VGICBQf_UDMPZkgJagxroeUFNSMYTE4cY9BhEsR6Ul03VNrWwj0OOD0h8w7bZgcYbzaqOj9QyVA1ViD4Vs_OLJ4dfR92OIaDxg;
-        path=/; expires=Wed, 16-Apr-25 20:49:04 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=O0xfjEdrYNd3OlL_OG7NPWgwOMuP4cnPI0huqNb56Eo-1746561597-1.0.1.1-vF88_6Iq.nYlXfkajsT_D1ujNreCqdpotj6SL2kEh6JNIW6NJzJNxbKAE0gj_5MwpJ1HsEzbaB2CSyNHmGhFQR4eYVkxRlsCvQ2iasdhdTA;
+        path=/; expires=Tue, 06-May-25 20:29:57 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=BcQIPGvi510jADATgdVeyjD6yeRcA3GxCc12Azz11VU-1744834744405-0.0.1.1-604800000;
+      - _cfuvid=B3sxtGbX4We2hpV2TPF3o3HcI12BjzQJQq5DjSoz9Ng-1746561597661-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      vary:
+      - Origin
       x-content-type-options:
       - nosniff
+      x-ratelimit-limit-input-images:
+      - '0'
+      x-ratelimit-limit-requests:
+      - '0'
+      x-ratelimit-limit-tokens:
+      - '0'
+      x-ratelimit-remaining-input-images:
+      - '0'
+      x-ratelimit-remaining-requests:
+      - '0'
+      x-ratelimit-remaining-tokens:
+      - '0'
+      x-ratelimit-reset-input-images:
+      - 0s
+      x-ratelimit-reset-requests:
+      - 0s
+      x-ratelimit-reset-tokens:
+      - 0s
       x-request-id:
-      - req_7d970cb4f4701fa7e007662c1845b3bb
+      - req_b87f7fdb43a710021cbb3a15fed68ab1
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

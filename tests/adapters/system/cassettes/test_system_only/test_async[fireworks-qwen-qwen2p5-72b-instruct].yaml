@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}], "model": "accounts/fireworks/models/qwen2p5-72b-instruct"}'
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"accounts/fireworks/models/qwen2p5-72b-instruct"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '110'
+      - '104'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"a8b68e96-9c01-433e-8aa1-b83fb958e890","object":"chat.completion","created":1733351535,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+      string: '{"id":"fafbcb5f-e094-4019-b4c5-f7caaabb0dd6","object":"chat.completion","created":1746555135,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
         How can I assist you today?"},"finish_reason":"stop"}],"usage":{"prompt_tokens":9,"total_tokens":19,"completion_tokens":10}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8ecf4053b9989663-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 04 Dec 2024 22:32:15 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=341.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba71d76e6d9e6e-SJC
       content-length:
       - '344'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:15 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,11 +64,33 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.248'
+      - '0.219'
+      fireworks-server-time-to-first-token:
+      - '0.103'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=803.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '251'
+      - '222'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59991'
       x-request-id:
-      - a8b68e96-9c01-433e-8aa1-b83fb958e890
+      - fafbcb5f-e094-4019-b4c5-f7caaabb0dd6
     status:
       code: 200
       message: OK

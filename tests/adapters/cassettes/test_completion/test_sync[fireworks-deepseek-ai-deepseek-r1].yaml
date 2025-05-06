@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - OpenAI/Python 1.59.3
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: '{"id":"2911f68e-cb22-45dd-81e0-613a0625d935","object":"text_completion","created":1738285206,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":",
-        we are a couple from Copenhagen Denmark.\n\nWe","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}'
+      string: '{"id":"d24b06c4-7265-40f8-90ec-ddefcdd53efc","object":"text_completion","created":1746555158,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":",
+        I already solved this problem, but not sure","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c3483b1a641c-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 01:00:07 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=1252.0,total;dur=1272.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba726aebf526ae-SJC
       content-length:
-      - '333'
+      - '330'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:39 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,11 +64,17 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.768'
-      fireworks-speculation-generated-tokens:
-      - '5'
+      - '0.426'
+      fireworks-server-time-to-first-token:
+      - '0.329'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=666.0,total;dur=740.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '770'
+      - '428'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -92,7 +90,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59998'
       x-request-id:
-      - 2911f68e-cb22-45dd-81e0-613a0625d935
+      - d24b06c4-7265-40f8-90ec-ddefcdd53efc
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}], "model": "google/gemma-2-27b-it"}'
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"google/gemma-2-27b-it"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '85'
+      - '79'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,56 +25,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8ecf41a07889cf17-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1733351587,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+      string: "{\n  \"id\": \"nsz6FNk-3NKUce-93ba7030db4467f1\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746555067,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
-        12720297073276424000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        3936102144948588500,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
         {\n        \"role\": \"assistant\",\n        \"content\": \"Hi there! \U0001F44B\\n\\nWhat
         can I do for you today? \U0001F60A\",\n        \"tool_calls\": []\n      }\n
-        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 11,\n    \"completion_tokens\":
-        15,\n    \"total_tokens\": 26\n  }\n}"
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 10,\n    \"completion_tokens\":
+        15,\n    \"total_tokens\": 25\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8ecf41a07889cf17-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 04 Dec 2024 22:33:08 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba7030db4467f1-SJC
       content-length:
-      - '533'
+      - '543'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:11:07 GMT
       etag:
-      - W/"215-YSC+5NfxGFGvZWsBay47FqmCkrc"
+      - W/"21f-dS3V5+Ez2kDWWf4L2tTKyg4ry4U"
       retry-after:
-      - '1'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - b32c13bd-d604-45dc-a058-f54f20d6ef16-noamzn
       x-api-call-end:
-      - '2024-12-04T22:33:08.528Z'
+      - '2025-05-06T18:11:07.375Z'
       x-api-call-start:
-      - '2024-12-04T22:33:07.950Z'
+      - '2025-05-06T18:11:07.075Z'
       x-api-received:
-      - '2024-12-04T22:33:07.938Z'
+      - '2025-05-06T18:11:07.069Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -84,11 +88,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '197'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99795'
+      - '99948'
       x-ratelimit-reset:
-      - '1'
+      - '2'
+      x-request-id:
+      - nsz6FNk-3NKUce-93ba7030db4467f1
     status:
       code: 200
       message: OK

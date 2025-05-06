@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "meta-llama/Meta-Llama-3.1-70B-Instruct", "prompt": "Hi", "max_tokens":
-      10, "stream": true}'
+    body: '{"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '101'
+      - '94'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,47 +25,51 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "data: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\", \"object\": \"text_completion\",
-        \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"Since\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"Question\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \".objects\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \".filter\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"(s\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"ales\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"_manager\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"__\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"is\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \"null\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RUCMt28lonj1NNib52k6ohhN\",
-        \"object\": \"text_completion\", \"created\": 1733910361, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+      string: "data: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\", \"object\": \"text_completion\",
+        \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"def\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" Toronto\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"\\n\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"\\tdefer\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" scrape\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"Win\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"ners\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"(f\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"ix\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"tures\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RvQUbCNgaVsNSjEzAm8X4suz\",
+        \"object\": \"text_completion\", \"created\": 1746555129, \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct\",
         \"choices\": [{\"index\": 0, \"text\": \"\", \"logprobs\": null, \"finish_reason\":
         \"length\"}], \"usage\": {\"prompt_tokens\": 1, \"total_tokens\": 11, \"completion_tokens\":
         10, \"estimated_cost\": 4.23e-06}}\r\n\r\ndata: [DONE]\r\n\r\n"
@@ -76,7 +79,7 @@ interactions:
       Content-Type:
       - text/event-stream; charset=utf-8
       Date:
-      - Wed, 11 Dec 2024 09:46:01 GMT
+      - Tue, 06 May 2025 18:12:09 GMT
       Transfer-Encoding:
       - chunked
       cache-control:

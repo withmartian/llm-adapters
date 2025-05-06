@@ -16,7 +16,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,7 +26,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,33 +39,45 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chat-01cf10ee1eda402bb414cfba468afc8d","object":"chat.completion","created":1742234982,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Sure,
-        I''ll do my best to answer any questions you have or generate examples based
-        on the guidelines provided. Please let me know your specific requests or topics
-        you would like examples of. For instance, if you''re looking for mathematical
-        problems, story prompts, or examples of how to perform certain tasks, just
-        let me know!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":39,"completion_tokens":68,"total_tokens":107,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chat-5b21f453c0354a58bf08f1395327384c","object":"chat.completion","created":1746555181,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Certainly!
+        Here''s a Python code snippet that generates 2D coordinate points within a
+        specified range and then computes the distance between each pair of points:\n\n```python\nimport
+        numpy as np\nimport itertools\n\n# Define the range for x and y coordinates\nx_range
+        = (0, 10)\ny_range = (0, 10)\n\n# Generate a list of random points within
+        the specified ranges\nnum_points = 5\npoints = np.random.uniform(x_range[0],
+        x_range[1], (num_points, 2)) \\\n            * np.array([(x_range[1]-x_range[0]),
+        (y_range[1]-y_range[0])]) \\\n            + np.array([x_range[0], y_range[0]])\n\n#
+        Compute the distance between each pair of points\ndistances = []\nfor pair
+        in itertools.combinations(points, 2):\n    distance = np.linalg.norm(np.array(pair[0])
+        - np.array(pair[1]))\n    distances.append((pair, distance))\n\n# Print the
+        pairs of points and their corresponding distances\nfor pair, distance in distances:\n    print(f\"Points:
+        {pair}, Distance: {distance:.2f}\")\n```\n\nThis script does the following:\n1.
+        Defines the range for the x and y coordinates.\n2. Generates a list of random
+        points within the specified ranges.\n3. Computes the Euclidean distance (using
+        `np.linalg.norm`) between each pair of points.\n4. Prints each pair of points
+        along with their distance.\n\nFeel free to adjust the range and number of
+        points to fit your specific needs."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":39,"completion_tokens":396,"total_tokens":435,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e71616b96287b-DFW
+      - 93ba72fe5c44cf0e-SJC
       content-length:
-      - '924'
+      - '1950'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:09:43 GMT
+      - Tue, 06 May 2025 18:13:04 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=BffO7YnQ22VSVdGs4ohvnDCf5StIjwBURu81jdYca74-1742234983-1.0.1.1-C9RXUh4ZN7eP8HRgoJ356qeo.y.0TpjSlhFCw6HK5uC_3WzZJtzR71ZMI9P6iutF7HRi72PBlCz2oSn2ZDO3S6Nw8MqA1u4i5O8pL0Yl8nk;
-        path=/; expires=Mon, 17-Mar-25 18:39:43 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=jvQQDsAlLSing7HgTRLoz_uxsMhrBI5lTUjw8HKLkro-1746555184-1.0.1.1-xniOXgPTOsA7xKOzfTRTI8LT9wHm.MVBYSlko94.nHhOtizIZxuZxMbN9M9r9abn149e98u_xFo7hQTuQPLq8gOxcJu1YJH2GD43spisHUM;
+        path=/; expires=Tue, 06-May-25 18:43:04 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - d2c6548d-293c-41fb-bcaf-6efc63c10352
+      - 3d8271b2-efff-472b-ac46-acf1a111f547
       x-response-time:
-      - '0.56'
+      - '2.524'
     status:
       code: 200
       message: OK

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,61 +25,57 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"933e2887-3350-4ebb-ba41-3bed9b2c7e74\",\"object\":\"chat.completion\",\"created\":1738793517,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
-        there! \U0001F60A How can I assist you today?\",\"reasoning_content\":\"Alright,
-        the user just said \\\"Hi\\\" again. Let me check the history.\\n\\nThey started
-        with \\\"Hi\\\", I responded with \\\"Hi\\\". Then they sent \\\"Hi\\\" once
-        more, and I replied with another \\\"Hi\\\". Now they sent \\\"Hi\\\" again.
-        Hmm, maybe they're testing if I'm a bot or just being friendly. I should keep
-        it simple but maybe add a bit more to encourage further conversation. Let's
-        see, maybe add an emoji to make it friendlier. \\\"Hi there! \U0001F60A How
-        can I assist you today?\\\" That should work. Friendly, open, and invites
-        them to state their needs without being too pushy. Yeah, that's good.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":13,\"completion_tokens\":156,\"total_tokens\":169,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":142},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":13},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+      string: "{\"id\":\"2a28263f-ca37-4a07-b26b-9fcefa1b6372\",\"object\":\"chat.completion\",\"created\":1746555045,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi!
+        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Alright,
+        the user just said \\\"Hi\\\" again. I responded with \\\"Hi\\\" the first
+        time, and now they sent another \\\"Hi\\\". Let me think about how to handle
+        this.\\n\\nMaybe they're testing if I'm a bot or just being friendly. Repeating
+        \\\"Hi\\\" could be a way to check consistency. I should respond politely
+        but maybe add a bit more to encourage further conversation. \\n\\nI don't
+        want to sound robotic, so a simple \\\"Hi! How can I assist you today?\\\"
+        might work. It acknowledges their greeting and opens the door for them to
+        ask for help. \\n\\nAlternatively, they might be looking for a different response.
+        But keeping it straightforward is probably best. Let me go with that.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":13,\"completion_tokens\":159,\"total_tokens\":172,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":146},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":13},\"system_fingerprint\":\"fp_5417b77867_prod0425fp8\"}"
     headers:
-      CF-RAY:
-      - 90d63d397966f95f-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 22:11:57 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESID=7870eb8df9397420a4; path=/
-      - HWWAFSESTIME=1738793513219; path=/
-      - __cf_bm=BkmCWL_lzWd5nfOAzsotaRfAGLuUPIMr6SobnasWwEo-1738793517-1.0.1.1-HlEJU6V12.zI.vmVCz1lz7GKVbxHLSwqgkfXHVUduZtMml47tIKl5pY7zozlsXBVkrAd_7YRxCCO2g9YEUjhgg;
-        path=/; expires=Wed, 05-Feb-25 22:41:57 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93ba6fa6fbbf15ff-SJC
       content-length:
-      - '1138'
+      - '1227'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:45 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=b4_QpEvohp2ahKAROiXBuduC4Sai1bJAOLA_Z8h9u84-1746555045-1.0.1.1-YqM3.amz4vNA48QIikkNxdomEDfOJcBdOjEvNFr5_J_Kgw.iJ18sEdX5KwPjlUd94hnX2HbOxBP5UFww_bTqjup1SVKjWe4_74LcNbpOJNA;
+        path=/; expires=Tue, 06-May-25 18:40:45 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - f3a6f51a9a012c66bf37c79261d9c07d
+      - edbcfa6d46f305ca79f26f9cda76994c
     status:
       code: 200
       message: OK

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "wizardlm-2-8x22b",
-      "n": 2}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"wizardlm-2-8x22b","n":2}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '86'
+      - '78'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,41 +25,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-ffQTLN5UEThgHmq7DVjTtS","object":"chat.completion","created":1733368843,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? If you have any questions or need information
-        on a specific topic, feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null},{"index":1,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? If you have any questions or need information
-        on a specific topic, feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":8,"total_tokens":64,"completion_tokens":56}}'
+      string: '{"id":"chatcmpl-fExTYxU6VNxaYM5rJQskpi","object":"chat.completion","created":1746561076,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you with Python programming or coding in general today? If
+        you have any specific questions or need guidance with a project, feel free
+        to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop"},{"index":1,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":53,"completion_tokens":45}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e6e9da7d7ada-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:20:44 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb02e95a535850-SJC
       content-length:
-      - '724'
+      - '621'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:17 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '948'
+      - '904'
     status:
       code: 200
       message: OK

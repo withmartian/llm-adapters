@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,29 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-c7c46c97-b5cf-446e-a978-56a524f301f0\",\"object\":\"chat.completion\",\"created\":1742234807,\"model\":\"deepseek-llama3.3-70b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n\\u003c/think\\u003e\\n\\nHello!
+      string: "{\"id\":\"chatcmpl-0e5f82d2-df23-474f-92e7-95a3fe51194c\",\"object\":\"chat.completion\",\"created\":1746561289,\"model\":\"deepseek-llama3.3-70b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n\\u003c/think\\u003e\\n\\nHello!
         How can I assist you today? \U0001F60A\"},\"finish_reason\":\"stop\",\"content_filter_results\":{\"hate\":{\"filtered\":false},\"self_harm\":{\"filtered\":false},\"sexual\":{\"filtered\":false},\"violence\":{\"filtered\":false},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"profanity\":{\"filtered\":false,\"detected\":false}}}],\"usage\":{\"prompt_tokens\":5,\"completion_tokens\":15,\"total_tokens\":20,\"prompt_tokens_details\":null,\"completion_tokens_details\":null},\"system_fingerprint\":\"\"}"
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6d18ae678d27-DFW
+      - 93bb0819a8ad7ab8-SJC
       content-length:
       - '683'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:06:47 GMT
+      - Tue, 06 May 2025 19:54:49 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=V3s_EwQPwsZhrSH9mG2pnXVAv_RaNVLhCCAMao5Q2ig-1742234807-1.0.1.1-DuV4zkFG8qeHMAkls6j8_90.eUBy5xIA_JLk44sHuo6ZcUyWczdks0V.3t1xBaQrFp0NDKVN3O2vmOhIdIZWzMz6Elzu8oUWj1mEJpl2ch4;
-        path=/; expires=Mon, 17-Mar-25 18:36:47 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=EtaAc.q7iiz94mferVmaKCOFStsGQccsTbGrHQj9PYE-1746561289-1.0.1.1-uawcwfHkG9e8DfI_XFRzHeL_FhhfAvo_vnsnzf6FImFxl9OOvhuoBHPylH51WPKpWovY1XGUbqYd0ZRRh_2oCntIH0NUDJ5n7UwSDidVPcg;
+        path=/; expires=Tue, 06-May-25 20:24:49 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - c7c46c97-b5cf-446e-a978-56a524f301f0
+      - 0e5f82d2-df23-474f-92e7-95a3fe51194c
       x-response-time:
-      - '0.318'
+      - '0.32'
     status:
       code: 200
       message: OK

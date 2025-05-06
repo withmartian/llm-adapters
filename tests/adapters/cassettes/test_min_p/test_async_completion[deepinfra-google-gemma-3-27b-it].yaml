@@ -1,0 +1,113 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-27b-it","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '47'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RWX8MTn3atjcFCXDaQ0nXa3q","object":"text_completion","created":1746563069,"model":"google/gemma-3-27b-it","choices":[{"index":0,"text":",\n\nI''m
+        encountering a problem with a complex form built in React with multiple nested
+        components, all managed using Formik and Yup. I''ve noticed that when I make
+        changes in one part of the form, it sometimes causes unexpected re-renders
+        in *completely* unrelated parts of the form, especially in components that
+        are deeply nested. This is leading to performance issues and an overall sluggish
+        UI.\n\nSpecifically, when I update a value in a simple text input in the parent
+        component, a long list in a separate nested component (populated with data
+        fetched from an API) is re-rendered even though its values haven''t changed
+        and aren''t related to the input field.\n\nI suspect that Formik''s `onSubmit`
+        or the prop drilling/passing of `values` and `handleChange` or `setFieldValue`
+        are the culprits, but I''m struggling to pinpoint the exact cause and find
+        a solution.\n\nHere''s a simplified representation of the component structure:\n\n```\n-
+        FormContainer\n    - ParentComponent (has a simple text input)\n        -
+        ChildComponent\n            - NestedComponent (contains the long list that
+        re-renders)\n\n```\n\nI''ve tried using `memo` on the `NestedComponent`, but
+        it doesn''t seem to fully solve the problem, likely because the `values` prop
+        still changes on parent updates even if the specific values used by the component
+        haven''t changed.\n\nAny help or suggestions on how to optimize this form
+        and prevent unnecessary re-renders would be greatly appreciated!\n\nHere''s
+        a breakdown of the areas I''m considering:\n\n1. **Comparing Previous & Current
+        Props:**  Would manually comparing the specific props the `NestedComponent`
+        depends on before re-rendering be beneficial?\n2. **Using `useCallback`:**  Should
+        I wrap `handleChange` or `setFieldValue` in `useCallback` to memoize them?\n3.
+        **Context API:**  Is there a way to selectively provide only the necessary
+        `values` and handlers to each component using the Context API?\n4. **Redux/State
+        Management:** Is this the kind of situation where using a dedicated state
+        management approach like Redux would be helpful?\n5. **Immutable Data Structures:**
+        Switching to immutable data structures for the Formik `values` object.\n6.
+        **`shouldComponentUpdate` (Class Component)**: If I was to use a class component
+        instead of functional component with `React.memo`, could `shouldComponentUpdate`
+        be used to control the updates?\n\n\n\n**Code Example (Simplified)**\n\n```javascript\nimport
+        React, { useState } from ''react'';\nimport { Formik, Form, Field } from ''formik'';\nimport
+        * as Yup from ''yup'';\nimport { useMemo } from ''react'';\n\nconst NestedComponent
+        = React.memo(({ data }) => {\n  console.log(''NestedComponent re-rendered'');\n  return
+        (\n    <ul>\n      {data.map(item => (\n        <li key={item.id}>{item.name}</li>\n      ))}\n    </ul>\n  );\n});\n\nconst
+        ChildComponent = ({ values, handleChange }) => {\n  return (\n    <div>\n      <label
+        htmlFor=\"childField\">Child Field:</label>\n      <input\n        type=\"text\"\n        id=\"childField\"\n        name=\"childField\"\n        onChange={handleChange}\n        value={values.childField
+        || ''''}\n      />\n    </div>\n  );\n};\n\nconst ParentComponent = ({ values,
+        handleChange }) => {\n  return (\n    <div>\n      <label htmlFor=\"parentField\">Parent
+        Field:</label>\n      <input\n        type=\"text\"\n        id=\"parentField\"\n        name=\"parentField\"\n        onChange={handleChange}\n        value={values.parentField
+        || ''''}\n      />\n      <ChildComponent values={values} handleChange={handleChange}
+        />\n    </div>\n  );\n};\n\n\nconst FormContainer = () => {\n  const [apiData,
+        setApiData] = useState([\n    { id: 1, name: ''Item 1'' },\n    { id: 2, name:
+        ''Item 2'' },\n    { id: 3, name: ''Item 3'' },\n  ]);\n\n  return (\n    <Formik\n      initialValues={{
+        parentField: '''', childField: '''' }}\n      validationSchema={Yup.object({\n        parentField:
+        Yup.string(),\n        childField: Yup.string(),\n      })}\n      onSubmit={(values,
+        { setSubmitting }) => {\n        setTimeout(() => {\n          alert(JSON.stringify(values,
+        null, 2));\n          setSubmitting(false);\n        }, 400);\n      }}\n    >\n      {({
+        values, handleChange, handleSubmit, isSubmitting }) => (\n        <form onSubmit={handleSubmit}>\n          <ParentComponent
+        values={values} handleChange={handleChange} />\n          <NestedComponent
+        data={apiData} />\n          <button type=\"submit\" disabled={isSubmitting}>Submit</button>\n        </form>\n      )}\n    </Formik>\n  );\n};\n\nexport
+        default FormContainer;\n```\n\nThis example clearly demonstrates the issue.  Typing
+        in the \"Parent Field\" input causes \"NestedComponent re-rendered\" to log
+        to the console, even though the `data` prop for `NestedComponent` has not
+        changed.\n","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":1155,"completion_tokens":1153,"estimated_cost":0.0002308}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5046'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:24:29 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,86 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "41e4953d-7b42-4c28-91ba-e876e44dc7fe", "model": "sonar", "created":
+        1746561482, "usage": {"prompt_tokens": 1, "completion_tokens": 312, "total_tokens":
+        313, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "The term **\"hi\"** has multiple
+        uses and meanings across different contexts:\n\n1. **Greeting**: In English,
+        \"hi\" is a casual greeting, often less formal than \"hello\" or \"good morning.\"
+        It is commonly used in informal settings and is versatile enough to be appropriate
+        in most social interactions, except for the most formal events[2].\n\n2. **Language
+        Variations**: Beyond English, \"hi\" also appears in other languages:\n   -
+        **Basque**: In Basque, \"hi\" is a pronoun used informally between close friends
+        or family[5].\n   - **Japanese**: The kana \"\u3072,\u30d2\" (hi) is a character
+        in the Japanese writing system[4].\n\n3. **Arts and Entertainment**:\n   -
+        **Music**: \"Hi\" is associated with songs, albums, and a Memphis soul and
+        rockabilly label known as Hi Records[4].\n   - **Media**: It is also the name
+        of a teen-lifestyle magazine and a character in the comic strip \"Hi and Lois\"[4].\n\n4.
+        **Other Uses**:\n   - **Abbreviations**: \"HI\" might refer to the U.S. state
+        of Hawaii or, in science, Hydrogen-1 (protium), an isotope of hydrogen[4].\n   -
+        **Cuneiform**: In ancient cuneiform writing systems, \"hi\" is a sign[4].\n   -
+        **International Language Codes**: HI is the ISO 639-1 code for the Hindi language[4]."},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0caeac13fa49-SJC
+      content-length:
+      - '1831'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:58:02 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=WgwvNuCnpbuXSA5jqLkWTCNh8qQ1Rc45t4AGJuSjlxM-1746561482-1.0.1.1-p2yoBp66PutogblbLvZp.6vJKeLs2Zoj4.gh9RXmU2CEvRTbalzfiFo3NabJJ788zhQ9I3k9duk8odZeokhhYd6YS7bgqhqhQ7kHlMMpCMU;
+        path=/; expires=Tue, 06-May-25 20:28:02 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

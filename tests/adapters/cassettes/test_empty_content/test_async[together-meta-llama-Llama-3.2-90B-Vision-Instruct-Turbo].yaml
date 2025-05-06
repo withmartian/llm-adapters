@@ -1,9 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": ""}, {"role": "user", "content":
-      ""}, {"role": "assistant", "content": " "}, {"role": "user", "content": ""},
-      {"role": "assistant", "content": " "}, {"role": "user", "content": "\n"}], "model":
-      "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -12,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '287'
+      - '261'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,58 +26,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce2bd8f75967f-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320097,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
-        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
-        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
-        \       \"content\": \"I don't understand what you mean by that. Could you
-        explain?\",\n        \"tool_calls\": []\n      },\n      \"logprobs\": null,\n
-        \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        37,\n    \"total_tokens\": 52,\n    \"completion_tokens\": 15\n  }\n}"
+      string: "{\n  \"id\": \"nszdFTi-2j9zxn-93bb03dd9dd015e5\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561115,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Sure, I'd be happy
+        to help you with a new prompt! What's on your mind?\",\n        \"tool_calls\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        37,\n    \"total_tokens\": 58,\n    \"completion_tokens\": 21\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6ce2bd8f75967f-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:01:37 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb03dd9dd015e5-SJC
       content-length:
-      - '558'
+      - '572'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:51:56 GMT
       etag:
-      - W/"22e-FZj/iDP7zkzWLX7zo2ACJN9kjsI"
+      - W/"23c-np7u395NVq4n65euYKBe8mgVAy0"
       retry-after:
       - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 1f01c756-db4d-4461-a52b-9ca19311cfb4-noamzn
       x-api-call-end:
-      - '2024-11-23T00:01:37.237Z'
+      - '2025-05-06T19:51:56.756Z'
       x-api-call-start:
-      - '2024-11-23T00:01:36.911Z'
+      - '2025-05-06T19:51:55.844Z'
       x-api-received:
-      - '2024-11-23T00:01:36.903Z'
+      - '2025-05-06T19:51:55.829Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -94,6 +94,8 @@ interactions:
       - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nszdFTi-2j9zxn-93bb03dd9dd015e5
     status:
       code: 200
       message: OK

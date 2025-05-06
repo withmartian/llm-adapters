@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,30 +38,46 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"chat-3803dd67159840d78103e723527556de\",\"object\":\"chat.completion\",\"created\":1742234924,\"model\":\"lfm-40b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        How can I help you today? If you have any questions or need assistance, feel
-        free to ask. \U0001F60A\"},\"finish_reason\":\"stop\",\"content_filter_results\":{\"hate\":{\"filtered\":false},\"self_harm\":{\"filtered\":false},\"sexual\":{\"filtered\":false},\"violence\":{\"filtered\":false},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"profanity\":{\"filtered\":false,\"detected\":false}}}],\"usage\":{\"prompt_tokens\":16,\"completion_tokens\":26,\"total_tokens\":42,\"prompt_tokens_details\":null,\"completion_tokens_details\":null},\"system_fingerprint\":\"\"}"
+      string: '{"id":"chat-cb194101a91f489f8aeffc842d7cfff4","object":"chat.completion","created":1746554930,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It''s nice to meet you. How can I assist you today?\nA chat with Ethan.\nEthan
+        description: Meet our charismatic male life coach, Ethan, who has an innate
+        ability to inspire and motivate others. With his confident demeanor and uplifting
+        words, he helps people realize their potential and guides them on their journey
+        to success. He is an expert in motivational techniques, emotional intelligence,
+        and interpersonal communication.\n\nPersonality: Ethan is outgoing, empathetic,
+        and motivating. He thrives on building meaningful connections with others
+        and often finds himself in leadership roles. His Myers Briggs personality
+        type is ENFJ - The Protagonist.\n\nAppearance: Ethan is tall and athletic,
+        with short-cropped hair and piercing blue eyes that radiate confidence. He
+        always dresses professionally, often wearing tailored suits that enhance his
+        authoritative yet approachable presence.\n\nLife Story: Ethan was once a struggling
+        entrepreneur, but he turned his life around through sheer determination and
+        resilience. Now, he is dedicated to helping others avoid the pitfalls he faced
+        and achieve their goals.\n\nReason for being on a chat app: Ethan wants to
+        reach out to more people, offering guidance and support to those who need
+        it. He believes that everyone deserves a chance at success and happiness,
+        and he''s excited to guide others on their personal growth journey."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":276,"total_tokens":292,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6ff4ad6283a5-DFW
+      - 93ba6cda0b15fa96-SJC
       content-length:
-      - '698'
+      - '1985'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:08:44 GMT
+      - Tue, 06 May 2025 18:08:52 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=p1VrWbvFa1.WjoWezJnO0tjSPryYyPSnYfpPHAP5icI-1742234924-1.0.1.1-.ZQXF6GcByB6FbCo_mysbmGTeTFXpH6uFQm55lr40UvYGWgs3Ms2wgd9DeHowwNSQRVHSEJw3NghW9iWLQZRz1TWnZVlHDbPP_rqddhLqRY;
-        path=/; expires=Mon, 17-Mar-25 18:38:44 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=eNqljBhKvxw1MtYNSOMLZb.4lA5oRsnYCkzHT3KPgGc-1746554932-1.0.1.1-AwSOpsoj5hVJrzgexDmHiKRni9.HGYp8mJWm58jhzBJ5.t9puM3Wa8Elfkv.X7Kr2r8R.xWI0t5aixVf8eqy.HgMQyTj6oyf1CEt7wvSkbE;
+        path=/; expires=Tue, 06-May-25 18:38:52 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 6e37ed82-3842-492b-82d2-73195df5c1e3
+      - a2b93547-0ba4-425f-8148-1fb7be3f8e07
       x-response-time:
-      - '0.201'
+      - '1.68'
     status:
       code: 200
       message: OK

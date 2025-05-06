@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,37 +38,44 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-a5857b61-866e-440a-bff5-5b90e0f3dc85","object":"chat.completion","created":1742234835,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Seems
-        like we''re having a nice \"Hi\" chain going on!\n\nTo break the chain and
-        start a more meaningful conversation, I''ll ask: \n\n**What brings you here
-        today?**\n\nDo you:\n1. **Have a question** on a specific topic (e.g., tech,
-        history, science, etc.)?\n2. **Want to discuss** a particular subject (e.g.,
-        movies, books, hobbies, etc.)?\n3. **Need assistance** with something (e.g.,
-        language, problem-solving, etc.)?\n4. **Just want to chat** casually and see
-        where the conversation takes us?\n5. **Something else** (please specify!)?\n\nLet
-        me know, and I''ll do my best to help or engage in a fun conversation with
-        you!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":34,"completion_tokens":159,"total_tokens":193,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-3bd8b36a-5a44-4974-a652-7b43717b92d5","object":"chat.completion","created":1746554929,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Seems
+        like we''re in a loop of greetings! Let''s break the cycle. How can I assist
+        you today? Please pick one (or more) from the options below, or feel free
+        to ask me something entirely different:\n\n1. **Chat about a topic**:\n\t*
+        Hobbies (e.g., reading, gaming, traveling)\n\t* Technology (e.g., AI, space
+        exploration, gadgets)\n\t* Movies/TV Shows\n\t* Books/Comics\n\t* Other (please
+        specify)\n2. **Play a game**:\n\t* 20 Questions\n\t* Hangman\n\t* Word Chain\n\t*
+        Trivia (choose a category)\n\t* Would You Rather\n3. **Generate content**:\n\t*
+        **Story**: I''ll start telling a story, and you can continue it, or vice versa.\n\t*
+        **Poetry**: Request a poem on a theme or topic.\n\t* **Character/World Building**:
+        For your writing or D\u0026D project.\n4. **Learn something new**:\n\t* **Language
+        lessons** (basic phrases in a language of your choice)\n\t* **Brief history**
+        of a topic/event\n\t* **Science explanation** (simplified)\n\t* **How-to guide**
+        for a simple task\n5. **Just need help with**:\n\t* **Math problems**\n\t*
+        **Language translation** (short texts)\n\t* **Suggestions** (gifts, places
+        to visit, etc.)\n\t* **Something else** (please ask away)\n\nWhat''s your
+        pick?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":34,"completion_tokens":317,"total_tokens":351,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6dca8db92e55-DFW
+      - 93ba6cd35cbe679b-SJC
       content-length:
-      - '1257'
+      - '1819'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:07:20 GMT
+      - Tue, 06 May 2025 18:08:55 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=2gx9eMCcwcHJIV4p.cIic1E7bZrwJEULvZXRUsPgrJg-1742234840-1.0.1.1-r8DhT5DJIt.Xys5f4X2YBDq3Hq6gTghAxl6Hq7L8lb1mXnaEJyX2xehmeYwYPTe_InbWeZuapecn9QigheW2P_.pzODphHQwrrtU.QLiUsQ;
-        path=/; expires=Mon, 17-Mar-25 18:37:20 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=6apt1PaodU4L05gAcV1EQ71h9hADhQy.prD0e8wB7T4-1746554935-1.0.1.1-nrpXR1gCYDVvkjXxBgz7kYpncv3OwAEqbmx2pfkC7dZWy9dz9BgPn6dpffgX4N093LwAWojjG.AVfzuIywDSv.al_y6L9RN3.cAZyylP_W8;
+        path=/; expires=Tue, 06-May-25 18:38:55 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - a5857b61-866e-440a-bff5-5b90e0f3dc85
+      - 3bd8b36a-5a44-4974-a652-7b43717b92d5
       x-response-time:
-      - '4.62'
+      - '6.554'
     status:
       code: 200
       message: OK

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,77 +25,78 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5af6deaaf15a8\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738284396,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
-        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
-        \       \"role\": \"assistant\",\n        \"content\": \"It seems like your
-        message is empty or contains only punctuation. Could you clarify or provide
-        more context so I can assist you better? \U0001F60A\",\n        \"tool_calls\":
-        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
-        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 7,\n    \"total_tokens\":
-        36,\n    \"completion_tokens\": 29\n  }\n}"
+      string: "{\n  \"id\": \"nsz5T9y-28Eivz-93ba6c63588e24fc\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746554911,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        3270263944732180500,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Hello! It looks
+        like your message is empty. How can I assist you today? \U0001F60A\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 7,\n    \"completion_tokens\":
+        20,\n    \"total_tokens\": 27\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5af6deaaf15a8-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:46:36 GMT
-      ETag:
-      - W/"247-ays3gyjeYKR1D9ycEqVncLGhxbM"
-      Retry-After:
-      - '2'
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6c63588e24fc-SJC
       content-length:
-      - '583'
+      - '569'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:08:33 GMT
+      etag:
+      - W/"239-RxCkX+QVfBr+iAfm7eo8yygW+Lk"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 36acb3ae-bd5e-47c8-814e-3c1b86c1af1d-noamzn
       x-api-call-end:
-      - '2025-01-31T00:46:36.712Z'
+      - '2025-05-06T18:08:33.513Z'
       x-api-call-start:
-      - '2025-01-31T00:46:32.694Z'
+      - '2025-05-06T18:08:32.647Z'
       x-api-received:
-      - '2025-01-31T00:46:32.680Z'
+      - '2025-05-06T18:08:31.584Z'
+      x-api-retries:
+      - '5'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '100'
+      - '50'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '199'
+      - '99'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nsz5T9y-28Eivz-93ba6c63588e24fc
     status:
       code: 200
       message: OK

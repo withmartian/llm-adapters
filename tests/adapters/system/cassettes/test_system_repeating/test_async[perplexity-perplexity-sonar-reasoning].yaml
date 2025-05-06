@@ -1,0 +1,112 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"Hi\nHi\nHi\nHi\nHi\nHi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '124'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "f1b5c09a-8d23-450b-aa99-d867feaa4e40", "model": "sonar-reasoning",
+        "created": 1746561117, "usage": {"prompt_tokens": 12, "completion_tokens":
+        756, "total_tokens": 768, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.shazam.com/en-us/song/1440940877/hi-hi-hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, let''s tackle
+        this query. The user typed \"Hi\" multiple times and included extra instructions
+        that just say \"Hi\" again. The search results provided are about the song
+        \"Hi, Hi, Hi\" by Wings.\n\nFirst, I need to figure out what the user is asking
+        for. Since they wrote \"Hi\" repeatedly, maybe they''re referencing the song''s
+        title. The search results include Wikipedia, YouTube links, Spotify, and Shazam,
+        all pointing to the song.\n\nLooking at the search results, the main information
+        is from Wikipedia. The song was released in 1972 as a double A-side with \"C
+        Moon,\" part of Wings. It''s a glam rock genre, and it charted in several
+        countries. There''s also information about re-releases on compilation albums.
+        The YouTube links are official audio releases, and the lyrics are from Shazam.\n\nThe
+        user might be asking about the song, its release details, or its chart performance.
+        Since their query is just \"Hi\" repeated, they probably want information
+        on the song \"Hi, Hi, Hi.\" \n\nI need to structure the answer with key sections:
+        release details, chart performance, and legacy. Each section should have bullet
+        points or concise info. Citations should be from the relevant search results,
+        like [1] for Wikipedia info, [2] and [3] for release dates, and [5] for lyrics.\n\nCheck
+        if there''s any conflicting info. All sources agree on the release date and
+        chart positions. The song''s inclusion in albums is from [1], and the mention
+        of the 7\" Singles Box is from [3]. \n\nEnsure the answer is concise, uses
+        markdown headers, and cites properly. Avoid unnecessary details but cover
+        the main points: artists, release, genre, charts, and appearances in compilations.\n\nAlso,
+        note that the song was written by Paul and Linda McCartney, produced by Paul.
+        The lyrics mention themes of getting high and energetic nights, as seen in
+        [5]. \n\nI should avoid starting with a header, so the first line should be
+        a brief introduction. Then use headers for each section. Make sure citations
+        are correctly placed after each relevant fact.\n</think>\n\n\"Hi, Hi, Hi\"
+        is a 1972 song by Paul McCartney & Wings, co-written with Linda McCartney.
+        Released as a double A-side single with \"C Moon,\" it reached **#5 in the
+        UK**, **#10 in the US**, and **#1 in Spain**[1][2]. The track combines glam-rock
+        energy with playful, somewhat ambiguous lyrics about romantic escapades and
+        sensory experiences[1][5].\n\n---\n\n## **Release and Chart Performance**  \n-
+        **Release date**: December 1, 1972 (UK), December 4, 1972 (US)[1]  \n- **Label**:
+        Apple Records[1]  \n- **Genre**: Glam rock[1]  \n- **Legacy**: A staple of
+        Wings'' 1970s live performances and included in compilations like *Wingspan:
+        Hits and History* (2001), *Pure McCartney* (2016), and *The 7\" Singles Box*
+        (2022)[1][3].  \n\n---\n\n## **Key Details**  \n- **Lyrics highlight**: Themes
+        of hedonism (\"We''re gonna get hi, hi, hi in the midday sun\") and abstract
+        romantic imagery (\"sweet banana\")[5].  \n- **Album appearances**: Originally
+        paired with \"C Moon,\" later featured as a bonus track on reissues of *Red
+        Rose Speedway* (1993, 2018)[1].  \n\nThe track\u2019s remastered version was
+        released in 2022 as part of a Wing singles compilation[3]."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb03a41ca115d2-SJC
+      content-length:
+      - '3869'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:57 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=ghcsOJUxezn8Jvj94hwV9Jjk0Tj_Xe6sr0T7.lNB7yA-1746561117-1.0.1.1-SwlRbV2AalCo73NlXlf6Mc6b0juF1MFtwuCpGDWoy_uhp_g96gBR_6YImTIqSItoYXPuCEB3U1s9dFWh2GswsmoXq_5RT3If99le5OJ.KCs;
+        path=/; expires=Tue, 06-May-25 20:21:57 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

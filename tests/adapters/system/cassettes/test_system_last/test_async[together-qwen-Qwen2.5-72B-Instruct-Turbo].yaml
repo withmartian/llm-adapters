@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '130'
+      - '120'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,59 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cbd2abf2aeb20-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732318557,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 13534136400253360000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nsz5ywf-4yUbBN-93ba6eec5d2122ba\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746555015,\n  \"model\": \"Qwen/Qwen2.5-72B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 17236262488410694000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         \"Hello! How can I assist you today? Feel free to ask me any questions or
         let me know if you need help with anything specific.\",\n        \"tool_calls\":
         []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 36,\n    \"completion_tokens\":
         29,\n    \"total_tokens\": 65\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6cbd2abf2aeb20-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 22 Nov 2024 23:35:58 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6eec5d2122ba-SJC
       content-length:
-      - '615'
+      - '627'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:10:15 GMT
       etag:
-      - W/"267-W23z0qy7GIA0yW9QeAGeUvSSnpw"
+      - W/"273-Fl/yp/m+f1hH54xdULeNDQ0ArsU"
       retry-after:
-      - '0'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-call-end:
-      - '2024-11-22T23:35:58.368Z'
+      - '2025-05-06T18:10:15.664Z'
       x-api-call-start:
-      - '2024-11-22T23:35:57.907Z'
+      - '2025-05-06T18:10:15.195Z'
       x-api-received:
-      - '2024-11-22T23:35:57.897Z'
+      - '2025-05-06T18:10:15.154Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -88,11 +89,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '175'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '98638'
+      - '100000'
       x-ratelimit-reset:
-      - '0'
+      - '2'
+      x-request-id:
+      - nsz5ywf-4yUbBN-93ba6eec5d2122ba
     status:
       code: 200
       message: OK

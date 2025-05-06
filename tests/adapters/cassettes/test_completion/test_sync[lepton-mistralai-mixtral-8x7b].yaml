@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "mixtral-8x7b", "prompt": "Hi", "max_tokens": 10}'
+    body: '{"model":"mixtral-8x7b","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '59'
+      - '54'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,38 +25,38 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-ZF7Pe5wEijRafQcfAHz3sa","object":"text_completion","created":1733368806,"model":"mixtral-8x7b","choices":[{"index":0,"text":",
-        Question: I have a 200","logprobs":null,"finish_reason":"length","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10}}'
+      string: '{"id":"cmpl-k3uHbSAFgsSrmyHDqjiEBs","object":"text_completion","created":1746555159,"model":"mixtral-8x7b","choices":[{"index":0,"text":",
+        Question: Does anyone know where I can get","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e5ff7f96eb2e-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:20:06 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba7272efee67a9-SJC
       content-length:
-      - '288'
+      - '295'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:39 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '136'
+      - '349'
     status:
       code: 200
       message: OK

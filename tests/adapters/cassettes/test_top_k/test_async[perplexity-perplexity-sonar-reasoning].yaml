@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "1598615c-1982-48e2-b102-763247fc40a1", "model": "sonar-reasoning",
+        "created": 1746561332, "usage": {"prompt_tokens": 1, "completion_tokens":
+        336, "total_tokens": 337, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user is asking
+        about \"Hi\". Let me look through the search results to figure out what they
+        need.\n\nFirst, I see that \"Hi\" is a common greeting. The Dictionary.com
+        entry mentions it''s more casual than \"hello\" [1][2]. The Vocabulary.com
+        result also supports that, saying it''s a good all-purpose greeting except
+        in very formal situations [2]. There''s also a YouTube link for a greeting
+        song for kids, which probably uses \"Hi\" as the greeting<think>\n\n\"Hi\"
+        serves primarily as a casual greeting in English, used to acknowledge someone''s
+        presence or initiate conversation. It is less formal than \"hello\" and appropriate
+        in most informal or semi-formal contexts, though not suitable for highly formal
+        occasions (e.g., meeting royalty) [1][2]. The term originated as an abbreviation
+        of \"high\" but evolved into a standalone salutation, with roots linked to
+        Native American usage in the 19th century [2].\n\nBeyond its primary usage,
+        \"hi\" has multiple meanings and applications:\n- **Geographic abbreviation**:
+        HI is the postal state code for Hawaii [1].\n- **Music**: Refers to labels
+        (Hi Records), albums (e.g., Texas'' *Hi*), songs (e.g., Ofra Haza''s Eurovision
+        entry), and EPs [4].\n- **Linguistics**: Designates language codes like Hindi
+        (ISO 639-1 HI) and specific characters in Basque or Japanese scripts [4][5].\n-
+        **Science**: Can denote hydrogen-1 (protium), an interstellar hydrogen region
+        (H I), or other technical terms [4]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0907890bed36-SJC
+      content-length:
+      - '2064'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:32 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=GHkgeleShIn.4dNkIyYbZeyrBIvc56paeBjFPzMCcpo-1746561332-1.0.1.1-DgPccyfeSVWiHjj3AB4PeGMqzEHTVyloXMPBeB2TecERwrynieWuw4hfLS8Nn9c.EColbpD3acZ_6nH7dnABNVT66V02tDyhYPIdpxWLcWs;
+        path=/; expires=Tue, 06-May-25 20:25:32 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

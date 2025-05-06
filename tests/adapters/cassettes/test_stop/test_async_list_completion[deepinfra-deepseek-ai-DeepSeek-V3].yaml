@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,40 +25,37 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-48952f2098f24b609e8e155a106b95c3\",\"object\":\"text_completion\",\"created\":1738286395,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"text\":\",
-        what are you looking for?\\n\\n## News Hamster\\n\\nSouth Goa Wolverines are
-        roaring in the ongoing Karnataka Premier League (KPL) as India\u2019s first
-        all-Goan Kabaddi team to play at the national level for the league. With the
-        first win against Bengaluru\u2019s star-studded team, the Wolverines said,
-        \u201Cwe\u2019re here for the kill.\u201D And ever since then, the team has
-        proved it with a continuous run of victories in the league.\\n\\nThe KPL consists
-        of 8 teams representing different parts of the country. This year, South Goa
-        Wolverines added yet another team, marking it the first all-Goan Kabaddi team
-        to represent Goa. The league, consisting of 28 matches in total, started on
-        October 21. Began with a whitewash victory over Bengaluru Bucks, the team
-        defeated Hyderabad Hustlers, Gujarat Giants, and Jaipur Jungle Cats in the
-        upcoming matches. They have qualified for the semi-finals, and are now set
-        to lock horns with Ahmedabad Def\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":214,\"completion_tokens\":212,\"estimated_cost\":0.0001925}}"
+      string: '{"id":"cmpl-RqyzLOfLsQtiq1zV5pbVSCrL","object":"text_completion","created":1746561701,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"text":",
+        I''m trying to solve this problem:\n\nGiven a string, find the length of the
+        longest substring without repeating characters.\n\nExamples:\n\nGiven \"abcabcbb\",
+        the answer is \"abc\", which the length is 3.\n\nGiven \"bbbbb\", the answer
+        is \"b\", with the length of 1.\n\nGiven \"pwwkew\", the answer is \"wke\",
+        with the length of 3. Note that the answer must be a substring, \"pwke\" is
+        a subsequence and not a substring.\n\nHere''s my approach:\n\n1. Initialize
+        a set to keep track of unique characters in the current substring.\n2. Use
+        two pointers, `left` and `right`, to represent the start and ","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":148,"completion_tokens":146,"estimated_cost":0.00013069999999999998}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '1230'
+      - '906'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:19:55 GMT
+      - Tue, 06 May 2025 20:01:41 GMT
       server:
       - uvicorn
       x-robots-tag:

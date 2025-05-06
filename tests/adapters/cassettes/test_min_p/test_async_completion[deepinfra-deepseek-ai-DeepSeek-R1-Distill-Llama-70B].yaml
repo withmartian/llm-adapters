@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,56 +25,51 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: '{"id":"cmpl-9d847f4523664fc59381b3f04d26bc2d","object":"text_completion","created":1738286193,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"text":"class
-        MultiStepPoseEstimation(nn.Module):\n    def __init__(self, model_path, num_joints=17):\n        super(MultiStepPoseEstimation,
-        self).__init__()\n        self.model = model_path  # do i need to load the
-        model here? or can I pass the path later?\n        \n        # here I have
-        other layers, but perhaps it would be better to load the model in the forward
-        pass?\n\nWait, initialising the model inside the __init__ or Lazily loading
-        it?\n\nI guess the model should be loaded once when creating the module.\n\nSo
-        in __init__, make sure to load the model from the model_path.\n\nIn your code,
-        perhaps you have something like:\n\nself.model = torch.load(model_path) ??\n\nBut
-        perhaps models are on different devices, so need to manage that.\n\nAnother
-        thing: nn.Module''s should have their parameters set during __init__, but
-        in your case, you are passing a model_path. So in __init__ you can load the
-        model.\n\nAre you creating a module that wraps another model to perform multi-step
-        pose estimation? Then maybe during __init__ you need to load it.\n\nSo in
-        MultiStepPoseEstimation''s __init__, something like:\n\nfrom torch import
-        load\n\nclass MultiStepPoseEstimation(nn.Module):\n    def __init__(self,
-        model_path, num_joints=17):\n        super().__init__()\n        self.num_joints
-        = num_joints\n        # Load the pose estimation model\n        self.model
-        = load(model_path)\n        # Make sure it''s in eval mode? Or perhaps in
-        the forward it can switch modes\n        self.model.eval()\n\nBut it''s generally
-        a good idea to have models in eval mode unless training.\n\nWait, but if self.model
-        is another nn.Module, should it be added as a submodule?\n\nYes, because otherwise,
-        the parameters won''t be tracked by the outer module.\n\nSo perhaps, instead
-        of self.model = load(model_path), you should do:\n\nself.model = load(model_path)\n\nBut
-        wait, in PyTorch, models are usually loaded via torch.load, which for a model
-        is a dictionary. So perhaps I should use load_state_dict.\n\nWait no, for
-        complete models, torch.load() returns the model. But sometimes, when you have
-        saved just the state_dict, you need to load it via model.load_state_dict.\n\nWait,
-        in the OP''s initial code, the model_path is passed as a parameter, so perhaps
-        inside __init__, we can load the model.\n\nBut for that, I","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":513,"completion_tokens":512,"estimated_cost":0.00035351}}'
+      string: '{"id":"cmpl-RoyIZIBFYDLN8wasiWGJbDqB","object":"text_completion","created":1746561938,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"text":"You
+        Cuba maintaining his goo controlling system.\nOkay, let''s see. I need to
+        use Groovy and list all numbers from 1 to 100. Hmm, I remember in Groovy it''s
+        similar to Java but with some Groovy syntax sugar.\n\nWait, how do I loop
+        in Groovy? Oh right, I can use a for loop or ranges. Maybe I can create a
+        range from 1 to 100 and then iterate over it.\n\nSo, like (1..100).each {
+        ... } maybe? Let me think. And then in the loop, I need to print the number.
+        So inside the closure, I can print it.\n\nWait, but the standard way is to
+        use println or maybe just print with newline? Or does the each loop handle
+        that?\n\nWait, the question says to list them, probably each on a new line.
+        So in the loop, I should call println with the current number.\n\nSo putting
+        it all together:\n\nfor (int i in 1..100) {\n    println i\n}\n\nOr alternatively,\n\n(1..100).each
+        { num -> println num }\n\nWhich is more Groovy-like? Maybe the range with
+        each is better.\n\nWait, but no, Groovy allows for Javalike for loops as well,
+        but using the range with each is more idiomatic.\n\nBut both ways work, so
+        I think that''s how to do it.\n</think>\n\nTo list all numbers from 1 to 100
+        in Groovy, you can leverage Groovy''s range and iterator capabilities. Here''s
+        the idiomatic way to achieve this using the `.each` method on a range:\n\n```groovy\n(1..100).each
+        { num ->\n    println num\n}\n```\n\n### Explanation:\n- **Range Definition
+        `(1..100)`**: This creates a range from 1 to 100, inclusive.\n- **`.each`
+        Method**: Iterates over each element in the range.\n- **Closure `{ num ->
+        println num }`**: For each element (number), it prints the number followed
+        by a newline.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":417,"completion_tokens":416,"estimated_cost":0.0001665}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2619'
+      - '1958'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:16:33 GMT
+      - Tue, 06 May 2025 20:05:38 GMT
       server:
       - uvicorn
       x-robots-tag:

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "dolphin-mixtral-8x7b", "prompt": "Hi", "max_tokens": 10, "stream":
-      true}'
+    body: '{"model":"dolphin-mixtral-8x7b","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '83'
+      - '76'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,37 +25,55 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/completions
   response:
     body:
-      string: "data: {\"id\":\"cmpl-sHwXNXezTxr3aLdYi9RAtG\",\"object\":\"text_completion\",\"created\":1733910383,\"model\":\"dolphin-mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"-\",\"logprobs\":null,\"finish_reason\":null}]}\n\ndata:
-        {\"id\":\"cmpl-sHwXNXezTxr3aLdYi9RAtG\",\"object\":\"text_completion\",\"created\":1733910383,\"model\":\"dolphin-mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"Way\",\"logprobs\":null,\"finish_reason\":null}]}\n\ndata:
-        {\"id\":\"cmpl-sHwXNXezTxr3aLdYi9RAtG\",\"object\":\"text_completion\",\"created\":1733910383,\"model\":\"dolphin-mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"\u2019s\",\"logprobs\":null,\"finish_reason\":null}]}\n\ndata:
-        {\"id\":\"cmpl-sHwXNXezTxr3aLdYi9RAtG\",\"object\":\"text_completion\",\"created\":1733910383,\"model\":\"dolphin-mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"stop\"}]}\n\ndata:
-        [DONE]\n\n"
+      string: 'data: {"id":"cmpl-varN3m89vahJXXTzdhf2Aa","object":"text_completion","created":1746555153,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":",","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-varN3m89vahJXXTzdhf2Aa","object":"text_completion","created":1746555153,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
+        and welcome","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-varN3m89vahJXXTzdhf2Aa","object":"text_completion","created":1746555153,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
+        to the first","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-varN3m89vahJXXTzdhf2Aa","object":"text_completion","created":1746555153,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
+        installment of","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-varN3m89vahJXXTzdhf2Aa","object":"text_completion","created":1746555153,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
+        the","logprobs":null,"finish_reason":"length"}]}
+
+
+        data: [DONE]
+
+
+        '
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f048c178a8916a0-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-ray:
+      - 93ba724e7a8e15da-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:46:23 GMT
-      Server:
+      date:
+      - Tue, 06 May 2025 18:12:33 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '80'
+      - '98'
     status:
       code: 200
       message: OK

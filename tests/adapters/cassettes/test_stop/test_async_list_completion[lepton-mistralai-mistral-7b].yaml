@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "mistral-7b", "prompt": "Hi", "stop": ["stop", "end"]}'
+    body: '{"model":"mistral-7b","prompt":"Hi","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '64'
+      - '58'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,42 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-CPeRxPeiUAPzRM9rkdh2fU","object":"text_completion","created":1734127190,"model":"mistral-7b","choices":[{"index":0,"text":"\n\nI''m
-        new to this forum and have just bought a 1996 525i.\n\nI''ve just got the
-        car home and done a few checks, including the oil level and tyre pressures.\n\nI''ve
-        also found that the car is losing oil, and it appears to be coming from the
-        rear of the engine, around the cam belt pulley.\n\nThe car has 150,000 miles
-        on the clock and has had a new cambelt fitted about 6 months ago.\n\nI''ve
-        been trying to find out if there is a known problem with the 525i''s but haven''t
-        found anything that matches my symptoms.\n\nCan anyone shed any light on this?\n\nThanks\n\nPhil","logprobs":null,"finish_reason":"stop","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":170,"completion_tokens":169}}'
+      string: '{"id":"cmpl-MsqnA53nEXnvSEb5FZyE9m","object":"text_completion","created":1746561411,"model":"mistral-7b","choices":[{"index":0,"text":"!\n\nI
+        am trying to write a code for a robot arm using servo motors and I have an
+        issue.\n\nI am using 2 servos (one for the arm and one for the claw).\n\nThe
+        code is the following:\n\n```\n#include <Servo.h>\n\nServo servo1;\nServo
+        servo2;\n\nvoid setup() {\n  servo1.attach(3);\n  servo2.attach(4);\n\n  servo1.write(0);\n  servo2.write(0);\n\n  delay(2000);\n\n  servo1.write(90);\n  servo2.write(0);\n\n  delay(2000);\n\n  servo1.write(90);\n  servo2.write(90);\n}\n\nvoid
+        loop() {\n  servo1.write(0);\n  servo2.write(0);\n\n  delay(2000);\n\n  servo1.write(90);\n  servo2.write(0);\n\n","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f1939391fee1682-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:59:51 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0b17984c36e8-SJC
       content-length:
-      - '830'
+      - '841'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:56:56 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1833'
+      - '4254'
     status:
       code: 200
       message: OK

@@ -1,0 +1,117 @@
+interactions:
+- request:
+    body: '{"model":"Qwen/QwQ-32B","prompt":"Hi","stop":["stop","end"]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '60'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RiXS3JQxxekkWOr71G9U0Uer","object":"text_completion","created":1746561839,"model":"Qwen/QwQ-32B","choices":[{"index":0,"text":"
+        i need to do program that takes a 2d `char` array, prints it to console line
+        per line. However I cannot find out the best way to do it.\n\n**Note** I''m
+        not using a String constructor. Because I''m not allowed to import `String`
+        package and also not allowed to use any array functions like `join`, `split`,
+        `created`, `array.length()` etc.\n\nAt the moment I have this:\n\n```\n#include
+        <iostream>\nusing namespace std;\n\nint main()\n{\n  char k [][] = {\n    {''H'',''e'',''l'',''l'',''o'',''!''},\n    {''T'',''h'',''i'',''s'',
+        '' '',''i'',''s'','' '',''a'',''('',''g'',''r'',''i'',''d'','')''},\n    {''M'',''y'',''
+        '',''z'',''o'',''m'',''b'',''i'',''e'','' '',''s'',''i'',''z'',''e'', '' ''},\n    {''
+        '',''b'',''e'',''l'',''o'',''w'','':'', '')'', '' ''},\n    {'' '':''V'',''e'',''r'',''y'',''
+        '',''s'',''c'',''a'',''r'',''y'','' '',''!'', ''!'','' '',''('','')''},\n    {''I'',''f'',''
+        '',''t'',''h'',''e'','' '',''s'',''o'',''f'',''t'',''w'',''a'',''r'',''e''},\n    {''B'',''u'',''i'',''l'',''d'',
+        '','', '' '',''t'',''h'',''e'',''n'', '' '',''c'',''r'',''a'',''s'',''h''},\n    {''
+        '',''b'',''e'',''l'',''o'',''w'','':'', '')'', '' ''},\n    {'' '':''I'',
+        '' '', ''h'',''o'',''p'',''e'','' '',''t'',''h'',''a'',''t'', '' '',''s'',''t'',''a'',''b'',''l'',''e''},\n    {''T'',''h'',''i'',''s'',''
+        '',''i'',''s'','' '',''g'',''i'',''v'',''i'',''n'',''g'','' '','' '',''P'',''D'',''F'',''
+        '',''f'',''i'',''l'',''e'',''s'','' '',''a'','' '',''b'',''a'',''d'','' '',''r'',''e'',''p'',''u'',''t'',''a'',''t'',''i'',''o'',''n'',
+        ''!'' }\n  };\n  cout << k << \"\";\n  return 0;\n}\n\n```\n\nI have tried
+        `cout<<(k);` and that gives me \"Segment fault\"\n\nI have tried `cout<<k[0]`
+        and it gives me a error: `statement cannot resolve address of`\n\n```\nerror:
+        expression must have a class type\n cout<<k[0];\n           ^\n\n```\n\nI
+        have but this code then: \n\n```\nchar **ptr;\nptr = k;\ncout<<ptr[0];\n\n(error)\n
+        ''expression must have class type''\n\n```\n\nWhat is better ATTEMPT?\n\n
+        Option A: turn the 2d `char` array into a String, then do a `for loop` through
+        each String and print them via `\\n`\n\nBut then I can''t do that as I can''t
+        use `String()` function\n\nOption B: Print each row with a for loop that i
+        have to iterate the length of `k`? but how do i know how big it is?\n\nOption
+        C: Manually print each row via index like cout << (k[0][0], k[0][1]... etc
+        but that is too tedious\n\nI cannot use any built in array functions. So what
+        is the best approach here?\n\n*edited the code to feature the array as per
+        OP''s request*\nFirst, the 2D array has variable row lengths, which is going
+        to make it complicated.\n\nSince you compiled without errors or warnings,
+        I guess there is a missing size specification for the first dimension. The
+        way to define such a heterogeneous 2-dimensional array (since each row has
+        a different length) is to use a VLA (variable-length array), which might not
+        be allowed in C++. Alternatively, you can specify the maximum row length.
+        However, in your case, since you can''t use functions like `strlen`, you need
+        another approach.\n\nGiven the constraints, here''s a way to print each row:\n\n**Step
+        1:** Define the array properly. Since each row has different lengths, you
+        might have to specify their lengths explicitly unless you know a uniform maximum
+        length. Alternatively, use null-termination for each string (but since it''s
+        `char` and not `char*`, you can still add a null terminator).\n\n**Step 2:**
+        Iterate over each row, and for each row, iterate over each character until
+        the null terminator (if null-terminated).\n\n**Problem:** Your current array
+        rows don''t have null terminators (since you''re using single quotes), so
+        you need to add them.\n\nUpdating the array to include null terminators (for
+        each row):\n\n```cpp\nchar k[] [16] = {  // Choosing 16 as the max row length
+        (note: adjust if needed)\n    {''H'',''e'',''l'',''l'',''o'',''!'',''\\0'',0,0,0,0,0,0,0,0,0},
+        \n    {''T'',''h'',''i'',''s'', '' '',''i'',''s'','' '',''a'',''('',''g'',''r'',''i'',''d'','')'',''\\0''},
+        \n    ... (add null terminator to each row)\n};\n```\n\nAlternatively, you
+        can make each row an array of `char` with the proper null terminator. However,
+        this is tedious.\n\nAlternatively, if rows are of fixed maximum length, you
+        can hardcode the iteration up to that length. \n\n**Option B Approach (iterate
+        over each row):**\n\nAssuming you can know the number of rows (size of the
+        array), and since you can''t use `sizeof`, perhaps define constants for rows
+        and columns:\n\n```\nstatic const int ROWS = 10; // Adjust as needed\nstatic
+        const int COLS = 16; // Maximum length per row\n\nchar k[ROWS][COLS] = { {
+        ... } };\n```\n\nThen:\n\n```cpp\nfor (int i = 0; i < ROWS; ++i) {\n    for
+        (int j = 0; j < COLS; ++j) {\n        if (k[i][j] == ''\\0'') break; // Assuming
+        null-terminated\n        std::cout << k[i][j];\n    }\n    std::cout << std::","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":1298,"completion_tokens":1297,"estimated_cost":0.00025955000000000005}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4795'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:03:59 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

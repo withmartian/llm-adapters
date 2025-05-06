@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"deepseek-ai/DeepSeek-R1"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '117'
+      - '84'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,76 +25,76 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5af8a4b5a967c\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738284398,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
-        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
-        \       \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHello!
-        How can I assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      },\n
-        \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-        \ \"usage\": {\n    \"prompt_tokens\": 7,\n    \"total_tokens\": 23,\n    \"completion_tokens\":
-        16\n  }\n}"
+      string: "{\n  \"id\": \"nszf11o-zqrih-93bb0c34ac05ce44\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561457,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        16206802362446543000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHello!
+        How can I assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      }\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 5,\n    \"completion_tokens\":
+        16,\n    \"total_tokens\": 21\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5af8a4b5a967c-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:46:38 GMT
-      ETag:
-      - W/"1f9-1hFx0u+KUv9cECFjy6AkugsnoCo"
-      Retry-After:
-      - '2'
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0c34ac05ce44-SJC
       content-length:
-      - '505'
+      - '555'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:57:37 GMT
+      etag:
+      - W/"22b-QtNg5i+RR3SvOisOEJODhdZFvxc"
+      retry-after:
+      - '30'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - b717ca89-61e5-4437-8cd4-40c12f8f5524-noamzn
       x-api-call-end:
-      - '2025-01-31T00:46:38.646Z'
+      - '2025-05-06T19:57:37.787Z'
       x-api-call-start:
-      - '2025-01-31T00:46:37.236Z'
+      - '2025-05-06T19:57:37.466Z'
       x-api-received:
-      - '2025-01-31T00:46:37.207Z'
+      - '2025-05-06T19:57:37.454Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '2'
+      - '20'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '3'
+      - '599'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
-      - '2'
+      - '30'
+      x-request-id:
+      - nszf11o-zqrih-93bb0c34ac05ce44
     status:
       code: 200
       message: OK

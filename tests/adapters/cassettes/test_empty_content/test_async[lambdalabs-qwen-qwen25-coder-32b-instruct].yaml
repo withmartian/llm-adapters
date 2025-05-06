@@ -16,7 +16,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,7 +26,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,30 +39,30 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-8541dc6a-5235-4bd8-bd29-3fa92e7d1177","object":"chat.completion","created":1742234984,"model":"qwen25-coder-32b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like your message got cut off. Could you please provide more details
-        or clarify what you need assistance with?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":35,"completion_tokens":24,"total_tokens":59,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-fe2027ea-5d0f-49a7-9bce-14d065a232df","object":"chat.completion","created":1746555185,"model":"qwen25-coder-32b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It looks like your message got cut off. How can I assist you today? If you
+        have any questions or need information, feel free to let me know!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":35,"completion_tokens":35,"total_tokens":70,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e716a0c42f0ae-DFW
+      - 93ba7311d8f917f2-SJC
       content-length:
-      - '742'
+      - '770'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:09:44 GMT
+      - Tue, 06 May 2025 18:13:05 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=W23nHN442Soq5n6CquVwyXrRYJ1oX32Co2rBIiox49Q-1742234984-1.0.1.1-yYMf_ZEPSi2YWGU7rEXKmhhoeUYuzojIly1YadoDtpdsxBpG7AHUyZnriGtZOsToDjYEGfYYRtHdW_amfrgQtgZ9xu.mZhr6.wohD6YLCwY;
-        path=/; expires=Mon, 17-Mar-25 18:39:44 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=28St8HefXoFxfMYgjI_T9wX2MMwdGlfG0qRGsWIZaVQ-1746555185-1.0.1.1-lfB7YwEgdeXhbIicJQ1S0XG34wMNWm7TK3mxmfrj3l_K6sai96LVw7loM_L_w0aK5gZEkRVMTbQo3y0UH2zC2Ho_A9sDIUkugbOz49JBMXo;
+        path=/; expires=Tue, 06-May-25 18:43:05 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 8541dc6a-5235-4bd8-bd29-3fa92e7d1177
+      - fe2027ea-5d0f-49a7-9bce-14d065a232df
       x-response-time:
-      - '0.43'
+      - '0.947'
     status:
       code: 200
       message: OK

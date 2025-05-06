@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,31 +38,30 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"3ec141a39825472ea7eb4860f145ff1f","object":"chat.completion","created":1742235169,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"*The
-        human has greeted me with a simple \"Hi\". I should respond in kind with a
-        friendly greeting to establish a positive rapport.*\n\nHello! It''s nice to
-        meet you. How are you doing today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":43,"total_tokens":53,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-68182bc4-4a27-48fd-82d0-93c4772b187f","object":"chat.completion","created":1746561286,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I help you today? If you have any questions or need assistance, feel
+        free to ask."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":21,"completion_tokens":24,"total_tokens":45,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e75e339a92e69-DFW
+      - 93bb08068eab67a6-SJC
       content-length:
-      - '786'
+      - '706'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:12:49 GMT
+      - Tue, 06 May 2025 19:54:47 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=8D9Vk7OBwSWmQiTLkHqBSvsfYfXCOX1gantbhQ5bs3A-1742235169-1.0.1.1-vqLweNzVMy5EXl4lVLY6YHf.b.fjY72ohgxFGkn3ZBgejLl1oUtAc7cPEkaoVotv162pY0PA.YsZ2wylsbZn_A3X6PZvqsZ.XS7xF0C.aVU;
-        path=/; expires=Mon, 17-Mar-25 18:42:49 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=XtKgYc4szSjuABSQPqiWUC7LB6ReukglH5eS1STfpbE-1746561287-1.0.1.1-oIRrs_tDTopQ4Ks4DXA2eGttkMMumlxE4iMabBxiGvOfQZ4QdukXhpkAUKorwje7O7sPKgCpitOQm4dMbn9.hmVbIzlhajFCagaBPbyLeBk;
+        path=/; expires=Tue, 06-May-25 20:24:47 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 131a8abe-a0a9-4287-aef7-57d43147f442
+      - 68182bc4-4a27-48fd-82d0-93c4772b187f
       x-response-time:
-      - '1.939'
+      - '0.838'
     status:
       code: 200
       message: OK

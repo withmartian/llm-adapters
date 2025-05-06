@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"model":"deepseek-ai/DeepSeek-R1-Turbo","prompt":"Hi","stream":true,"max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '85'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - OpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "data: {\"id\": \"cmpl-ca2fec76f4a748a0a30e1998fc1f9a46\", \"object\":
+        \"text_completion\", \"created\": 1746555124, \"model\": \"deepseek-ai/DeepSeek-R1-Turbo\",
+        \"choices\": [{\"index\": 0, \"text\": \",\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": {\"prompt_tokens\": 2, \"total_tokens\": 3, \"completion_tokens\":
+        1, \"estimated_cost\": null}}\r\n\r\ndata: {\"id\": \"cmpl-db609431f0954a099a7892a22231c228\",
+        \"object\": \"text_completion\", \"created\": 1746555124, \"model\": \"deepseek-ai/DeepSeek-R1-Turbo\",
+        \"choices\": [{\"index\": 0, \"text\": \" what\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": {\"prompt_tokens\": 2, \"total_tokens\": 4, \"completion_tokens\":
+        2, \"estimated_cost\": null}}\r\n\r\ndata: {\"id\": \"cmpl-5deb1324d0bf4d86bdadfe25526cdb6f\",
+        \"object\": \"text_completion\", \"created\": 1746555124, \"model\": \"deepseek-ai/DeepSeek-R1-Turbo\",
+        \"choices\": [{\"index\": 0, \"text\": \" are you\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": {\"prompt_tokens\": 2, \"total_tokens\": 6, \"completion_tokens\":
+        4, \"estimated_cost\": null}}\r\n\r\ndata: {\"id\": \"cmpl-ce8fd5943566496392127dd5976d28e1\",
+        \"object\": \"text_completion\", \"created\": 1746555124, \"model\": \"deepseek-ai/DeepSeek-R1-Turbo\",
+        \"choices\": [{\"index\": 0, \"text\": \" looking for?\\n\\n\", \"logprobs\":
+        null, \"finish_reason\": \"length\"}], \"usage\": {\"prompt_tokens\": 2, \"total_tokens\":
+        9, \"completion_tokens\": 7, \"estimated_cost\": 2.3e-05}}\r\n\r\ndata: [DONE]\r\n\r\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/event-stream; charset=utf-8
+      Date:
+      - Tue, 06 May 2025 18:12:04 GMT
+      Transfer-Encoding:
+      - chunked
+      cache-control:
+      - no-store
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

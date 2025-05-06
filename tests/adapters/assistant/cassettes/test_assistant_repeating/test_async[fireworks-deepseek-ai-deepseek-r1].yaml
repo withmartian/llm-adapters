@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,58 +25,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"34427d56-d017-4a28-aed9-9f630bf517a8\",\"object\":\"chat.completion\",\"created\":1738285147,\"model\":\"accounts/fireworks/models/deepseek-r1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
-        the user has just sent \\\"Hi\\\" three times in a row. Each time, I responded
-        with \\\"Hello! How can I assist you today?\\\" Now they sent \\\"Hi\\\" again
-        for the fourth time. I need to figure out how to respond appropriately without
-        being repetitive.\\n\\nHmm, they might be testing if I notice the repetition
-        or checking for automated responses. Maybe they want to engage in a different
-        way or start a conversation but are unsure how. I should acknowledge their
-        greeting and encourage them to ask a question or share what they need help
-        with. But I need to keep it friendly and open-ended.\\n\\nI don't want to
-        use the exact same reply again, so maybe tweak the wording a bit. Offer assistance
-        in a slightly different manner to show I'm attentive. Something like, \\\"Hello
-        again! \U0001F60A How can I assist you today?\\\" Adding an emoji might make
-        it feel more personable. Let them know I'm here to help with whatever they
-        need, whether it's a question or just chatting. Yeah, that should work.\\n</think>\\n\\nHello
-        again! \U0001F60A How can I assist you today? Let me know if you need help
-        with anything\u2014whether it's a question, a chat, or something specific!\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":12,\"total_tokens\":267,\"completion_tokens\":255}}"
+      string: "{\"id\":\"f5d59f0c-82bc-4f75-9f36-75022bb81d8e\",\"object\":\"chat.completion\",\"created\":1746555062,\"model\":\"accounts/fireworks/models/deepseek-r1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nAlright,
+        the user keeps saying \\\"Hi\\\" repeatedly. Let me try to be engaging and
+        maybe add a touch of humor.\\n\\nMaybe acknowledge the multiple greetings
+        and ask how I can assist them today. Keep it friendly and open-ended to encourage
+        them to share what they need help with.\\n</think>\\n\\nHello again! \U0001F44B
+        It looks like we're having a greetings loop\u2014how about I help you with
+        something specific today? \U0001F60A Let me know!\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":12,\"total_tokens\":105,\"completion_tokens\":93}}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c1d34b8feb22-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 00:59:11 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=5462.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba700e9902fa8e-SJC
       content-length:
-      - '1455'
+      - '732'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:11:03 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -86,11 +69,17 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '4.965'
-      fireworks-speculation-generated-tokens:
-      - '142'
+      - '1.314'
+      fireworks-server-time-to-first-token:
+      - '0.311'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=1624.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '4975'
+      - '1316'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -106,7 +95,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59988'
       x-request-id:
-      - 34427d56-d017-4a28-aed9-9f630bf517a8
+      - f5d59f0c-82bc-4f75-9f36-75022bb81d8e
     status:
       code: 200
       message: OK

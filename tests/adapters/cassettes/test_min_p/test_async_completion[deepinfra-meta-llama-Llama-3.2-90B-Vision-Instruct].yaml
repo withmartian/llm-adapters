@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "meta-llama/Llama-3.2-90B-Vision-Instruct", "prompt": "Hi"}'
+    body: '{"model":"meta-llama/Llama-3.2-90B-Vision-Instruct","prompt":"Hi"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '69'
+      - '66'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,55 +25,59 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-2e38929f96324034b2d405c44dcdd4f5\",\"object\":\"text_completion\",\"created\":1734145878,\"model\":\"meta-llama/Llama-3.2-90B-Vision-Instruct\",\"choices\":[{\"index\":0,\"text\":\"package
-        and Quiz Me!\\nWhat\u2019s comedians favorite type of music? (horse-yoke)
-        of corse!\\nWhy did the music go to the doctor? \_It was feeling a little
-        flat!\\nWhy couldn't the bicycle stand up by itself? Because it was 2-tired.\\nQuiz
-        Me!\\nWhat is a word that starts with the letter E, ends with the letter E,
-        but only has one letter in it?\\nExtend Yourself... A LONG time\\n10 awesome
-        wordplay questions\\nHowdy Word Search fans and language lovers!\\nToday,
-        I'd like to introduce you to Word Search Pro, a dynamic tool for creating
-        and solving word search puzzles. As an bonus, I'll share 10 awesome wordplay
-        questions that are sure to challenge and entertain you! \\nHere's the Word
-        Search Pro: JSWordSearchMaker**\\nAt the Word Search Pro, type a word or phrase
-        for the theme of your puzzle, and add a list of words in a text file (line
-        chess separated). The tool will generate a printable and soluble word search
-        puzzle in seconds!\\n\\nMore than just fun, word searches can help improve
-        your brain health by increasing \\\"processing speed, executive functions,
-        and working memory.\\\"**\\nSo without further ado, here are the 10 amazing
-        wordplay questions to exercise your linguistic skills:\\nWhat has a head,
-        a tail, but no body? (Answer: A coin.)\\n\\nWhich letter of the alphabet has
-        the most water? Answer: C.)\\n\\nWhat starts with an E, ends with an E, but
-        only contains one letter?\\n\\nAll these are place names, which letter would
-        you get if you changed 'hot' to 'cold'? Answer: From (Bath) to (Bach).\\n\\nWhat
-        is always coming but never arrives? (Answer: Tomorrow.)\\n\\nWhat is full
-        of holes but still holds water? (Answer: A sponge.)\\n\\nWhat has keys but
-        can't open locks? (Answer: A piano.)\\n\\nWhat has a foot on each side but
-        no legs? Answer: A compass.)\\n\\nMultiple choice:, which word in English
-        has two consecutive duos of double letters in it? (Answer: Bookkeeper.)\\n\\nWhat
-        has a face, two hands but no arms or legs? Answer: A clock.)\\n\\nQuiz me?\\n\\n
-        If I had a dollar for every dollar I ever lost I would be rich by now!\\n\\nQuestion:
-        What do Spiders usually do when it\u2019s raining?\\nDancing is in my blood\\nbut
-        when it rains, I think I'd rather be cashed seller better wardrobe check!\\n\\nAnswer:
-        \\\"Spiders seek ~\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":513,\"completion_tokens\":512,\"estimated_cost\":0.00020515000000000003}}"
+      string: '{"id":"cmpl-RRlOGW2zztw6jKKmIZ8zNvIF","object":"text_completion","created":1746563157,"model":"meta-llama/Llama-3.2-90B-Vision-Instruct","choices":[{"index":0,"text":"#Question\nHow
+        does radiolysis of water influence seawater chemistry?\nRadiolysis of water
+        is a chemical reaction caused by high-energy radiation, such as gamma rays
+        or ultraviolet (UV) light, which splits water molecules (H2O) into hydrogen
+        (H2) and oxygen (O2) or other reactive compounds. In seawater, radiolysis
+        can occur due to the presence of naturally occurring radioactive substances
+        like radium, thorium, and uranium, as well as human-made radioactive contaminants.
+        This process can affect seawater chemistry in several ways:\n\n1. **Oxidation
+        of Organic Matter**: The reactive oxygen species (ROS) produced during radiolysis
+        can oxidize organic matter in seawater, leading to the breakdown of complex
+        organic compounds into simpler substances. This can affect the carbon cycle
+        in the ocean and potentially alter the food web.\n\n2. **Production of Hydrogen
+        Peroxide**: Radiolysis can produce hydrogen peroxide (H2O2), a strong oxidant
+        that can further react with organic matter, trace metals, and other substances
+        in seawater. This can lead to the formation of reactive oxygen species and
+        affect the redox state of seawater.\n\n3. **Alteration of Redox Conditions**:
+        The introduction of oxidants like hydrogen peroxide and superoxide can alter
+        the redox conditions in seawater, influencing the speciation and availability
+        of nutrients and trace metals. This can have implications for biological productivity
+        and the biogeochemical cycling of elements.\n\n4. **Impact on Marine Life**:
+        While the effects of radiolysis on marine life are complex and not fully understood,
+        the alteration of seawater chemistry could potentially stress certain organisms
+        or communities. However, the natural levels of radiolysis are generally thought
+        to be low enough not to have a significant direct impact on marine ecosystems.\n\n5.
+        **Influence on Sediment Chemistry**: In sediments, radiolysis can affect the
+        chemistry of pore waters, influencing the availability of nutrients and metals
+        for benthic organisms and the early diagenesis of organic matter.\n\nIn summary,
+        radiolysis of water can influence seawater chemistry through the production
+        of reactive species, alteration of redox conditions, and the potential to
+        affect marine life and sediment chemistry. However, the extent to which these
+        effects are significant on a large scale is subject to ongoing research.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":474,"completion_tokens":473,"estimated_cost":0.00018955000000000003}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2546'
+      - '2683'
       Content-Type:
       - application/json
       Date:
-      - Sat, 14 Dec 2024 03:11:18 GMT
+      - Tue, 06 May 2025 20:25:57 GMT
       server:
       - uvicorn
       x-robots-tag:

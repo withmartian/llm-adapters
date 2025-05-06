@@ -15,7 +15,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - OpenAI/Python 1.68.2
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,7 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.68.2
+      - 1.76.0
       x-stainless-read-timeout:
       - '600.0'
       x-stainless-retry-count:
@@ -38,83 +38,54 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: 'data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"Hello"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"!"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        How"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        can"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        I"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        help"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        you"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        today"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"?"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VNiq2CecXUcKiNxh6vw0DZqJ3P","object":"chat.completion.chunk","created":1744834717,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{},"finish_reason":"stop"}]}
-
-
-        data: [DONE]
-
-
-        '
+      string: "{\n    \"error\": {\n        \"message\": \"Request too large for o3
+        in organization org-EohclM7n5UCFBEOi5KYeiEb4 on tokens per min (TPM): Limit
+        0, Requested 3. The input or output tokens must be reduced in order to run
+        successfully. Visit https://platform.openai.com/account/rate-limits to learn
+        more.\",\n        \"type\": \"tokens\",\n        \"param\": null,\n        \"code\":
+        \"rate_limit_exceeded\"\n    }\n}\n"
     headers:
-      access-control-expose-headers:
-      - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93165f762d5a317b-TBS
+      - 93bb10dddf6beb2c-SJC
+      content-length:
+      - '393'
       content-type:
-      - text/event-stream; charset=utf-8
+      - application/json; charset=utf-8
       date:
-      - Wed, 16 Apr 2025 20:18:38 GMT
-      openai-organization:
-      - martian-4
-      openai-processing-ms:
-      - '661'
-      openai-version:
-      - '2020-10-01'
+      - Tue, 06 May 2025 20:00:48 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=jt1_Zwc8Cl0ukEoIsMzHaTa9Hq2EtsWYG26Uyx3y3E0-1744834718-1.0.1.1-Ki_jCuE4NZ_KFJ6IetYstl2XmfroFeJyjS_5BEQdxKworDjrlSaYY6ShnaE9kmX_OdtAOn6c55CArCnYwKWBEhlBfR2629AA0Jh4AP48kWg;
-        path=/; expires=Wed, 16-Apr-25 20:48:38 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=JQOYOApIGcQ8xNwHNcnsFW0dI9P1a5hb5yXY6MOzK6M-1746561648-1.0.1.1-oyFG6GLnU2gdhBVdb5Qjlb8RxPZYrTWTrswyg7HpEts3imhJ6UnwPR7AzyZt.Tl0GKm290Cn7FwEROPduQmijePfYFGd6O4fPaA8gu0kNUs;
+        path=/; expires=Tue, 06-May-25 20:30:48 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=z3i03VYw8mZBj0K9wOJYAHcC0eXc8cOQQrp0QFd04_0-1744834718024-0.0.1.1-604800000;
+      - _cfuvid=S9ooLbYCmqkJMQm_gFXcuwOAKzLUZsPGZgrSHAXWkvg-1746561648374-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      vary:
+      - Origin
       x-content-type-options:
       - nosniff
+      x-ratelimit-limit-requests:
+      - '0'
+      x-ratelimit-limit-tokens:
+      - '0'
+      x-ratelimit-remaining-requests:
+      - '0'
+      x-ratelimit-remaining-tokens:
+      - '0'
+      x-ratelimit-reset-requests:
+      - 0s
+      x-ratelimit-reset-tokens:
+      - 0s
       x-request-id:
-      - req_6a680fb1c56a5937521bb39920963691
+      - req_74b36c4b731bc4edaa3e7bdda4336788
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

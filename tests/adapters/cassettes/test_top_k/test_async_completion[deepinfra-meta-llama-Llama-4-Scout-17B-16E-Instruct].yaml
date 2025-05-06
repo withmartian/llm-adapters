@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Llama-4-Scout-17B-16E-Instruct","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '67'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RzNI3HFgFYvFAmXLufzyD2mL","object":"text_completion","created":1746562059,"model":"meta-llama/Llama-4-Scout-17B-16E-Instruct","choices":[{"index":0,"text":"
+        4. What is the value of x in the equation 2x + 5 = 11? A. 2 B. 3 C. 4 D. 5\n##
+        Step 1: Write down the given equation\nThe equation given is 2x + 5 = 11.\n\n##
+        Step 2: Subtract 5 from both sides of the equation to isolate the term with
+        x\nSubtracting 5 from both sides gives 2x = 11 - 5, which simplifies to 2x
+        = 6.\n\n## 3: Divide both sides by 2 to solve for x\nDividing both sides by
+        2 gives x = 6 / 2, which simplifies to x = 3.\n\nThe best answer is B.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":161,"completion_tokens":159,"estimated_cost":4.7860000000000006e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '779'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:07:39 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

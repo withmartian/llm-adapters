@@ -15,7 +15,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,50 +39,46 @@ interactions:
   response:
     body:
       string: !!binary |
-        YwBQGABA/G/NvHM5vfyzbiuk9OIQIMpacAS3Z+rmeUCa4A/7aCywsXT+fxtse5hItCjhiANNne7y
-        FsRkoQ3it8X57ooBZBRxkEyEl3mZhQf9eHq1b5Y3bbX/8Jr5/MSdTG+O9t8PWo9XFDCA7O9ESz+S
-        NKYYWMYWFLRy+ZFWxNEe9lqD8aDbHYP3uVU6Iw6KSx/2Gv1wifR9PQs7rU4/bHXCzlDlMLFGakcc
-        nwwAVlc9gPbB7xFHK7iLZmWoxIkfAVTZTBMHCeeM86LwFBCoGLsfcNCZOTMbOLMzSFHgHInOSixs
-        DW+VWOyOpDaunxYZcRR1lmHSfyko1q0VfUJrnDjIeVsSw/5nwLcH3braB1RWNi995G2qC0ccY8UW
-        eUrhcrt9UL9AgMKmOq1AkEQBdG3nzBZJIROtVCkb16JWxoJt1l5BQYX6oPXFpohPCsxJqUuvVRRh
-        yDZNUcVVeqIlYTYL/zh3Lxt5oyvioDcFIBwtnNd59GeKWFdlZR6EaFFnGftnAw==
+        YwDoGABA/N62vHM5/U5F1yxVO4vzaJiFYMmSsN6pc+cPpBOrxAaL0uzzAhng+25UhCOeTuf0+I0t
+        BXDZp8y9u/IAUiEJkIwDJ3OT1a5eHlpv1fNrv/+iHibtS74dRxPz8Hj1qeYdOvIA0n8JS2cp1LcY
+        6EoXFOLk8jMOSaA16PZ7ve5oMASfcx1yRgIUGVfr1nu1I9KPeVZrN9u9WrNdaw9UTmOtJFsS+PIA
+        YDWaAHQPfpsEmkezxK4MiQTxI4BKnTEJUGCtsi4oHB0RUm3s/hCgB14g5sUGHvRs10I5RFoV0blJ
+        6sb68CAjgaLKMq3UeqHB8j9ehH93ArV6a/mf1RokAbJOG0rK+PeAn7p0qwx2yZQ6N853OmVpbhR8
+        i+pcgKf+ikAKWmsNj/QEvyedaN3BAJKBjDm0TlV2G1Sh0iDqbNR/PIX6WOZTVURK5VykwISUbByH
+        flfDbM4pKrKSE5aCV2XwT7bii/tOcUkC9PLACGcL6zj3x6qIuDSlejb8RZVl3r9nAAM=
     headers:
-      CF-RAY:
-      - 918bb4d9fc7c1637-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 27 Feb 2025 22:45:41 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - __cf_bm=XPYxXzKzP6pz4ZEMx6VpGCF8L5KPMdOhl8J3IIsUmns-1740696341-1.0.1.1-v32CQPCAToPmsyzEWKkB0GHE7Nam1PpZw2VRx9ktIl2eOyxjRQz1ClFIrWZHIr2n7wsrG7f0HgT.2u74Yu4dlA;
-        path=/; expires=Thu, 27-Feb-25 23:15:41 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=jaWLyZchwsRBDZJWP5XZ8Ez0nZmlV0HOiKuRArch9FI-1740696341216-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
-      X-Content-Type-Options:
-      - nosniff
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93ba6e06cdacfa8e-SJC
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:09:39 GMT
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '1376'
+      - '1091'
       openai-version:
       - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=OQrV1uSZ.thFFqY4YIlxvBoM6UAaEf4BMKVKjw0Ie4U-1746554979-1.0.1.1-BwLLQaEiyoW1_RbPJmU.hLOcN9rGFwYBe4giOO5CECpfMhNmGHVAqxSsYsBAXHBgc3dsUe50wWJGkCynaoPNFuqqpshHdaGaaZ5Ai7jwoFQ;
+        path=/; expires=Tue, 06-May-25 18:39:39 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=L7dTh9tXdn9zPhO7va20apMaopm6za9jr32VCbCLab8-1746554979566-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
       x-ratelimit-limit-requests:
       - '10000'
       x-ratelimit-limit-tokens:
@@ -88,13 +86,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '9999'
       x-ratelimit-remaining-tokens:
-      - '1999981'
+      - '1999996'
       x-ratelimit-reset-requests:
       - 6ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_480f970562329940b573eca404ecc08c
+      - req_538195663ddd1472b4db969f064f45b3
     status:
       code: 200
       message: OK

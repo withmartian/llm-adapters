@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi, output simple json"}], "model":
-      "llama3.1-8b", "response_format": {"type": "json_object"}}'
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"llama3.1-8b","response_format":{"type":"json_object"}}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '137'
+      - '128'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,41 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-734fc5bb-d39f-4821-9838-d6f04f8a05be","choices":[{"finish_reason":"stop","index":0,"message":{"content":"{\"key\":\"value\"}","role":"assistant"}}],"created":1732322549,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":48,"completion_tokens":6,"total_tokens":54},"time_info":{"queue_time":2.946e-05,"prompt_time":0.002565906,"completion_time":0.002825571,"total_time":0.0211946964263916,"created":1732322549}}'
+      string: !!binary |
+        IcgHACAG09m030yKybTWPhDz0vc8duBWFkQQxmGAYTgPOiz0Gg66L7sTf39tmV9w6g99hYDUlTnN
+        21TEZJkRRhQxcV+o1JRFKeumkIK7VNfSJJ9AYGGvXgjXP8wzc8/dUS8Q8MrrBoKD9QWBEbRNJIQ/
+        DJCbB/zdMNY/N4QbNmvduuEEwbFONQLK16t/5XLJOM87gRF6UV0hcKuM1sorSTCvVT0hYJrKuZQX
+        XrgIAqf5wbPpl7Y+tqPXW262Z6WYFCkZlZLhtopcCQOCNQ51ykWgS6eE7tcFBO+8f2zHOm/5mdex
+        Xl4IihGQEQqG4DcBJurMSZD7uX72S7Mi/GF/1+/6mfu5RmAXxrhnXlhFVBDtEcxyw52YYTSOGWtE
+        AXzOvdJSC62VFFw4Xzw+TwMD
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '486'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6d2cda59152b-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:42:29 GMT
-      Via:
-      - 1.1 837cef1564d25613f261adcf22ed5632.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - jTvrQhgVtgwzSK7eFC12Npp0sYC7ZRjmf8u7Xh4CgEWTISLXHMDxCQ==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 18:09:03 GMT
+      inference-id:
+      - chatcmpl-bc706262-bc19-4cfa-a3ef-3218cee36c9c
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=HMPCrfrVj58_3R8x90gtrJ9Js1bf6T9paP6xmLp4C2A-1746554943-1.0.1.1-vxA9fzt2tz1kfogjkDHgxnH_D9zU3afoeHIaYD.p_nfjN_C6cHvymfbQ15j7i639foVMpu834r1M_cm6TXFJhIbkRBu9ajUwbPr0HkN2pUo;
+        path=/; expires=Tue, 06-May-25 18:39:03 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -70,15 +77,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14394'
+      - '14400'
       x-ratelimit-remaining-tokens-minute:
-      - '59604'
+      - '60000'
       x-ratelimit-reset-requests-day:
-      - '83850.2433309555'
+      - '21056.399260044098'
       x-ratelimit-reset-tokens-minute:
-      - '30.24333095550537'
+      - '56.3992600440979'
       x-request-id:
-      - jTvrQhgVtgwzSK7eFC12Npp0sYC7ZRjmf8u7Xh4CgEWTISLXHMDxCQ==
+      - 93ba6d2cda59152b-SJC
     status:
       code: 200
       message: OK

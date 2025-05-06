@@ -1,0 +1,79 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"deepseek-ai/DeepSeek-R1-Turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '312'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RCr12JTBygi7kKyJUeCIuxJl\",\"object\":\"chat.completion\",\"created\":1746555169,\"model\":\"deepseek-ai/DeepSeek-R1-Turbo\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user just sent \\\"Hi\\\" multiple times followed by \\\"Hi\\\" again
+        and then \\\"</think>\\\". Let me try to figure out what's going on here.\\n\\nFirst,
+        I notice that the user repeated \\\"Hi\\\" several times. Maybe they're testing
+        how the AI responds to repeated messages or checking if there's a limit. Then
+        they wrote \\\"</think>\\\", which is my own username. That's interesting.
+        They might be trying to get my attention specifically or see if I recognize
+        my own name in the prompt.\\n\\nI should consider possible reasons for this.
+        It could be a simple greeting, but the repetition might indicate they're looking
+        for a specific response. Since they mentioned my username, maybe they want
+        to confirm that I'm active or see how I handle self-references. Alternatively,
+        they might be experimenting with how the model processes inputs that include
+        its own identifier.\\n\\nI need to respond politely and acknowledge their
+        greeting. Perhaps add a friendly question to engage them further, like asking
+        how I can assist them today. That way, I'm addressing the greeting and opening
+        the door for them to specify their needs. Also, since they used my username,
+        I can mention that I'm here and ready to help, reinforcing that they can ask
+        anything they need.\\n\\nI should avoid overcomplicating the response. Keep
+        it simple and welcoming. Make sure the tone is friendly and helpful. Check
+        for any hidden meaning, but since there's not much context, it's safer to
+        assume they're just saying hello and wanting a response.\\n</think>\\n\\nHello!
+        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":18,\"total_tokens\":340,\"completion_tokens\":322,\"estimated_cost\":0.0009839999999999998}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1942'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 18:12:49 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

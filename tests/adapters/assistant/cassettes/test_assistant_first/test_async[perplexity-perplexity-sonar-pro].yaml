@@ -1,0 +1,82 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi\n\"\""}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '140'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "b96ffa1e-3fd9-4b82-9115-655993d199ad", "model": "sonar-pro",
+        "created": 1746554959, "usage": {"prompt_tokens": 5, "completion_tokens":
+        169, "total_tokens": 174, "search_context_size": "low"}, "citations": ["https://tandem.net/blog/20-greetings-in-english",
+        "https://www.grammarly.com/blog/vocabulary/greeting-words/", "https://en.amazingtalker.com/blog/en/english/47217/",
+        "https://eslinfo.com/basic-vocabulary-list-for-greetings-essential-phrases/",
+        "https://www.fluentu.com/blog/english/english-greetings-expressions/"], "object":
+        "chat.completion", "choices": [{"index": 0, "finish_reason": "stop", "message":
+        {"role": "assistant", "content": "Hi there! This simple greeting is one of
+        the most common informal ways to say hello in English. \"Hi\" is straightforward
+        and versatile, often used among friends, coworkers, and family members in
+        casual settings[1][3]. \n\nIt''s a quick and easy greeting that works in virtually
+        any informal situation. Unlike more formal greetings that might be used in
+        professional or business contexts, \"hi\" creates an immediate sense of familiarity
+        and ease in conversations.\n\nIf you''re looking to respond to a simple \"hi,\"
+        you could reply with:\n- Another \"hi\" or \"hello\"\n- \"Hey there\" or \"Hey,
+        how are you?\"\n- \"What''s up?\" or \"How''s it going?\"\n\nWhile \"hi\"
+        is informal, it''s widely accepted in many contexts and is one of the most
+        universally recognized English greetings[3]."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6d6b5d5467fc-SJC
+      content-length:
+      - '1493'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:09:19 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=xvSfXxPOO0C5EJz3YCr84dOQ4yo1F0ZiQPnS3kJDI4I-1746554959-1.0.1.1-q9P8.mj3qnDZL16E328oh153t0BimTKlX3gQnQXmPshjd9gnINm7M.By42y1Ups_0dU6ejwQpPzO40zT8qG0KrvQZdzH29RO1qGFzv_25GY;
+        path=/; expires=Tue, 06-May-25 18:39:19 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "wizardlm-2-8x22b",
-      "stream": true}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"wizardlm-2-8x22b","stream":true}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '94'
+      - '86'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,58 +25,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: 'data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null,"asr_results":null}],"usage":null}
+      string: 'data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"Hello"},"logprobs":null,"finish_reason":null}]}
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"Hello"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"!
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"!
         How"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
         can I assist"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
         you today?"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
         If you have"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
         any questions or"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
-        need information on"},"logprobs":null,"finish_reason":null}]}
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        need advice on"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
-        a specific topic"},"logprobs":null,"finish_reason":null}]}
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        a topic,"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":",
-        feel free"},"logprobs":null,"finish_reason":null}]}
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        feel free to"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
-        to ask."},"logprobs":null,"finish_reason":null}]}
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":"
+        ask."},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-4PPBva3MaxZCnxEgQqc9xZ","created":1733368924,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":""},"logprobs":null,"finish_reason":"stop"}]}
+        data: {"id":"chatcmpl-vfCXTYWJBgwrgyYc2dY7cW","created":1746561164,"model":"wizardlm-2-8x22b","choices":[{"index":0,"delta":{"content":""},"logprobs":null,"finish_reason":"stop"}]}
 
 
         data: [DONE]
@@ -85,22 +88,18 @@ interactions:
 
         '
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e8deef8b96e4-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-ray:
+      - 93bb050ea9fa7ae2-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Thu, 05 Dec 2024 03:22:04 GMT
-      Server:
+      date:
+      - Tue, 06 May 2025 19:52:44 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '75'
+      - '56'
     status:
       code: 200
       message: OK

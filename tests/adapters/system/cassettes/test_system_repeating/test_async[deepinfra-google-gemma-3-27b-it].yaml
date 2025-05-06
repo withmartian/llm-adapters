@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"google/gemma-3-27b-it"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '304'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-Razp87kOppMMT14gNYuYLCkq\",\"object\":\"chat.completion\",\"created\":1746555182,\"model\":\"google/gemma-3-27b-it\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi!
+        It seems like we're just saying \\\"Hi\\\" to each other. \U0001F604 Is there
+        anything I can help you with? Do you want to:\\n\\n* **Chat?** We can just
+        keep saying hi, or talk about something.\\n* **Play a game?** I can play simple
+        text-based games.\\n* **Ask a question?** I can try to answer it.\\n* **Just
+        test if I'm working?** (If so, success! I am!)\\n\\n\\n\\n\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":48,\"total_tokens\":153,\"completion_tokens\":105,\"estimated_cost\":2.5800000000000004e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '722'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 18:13:02 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

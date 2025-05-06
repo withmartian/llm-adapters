@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}, {"role": "user",
-      "content": "Hi"}], "model": "google/gemma-2-27b-it"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"google/gemma-2-27b-it"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '123'
+      - '113'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,58 +25,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cbfc91a39ebe4-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732318665,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+      string: "{\n  \"id\": \"nszcjs4-3NKUce-93bb016e0a80f997\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561016,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
-        4499217684623451600,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        14227002482559838000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
         {\n        \"role\": \"assistant\",\n        \"content\": \"How can I help
         you today? \U0001F60A\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
-        \ \"usage\": {\n    \"prompt_tokens\": 17,\n    \"completion_tokens\": 9,\n
-        \   \"total_tokens\": 26\n  }\n}"
+        \ \"usage\": {\n    \"prompt_tokens\": 16,\n    \"completion_tokens\": 9,\n
+        \   \"total_tokens\": 25\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6cbfc91a39ebe4-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 22 Nov 2024 23:37:45 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb016e0a80f997-SJC
       content-length:
-      - '510'
+      - '522'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:50:16 GMT
       etag:
-      - W/"1fe-Ufwv5vcZ6CLHRgMMGdurU0RGf/g"
+      - W/"20a-vJX6/6MS3t4aDKVFGyjJJ2daXzk"
       retry-after:
-      - '2'
+      - '1'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 6d51100d-2efd-4101-9878-47438f4a61f6-noamzn
       x-api-call-end:
-      - '2024-11-22T23:37:45.412Z'
+      - '2025-05-06T19:50:16.716Z'
       x-api-call-start:
-      - '2024-11-22T23:37:45.159Z'
+      - '2025-05-06T19:50:16.272Z'
       x-api-received:
-      - '2024-11-22T23:37:45.154Z'
+      - '2025-05-06T19:50:16.263Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -87,11 +88,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '199'
+      - '198'
       x-ratelimit-remaining-tokens:
-      - '100000'
+      - '99234'
       x-ratelimit-reset:
-      - '2'
+      - '1'
+      x-request-id:
+      - nszcjs4-3NKUce-93bb016e0a80f997
     status:
       code: 200
       message: OK

@@ -16,7 +16,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,62 +26,59 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"ee20e35c-aa88-49f5-b7ec-2647d713ef09\",\"object\":\"chat.completion\",\"created\":1738793497,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        It looks like your message might be incomplete. How can I assist you today?
-        \U0001F60A\",\"reasoning_content\":\"Okay, the user just said \\\"Hi\\\" again.
-        I responded with \\\"Hi\\\" the first time, and now they sent an empty message
-        with just quotes. Hmm, maybe they're testing something or there was a typo.
-        Let me check the context.\\n\\nThey might have intended to send another message
-        but accidentally hit enter too soon. Or perhaps they're trying to see how
-        I handle empty inputs. I should acknowledge the empty message and prompt them
-        to clarify or provide more information. Keeping it friendly and helpful is
-        key here. Let me ask how I can assist them today to keep the conversation
-        going.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":12,\"completion_tokens\":143,\"total_tokens\":155,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":121},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":12},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+      string: "{\"id\":\"ab586370-58c6-4a70-b951-ee2aff6e0c0e\",\"object\":\"chat.completion\",\"created\":1746554932,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        again! How can I help you today? \U0001F60A\",\"reasoning_content\":\"Okay,
+        the user just sent \\\"Hi\\\" again. Let me check the history.\\n\\nWait,
+        they said \\\"Hi\\\" first, then I responded with \\\"Hi! How can I assist
+        you today?\\\" Then the user sent an empty message with just quotation marks.
+        Now they sent \\\"Hi\\\" once more. \\n\\nHmm, maybe the empty message was
+        a mistake or a typo. The user might have accidentally sent the quotes without
+        any text. Now they're trying again with a proper \\\"Hi\\\". \\n\\nI should
+        acknowledge their greeting and invite them to ask for help. Keep it friendly
+        and open. Maybe add a smiley to keep the tone positive. Let them know I'm
+        here to help with whatever they need. \\n\\nI need to make sure not to mention
+        the empty message unless they bring it up. Focus on being helpful and welcoming.
+        Respond in a way that encourages them to state their request or question.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":12,\"completion_tokens\":197,\"total_tokens\":209,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":183},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":12},\"system_fingerprint\":\"fp_5417b77867_prod0425fp8\"}"
     headers:
-      CF-RAY:
-      - 90d63cbdb8e4cfe9-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 22:11:37 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESTIME=1738793493185; path=/
-      - HWWAFSESID=86dafc7763514d1d01; path=/
-      - __cf_bm=G2w7GdbK8bPA.IZG3RTfrYGduS_Er1_fS7jphpYfNSA-1738793497-1.0.1.1-AdjMdXknmBQDDGZ2ViAI_NnIq8mbunOSIfGgut3jrkqSC0TpZcAhaRHgH8JoLlNUosaALITVQbbL3bdgk4Zssw;
-        path=/; expires=Wed, 05-Feb-25 22:41:37 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93ba6ce9a8066896-SJC
       content-length:
-      - '1177'
+      - '1385'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:08:53 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=RFJWQP6jbx0.p84PgxpLId._..94RK1S4bNf37MhzPE-1746554933-1.0.1.1-fIKa0pvktLygajB.COZeQV5ndx73jP1gExwZQPerpUDHGb8o3BcMfzl64j.t57N1jMGVlyxq6cndfJrasO88Lgalr85Hv_BFFdKkYqCmq7w;
+        path=/; expires=Tue, 06-May-25 18:38:53 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - 0865d6e0d1e6379e1850dea2663c365b
+      - d27ce9222229ccbe19513e7a2db1fe37
     status:
       code: 200
       message: OK

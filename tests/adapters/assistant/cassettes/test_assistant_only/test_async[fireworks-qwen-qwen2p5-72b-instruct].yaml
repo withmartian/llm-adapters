@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "accounts/fireworks/models/qwen2p5-72b-instruct"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"accounts/fireworks/models/qwen2p5-72b-instruct"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '113'
+      - '107'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,62 +25,74 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"27363df2-fa9f-4d9b-8dde-41dd437f3968","object":"chat.completion","created":1732323036,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? I''m here to help with any questions or tasks
-        you might have. Whether it''s information lookup, problem-solving, or creative
-        ideas, just let me know!"},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":72,"completion_tokens":42}}'
+      string: '{"id":"2f6f47f2-6b88-4560-bd01-289e4c243565","object":"chat.completion","created":1746561217,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
+        Qwen, your helpful assistant from Alibaba Cloud. How can I assist you today?
+        Whether you have questions about technology, need help with a specific task,
+        or just want to chat about something interesting, I''m here to help!"},"finish_reason":"stop"}],"usage":{"prompt_tokens":27,"total_tokens":76,"completion_tokens":49}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8e6d2a7bfd9196bf-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:50:36 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=1195.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0655fdf415ff-SJC
       content-length:
-      - '493'
+      - '536'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:53:38 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
-      - '30'
+      - '27'
       fireworks-sampling-options:
       - '{"max_tokens": 2048, "temperature": 1.0, "top_k": 0, "top_p": 1.0, "min_p":
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '1.063'
+      - '0.796'
+      fireworks-server-time-to-first-token:
+      - '0.119'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=1403.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1064'
+      - '799'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59973'
       x-request-id:
-      - 27363df2-fa9f-4d9b-8dde-41dd437f3968
+      - 2f6f47f2-6b88-4560-bd01-289e4c243565
     status:
       code: 200
       message: OK

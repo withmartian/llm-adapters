@@ -1,0 +1,88 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "35d8a184-cc77-474c-8a4f-a7cd743b9680", "model": "sonar-pro",
+        "created": 1746561492, "usage": {"prompt_tokens": 1, "completion_tokens":
+        298, "total_tokens": 299, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "\"Hi\" is a common informal greeting
+        in the English language, more casual than \"hello\"[2]. It''s an appropriate
+        greeting in nearly all circumstances except the most formal ones, such as
+        if you were meeting royalty[2]. \n\nThe word \"hi\" is versatile and widely
+        used, especially in casual social interactions. When walking through a small
+        town, you might notice many people greeting each other with a simple \"hi\"[2].
+        According to historical records, the first documented mention of \"hi\" attributes
+        it to a Kansas Native American in the 1800s[2].\n\nPhonetically, \"hi\" is
+        pronounced as [hahy][1]. Beyond its use as a greeting, \"hi\" can also function
+        as an informal, simplified spelling of \"high\" in certain contexts, such
+        as in \"hi fidelity\"[1].\n\nIn other languages and contexts, \"hi\" carries
+        different meanings. For example:\n\n- In Basque, \"hi\" is a very informal
+        pronoun used only between close friends or family members[5]\n- It appears
+        in various cultural references, including:\n  - \"Hi and Lois\" (a comic strip
+        character)\n  - \"Hi Records\" (a Memphis soul and rockabilly music label)\n  -
+        \"Hi\" (songs by various artists including Ofra Haza and Texas)[4]\n\nThe
+        word has become so fundamental to everyday communication that it''s often
+        included in educational materials, such as greeting songs for children learning
+        English[3]."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0cd91ead1975-SJC
+      content-length:
+      - '1951'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:58:12 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=7Om496NE.xoi7JFL4V57GxB.DYtBfpd8U82ibhZNUXs-1746561492-1.0.1.1-Ir9rdSM55ma5vo.FNHPmIQjwcwDgHGqMV2nRUfFkfA.1w8K5MC37MbUNlv7WGehI7CXy8wfqb9_RCKFXmMvno7sb88Vev9SlZEFEmZv.DOk;
+        path=/; expires=Tue, 06-May-25 20:28:12 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

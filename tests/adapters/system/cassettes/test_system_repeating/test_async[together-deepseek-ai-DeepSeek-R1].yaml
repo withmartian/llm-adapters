@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,76 +25,78 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a59b1c0b4816f9\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1738283561,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
-        [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n
-        \       \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHi!
-        How can I assist you today? \U0001F60A\",\n        \"tool_calls\": []\n      },\n
-        \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-        \ \"usage\": {\n    \"prompt_tokens\": 15,\n    \"total_tokens\": 31,\n    \"completion_tokens\":
-        16\n  }\n}"
+      string: "{\n  \"id\": \"nszdG5e-zqrih-93bb03ea9b9dce44\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561117,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        5391938384129124000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"<think>\\n\\n</think>\\n\\nHello!
+        It looks like you're saying \\\"Hi\\\" in different ways. \U0001F60A How can
+        I assist you today? Whether you have a question, need help with something,
+        or just want to chat, I'm here to help! Let me know what's on your mind.\",\n
+        \       \"tool_calls\": []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        9,\n    \"completion_tokens\": 61,\n    \"total_tokens\": 70\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a59b1c0b4816f9-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:32:41 GMT
-      ETag:
-      - W/"1f7-cyEwGO3zzZKpsICRQ3bDXtJSZQA"
-      Retry-After:
-      - '2'
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb03ea9b9dce44-SJC
       content-length:
-      - '503'
+      - '736'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:51:59 GMT
+      etag:
+      - W/"2e0-Zy/1B3PZEVyHOlLwrshmU6Tkyhw"
+      retry-after:
+      - '30'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 74807285-5a8d-456b-99b0-536232d35557-noamzn
       x-api-call-end:
-      - '2025-01-31T00:32:41.602Z'
+      - '2025-05-06T19:51:59.079Z'
       x-api-call-start:
-      - '2025-01-31T00:32:40.408Z'
+      - '2025-05-06T19:51:57.928Z'
       x-api-received:
-      - '2025-01-31T00:32:40.390Z'
+      - '2025-05-06T19:51:57.913Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '2'
+      - '20'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '3'
+      - '599'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
-      - '2'
+      - '30'
+      x-request-id:
+      - nszdG5e-zqrih-93bb03ea9b9dce44
     status:
       code: 200
       message: OK

@@ -1,9 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": ""}, {"role": "user", "content":
-      ""}, {"role": "assistant", "content": " "}, {"role": "user", "content": ""},
-      {"role": "assistant", "content": " "}, {"role": "user", "content": "\n"}], "model":
-      "meta-llama/Meta-Llama-3.1-70B-Instruct"}'
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"meta-llama/Meta-Llama-3.1-70B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -12,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '279'
+      - '286'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,27 +26,31 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-dea4691ebe79410082e71d9561a188c0","object":"chat.completion","created":1733368817,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems like you''re trying to communicate, but I''m not receiving any text.
-        Please feel free to type a message, and I''ll do my best to assist you!","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":65,"completion_tokens":35,"estimated_cost":2.0900000000000003e-05}}'
+      string: '{"id":"chatcmpl-RGxSoBa7frzJa1mWFCoJDLDF","object":"chat.completion","created":1746555127,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"I
+        see you''re trying to communicate, but it seems like there''s no text in the
+        quotes. Could you please type something, and I''ll be happy to help?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":31,"total_tokens":65,"completion_tokens":34,"estimated_cost":2.0730000000000003e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '524'
+      - '530'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:20:17 GMT
+      - Tue, 06 May 2025 18:12:07 GMT
       server:
       - uvicorn
       x-robots-tag:

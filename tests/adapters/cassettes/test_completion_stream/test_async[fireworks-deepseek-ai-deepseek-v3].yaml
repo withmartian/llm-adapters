@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,62 +25,44 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: 'data: {"id":"c232a003-9e9c-469b-8825-df7276a7f6d3","object":"text_completion","created":1738285209,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":",","logprobs":null,"finish_reason":null}],"usage":null}
-
-
-        data: {"id":"c232a003-9e9c-469b-8825-df7276a7f6d3","object":"text_completion","created":1738285209,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":"
-        I''m","logprobs":null,"finish_reason":null}],"usage":null}
-
-
-        data: {"id":"c232a003-9e9c-469b-8825-df7276a7f6d3","object":"text_completion","created":1738285209,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":"
-        Maria and I write about","logprobs":null,"finish_reason":null}],"usage":null}
-
-
-        data: {"id":"c232a003-9e9c-469b-8825-df7276a7f6d3","object":"text_completion","created":1738285209,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":"
-        my experiences","logprobs":null,"finish_reason":null}],"usage":null}
-
-
-        data: {"id":"c232a003-9e9c-469b-8825-df7276a7f6d3","object":"text_completion","created":1738285209,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":"","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}
-
-
-        data: [DONE]
-
-
-        '
+      string: "data: {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"M\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"CM\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"
+        \",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata: {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\u6A21\u62DF\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\u8D5B\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\u9898\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\u53CA\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\u7B80\u8981\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\u601D\u8DEF\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\\n\\n\",\"logprobs\":null,\"finish_reason\":null}],\"usage\":null}\n\ndata:
+        {\"id\":\"31cb4cba-e432-41d7-b388-65d1b8c807f7\",\"object\":\"text_completion\",\"created\":1746555106,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":12,\"completion_tokens\":10}}\n\ndata:
+        [DONE]\n\n"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c357cfc4eb1e-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 01:00:09 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=1048.0,total;dur=1067.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba711dea92270a-SJC
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:11:46 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -90,11 +72,15 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-time-to-first-token:
-      - '0.580'
-      fireworks-speculation-generated-tokens:
-      - '0'
+      - '0.342'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=882.0,total;dur=966.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '582'
+      - '345'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -110,7 +96,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59998'
       x-request-id:
-      - c232a003-9e9c-469b-8825-df7276a7f6d3
+      - 31cb4cba-e432-41d7-b388-65d1b8c807f7
     status:
       code: 200
       message: OK

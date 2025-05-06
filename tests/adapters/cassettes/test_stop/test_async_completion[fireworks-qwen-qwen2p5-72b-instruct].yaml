@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/fireworks/models/qwen2p5-72b-instruct", "prompt": "Hi",
-      "stop": "stop"}'
+    body: '{"model":"accounts/fireworks/models/qwen2p5-72b-instruct","prompt":"Hi","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '91'
+      - '86'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: "{\"id\":\"5abb71b6-ccc4-41c6-b46e-450745cec153\",\"object\":\"text_completion\",\"created\":1734126434,\"model\":\"accounts/fireworks/models/qwen2p5-72b-instruct\",\"choices\":[{\"index\":0,\"text\":\"
-        62\xB0 | Lo 49\xB0\\n\\nColumn: How Obama is\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":17,\"completion_tokens\":16}}"
+      string: '{"id":"f51aa68f-41fa-4aa5-8f76-5ea69dbff0bb","object":"text_completion","created":1746561154,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"text":",
+        does anyone can help? I would like to see a plot of following functions","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":17,"completion_tokens":16}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f1926833e65cf22-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:47:13 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=10388.0,total;dur=10404.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb04c71b85cf22-SJC
       content-length:
-      - '333'
+      - '367'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:52:33 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -73,25 +64,33 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.284'
+      - '0.216'
+      fireworks-server-time-to-first-token:
+      - '0.023'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=709.0,total;dur=762.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '10312'
+      - '219'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-limit-tokens-prompt:
-      - '30000'
+      - '60000'
       x-ratelimit-over-limit:
       - 'no'
       x-ratelimit-remaining-requests:
       - '59'
       x-ratelimit-remaining-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-remaining-tokens-prompt:
-      - '29999'
+      - '59999'
       x-request-id:
-      - 5abb71b6-ccc4-41c6-b46e-450745cec153
+      - f51aa68f-41fa-4aa5-8f76-5ea69dbff0bb
     status:
       code: 200
       message: OK

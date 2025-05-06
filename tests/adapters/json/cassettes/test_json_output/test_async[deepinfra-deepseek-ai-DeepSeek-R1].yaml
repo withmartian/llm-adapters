@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,28 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-e73e159295a74ce483f2295538e2483c","object":"chat.completion","created":1738285792,"model":"deepseek-ai/DeepSeek-R1","choices":[{"index":0,"message":{"role":"assistant","content":"[-3.9e-4,
-        1.59999, 234]","name":null,"tool_calls":[]},"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":26,"completion_tokens":18,"estimated_cost":5.1800000000000005e-05}}'
+      string: '{"id":"chatcmpl-R8atkSvRHZV6VxTJ0nyhean1","object":"chat.completion","created":1746555099,"model":"deepseek-ai/DeepSeek-R1","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wants a simple JSON. Let me think about what to include. They didn''t
+        specify any details, so I should probably create a basic example. Maybe a
+        person''s information? Like name, age, and city. That''s common. Let me check
+        the syntax. Keys in quotes, proper commas, and curly braces. Make sure there''s
+        no trailing commas. Alright, that should work. Let me put it together.\n</think>\n\n```json\n{\n  \"message\":
+        \"Hello! Here''s a simple JSON example:\",\n  \"data\": {\n    \"name\": \"John
+        Doe\",\n    \"age\": 30,\n    \"city\": \"New York\"\n  }\n}\n```","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":155,"completion_tokens":146,"estimated_cost":0.00032278}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '383'
+      - '937'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:09:52 GMT
+      - Tue, 06 May 2025 18:11:39 GMT
       server:
       - uvicorn
       x-robots-tag:

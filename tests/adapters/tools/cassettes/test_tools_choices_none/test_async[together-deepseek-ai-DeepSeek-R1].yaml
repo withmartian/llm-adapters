@@ -18,7 +18,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,66 +28,172 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5a097df4ecea4\",\n  \"error\": {\n    \"message\":
-        \"Internal server error\",\n    \"type\": \"server_error\",\n    \"param\":
-        null,\n    \"code\": null\n  }\n}"
+      string: "{\n  \"id\": \"nszgKF5-zqrih-93bb12768ce7645e\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561713,\n  \"model\": \"deepseek-ai/DeepSeek-R1\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        3544704875807335400,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"<think>\\nOkay,
+        the user wants me to generate a random number between 1 and 10 using specified
+        tools. Let me think about the different methods I can use.\\n\\nFirst, I need
+        to consider what tools are commonly available. Maybe they mean physical tools
+        or everyday items. Let's list some possibilities: a coin, dice, playing cards,
+        a deck of cards, a calculator, a digital tool like a random number generator
+        website, or even something like a book to pick a page number.\\n\\nWait, the
+        user didn't specify the exact tools, so maybe I should suggest a few methods
+        with different tools. Let me start with a coin. Since a coin has two outcomes,
+        flipping it multiple times can simulate binary choices. To get a number between
+        1-10, I can use binary digits. Let's see: 10 in binary is 1010, which is 4
+        bits. But 4 bits can go up to 15, so maybe flip the coin 4 times, convert
+        the result to a number, and if it's over 10, discard and flip again. That
+        could work, but might take a few tries.\\n\\nAlternatively, using a six-sided
+        die. Roll it once, but since it's only 1-6, maybe roll twice and add the numbers.
+        But that gives 2-12, which is a different range. Alternatively, use modulo
+        10. For example, roll a die twice: first roll for 1-6, second roll for 1-6.
+        Multiply the first by 5 and add the second, then take modulo 10 +1. Hmm, not
+        sure if that's fair. Maybe better to use a 10-sided die, but that's a specific
+        tool they might not have.\\n\\nPlaying cards: take a deck, assign each card
+        a value 1-10, ignoring face cards. Shuffle and draw one. That's straightforward.
+        But they need to have a deck and remove the face cards first.\\n\\nA calculator
+        or computer: most have a random number function. For example, using the RANDBETWEEN(1,10)
+        in Excel, or using an online tool. That's quick and easy if they have access.\\n\\nAnother
+        method: using a book. Open to a random page and take the last digit of the
+        page number. If it's 0, treat it as 10. But page numbers might not be random,
+        though.\\n\\nAlternatively, using a digital clock's seconds. Look at the current
+        second, which is 0-59, take the last digit and add 1 if it's 0. But that's
+        time-dependent and might not be truly random if the user tries to time it.\\n\\nWait,
+        the user said \\\"tools specified,\\\" but didn't specify which ones. Maybe
+        they want me to list several methods with different tools. Let me outline
+        a few methods with step-by-step instructions.\\n\\nFirst method: Using a coin.
+        Flip it four times to get a 4-bit binary number. Convert that to decimal,
+        add 1, and if it's over 10, repeat. For example, heads=1, tails=0. So HHTT
+        would be 1100, which is 12. 12 is over 10, so discard. Another flip might
+        give 0101, which is 5, so the number is 5.\\n\\nSecond method: Using a standard
+        die. Roll it twice. First roll determines the base: 1-2 for 1-5, 3-4 for 6-10,
+        5-6 reroll. Then the second roll gives 1-5, adding 0 or 5. But that's a bit
+        complicated. Alternatively, use a die and a coin. Roll the die for 1-6, flip
+        the coin for +0 or +5. If the coin is heads, add 5. So 1-6 becomes 1-6 or
+        6-11. But 11 is over 10, so if the result is 11, treat it as 6. Wait, that
+        might not be uniform. Maybe better to roll the die once, if it's 1-5, that's
+        the number. If it's 6, flip a coin: heads is 6, tails is 7. Wait, that's not
+        enough. Maybe this method isn't the best.\\n\\nThird method: Using a deck
+        of cards. Remove all cards except Ace (1) through 10. Shuffle and draw one.
+        The value is the number. That's simple and effective if they have a deck.\\n\\nFourth
+        method: Using a calculator's random function. For example, on a scientific
+        calculator, generate a random decimal between 0 and 1, multiply by 10, take
+        the integer part, add 1. So 0.534 *10 =5.34 \u21925 +1=6.\\n\\nFifth method:
+        Using a digital random number generator website. Just visit a site like random.org
+        and generate a number in the range.\\n\\nSixth method: Using a book. Open
+        to a random page, take the page number's last digit. If it's 0, use 10. If
+        the last digit is 1-9, that's the number. But page numbers might not be random,
+        especially in novels where page numbers are sequential. Maybe use a dictionary
+        or encyclopedia where pages are more random in content.\\n\\nSeventh method:
+        Using a clock. Note the current second (0-59). Take the last digit, add 1
+        if it's 0. For example, 35 seconds \u21925, 40 seconds \u21920 \u219210. But
+        this requires precise timing and might not be truly random if the user has
+        control over when to look.\\n\\nEighth method: Using a smartphone's voice
+        assistant. Ask Siri or Google Assistant to pick a number between 1 and 10.\\n\\nNinth
+        method: Using a 10-sided die (if available). Just roll it once.\\n\\nTenth
+        method: Using a computer's command line. For example, in Linux, use $ shuf
+        -i 1-10 -n 1.\\n\\nI should present a few of these methods clearly. Let me
+        pick the coin, die, deck of cards, calculator, and online tool as common tools.
+        Explain each step-by-step. Also, mention that some methods might require multiple
+        attempts if the initial result is out of range. Make sure the instructions
+        are easy to follow. Check for any errors in the logic, like ensuring uniform
+        distribution where possible. For example, the coin flip method with retries
+        ensures each number has equal chance, even if some results are discarded.
+        The deck of cards method is straightforward if they remove face cards. The
+        calculator method is reliable if they know how to use the function. The online
+        tool is the simplest if they have internet access. Alright, I think that's
+        a good selection. Now, structure the answer with each tool and steps.\\n</think>\\n\\nHere
+        are several methods to generate a random number between 1 and 10 using common
+        tools:\\n\\n---\\n\\n### **1. Using a Coin**  \\n**Steps**:  \\n1. Assign
+        **Heads = 1**, **Tails = 0**.  \\n2. Flip the coin **4 times** to create a
+        4-digit binary number (e.g., H, T, H, T \u2192 **1010**).  \\n3. Convert the
+        binary number to decimal (e.g., 1010 = 10).  \\n4. If the result is **1\u201310**,
+        that\u2019s your number. If it\u2019s **11\u201315**, discard and repeat.
+        \ \\n\\n---\\n\\n### **2. Using a Standard 6-Sided Die**  \\n**Steps**:  \\n1.
+        Roll the die once. If the result is **1\u20135**, that\u2019s your number.
+        \ \\n2. If you roll a **6**, roll again:  \\n   - **1\u20133**: Your number
+        is **6**.  \\n   - **4\u20136**: Your number is **7**.  \\n3. Repeat steps
+        1\u20132 for numbers **8\u201310** (or use a coin flip to add +0/+5 to a second
+        die roll).  \\n\\n---\\n\\n### **3. Using a Deck of Cards**  \\n**Steps**:
+        \ \\n1. Remove all cards except **Aces (1)** through **10s**.  \\n2. Shuffle
+        the remaining 40 cards thoroughly.  \\n3. Draw the top card. The card\u2019s
+        value (1\u201310) is your random number.  \\n\\n---\\n\\n### **4. Using a
+        Calculator**  \\n**Steps**:  \\n1. Use the **RAND** function (e.g., on a scientific
+        calculator).  \\n2. Multiply the decimal result by **10** (e.g., 0.734 \xD7
+        10 = 7.34).  \\n3. Take the integer part (**7**) and **add 1** (final result
+        = **8**).  \\n\\n---\\n\\n### **5. Online Tool (e.g., Random.org)**  \\n**Steps**:
+        \ \\n1. Visit [https://www.random.org](https://www.random.org).  \\n2. Use
+        the **Integer Generator** tool.  \\n3. Set **min = 1**, **max = 10**, and
+        generate your number.  \\n\\n---\\n\\nEach method ensures fairness, though
+        some require retries for out-of-range results. Choose the tool you have on
+        hand! \U0001F3B2\U0001F0CF\",\n        \"tool_calls\": []\n      }\n    }\n
+        \ ],\n  \"usage\": {\n    \"prompt_tokens\": 15,\n    \"completion_tokens\":
+        1923,\n    \"total_tokens\": 1938\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5a097df4ecea4-SJC
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '152'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:36:25 GMT
-      ETag:
-      - W/"98-RYKwa/HOy01ovGu2TyaWSjHvDxU"
-      Retry-After:
-      - '2'
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb12768ce7645e-SJC
+      content-length:
+      - '7746'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:02:22 GMT
+      etag:
+      - W/"1e42-mLPsRiqwaR19jtUY7zHcgB0zwcY"
+      retry-after:
+      - '30'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - d1f77067-58bd-47a1-8f79-6e3a32d76825-noamzn
+      x-api-call-end:
+      - '2025-05-06T20:02:22.473Z'
+      x-api-call-start:
+      - '2025-05-06T20:01:53.955Z'
       x-api-received:
-      - '2025-01-31T00:36:24.981Z'
+      - '2025-05-06T20:01:53.888Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '2'
+      - '20'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '3'
+      - '599'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
-      - '2'
+      - '30'
+      x-request-id:
+      - nszgKF5-zqrih-93bb12768ce7645e
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
 version: 1

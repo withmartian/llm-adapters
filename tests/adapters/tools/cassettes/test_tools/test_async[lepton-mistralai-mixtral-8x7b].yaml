@@ -1,10 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "mixtral-8x7b", "tools": [{"type":
-      "function", "function": {"description": "Generate random number", "name": "generate",
-      "parameters": {"type": "object", "properties": {"prompt": {"type": "string",
-      "description": "Random number like 5, 4, 3, 10, 11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"mixtral-8x7b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
     headers:
       accept:
       - application/json
@@ -13,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '392'
+      - '367'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -29,57 +28,57 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-C7CjApgDgzuQdX7VCEZ2YJ","object":"chat.completion","created":1733369203,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
-        \"Generate random number with specified tools in range 1-10: \\\\n\\\\nTool
+      string: '{"id":"chatcmpl-ZAMMcLco9wx3PYta3eDYyJ","object":"chat.completion","created":1746561633,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Generate random number with specified tools in the range of 1 to 10: \\\\n\\\\nTool
         1: Google Sheets \\\\n\\\\nProcedure: \\\\n1. Open Google Sheets\\\\n2. Click
-        on ''F5'' or ''Formulas'' > ''Random'' > ''Random number''\\\\n3. Set the
-        range to ''1'' and ''10''\\\\n4. Press Enter\\\\n\\\\nTool 2: Excel \\\\n\\\\nProcedure:
-        \\\\n1. Open Excel\\\\n2. Click on ''Formulas'' > ''Random'' > ''RANDBETWEEN''\\\\n3.
-        Set the range to ''1'' and ''10''\\\\n4. Press Enter\\\\n\\\\nTool 3: Python
-        \\\\n\\\\nProcedure: \\\\n1. Open Python\\\\n2. Import random library\\\\n3.
-        Use random.randint(1, 10)\\\\n\\\\nTool 4: Online Random Number Generator
-        \\\\n\\\\nProcedure: \\\\n1. Open your browser\\\\n2. Go to https://www.random.org/integers/\\\\n3.
-        Set the range to ''","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
-        \"Generate random number with specified tools in range 1-10: \\\\n\\\\nTool
+        on ''New''\\\\n3. In cell A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5.
+        The value generated is a random number between 1 and 10.\\\\n\\\\nTool 2:
+        Python \\\\n\\\\nProcedure:\\\\n1. Open your Python IDE\\\\n2. Type ''import
+        random''\\\\n3. Type ''random.randint(1,10)''\\\\n4. Press Enter\\\\n5. The
+        value generated is a random number between 1 and 10.\\\\n\\\\nTool 3: Excel
+        \\\\n\\\\nProcedure:\\\\n1. Open Excel\\\\n2. Click on ''New''\\\\n3. In cell
+        A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5. The value generated
+        is a random number between 1 and ","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate random number with specified tools in the range of 1 to 10: \\\\n\\\\nTool
         1: Google Sheets \\\\n\\\\nProcedure: \\\\n1. Open Google Sheets\\\\n2. Click
-        on ''F5'' or ''Formulas'' > ''Random'' > ''Random number''\\\\n3. Set the
-        range to ''1'' and ''10''\\\\n4. Press Enter\\\\n\\\\nTool 2: Excel \\\\n\\\\nProcedure:
-        \\\\n1. Open Excel\\\\n2. Click on ''Formulas'' > ''Random'' > ''RANDBETWEEN''\\\\n3.
-        Set the range to ''1'' and ''10''\\\\n4. Press Enter\\\\n\\\\nTool 3: Python
-        \\\\n\\\\nProcedure: \\\\n1. Open Python\\\\n2. Import random library\\\\n3.
-        Use random.randint(1, 10)\\\\n\\\\nTool 4: Online Random Number Generator
-        \\\\n\\\\nProcedure: \\\\n1. Open your browser\\\\n2. Go to https://www.random.org/integers/\\\\n3.
-        Set the range to ''"},"id":"call-FWN4gFoDY5K4yorYi96kQm","type":"function"}]},"logprobs":{"content":null},"finish_reason":"length","audio":null,"asr_results":null}],"usage":{"prompt_tokens":21,"total_tokens":277,"completion_tokens":256}}'
+        on ''New''\\\\n3. In cell A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5.
+        The value generated is a random number between 1 and 10.\\\\n\\\\nTool 2:
+        Python \\\\n\\\\nProcedure:\\\\n1. Open your Python IDE\\\\n2. Type ''import
+        random''\\\\n3. Type ''random.randint(1,10)''\\\\n4. Press Enter\\\\n5. The
+        value generated is a random number between 1 and 10.\\\\n\\\\nTool 3: Excel
+        \\\\n\\\\nProcedure:\\\\n1. Open Excel\\\\n2. Click on ''New''\\\\n3. In cell
+        A1 type ''=RANDBETWEEN(1,10)''\\\\n4. Press Enter\\\\n5. The value generated
+        is a random number between 1 and "},"id":"call-4uwXViSzzj7b93ZHKENmHK","type":"function"}]},"logprobs":{"content":null},"finish_reason":"length"}],"usage":{"prompt_tokens":21,"total_tokens":277,"completion_tokens":256}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0efb109ee944c-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:26:45 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb107fb8df15ef-SJC
       content-length:
-      - '1932'
+      - '1898'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:00:35 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1722'
+      - '1797'
     status:
       code: 200
       message: OK

@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo","prompt":"Hi","max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '85'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-R3PFS5nrwQRD1z3xlb3bkcOm","object":"text_completion","created":1746555095,"model":"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo","choices":[{"index":0,"text":"OO[in][][!!]Mon/tcmSee","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10,"estimated_cost":4.7000000000000005e-07}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '346'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 18:11:35 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

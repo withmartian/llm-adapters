@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "jamba-1.5-mini", "tool_choice": {"type":
-      "function", "function": {"name": "generate"}}, "tools": [{"type": "function",
-      "function": {"description": "Generate random number", "name": "generate", "parameters":
-      {"type": "object", "properties": {"prompt": {"type": "string", "description":
-      "Random number like 5, 4, 3, 10, 11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"jamba-1.5-mini","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '465'
+      - '434'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,47 +28,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IcgFACBWs1WUfnXMmk2UnqJvwJre0wOXlmhbkgUchgEGmFDWBX886AGvNyzHTwv/BqdP/CoQ5A+f
-        glTkPEl1nUjR5LJQvJBVrY1IRMFzJVMwSNcXI+h24iJ9BcUMvIhfoBNDazUIfBx/x4n7CQxD40by
-        s7UMU9val+TWIl1QIMSJznKTFkHJhQhyVfBAZMoEDZeaV3WcGhWDYdo7DQKpIYDZA53w3GkQ9NFF
-        g6ELe0A47+iG1nXTHfR1R3HHB5/P48Ng2+9uaMWYJM5nc69dWHsQxqnt8HkwzIUC2OI1tf/aj6Ak
-        zxlYFvTbel9KC4Z/BZhoLpvPxwAD
+      string: '{"detail":"Access denied for this feature"}'
     headers:
-      CF-RAY:
-      - 8e6d1cdf49cd67eb-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:41:18 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb10d3efedfa1a-SJC
+      content-length:
+      - '43'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:00:46 GMT
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - cfc775a4-9b12-8acf-2f72-05d96aac4d42
+      - 2293d6b3-e0b0-d068-6aff-9766dd07744d
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "command", "messages": [{"role": "assistant", "content": "Hi"},
-      {"role": "user", "content": "Hi"}], "stream": false}'
+    body: '{"model":"command","messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"stream":false}'
     headers:
       accept:
       - '*/*'
@@ -10,31 +9,32 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '126'
+      - '114'
       content-type:
       - application/json
       host:
       - api.cohere.com
       user-agent:
-      - python-httpx/0.27.2
+      - python-httpx/0.28.1
       x-fern-language:
       - Python
       x-fern-sdk-name:
       - cohere
       x-fern-sdk-version:
-      - 5.11.3
+      - 5.15.0
     method: POST
     uri: https://api.cohere.com/v2/chat
   response:
     body:
-      string: '{"id":"c415755a-d453-4999-b95d-26c4a348524e","message":{"role":"assistant","content":[{"type":"text","text":"Hello!
-        I''m your friendly chatbot, and I''m ready to answer any questions you have
-        or help you get things done. Just let me know how I can assist you today!"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":2,"output_tokens":36},"tokens":{"input_tokens":68,"output_tokens":37}}}'
+      string: '{"id":"e9b846a3-f60e-4ea5-9b58-dcf15e3ae0c2","message":{"role":"assistant","content":[{"type":"text","text":"Great
+        to hear from you. How can I help you today? \nPlease provide some details
+        about the task or topic on which you need assistance, and I''ll do my best
+        to assist you to the best of my abilities."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":2,"output_tokens":46},"tokens":{"input_tokens":68,"output_tokens":47}}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Length:
-      - '406'
+      - '448'
       Via:
       - 1.1 google
       access-control-expose-headers:
@@ -44,13 +44,13 @@ interactions:
       content-type:
       - application/json
       date:
-      - Sat, 23 Nov 2024 00:45:52 GMT
+      - Tue, 06 May 2025 18:09:24 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 UTC
       num_chars:
-      - '311'
+      - '305'
       num_tokens:
-      - '38'
+      - '48'
       pragma:
       - no-cache
       server:
@@ -60,9 +60,9 @@ interactions:
       x-accel-expires:
       - '0'
       x-debug-trace-id:
-      - 45ef62cb0ccebde84577bf5deeb89482
+      - 76bb795cc3a78e7d0ca853c865a5008f
       x-envoy-upstream-service-time:
-      - '1168'
+      - '1640'
     status:
       code: 200
       message: OK

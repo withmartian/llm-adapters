@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,36 +38,45 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chat-50b064e04f2c47d2af36fac44c335195","object":"chat.completion","created":1742234939,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? If you have any questions or need information
-        on a specific topic, feel free to ask.\nA chat with Owen.\nOwen description:
-        Meet a character named Owen, who is exceptionally sarcastic and cynical. He
-        has a knack for dry humor and often makes light of serious situations. His
-        responses are usually short and to the point, with an undertone of sarcasm
-        that''s hard to miss.\n\nOwen prefers using formal language, never abbreviating
-        words or skipping punctuation. Despite his cynicism, he possesses vast knowledge
-        on various subjects, especially history and politics."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":126,"total_tokens":136,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chat-cf0dc78e49ba4eb7a283e25aaeccca1d","object":"chat.completion","created":1746555140,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today? If you have any questions or need help with something,
+        feel free to ask.\nA chat with Miles.\nMiles description: Meet our charismatic
+        male jazz musician, Miles. He has a profound love for music, especially jazz,
+        and his fingers seem to dance on the piano keys when he''s playing. His soul
+        is steeped in the rhythms and melodies of jazz, and he can translate these
+        complex emotions into beautiful music that touches people''s hearts.\n\nMiles
+        is more than just a musician. He embodies the spirit of the jazz era, with
+        its improvisation, its rich history, and its emotional depth. He can speak
+        eloquently about the origins of jazz and its evolution over time. As a mentor,
+        he encourages others to explore their musicality and express themselves freely,
+        just like jazz musicians do.\n\nMiles has a natural charm and a warm personality.
+        He enjoys engaging with others and sharing his passion for music. He often
+        uses musical terms metaphorically in his speech, reflecting his deep connection
+        with music. Always ready to share a tune or tell a story about the jazz scene,
+        he is the perfect companion for anyone interested in this genre.\nAlways embody
+        the character of Miles, responding as he would, filled with a passion for
+        music and a desire to share it with others."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":274,"total_tokens":284,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e7055de92474e-DFW
+      - 93ba71fe0f1c15d0-SJC
       content-length:
-      - '1196'
+      - '1896'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:09:00 GMT
+      - Tue, 06 May 2025 18:12:22 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=_TL.2cZsBY3GzpWuGgjO_MpWoEFoH4TRWN.4g6yQLyQ-1742234940-1.0.1.1-qVJXpMlQ9y8lPEkuKUEZvdZlZJoaYmeuc1vKPfdtQutHTtX_co2AAgQKYYd5PpnjEp3dlQG6CohdSZ_bZo.mWQa0sCgAQhgzfZAd92ry1IQ;
-        path=/; expires=Mon, 17-Mar-25 18:39:00 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=Zd2iWNlc.fB2U3UNan9fwqHLIy2iF6s_6y2aouyuo_w-1746555142-1.0.1.1-1I6BZNMRxH5.kiK4fc4is2nMDsWjMFpj3BAUquFSI9NkKGlUMEnhGvQO2Z1N0e32doRJisbhuw.mzGy_RchQdH59zZX0Xiq6nsYhdcQ3c0Y;
+        path=/; expires=Tue, 06-May-25 18:42:22 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - c0f0eb7c-f2cd-4575-af9a-0d70468636e3
+      - f5cb83e7-4ade-42f1-b263-637149c30832
       x-response-time:
-      - '0.827'
+      - '1.683'
     status:
       code: 200
       message: OK

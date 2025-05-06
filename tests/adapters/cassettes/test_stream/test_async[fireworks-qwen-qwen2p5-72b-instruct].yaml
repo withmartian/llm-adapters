@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "accounts/fireworks/models/qwen2p5-72b-instruct",
-      "stream": true}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"accounts/fireworks/models/qwen2p5-72b-instruct","stream":true}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '124'
+      - '116'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,35 +25,62 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: 'data: {"id":"abd2eab9-5a8c-4289-a0e3-aef4dd660c1a","object":"chat.completion.chunk","created":1732323199,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null}],"usage":null}
+      string: 'data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"abd2eab9-5a8c-4289-a0e3-aef4dd660c1a","object":"chat.completion.chunk","created":1732323199,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"Hello!"},"finish_reason":null}],"usage":null}
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"Hello!"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"abd2eab9-5a8c-4289-a0e3-aef4dd660c1a","object":"chat.completion.chunk","created":1732323199,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
-        How can I"},"finish_reason":null}],"usage":null}
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        It''s nice to"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"abd2eab9-5a8c-4289-a0e3-aef4dd660c1a","object":"chat.completion.chunk","created":1732323199,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
-        assist you today"},"finish_reason":null}],"usage":null}
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        meet you. How"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"abd2eab9-5a8c-4289-a0e3-aef4dd660c1a","object":"chat.completion.chunk","created":1732323199,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"?"},"finish_reason":null}],"usage":null}
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        can I assist you"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"abd2eab9-5a8c-4289-a0e3-aef4dd660c1a","object":"chat.completion.chunk","created":1732323199,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":40,"completion_tokens":10}}
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        today? Whether you"},"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        have questions, need"},"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        some advice, or"},"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        just want to chat"},"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":",
+        feel free to"},"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{"content":"
+        let me know!"},"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3f9165c3-8db8-4721-ac8d-092ed7db48a0","object":"chat.completion.chunk","created":1746561147,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":69,"completion_tokens":39}}
 
 
         data: [DONE]
@@ -62,30 +88,18 @@ interactions:
 
         '
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8e6d2e79ace87e2a-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:53:19 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=190.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb049d8bb524d6-SJC
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:52:27 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -95,11 +109,31 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-time-to-first-token:
-      - '0.088'
+      - '0.024'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=336.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '90'
+      - '27'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59970'
       x-request-id:
-      - abd2eab9-5a8c-4289-a0e3-aef4dd660c1a
+      - 3f9165c3-8db8-4721-ac8d-092ed7db48a0
     status:
       code: 200
       message: OK

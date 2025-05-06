@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"max_tokens": 4096, "messages": [{"content": "\"\"", "role": "user"},
-      {"content": "\"\"", "role": "assistant"}, {"content": "\"\"", "role": "user"},
-      {"content": "\"\"", "role": "assistant"}, {"content": "\"\"", "role": "user"}],
-      "model": "claude-3-5-sonnet-20240620", "stream": false, "system": "\"\""}'
+    body: '{"max_tokens":8192,"messages":[{"content":"\"\"","role":"user"},{"content":"\"\"","role":"assistant"},{"content":"\"\"","role":"user"},{"content":"\"\"","role":"assistant"},{"content":"\"\"","role":"user"}],"model":"claude-3-5-sonnet-20240620","stream":false,"system":""}'
     headers:
       accept:
       - application/json
@@ -14,13 +11,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '303'
+      - '271'
       content-type:
       - application/json
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.39.0
+      - AsyncAnthropic/Python 0.49.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,53 +27,73 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.39.0
+      - 0.49.0
+      x-stainless-read-timeout:
+      - '600'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
+      x-stainless-timeout:
+      - '600'
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_01KsmdyuPtrHGMGARbtRmzox","type":"message","role":"assistant","model":"claude-3-5-sonnet-20240620","content":[{"type":"text","text":"\"\""}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":25,"output_tokens":4}}'
+      string: '{"id":"msg_012N8bgv7zw1tBpnRyGV8nb3","type":"message","role":"assistant","model":"claude-3-5-sonnet-20240620","content":[{"type":"text","text":"I
+        apologize, but I don''t see any text or question in your messages. Is there
+        something specific you''d like assistance with? I''m happy to help if you
+        have a question or topic you''d like to discuss. Feel free to go ahead and
+        ask or share what''s on your mind."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":24,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":63}}'
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6c5b5ada5e15b2-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 22 Nov 2024 22:29:11 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
-      X-Robots-Tag:
-      - none
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '8000000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '8000000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-05-06T18:12:51Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '1600000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '1600000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-05-06T18:12:52Z'
       anthropic-ratelimit-requests-limit:
       - '4000'
       anthropic-ratelimit-requests-remaining:
       - '3999'
       anthropic-ratelimit-requests-reset:
-      - '2024-11-22T22:29:11Z'
+      - '2025-05-06T18:12:51Z'
       anthropic-ratelimit-tokens-limit:
-      - '8000000'
+      - '9600000'
       anthropic-ratelimit-tokens-remaining:
-      - '8000000'
+      - '9600000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-11-22T22:29:11Z'
+      - '2025-05-06T18:12:51Z'
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba72bd0968cf9f-SJC
       content-length:
-      - '244'
+      - '557'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:52 GMT
       request-id:
-      - req_01DEvr86wapkdEq2JCRAMJ8r
+      - req_011CNrjFwFA4kBsvcpAjevax
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
       via:
       - 1.1 google
+      x-robots-tag:
+      - none
     status:
       code: 200
       message: OK

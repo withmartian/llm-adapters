@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "Qwen/Qwen2.5-72B-Instruct", "prompt": "Hi", "max_tokens": 10}'
+    body: '{"model":"Qwen/Qwen2.5-72B-Instruct","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '72'
+      - '67'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,26 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: '{"id":"cmpl-2d3bf3fe7fe34944a3cf1fe0ab0dc148","object":"text_completion","created":1733368796,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"text":"
-        everyone! I''m working on a history project and","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10,"estimated_cost":4.23e-06}}'
+      string: '{"id":"cmpl-RuwEoxYJWGreTBAHVePdV0Pf","object":"text_completion","created":1746555081,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"text":"
+        everyone, it''s Sheryll here from the","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10,"estimated_cost":4.0200000000000005e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '347'
+      - '343'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:19:56 GMT
+      - Tue, 06 May 2025 18:11:21 GMT
       server:
       - uvicorn
       x-robots-tag:

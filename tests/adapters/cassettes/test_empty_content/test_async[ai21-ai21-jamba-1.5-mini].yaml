@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "user", "content": "\"\""}], "model": "jamba-1.5-mini"}'
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"user","content":"\"\""}],"model":"jamba-1.5-mini"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '312'
+      - '282'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,46 +25,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IcwDACBWbUt9M6aXKmovRmLQyYnY4QIHLQwwwYSCxFumuY15hgqNVVbXH64VhOWcnJ9USbEmWVXH
-        5Z7tZTRn8RrFW7IX+brtcQQPo+sLC2o+XKQvUOShL+IL9MFItoEwWXtZNwkHD6FxG4QWLeDBScmG
-        ZWLMgsTL2O+ByUMZOZPwkJEWhn1UexCskwp/5+EtNisjuXKDk88mLCiNYbhim7ukkFLi4WMAzsv0
-        /w0D
+      string: '{"detail":"Access denied for this feature"}'
     headers:
-      CF-RAY:
-      - 8e6d1c7928f9f95b-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:41:01 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93ba72615a09eb97-SEA
+      content-length:
+      - '43'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:36 GMT
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - 2541b984-2acf-0246-dad5-3453109ac710
+      - e53e5786-d685-dac4-268b-11e80787d62f
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

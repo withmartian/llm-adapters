@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,32 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"46f3033e2f574d738a3df80d1b4cd4f9","object":"chat.completion","created":1742234971,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*The
-        human has greeted me multiple times in a row. I wonder if they are just being
-        friendly or if there is a specific reason they keep saying \"Hi\". In any
-        case, I should respond in a warm and friendly manner to establish a good rapport.*\n\nHi
-        there! It''s nice to meet you. How are you doing today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":46,"completion_tokens":69,"total_tokens":115,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-04d065e4-0fd1-4e3e-861b-4903fa63787c","object":"chat.completion","created":1746561033,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"Hi
+        there! How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":46,"completion_tokens":11,"total_tokens":57,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e710f3f15a918-DFW
+      - 93bb01db4f96eb2e-SJC
       content-length:
-      - '897'
+      - '646'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:09:31 GMT
+      - Tue, 06 May 2025 19:50:33 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=M9aMu4Fu.E8SedX4aWWKB4DKPksU_0.tNcH_.Ln3zdo-1742234971-1.0.1.1-JvfSXFU7xbVPq_iWBe6yy53oatGn95e5RhAZaquZz0kOBeadiaOpBV0NvUepZkEomNhlul86wddeWo4j0j7q.FNfrIqnZ6NR4I58hxnQgLc;
-        path=/; expires=Mon, 17-Mar-25 18:39:31 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=F0ldq3NM0wWu6HxCpahTvhArpBO3uwv0D5tlPwZ0OG8-1746561033-1.0.1.1-u_War7RZPz1Ixzfbq8OmMM0.Yqn_yIDD7qT.NMV.TbHIfdu7g6MaGQCV85M7T7pUZ6uA7k3CZqoYKqE.FOvyYwEvPb3kr3zt3Rwz.ZXJrsg;
+        path=/; expires=Tue, 06-May-25 20:20:33 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - d9955a59-8c2c-419c-89f7-5370e8e59a97
+      - 04d065e4-0fd1-4e3e-861b-4903fa63787c
       x-response-time:
-      - '2.174'
+      - '0.302'
     status:
       code: 200
       message: OK

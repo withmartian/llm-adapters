@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi "}], "model": "jamba-1.5-large"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "}],"model":"jamba-1.5-large"}'
     headers:
       accept:
       - application/json
@@ -10,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '118'
+      - '108'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,46 +26,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        ISgEACB+r27TmvfnuqwwzH6tQ8gFM50cOB7s8+aBpgEmmEALEm+Zpif7HvIJQuG4/mLukKGd6GYO
-        lLadE4WBMyRB5EZJ0qZ9nLpESewmfQQDo+uTK7LVFxfpKzLHQF/EF7IvLix7ZKDrdb7eSN1gwDSu
-        zLDgp2hJiaXIWRNvvosbd/SuYeDGLHctSXlFpu5S/g1IHvWFG5EGrNPcbk3VHhmuN9b4bwzca5j1
-        hU/6trvxsVdXZG4Ec9Kyv82sQiEx8EgAULzg/zcAAw==
+      string: '{"detail":"Access denied for this feature"}'
     headers:
-      CF-RAY:
-      - 8e6d1be7cf75eb24-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:40:38 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb019da97bebe7-SJC
+      content-length:
+      - '43'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:50:23 GMT
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - 3e695e15-6713-d745-01b4-775e6b6acce7
+      - 1726668c-de81-64db-7d2f-21d2cb797a03
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

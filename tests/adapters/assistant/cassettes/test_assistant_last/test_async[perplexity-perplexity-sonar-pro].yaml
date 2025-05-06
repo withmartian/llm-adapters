@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "},{"role":"user","content":"\"\""}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '135'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "b6a3e60f-01b0-42c0-8c92-a7d7c1a9ff92", "model": "sonar-pro",
+        "created": 1746555022, "usage": {"prompt_tokens": 3, "completion_tokens":
+        291, "total_tokens": 294, "search_context_size": "low"}, "citations": ["https://preply.com/en/blog/22-useful-english-greetings-for-every-day/",
+        "https://www.fluentu.com/blog/english/english-greetings-expressions/", "https://www.clearenglishcorner.com/blog/64",
+        "https://en.amazingtalker.com/blog/en/english/47217/", "https://famworld.com/blogs/tipos-de-saludo-en-ingles-y-otras-frases-utiles"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "I notice that you haven''t provided
+        a specific query in your message. If you''d like to learn about English greetings,
+        I can share some information about common ways to say hello in English.\n\nEnglish
+        offers a variety of greetings for different situations and relationships.
+        The most universal greetings include \"hello,\" \"hi,\" and \"hey,\" which
+        can be used in almost any context[1][4].\n\nTime-specific greetings include
+        \"good morning\" (5:00 am to 12:00 pm), \"good afternoon\" (12:00 pm to 6:00
+        pm), and \"good evening\" (after sunset)[4]. These can be shortened to just
+        \"morning,\" \"afternoon,\" or \"evening\" in casual settings[1].\n\nWhen
+        greeting someone you haven''t seen for a while, phrases like \"nice to see
+        you,\" \"good to see you,\" or \"great to see you\" show warmth and appreciation[1][2][4].\n\nTo
+        ask about someone''s wellbeing as part of a greeting, you might say:\n- \"How
+        are you doing?\"\n- \"How''s it going?\"\n- \"How are things?\"\n- \"How''s
+        life?\"\n- \"How''s your day going?\"[1][2][3]\n\nThese questions typically
+        receive brief, positive responses like \"fine,\" \"good,\" or \"not bad\"[1][2].\n\nIs
+        there something specific about greetings or another topic you''d like to know
+        more about?"}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6ee9acba643a-SJC
+      content-length:
+      - '1938'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:22 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=HM3Kl4vD_C5MTwVVdWRujZzOWbgVtGacWtkVesI__n8-1746555022-1.0.1.1-q2CKRD42OnDWJKig3jH7LpGCRR0RLJ.EmULAhlOAytGgeiyVpO8PEOkk1JVysgzwH.CWNT_ekOnlL1Q62y42_OOpehKPW7Rgs6.ibbnKS3I;
+        path=/; expires=Tue, 06-May-25 18:40:22 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

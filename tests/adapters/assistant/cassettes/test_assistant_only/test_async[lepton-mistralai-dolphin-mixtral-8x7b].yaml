@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "dolphin-mixtral-8x7b"}'
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"dolphin-mixtral-8x7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '87'
+      - '147'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,38 +25,38 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-mkDdshqHNTuw5xc7dDzFfo","object":"chat.completion","created":1733368502,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"\nHello!
-        How can I help you today?","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":10,"total_tokens":21,"completion_tokens":11}}'
+      string: '{"id":"chatcmpl-3H6vBFqXMnQFeSeKvqj7aR","object":"chat.completion","created":1746561303,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello.
+        How can I help you today?","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":24,"total_tokens":34,"completion_tokens":10}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0de90baaeeb22-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:15:02 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0874ae6f67a6-SJC
       content-length:
-      - '380'
+      - '346'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:03 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '270'
+      - '146'
     status:
       code: 200
       message: OK

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo",
-      "temperature": 0.5}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo","temperature":0.25}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '113'
+      - '106'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,60 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce4aece589658-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320176,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 11159919176128799000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nszekmp-4yUbBN-93bb0b092a0767fa\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561409,\n  \"model\": \"Qwen/Qwen2.5-72B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 4698526884248961000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \"Hello! It's nice to meet you. How can I assist you today? Whether you need
-        help with a specific question, want to discuss a topic, or need some creative
-        ideas, feel free to let me know! \U0001F60A\",\n        \"tool_calls\": []\n
-        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 30,\n    \"completion_tokens\":
-        47,\n    \"total_tokens\": 77\n  }\n}"
+        \"Hello! How can I assist you today? Feel free to ask me any questions or
+        let me know if you need help with anything specific.\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 30,\n    \"completion_tokens\":
+        29,\n    \"total_tokens\": 59\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6ce4aece589658-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:02:58 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0b092a0767fa-SJC
       content-length:
-      - '681'
+      - '626'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:56:50 GMT
       etag:
-      - W/"2a9-iNldJoKIucIX0+Vnho5eOBLM7uA"
+      - W/"272-dzbEljjivVEOsT07TlN2g/kHt64"
       retry-after:
       - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-call-end:
-      - '2024-11-23T00:02:58.044Z'
+      - '2025-05-06T19:56:50.114Z'
       x-api-call-start:
-      - '2024-11-23T00:02:56.487Z'
+      - '2025-05-06T19:56:49.604Z'
       x-api-received:
-      - '2024-11-23T00:02:56.481Z'
+      - '2025-05-06T19:56:49.547Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -89,11 +89,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '198'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99911'
+      - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nszekmp-4yUbBN-93bb0b092a0767fa
     status:
       code: 200
       message: OK

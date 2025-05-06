@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "system", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "user", "content": "Hi"}], "model": "meta-llama/Meta-Llama-3.1-405B-Instruct"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '319'
+      - '322'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,27 +25,32 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-43273dbd1d6d4759bda0b4df855e56e0","object":"chat.completion","created":1733368773,"model":"meta-llama/Meta-Llama-3.1-405B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like we''re stuck in a loop of hellos! Would you like to break the cycle
-        and start a conversation? I''m here to chat!","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":27,"total_tokens":58,"completion_tokens":31,"estimated_cost":5.220000000000001e-05}}'
+      string: '{"id":"chatcmpl-RSiSICqCBkSeqpxYCDIT8Z5Z","object":"chat.completion","created":1746555208,"model":"meta-llama/Meta-Llama-3.1-405B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like we''ve got a hi-filled conversation going on! Would you like to
+        add some actual conversation to the mix, or are we just going for a record
+        number of \"hi\"s?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":29,"total_tokens":68,"completion_tokens":39,"estimated_cost":5.44e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '502'
+      - '543'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:19:33 GMT
+      - Tue, 06 May 2025 18:13:28 GMT
       server:
       - uvicorn
       x-robots-tag:

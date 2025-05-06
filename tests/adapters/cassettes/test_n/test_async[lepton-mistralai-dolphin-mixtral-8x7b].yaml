@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "dolphin-mixtral-8x7b",
-      "n": 2}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"dolphin-mixtral-8x7b","n":2}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '90'
+      - '82'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,41 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-wtojuFjhtPZhxkFrugz2GT","object":"chat.completion","created":1733368844,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
-        not sure what you''re asking. Could you please provide more context or clarify
-        your question?","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null},{"index":1,"message":{"role":"assistant","content":"I''m
-        glad you''re enjoying my company. I''m here to help you with anything you
-        need. Just let me know how I can assist you.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":10,"total_tokens":68,"completion_tokens":58}}'
+      string: '{"id":"chatcmpl-iJEWD9dFeUtYXEU5KCcmof","object":"chat.completion","created":1746561077,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        text you provided is not in English. Please provide text in English.","tool_calls":null},"logprobs":null,"finish_reason":"stop"},{"index":1,"message":{"role":"assistant","content":"I''m
+        sorry to hear that. What seems to be the problem?","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":10,"total_tokens":42,"completion_tokens":32}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e6f05b52f97f-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:20:45 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb02f00fc7945f-SJC
       content-length:
-      - '707'
+      - '552'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:18 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '529'
+      - '253'
     status:
       code: 200
       message: OK

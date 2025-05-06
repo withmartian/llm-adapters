@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi\nHi"}], "model": "mixtral-8x7b"}'
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"mixtral-8x7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '78'
+      - '72'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,47 +25,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-ySAGr4d3HGeudhKVFqXsBr","object":"chat.completion","created":1733374816,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
-        here to help you with any questions you have about programming or technology.
-        What can I assist you with today? For example, I can help you with questions
-        about coding, algorithms, data structures, software design, or technology
-        trends. Just let me know what you''re curious about, and I''ll do my best
-        to provide a clear and helpful answer.\n\nIf you don''t have a specific question
-        in mind, you can also check out some of the resources on this site, such as
-        the coding tutorials, articles, and quizzes. They cover a wide range of topics
-        and skill levels, so you''re sure to find something interesting and informative.\n\nI''m
-        here to help, so don''t hesitate to ask me anything. I''ll do my best to provide
-        a helpful and accurate response. Let''s get started!","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":11,"total_tokens":192,"completion_tokens":181}}'
+      string: '{"id":"chatcmpl-Csr2zJL68xHUt2ADPnDAim","object":"chat.completion","created":1746561575,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
+        here to help you with any questions or problems you might have. What can I
+        assist you with today? Is there something specific you would like to know
+        about Python or machine learning? Or perhaps you have a general programming
+        question? Let me know!","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":11,"total_tokens":64,"completion_tokens":53}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed178bd8b6e96cc-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 05:00:17 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0f15cd70fb65-SJC
       content-length:
-      - '1097'
+      - '557'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:59:35 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '965'
+      - '444'
     status:
       code: 200
       message: OK

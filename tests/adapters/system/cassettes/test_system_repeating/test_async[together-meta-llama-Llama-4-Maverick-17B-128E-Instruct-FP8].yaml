@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '299'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nszdMzW-zqrih-93bb0466e885a63b\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561137,\n  \"model\": \"meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Hi! It's nice
+        to finally have a conversation. How are you doing today?\",\n        \"tool_calls\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        47,\n    \"total_tokens\": 64,\n    \"completion_tokens\": 17\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0466e885a63b-SJC
+      content-length:
+      - '574'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:52:18 GMT
+      etag:
+      - W/"23e-XE8Ksabmz8j4uWkyRWx57439fg4"
+      retry-after:
+      - '0'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 84c2a352-ddab-45ed-8db6-b80b6b72997d-noamzn
+      x-api-call-end:
+      - '2025-05-06T19:52:18.047Z'
+      x-api-call-start:
+      - '2025-05-06T19:52:17.810Z'
+      x-api-received:
+      - '2025-05-06T19:52:17.799Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '198'
+      x-ratelimit-remaining-tokens:
+      - '99952'
+      x-ratelimit-reset:
+      - '0'
+      x-request-id:
+      - nszdMzW-zqrih-93bb0466e885a63b
+    status:
+      code: 200
+      message: OK
+version: 1

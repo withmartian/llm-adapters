@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "wizardlm-2-7b"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"wizardlm-2-7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '75'
+      - '69'
       content-type:
       - application/json
       host:
       - wizardlm-2-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,39 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-dkEERcd4TBJCi6c5DWA73d","object":"chat.completion","created":1733369078,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+      string: '{"id":"chatcmpl-P8GcwTjkof8QkZbVLAEbhP","object":"chat.completion","created":1746561505,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
         How can I assist you today? If you have any questions or need help with something,
-        feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":8,"total_tokens":34,"completion_tokens":26}}'
+        feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":34,"completion_tokens":26}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0eca27ea1171a-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:24:38 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0d621868fa56-SJC
       content-length:
-      - '445'
+      - '413'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:58:25 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '435'
+      - '188'
     status:
       code: 200
       message: OK

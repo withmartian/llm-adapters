@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,29 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-2d50b45415e64da49860128ad2bc93e9\",\"object\":\"chat.completion\",\"created\":1738285823,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\n\\n</think>\\n\\nHellooo!
-        \U0001F60A Looks like \\\"Hi\\\" is the word of the day! What\u2019s on your
-        mind? Need help, a chat, or just vibing? Let me know! \U0001F680\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":17,\"total_tokens\":64,\"completion_tokens\":47,\"estimated_cost\":0.00013195}}"
+      string: "{\"id\":\"chatcmpl-RbxXII6jIjCqonuCkoldNAKS\",\"object\":\"chat.completion\",\"created\":1746555136,\"model\":\"deepseek-ai/DeepSeek-R1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay,
+        the user keeps saying \\\"Hi\\\" over and over. I should figure out why they're
+        repeating that. Maybe they're testing me, or there's a technical issue. Let
+        me check the previous messages.\\n\\nLooking back, they sent \\\"Hi\\\" multiple
+        times in a row. I need to respond appropriately. Maybe they want to start
+        a conversation but aren't sure what to say next. I should acknowledge their
+        greeting and ask how I can assist them. That way, I can prompt them to provide
+        more details about what they need help with. Let me make sure my response
+        is friendly and open-ended to encourage them to elaborate.\\n</think>\\n\\nHello!
+        It looks like you're saying \\\"Hi\\\" a lot. How can I assist you today?
+        \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":18,\"total_tokens\":174,\"completion_tokens\":156,\"estimated_cost\":0.00034908000000000004}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '503'
+      - '1071'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:10:23 GMT
+      - Tue, 06 May 2025 18:12:16 GMT
       server:
       - uvicorn
       x-robots-tag:

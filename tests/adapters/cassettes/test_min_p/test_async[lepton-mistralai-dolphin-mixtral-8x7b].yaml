@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "dolphin-mixtral-8x7b"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"dolphin-mixtral-8x7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '82'
+      - '76'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,40 +25,48 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-Nq9yjRqLKXJmhDnh3i9YnG","object":"chat.completion","created":1734126211,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
-        so sorry to hear that you''re feeling down. It''s completely okay to feel
-        this way. Remember, it''s okay not to be okay. Please know that I''m here
-        to support you and help you in any way I can.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":10,"total_tokens":65,"completion_tokens":55}}'
+      string: '{"id":"chatcmpl-LCV9fztPMmYWAi2AJFpNW5","object":"chat.completion","created":1746561019,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"First
+        off, congrats!\n\nWhether or not to bring flowers depends on you. The meaning
+        of bringing a flower on the first date greatly varies between men and women
+        and even on who is bringing and receiving them. Some might argue that flowers
+        suggest romance while some may feel comfortable with this, and for some others,
+        receiving a flower at a first date can make things a little weird or uncomfortable
+        especially if you did not expect one. \n\nAlternatively, the gift can signify
+        the care you take when you try to make things as smooth and good as possible
+        and might impress. The only concrete way of dealing with it might be by examining
+        your familiarity and cultural norms on your dating area. For the first date
+        it would be the most secure path to opt a casual present unless she had something
+        particular on mind.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":10,"total_tokens":180,"completion_tokens":170}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f1921544a6a2364-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:43:32 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0180d921eb24-SJC
       content-length:
-      - '539'
+      - '1131'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:50:20 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1091'
+      - '1251'
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "jamba-1.5-mini"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"jamba-1.5-mini"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '76'
+      - '70'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IVgEACAWrS3VY/KbohVC9n3RPcFMJweOB/u8ecIBJhgGFMSBxpHmDtYZ1TAO4eKLvsIUZUe3Uhq2
-        K8qDIimrPAnrKE2arAoSojTLsjwv4ziBhfH1wRXT7RdX6SumnoXeiC9Mv7horjEFXa/99UbqBgvB
-        cZMp1jWznoi1foqSlNgI65p467u46YreK1i4ac3HkpivmKo7898C69ZcdEHSQoqaOW6sWmOK600b
-        /PcW7qX05qKluR1veqzVFVPfRyIN17deK8l5Fp4KALME/v9vAAM=
+      string: '{"detail":"Access denied for this feature"}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f1b258d7a2c1746-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
+      cf-ray:
+      - 93bb09919a7bcf93-SJC
+      content-length:
+      - '43'
+      content-type:
       - application/json
-      Date:
-      - Sat, 14 Dec 2024 03:35:56 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
+      date:
+      - Tue, 06 May 2025 19:55:49 GMT
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - cd408bcf-4167-1fdc-fc04-0a3e49026d47
+      - 70554d55-f577-140e-dd40-f49831504522
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

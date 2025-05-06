@@ -1,0 +1,82 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"microsoft/WizardLM-2-8x22B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '87'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RhnQrdELi66aJ8eKDGHSOcUv\",\"object\":\"chat.completion\",\"created\":1746561132,\"model\":\"microsoft/WizardLM-2-8x22B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"
+        there! It seems like you're looking to understand how to solve an inequality
+        involving an absolute value. Let's break down the inequality step by step:\\n\\nYou
+        have the inequality |2x + 6| \u2264 14. The absolute value of a number is
+        its distance from zero on the number line, without considering which direction
+        from zero the number lies. This means that |2x + 6| can be either positive
+        or negative, depending on the value of x.\\n\\nThe inequality |2x + 6| \u2264
+        14 can be split into two separate inequalities, because the absolute value
+        being less than or equal to 14 can happen in two ways:\\n\\n1. The expression
+        inside the absolute value is non-negative and less than or equal to 14.\\n2.
+        The expression inside the absolute value is non-positive and greater than
+        or equal to -14.\\n\\nLet's solve each case:\\n\\n**Case 1: Non-negative**\\n2x
+        + 6 \u2264 14\\n\\nSubtract 6 from both sides to isolate the term with x:\\n2x
+        \u2264 8\\n\\nNow, divide both sides by 2 to solve for x:\\nx \u2264 4\\n\\n**Case
+        2: Non-positive**\\n2x + 6 \u2265 -14\\n\\nAgain, subtract 6 from both sides:\\n2x
+        \u2265 -20\\n\\nDivide both sides by 2 to solve for x:\\nx \u2265 -10\\n\\nNow,
+        we have two ranges for x:\\nx \u2264 4 (from case 1)\\nx \u2265 -10 (from
+        case 2)\\n\\nSince x must satisfy both conditions to fulfill the original
+        absolute value inequality, the solution is the intersection of these two ranges.
+        This means that x must be greater than or equal to -10 and less than or equal
+        to 4.\\n\\nTherefore, the solution set for the inequality |2x + 6| \u2264
+        14 is:\\n-10 \u2264 x \u2264 4\\n\\nThis can also be written as an interval:\\nx
+        \u2208 [-10, 4]\\n\\nAnd that's how you solve the inequality! If you have
+        any further questions or need assistance with another problem, feel free to
+        ask.\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":9,\"total_tokens\":517,\"completion_tokens\":508,\"estimated_cost\":0.0002585}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2072'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 19:52:12 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

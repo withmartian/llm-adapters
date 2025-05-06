@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '136'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "d15a1307-94c0-4a2a-99dd-3e3b8744d54e", "model": "sonar-pro",
+        "created": 1746561451, "usage": {"prompt_tokens": 3, "completion_tokens":
+        84, "total_tokens": 87, "search_context_size": "low"}, "citations": ["https://preply.com/en/blog/22-useful-english-greetings-for-every-day/",
+        "https://www.fluentu.com/blog/english/english-greetings-expressions/", "https://www.clearenglishcorner.com/blog/64",
+        "https://en.amazingtalker.com/blog/en/english/47217/", "https://famworld.com/blogs/tipos-de-saludo-en-ingles-y-otras-frases-utiles"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Since you haven''t provided a
+        specific query, I''m unable to formulate a targeted response. If you''d like
+        information about English greetings, common phrases for starting conversations,
+        or guidance on formal versus informal communication, I''d be happy to help
+        with a more specific question.\n\nTo get assistance, please provide a clear
+        query about what information you''re looking for, and I''ll use the available
+        information to give you a comprehensive answer."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0b65bb2c405d-SJC
+      content-length:
+      - '1169'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:57:32 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=6JP_5trH.p2.M5OIfQCf21pqOOsQ1DjEHdA1yikuI_I-1746561452-1.0.1.1-t3kZQ.nL_e42RKgTFO9rBXy6bf5pqNekQu8sGSba2No0RghYwNHyXb.A_hljbZUmyNd0f4RLrjrKYKIQDxgwO5sLU1m_ySFtqS4AuFZQkOw;
+        path=/; expires=Tue, 06-May-25 20:27:32 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

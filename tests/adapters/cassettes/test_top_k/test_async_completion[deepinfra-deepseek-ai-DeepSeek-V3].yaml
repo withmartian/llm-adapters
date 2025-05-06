@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,52 +25,113 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-7c71adf0f04b43bebb253dae457f3eb3\",\"object\":\"text_completion\",\"created\":1738286544,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"text\":\"!
-        This Chatterkid minilesson video explains how to find the main idea in a text
-        and offers strategies for identifying supporting details.\\n\\nYouTube \xB7
-        Nancy Bullard \xB7 2 Apr 2020\\n\\nLooking for fresh and engaging ways to
-        teach your elementary students about main idea and details? You're in the
-        right place!\\n\\nYouTube \xB7 Ciera Harris \xB7 1 month ago\\n\\nArt supports
-        the main idea in informational text! Help kids build skills and critical thinking
-        with these 3 fun and easy art projects for ...\\n\\nYouTube \xB7 The Balanced
-        Literacy Diet \xB7 26 Nov 2011\\n\\nMain Idea | This video demonstrates finding
-        the topic, main idea, and supporting details in paragraphs. Video imagery
-        and voice-over combine ...\\n\\nYouTube \xB7 GrammarSongs by Melissa \xB7
-        13 Nov 2019\\n\\nIn this Grade 4 English video lesson we will be teaching
-        you about Main Idea. We've sourced highly-qualified and experienced South
-        African ...\\n\\nYouTube \xB7 WorksheetCloud \xB7 29 May 2020\\n\\nIdentify
-        the main purpose of a text In this lesson you will learn the purpose of a
-        text by questioning why the author wrote it.\\n\\nYouTube \xB7 LearnZillion
-        \xB7 6 Nov 2021\\n\\nMain Idea for Kids | What is the main idea? | Finding
-        the main idea in books and stories \xB7 Try YouTube Kids \xB7 Learn Bright
-        \xB7 What is a main idea? | ...\\n\\nYouTube \xB7 Learn Bright \xB7 16 Nov
-        2020\\n\\n10 key moments in this video\\n\\nExplain how the details support
-        the main idea In this lesson, you will learn how to explain how the details
-        support the main idea by listing ...\\n\\nYouTube \xB7 LearnZillion \xB7 27
-        Sept 2021\\n\\nLearn how to determine the main idea of a text. Similar to
-        summarising, this is an important reading strategy that helps readers comprehend
-        ...\\n\\nYouTube \xB7 EasyTeaching \xB7 26 Oct 2018\\n\\n10 key moments in
-        this video\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":380,\"completion_tokens\":378,\"estimated_cost\":0.00034189999999999996}}"
+      string: "{\"id\":\"cmpl-R3pSOPnGEAGsqZ44ClKMtqFP\",\"object\":\"text_completion\",\"created\":1746561892,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"text\":\"\\n\\nI
+        have a problem with calculating complex numbers in Maple.\\n\\nI type forexample
+        8(cos(Pi/2)+I*sin(Pi/2)) and I get 8, I should get 8I\\n\\nShould I re-install
+        Maple or edit my settings?\\n\\nbest regards\\n\\nHi everybody,\\n\\nI want
+        to plot many curves in the form of a table.\\nFor instance, let p := plot(x,
+        x=0..1, labels=[x*Unit('m'), y*Unit('m')]):\\n\\nThe command plots:-display(p)
+        returns a plot with labels x [[m]] and y [[m]], just as expected.\\n\\nBut
+        the commands (I set the default label mode to \\\"typeset\\\" via the command
+        interface(labeldirections = [typeset, typeset]))\\nDocumentTools:-Tabulate([p])
+        # and\\nplots:-display(<p>) # also <p | p>, <p , p>\\nreturn plots with labels
+        x Units:-Unit('m') and y Units:-Unit('m')\\nIs there a way to fix this and
+        obtain plots with labels x [[m]] and y [[m]] ?\\n\\nThanks to all of you in
+        advance\\n\\nWhen I try to solve the determinant the system hangs and Maple
+        doesn't give any result. Here $\\\\lambda_1,2$ is not a function of 'x' and
+        't'.\\n\\n | > \\n\\n> \\n\\n> \\n\\n> \\n\\n> \\n\\n> \\n\\n(1) \\n\\n> \\n\\n>
+        \\n\\n(2) \\n\\n> \\n\\n> \\n\\n> \\n\\n> \\n\\n> \\n\\n> \\n\\n> \\n\\n>
+        \\n\\nHi everyone, I have copied soem code from a paper. I hope to try and
+        manupulate some of the varables. However it seems while I am coping the code
+        I get this error Error, (in dsolve/numeric/process_input) system must be entered
+        as a set/list of expressions/equations .I have checked online but it seems
+        that there is nothing I can find to fix this problem. My code is posted below\\n\\nThanks
+        for your time and help!\\n\\n | (1) \\n\\nWe will now declare our first equations\\n\\nHello
+        all,\\n\\nWould you allow me to ask this one question?\\n[moderator: See also
+        this previous question]\\n\\nIs there any possible way to treat the differentiation
+        operator (e.g., 'D') as an ordinary coefficient of a polynomial?\\n\\nFor
+        example, as described in the attached worksheet, I was wondering if there
+        is a way to re-write the LHS of the expression 'eq_e5_9b' as the expression
+        'desired'.\\n\\nIn Kwon Park\\n\\n | > | \\nrestart;\\n\\n> | \\nwith(DEtools):\\n\\n>
+        | \\neq_e5_9b := psi__d0*Delta__delta(t) + psi__q0 * D(Delta__delta(t))/omega__0
+        = p_(Delta__psi__d(t))/omega__0 - Delta__psi__q(t);\\n\\n(1) \\n\\n> | \\ndesired
+        := Delta__delta(t) * (psi__d0 + psi__q0 * D/omega__0) = p_(Delta__psi__d(t))/omega__0
+        - Delta__psi__q(t);\\n\\n(2) \\n\\n> \\n\\nI am trying to calculate the electric
+        field E induced in a vibrating cantilever of conductive material, oscillating
+        in the field of a permanent magnet. However, I am having some difficulty getting
+        pdsolve to work the way I want it to. I'm also not sure if the partial differential
+        eqations I derived from Maxwell's equations are correct, or if the boundary
+        conditions for the electric field in the cantilever are correct. Currently
+        pdsolve gives me no solutions, which makes me think that either my PDEs or
+        my BCs are not correct. It may be that I need to try some sort of numerical
+        method as well. I am assuming that the z component of the electric field is
+        just 0. My third PDE comes from setting the divergence of the electric field
+        to 0. My first two PDEs come from the vector laplacian and its relation to
+        the divergence and curl:\\n\\nLaplacian * E = Div(E) -Curl(Curl(E))\\n\\nThe
+        x and y components of this should be my first and second PDE, respectively.
+        Note that in this equation the divergence of E is 0, and the curl of E is
+        -dB/dt, where B is the magnetic field.\\n\\nMy boundary conditions are simply
+        that the components of the electric field at the surface of the cantilever
+        is always tangent to the surface.\\n\\nI have tried various simplifications,
+        such as setting the right hand side of the PDEs to 0, and still I don't get
+        any solution.\\n\\nMy question: Are my PDEs and BCs sensible? And if so, what
+        do I need to do with pdsolve to get a proper solution?\\n\\nHi everyone,\\n\\nI'm
+        new with maple and i want to evaluate this expresssion :\\n\\nf := x -> exp((-1)*0.13/x)[0.4700036292*`\u2013`(0.3364722366,
+        1.2)] + exp(-1/x)[0.2135277634 + 0.528*x] + (-1)*0.528*x + 0.9987749022 +
+        int((exp(-1/y) \u2212 exp(-1/x))*g(y), y = 0.13 .. x) = 0\\n\\ni have this
+        function:\\n\\ng:=(x)->x^2-0.1*x-1\\n\\nand i want to plot f for x between
+        0.13 and 1\\n\\nthe graph that i'm excepting is similar to this one:\\n\\nthanks.\\n\\nHi,\\n\\nI
+        am trying to use Maple to solve a PDE involving composite functions. How do
+        I program this? Here is an attached file describing what I am trying to do.\\n\\nHi
+        I was trying to difine a constant c that exists in range(0,d). The constant
+        c has two values and is depends on its x location. The first value \\\"a\\\"
+        has a duration \\\"e\\\" , the second value \\\"b\\\" has a duiration \\\"f\\\".
+        Start from x =0, the constant c has value \\\"a\\\", then \\\"b\\\", then
+        \\\"a\\\"......\\n\\nHow should I define this constant in \\\"piecewise\\\"?\\n\\nIn
+        a multibody assembly I have three instances of identically connected prismatic
+        joints (flanges not conneted and identical initial position):\\n\\n(1) In
+        a model with analytic solution the prismatic joint sometimes calculates inconsistent
+        with the analytic solution (see time 1.1 and 1.2 in the first picture below).\\n\\n(2)
+        In a model with slightly different initial angle of one of the prismatic joints,
+        the inconsistency does not arise.\\n\\n(3) When I simulate the model from
+        (1) with a slightly different coulomb friction coefficient, the inconsistency
+        does not arise.\\n\\nI cannot explain (2) and (3). Is (1) a bug or is there
+        a better way to model the prismatic joint?\\n\\nI have attached the three
+        models.\\n\\nHi,\\n\\nI am trying to solve a 2nd order ODE. But I get the
+        Error:\\n\\nError, (in dsolve/numeric/bvp/convertsys) unable to convert to
+        an explicit first-order system\\n\\nI have uploaded the worksheet. Can anybody
+        please help me?\\n\\nI am teaching a course in bioinformatics and am trying
+        to decide which Maple package for sequence alignment to call. I have had real
+        trouble with the builtin align package, which is slow, buggy, and lacks provisions
+        for either affine or user-definable gap penalties. I have been using the alignment
+        tools in the sequence analysis package, which are much better, but they still
+        do not support user-definable gap penalties. Does anyone know of any alignment
+        software in Maple that has this feature?\\n\\nFirst 286 287 288 289 290 291
+        292 Last | Page 288 of 2325  \\n\\nPlease log-in to your MaplePrimes account.\\n\\nAutomatically
+        sign in on future visits  \\n\\n### Generating PDF\u2026\\n\\nError occurred
+        during PDF generation. Please refresh the page and try again\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":1666,\"completion_tokens\":1664,\"estimated_cost\":0.00148172}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2070'
+      - '6734'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:22:24 GMT
+      - Tue, 06 May 2025 20:04:52 GMT
       server:
       - uvicorn
       x-robots-tag:

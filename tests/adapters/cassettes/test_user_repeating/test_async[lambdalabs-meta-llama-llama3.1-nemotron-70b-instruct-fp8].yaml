@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,43 +38,42 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-aa131532-e6f6-44ab-a129-bb9fc17a2ac1","object":"chat.completion","created":1742235256,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like we''ve got a double \"Hi\" to get us started!\n\nNow that the greetings
-        are out of the way, how can I assist you today? Please pick one (or more)
-        of the following options, or feel free to suggest something else:\n\n1. **Chat
-        about a topic**:\n\t* Hobbies (e.g., movies, books, sports, music)\n\t* Technology
-        (e.g., AI, gadgets, programming)\n\t* Travel and cultures\n\t* Or something
-        else ( specify!)\n2. **Play a game**:\n\t* 20 Questions\n\t* Word Association\n\t*
-        Hangman\n\t* Would You Rather\n\t* Trivia (on a topic of your choice)\n3.
-        **Generate creative content**:\n\t* Short story (provide a prompt or genre)\n\t*
-        Poetry ( specify a theme or style)\n\t* Character or world-building (for writing
-        or RPGs)\n4. **Get help with a question or problem**:\n\t* Language-related
-        (e.g., grammar, language learning)\n\t* General knowledge or research\n\t*
-        Career or educational guidance\n\t* Or any other challenge you''re facing\n5.
-        **Just have a fun, random conversation**:\n\t* I''ll start with a thought,
-        and we can see where it takes us!\n\nWhich direction would you like to take
-        our conversation?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":279,"total_tokens":301,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-52db6e18-11fc-4db6-a123-b9038d3bbd66","object":"chat.completion","created":1746561567,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems we have a mirror-like greeting situation here!\n\nMoving beyond the
+        \"Hi\" loop, how can I assist you today? Please pick one (or more) from the
+        options below, or feel free to suggest something else:\n\n1. **Chat Games**:\n\t*
+        20 Questions\n\t* Hangman\n\t* Word Chain\n\t* Would You Rather\n2. ** Conversational
+        Topics**:\n\t* Hobbies (share yours, get recommendations)\n\t* Tech News (latest
+        updates, trends)\n\t* Travel (destinations, cultural insights)\n\t* Books/Movies/TV
+        (reviews, recommendations)\n\t* Learning Something New (pick a subject)\n3.
+        **Creative Corner**:\n\t* Storytelling (start a story, I''ll continue)\n\t*
+        Poetry (share, get feedback, or collaborate)\n\t* World-Building (create a
+        fantasy world together)\n4. **Assistance \u0026 Advice**:\n\t* Language Translation\n\t*
+        Homework Help (various subjects)\n\t* Career Advice\n\t* Planning a Project
+        (brainstorming, organization)\n5. **Something Else ( Specify)**:\n\t* Got
+        a unique question or topic in mind? Share away!\n\nWhat sparks your interest
+        today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":252,"total_tokens":274,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e780f6f26f06d-DFW
+      - 93bb0ee6af517542-SJC
       content-length:
-      - '1745'
+      - '1668'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:14:24 GMT
+      - Tue, 06 May 2025 19:59:33 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=dBRd_sdS9_FQgr7GVcwC40SSg.j2me0jMEgf5RyoOdM-1742235264-1.0.1.1-eQ7g1JBFIAHoa9mcwRc9BDofnwgxbHD8skPotJef9pN2zcRtcVS.UOpRJqMbZlCoeUVAESsTz4SDr3RP2jc1xBMQGCo7GopnKf9rkkhuxD0;
-        path=/; expires=Mon, 17-Mar-25 18:44:24 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=gFFPx9P7g35kGcNyJrljUl6I8gbK9kLERH9jAaCFUJs-1746561573-1.0.1.1-iteG8ROETEzmr1jaII7S7VhtMb69brYeUj8jTDPSFFCTUJwC6Ie6nk1Gh3JqjgdVGT91xs5DQ0d_KU6KW5qc_StfI_qaOT3OSEu6jRAKZcY;
+        path=/; expires=Tue, 06-May-25 20:29:33 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - aa131532-e6f6-44ab-a129-bb9fc17a2ac1
+      - 52db6e18-11fc-4db6-a123-b9038d3bbd66
       x-response-time:
-      - '7.944'
+      - '5.208'
     status:
       code: 200
       message: OK

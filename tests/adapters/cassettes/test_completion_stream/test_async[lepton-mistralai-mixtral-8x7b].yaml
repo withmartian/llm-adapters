@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "mixtral-8x7b", "prompt": "Hi", "max_tokens": 10, "stream": true}'
+    body: '{"model":"mixtral-8x7b","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '75'
+      - '68'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,38 +25,54 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/completions
   response:
     body:
-      string: "data: {\"id\":\"cmpl-C6oqS4KVYmrUVZV6NrV7nX\",\"object\":\"text_completion\",\"created\":1733910343,\"model\":\"mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"per\",\"logprobs\":null,\"finish_reason\":null}]}\n\ndata:
-        {\"id\":\"cmpl-C6oqS4KVYmrUVZV6NrV7nX\",\"object\":\"text_completion\",\"created\":1733910343,\"model\":\"mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"filtr\",\"logprobs\":null,\"finish_reason\":null}]}\n\ndata:
-        {\"id\":\"cmpl-C6oqS4KVYmrUVZV6NrV7nX\",\"object\":\"text_completion\",\"created\":1733910343,\"model\":\"mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"aci\xF3.\\n\",\"logprobs\":null,\"finish_reason\":null}]}\n\ndata:
-        {\"id\":\"cmpl-C6oqS4KVYmrUVZV6NrV7nX\",\"object\":\"text_completion\",\"created\":1733910343,\"model\":\"mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"La
-        hiper\",\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"cmpl-C6oqS4KVYmrUVZV6NrV7nX\",\"object\":\"text_completion\",\"created\":1733910343,\"model\":\"mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\"fil\",\"logprobs\":null,\"finish_reason\":\"length\"}]}\n\ndata:
-        [DONE]\n\n"
+      string: 'data: {"id":"cmpl-dVpqCD6Hg5PBBmWVdTQFzj","object":"text_completion","created":1746555107,"model":"mixtral-8x7b","choices":[{"index":0,"text":"B","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-dVpqCD6Hg5PBBmWVdTQFzj","object":"text_completion","created":1746555107,"model":"mixtral-8x7b","choices":[{"index":0,"text":"ryte","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-dVpqCD6Hg5PBBmWVdTQFzj","object":"text_completion","created":1746555107,"model":"mixtral-8x7b","choices":[{"index":0,"text":"
+        has over ","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-dVpqCD6Hg5PBBmWVdTQFzj","object":"text_completion","created":1746555107,"model":"mixtral-8x7b","choices":[{"index":0,"text":"68
+        million","logprobs":null,"finish_reason":null}]}
+
+
+        data: {"id":"cmpl-dVpqCD6Hg5PBBmWVdTQFzj","object":"text_completion","created":1746555107,"model":"mixtral-8x7b","choices":[{"index":0,"text":"
+        potential","logprobs":null,"finish_reason":"length"}]}
+
+
+        data: [DONE]
+
+
+        '
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f048b1f79107ae2-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-ray:
+      - 93ba712e386f6899-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:45:43 GMT
-      Server:
+      date:
+      - Tue, 06 May 2025 18:11:47 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '21'
+      - '56'
     status:
       code: 200
       message: OK

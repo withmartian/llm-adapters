@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '128'
+      - '118'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,59 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce510bd9217e2-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320192,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 3183313381312566000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nszfkjm-4yUbBN-93bb0fcbdb25689a\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561604,\n  \"model\": \"Qwen/Qwen2.5-72B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 2818475246017702000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         \"Hello! How can I assist you today? Feel free to ask me any questions or
         let me know if you need help with anything specific.\",\n        \"tool_calls\":
         []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 36,\n    \"completion_tokens\":
         29,\n    \"total_tokens\": 65\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6ce510bd9217e2-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:03:12 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0fcbdb25689a-SJC
       content-length:
-      - '614'
+      - '626'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:00:05 GMT
       etag:
-      - W/"266-HbT4VdQuC7Ooz3Zi0/qDBLT2DFY"
+      - W/"272-b5uTWQWFPrMYTEs+uTsKjw2llGk"
       retry-after:
       - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-call-end:
-      - '2024-11-23T00:03:12.950Z'
+      - '2025-05-06T20:00:05.598Z'
       x-api-call-start:
-      - '2024-11-23T00:03:12.142Z'
+      - '2025-05-06T20:00:04.591Z'
       x-api-received:
-      - '2024-11-23T00:03:12.135Z'
+      - '2025-05-06T20:00:04.540Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -93,6 +94,8 @@ interactions:
       - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nszfkjm-4yUbBN-93bb0fcbdb25689a
     status:
       code: 200
       message: OK

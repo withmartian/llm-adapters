@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}], "model": "mixtral-8x7b"}'
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"mixtral-8x7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '76'
+      - '70'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,39 +25,46 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-kXCXDJPvckoxszm2eXeUdv","object":"chat.completion","created":1733368733,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Q:
-        Let v(z) = 11*z**2 - 15*z + 3. Let g(y) = 16*y**2 - 23*y + 5. Give 5*g(a)
-        - 8*v(a).\nA: -8*a**2 + 5*a - 1","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":1,"total_tokens":83,"completion_tokens":82}}'
+      string: '{"id":"chatcmpl-ydmHDpKzDwzqoySHpkewAJ","object":"chat.completion","created":1746555159,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"package
+        models\n\ndata class UserSettings(\n  val id : Int,\n  val twitter : Pair<TwitterSettings?>?,\n  val
+        facebook : Pair<FacebookSettings?>?\n) : SerializableObject {\n}\n\nenum class
+        TwitterCredentials {\n\n  CONSUME_RATE_LIMIT{\"consume\"},\n  ERROR_CODE{-1},\n  ERROR{\"error\"},\n  REACTION_TYPE(\"reaction\"},\n  SUBSCRIPTION_ID({\"subscription%d\"}).withArg\n\n  /**\n   *
+        The name value of the type\n   *\n   */\n  @get: JsonValue\n    val name\n\n  //
+        The value must be a class with a map method\n\n  /**\n   * Substitute template
+        arguments\n   *\n   * @return\n   * @param subArgs\n   */\n    val valueOf
+        : (\n      subArgs : Map <String,  String> //\n    ) -> String get() = type.valueOf!!\n\n    companion
+        object TwitterCredentials {\n\n      class WithArgArgs(\n      ) : Array<String?>,
+        SerializableObject { //\n\n         override fun","tool_calls":null},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e4357fbd5c21-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:18:53 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba726f7817ed36-SJC
       content-length:
-      - '445'
+      - '1161'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:41 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '500'
+      - '2472'
     status:
       code: 200
       message: OK

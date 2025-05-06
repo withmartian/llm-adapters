@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "tensoropera-yodayo/L3.1-70B-Euryale-v2.2_gpu4", "prompt": "Hi",
-      "stop": ["stop", "end"]}'
+    body: '{"model":"tensoropera-yodayo/L3.1-70B-Euryale-v2.2_gpu4","prompt":"Hi","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '99'
+      - '93'
       content-type:
       - application/json
       host:
       - open.tensoropera.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,30 +25,33 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.tensoropera.ai/inference/api/v1/completions
   response:
     body:
-      string: '{"created":1734127239,"usage":{"prompt_tokens":2,"total_tokens":18,"completion_tokens":16,"prompt_tokens_details":null},"model":"L3.1-70B-Euryale-v2.2_gpu4","id":"cmpl-3f48328993f94120adce36a99dfc3fd0","choices":[{"index":0,"text":"
-        Recap consists of eight lectures, a parallel event with two invited lectures
-        and a one","logprobs":null,"finish_reason":"length","stop_reason":null,"prompt_logprobs":null}],"object":"text_completion"}'
+      string: !!binary |
+        ZQBgAgBALG+p2uUP6TNBeTYfNDMfjUIy4JADt+stkrbAoLa0E5WHqGHACMs+8Dod5vEFwtgGveJz
+        iqJNkrZQY1EQrJ8OXnfObwAD
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Fri, 13 Dec 2024 22:00:39 GMT
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 19:57:17 GMT
+      strict-transport-security:
       - max-age=15724800; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
+      vary:
+      - Accept-Encoding
       - Origin
     status:
       code: 200

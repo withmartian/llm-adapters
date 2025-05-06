@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/fireworks/models/llama-v3p1-70b-instruct", "prompt":
-      "Hi", "max_tokens": 10}'
+    body: '{"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '96'
+      - '91'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: '{"id":"83696b31-c8d0-409b-ab5e-5ae34d841e31","object":"text_completion","created":1733365234,"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","choices":[{"index":0,"text":"
-        Dora''s brother. Good luck with your sales","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}'
+      string: '{"id":"f87906c5-ede1-4349-8de8-b6da9890e398","object":"text_completion","created":1746555152,"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","choices":[{"index":0,"text":"
+        there, folks! If you''re looking for a","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8ed08ec4485b67ee-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 02:20:34 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=837.0,total;dur=894.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba7240dce26c4d-SJC
       content-length:
-      - '339'
+      - '335'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:31 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -73,11 +64,33 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.502'
+      - '0.113'
+      fireworks-server-time-to-first-token:
+      - '0.073'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=185.0,total;dur=251.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '509'
+      - '116'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59998'
       x-request-id:
-      - 83696b31-c8d0-409b-ab5e-5ae34d841e31
+      - f87906c5-ede1-4349-8de8-b6da9890e398
     status:
       code: 200
       message: OK

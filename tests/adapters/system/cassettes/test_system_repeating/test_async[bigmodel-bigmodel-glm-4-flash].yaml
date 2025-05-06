@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "system", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "user", "content": "Hi"}, {"role": "user", "content": "\"\""}], "model": "glm-4-flash"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"glm-4-flash"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '328'
+      - '294'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,33 +25,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
       string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"Hello!
-        It seems like there might be a message missing or a placeholder. If you have
-        a question or need assistance, feel free to share it, and I''ll do my best
-        to help you out!","role":"assistant"}}],"created":1733771187,"id":"20241210030626526df5597d9e419a","model":"glm-4-flash","request_id":"20241210030626526df5597d9e419a","usage":{"completion_tokens":43,"prompt_tokens":21,"total_tokens":64}}'
+        If you have any questions or need assistance, feel free to let me know how
+        I can help.","role":"assistant"}}],"created":1746555106,"id":"2025050702114558fcfd061e9943ec","model":"glm-4-flash","request_id":"2025050702114558fcfd061e9943ec","usage":{"completion_tokens":24,"prompt_tokens":21,"total_tokens":45}}'
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-length:
+      - '382'
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:06:27 GMT
-      Set-Cookie:
-      - acw_tc=2f6a1fa217337711860455248e4aba9f6520fa13fa6cae298d6e8d12916dd3;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:11:47 GMT
+      set-cookie:
+      - acw_tc=ac11000117465551052572563e006ea8c426d29f2b88dbfae95e0a01d5bba9;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
+      vary:
       - Accept-Encoding
       - Origin
       - Access-Control-Request-Method
@@ -62,10 +60,8 @@ interactions:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 20241210030626526df5597d9e419a
-      content-length:
-      - '463'
+      x-log-id:
+      - 2025050702114558fcfd061e9943ec
     status:
       code: 200
       message: OK

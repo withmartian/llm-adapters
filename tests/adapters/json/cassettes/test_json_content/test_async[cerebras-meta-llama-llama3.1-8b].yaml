@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": [{"type": "text", "text": "Hi"},
-      {"type": "text", "text": "Hi"}]}], "model": "llama3.1-8b"}'
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"llama3.1-8b"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '133'
+      - '120'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,45 +25,56 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-3bfcec85-e741-4dab-8325-26fcb3e57479","choices":[{"finish_reason":"stop","index":0,"message":{"content":"It
-        appears that you''ve provided a JSON list containing two ''text'' objects
-        with the same text ''Hi''. This could be a message or conversation log from
-        a messaging platform, perhaps even an interaction in a conversational AI application
-        like this one.","role":"assistant"}}],"created":1732322548,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":61,"completion_tokens":50,"total_tokens":111},"time_info":{"queue_time":2.879e-05,"prompt_time":0.003144373,"completion_time":0.030496451,"total_time":0.04887962341308594,"created":1732322548}}'
+      string: !!binary |
+        MbwUACCnLe31Hc0etJITjttS/u1r9S9RamBI3MKYxUPuTlwTHP57FVRBkSUy/Bvt5qOoxEjQzSIF
+        cTp1/h4+GwHoMr9J67keaHvU2J2MdNM8buquirKhajd5NdSbLE1pU/V5uunztm2Hoi3qskCFn7A3
+        86g/HtjPLOrAHfUC1OjFzahQsL4adaTw2EQS6gc2kCul8V3AE00eKJDecnNrsBD4k1ksH0HK/U2L
+        uYEbwLVf1IlXIHnesHMsxrJhegjkNlMg7rC0gUDoKgF80237NXsfSY3CloC1KdtAKgrLR8DEAtwC
+        Bui8rg5uAKGrgJyMBB5aIoZ2cd/E0LsLA7tThKrrTCv3ZiIWM0Lnptkxsfhtww2/D8WQ+7q8CL/u
+        vSPvwS0wGbbzOhohkJP10BsxYBm8mwgu5qbgHTrDIMsNxMGJxhkuVk5JJdge6DTWDTe8gYCecDEs
+        IA7onBLh5C4gQBFC5Covi+WjB7MQyMyPBkqwAMiAv1yfn5/zTU6OG85MtoOPB7wUjSxFPdnQELzZ
+        4EeBDW/fcEqD7MCv00sMg1vACk1guXjSMEb+cCXfw27nxfG14XmxLC811XoF+AX/VplX8RqSdINB
+        wHFqLROYcSzQ3w0sIN8xDXIV7LB/s4f2Bn42HXk4lEJXOQQvCDsIINh+OcsvGKSmqwR7kBAovB34
+        AcSxwTcLb7bBNRweFS5uJNRovLdeDAv+/OwV9hBYE/Wo4zIr8iKO0lzh5HoaUeM4msmk23hTtaiw
+        SYPhYbB8pGUh5kONw3zosyhNuq7Iuq6Iy76Ns6RAhXsTen9Qt4eMzK1jVLhu+V/Mi5tmOYj7Jvao
+        i1ihMTJFSJJK4Y898Bruuqp/FIqd6GB5cKgf+H+llQ5XC9TRNoqiPC3KqlKBkNlM0jirqrKKB1l4
+        xFGeRGldB4Xnnh5HaRSlUZJHeVancQEf8+fHAAM=
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '717'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb01e56963cf26-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:42:28 GMT
-      Via:
-      - 1.1 dfd0a9d31e7c22e1ecdaa3c92763b966.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - fBtEcGF-OL8mabnL1bAo9JGEbjj7Mm6vDHw13qbTbNk_TAQYQpJXXw==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 19:50:35 GMT
+      inference-id:
+      - chatcmpl-9c804f8b-58f9-433e-8d53-d5bbbf6b6976
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=DiC1lzGjRlmMcwT.2VMqQQIEgVmvYBPTXUpQplInWCk-1746561035-1.0.1.1-xHf_rU4ckQ9FmawV4J0YjKKoEP3FRrkIh5gp1mH.WusteUaXwJFB2nVSg8Irf2puTvHz1fA8uDwi_bEhkaG6DRDZx22EYdvzIYTT.soSzEE;
+        path=/; expires=Tue, 06-May-25 20:20:35 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -74,15 +84,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14395'
+      - '14389'
       x-ratelimit-remaining-tokens-minute:
-      - '59715'
+      - '60000'
       x-ratelimit-reset-requests-day:
-      - '83851.6987798214'
+      - '14964.618127346039'
       x-ratelimit-reset-tokens-minute:
-      - '31.698779821395874'
+      - '24.61812734603882'
       x-request-id:
-      - fBtEcGF-OL8mabnL1bAo9JGEbjj7Mm6vDHw13qbTbNk_TAQYQpJXXw==
+      - 93bb01e56963cf26-SJC
     status:
       code: 200
       message: OK

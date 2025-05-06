@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '108'
+      - '102'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,56 +25,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8f1b130a4849ed3b-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1734146597,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
-        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
-        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
-        \       \"content\": \"How's it going? Is there something I can help you with
-        or would you like to chat?\",\n        \"tool_calls\": []\n      },\n      \"logprobs\":
-        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-        11,\n    \"total_tokens\": 32,\n    \"completion_tokens\": 21\n  }\n}"
+      string: "{\n  \"id\": \"nszeSUD-2j9zxn-93bb09885a5067dd\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561347,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"It's nice to meet
+        you. Is there something I can help you with or would you like to chat?\",\n
+        \       \"tool_calls\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
+        \"stop\",\n      \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        11,\n    \"total_tokens\": 34,\n    \"completion_tokens\": 23\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8f1b130a4849ed3b-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 14 Dec 2024 03:23:18 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb09885a5067dd-SJC
       content-length:
-      - '579'
+      - '590'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:55:49 GMT
       etag:
-      - W/"243-2LvAmNxDW5asjYKgm4a5H1I9eOQ"
+      - W/"24e-cflkNkgEuw2NhL+hdl/Y9uswgxU"
       retry-after:
-      - '1'
+      - '0'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 5cc272da-86af-4a8b-be73-ccaba833f7e1-noamzn
       x-api-call-end:
-      - '2024-12-14T03:23:18.241Z'
+      - '2025-05-06T19:55:48.974Z'
       x-api-call-start:
-      - '2024-12-14T03:23:17.529Z'
+      - '2025-05-06T19:55:47.981Z'
       x-api-received:
-      - '2024-12-14T03:23:17.518Z'
+      - '2025-05-06T19:55:47.974Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -84,11 +88,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '197'
+      - '198'
       x-ratelimit-remaining-tokens:
-      - '99879'
+      - '99966'
       x-ratelimit-reset:
-      - '1'
+      - '0'
+      x-request-id:
+      - nszeSUD-2j9zxn-93bb09885a5067dd
     status:
       code: 200
       message: OK

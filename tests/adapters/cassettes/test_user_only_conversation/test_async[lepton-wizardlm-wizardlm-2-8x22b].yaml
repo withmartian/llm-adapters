@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "wizardlm-2-8x22b"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"wizardlm-2-8x22b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '78'
+      - '72'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,39 +25,38 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-v5UNBeFBoEXospv4XCs4qs","object":"chat.completion","created":1733369078,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? If you have any questions or need information
-        on a particular topic, feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":8,"total_tokens":36,"completion_tokens":28}}'
+      string: '{"id":"chatcmpl-6EySazwhiyKqvj7F3wekfE","object":"chat.completion","created":1746561506,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":18,"completion_tokens":10}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0eca5eac12710-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:24:39 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0d649e21f9f1-SJC
       content-length:
-      - '462'
+      - '343'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:58:26 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '348'
+      - '219'
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "nephara", "prompt": "Hi", "max_tokens": 10, "stream": true}'
+    body: '{"model":"llama3-8b-instruct","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '70'
+      - '74'
       content-type:
       - application/json
       host:
       - jtwtcue2-llama3-8b-instruct.tin.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,56 +25,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://jtwtcue2-llama3-8b-instruct.tin.lepton.run/api/v1/completions
   response:
     body:
-      string: 'data: {"id":"cmpl-GtQvak6PvXN7nPpaKpDD8o","object":"text_completion","created":1733910346,"model":"nephara","choices":[{"index":0,"text":"://","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-GtQvak6PvXN7nPpaKpDD8o","object":"text_completion","created":1733910346,"model":"nephara","choices":[{"index":0,"text":",
-        I","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-GtQvak6PvXN7nPpaKpDD8o","object":"text_completion","created":1733910346,"model":"nephara","choices":[{"index":0,"text":"''m
-        interested in","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-GtQvak6PvXN7nPpaKpDD8o","object":"text_completion","created":1733910346,"model":"nephara","choices":[{"index":0,"text":"
-        learning more about","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-GtQvak6PvXN7nPpaKpDD8o","object":"text_completion","created":1733910346,"model":"nephara","choices":[{"index":0,"text":"
-        your","logprobs":null,"finish_reason":"length"}]}
-
-
-        data: [DONE]
-
-
-        '
+      string: ''
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f048b305ca5fae3-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:45:46 GMT
-      Server:
+      cf-ray:
+      - 93ba7135fcd8ce50-SJC
+      content-length:
+      - '0'
+      date:
+      - Tue, 06 May 2025 18:11:48 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '82'
+      - '1'
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

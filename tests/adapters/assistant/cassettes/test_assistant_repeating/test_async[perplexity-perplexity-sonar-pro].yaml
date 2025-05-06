@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi\nHi"},{"role":"user","content":"Hi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '136'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "10a40db5-8f31-480b-a813-eeeb2a0ba2cf", "model": "sonar-pro",
+        "created": 1746554991, "usage": {"prompt_tokens": 5, "completion_tokens":
+        103, "total_tokens": 108, "search_context_size": "low"}, "citations": ["https://promova.com/confusing-words/hi-hello",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.dictionary.com/e/hello/",
+        "https://dictionary.cambridge.org/us/dictionary/english/hi"], "object": "chat.completion",
+        "choices": [{"index": 0, "finish_reason": "stop", "message": {"role": "assistant",
+        "content": "\"Hi\" is an informal greeting commonly used to express friendliness
+        or recognition, typically in casual conversations with people you know, such
+        as friends, family, or coworkers[1][4]. It is less formal than \"hello\" and
+        is generally considered appropriate in most situations except the most formal
+        ones, where \"hello\" might be preferred[1][2]. The term \"hi\" originated
+        from the Middle English \"hy,\" and is a simple, widely used way to initiate
+        a conversation or greet someone[3]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6e36baa2944c-SJC
+      content-length:
+      - '1071'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:09:51 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Rg8Wycgq1hLq9PufUfo9570nACU_ruwtoGZhyrqxTPM-1746554991-1.0.1.1-uMjPoh33OGJmrEtAK0VsIGdaSuX6l_hSs.5efCFnAzqEkf2Nv23WuaSs9cvv8x7VhetNpFU9Z4JMgC5euxVLuXGmbNZPq5iXhnCZ5Ba49TU;
+        path=/; expires=Tue, 06-May-25 18:39:51 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

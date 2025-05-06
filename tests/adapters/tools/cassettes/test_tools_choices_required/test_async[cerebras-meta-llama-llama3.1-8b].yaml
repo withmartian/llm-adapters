@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "llama3.1-8b", "tool_choice": "required",
-      "tools": [{"type": "function", "function": {"description": "Generate random
-      number", "name": "generate", "parameters": {"type": "object", "properties":
-      {"prompt": {"type": "string", "description": "Random number like 5, 4, 3, 10,
-      11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.1-8b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"required"}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '418'
+      - '391'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,42 +28,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-99ca3bae-3fef-4e79-8922-ccbff19167fd","choices":[{"finish_reason":"tool_calls","index":0,"message":{"tool_calls":[{"id":"ff7b201a3","type":"function","function":{"name":"generate","arguments":"{\"prompt\":
-        \"1-10\"}"}}],"role":"assistant"}}],"created":1732322572,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":218,"completion_tokens":12,"total_tokens":230},"time_info":{"queue_time":2.923e-05,"prompt_time":0.011798625,"completion_time":0.005697903,"total_time":0.029949188232421875,"created":1732322572}}'
+      string: !!binary |
+        ITQJACD+p1OnNfdmYZX+p9WFKlxCC8hpHGY7cNjuZ4NEsjDgMMAA4zjwQOqGgQ67y7lJdNwubP5a
+        dWvHswOhfdS5HZehEF1vUoix0E1rC9NLWwRfu8LHZFxnO9OpBgwR9tkGOu84z6wo747qAGHL8wKG
+        B+snkGCwTcxBO/I8D2VbD8Ny4l/pVXBa+tCCIf8tCQTbQgU2HbRjqscEQgJ6TGDoczcI+wXLOo9L
+        voA+LpCFFBccOI4rwzoPCYR6255brqeMIGDdKHUg6Y2zTnqtGca5SwMIw1CPtT7JIjRgSLA/XfbP
+        6Z7WZX1OGYR+KTsjtGpbZ9rWSd810igHhrl5pTaLqycHBjelbz14ww9lnj/TtIF0tAzVgjUyMPx6
+        gAxLI/XBkJ9jKp9TP4N2fL3TO5X5OSaQOAmhpNVOGEYEdEAJGYyQjg4VPRG0js6wAvyulQ4meGW0
+        s0obo184DgMD
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '585'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb12f4dac38486-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:42:52 GMT
-      Via:
-      - 1.1 1b76276e9fd9c7bd637ed463cc0a5976.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - ZoVItEWUQKnVuE3rugU7Y8ebeVaJhUkrFk56mdW44nxtR6rHrTB32Q==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 20:02:13 GMT
+      inference-id:
+      - chatcmpl-0df4e899-3bc5-4f15-87a6-79e46d5d4d2b
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=kX8HQSHF7duMMdbiFOeXfEPPmPERO1IVJLn.PPR12fs-1746561733-1.0.1.1-aNUH2QgQaaPs_OAfcIL0KyOZ0CBzU9rKoAOF0HDTOsQb.onE.BtZ4Rb1XS0nzBGyO1MxgnqPrhMCdHpFnfbyTM9ySTXRl5fY6HolZCPicfY;
+        path=/; expires=Tue, 06-May-25 20:32:13 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -75,15 +81,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14379'
+      - '14369'
       x-ratelimit-remaining-tokens-minute:
-      - '58171'
+      - '60000'
       x-ratelimit-reset-requests-day:
-      - '83827.67082500458'
+      - '14266.013082265854'
       x-ratelimit-reset-tokens-minute:
-      - '7.670825004577637'
+      - '46.01308226585388'
       x-request-id:
-      - ZoVItEWUQKnVuE3rugU7Y8ebeVaJhUkrFk56mdW44nxtR6rHrTB32Q==
+      - 93bb12f4dac38486-SJC
     status:
       code: 200
       message: OK

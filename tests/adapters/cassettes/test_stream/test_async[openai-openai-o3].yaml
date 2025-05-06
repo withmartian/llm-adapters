@@ -15,7 +15,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.68.2
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,7 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.68.2
+      - 1.76.0
       x-stainless-read-timeout:
       - '600.0'
       x-stainless-retry-count:
@@ -38,87 +38,54 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: 'data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"role":"assistant","content":"","refusal":null},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"Hello"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"!"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        What"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        can"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        I"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        help"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        you"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        with"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"
-        today"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{"content":"?"},"finish_reason":null}]}
-
-
-        data: {"id":"chatcmpl-BN3VL4j6bpbe0kPMIohohhRxZkVn5","object":"chat.completion.chunk","created":1744834715,"model":"o3-2025-04-16","service_tier":"default","system_fingerprint":null,"choices":[{"index":0,"delta":{},"finish_reason":"stop"}]}
-
-
-        data: [DONE]
-
-
-        '
+      string: "{\n    \"error\": {\n        \"message\": \"Request too large for o3
+        in organization org-EohclM7n5UCFBEOi5KYeiEb4 on tokens per min (TPM): Limit
+        0, Requested 3. The input or output tokens must be reduced in order to run
+        successfully. Visit https://platform.openai.com/account/rate-limits to learn
+        more.\",\n        \"type\": \"tokens\",\n        \"param\": null,\n        \"code\":
+        \"rate_limit_exceeded\"\n    }\n}\n"
     headers:
-      access-control-expose-headers:
-      - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93165f6a78cf317c-TBS
+      - 93bb05b82bcc35d6-SJC
+      content-length:
+      - '393'
       content-type:
-      - text/event-stream; charset=utf-8
+      - application/json; charset=utf-8
       date:
-      - Wed, 16 Apr 2025 20:18:36 GMT
-      openai-organization:
-      - martian-4
-      openai-processing-ms:
-      - '1228'
-      openai-version:
-      - '2020-10-01'
+      - Tue, 06 May 2025 19:53:11 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=3DzFBUNIfgQVFjAIiRUHq3eS_0.qpujR2awalL_oHWI-1744834716-1.0.1.1-5vaSbI6Ko1bq4SnlOZUgP6WIbodv4uHBOJEmBrtvlkoYxuq8h7EhsX2LdCEEdEodq8EEzgGLaAhgew9ckwOPIQRUGGKIfHOcK25xEt2soN4;
-        path=/; expires=Wed, 16-Apr-25 20:48:36 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=shzhNv4_wFA5pruJCnDPQM6KqGboPImQrvLoSisTEmY-1746561191-1.0.1.1-Qv8D2aoTzE4uGgJQrVA3jVgFw.qXOxon2wZVWIGdUD136y.riOOLQpTmyBoQrfxauVONVcwATEkANLS5cYeYXhfh32Ml_enS6xyqcsjDcvU;
+        path=/; expires=Tue, 06-May-25 20:23:11 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=JIkyxNbJTbk.ww8aIptCUaxyeecXcvgDSyqRuVr02Mc-1744834716707-0.0.1.1-604800000;
+      - _cfuvid=elM_p0_rF809NkBPx_EU6kpO6MIP8TXU29mxCLFqsuY-1746561191768-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      vary:
+      - Origin
       x-content-type-options:
       - nosniff
+      x-ratelimit-limit-requests:
+      - '0'
+      x-ratelimit-limit-tokens:
+      - '0'
+      x-ratelimit-remaining-requests:
+      - '0'
+      x-ratelimit-remaining-tokens:
+      - '0'
+      x-ratelimit-reset-requests:
+      - 0s
+      x-ratelimit-reset-tokens:
+      - 0s
       x-request-id:
-      - req_959a221323de0340afc6c0fc38802648
+      - req_32d848cb9628f3605fb8a149fb761fa6
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

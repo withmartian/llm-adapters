@@ -1,10 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "command", "messages": [{"role": "system", "content": "\"\""},
-      {"role": "user", "content": "\"\""}, {"role": "assistant", "content": "\"\""},
-      {"role": "user", "content": "\"\""}, {"role": "assistant", "content": "\"\""},
-      {"role": "user", "content": "\"\""}, {"role": "user", "content": "\"\""}], "stream":
-      false}'
+    body: '{"model":"command","messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"user","content":"\"\""}],"stream":false}'
     headers:
       accept:
       - '*/*'
@@ -13,33 +9,32 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '322'
+      - '290'
       content-type:
       - application/json
       host:
       - api.cohere.com
       user-agent:
-      - python-httpx/0.27.2
+      - python-httpx/0.28.1
       x-fern-language:
       - Python
       x-fern-sdk-name:
       - cohere
       x-fern-sdk-version:
-      - 5.11.3
+      - 5.15.0
     method: POST
     uri: https://api.cohere.com/v2/chat
   response:
     body:
-      string: '{"id":"a72e10dc-9876-42ef-aded-2b89f440e05d","message":{"role":"assistant","content":[{"type":"text","text":"Got
-        it! I''ll make sure to respond to your messages with blank lines to indicate
-        I haven''t yet received information to respond with. \nLet me know when you
-        have a specific question or topic you''d like to discuss, and I''ll be happy
-        to provide any information or insights I can to assist you."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":7,"output_tokens":63},"tokens":{"input_tokens":35,"output_tokens":64}}}'
+      string: '{"id":"0a953197-deae-4197-99df-da844a6f8d7f","message":{"role":"assistant","content":[{"type":"text","text":"Got
+        it, sorry about that! Let''s continue the conversation with the new bot. If
+        you ever experience any issues in the future, please let me know and I''ll
+        try my best to resolve the problem as soon as I can."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":7,"output_tokens":47},"tokens":{"input_tokens":35,"output_tokens":48}}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Length:
-      - '541'
+      - '457'
       Via:
       - 1.1 google
       access-control-expose-headers:
@@ -49,13 +44,13 @@ interactions:
       content-type:
       - application/json
       date:
-      - Sat, 23 Nov 2024 00:47:32 GMT
+      - Tue, 06 May 2025 19:50:14 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 UTC
       num_chars:
       - '101'
       num_tokens:
-      - '70'
+      - '54'
       pragma:
       - no-cache
       server:
@@ -65,9 +60,9 @@ interactions:
       x-accel-expires:
       - '0'
       x-debug-trace-id:
-      - d821252eae329dcbea03ae5aa0b512f1
+      - dc94efd781050d164cbe636fd77c6af7
       x-envoy-upstream-service-time:
-      - '1914'
+      - '1458'
     status:
       code: 200
       message: OK

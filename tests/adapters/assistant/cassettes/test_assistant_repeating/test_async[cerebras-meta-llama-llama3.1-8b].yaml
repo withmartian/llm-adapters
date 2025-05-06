@@ -1,8 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "assistant", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "llama3.1-8b"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-8b"}'
     headers:
       accept:
       - application/json
@@ -11,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '188'
+      - '170'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,42 +25,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-16fbc334-b6c6-476f-8166-ace6d37141c8","choices":[{"finish_reason":"stop","index":0,"message":{"content":"How''s
-        it going?","role":"assistant"}}],"created":1732322545,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":54,"completion_tokens":6,"total_tokens":60},"time_info":{"queue_time":2.902e-05,"prompt_time":0.002828947,"completion_time":0.003284362,"total_time":0.020689725875854492,"created":1732322545}}'
+      string: !!binary |
+        ISAJACA+6XydVt2znSr+oVLT5j/MKVRhuggIu6vswO2zQxxwOE0TPHCgQRhQ6THQPLmb83nCRfGD
+        1q1XDC08mr5KzbLNWRWC0IrzTJqqy6ToeFZ3LGSmy00jXOuYMaCIsKcD/vcr+pk1xeyoD/A4UtxA
+        8WD9Ap9T2CYM/CsayM08ronMMU4HGYGUHsPHPRB7wmpY70kf5jkeF3I9SGo7zh1GrqSpVtKHeSPP
+        8SSPQ+pJ3MlMqPk5nruep0iavkq/QLHHOcCjOo7hSNWa8P7+lyJd3Sm08MxIrZR0jlEssQ0zPOa5
+        WipxYZmtQRFfPyi6Yb0P+7YPl9jutqKVueBNo2XTaGbamkmuQRHrMTRJWb3YL3iIKyhOMSK2PS5b
+        KlKcwnrAK0lRDMhwRfHjAVh1NO6dIg1LKIa1i/Cv+H+GMxRpWAJ8fsnznDuuLac0QHu4sYoLzSYV
+        FWNKsJwbUoC/tRLWKiuZ0E5zp156fzcAAw==
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '484'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6e58cda1227e-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:42:25 GMT
-      Via:
-      - 1.1 11c8673f8a48dc627eaa83c99e9efedc.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - feJBclDkVB4optuhfRarcyWCb7d3fZ40eTsyL4nRnoi4DVGEoP7qwA==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 18:09:51 GMT
+      inference-id:
+      - chatcmpl-aee36522-47af-43f2-bf1e-7f07c39d9177
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=RIedxn.pckoBwLN9q_Man1ROWy7e2k6jAVGzKksLHlM-1746554991-1.0.1.1-5wL0cPsajZeiet3EY5lR2DujriwjaRRDWTraT37sQ0MBJOadkGspIheE2ThrksHtVTbUblFB56m3bADHZtTy5u0ivinwfSAfMtBNjkXyzNc;
+        path=/; expires=Tue, 06-May-25 18:39:51 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -72,15 +78,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14397'
+      - '14398'
       x-ratelimit-remaining-tokens-minute:
-      - '59839'
+      - '59904'
       x-ratelimit-reset-requests-day:
-      - '83854.28058075905'
+      - '21008.395681142807'
       x-ratelimit-reset-tokens-minute:
-      - '34.28058075904846'
+      - '8.395681142807007'
       x-request-id:
-      - feJBclDkVB4optuhfRarcyWCb7d3fZ40eTsyL4nRnoi4DVGEoP7qwA==
+      - 93ba6e58cda1227e-SJC
     status:
       code: 200
       message: OK

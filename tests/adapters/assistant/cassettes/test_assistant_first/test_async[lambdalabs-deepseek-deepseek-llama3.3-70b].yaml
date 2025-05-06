@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,29 +38,32 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-b58c34c3-8602-4362-8792-7f02a7ac9379\",\"object\":\"chat.completion\",\"created\":1742234750,\"model\":\"deepseek-llama3.3-70b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\u003cthink\\u003e\\n\\n\\u003c/think\\u003e\\n\\nHello!
-        How can I assist you today? \U0001F60A\"},\"finish_reason\":\"stop\",\"content_filter_results\":{\"hate\":{\"filtered\":false},\"self_harm\":{\"filtered\":false},\"sexual\":{\"filtered\":false},\"violence\":{\"filtered\":false},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"profanity\":{\"filtered\":false,\"detected\":false}}}],\"usage\":{\"prompt_tokens\":7,\"completion_tokens\":16,\"total_tokens\":23,\"prompt_tokens_details\":null,\"completion_tokens_details\":null},\"system_fingerprint\":\"\"}"
+      string: '{"id":"chatcmpl-1bd8ce03-1cdf-4faf-aadf-d0f4062f536c","object":"chat.completion","created":1746555048,"model":"deepseek-llama3.3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"\u003cthink\u003e\nOkay,
+        the user just said \"Hi.\" I should respond in a friendly and welcoming manner.
+        Maybe say hello back and ask how I can assist them today. Keeping it open-ended
+        so they feel comfortable to ask anything they need help with.\n\u003c/think\u003e\n\nHello!
+        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":7,"completion_tokens":62,"total_tokens":69,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6bb5fb356d82-DFW
+      - 93ba6fbda8baeb36-SJC
       content-length:
-      - '700'
+      - '922'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:05:50 GMT
+      - Tue, 06 May 2025 18:10:49 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=ozbwhCjQl.eYFOrTpZQIInrS2I6fRuRAUkfY4.gdt7U-1742234750-1.0.1.1-6wXmpdugA1PgZx8L8IbXFeXvgh8UEENNxqkxzHdTh1fRExSN0B.E2fFJ2H7nMGbEV1wS3UCzm8oGbjuQ2s.LzAf5_6GgPeKFvOrDJJAs37U;
-        path=/; expires=Mon, 17-Mar-25 18:35:50 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=T7MPv9W4gZOBryjdu2rxMJhVSlDo0GaWLeG026Z8tzo-1746555049-1.0.1.1-h.XXBGtZFiRxbPsuFu7vTuPYGqErJspqHIiCisEeh4rmjow_p6MwTeEGyslR6nKq3bf0rEfCWsDK3td4fY5nbnpGl9bml1sEDOVfYhPzJ6k;
+        path=/; expires=Tue, 06-May-25 18:40:49 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - b58c34c3-8602-4362-8792-7f02a7ac9379
+      - 1bd8ce03-1cdf-4faf-aadf-d0f4062f536c
       x-response-time:
-      - '0.315'
+      - '1.092'
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "wizardlm-2-8x22b", "prompt": "Hi", "stop": "stop"}'
+    body: '{"model":"wizardlm-2-8x22b","prompt":"Hi","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '61'
+      - '56'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,49 +25,48 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-CHQUxzMYcdZN6wyNhtBFdF","object":"text_completion","created":1734126447,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"3518EV200,
-        and the control panel 102 may be connected to the video decoder 103 via a
-        GPIO interface.\n\nIn an embodiment, the control panel 102 may be a touch
-        screen, and the control panel 102 may be connected to the video decoder 103
-        via an SPI interface or an I2C interface.\n\nIn an embodiment, the control
-        panel 102 may be a touch screen, and the control panel 102 may be connected
-        to the video decoder 103 via a USB interface.\n\nIn an embodiment, the control
-        panel 102 may be a touch screen, and the control panel 102 may be connected
-        to the video decoder 103 via a network interface.\n\nIn an embodiment, the
-        control panel 102 may be a touch screen, and the control panel 102 may be
-        connected to the video decoder 103 via a serial port interface.\n\nIn an embodiment,
-        the control panel 102 may be a touch screen, and the control panel 102 may
-        be connected to the video dec","logprobs":null,"finish_reason":"length","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
+      string: '{"id":"cmpl-K3Uuaiwkpd5GancApoeVPF","object":"text_completion","created":1746561165,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":",
+        I''m trying to create a simple text that will check if a process is running
+        and if not start it. I''m using the following script:\n\n```\n#!/bin/bash\n\nprocess=\"myapp\"\n\nif
+        ! ps aux | grep \"$process\" | grep -v grep; then\n    echo \"No $process
+        found, starting...\"\n    /path/to/myapp\nelse\n    echo \"$process is running,
+        nothing to do.\"\nfi\n```\n\nThe problem is that the script always says that
+        the process is running, even if it''s not. I''ve tried to use `pgrep` instead
+        of `ps aux | grep` but I get the same result.\n\nWhat am I doing wrong?\n\nComment:
+        You should use `pgrep` and `pkill` for this kind of task.\n\nComment: I''ve
+        tried with `pgrep` but I get the same result.\n\nComment: You should use `pgrep`
+        and `pkill` for this kind of task. Also, you should use full paths for the
+        executables you''re starting.\n\nComment: I''ve tried","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f1927162e5967b8-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:47:30 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb05119cdb2368-SJC
       content-length:
-      - '1149'
+      - '1107'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:52:48 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '3314'
+      - '3112'
     status:
       code: 200
       message: OK

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "wizardlm-2-7b",
-      "n": 2}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"wizardlm-2-7b","n":2}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '83'
+      - '75'
       content-type:
       - application/json
       host:
       - wizardlm-2-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,41 +25,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-nVyAgZyNVktpND5bW8aSZo","object":"chat.completion","created":1733368843,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+      string: '{"id":"chatcmpl-NJY2DNWGksCKsSJQqbzwyK","object":"chat.completion","created":1746561076,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
         How can I assist you today? If you have any questions or need help with something,
-        feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null},{"index":1,"message":{"role":"assistant","content":"Hello!
+        feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop"},{"index":1,"message":{"role":"assistant","content":"Hello!
         How can I assist you today? If you have any questions or need help with something,
-        feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":8,"total_tokens":60,"completion_tokens":52}}'
+        feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":60,"completion_tokens":52}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e6e51a1a256c-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:20:43 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb02e64dd02513-SJC
       content-length:
-      - '697'
+      - '633'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:16 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '530'
+      - '310'
     status:
       code: 200
       message: OK

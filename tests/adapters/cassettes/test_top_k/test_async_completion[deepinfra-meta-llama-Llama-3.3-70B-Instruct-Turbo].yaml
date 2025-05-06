@@ -1,0 +1,89 @@
+interactions:
+- request:
+    body: '{"model":"meta-llama/Llama-3.3-70B-Instruct-Turbo","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RGptL9blirfGkIoFZ81i5EVN","object":"text_completion","created":1746561731,"model":"meta-llama/Llama-3.3-70B-Instruct-Turbo","choices":[{"index":0,"text":"from---\n\nCSS
+        is Radical\n================\n\nI keep saying that CSS is becoming super powerful,
+        but not a lot of people agree with me. CSS is radically changing how we approach
+        front-end web development, and it''s about time we start embracing these changes.
+        Let''s dive into the radical world of CSS and explore its power.\n\nCSS Variables
+        are Keys\n---------------------\n\nWith the introduction of [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties),
+        also known as custom properties, we can now store values and reuse them throughout
+        our stylesheets. This has turned CSS into a more dynamic and flexible language.
+        We can define a variable, for example, to set a primary color for our entire
+        application.\n\n```css\n:root {\n  --primary-color: #33cc33;\n}\n\n.example
+        {\n  background-color: var(--primary-color);\n}\n```\n\nWe can also update
+        these variables dynamically using JavaScript, which allows us to create more
+        interactive and engaging experiences.\n\n```javascript\ndocument.documentElement.style.setProperty(''--primary-color'',
+        ''#66d9ef'');\n```\n\nGrid and Flexbox are Game-Changers\n---------------------------------\n\n[CSS
+        Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) and
+        [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+        are two layout models that have revolutionized how we structure and design
+        our web applications. They provide a more efficient and flexible way to create
+        responsive and accessible layouts.\n\n```css\n.grid {\n  display: grid;\n  grid-template-columns:
+        repeat(3, 1fr);\n  grid-gap: 10px;\n}\n\n.grid > div {\n  background-color:
+        #ccc;\n  padding: 20px;\n}\n```\n\nLogical Properties are the Future\n---------------------------------\n\n[Logical
+        Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
+        are a new set of properties that allow us to style elements based on the writing
+        mode of the content. This is particularly useful for creating more inclusive
+        and accessible designs that cater to different languages and cultures.\n\n```css\n.example
+        {\n  margin-block-start: 10px;\n  padding-inline-end: 20px;\n}\n```\n\nConclusion\n----------\n\nCSS
+        is no longer just a styling language; it''s a powerful tool for creating dynamic,
+        flexible, and inclusive web applications. With the introduction of new features
+        like CSS Variables, Grid, Flexbox, and Logical Properties, we can now build
+        more complex and engaging experiences without relying on JavaScript. So, let''s
+        start embracing the radical world of CSS and push the boundaries of what''s
+        possible on the web!","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":540,"completion_tokens":539,"estimated_cost":0.00013485}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2938'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:02:12 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

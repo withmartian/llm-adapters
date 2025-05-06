@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - OpenAI/Python 1.59.3
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,32 +25,58 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: 'data: {"id":"b6814d60-4529-4fa5-bbdd-716ded17fe4e","object":"text_completion","created":1738285217,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
-        New","logprobs":null,"finish_reason":null}],"usage":null}
+      string: 'data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":":","logprobs":null,"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"b6814d60-4529-4fa5-bbdd-716ded17fe4e","object":"text_completion","created":1738285217,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"comers","logprobs":null,"finish_reason":null}],"usage":null}
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        for","logprobs":null,"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"b6814d60-4529-4fa5-bbdd-716ded17fe4e","object":"text_completion","created":1738285217,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":",
-        newcomers,\n\nHi Newcom","logprobs":null,"finish_reason":null}],"usage":null}
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        a","logprobs":null,"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"b6814d60-4529-4fa5-bbdd-716ded17fe4e","object":"text_completion","created":1738285217,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"ers","logprobs":null,"finish_reason":null}],"usage":null}
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        project","logprobs":null,"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"b6814d60-4529-4fa5-bbdd-716ded17fe4e","object":"text_completion","created":1738285217,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":",","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        I","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        need","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        to","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        generate","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"
+        (","logprobs":null,"finish_reason":null}],"usage":null}
+
+
+        data: {"id":"3527f3c1-202b-444e-b240-8f985e3c01ab","object":"text_completion","created":1746555151,"model":"accounts/fireworks/models/deepseek-r1","choices":[{"index":0,"text":"","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}
 
 
         data: [DONE]
@@ -58,28 +84,18 @@ interactions:
 
         '
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c38d69c62364-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 01:00:17 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=673.0,total;dur=693.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba723d3e81ed41-SJC
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:12:31 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -89,11 +105,15 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-time-to-first-token:
-      - '0.194'
-      fireworks-speculation-generated-tokens:
-      - '0'
+      - '0.036'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=559.0,total;dur=611.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '196'
+      - '39'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -109,7 +129,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59998'
       x-request-id:
-      - b6814d60-4529-4fa5-bbdd-716ded17fe4e
+      - 3527f3c1-202b-444e-b240-8f985e3c01ab
     status:
       code: 200
       message: OK

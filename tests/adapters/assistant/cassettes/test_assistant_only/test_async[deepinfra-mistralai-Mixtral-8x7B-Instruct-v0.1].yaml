@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '97'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RrrL9RFf17EPi7FryrHlC1d9","object":"chat.completion","created":1746561194,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"message":{"role":"assistant","content":"
+        welcome to the AI Dungeon! I''m here to help you have an interesting and engaging
+        text-based adventure. To start, could you please provide a brief description
+        of what your character looks like and what kind of setting you''d like to
+        be in? I can then use that information to generate a starting scene for our
+        adventure.\n\nAs a reminder, I am an AI and not a human, so I don''t have
+        personal experiences or emotions. I''m here to help you have fun and enjoy
+        your story. Let''s get started!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":10,"total_tokens":124,"completion_tokens":114,"estimated_cost":2.9760000000000003e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '871'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 19:53:14 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

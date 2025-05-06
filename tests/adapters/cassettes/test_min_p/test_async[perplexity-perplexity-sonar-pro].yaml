@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "acf29a8f-88a0-4d31-acf6-288e9aa887e2", "model": "sonar-pro",
+        "created": 1746555211, "usage": {"prompt_tokens": 1, "completion_tokens":
+        116, "total_tokens": 117, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Hello! \"Hi\" is a common informal
+        greeting in English, used in most situations except the very formal[2][4].
+        It''s friendly, casual, and widespread\u2014you''ll often hear it when people
+        meet, pass each other, or start a conversation[2]. The origin of \"hi\" dates
+        back to at least the 1800s in America, and it has become one of the most popular
+        greetings, along with \"hello,\" \"hey,\" and \"howdy\"[2].\n\nIf you have
+        any questions or need information about something specific, feel free to ask!"},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba73a4f99cebf1-SJC
+      content-length:
+      - '1092'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:13:31 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=gcXbbv00jcm4CRb588YLCcrHGm.FGNmpc23MUKQBd3k-1746555211-1.0.1.1-VKTv0uFglSynOt62QNvCp9jOw55I2acZoQcagzJcAjcsWqbE5EARQcr045evo.XmTisOzmKeJQauEO1XPIn3uooXcHGV17UODG0CO.u3ugQ;
+        path=/; expires=Tue, 06-May-25 18:43:31 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

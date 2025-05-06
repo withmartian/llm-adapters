@@ -1,0 +1,111 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '75'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "097f24f3-22b0-4894-a138-b512f4051cce", "model": "sonar-reasoning",
+        "created": 1746555011, "usage": {"prompt_tokens": 3, "completion_tokens":
+        779, "total_tokens": 782, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=V_XrHHv4X68"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user just
+        wrote \"Hi\" and then \"Hi\" again. Looking at the search results, it seems
+        they might be referring to the song \"Hi, Hi, Hi\" by Wings. Let me check
+        the search results to confirm.\n\nThe first search result is the Wikipedia
+        page for the song \"Hi, Hi, Hi,\" which clearly states it''s a song by Wings,
+        written by Paul and Linda McCartney, released as a double A-side single with
+        \"C Moon\" in 1972. The other results are from YouTube and Spotify, all pointing
+        to the same song. Since the user''s query is just \"Hi,\" but the search results
+        are all about the Wings song, it''s safe to assume they''re asking about that
+        song.\n\nI need to structure the answer with the key details from the search
+        results. The song was released in 1972, part of a single with \"C Moon,\"
+        peaked in several charts, and was included in various compilations. The answer
+        should mention the release dates, chart performance, genres, and the compilations
+        it''s part of. Also, note that it''s a glam rock song and a staple of their
+        live shows. Make sure to cite the sources properly, using [1] for most of
+        the info since the Wikipedia page has the main details. The other sources
+        [2][3][4][5] are about different releases or versions but don''t add much
+        new information beyond what''s already covered in [1].\n\nAvoid starting with
+        a header, so the answer should begin with a brief mention of the song. Then
+        use sections like Release Details, Chart Performance, Genre and Legacy, Compilation
+        Appearances, and Live Performances. Each section should have concise points
+        with citations. Since the user''s query is short, the answer should be informative
+        but not overly lengthy. Make sure to check all the info is from the provided
+        search results and correctly cited.\n</think>\n\n\"Hi, Hi, Hi\" is a glam
+        rock song by Wings, written by Paul and Linda McCartney. Released as a double
+        A-side single with \"C Moon\" in 1972, it charted strongly, peaking at number
+        one in Spain, number five in the UK, and number 10 in the US[1]. The track
+        became a regular in Wings'' 1970s live performances[1].  \n\n### **Release
+        Details**  \n- **Release Date**: 1 December 1972 (UK), 4 December 1972 (US)[1].  \n-
+        **Label**: Apple Records[1].  \n- **Producers**: Paul McCartney[1][5].  \n\n###
+        **Chart Performance**  \n- **UK**: #5[1].  \n- **US**: #10[1].  \n- **Spain**:
+        #1[1].  \n- **Ireland**: #18[1].  \n\n### **Genre and Legacy**  \nThe song
+        exemplifies glam rock, with its energy and catchy hooks[1]. It has been included
+        in multiple compilations, including *Wingspan: Hits and History* (2001), *Pure
+        McCartney* (2016), and *The 7\u201d Singles Box* (2022)[1].  \n\n### **Compilation
+        Appearances**  \n| Album                   | Year   | Notes                          |  \n|-------------------------|--------|-------------------------------|  \n|
+        *Wings Greatest*        | 1978   | Original release              | [2][4]  \n|
+        *Red Rose Speedway*     | 1993 (reissue), 2018 (reissue) | Bonus track | [1]  \n|
+        *Pure McCartney*        | 2016   | Deluxe edition               | [1][3]  \n\n###
+        **Live Performances**  \nThe song remained a staple in Wings'' 1970s live
+        sets, reflecting its enduring popularity[1]."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6e960e98ed39-SJC
+      content-length:
+      - '3838'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:11 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=XdbtLwXMYFc3Q7fy8qcUmnWLNedgFRkcNnp_APFm0Y0-1746555011-1.0.1.1-8MVi6uh232rrnMjNnxPjO5evXxQ3i2KmpQbftcFpKlZLXcGmGHdkDnNY90zemI_aDwltbqK8F1ODpGNxM2uEfk22C11gctwYl.oI.PTaOQM;
+        path=/; expires=Tue, 06-May-25 18:40:11 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

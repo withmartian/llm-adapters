@@ -1,0 +1,94 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/phi-4","prompt":"Hi","stream":true,"max_tokens":10}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "data: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\", \"object\": \"text_completion\",
+        \"created\": 1746555164, \"model\": \"microsoft/phi-4\", \"choices\": [{\"index\":
+        0, \"text\": \"\\\",\", \"logprobs\": null, \"finish_reason\": null}], \"usage\":
+        null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\", \"object\":
+        \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \" \\\"\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \"world\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \"\\\")\\n\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \" \", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \" SELECT\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \" '\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \"Hello\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \"',\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \" '\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RjLckRU0Gc16gnU6sNmPUOcf\",
+        \"object\": \"text_completion\", \"created\": 1746555164, \"model\": \"microsoft/phi-4\",
+        \"choices\": [{\"index\": 0, \"text\": \"\", \"logprobs\": null, \"finish_reason\":
+        \"length\"}], \"usage\": {\"prompt_tokens\": 1, \"total_tokens\": 11, \"completion_tokens\":
+        10, \"estimated_cost\": 1.47e-06}}\r\n\r\ndata: [DONE]\r\n\r\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/event-stream; charset=utf-8
+      Date:
+      - Tue, 06 May 2025 18:12:44 GMT
+      Transfer-Encoding:
+      - chunked
+      cache-control:
+      - no-store
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

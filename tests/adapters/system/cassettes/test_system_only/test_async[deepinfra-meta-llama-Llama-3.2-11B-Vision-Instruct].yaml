@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "user", "content":
-      "\"\""}], "model": "meta-llama/Llama-3.2-11B-Vision-Instruct"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"meta-llama/Llama-3.2-11B-Vision-Instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '141'
+      - '131'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,27 +25,32 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-04d7083c5f024b4fae67dd9b61ce1334","object":"chat.completion","created":1733375344,"model":"meta-llama/Llama-3.2-11B-Vision-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like you started to send a message, but it was cut off! Is there something
-        you''d like to talk about?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":17,"total_tokens":43,"completion_tokens":26,"estimated_cost":2.3650000000000002e-06}}'
+      string: '{"id":"chatcmpl-RK0NPYUBWgIGXMOjo1ni8WB9","object":"chat.completion","created":1746555107,"model":"meta-llama/Llama-3.2-11B-Vision-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you started to say something, but there''s no text after the quotes.
+        Would you like to continue or share what''s on your mind? I''m here to listen
+        and help if I can!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":59,"completion_tokens":42,"estimated_cost":2.891e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '489'
+      - '551'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 05:09:04 GMT
+      - Tue, 06 May 2025 18:11:47 GMT
       server:
       - uvicorn
       x-robots-tag:

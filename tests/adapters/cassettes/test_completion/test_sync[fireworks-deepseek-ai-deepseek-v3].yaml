@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - OpenAI/Python 1.59.3
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: '{"id":"c57c3ea8-c645-4d17-99a5-dbeb0f759303","object":"text_completion","created":1738285205,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":"
-        to everybody, this is the presentation I made in","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}'
+      string: '{"id":"82913b24-d9ad-4412-a6c5-e8fb6b952970","object":"text_completion","created":1746555157,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":"
+        this is T3 instruction T3 instruction is similar","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c33f0d5596d7-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 01:00:05 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=1149.0,total;dur=1171.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba7264d814235b-SJC
       content-length:
       - '334'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:38 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,11 +64,17 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.682'
-      fireworks-speculation-generated-tokens:
-      - '5'
+      - '0.606'
+      fireworks-server-time-to-first-token:
+      - '0.282'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=808.0,total;dur=868.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '683'
+      - '611'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -92,7 +90,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59998'
       x-request-id:
-      - c57c3ea8-c645-4d17-99a5-dbeb0f759303
+      - 82913b24-d9ad-4412-a6c5-e8fb6b952970
     status:
       code: 200
       message: OK

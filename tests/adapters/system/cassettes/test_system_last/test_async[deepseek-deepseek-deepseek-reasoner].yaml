@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,57 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"7b882402-1dca-4b78-805d-9b9eec228f01\",\"object\":\"chat.completion\",\"created\":1738793712,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
-        there! How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay,
-        the user just said \\\"Hi\\\" again after my initial response. Maybe they
-        want to continue the conversation.\\n\\nI should respond in a friendly manner
-        and ask how I can assist them today. Keeping it open-ended might encourage
-        them to share what they need help with.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":8,\"completion_tokens\":68,\"total_tokens\":76,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":54},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":8},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+      string: '{"id":"759398a9-3f60-4ee7-9560-be32285d54b3","object":"chat.completion","created":1746561099,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello
+        again! How can I assist you today?","reasoning_content":"Okay, the user just
+        said \"Hi\" again. I should respond in a friendly and welcoming manner. Maybe
+        acknowledge their greeting and offer assistance. Let me keep it open-ended
+        to encourage them to ask for what they need. Something like, \"Hello again!
+        How can I assist you today?\" That should work."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"completion_tokens":75,"total_tokens":83,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":63},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":8},"system_fingerprint":"fp_5417b77867_prod0425fp8"}'
     headers:
-      CF-RAY:
-      - 90d642008b5d7aac-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 22:15:13 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESTIME=1738793709990; path=/
-      - HWWAFSESID=20b5bc4b4bb6febd13; path=/
-      - __cf_bm=GPvaDeV4DdIV2as_vF7oAEr5E0Y.pK1GgnlxNmK0DYU-1738793713-1.0.1.1-icE_UgtKsVleceNRayedTkAvJSu14_JhZOs4vffSOzAQavIgz0nBgrYbs_u_agd.ZX8Yc8T9qkKl_3YfoCJ2qQ;
-        path=/; expires=Wed, 05-Feb-25 22:45:13 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb03793f9bcfb4-SJC
       content-length:
-      - '818'
+      - '858'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:39 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=2InpaT0g13NBjbvFhKKO6VEo9_bLwjObNz3wGUY2h.g-1746561099-1.0.1.1-djmE5rez6vfhJ5fqlR5onXgvpBmeyBfoybRbIsn3L9hiXsjukwqdQ2yjzdKdf9UhnnSL7fGgZApUfaQktA2aHS6BpqQtmG7XKpcDDmplMjg;
+        path=/; expires=Tue, 06-May-25 20:21:39 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - f5d6176da46080132f18b06aea9f766d
+      - 6e68b6132a16d3cc56ef83e7a172b61a
     status:
       code: 200
       message: OK

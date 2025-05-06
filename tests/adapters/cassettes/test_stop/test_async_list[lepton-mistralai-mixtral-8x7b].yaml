@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "mixtral-8x7b",
-      "stop": ["stop", "end"]}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"mixtral-8x7b","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '99'
+      - '90'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,40 +25,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-9nSwiqUx9Ewiy3bGAaBVda","object":"chat.completion","created":1734124781,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I help you today? If you have any questions or need assistance with
-        something, feel free to ask. I''m here to provide information and support.
-        :)","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":9,"total_tokens":46,"completion_tokens":37}}'
+      string: '{"id":"chatcmpl-WGYQg7PsmRssSpgJKkQygF","object":"chat.completion","created":1746561110,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I help you today? If you have any questions about a specific topic,
+        feel free to ask. I''ll do my best to provide clear and concise answers. You
+        can also start a conversation about a topic that interests you. I''m here
+        to assist you in any way I can.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":9,"total_tokens":74,"completion_tokens":65}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f18fe6d6925ed3f-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:19:42 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb03ba1ee8fa6a-SJC
       content-length:
-      - '496'
+      - '568'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:50 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '376'
+      - '521'
     status:
       code: 200
       message: OK

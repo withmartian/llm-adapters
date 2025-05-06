@@ -1,0 +1,82 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "9502f105-887a-4ac4-a196-ebbfb545326b", "model": "sonar", "created":
+        1746561539, "usage": {"prompt_tokens": 1, "completion_tokens": 205, "total_tokens":
+        206, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "\"Hi\" is a casual greeting in
+        English, often considered more informal than \"hello\" and commonly used in
+        everyday interactions[2][4]. It serves as a versatile social acknowledgment
+        suitable for most non-formal contexts, from friendly encounters to informal
+        written communication[2][4].  \n\nBeyond its primary use:  \n- **In Basque**,
+        *hi* is an informal second-person singular pronoun (\"you\") reserved for
+        close acquaintances, requiring specific verb conjugations (e.g., *duk* for
+        males, *dun* for females)[5].  \n- **As an abbreviation**, HI may refer to
+        Hawaii (e.g., in postal codes) or hydrogen-1 in physics[1][4].  \n- **In media**,
+        it appears in titles like Israel\u2019s 1983 Eurovision song \"Hi\" by Ofra
+        Haza and the podcast *Hello Internet*[4].  \n\nThe term\u2019s first recorded
+        use as a greeting traces to a Kansas Native American in the 19th century[2]."},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0e22192ccf1f-SJC
+      content-length:
+      - '1464'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:58:59 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=mqgcbUNxfzh_scTNvtgKgPJbRWypWXtmK2yFNizoppQ-1746561539-1.0.1.1-r8wpY0nZ7COsOoleYQiEcfO8D0uHUk6Kh890RIw7hCkqnnekLaNW8v__bjkP53jfv.CbBe8HYvBOnkDjjE.c9cHxOPH_d1fTB1.hzkfKwlI;
+        path=/; expires=Tue, 06-May-25 20:28:59 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

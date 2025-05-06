@@ -1,7 +1,7 @@
 interactions:
 - request:
     body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
-      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"deepseek-reasoner"}'
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n\n\"\""}],"model":"deepseek-reasoner"}'
     headers:
       accept:
       - application/json
@@ -10,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '232'
+      - '238'
       content-type:
       - application/json
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,81 +26,70 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"0a1e68e6-525c-4121-a4b0-64dfae716d1e\",\"object\":\"chat.completion\",\"created\":1738791995,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"It
-        seems like your message might be incomplete or unclear. Could you please provide
-        more details or clarify your request? For example:\\n\\n1. Are you asking
-        for information on a specific topic? (e.g., \\\"Explain quantum computing
-        in simple terms.\\\")\\n2. Do you need assistance with a task? (e.g., \\\"Help
-        me write an email within 100 words.\\\")\\n3. Are there specific constraints?
-        (e.g., \\\"Respond in Spanish,\\\" or \\\"Keep it under 500 characters.\\\")\\n\\nLet
-        me know how I can assist! \U0001F60A\",\"reasoning_content\":\"Alright, the
-        user sent three messages in a row: \\\"in\\\", \\\"please\\\", and \\\"within\\\".
-        That's a bit cryptic. Let me try to figure out what they need.\\n\\nFirst,
-        \\\"in\\\" might be the start of a question. Maybe they meant to type something
-        else but hit send too soon. Then \\\"please\\\" and \\\"within\\\" could be
-        part of a request. Maybe they're asking for a response within a certain time
-        frame or character limit?\\n\\nLooking at the previous conversation, there's
-        no history except these three messages. So, I need to consider possible interpretations.
-        \\\"Please within\\\" might be asking for something to be done within specific
-        constraints. Like, \\\"Please respond within 500 characters\\\" or \\\"Please
-        answer in English.\\\"\\n\\nAlternatively, they might have intended to write
-        a sentence that got cut off. For example, \\\"In [some context], please [do
-        something] within [some limit].\\\" Without more context, it's challenging,
-        but I should make an educated guess.\\n\\nThe safest approach is to ask for
-        clarification. But since the user might want a prompt response, maybe I should
-        provide a general answer that covers possible scenarios. Let me address possible
-        interpretations:\\n\\n1. If they need a response within a certain character
-        limit, I can confirm and adjust accordingly.\\n2. If they need information
-        on a topic that starts with \\\"in,\\\" like \\\"inflation\\\" or \\\"internet
-        security,\\\" I can offer to elaborate.\\n3. Maybe they're testing the assistant's
-        ability to handle incomplete queries.\\n\\nI'll respond by politely asking
-        for more details while offering examples of how I can assist. That way, I
-        cover different possibilities without making incorrect assumptions.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":15,\"completion_tokens\":447,\"total_tokens\":462,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":336},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":15},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+      string: "{\"id\":\"148046a7-2484-4c49-b4e2-9a6d98a13ea4\",\"object\":\"chat.completion\",\"created\":1746555157,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\\",
+        then \\\"<\uFF5Cend\u2581of\u2581thinking\uFF5C>\\\", and then another \\\"<\uFF5Cend\u2581of\u2581thinking\uFF5C>\\\".
+        Then they sent an empty message with just quotes. I need to figure out what
+        they're trying to achieve here.\\n\\nMaybe they're testing how the system
+        handles empty inputs or repeated messages. It could be a technical check or
+        a way to see if the AI notices the pattern. Alternatively, they might be confused
+        about how to use the chat interface and are sending blank messages by accident.\\n\\nI
+        should consider possible responses. Since there's no actual content, asking
+        for clarification is a good approach. But they might not respond if they're
+        just testing. Another angle is to acknowledge the empty messages and offer
+        help in case they're having trouble formulating their request. It's important
+        to stay friendly and supportive to encourage them to provide more details
+        if needed.\\n\\nI should also check if there's any hidden meaning or if \\\"<\uFF5Cend\u2581of\u2581thinking\uFF5C>\\\"
+        refers to something specific. Maybe it's a typo or an acronym I'm not aware
+        of. A quick search doesn't show any common meanings for \\\"<\uFF5Cend\u2581of\u2581thinking\uFF5C>\\\",
+        so it's likely a mistake. The quotes after that are empty, reinforcing the
+        idea of testing or accidental sends.\\n\\nTo cover all bases, my response
+        should prompt them to provide more information while being open to various
+        possibilities. Keeping the tone helpful and non-judgmental will make them
+        feel comfortable to explain further if they want to.\\n<\uFF5Cend\u2581of\u2581thinking\uFF5C>\\n\\nIt
+        looks like your message might be incomplete or there was an accidental send.
+        Could you clarify or provide more details about what you're asking or discussing?
+        I'm here to help! \U0001F60A\",\"reasoning_content\":\"Alright, the user sent
+        three empty messages in a row. First, they said \\\"\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":16,\"completion_tokens\":330,\"total_tokens\":346,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":17},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":16},\"system_fingerprint\":\"fp_5417b77867_prod0425fp8\"}"
     headers:
-      CF-RAY:
-      - 90d618116d53ed3b-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 21:46:35 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESID=22fc39db0c9172ac1c; path=/
-      - HWWAFSESTIME=1738791993012; path=/
-      - __cf_bm=JTc6xY35SGxgJsH0SLfSeoStOjEamVRKqV01790jgpg-1738791995-1.0.1.1-Fi.7_ulQVRzD08n7yWIzstmeC5Mdi830MVLQMt4PgwzR35Vz4.2nxY8lci94d4Zz3vV92kvibwfuVphKtxnVgA;
-        path=/; expires=Wed, 05-Feb-25 22:16:35 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93ba72668a5d9e5e-SJC
       content-length:
-      - '2653'
+      - '2293'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:37 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=UZa1u6HNhYy9HLiYnp9rXN0QuIpNL7JDwDUeDGEKE8g-1746555157-1.0.1.1-ujyBq_W0fu6pzwmeSTJgKwVU9qDqKaFFtEf1yL9GggBOk10TjNAXKTkAIXJfA_097Dbcj6jdsoTajUG6W63._N_a6_Ds2doHAcx2_SOqo8Q;
+        path=/; expires=Tue, 06-May-25 18:42:37 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - 703ed92e72fda6175372d490827c911f
+      - fa834e200ec0c7ebaf144fb05c97d7a7
     status:
       code: 200
       message: OK

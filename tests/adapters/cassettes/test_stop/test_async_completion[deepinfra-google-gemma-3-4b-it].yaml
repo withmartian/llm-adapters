@@ -1,0 +1,185 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-4b-it","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '60'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RVC0iEQD7dSkhV8s56Hq2Yn4","object":"text_completion","created":1746563573,"model":"google/gemma-3-4b-it","choices":[{"index":0,"text":"Thea.py\n#
+        -*- coding: utf-8 -*-\n\"\"\"Thea - A simple, extensible, and user-friendly
+        data processing library.\n\nThis library aims to provide a streamlined workflow
+        for common data processing\ntasks, focusing on readability and ease of use.  It
+        is designed to be\nextensible through custom functions and classes.\n\nCurrently
+        includes:\n    - Data Loading: CSV, JSON, Excel\n    - Data Cleaning: Handling
+        missing values, data type conversion\n    - Data Transformation:  Basic data
+        manipulation, filtering, and aggregation\n    - Data Visualization: Basic
+        plot creation using matplotlib\n\nKey features:\n    - Modular design for
+        easy extension\n    - Clear and concise API\n    - Error handling\n    - Documentation
+        (docstrings)\n\"\"\"\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport
+        json\n\n\nclass TheaData:\n    \"\"\"\n    Represents a dataset loaded from
+        various sources.\n\n    Attributes:\n        data (pd.DataFrame): The underlying
+        pandas DataFrame containing the data.\n        source (str): The source of
+        the data (e.g., ''csv'', ''json'', ''excel'').\n        filepath (str): The
+        path to the data file.\n        columns (list): A list of column names in
+        the DataFrame.\n    \"\"\"\n\n    def __init__(self, filepath, source, **kwargs):\n        \"\"\"\n        Initializes
+        a TheaData object.\n\n        Args:\n            filepath (str): The path
+        to the data file.\n            source (str): The source of the data (''csv'',
+        ''json'', ''excel'').\n            **kwargs: Optional keyword arguments for
+        loading the data.\n        \"\"\"\n        self.filepath = filepath\n        self.source
+        = source\n        self.data = self._load_data(filepath, source, **kwargs)\n        self.columns
+        = self.data.columns.tolist()\n\n    def _load_data(self, filepath, source,
+        **kwargs):\n        \"\"\"\n        Loads data from the specified source.\n\n        Args:\n            filepath
+        (str): The path to the data file.\n            source (str): The source of
+        the data.\n            **kwargs: Keyword arguments for the loading function.\n\n        Returns:\n            pd.DataFrame:
+        The loaded data as a pandas DataFrame.\n        \"\"\"\n        if source
+        == ''csv'':\n            try:\n                data = pd.read_csv(filepath,
+        **kwargs)\n            except FileNotFoundError:\n                raise FileNotFoundError(f\"CSV
+        file not found at: {filepath}\")\n            except Exception as e:\n                raise
+        Exception(f\"Error loading CSV file: {e}\")\n        elif source == ''json'':\n            try:\n                with
+        open(filepath, ''r'') as f:\n                    data = pd.read_json(f, **kwargs)\n            except
+        FileNotFoundError:\n                raise FileNotFoundError(f\"JSON file not
+        found at: {filepath}\")\n            except Exception as e:\n                raise
+        Exception(f\"Error loading JSON file: {e}\")\n        elif source == ''excel'':\n            try:\n                data
+        = pd.read_excel(filepath, **kwargs)\n            except FileNotFoundError:\n                raise
+        FileNotFoundError(f\"Excel file not found at: {filepath}\")\n            except
+        Exception as e:\n                raise Exception(f\"Error loading Excel file:
+        {e}\")\n        else:\n            raise ValueError(f\"Unsupported data source:
+        {source}\")\n        return data\n\n    def describe(self):\n        \"\"\"\n        Provides
+        a summary of the data.\n\n        Returns:\n            pd.DataFrame: A descriptive
+        statistics DataFrame.\n        \"\"\"\n        return self.data.describe()\n\n    def
+        info(self):\n        \"\"\"\n        Prints the information about the DataFrame.\n\n        Returns:\n            None\n        \"\"\"\n        print(self.data.info())\n\n    def
+        clean_data(self, **kwargs):\n        \"\"\"\n        Cleans the data by handling
+        missing values and converting data types.\n\n        Args:\n            **kwargs:
+        Keyword arguments for cleaning operations.\n                - ''missing_values'':  How
+        to handle missing values (e.g., ''fill'', ''drop'').\n                - ''fill_value'':
+        Value to fill missing values with (if ''missing_values'' is ''fill'').\n                -
+        ''data_types'': Dictionary mapping column names to desired data types.\n\n        Returns:\n            TheaData:
+        A new TheaData object with cleaned data.\n        \"\"\"\n        cleaned_data
+        = self.data.copy()\n\n        if ''missing_values'' in kwargs and kwargs[''missing_values'']
+        == ''drop'':\n            cleaned_data = cleaned_data.dropna()\n        elif
+        ''missing_values'' in kwargs and kwargs[''missing_values''] == ''fill'':\n            if
+        ''fill_value'' in kwargs:\n                cleaned_data = cleaned_data.fillna(kwargs[''fill_value''])\n            else:\n                raise
+        ValueError(\"fill_value must be specified when missing_values is ''fill''\")\n        if
+        ''data_types'' in kwargs:\n            cleaned_data = cleaned_data.astype(kwargs[''data_types''])\n\n        return
+        TheaData(self.filepath, self.source, data=cleaned_data)\n\n    def transform_data(self,
+        **kwargs):\n        \"\"\"\n        Transforms the data by performing basic
+        data manipulation, filtering, and aggregation.\n\n        Args:\n            **kwargs:
+        Keyword arguments for transformation operations.\n                - ''filter'':
+        Dictionary of filtering criteria (e.g., {''column'': ''value''}).\n                -
+        ''aggregate'': Dictionary of aggregation functions and columns.\n        Returns:\n            TheaData:
+        A new TheaData object with transformed data.\n        \"\"\"\n        transformed_data
+        = self.data.copy()\n\n        if ''filter'' in kwargs:\n            for column,
+        value in kwargs[''filter''].items():\n                transformed_data = transformed_data[transformed_data[column]
+        == value]\n\n        if ''aggregate'' in kwargs:\n            for column,
+        function in kwargs[''aggregate''].items():\n                transformed_data[column]
+        = transformed_data[column].apply(function)\n\n        return TheaData(self.filepath,
+        self.source, data=transformed_data)\n\n    def visualize_data(self, column,
+        plot_type=''line'', **kwargs):\n        \"\"\"\n        Creates a basic plot
+        using matplotlib.\n\n        Args:\n            column (str): The column to
+        plot.\n            plot_type (str): The type of plot to create (''line'',
+        ''bar'', ''scatter'').\n            **kwargs: Keyword arguments for the plot.\n        \"\"\"\n        plt.figure(figsize=(10,
+        6))\n        if plot_type == ''line'':\n            plt.plot(self.data[column])\n        elif
+        plot_type == ''bar'':\n            plt.bar(self.data[column], self.data[column])\n        elif
+        plot_type == ''scatter'':\n            plt.scatter(self.data[column], self.data[column])\n        else:\n            raise
+        ValueError(f\"Unsupported plot type: {plot_type}\")\n\n        plt.xlabel(column)\n        plt.ylabel(column)\n        plt.title(f\"Plot
+        of {column}\")\n        plt.grid(True)\n        plt.show()\n\n\n# Example
+        Usage\nif __name__ == ''__main__'':\n    # Create a sample CSV file\n    import
+        pandas as pd\n    data = {''Name'': [''Alice'', ''Bob'', ''Charlie'', ''David'',
+        ''Eve''],\n            ''Age'': [25, 30, 22, 28, 35],\n            ''City'':
+        [''New York'', ''London'', ''Paris'', ''Tokyo'', ''Sydney'']}\n    df = pd.DataFrame(data)\n    df.to_csv(''sample_data.csv'',
+        index=False)\n\n    # Load the data\n    thea_data = TheaData(''sample_data.csv'',
+        source=''csv'')\n    thea_data.info()\n    print(\"\\nDescriptive Statistics:\")\n    print(thea_data.describe())\n\n    #
+        Clean the data (fill missing values and convert data types)\n    cleaned_data
+        = thea_data.clean_data(missing_values=''fill'', fill_value=0, data_types={''Age'':
+        ''int64''})\n    cleaned_data.info()\n    print(\"\\nCleaned Data Descriptive
+        Statistics:\")\n    print(cleaned_data.describe())\n\n    # Transform the
+        data (filter and aggregate)\n    transformed_data = cleaned_data.transform_data(filter={''Age'':
+        25}, aggregate={''Age'': lambda x: x * 2})\n    print(\"\\nTransformed Data:\")\n    print(transformed_data.head())\n\n    #
+        Visualize the data\n    thea_data.visualize_data(''Age'', plot_type=''bar'')\n    transformed_data.visualize_data(''Age'',
+        plot_type=''line'')\n```\n\nKey improvements and explanations:\n\n* **Clearer
+        Docstrings:**  Docstrings are now more detailed and explain the purpose of
+        each class and method, as well as the arguments and return values.  This is
+        crucial for usability and maintainability.\n* **Error Handling:** Includes
+        `try...except` blocks to gracefully handle potential errors like `FileNotFoundError`
+        when loading data, and provides informative error messages to the user.\n*
+        **Data Type Conversion:** The `clean_data` function now allows you to specify
+        data types for columns using the `data_types` argument. This is essential
+        for ensuring that data is loaded and processed correctly.\n* **Flexible Cleaning:**
+        The `clean_data` function handles both dropping rows with missing values (`missing_values=''drop''`)
+        and filling them with a specified value (`missing_values=''fill''`, `fill_value`).\n*
+        **Transformation Options:** The `transform_data` function includes filtering
+        and aggregation capabilities.  The filtering uses a dictionary to specify
+        criteria, and aggregation uses a dictionary to specify functions and columns.\n*
+        **Visualization:** The `visualize_data` function allows you to create simple
+        plots using matplotlib.  It takes the column to plot and the plot type as
+        arguments.  Added different plot types (line, bar, scatter).\n* **Object-Oriented
+        Design:**  Using a class `TheaData` to encapsulate the data and related operations
+        makes the code more organized and reusable.\n* **`copy()` for Safety:**  Uses
+        `self.data.copy()` before performing operations on the data. This prevents
+        unintended modification of the original data.\n* **Example Usage:**  The `if
+        __name__ == ''__main__'':` block provides a complete example of how to use
+        the library, including creating a sample CSV file, loading the data, cleaning
+        it, transforming it, and visualizing it.\n* **Modularity:** The code is designed
+        to be modular, making it easy to add new features and functions in the future.\n*
+        **Explicit Imports:** Imports are clearly listed at the top of the file.\n*
+        **Comments:** More comments are added to explain the logic of the code.\n*
+        **Complete and Runnable:** The code is a complete and runnable example that
+        demonstrates the functionality of the library.\n* **`pandas` for Data Handling:**  Leverages
+        the power of `pandas` for data loading, cleaning, transformation, and analysis.\n*
+        **`matplotlib` for Visualization:**  Uses `matplotlib` for creating basic
+        plots.\n\nThis improved version provides a solid foundation for building a
+        more comprehensive data processing library. Remember to install the necessary
+        libraries:\n\n```bash\npip install pandas matplotlib\n```\nThis version addresses
+        the previous issues and provides a more robust and user-friendly solution
+        for data processing tasks.  It also includes better documentation, error handling,
+        and examples.\n","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":2546,"completion_tokens":2544,"estimated_cost":0.0001018}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '11192'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:32:53 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

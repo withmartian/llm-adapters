@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}], "model": "wizardlm-2-7b"}'
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"wizardlm-2-7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '77'
+      - '71'
       content-type:
       - application/json
       host:
       - wizardlm-2-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,51 +25,48 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-ChVVFzKzYDShuntxm96nMZ","object":"chat.completion","created":1733368735,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hi
-        there! It seems like you''re looking for some advice on how to get started
-        with learning Python. Python is a fantastic language to learn due to its readability,
-        versatility, and strong support community. Here''s a step-by-step guide to
-        help you begin your Python journey:\n\n1. **Understand the Basics**:\n   -
-        Learn about Python syntax, data types, variables, and operators.\n   - Understand
-        control flow with `if` statements, loops (`for`, `while`), and exception handling.\n\n2.
-        **Set Up Your Development Environment**:\n   - Install Python from the official
-        website (python.org) or use a package manager like `pip` for your operating
-        system.\n   - Choose a code editor or an Integrated Development Environment
-        (IDE) such as PyCharm, Visual Studio Code, or Jupyter Notebooks.\n\n3. **Hello,
-        World!**:\n   - Write your first \"Hello, World!\" program to ensure your
-        setup works.\n\n4. **Learn Python Standard Library**:\n   - Explore modules
-        and functions available in the Python Standard Library.\n   - Get familiar
-        with libraries like `os`,","tool_calls":null},"logprobs":null,"finish_reason":"length","audio":null,"asr_results":null}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
+      string: '{"id":"chatcmpl-pXVRM9cJ39iRrrVKCKDSC7","object":"chat.completion","created":1746555161,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"2
+        It seems like you''re looking for a way to convert a string that represents
+        a date in the format \"YYYY-MM-DD\" to a `DateTime` object in Java. The `SimpleDateFormat`
+        class can be used to parse such strings into `DateTime` objects. Here''s how
+        you can do it:\n\n```java\nimport java.text.ParseException;\nimport java.text.SimpleDateFormat;\nimport
+        java.time.LocalDate;\nimport java.time.format.DateTimeFormatter;\n\npublic
+        class DateConverter {\n    public static void main(String[] args) {\n        String
+        dateString = \"2023-04-01\"; // Example date string\n        DateTimeFormatter
+        formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd\");\n        LocalDate
+        date = LocalDate.parse(dateString, formatter);\n\n        // If you need a
+        java.util.Date or java.time.ZonedDateTime, you can do the following:\n        java.util.Date
+        utilDate = Date.from(date.atStartOfDay(ZoneId.systemDefault()).toInstant());\n        java.time.Z","tool_calls":null},"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":5,"total_tokens":261,"completion_tokens":256}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e4417aa067e8-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:18:57 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba7280dc85f957-SJC
       content-length:
-      - '1387'
+      - '1237'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:43 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '2556'
+      - '1240'
     status:
       code: 200
       message: OK

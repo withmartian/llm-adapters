@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "system", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "user", "content": "Hi"}], "model": "wizardlm-2-7b"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"Hi\nHi\nHi\nHi\nHi\nHi"}],"model":"wizardlm-2-7b"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '293'
+      - '122'
       content-type:
       - application/json
       host:
       - wizardlm-2-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,39 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-L3pd67YYEYWoJ5raQyibar","object":"chat.completion","created":1733368781,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        It seems like you''re greeting me with enthusiasm! How can I assist you today?
-        If you have any questions or need help with something, feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":20,"total_tokens":58,"completion_tokens":38}}'
+      string: '{"id":"chatcmpl-SKDEJTTdcoDrTTbD4SEkNy","object":"chat.completion","created":1746561037,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It seems like you''re greeting me multiple times. How can I assist you today?
+        If you have any questions or need help with something, feel free to ask!","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"total_tokens":57,"completion_tokens":38}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e561e9e3ceb5-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:19:41 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb01f61a4afaa6-SJC
       content-length:
-      - '496'
+      - '463'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:50:38 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '565'
+      - '239'
     status:
       code: 200
       message: OK

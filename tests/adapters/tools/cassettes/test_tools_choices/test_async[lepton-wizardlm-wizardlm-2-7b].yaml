@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "wizardlm-2-7b", "tool_choice": {"type":
-      "function", "function": {"name": "generate"}}, "tools": [{"type": "function",
-      "function": {"description": "Generate random number", "name": "generate", "parameters":
-      {"type": "object", "properties": {"prompt": {"type": "string", "description":
-      "Random number like 5, 4, 3, 10, 11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"wizardlm-2-7b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '464'
+      - '433'
       content-type:
       - application/json
       host:
       - wizardlm-2-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,41 +28,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-WujBwwwVwC3ZkHbU9hVEWb","object":"chat.completion","created":1733369221,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
-        \"Generate a random number between 1 and 10, such as 5, 4, 3, 10, or 11, using
-        the tools specified in the previous instructions.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
-        \"Generate a random number between 1 and 10, such as 5, 4, 3, 10, or 11, using
-        the tools specified in the previous instructions.\"}"},"id":"call-8ZvCbCdrsgTK6PnJXLLo9B","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":20,"total_tokens":67,"completion_tokens":47}}'
+      string: '{"id":"chatcmpl-sKm9AWuprGpYxnLCrUsT49","object":"chat.completion","created":1746561660,"model":"wizardlm-2-7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Generate a random number between 1 and 10, like 5, 4, 3, 10, 11, and provide
+        an explanation of how the number was generated.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate a random number between 1 and 10, like 5, 4, 3, 10, 11, and provide
+        an explanation of how the number was generated.\"}"},"id":"call-hiGzJynirrc957hubUmpmU","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":20,"total_tokens":67,"completion_tokens":47}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0f0218bf57ab8-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:27:01 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb1129be2715b4-SJC
       content-length:
-      - '737'
+      - '701'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:01:00 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '563'
+      - '263'
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "meta-llama/Meta-Llama-3.1-70B-Instruct", "prompt": "Hi"}'
+    body: '{"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","prompt":"Hi"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '67'
+      - '64'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,48 +25,244 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-c1eb78c876f34ea3ad49fdada7e653da\",\"object\":\"text_completion\",\"created\":1734142792,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"text\":\"def]Il
-        y a 30 ans, Stephen Hawking est toujours en vie. [Bonjour / Bonsoir / Salut]Bonne
-        nouvelle et que d autres l apprendrons aujourd hui? [Salut / Bonjour / Bonsoir]Stephen
-        Hawking a beaucoup de comptes de r\xE9seaux sociaux. [Bonjour / Bonsoir /
-        Salut]Peut \xEAtre qu on verra des vid\xE9os de lui parler de ses attentes
-        pour l avenir? [Salut / Bonjour / Bonsoir]Oui, il en est tr\xE8s connu pour
-        sa voix! Je parie qu il va continuer \xE0 nous inspirer avec ses connaissances
-        approfondies sur l univers. [Bonjour / Bonsoir / Salut]Il y a environ 8 mois,
-        c \xE9tait son 80\xE8me anniversaire. [Salut / Bonjour / Bonsoir]Et son esprit
-        d\xE9termin\xE9 et sa passion pour l apprentissage continuent d inspirer de
-        nombreuses personnes. [Bonjour / Bonsoir / Salut]Pouvez-vous imaginer le monde
-        sans Stephen Hawking? [Salut / Bonjour / Bonsoir]Non, et j en suis reconnaissant.
-        Son travail sur la relativit\xE9 a vraiment apport\xE9 une grande contribution
-        \xE0 notre compr\xE9hension de l espace et du temps. [Bonjour / Bonsoir /
-        Salut]Il s agit d un physicien th\xE9oricien, cosmologue et auteur britannique
-        de r\xE9putation mondiale. [Salut / Bonjour / Bonsoir]Son livre a bris\xE9
-        tous les records, je crois? [Bonjour / Bonsoir / Salut]Oui! Le livre \\\"Une
-        br\xE8ve histoire du temps\\\" a \xE9t\xE9 un best-seller international. [Salut
-        / Bonjour / Bonsoir]Depuis sa parution, il s est vendu \xE0 des millions d
-        exemplaires. [Bonjour / Bonsoir / Salut]Et vous savez ce qui rend ce livre
-        encore plus sp\xE9cial? [Salut / Bonjour / Bonsoir]Non, dites moi! [Bonjour
-        / Bonsoir / Salut]Eh bien, le Dr Hawking l a \xE9crit en d\xE9pit de son handicap
-        physique, en raison d une maladie appel\xE9e amyotrophie spinale. [Salut /
-        Bonjour / Bonsoir]Wow, c est vraiment un honneur\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":513,\"completion_tokens\":512,\"estimated_cost\":0.00020503}}"
+      string: '{"id":"cmpl-RdqFAqsVdb1STH5wlAsLCj3F","object":"text_completion","created":1746562490,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","choices":[{"index":0,"text":"##Comments\n3.
+        Adding comments to a script.\nset@echo off\nREM This is a remark at the beginning
+        of the script\n:: This is a comment in the middle of the script.\n_@REM This
+        is a comment for the SET command. @REM (ECHO) For another comment, a space
+        or any other character must precede it_.\nECHO Hello World\n_@REM These comments
+        do not work inside parentheses._\nFOR %%A IN (A B C) DO (\n_@REM Use the command
+        REM to create a comment inside a block of commands._\nREM This comment works.\nECHO.%%A\n)
+        Sample Output:\nHello World\nA\nB\nC\n4. Creating a batch file that calculates
+        the user''s pay:\n@ECHO OFF\n: getUserInput\nCLS\nECHO Please enter the employee''s
+        ID number:\nSET /P EmployeeID=\nECHO Please enter the hourly pay rate:\nSET
+        /P PayRate=\nECHO Please enter the number of hours worked:\nSET /P HoursWorked=\nGOTO
+        :doCalculation\n:doCalculation\nSET /A GrossPay=HoursWorked * PayRate\nCLS\nECHO
+        Employee ID: %EmployeeID%\nECHO Gross pay: $%GrossPay%\nGOTO :getAnother\n:getAnother\nECHO
+        Would you like to calculate another employee''s pay? (Y/N)\nSET /P Answer=\nIF
+        %Answer% == Y GOTO :getUserInput\nIF %Answer% == Y GOTO :END\n:END\nPAUSE\nThe
+        scripts presented in the preceding list are commonly used to provide a starting
+        point for your own Windows scripts. Feel free to modify them and experiment
+        with them to meet your needs.\nIntroduction to Scripting\nMany of the Windows
+        commands allow you to use them with input and output redirection and pipes,
+        and they can be incorporated into scripts. Before you can use these features,
+        however, you need to understand the concepts behind scripting. _Scripting_
+        is the process of creating a file that contains a series of commands that
+        are executed in sequence. Windows commands can be combined with scripting
+        elements to create more complex scripts.\nWindows Scripting: An Overview\nWindows
+        scripting provides a way for you to automate tasks that would normally require
+        a user to interact with the Windows interface. Windows scripting uses a batch
+        scripting language, also called _batch language_. Batch language is simple
+        to learn and can be used to automate a wide range of tasks, from simple to
+        complex.\nBatch language allows you to perform the following tasks:\n* Automate
+        repetitive tasks\n* Interact with other commands and utilities\n* Display
+        information to the user\n* Make decisions based on conditions or information\n*
+        Work with environment variables\nBatch Language Elements\nBatch language consists
+        of several key elements that you can use to create scripts. These elements
+        are as follows:\n* Commands\n* Echo\n* Labels\n* Variables\n* Conditional
+        statements\n* Loops\n* Input/Output (I/O) redirection\n* Pipes\n* Redirectors\nYou
+        can use these elements to create scripts that perform a wide range of tasks.\nBatch
+        Language Syntax\nBatch language uses a simple syntax. Each command must be
+        placed on a separate line. Each command must start with a command name, followed
+        by parameters, which are specific to the command. The general syntax is\nCommand
+        Parameters\nThis syntax is consistent for all commands in batch language.
+        Any spaces between the command and the parameters are ignored, unless the
+        command requires that the parameter contain a space. In this case, you must
+        place quotes around the parameter.\nBatch Language Commands\nThere are several
+        key commands that you can use in batch language:\nREM\n* Used to add comments
+        to a script\n* The syntax is: REM comment\n* The comment can be any text,
+        and it can include variables or other commands\nECHO\n* Used to turn command
+        echoing on or off\n* Used to print text to the screen\n* The syntax is: ECHO
+        ON or ECHO OFF\n* Used to create a label in a script\n* The syntax is: :label\n*
+        Used to create a variable\n* The syntax is: SET variable=value\n* Used to
+        create an environment variable\n* The syntax is: SET variable=value\nIF\n*
+        Used to make a decision based on a condition\n* The syntax is: IF condition
+        (commands)\n* Used to make a decision based on a condition\n* The syntax is:
+        IF condition (commands)\n* Used to repeat a series of commands\n* The syntax
+        is: FOR variable IN (set) DO (commands)\nGOTO\n* Used to jump to a label in
+        a script\n* The syntax is: GOTO label\n* Used to terminate a script\n* The
+        syntax is: EXIT\n* Used to pause a script\n* The syntax is: PAUSE\n* Used
+        to display a message to the user\n* The syntax is: ECHO message\nBatch Language
+        Variables\nBatch language variables are used to store values that can be used
+        in a script. There are two types of variables:\nEnvironment variables\n* These
+        variables are available to all scripts and commands\n* They are created using
+        the SET command\n* The syntax is: SET variable=value\n* Examples of environment
+        variables include PATH, COMPUTERNAME, and USERNAME.\nCommand variables\n*
+        These variables are used to store values that are specific to a command\n*
+        They are created using the SET command\n* The syntax is: SET variable=value\n*
+        Examples of command variables include the %PATH% and %USERNAME% variables.\nThe
+        Echo Command\nThe Echo command is used to turn command echoing on or off,
+        as well as to print text to the screen. The syntax for the Echo command is\nECHO
+        [ON|OFF] [message]\nThe message can be any text, and it can include variables
+        or other commands.\nScripting Symbols\nThere are several scripting symbols
+        that you can use in batch language. These symbols are as follows:\n* The caret
+        (\\(\\Lambda\\)) symbol is used to extend a command to the next line\n* The
+        ampersand (&) symbol is used to separate multiple commands on the same line\n*
+        The pipe (\\(\\mid\\)) symbol is used to direct the output of one command
+        to the input of another command\n* The greater-than (\\(>\\)) symbol is used
+        to direct the output of a command to a file\n* The less-than (\\(<\\)) symbol
+        is used to direct input from a file to a command\n* The double pipe (\\(\\mid\\mid\\))
+        symbol is used to direct the output of a command to a file, and to append
+        to the file if it already exists\n* The greater-than or equal to (\\(>\\))
+        symbol is used to direct the output of a command to a file, and to overwrite
+        the file if it already exists\nUsing Input/Output Redirection\nInput/output
+        (I/O) redirection allows you to direct the output of a command to a file,
+        or to direct input from a file to a command. There are several I/O redirection
+        operators that you can use:\n\\(>\\)\nDirects the output of a command to a
+        file\n\\(<\\)\nDirects input from a file to a command\n\\(>\\)\nDirects the
+        output of a command to a file, and appends to the file if it already exists\n\\(\\gg\\)\nDirects
+        the output of a command to a file, and overwrites the file if it already exists\n\\(>\\)\nDirects
+        the output of a command to a file, and creates the file if it does not already
+        exist\n\\(\\gg\\)\nDirects the output of a command to a file, and creates
+        the file if it does not already exist\n\\(\\gg\\)\nUsing Pipes\nPipes allow
+        you to direct the output of one command to the input of another command. There
+        are several pipe operators that you can use:\n\\(\\mid\\)\nDirects the output
+        of one command to the input of another command\n\\(\\mid\\mid\\)\nDirects
+        the output of one command to the input of another command, and appends to
+        the file if it already exists\n\\(\\mid\\mid\\)\nDirects the output of one
+        command to the input of another command, and overwrites the file if it already
+        exists\nUsing Redirectors\nRedirectors allow you to redirect the output of
+        a command to a file, or to direct input from a file to a command. There are
+        several redirector operators that you can use:\n\\(>\\)\nDirects the output
+        of a command to a file\n\\(<\\ goggles is the classic symbol for a text editor,
+        and is often used in coding.\n>>\nDirects the output of a command to a file,
+        and appends to the file if it already exists\n>>\nDirects the output of a
+        command to a file, and overwrites the file if it already exists\n>>\nDirects
+        the output of a command to a file, and creates the file if it does not already
+        exist\n>>\nDirects the output of a command to a file, and creates the file
+        if it does not already exist\nScripting Example: Creating a Simple Script\nHere
+        is an example of a simple script that uses some of the scripting elements:\n```\n@ECHO
+        OFF ECHO This is a simple script. SET var1=Hello SET var2=World ECHO %var1%
+        %var2% ECHO. PAUSE\n```\nThis script uses the Echo command to print text to
+        the screen, and uses variables to store values. The script also uses the Pause
+        command to pause the script and wait for user input.\nScripting Example: Creating
+        a More Complex Script\nHere is an example of a more complex script that uses
+        some of the scripting elements:\n```\n@ECHO OFF ECHO This is a more complex
+        script. SET var1=Hello SET var2=World SET /A var3=10 ECHO %var1% %var2% ECHO
+        The value of var3 is %var3%. IF %var3% == 10 GOTO label1 IF %var3% == 20 GOTO
+        label2 :label1 ECHO var3 is equal to 10. GOTO END :label2 ECHO var3 is equal
+        to 20. GOTO END :END PAUSE\n```\nThis script uses the Echo command to print
+        text to the screen, and uses variables to store values. The script also uses
+        the IF command to make a decision based on a condition, and uses the GOTO
+        command to jump to a label in the script.\nBatch Language Example: Creating
+        a Batch File\nHere is an example of a batch file that uses some of the batch
+        language elements:\n```\n@ECHO OFF REM This is a remark at the beginning of
+        the script.\n```Introduction to Scripting\n```\n1\n2:repeat ECHO This is the
+        start of the batch file. PAUSE ECHO Do you want to repeat this batch file?
+        (Y/N) SET /P Answer= IF %Answer% == Y GOTO repeat IF %Answer% == N GOTO end
+        :end PAUSE\n```\nThis batch file uses the Echo command to print text to the
+        screen, and uses the Pause command to pause the batch file and wait for user
+        input. The batch file also uses the IF command to make a decision based on
+        a condition, and uses the GOTO command to jump to a label in the batch file.\nBatch
+        Language Example: Creating a Batch File that Calculates the User''s Pay\nHere
+        is an example of a batch file that uses some of the batch language elements
+        to calculate the user''s pay:\n```\n1@ECHO OFF REM This is a remark at the
+        name of the batch file. :getUserInput CLS ECHO Please enter the employee''s
+        ID number: SET /P EmployeeID= ECHO Please enter the hourly pay rate: SET /P
+        PayRate= ECHO Please enter the number of hours worked: SET /A HoursWorked=
+        SET /P HoursWorked= GOTO :doCalculation :doCalculation SET /A GrossPay=HoursWorked
+        * PayRate CLS ECHO Employee ID: %EmployeeID% ECHO Gross pay: $%GrossPay% GOTO
+        :getAnother :getAnother ECHO Would you like to calculate another employee''s
+        pay? (Y/N) SET /P Answer= IF %Answer% == Y GOTO :getUserInput IF %Answer%
+        == N GOTO END :END PAUSE\n```\nThis batch file uses the Echo command to print
+        text to the screen, and uses variables to store values. The batch file also
+        uses the IF command to make a decision based on a condition, and uses the
+        GOTO command to jump to a label in the batch file.\nIn summary, batch language
+        is a simple scripting language that allows you to automate tasks and interact
+        with other commands and utilities. Batch language elements include commands,
+        Echo, labels, variables, conditional statements, loops, input/output (I/O)
+        redirection, pipes, and redirectors. Batch language syntax is simple, and
+        each command must be placed on a separate line. Batch language commands include
+        REM, ECHO, labels, SET, IF, FOR, GOTO, EXIT, PAUSE, and ECHO.\nBatch language
+        variables are used to store values that can be used in a script, and there
+        are two types of variables: environment variables and command variables. The
+        Echo command is used to turn command echoing on or off, as well as to print
+        text to the screen. Scripting symbols are used to extend a command to the
+        next line, to separate multiple commands on the same line, to direct the output
+        of one command to the input of another command, and to direct the output of
+        a command to a file.\nYou can use input/output (I/O) redirection and pipes
+        to direct the output of a command to a file, or to direct input from a file
+        to a command. Redirectors allow you to redirect the output of a command to
+        a file, or to direct input from a pass file to a command. Scripting examples
+        include creating a simple script, creating a more complex script, creating
+        a batch file, and creating a batch file that calculates the user''s pay.\nThe
+        advantages of using batch language include the ability to automate tasks,
+        interact with other commands and utilities, display information to the user,
+        make decisions based on conditions or information, and work with environment
+        variables. The disadvantages of using batch language include the need to learn
+        a scripting language, the potential for errors, and the need to test and debug
+        scripts.\nBatch language is widely used in Windows environments, and is a
+        useful tool for automating tasks and interacting with other commands and utilities.
+        With practice and experience, you can create complex scripts that perform
+        a wide range of tasks.\nIntroduction to PowerShell\nPowerShell is a powerful
+        scripting language that allows you to automate tasks, interact with other
+        commands and utilities, and work with environment variables. PowerShell is
+        widely used in Windows environments, and is a useful tool for automating tasks
+        and interacting with other commands and utilities.\nPowerShell Syntax\nPowerShell
+        syntax is similar to batch language syntax, but it has some additional features.
+        Each command must be placed on a separate line, and each command must start
+        with a command name, followed by parameters, which are specific to the command.
+        The general syntax is\nCommand Parameters\nPowerShell Commands\nThere are
+        several key commands that you can use in PowerShell:\nGet-Command\n* Used
+        to get a list of all available commands\n* The syntax is: Get-Command\n* Used
+        to get information about a specific command\n* The syntax is: Get-Help cmdlet\n*
+        Used to create a new session\n* The syntax is: New-Session\n* Used to exit
+        a session\n* The syntax is: Exit\n* Used to display information to the user\n*
+        The syntax is: Write-Host message\n* Used to display a list of all files and
+        folders in the current directory\n* The syntax is: Get-ChildItem\n* Used to
+        create a new file or folder\n* The syntax is: New-Item path\n* Used to remove
+        a file or folder\n* The syntax is: Remove-Item path\n* Used to rename a file
+        or folder\n* The syntax is: Rename-Item path\n* Used to copy a file or folder\n*
+        The syntax is: Copy-Item path\n* Used to move a file or file or folder\n*
+        The syntax is: Move-Item path\n* Used to create a new directory\n* The syntax
+        is: New-Item -Type directory path\n* Used to create a new file\n* The syntax
+        is: New-Item -Type file path\n* Used to delete a file or folder\n* The syntax
+        is: Remove-Item path\n* Used to delete a directory\n* The syntax is: Remove-Item
+        -Recurse -Force path\n* Used to rename a file or folder\n* The syntax is:
+        Rename-Item path\n* Used to copy a file or folder\n* The syntax is: Copy-Item
+        path\n* Used to move a file or folder\n* The syntax is: Move-Item path\nPowerShell
+        Variables\nPowerShell variables are used to store values that can be used
+        in a script. There are several types of variables in PowerShell:\n\\begin{tabular}{|p{113.8pt}|p{113.8pt}|}
+        \\hline \\hline \\multicassistant<|end_header_id|>\n\n## Step 1: Understanding
+        the Basics of Windows Scripting\nWindows scripting allows users to automate
+        tasks, interact with other commands and utilities, and work with environment
+        variables. It uses a batch scripting language, also called batch language,
+        which is simple to learn and can be used to automate a wide range of tasks.\n\n##
+        Step 2: Familiarizing with Batch Language Elements\nBatch language consists
+        of several key elements, including commands, Echo, labels, variables, conditional
+        statements, loops, input/output (I/O) redirection, pipes, and redirectors.
+        Understanding these elements is crucial for creating effective scripts.\n\n##
+        Step 3: Learning Batch Language Syntax\nBatch language syntax is simple, with
+        each command placed on a separate line and starting with a command name followed
+        by parameters. The general syntax is Command Parameters.\n\n## Step 4: Understanding
+        PowerShell\nPowerShell is a powerful scripting language that allows users
+        to automate tasks, interact with other commands and utilities, and work with
+        environment variables. Its syntax is similar to batch language syntax but
+        has additional features.\n\n## Step 5: Comparing Batch Language and PowerShell\nWhile
+        both batch language and PowerShell are used for scripting, they have different
+        syntax and features. Batch language is simpler and more widely used, while
+        PowerShell is more powerful and flexible.\n\nThe final answer is: $\\boxed{5}$","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":3840,"completion_tokens":3839,"estimated_cost":0.00153583}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '2034'
+      - '17057'
       Content-Type:
       - application/json
       Date:
-      - Sat, 14 Dec 2024 02:19:52 GMT
+      - Tue, 06 May 2025 20:14:50 GMT
       server:
       - uvicorn
       x-robots-tag:

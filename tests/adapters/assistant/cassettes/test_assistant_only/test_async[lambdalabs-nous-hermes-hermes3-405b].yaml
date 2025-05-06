@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,30 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"94d8fa2f9854482795f4648c07d1fbe1","object":"chat.completion","created":1742240557,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like you haven''t asked a question or provided any input for me to respond
-        to. Please feel free to ask me anything and I''ll do my best to help!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":36,"total_tokens":52,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-b495adba-51ba-4556-b8d8-648a7ccb3550","object":"chat.completion","created":1746561288,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":27,"completion_tokens":10,"total_tokens":37,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921ef974fdfa45e3-DFW
+      - 93bb08160dc8fb34-SJC
       content-length:
-      - '748'
+      - '644'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 19:42:37 GMT
+      - Tue, 06 May 2025 19:54:49 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=6vxUPZRH2yjg.0rvYtmXmHtk.arTn73IvAlBya6Ey_k-1742240557-1.0.1.1-r2dq.9HISUzP21sI9oxkosDbdSHfe4fWn6BSp9vn5cz75GvSHD8bWsttZvqjmW7dZziBaqDNuB_vJXdMKGuEr8eD6gtdGpDYXxVizTuYaXQ;
-        path=/; expires=Mon, 17-Mar-25 20:12:37 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=KerYh23NtKn6kd.4.FEbjZYuLhbzgvCNexJS_8LL2tk-1746561289-1.0.1.1-MBlY2jNc31HhScWIxbriiMTvx9ag.zCHPhFBjgPLA7kUj9_1CiNLtBWR7Hpyj0CVLgrq__uzzP3gZa_FjgKKoNfHYixHEhVVGWtG2QZzoVs;
+        path=/; expires=Tue, 06-May-25 20:24:49 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 84ab2a76-c5c6-4beb-939a-cfde98d74ed7
+      - b495adba-51ba-4556-b8d8-648a7ccb3550
       x-response-time:
-      - '1.096'
+      - '0.372'
     status:
       code: 200
       message: OK

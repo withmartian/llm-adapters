@@ -16,7 +16,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,7 +26,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,44 +39,36 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-9385f897-509b-4e9f-b450-a91de1e64af2","object":"chat.completion","created":1742234788,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"How
-        can I assist you today? Here are some conversation starters to get us going:\n\n1.
-        **Question**: Ask me anything (e.g., science, history, tech, entertainment,
-        etc.)\n2. **Topic Discussion**: Suggest a topic you''d like to explore in-depth
-        (e.g., space exploration, AI, movies, books, etc.)\n3. **Creative Writing**:\n\t*
-        I can start telling a story, and you can continue it.\n\t* You can give me
-        prompts (genre, characters, setting), and I''ll write a short story.\n4. **Games**:\n\t*
-        20 Questions: Think of an object, and I''ll try to guess what it is.\n\t*
-        Hangman: I can generate a word or phrase for you to guess.\n\t* Word Chain:
-        We take turns saying a word that starts with the last letter of the previous
-        word.\n5. **Learning Something New**: Is there a skill or subject you''re
-        interested in learning more about? I can provide resources or a basic overview.\n6.
-        **Just Chat**: We can have a casual, everyday conversation. How''s your day
-        been? Do you have any fun plans or hobbies?\n7. **Generate Ideas**: If you''re
-        stuck on an idea for a project (creative, work, school, etc.), I can help
-        generate some options.\n\nWhich direction would you like our conversation
-        to take, or do you have something entirely different in mind?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":294,"total_tokens":316,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-1290cdf4-c0c0-41b2-adf8-502d41e63c9d","object":"chat.completion","created":1746554960,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"How
+        can I assist you today? Do you have:\n\n1. **A question** on a specific topic
+        (e.g., history, science, tech)?\n2. **A problem** you''d like help solving
+        (e.g., math, logic, personal advice)?\n3. **A topic** you''d like to **discuss**
+        (e.g., movies, books, current events)?\n4. **A creative project** where you
+        need **ideas** or **feedback** (e.g., writing, art, music)?\n5. **Something
+        else** on your mind (feel free to surprise me)?\n\nPlease respond with one
+        of the numbers above or describe what''s on your mind, and I''ll do my best
+        to help!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":22,"completion_tokens":147,"total_tokens":169,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6ca38c6d6a03-DFW
+      - 93ba6d97292967eb-SJC
       content-length:
-      - '1866'
+      - '1179'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:06:36 GMT
+      - Tue, 06 May 2025 18:09:23 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=zZM8kiHXEJpBi4GhCZNDcFgArltsIOK9FNdL1vr35aA-1742234796-1.0.1.1-9CaUsdkp7DUOQuG1NlUI_zvcwUusnlPM0ASSJ0MIqI1HccMR0JFtz3b6RMBMZCZuQAYo5u3QYGrncaExvYO93Bw3.f988dUiU8ikTsA7fKY;
-        path=/; expires=Mon, 17-Mar-25 18:36:36 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=5ytF1qOXXXRLrB4kNC6kq..uQp2npvML0yXsCmPrTzg-1746554963-1.0.1.1-xrshaANQTASYt9IFVf3BpGwgj.4QF2uOrVG26jtUpb6v18.VcBKQpccq_o8TF_lkFvU_5dpRy5RW3M2G2vzsDJKQifeNmDteDrS5C58xvH4;
+        path=/; expires=Tue, 06-May-25 18:39:23 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 9385f897-509b-4e9f-b450-a91de1e64af2
+      - 1290cdf4-c0c0-41b2-adf8-502d41e63c9d
       x-response-time:
-      - '8.465'
+      - '3.1'
     status:
       code: 200
       message: OK

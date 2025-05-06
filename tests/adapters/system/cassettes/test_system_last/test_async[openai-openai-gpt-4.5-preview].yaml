@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"gpt-4.5-preview"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"gpt-4.5-preview"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '104'
+      - '137'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,50 +39,47 @@ interactions:
   response:
     body:
       string: !!binary |
-        YwBIGABArHRaT1PtX22cgj7kwMjiHhOlQcLO93/zeQOIEpt22gQbS+f92mDbw0SiRQlHnKZOd5yD
-        YdPYBvHb4nx35QEUhyRAaiKdyk3mH/WiqXzvH99l49Gjenw7TszocXTItzbNX6nmAaTHCSuXCfUl
-        BmasC4i0c/kRhyTQGnSb/VG/0+sG73MdckYCFBnnd+s9f4v0fZ757Wa75zfbfnvAcjjRsWJLAt8e
-        AKxmPYDOwe+SQLN2VVqVoZAAfgRQqTMmAZLWxtbJwlENgGzsfhOgi3gLF3oGJQtcYsKZwUJXcDqU
-        i/08dGz9pMxIoKiyjA82xECmbq3gA1qjJEDWaUMIa+MBvwp0q1qfkCl1blzgdMqFJYFWp84WSYoB
-        TBP9AQGUyLZJRgj859pWmC1SUk04vCVScS2rMNZBPkvsr6CgQn6h98VxEQ0UzCjFxnEYOBiSTSMo
-        t5ITVuDpTG1k27104GIuSYBeFALgaGEd58F/XERcmjJ+DsJFlWXexjMAAw==
+        YwBQGgBA/MrN72mqN1uHmNw371TQhcjZcEfi/sep57lgQCxik/IpY4GNpfNlLLDVerFY75WWaK3E
+        Vac7zsEwaTCt+G11/nYXADTLSYCyaeIzZWV4+XbfeXvI1+lVp1wm9rm/LZbf34+fT4/+4oMaAUAm
+        nXPmI6m5xMCbGU2Rdy5/xjkJdEb94WDQn4yG4GdlcpYkQKX1Yb85CLdIf8yrsNvuDsJ2N+yOVJ5O
+        zSxjRwI/AQDsZiuAzsEfkUC7cVVelWGSIP4JoMpIJgFKnJs5n2hPDQK0sXsvQA8ejlk5bExdQe4r
+        SKzlpHJgZf2miatE4wFTlhYbU2M181PkcXGmDofbv51IEtC1lCCUVvCl/oXRIZ6oK9ws+gLXPAmQ
+        88YSwz8EwF8Kl7XZu2Qro6yPvFmwtNYZS86oJkhgB/ALBQDjer2mIkUN7OYus9coS7Ip56pQhsuk
+        zmcGnAf+Om6oU1/0fvZMlwPAWpax9ZxHLRCbpoHKr+I5ZxTkmTkoffuqkZ9xRQL0phEJzzbOs4qK
+        mS65stXsQcrqWsrgEBgD
     headers:
-      CF-RAY:
-      - 918bb536cecceb32-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 27 Feb 2025 22:45:56 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - __cf_bm=_CD9WKPTjQ9CKcUbmEKgBZJldvZVqPJRZkXrJpJ3VQ8-1740696356-1.0.1.1-TfisdIEnsih4rLcXvbD9Pzpc5P2xsIxhDWWpXIhhVXLgew.D6GyQhTDsczMeclx.e8reBRld7JqaAu1TzNITbA;
-        path=/; expires=Thu, 27-Feb-25 23:15:56 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=herIiBbHcn3SeYrgsLgqCo4jqzpBJuXGdAw1._ByceA-1740696356107-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
-      X-Content-Type-Options:
-      - nosniff
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93ba6df93eba36e8-SJC
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:09:40 GMT
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '1624'
+      - '3715'
       openai-version:
       - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=J1gkdCbCH3.d.4mc2Aem69_sTgonulQWk3CNUy2f2HU-1746554980-1.0.1.1-V.HTgsgtQNd5KnFySGBocWQYz_lRS0QgZMHUytNADNp8qg6wfokon0TmrySooX0Nq.Rlar0ZdCBJ3yxWx.dHs5CZ2jm4kap7PxQTNozebPY;
+        path=/; expires=Tue, 06-May-25 18:39:40 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=Unb75HOEFpcDCPXx3yFArEMEcmoGVMpQkPQAescquW4-1746554980054-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
       x-ratelimit-limit-requests:
       - '10000'
       x-ratelimit-limit-tokens:
@@ -88,13 +87,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '9999'
       x-ratelimit-remaining-tokens:
-      - '1999980'
+      - '1999994'
       x-ratelimit-reset-requests:
       - 6ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_b56011b811c0471bc3ce160962a0a44f
+      - req_b1f7e3dd2340a41e2b5f69ec7f7a44b6
     status:
       code: 200
       message: OK

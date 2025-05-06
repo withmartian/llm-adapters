@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "lunara", "prompt": "Hi", "max_tokens": 10}'
+    body: '{"model":"lunara-12bv1","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '53'
+      - '54'
       content-type:
       - application/json
       host:
       - jtwtcue2-lunara-12bv1.tin.lepton.run
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,39 +25,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://jtwtcue2-lunara-12bv1.tin.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-o5pBtBP9iYFGmwA8BQdCiD","object":"text_completion","created":1733279547,"model":"lunara","choices":[{"index":0,"text":"\\000\\000}
-        &","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10}}'
+      string: ''
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ec862cbff4bed3f-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 04 Dec 2024 02:32:27 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba727d4f051668-SJC
       content-length:
-      - '258'
-      vary:
-      - Accept-Encoding
+      - '0'
+      date:
+      - Tue, 06 May 2025 18:12:41 GMT
+      server:
+      - cloudflare
       x-envoy-upstream-service-time:
-      - '1479'
+      - '0'
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

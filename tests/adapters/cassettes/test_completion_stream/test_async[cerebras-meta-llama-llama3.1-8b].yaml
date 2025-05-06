@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "llama3.1-8b", "prompt": "Hi", "max_tokens": 10, "stream": true}'
+    body: '{"model":"llama3.1-8b","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '74'
+      - '67'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,79 +25,57 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/completions
   response:
     body:
-      string: 'data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":","}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"
-        my"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"
-        name"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"
-        is"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"
-        Samantha"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":","}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"
-        and"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"
-        I"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"''m"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"index":0,"text":"
-        a"}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion"}
-
-
-        data: {"id":"chatcmpl-2d9e1469-bd11-46f3-9dee-2521e77562e0","choices":[{"finish_reason":"length","index":0,"text":""}],"created":1733910309,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion","usage":{"prompt_tokens":2,"completion_tokens":10,"total_tokens":12},"time_info":{"queue_time":0.00009215,"prompt_time":0.000071869,"completion_time":0.004556127,"total_time":0.0070760250091552734,"created":1733910309}}
-
-
-        '
+      string: "data: {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"ya\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"!\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"
+        \U0001F44B\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"
+        I\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"'m\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"
+        a\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"
+        passionate\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"
+        content\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"index\":0,\"text\":\"
+        creator\"}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\"}\n\ndata:
+        {\"id\":\"chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3\",\"choices\":[{\"finish_reason\":\"length\",\"index\":0}],\"created\":1746555162,\"model\":\"llama3.1-8b\",\"system_fingerprint\":\"fp_d4032cc64cc617db1426\",\"object\":\"text_completion\",\"usage\":{\"prompt_tokens\":2,\"completion_tokens\":10,\"total_tokens\":12},\"time_info\":{\"queue_time\":0.00036537,\"prompt_time\":0.000091375,\"completion_time\":0.004586264,\"total_time\":0.007866621017456055,\"created\":1746555162}}\n\n"
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba72864b1715b2-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:45:09 GMT
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 549a5eaa264d3b997d6acfdba72f56d0.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - VVW52JqyDSXHK69k7IgCcpd0atqZvFt7XM46mY8Kn3GB3Oj4LlN69g==
-      X-Amz-Cf-Pop:
-      - SFO5-P1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 18:12:42 GMT
+      inference-id:
+      - chatcmpl-5bc5385d-d698-401f-b2d2-d691baf9c5f3
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=e0HWXM29_LpZzT4R6P1dcnqKVObxCEzR4xKt77A5C5Y-1746555162-1.0.1.1-em2bK0jvNh11_cGYw65tdd2pOLzWjnITILsXpw2xvjh5OiWbKeOGJaOtJyxXFn379e6sPknc1U4VZsBmlB04Rr1kTVWa3zAYmawGCcNOXTY;
+        path=/; expires=Tue, 06-May-25 18:42:42 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -107,15 +85,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14399'
+      - '14390'
       x-ratelimit-remaining-tokens-minute:
       - '60000'
       x-ratelimit-reset-requests-day:
-      - '51290.04018807411'
+      - '20837.351635456085'
       x-ratelimit-reset-tokens-minute:
-      - '50.04018807411194'
+      - '17.351635456085205'
       x-request-id:
-      - VVW52JqyDSXHK69k7IgCcpd0atqZvFt7XM46mY8Kn3GB3Oj4LlN69g==
+      - 93ba72864b1715b2-SJC
     status:
       code: 200
       message: OK

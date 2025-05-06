@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/fireworks/models/llama-v3p1-8b-instruct", "prompt":
-      "Hi", "stop": ["stop", "end"]}'
+    body: '{"model":"accounts/fireworks/models/llama-v3p1-8b-instruct","prompt":"Hi","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '102'
+      - '96'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,72 +25,72 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: '{"id":"5a848682-6904-4b28-8242-cdc75df8214f","object":"text_completion","created":1734127184,"model":"accounts/fireworks/models/llama-v3p1-8b-instruct","choices":[{"index":0,"text":"
-        rumpe`\n\n## Step 4: Analyze the given HTML structure\n\nThe given","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":17,"completion_tokens":16}}'
+      string: '{"id":"b0904a22-778f-40e6-8410-fc3958c67e75","object":"text_completion","created":1746561402,"model":"accounts/fireworks/models/llama-v3p1-8b-instruct","choices":[{"index":0,"text":"
+        echangiatimes.org\">internationalagrialliance.org</a> , for","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":17,"completion_tokens":16}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f193913fce66892-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:59:44 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=144.0,total;dur=171.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0ad8fe5aed3b-SJC
       content-length:
-      - '363'
+      - '356'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:56:41 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
       - '1'
       fireworks-sampling-options:
-      - '{"max_tokens": 16, "temperature": 1.0, "top_k": 0, "top_p": 1.0, "min_p":
+      - '{"max_tokens": 16, "temperature": 1.0, "top_k": 0, "top_p": 0.7, "min_p":
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.076'
+      - '0.074'
+      fireworks-server-time-to-first-token:
+      - '0.015'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=142.0,total;dur=199.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '77'
+      - '76'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-limit-tokens-prompt:
-      - '30000'
+      - '60000'
       x-ratelimit-over-limit:
       - 'no'
       x-ratelimit-remaining-requests:
       - '59'
       x-ratelimit-remaining-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-remaining-tokens-prompt:
-      - '29999'
+      - '59999'
       x-request-id:
-      - 5a848682-6904-4b28-8242-cdc75df8214f
+      - b0904a22-778f-40e6-8410-fc3958c67e75
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"hermes3-405b"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"hermes3-405b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '104'
+      - '137'
       content-type:
       - application/json
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,29 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"fc9ab974cfcd4d0e9ff0aace179257d3","object":"chat.completion","created":1742234750,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":10,"total_tokens":26,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-49aed05e-b899-49b4-b343-634e628eca53","object":"chat.completion","created":1746555046,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":33,"completion_tokens":10,"total_tokens":43,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6bb1dc5f6be9-DFW
+      - 93ba6fb338bdfa7e-SJC
       content-length:
-      - '631'
+      - '644'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:05:50 GMT
+      - Tue, 06 May 2025 18:10:48 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=2cSnUQyBBTKTPlEoR3j.ZInofBxzOweBeTLLAZU72KQ-1742234750-1.0.1.1-AsebG0OYco.Yit2UxOc9pWYHjIWXWQ4txuSIlYa9c9I7UgNACeqxvMr8od41eIoMhOH3HbT7lq.6yq_TUibXqS93buXYaeuS5STgUBuRDWk;
-        path=/; expires=Mon, 17-Mar-25 18:35:50 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=ufaMtQoYpjbHjxuS50MtO.qmT1FvJ49tAirHch4m97Q-1746555048-1.0.1.1-LP.ucL2X_wM68ilP.pan0f7tF.NzgrM3UKevLYZNC2sCpvq5QAudond1U1KpgSMLf8_0jY_4vIh9Miv_a.clguCv4AWtnnFh9MQKf732HgM;
+        path=/; expires=Tue, 06-May-25 18:40:48 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - d660186b-83f4-420d-a60c-777973bd411c
+      - 49aed05e-b899-49b4-b343-634e628eca53
       x-response-time:
-      - '0.333'
+      - '1.513'
     status:
       code: 200
       message: OK

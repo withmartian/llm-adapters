@@ -1,0 +1,106 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning","temperature":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '89'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "309efd25-89a4-4abf-908f-cdbaf32261e6", "model": "sonar-reasoning",
+        "created": 1746561406, "usage": {"prompt_tokens": 1, "completion_tokens":
+        606, "total_tokens": 607, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user asked
+        \"Hi\". Let me check the search results to figure out what they need. The
+        first result is from Dictionary.com, which defines \"hi\" as an interjection
+        and an adjective form of \"high\". The second result from Vocabulary.com explains
+        that \"hi\" is a casual greeting, more informal than \"hello\". There''s also
+        a YouTube link about a greeting song for kids, which might be for teaching
+        purposes. Then, Wikipedia''s entry for HI lists various meanings, like the
+        state abbreviation, a podcast, a song, and more. Wiktionary provides linguistic
+        info, including its use in Basque and other languages.\n\nSo, the user might
+        be asking about the meaning of \"hi\" in general. Since \"hi\" can mean different
+        things, I need to cover the primary uses. The most common is the greeting.
+        Then, as an abbreviation for Hawaii (HI) or other things like a song title.
+        Also, in some languages, it''s a pronoun. I should structure the answer with
+        sections for each main meaning. Start with the greeting, then other uses like
+        abbreviations, language-specific terms, and cultural references. Make sure
+        to cite the sources properly. Avoid using headers at the start. Use bullet
+        points for clarity. Check if any sources conflict, but they seem complementary.
+        Need to mention the casual nature of \"hi\" as a greeting, its origin, and
+        other possible meanings like in Basque or as a song title. Also, note the
+        state abbreviation HI for Hawaii. Make sure each point has the right citations
+        from the search results.\n</think>\n\nThe term **\"hi\"** has multiple meanings
+        depending on context:\n\n## Greeting  \n\"Hi\" is a common, informal English
+        greeting, less formal than \"hello\" but more universally appropriate than
+        alternatives like \"hey\" or \"howdy\"[2]. It originated in the 19th century
+        and is widely used in casual interactions[2].\n\n## Abbreviations and Codes  \n-
+        **HI**: U.S. state abbreviation for Hawaii[4].  \n- **HI**: ISO 639-1 language
+        code for Hindi[4].  \n- **HI**: In astronomy, refers to interstellar clouds
+        of neutral atomic hydrogen[4].  \n\n## Language-Specific Usage  \n- In **Basque**,
+        *hi* is an informal second-person singular pronoun (equivalent to \"you\"),
+        used between close friends or family. It requires specific verb conjugations
+        in allocutive agreement[5].  \n- In **Japanese**, *hi* (\u3072/\u30d2) is
+        a kana character[4].  \n\n## Cultural and Creative References  \n- **Music**:
+        Multiple songs and albums titled *Hi*, including works by Ofra Haza, Texas,
+        and Psapp[4].  \n- **Media**: *Hello Internet*, a podcast hosted by CGP Grey
+        and Brady Haran[4].  \n\nFor young learners, \"hi\" is often taught through
+        educational songs like *Hi, Hello Song!*[3]."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0ac48d88cef5-SJC
+      content-length:
+      - '3298'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:56:46 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Ehjq8qlVaX5p3.d6SJKh4rWH41s3WEGsOwPoDxNrz2s-1746561406-1.0.1.1-eFszGeMQC7JI_8Ztzdbpjk6ItmkXEk3EgYqSVRaNZT0BdRQ08BmKqW30VGsZIrc2Xj0fVxe4o.ur8.S.MUmFoJbZUO3bSAHtg5edvhoh6kk;
+        path=/; expires=Tue, 06-May-25 20:26:46 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

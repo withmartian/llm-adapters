@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,29 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"47f31f6fbbf64b4a97f96921f08766f1","object":"chat.completion","created":1742234926,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":10,"total_tokens":26,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-7fd66e87-7529-455f-97fe-8a8e5b97de69","object":"chat.completion","created":1746554933,"model":"hermes3-405b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I help you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":27,"completion_tokens":10,"total_tokens":37,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6ffddbad6f22-DFW
+      - 93ba6ceb7f9e1613-SJC
       content-length:
-      - '631'
+      - '642'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:08:46 GMT
+      - Tue, 06 May 2025 18:08:53 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=BHMev4dV6gh9Aca0DuVN0bpo__IzVLet_HQ.myFHORk-1742234926-1.0.1.1-UDfuS9ZPXu5GmuaESljJywqXpjQ2hcG.PE.ibjPrfudMeY1jooKxJMePRMExp047Z82QXEUzDEGdb4XG3OQh792yPopuBCPqX6ngPsHePQ4;
-        path=/; expires=Mon, 17-Mar-25 18:38:46 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=URs9aEL9j9QXzVaKn0J_AozTIz_JRMLaw4vpMTZzUD8-1746554933-1.0.1.1-wDRZ0XXqEXW3WIe3lp2kLkQZB2fJKTzJ7Df308UZb30zBrcDcnmlkbfHG8OJr8Q3HtfE8HVBFhoZ2NijgKMr4gaDt1At_YFmjfFdjTIvsZo;
+        path=/; expires=Tue, 06-May-25 18:38:53 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 3c961aff-bd38-47dd-93d7-8e325615cd17
+      - 7fd66e87-7529-455f-97fe-8a8e5b97de69
       x-response-time:
-      - '0.501'
+      - '0.624'
     status:
       code: 200
       message: OK

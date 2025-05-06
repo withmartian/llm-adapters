@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "system", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "user", "content": "Hi"}, {"role": "user", "content": "\"\""}], "model": "glm-4-air"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"glm-4-air"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '326'
+      - '292'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,42 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
-      string: "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"\u770B\u6765\u6211\u4EEC\u6B63\u5728\u8FDB\u884C\u4E00\u4E2A\u7B80\u5355\u7684\u95EE\u5019\u4EA4\u6D41\u3002\u5982\u679C\u4F60\u6709\u4EFB\u4F55\u95EE\u9898\u6216\u8005\u60F3\u8981\u804A\u5929\uFF0C\u968F\u65F6\u544A\u8BC9\u6211\uFF01\u6211\u5728\u8FD9\u91CC\u5E2E\u52A9\u4F60\u3002\",\"role\":\"assistant\"}}],\"created\":1733771181,\"id\":\"2024121003062125a9a6b10533466c\",\"model\":\"glm-4-air\",\"request_id\":\"2024121003062125a9a6b10533466c\",\"usage\":{\"completion_tokens\":24,\"prompt_tokens\":21,\"total_tokens\":45}}"
+      string: "{\"error\":{\"code\":\"1113\",\"message\":\"\u60A8\u7684\u8D26\u6237\u5DF2\u6B20\u8D39\uFF0C\u8BF7\u5145\u503C\u540E\u91CD\u8BD5\u3002\"}}"
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:06:21 GMT
-      Set-Cookie:
-      - acw_tc=784e2cb217337711809996760e747204d1ad39ec402ef81a144e9663efa5a8;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:11:39 GMT
+      set-cookie:
+      - acw_tc=0ae5a7e217465550999031610e005cf949f62d3caa19699f23018d5db4b530;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
+      vary:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 2024121003062125a9a6b10533466c
-      content-length:
-      - '428'
+      x-log-id:
+      - 20250507021139e025dcd2c2a34a57
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

@@ -1,10 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "command-r-plus", "messages": [{"role": "system", "content":
-      "Hi"}, {"role": "system", "content": "Hi"}, {"role": "user", "content": "Hi"},
-      {"role": "user", "content": "Hi"}, {"role": "system", "content": "Hi"}, {"role":
-      "system", "content": "Hi"}, {"role": "user", "content": "Hi"}, {"role": "user",
-      "content": "\"\""}], "stream": false}'
+    body: '{"model":"command-r-plus","messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"stream":false}'
     headers:
       accept:
       - '*/*'
@@ -13,29 +9,30 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '348'
+      - '312'
       content-type:
       - application/json
       host:
       - api.cohere.com
       user-agent:
-      - python-httpx/0.27.2
+      - python-httpx/0.28.1
       x-fern-language:
       - Python
       x-fern-sdk-name:
       - cohere
       x-fern-sdk-version:
-      - 5.11.3
+      - 5.15.0
     method: POST
     uri: https://api.cohere.com/v2/chat
   response:
     body:
-      string: '{"id":"4904ec4e-f2f2-434a-8a4b-dbe42719fa5d","message":{"role":"assistant","content":[{"type":"text","text":"\"\""}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":8,"output_tokens":1},"tokens":{"input_tokens":185,"output_tokens":1}}}'
+      string: '{"id":"647bd295-afa9-42e3-8dbb-6aa818d451da","message":{"role":"assistant","content":[{"type":"text","text":"Hi!
+        How can I help you today?"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":8,"output_tokens":9},"tokens":{"input_tokens":35,"output_tokens":9}}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Length:
-      - '255'
+      - '279'
       Via:
       - 1.1 google
       access-control-expose-headers:
@@ -45,13 +42,13 @@ interactions:
       content-type:
       - application/json
       date:
-      - Sat, 23 Nov 2024 00:47:17 GMT
+      - Tue, 06 May 2025 18:11:53 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 UTC
       num_chars:
-      - '1356'
+      - '539'
       num_tokens:
-      - '9'
+      - '17'
       pragma:
       - no-cache
       server:
@@ -61,9 +58,9 @@ interactions:
       x-accel-expires:
       - '0'
       x-debug-trace-id:
-      - f8cc349c64f01932eeeccbfd0320d66e
+      - c18998ca94d1b02a43084a73b76c717c
       x-envoy-upstream-service-time:
-      - '97'
+      - '236'
     status:
       code: 200
       message: OK

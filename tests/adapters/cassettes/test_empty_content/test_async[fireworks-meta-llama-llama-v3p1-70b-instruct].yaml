@@ -1,9 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": ""}, {"role": "user", "content":
-      ""}, {"role": "assistant", "content": " "}, {"role": "user", "content": ""},
-      {"role": "assistant", "content": " "}, {"role": "user", "content": "\n"}], "model":
-      "accounts/fireworks/models/llama-v3p1-70b-instruct"}'
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"accounts/fireworks/models/llama-v3p1-70b-instruct"}'
     headers:
       accept:
       - application/json
@@ -12,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '290'
+      - '264'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,46 +26,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"d9c6ba03-06eb-4f95-a900-3d9f148a4f55\",\"object\":\"chat.completion\",\"created\":1732323150,\"model\":\"accounts/fireworks/models/llama-v3p1-70b-instruct\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"I
-        don\u2019t understand what you mean by that. Could you explain?\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":35,\"total_tokens\":50,\"completion_tokens\":15}}"
+      string: '{"id":"0f7c7faf-78c2-4ea2-b1f5-2560d6b5c242","object":"chat.completion","created":1746555173,"model":"accounts/fireworks/models/llama-v3p1-70b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"I
+        don''t understand what you mean by \"1200\". Could you explain?"},"finish_reason":"stop"}],"usage":{"prompt_tokens":35,"total_tokens":52,"completion_tokens":17}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8e6d2d494cd915d4-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:52:30 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=436.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba72c5a96bf96f-SJC
       content-length:
-      - '376'
+      - '378'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:53 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -77,11 +65,33 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.333'
+      - '0.353'
+      fireworks-server-time-to-first-token:
+      - '0.108'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=487.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '335'
+      - '356'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59965'
       x-request-id:
-      - d9c6ba03-06eb-4f95-a900-3d9f148a4f55
+      - 0f7c7faf-78c2-4ea2-b1f5-2560d6b5c242
     status:
       code: 200
       message: OK

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,36 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-9019eeb8-ef78-4460-9fbd-9b60771d9153","object":"chat.completion","created":1742234804,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems like you''d like to have a conversation, but there''s nothing specific
-        you''d like to talk about. If you''re feeling stuck, here are some conversation
-        ideas:\n\n1. Hobbies: What do you enjoy doing in your free time?\n2. Travel:
-        Have you traveled anywhere exciting recently or have any upcoming trips planned?\n3.
-        Movies/TV: What have you watched that you''d recommend?\n4. Books: Are you
-        reading anything interesting?\n5. Goals: Do you have any goals or aspirations
-        you''re working towards?\n\nFeel free to pick any of these topics or suggest
-        something else you''d like to discuss! I''m here to listen and chat."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":36,"completion_tokens":135,"total_tokens":171,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-41940903-1cdf-40d5-a41a-e4dbeb0515fd","object":"chat.completion","created":1746561287,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Is
+        there something I can help you with or would you like to chat?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":36,"completion_tokens":16,"total_tokens":52,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6d08dda869d8-DFW
+      - 93bb080d6a019e68-SJC
       content-length:
-      - '1232'
+      - '683'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:06:45 GMT
+      - Tue, 06 May 2025 19:54:47 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=k1k0aYTluiKdQFE6TebSasUExf2wyb4AaUTKb_S0xhw-1742234805-1.0.1.1-v683DIgejQSBZjqxyNdywnQpjjX0hrbqxHvMUanO3urCx0mNNukgx7100kjLFEs5Xq1.gI82Cqu32X2yRsUW0S1aJAnzZY995eNfUmBOIA0;
-        path=/; expires=Mon, 17-Mar-25 18:36:45 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=lwRJ_lpWlTwDNVnTLUSM8JBpioUrOd9RIRPsK049_CE-1746561287-1.0.1.1-tKmmIMkCB7g7UDLRr0Ilp24zgaOP2nkM7MK2tMt4tZqg4U.nkvLA_Pi4JmW1QLQjDzg.2riNJ3wIbQe5qm3Jw_hXlqEKQcnt8NToSyCIfUw;
+        path=/; expires=Tue, 06-May-25 20:24:47 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 9019eeb8-ef78-4460-9fbd-9b60771d9153
+      - 41940903-1cdf-40d5-a41a-e4dbeb0515fd
       x-response-time:
-      - '0.968'
+      - '0.207'
     status:
       code: 200
       message: OK

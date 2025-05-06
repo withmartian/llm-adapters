@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "accounts/fireworks/models/qwen2p5-72b-instruct"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"accounts/fireworks/models/qwen2p5-72b-instruct"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '108'
+      - '102'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,45 +25,37 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"385168e3-09b1-4e0f-8904-6abe20c95e11","object":"chat.completion","created":1734146549,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        It''s nice to meet you. How can I assist you today? Whether you have questions,
-        need information, or just want to chat, feel free to let me know!"},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":68,"completion_tokens":38}}'
+      string: '{"id":"42beb6d2-d919-4286-af00-a6dbad8dd836","object":"chat.completion","created":1746561270,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today? Feel free to ask me anything or let me know if
+        you need help with any specific topics."},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":59,"completion_tokens":29}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f1b11d8bcb317de-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 14 Dec 2024 03:22:29 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=767.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb079dafdf67a9-SJC
       content-length:
-      - '462'
+      - '432'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:54:30 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -73,25 +65,33 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.540'
+      - '0.465'
+      fireworks-server-time-to-first-token:
+      - '0.061'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=786.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '543'
+      - '467'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-limit-tokens-prompt:
-      - '30000'
+      - '60000'
       x-ratelimit-over-limit:
       - 'no'
       x-ratelimit-remaining-requests:
       - '59'
       x-ratelimit-remaining-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-remaining-tokens-prompt:
-      - '29970'
+      - '59970'
       x-request-id:
-      - 385168e3-09b1-4e0f-8904-6abe20c95e11
+      - 42beb6d2-d919-4286-af00-a6dbad8dd836
     status:
       code: 200
       message: OK

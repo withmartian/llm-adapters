@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "llama3.1-8b"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-8b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '73'
+      - '67'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,41 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-5b665c90-88f5-4e61-8dca-d6bea9897e2c","choices":[{"finish_reason":"stop","index":0,"message":{"content":"It''s
-        nice to meet you. Is there something I can help you with or would you like
-        to chat?","role":"assistant"}}],"created":1734146525,"model":"llama3.1-8b","system_fingerprint":"fp_2e2a2a083c","object":"chat.completion","usage":{"prompt_tokens":36,"completion_tokens":23,"total_tokens":59},"time_info":{"queue_time":8.7031e-05,"prompt_time":0.001838946,"completion_time":0.010523232,"total_time":0.014032363891601562,"created":1734146525}}'
+      string: !!binary |
+        IeQHACA+r1tOK+/P4aIESG1th9nQIBb0vGY7cNvbYATDzcYDDAMONOGsu2GgeZI78XnUlvkFpx5o
+        SxgUTbYX4zz4SlmrWGx9nTPtq4Dnfsbi3C+stAXPAx5zDgILe7PBfD8wzywlu6NewGDb3QyCg/UV
+        hhG0TXQwDwyQ22Xw6S5ekU3el5dtW7vt3s0d3u7K7PYBgtUNFgZwzKYd//+/BIboRbaE4aHSgeZC
+        hwSjK+0Ag2HIxkyeuB/lIHCcnyRVO9V2nddWd7mak1IxKYpCq6LQPCxzroQGgcs7W+zF4FPHhG3d
+        BIIj/x/z6sZ5T3bX22mDkZqADKiJCH4UgGChUv8EezvapJ0qB/PActjDJns7Whh2YowpHsZBRFSA
+        jvAoDJmIxMBwUsdahJqEPRdCMaWkELEOAxHL2sn/vwED
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '559'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb07913acc6444-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Sat, 14 Dec 2024 03:22:05 GMT
-      Via:
-      - 1.1 18d8a69a30308aa071168e8aed30be36.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - Vd-1fI7DM6r3R_EcTnYD1U5lMK_MAx1jCwZ1bUqQ3wwivzO9r4nltQ==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 19:54:27 GMT
+      inference-id:
+      - chatcmpl-44ee409e-6b06-451b-a09b-ce3ec1b51911
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=b5YTzSLsAxuJBKpo9ApTLQskTUuE8SFExNySkaJIcA4-1746561267-1.0.1.1-RpGXLaQrBNbk_93Uxr4m.MKqF1IVjPwXyfhHLon49pNu0qayH1KWlgLgRuIPBz3zreIyWQgMF05li21mKRvsZ1tKMbkrtZ.ZR9I_EK76tR4;
+        path=/; expires=Tue, 06-May-25 20:24:27 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -69,15 +77,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14396'
+      - '14378'
       x-ratelimit-remaining-tokens-minute:
       - '60000'
       x-ratelimit-reset-requests-day:
-      - '74274.72296404839'
+      - '14732.473854064941'
       x-ratelimit-reset-tokens-minute:
-      - '54.72296404838562'
+      - '32.473854064941406'
       x-request-id:
-      - Vd-1fI7DM6r3R_EcTnYD1U5lMK_MAx1jCwZ1bUqQ3wwivzO9r4nltQ==
+      - 93bb07913acc6444-SJC
     status:
       code: 200
       message: OK

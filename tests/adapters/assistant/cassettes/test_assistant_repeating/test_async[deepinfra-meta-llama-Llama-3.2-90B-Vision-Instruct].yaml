@@ -1,8 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "assistant", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "meta-llama/Llama-3.2-90B-Vision-Instruct"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-3.2-90B-Vision-Instruct"}'
     headers:
       accept:
       - application/json
@@ -11,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '217'
+      - '199'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,26 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-480124a75108496fa6b882f784b9eddb","object":"chat.completion","created":1733368527,"model":"meta-llama/Llama-3.2-90B-Vision-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hi
-        again How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":25,"total_tokens":34,"completion_tokens":9,"estimated_cost":1.235e-05}}'
+      string: '{"id":"chatcmpl-RtbMURUPpb64aARIyQPpfISD","object":"chat.completion","created":1746555037,"model":"meta-llama/Llama-3.2-90B-Vision-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hi
+        again How''s your day going so far?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":25,"total_tokens":35,"completion_tokens":10,"estimated_cost":1.2749999999999998e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '402'
+      - '425'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:15:27 GMT
+      - Tue, 06 May 2025 18:10:37 GMT
       server:
       - uvicorn
       x-robots-tag:

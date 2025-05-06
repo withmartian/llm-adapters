@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi, output simple json"}], "model":
-      "jamba-1.5-large", "response_format": {"type": "json_object"}}'
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"jamba-1.5-large","response_format":{"type":"json_object"}}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '141'
+      - '132'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,47 +25,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IUAFACD+/6avsvRq+td4QlX4vg5CshlT5fDGgeNgCwzL+brggAsNjwPfprvJkG4FC+ve6x1LD4Ke
-        Vfm8q/P79Hqcx5t+3/rn9fU6v/Tw7J768egug4JE6/ogg753XKTPoJNEXcQXaEfyZgBB5bzkolyB
-        xNC4jLCzE0IIhp8ZgwRjZ2ZMaRjK4iZmoWHG12CM/2BmSC7IRZWac0SuWg85NhqDXYNE8d78aWVM
-        BrlqTJMwfgrJd0CJ8Wvmb9XVHIRcfED7kag+6pC8DeWv+G1wGfR6QdlghrJ4J7nLW+IbAcDS+fxs
-        zQAD
+      string: '{"detail":"Access denied for this feature"}'
     headers:
-      CF-RAY:
-      - 8e6d1c1a3d876434-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:40:48 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93ba6fa4ee31d03d-SJC
+      content-length:
+      - '43'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:45 GMT
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - cf5314b0-66a1-ea20-314e-836456e81db4
+      - 753efde7-3a6c-29bf-e315-941641c08640
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

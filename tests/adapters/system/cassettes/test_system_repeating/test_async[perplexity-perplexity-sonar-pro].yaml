@@ -1,0 +1,86 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"Hi\nHi\nHi\nHi\nHi\nHi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '118'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "7554a95d-ec37-40cb-ab2b-e87e400db05e", "model": "sonar-pro",
+        "created": 1746561106, "usage": {"prompt_tokens": 12, "completion_tokens":
+        297, "total_tokens": 309, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.shazam.com/en-us/song/1440940877/hi-hi-hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Hi there! It seems like you''re
+        referencing \"Hi, Hi, Hi,\" which is a notable song written by Paul and Linda
+        McCartney and performed by Wings. This track was released on December 1, 1972,
+        in the UK as a double A-side single with \"C Moon\"[1].\n\nThe song achieved
+        significant commercial success, reaching number one in Spain, number five
+        in the United Kingdom, and number 10 in the United States by January 1973[1].
+        In Ireland, it peaked at number 18[1]. Due to its popularity, \"Hi, Hi, Hi\"
+        became a regular part of Wings'' concert setlists throughout the 1970s[1].\n\nOver
+        the years, the song has been included in several Paul McCartney compilation
+        albums, including:\n- \"Wingspan: Hits and History\" (2001)\n- The deluxe
+        edition of \"Pure McCartney\" (2016)\n- As a bonus track on the 1993 and 2018
+        reissues of \"Red Rose Speedway\"\n- \"The 7\" Singles Box\" (2022)[1][3]\n\nThe
+        song falls into the glam rock genre and runs approximately 3:07 in length[1].
+        It was recorded at Abbey Road Studios in London in 1972, with Paul McCartney
+        serving as the producer[1][2].\n\nThe track remains available on modern music
+        platforms like YouTube and Spotify for those interested in listening to this
+        classic Wings song[2][4]."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb033e98807ac4-SJC
+      content-length:
+      - '1864'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:46 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=7SJh_fc31tknJqZmRBvBlFkuVgYqvoYSU5N0u_dEY8c-1746561106-1.0.1.1-NgVAaLhkYSZMzq6QIobLq7LoWMMgZZezOUXkXfchr59PyYm.JhgAevQi0QlNEZNMAjSR6bJJQcq1bRyLfP0lNRa8dSgWTqAWxQuABKAZBx8;
+        path=/; expires=Tue, 06-May-25 20:21:46 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

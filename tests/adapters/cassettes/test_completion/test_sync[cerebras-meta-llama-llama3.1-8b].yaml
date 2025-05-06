@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "llama3.1-8b", "prompt": "Hi", "max_tokens": 10}'
+    body: '{"model":"llama3.1-8b","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '58'
+      - '53'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,40 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/completions
   response:
     body:
-      string: '{"id":"chatcmpl-aaece7b8-1bab-45fb-b334-e8e03857371d","choices":[{"finish_reason":"length","index":0,"text":",
-        we use a lot of 3M products"}],"created":1733365226,"model":"llama3.1-8b","system_fingerprint":"fp_adef9adf51","object":"text_completion","usage":{"prompt_tokens":2,"completion_tokens":10,"total_tokens":12},"time_info":{"queue_time":8.689e-05,"prompt_time":5.8009e-05,"completion_time":0.004561013,"total_time":0.006500959396362305,"created":1733365226}}'
+      string: !!binary |
+        IYAHACA+r1tOK+9XLJA4kGG7uaOhwexyrevwwCGYBRmUhgGWxX7IfvDrQe4mw1J8OLt4Tv2ir2FR
+        dYWv5m0KWVI0daySsK60CFWlirBMyyRshBZxkdS1LCQIKOzVGfblF/PMQrY7aoXF3IMEgpP1N8Ay
+        Au++PCxIcLqbg+fiKLrodTndzUER+KP4cFPwefTeHfh/I6A9H3I1LI+V0VpzrgjmtXYTLKapmAsZ
+        8TApQcArvz5r+qV1x3b0i4dFs2W1YlJUlVFVZXhcl1wJA4K1HFzlYXPirC/iX78uILici9bB/mI7
+        1nnzmV9Ht5xhBYEtNI0zgk8EOOmc+Cfw/eyyfmlW2F/sF3dxme9nB8sixpgyLBWcoJD2QhpxmQgX
+        Mg0GV6sMT9LUYCLmc2NkKpTgsRCKC86LJ///Aw==
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '465'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba71561d8915cc-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Thu, 05 Dec 2024 02:20:26 GMT
-      Via:
-      - 1.1 21e2c668bb54ebb4456425e394c3356a.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - Pg-zPm8hoe8iKyj6lQgTSyh_L4zzjJOc_78of-b9OGZFQV3vjLDADw==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 18:11:54 GMT
+      inference-id:
+      - chatcmpl-08afd748-dc52-4c4a-b9b8-f2527a8dd3a3
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=y_e.E_w5.YLVJ2ciFfAw6JENG4eZ6_XQwIjshgfDd0Q-1746555114-1.0.1.1-P57Srv9NG9YtqSCjpzhnIYo8LDiDvjDK.2EnBMlDqpaRz_CIEQ_Qy7AuWJFkl8MakbnNzEetfk19N1cdpkbxP1VR0rbbNoN52sWYe1AdSeE;
+        path=/; expires=Tue, 06-May-25 18:41:54 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -68,15 +77,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14399'
+      - '14392'
       x-ratelimit-remaining-tokens-minute:
-      - '59988'
+      - '59803'
       x-ratelimit-reset-requests-day:
-      - '77973.24457883835'
+      - '20885.952476739883'
       x-ratelimit-reset-tokens-minute:
-      - '33.24457883834839'
+      - '5.952476739883423'
       x-request-id:
-      - Pg-zPm8hoe8iKyj6lQgTSyh_L4zzjJOc_78of-b9OGZFQV3vjLDADw==
+      - 93ba71561d8915cc-SJC
     status:
       code: 200
       message: OK

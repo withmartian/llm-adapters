@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "mistral-7b", "tool_choice": "required",
-      "tools": [{"type": "function", "function": {"description": "Generate random
-      number", "name": "generate", "parameters": {"type": "object", "properties":
-      {"prompt": {"type": "string", "description": "Random number like 5, 4, 3, 10,
-      11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"mistral-7b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"required"}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '417'
+      - '390'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,45 +28,59 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-ocmn44wwePfwLfoHsnApb9","object":"chat.completion","created":1733369232,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
-        \"A random number between 1 and 10 can be generated using various tools such
-        as Python, JavaScript, or even a simple calculator. Here''s an example in
-        Python:\\n\\nimport random\\nrandom_number = random.randint(1, 10)\\nprint(random_number)\\n\\nThis
-        code will output a random number between 1 and 10 each time it is run.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
-        \"A random number between 1 and 10 can be generated using various tools such
-        as Python, JavaScript, or even a simple calculator. Here''s an example in
-        Python:\\n\\nimport random\\nrandom_number = random.randint(1, 10)\\nprint(random_number)\\n\\nThis
-        code will output a random number between 1 and 10 each time it is run.\"}"},"id":"call-aEcNBcPRghWGJPjyjBkEZ5","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":16,"total_tokens":111,"completion_tokens":95}}'
+      string: '{"id":"chatcmpl-wU2DWjzCPx3m6RvbbREwiE","object":"chat.completion","created":1746561735,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Here are some tools you can use to generate a random number between 1 and
+        10:\\n1. Using a programming language like Python, you can use the `random()`
+        function which returns a float number between 0 and 1, then use the `int()`
+        function to round it down to an integer.\\n2. Online random number generators
+        such as https://www.random.org/ or https://miniwebtool.com/random-number-generator/.\\n3.
+        Dice roll, if you have a physical dice, roll it until you get a number between
+        1 and 10.\\n\\nIn this case, I will use the Python `random()` function to
+        generate a random number between 1 and 10. Here is the code:\\n\\n```\\nimport
+        random\\nrandom_number = random.randint(1, 10)\\nprint(random_number)\\n```\\n\\nRunning
+        this code will output a random number between 1 and 10, such as 5, 4, 3, 10,
+        11.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Here are some tools you can use to generate a random number between 1 and
+        10:\\n1. Using a programming language like Python, you can use the `random()`
+        function which returns a float number between 0 and 1, then use the `int()`
+        function to round it down to an integer.\\n2. Online random number generators
+        such as https://www.random.org/ or https://miniwebtool.com/random-number-generator/.\\n3.
+        Dice roll, if you have a physical dice, roll it until you get a number between
+        1 and 10.\\n\\nIn this case, I will use the Python `random()` function to
+        generate a random number between 1 and 10. Here is the code:\\n\\n```\\nimport
+        random\\nrandom_number = random.randint(1, 10)\\nprint(random_number)\\n```\\n\\nRunning
+        this code will output a random number between 1 and 10, such as 5, 4, 3, 10,
+        11.\"}"},"id":"call-cnYy4pZAkhBFpERSin6weL","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":16,"total_tokens":263,"completion_tokens":247}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0f0645cca644d-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:27:13 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb12fe3a2815f5-SJC
       content-length:
-      - '1119'
+      - '2046'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:02:19 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1062'
+      - '3946'
     status:
       code: 200
       message: OK

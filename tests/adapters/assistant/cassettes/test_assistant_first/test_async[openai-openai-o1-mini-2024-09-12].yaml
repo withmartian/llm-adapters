@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}, {"role": "user",
-      "content": "Hi"}], "model": "o1-mini-2024-09-12"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"o1-mini-2024-09-12"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '120'
+      - '110'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,62 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
       string: !!binary |
-        IeALACBWU62nqfavll5ySHzIQYMB24qgZOe/v3kekCa47IVjni+Q+ccEa4CECUR9TQMNPLB0Ti9P
-        Y2KkZYC369y7KwZQqIiD5ERUMrWJe/T+9p6cnZ5cXd8tj17SefG4iG4vTvsfNr54IIcBZIaRlhUT
-        to8YZKHJIN6by01aEUej12r63X6/0TM+SY3SCXGQabhpmIVu02+2XX/gNpps48SEUpfE8cMAYDWb
-        AXT//ZY4fGfVO40REgf+BFBhEk0cJMoyLCuRVeQAEPm6Wxx0qZPEbOHSzCBFhiuQvmBhalRGicUB
-        Gbmz/lAkxJHVSeI02ETjKbopwdezdomDyspYena1YcBfdnod8B2yhUltFVQm1llJHM1msArVEwVA
-        oyH/PwA1brXajk8I5OfUsj5HJIWcaEVHirkXtQqNUWUZUkKi+neyn4XZeJSNQXO3iB0xTqTUttIq
-        kDDEE0eg9godaQms1tbG1xo4CUZhNtaFLcI9vx7ZQIqharY67f6I2IYZAw==
+        IcAMACDb1Ny9TIpmOy6dpE+lFB8G5R83OMMnXYGbIoFgYs/uA3sgd50H9kDCMM8OpoEGHlg6ddeO
+        ZxkFWjR+E+e7vx4AKokMUCy5E6MZgv3bg6jbN+Nwdpq0R+6kGO7t4pKnH63ortD3AFC3HQnnya9v
+        MXCVniDsm8vPSCKDuMyKPM/qpDY+GbWkARmgjoNRTSpIoiQLojqIE+/TpVaCLDJ49gAAfmcDADz/
+        fogMIn+V3Y1hIAP+BICzHggZILdWWccnhz4A2tfdYoAHNAx6DQ70Jwg+wSE4fYFvvQKnJf/ecYYz
+        62/zARlMq2GICleMos295uP/E/PY7K3TfFhrFBmgddogLe/fA3gV3l9p2UUz69G4xumeQqtJoqOD
+        pUaAVpYDfo0AGufq2o/JN53purZ0ayi4WJJ0hzov+UoqbaSyMQpLKJXGp9UP1bRgR+RFWRIwZoQg
+        40g23Q3zwgFKbqaOBE2Z82gL2JIv3ThFMzLAhwgNuPq2jsbmXU0Lms2s7pXjd9OUeRvLNKWiQO/f
+        MwAD
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e54ebfa8cc567ab-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 20 Nov 2024 02:13:39 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - __cf_bm=pEdQlLf8GrGuFMv66IwNUdftKcZubCKgMy7rPdkAEwc-1732068819-1.0.1.1-i1gZYy0PNS08hm0W1upy6yYyIv9hoi_SRbB.vbAo5odD9ahZ2pvdKFGGbrjWTS3jV8tnh1k_7DolMOdyzgQfSQ;
-        path=/; expires=Wed, 20-Nov-24 02:43:39 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=jC7TitcYkJK8YNFadeQSGPUmXE11e8eMyXXgG8Uhapk-1732068819362-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
-      X-Content-Type-Options:
-      - nosniff
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6cd3eef6ebed-SJC
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:08:51 GMT
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '2017'
+      - '2512'
       openai-version:
       - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=uzAbrdMB.6Yt5xHWTMIss1fWKZTXQFh.AOrpBkoWtug-1746554931-1.0.1.1-XKTnbgxiyf3Bf2gLfdKTrdzxZDaIhhm0Kx5jss5SZvVR4vuoUUL3HwQR05OTHdRupklL7P4O9MdfaeTBlpABJhgZSEStu1LBT0gyQnnSsAc;
+        path=/; expires=Tue, 06-May-25 18:38:51 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=_GwM5hNY4IdAcyHh.ICEqO5zbF6X_NT.EKZ5j7fhI0w-1746554931853-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
       x-ratelimit-limit-requests:
       - '30000'
       x-ratelimit-limit-tokens:
@@ -89,13 +87,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '29999'
       x-ratelimit-remaining-tokens:
-      - '149999981'
+      - '149999996'
       x-ratelimit-reset-requests:
       - 2ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_5d763c1b0f1e2da2156d5568fca1cd2e
+      - req_a6e4827d739c567778252ee16c42a16d
     status:
       code: 200
       message: OK

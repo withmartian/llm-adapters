@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,36 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"bb47a9a0e3aa4c97a248551e38846257","object":"chat.completion","created":1742235268,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*Hmm,
-        the human has just greeted me with a simple \"Hi\". I wonder if they are just
-        being friendly or if they have a specific question or topic in mind. Since
-        they haven''t provided any additional context, I should respond in a friendly
-        manner and perhaps try to engage them in further conversation to better understand
-        their intent.*\n\nHello! It''s nice to meet you. How are you doing today?
-        Is there anything in particular I can assist you with or a topic you''d like
-        to discuss? I''m always happy to chat, answer questions, or help out however
-        I can."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":118,"total_tokens":134,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-e6e6adfa-5492-4282-92c1-cc4bbd47d16d","object":"chat.completion","created":1746561573,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I help you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":27,"completion_tokens":10,"total_tokens":37,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e7842cdb54761-DFW
+      - 93bb0f0869abceaf-SJC
       content-length:
-      - '1148'
+      - '641'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:14:28 GMT
+      - Tue, 06 May 2025 19:59:33 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=2CxE10IXfJ6tXw1aYJHRSP6_a8Xmy6_9DlxaSqPNp5I-1742235268-1.0.1.1-MOiStsPo2vOAYS.lZAw8Wv5giMIJxDn.VIatX2bfbImXzjC2u2xbAhqrefkul4O55K9LspKjRgghbLQ79vltO9OkHWB4kg5Cn2SHXdYnL_I;
-        path=/; expires=Mon, 17-Mar-25 18:44:28 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=mK8gCFOwZxhp1NwWCQLbXsaAkSQzPNrHtZW3l.0PBqY-1746561573-1.0.1.1-wmrml8MU_cNfh26C7bmMlUdx99PbnPzY92NlDY4AJ3MKQ4D8IN.xw.xa9_U3fzgU6uGvlDSs7RTuOexDp.U.P9cbn5GueIDWgihOkZssqy4;
+        path=/; expires=Tue, 06-May-25 20:29:33 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 44850681-60d9-4b19-8a5e-ce39fa152396
+      - e6e6adfa-5492-4282-92c1-cc4bbd47d16d
       x-response-time:
-      - '3.567'
+      - '0.28'
     status:
       code: 200
       message: OK

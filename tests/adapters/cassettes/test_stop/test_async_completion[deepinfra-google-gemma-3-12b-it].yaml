@@ -1,0 +1,146 @@
+interactions:
+- request:
+    body: '{"model":"google/gemma-3-12b-it","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RyCpaQ9vxD1klZPF6EwmOOnu","object":"text_completion","created":1746563553,"model":"google/gemma-3-12b-it","choices":[{"index":0,"text":"A,\n\nI
+        have recently downloaded and installed an Arduino Nano, and I''m finding it
+        a little difficult to get started. The documentation, while comprehensive,
+        is a little overwhelming for a complete beginner.\n\nMy first project is simple:
+        I want to blink an LED connected to pin 13 of the Arduino Nano. I''ve followed
+        a few online tutorials and examples, but I''m still struggling.  I''m getting
+        no response from the LED, and I''m not sure where to start troubleshooting.\n\nHere''s
+        my code:\n\n```c++\nvoid setup() {\n  pinMode(13, OUTPUT);\n}\n\nvoid loop()
+        {\n  digitalWrite(13, HIGH);\n  delay(1000);\n  digitalWrite(13, LOW);\n  delay(1000);\n}\n```\n\nHere''s
+        what I''ve checked so far:\n\n*   **Arduino IDE:** I''ve installed the Arduino
+        IDE and selected the correct board (Arduino Nano) and port. The code compiles
+        without errors.\n*   **Wiring:** I''ve connected the LED''s positive (anode)
+        leg to pin 13 through a 220-ohm resistor, and the LED''s negative (cathode)
+        leg to ground (GND). I''m reasonably sure the resistor is the correct value.\n*   **Power:**
+        The Arduino is connected to my computer via USB, and the power LED is lit.\n*   **Simple
+        Examples:** I''ve tried a few other very basic examples, like reading an analog
+        input, but I''m still not getting any output.\n\nI''m really stuck and would
+        appreciate any help you can offer.  Here are some specific questions I have:\n\n1.  **Resistor
+        Value:** Is 220 ohms a suitable resistor for an LED connected to a standard
+        Arduino Nano?\n2.  **Ground Connection:** Is it possible I have a grounding
+        issue? I''ve connected the LED''s cathode to the GND pin on the Arduino.\n3.  **Pin
+        13 Functionality:** Is it possible pin 13 on my Arduino Nano is faulty?  (Although,
+        it seemed to be working in some very basic examples I tried).\n4.  **IDE/Driver
+        Issues:** Could there be an issue with the Arduino IDE or USB drivers that''s
+        preventing the code from running?\n5.  **Any other common pitfalls for beginners?**
+        What else should I check?\n\nThanks in advance for your help!\n\n\n\n***\n\nOkay,
+        let''s systematically troubleshoot this. You''ve done a good job checking
+        some things already. Let''s go through your questions and some additional
+        points.\n\n**1. Resistor Value:**\n\nYes, 220 ohms is a perfectly suitable
+        resistor value for an LED connected to an Arduino Nano.  It will limit the
+        current to a safe level.  A value between 220 and 1k ohms is generally fine.  It''s
+        a common and recommended value.\n\n**2. Ground Connection:**\n\nA grounding
+        issue is **very common** with beginners, so it''s good you''re considering
+        it.  Double-check *everything* connected to ground. Make sure:\n\n*   The
+        LED''s cathode (shorter leg, or the leg with the flat side on the LED body)
+        is *firmly* connected to a GND pin on the Arduino.\n*   The resistor is connected
+        between pin 13 and the LED''s anode (longer leg). The order matters!\n*   Ensure
+        the connection to GND is solid, not loose or intermittent.  Sometimes even
+        a slightly loose connection can prevent the LED from lighting up.  Try using
+        a different GND pin on the Arduino to see if that makes a difference.\n\n**3.
+        Pin 13 Functionality:**\n\nIt''s *possible* the pin is faulty, but it''s less
+        likely, especially since you mentioned some basic examples *seemed* to work.  It''s
+        harder to definitively test pin 13 without a multimeter and more advanced
+        techniques.  For now, let''s focus on the simpler things first.\n\n**4. IDE/Driver
+        Issues:**\n\nThis is also a possibility.  Here''s how to investigate:\n\n*   **Device
+        Manager (Windows):** Open Device Manager (search for it in the Windows start
+        menu).  Look under \"Ports (COM & LPT).\"  Is the Arduino Nano listed?  If
+        it has a yellow exclamation mark next to it, there''s a driver problem.  Try
+        reinstalling the Arduino IDE, which often includes driver installation.  You
+        can also try manually updating the drivers for the Arduino.\n*   **Arduino
+        IDE - Serial Monitor:**  Open the Serial Monitor (Tools > Serial Monitor).  Does
+        it open and is it connected to the Arduino? If not, there''s a communication
+        problem.\n*   **Try a Different USB Cable/Port:** Sometimes faulty USB cables
+        or ports can cause issues. Try a different cable and a different USB port
+        on your computer.\n*   **Restart Arduino IDE and Computer:** A simple restart
+        can sometimes clear up temporary glitches.\n\n**5. Other Common Pitfalls &
+        Troubleshooting Steps:**\n\n*   **LED Polarity:** I know you mentioned it,
+        but *double, triple-check* the LED''s polarity. LEDs are diodes and only allow
+        current to flow in one direction. If the polarity is reversed, it won''t light
+        up.\n*   **Resistor Placement:** Make sure the resistor is in series with
+        the LED. It should be between pin 13 and the LED''s anode.\n*   **Short Circuits:**
+        Carefully inspect your wiring for any accidental short circuits. A short can
+        prevent the LED from lighting and potentially damage the Arduino.\n*   **Try
+        a Different LED:** Although less likely, the LED itself might be faulty. If
+        you have another LED, try using that.\n*   **Blink Without Delay:** Comment
+        out the `delay()` lines and upload the code. If the LED blinks quickly without
+        the delays, this indicates that the code is being executed, and there might
+        be an issue with the delays or your interrupt routines.\n*   **Simplify Further:**  Try
+        an *even simpler* program to isolate the problem.  Just this:\n\n```c++\nvoid
+        setup() {\n  pinMode(13, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(13,
+        HIGH);\n  //delay(1000); //Comment out the delay temporarily\n  digitalWrite(13,
+        LOW);\n  //delay(1000);  //Comment out the delay temporarily\n}\n```\n\nThis
+        will cause the LED to flash rapidly.  If it does, then the problem is with
+        the `delay()` functions or something related to timing.\n\n**Debugging Strategy:**\n\n1.  **Focus
+        on Ground:**  Double and triple-check the ground connection. This is the most
+        frequent culprit.\n2.  **Simplify the Wiring:** Remove everything else from
+        your breadboard, leaving only the LED, resistor, pin 13, and GND.\n3.  **Serial
+        Monitor:** Ensure the Serial Monitor is working to confirm communication.\n4.  **Try
+        the simplified code snippet:** Test the rapid-blink code to see if the LED
+        flashes at all.\n\n**If, after all of this, you''re *still* having trouble,
+        please provide the following information:**\n\n*   **Photos:** Clear photos
+        of your wiring (both top-down and showing connections to the Arduino).  Good
+        lighting is essential.\n*   **Arduino IDE Version:**  What version of the
+        Arduino IDE are you using?\n*   **Operating System:** What operating system
+        are you using (Windows, macOS, Linux)?\n*   **How you''re connecting to ground:**
+        Are you using jumper wires, or something else?\n*   **The exact model of your
+        Arduino Nano:** (e.g., Arduino Nano v3.0)\n\nDon''t give up!  It''s frustrating
+        to troubleshoot, but you''ll learn a lot in the process.  We''ll get this
+        working for you.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2,"total_tokens":1718,"completion_tokens":1716,"estimated_cost":0.0001717}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '7154'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:32:33 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

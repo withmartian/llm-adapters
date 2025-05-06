@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}, {"role": "user",
-      "content": "Hi"}, {"role": "user", "content": "\"\""}], "model": "glm-4-airx"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"glm-4-airx"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '149'
+      - '135'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,42 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
-      string: "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"\u770B\u6765\u4F60\u53EF\u80FD\u53EA\u662F\u60F3\u6D4B\u8BD5\u4E00\u4E0B\u56DE\u590D\uFF0C\u6216\u8005\u53EF\u80FD\u662F\u5728\u5BFB\u627E\u5BF9\u8BDD\u7684\u5F00\u59CB\u3002\u5982\u679C\u4F60\u6709\u4EFB\u4F55\u95EE\u9898\u6216\u8005\u60F3\u8981\u8BA8\u8BBA\u7684\u8BDD\u9898\uFF0C\u8BF7\u968F\u65F6\u544A\u8BC9\u6211\uFF0C\u6211\u4F1A\u5C3D\u529B\u63D0\u4F9B\u5E2E\u52A9\u548C\u4FE1\u606F\u3002\u6709\u4EC0\u4E48\u6211\u53EF\u4EE5\u5E2E\u4F60\u7684\u5417\uFF1F\",\"role\":\"assistant\"}}],\"created\":1733771030,\"id\":\"2024121003034945a20c135fd14073\",\"model\":\"glm-4-airx\",\"request_id\":\"2024121003034945a20c135fd14073\",\"usage\":{\"completion_tokens\":41,\"prompt_tokens\":12,\"total_tokens\":53}}"
+      string: "{\"error\":{\"code\":\"1113\",\"message\":\"\u60A8\u7684\u8D26\u6237\u5DF2\u6B20\u8D39\uFF0C\u8BF7\u5145\u503C\u540E\u91CD\u8BD5\u3002\"}}"
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:03:50 GMT
-      Set-Cookie:
-      - acw_tc=784e2c9617337710298221972e69e3964f55b438e981a5ecc05fe8dbe3ba9e;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:09:07 GMT
+      set-cookie:
+      - acw_tc=0ae5a86e17465549473275016e00707c7865916a37c3773dbf3b06b4c77eb5;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
+      vary:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 2024121003034945a20c135fd14073
-      content-length:
-      - '519'
+      x-log-id:
+      - 20250507020907e4993dd02bee44b4
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

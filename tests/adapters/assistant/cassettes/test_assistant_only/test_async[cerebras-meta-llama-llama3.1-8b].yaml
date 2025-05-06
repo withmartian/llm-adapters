@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "llama3.1-8b"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"}],"model":"llama3.1-8b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '78'
+      - '72'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,42 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-8bfe88a0-ecf8-497c-9c27-072e4e4b4eee","choices":[{"finish_reason":"stop","index":0,"message":{"content":"Is
-        there something I can help you with, or would you like to chat?","role":"assistant"}}],"created":1732322544,"model":"llama3.1-8b","system_fingerprint":"fp_fe26f95222","object":"chat.completion","usage":{"prompt_tokens":36,"completion_tokens":17,"total_tokens":53},"time_info":{"queue_time":3.67e-05,"prompt_time":0.001931966,"completion_time":0.008056353,"total_time":0.026053190231323242,"created":1732322544}}'
+      string: !!binary |
+        IewHACBG6nRafT/LEUFpbYeZjIrDMoZrtgO3vQ1GMNxsPMAw4EATzrobBponuROfR22ZX3DqgW2L
+        gGZTzc2xP+RWND7Wts0bLlWuvHC5F1WVVyxyqzlXtW5AYGFvJoTvB+aZpWJ31AsETHPqQXCwviIw
+        graJDuGBAXK7Aj7TJWuqU/aVVdO0nebslpZsTm11+wDBmA4RAXCsTjP+/38JDNGLYovArTJaa+YV
+        wTG18YCAw6E6VnLFc1eDwHF+Uqy3py6O/bjVXV73RauYFE1jVNMYbtuaK2FAkOpdbOZi8Kpjwm7T
+        CQRL/j/6MR37uZjTPp4mBGkIyIAaR/CjAAQLlfonmLfHWGxP64TwwLDEJRbz9hgR2IoxpgXXnBMV
+        oCPcWSe0EAPDS+Ol01aUwPfcGaelYs5xqazRpnry/28AAw==
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '535'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba70dd1a689444-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:42:24 GMT
-      Via:
-      - 1.1 88734c1b1a8053ae83daf0f85731c788.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - uaKR5h5YvUUxjxvxtHNlp4sEeotdT3b8Bja-dhDZrx0a4gQXPYcqmw==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 18:11:34 GMT
+      inference-id:
+      - chatcmpl-72c9eb7d-c134-4928-92aa-a0e175114b5c
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=UyznxMmDOBAq7EQdfWJJobG27kM2dJT2x06D7kd6glc-1746555094-1.0.1.1-0mDP9w4GamcIcf7QCBP9U3aop8tnBzY07fWxDYMHIrtLP4IgjDS.ZLSCS8N6UVYskLmeRj4LbwGupI89WGTQl7hw_IsjLSojYqEzAAiSCnY;
+        path=/; expires=Tue, 06-May-25 18:41:34 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -70,15 +77,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14398'
+      - '14395'
       x-ratelimit-remaining-tokens-minute:
-      - '59892'
+      - '59950'
       x-ratelimit-reset-requests-day:
-      - '83855.35067486763'
+      - '20905.23958349228'
       x-ratelimit-reset-tokens-minute:
-      - '35.350674867630005'
+      - '25.239583492279053'
       x-request-id:
-      - uaKR5h5YvUUxjxvxtHNlp4sEeotdT3b8Bja-dhDZrx0a4gQXPYcqmw==
+      - 93ba70dd1a689444-SJC
     status:
       code: 200
       message: OK

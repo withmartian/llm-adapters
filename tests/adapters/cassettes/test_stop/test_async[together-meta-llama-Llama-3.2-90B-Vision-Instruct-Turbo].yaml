@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
-      "stop": "stop"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '124'
+      - '116'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,55 +25,59 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8f18fd01ca4f67ab-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1734124723,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
-        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
-        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
-        \       \"content\": \"H\",\n        \"tool_calls\": []\n      },\n      \"logprobs\":
-        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+      string: "{\n  \"id\": \"nszdAAJ-2j9zxn-93bb036e183715fb\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561098,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"H\",\n        \"tool_calls\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
         11,\n    \"total_tokens\": 12,\n    \"completion_tokens\": 1\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8f18fd01ca4f67ab-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 Dec 2024 21:18:43 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb036e183715fb-SJC
       content-length:
-      - '498'
+      - '502'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:51:38 GMT
       etag:
-      - W/"1f2-fzGGl3nkA+JBknYfGs+EM7DrspM"
+      - W/"1f6-FFA8OG0Ekn3gRpD+hq79f7emdz4"
       retry-after:
       - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 4885cff6-dc66-4569-9ace-33fc99ff4f39-noamzn
       x-api-call-end:
-      - '2024-12-13T21:18:43.628Z'
+      - '2025-05-06T19:51:38.137Z'
       x-api-call-start:
-      - '2024-12-13T21:18:43.512Z'
+      - '2025-05-06T19:51:38.088Z'
       x-api-received:
-      - '2024-12-13T21:18:43.504Z'
+      - '2025-05-06T19:51:37.999Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -84,11 +87,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '198'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99944'
+      - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nszdAAJ-2j9zxn-93bb036e183715fb
     status:
       code: 200
       message: OK

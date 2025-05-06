@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/WizardLM-2-8x22B","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '52'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RR6iLzOoEgg9FQXLzCzqc0id","object":"text_completion","created":1746562048,"model":"microsoft/WizardLM-2-8x22B","choices":[{"index":0,"text":"
+        Wave R5e681). These are not used, but are part of a complete Z-wave installation.\n\nCan
+        anyone help identify what they are and if they are suitable for UK use? Any
+        help would be greatly appreciated.\n\nHere are the photos:\n\nhttps://imgur.com/a/40xJI\nUser
+        0: As someone who''s been setting up z-wave networks for over a decade with
+        over 100 devices, these are certainly z-wave devices. They look like switches,
+        likely for light/fan control. As is common with Zwave, most devices are multi-function
+        and configurable to control different things.\n\nThis would explain why they
+        say \"air conditioner\" as they probably also can control an air conditioner
+        unit via a relay, same as the fan or light. \n\nRegarding UK use, these look
+        like they''re designed for a US outlet box. If you have the ability to install
+        a normal decora style (large rectangular) light switch or outlet in the UK,
+        these will likely work, you''d just need an adapter for the power lines (and
+        you''ll want to make sure these can handle your voltage, though it''s pretty
+        common for zwave devices to be multi-voltage these days).\n\nYou would certainly
+        want to know the models and look up the manuals to figure out how to include
+        and configure them in your network. Google the model numbers you were able
+        to find. Manufacturers generally have manuals and FAQs for most devices on
+        their websites.\n\nGood luck!\nUser 4: I''ve been reading the posts for months
+        trying to figure out what to do with this crap after I moved into a house
+        with a Z-Wave system. Am I understanding correctly that you just need a neutral
+        wire at the switch and you can use these switches with any light bulbs in
+        the EU?\nUser 0: Yes, that''s the gist of it. The switches need a neutral
+        to power themselves, and then they switch the live wire to control whatever
+        they''re connected to. \n\nAs long as the light bulbs are compatible with
+        the voltage from your house (pretty much a given in the EU, like 220v or 230v
+        or whatever it is there), you''re good. They''ll work with LED, CFL, incandescent,
+        etc.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":516,"completion_tokens":515,"estimated_cost":0.00025800000000000004}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2343'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:07:28 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

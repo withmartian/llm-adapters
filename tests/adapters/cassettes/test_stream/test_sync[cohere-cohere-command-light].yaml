@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "command-light", "messages": [{"role": "user", "content": "Hi"}],
-      "stream": true}'
+    body: '{"model":"command-light","messages":[{"role":"user","content":"Hi"}],"stream":true}'
     headers:
       accept:
       - '*/*'
@@ -10,26 +9,26 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '91'
+      - '83'
       content-type:
       - application/json
       host:
       - api.cohere.com
       user-agent:
-      - python-httpx/0.27.2
+      - python-httpx/0.28.1
       x-fern-language:
       - Python
       x-fern-sdk-name:
       - cohere
       x-fern-sdk-version:
-      - 5.11.3
+      - 5.15.0
     method: POST
     uri: https://api.cohere.com/v2/chat
   response:
     body:
       string: 'event: message-start
 
-        data: {"id":"defcfe20-8364-48e7-ad0e-ee7fc1a4fca9","type":"message-start","delta":{"message":{"role":"assistant","content":[],"tool_plan":"","tool_calls":[],"citations":[]}}}
+        data: {"id":"4c0a86da-1cb8-47b2-9311-02f16729807e","type":"message-start","delta":{"message":{"role":"assistant","content":[],"tool_plan":"","tool_calls":[],"citations":[]}}}
 
 
         event: content-start
@@ -39,7 +38,18 @@ interactions:
 
         event: content-delta
 
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"Hello"}}}}
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"Sure"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":","}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        hello"}}}}
 
 
         event: content-delta
@@ -50,113 +60,12 @@ interactions:
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        How"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        can"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
         I"}}}}
 
 
         event: content-delta
 
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        help"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        you"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        today"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"?"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        What"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        are"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        you"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        curious"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        about"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        or"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        want"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        to"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        achieve"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"?"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        I"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        am"}}}}
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"''m"}}}}
 
 
         event: content-delta
@@ -180,76 +89,6 @@ interactions:
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        with"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        with"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        various"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        topics"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        and"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        projects"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"."}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"\n\nI"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        am"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        ready"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        to"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        assist"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
         you"}}}}
 
 
@@ -262,47 +101,19 @@ interactions:
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        creative"}}}}
+        your"}}}}
 
 
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        ideas"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":","}}}}
+        questions"}}}}
 
 
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        specific"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        research"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        topics"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":","}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        or"}}}}
+        and"}}}}
 
 
         event: content-delta
@@ -320,13 +131,13 @@ interactions:
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        general"}}}}
+        content"}}}}
 
 
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        knowledge"}}}}
+        creation"}}}}
 
 
         event: content-delta
@@ -338,7 +149,7 @@ interactions:
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        productivity"}}}}
+        exploration"}}}}
 
 
         event: content-delta
@@ -349,23 +160,93 @@ interactions:
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        Let"}}}}
-
-
-        event: content-delta
-
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"''s"}}}}
+        How"}}}}
 
 
         event: content-delta
 
         data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
-        start"}}}}
+        can"}}}}
 
 
         event: content-delta
 
-        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"!"}}}}
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        I"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        particular"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"?"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        particular"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        task"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        or"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        topic"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        you"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"''d"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"d"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        like"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        to"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"
+        explore"}}}}
+
+
+        event: content-delta
+
+        data: {"type":"content-delta","index":0,"delta":{"message":{"content":{"text":"?"}}}}
 
 
         event: content-end
@@ -375,7 +256,7 @@ interactions:
 
         event: message-end
 
-        data: {"type":"message-end","delta":{"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":1,"output_tokens":59},"tokens":{"input_tokens":63,"output_tokens":60}}}}
+        data: {"type":"message-end","delta":{"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":1,"output_tokens":37},"tokens":{"input_tokens":63,"output_tokens":38}}}}
 
 
         data: [DONE]
@@ -396,7 +277,7 @@ interactions:
       content-type:
       - text/event-stream
       date:
-      - Sat, 23 Nov 2024 00:47:40 GMT
+      - Tue, 06 May 2025 19:57:40 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 UTC
       pragma:
@@ -408,9 +289,9 @@ interactions:
       x-accel-expires:
       - '0'
       x-debug-trace-id:
-      - 8c8068bf8932e3311b80c11d2ebbea9c
+      - 36f37c480deed9fdbbcfd08342bc0718
       x-envoy-upstream-service-time:
-      - '12'
+      - '31'
     status:
       code: 200
       message: OK

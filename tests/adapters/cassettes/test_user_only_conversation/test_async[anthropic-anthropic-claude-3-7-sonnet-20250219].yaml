@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"max_tokens":4096,"messages":[{"content":"Hi","role":"user"}],"model":"claude-3-7-sonnet-20250219","stream":false}'
+    body: '{"max_tokens":8192,"messages":[{"content":"Hi","role":"user"}],"model":"claude-3-7-sonnet-20250219","stream":false}'
     headers:
       accept:
       - application/json
@@ -17,7 +17,7 @@ interactions:
       host:
       - api.anthropic.com
       user-agent:
-      - AsyncAnthropic/Python 0.45.2
+      - AsyncAnthropic/Python 0.49.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,35 +27,25 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 0.45.2
+      - 0.49.0
+      x-stainless-read-timeout:
+      - '600'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
       - 3.13.1
+      x-stainless-timeout:
+      - '600'
     method: POST
     uri: https://api.anthropic.com/v1/messages
   response:
     body:
-      string: '{"id":"msg_014SFEitVnRyY7nbPtsmApHd","type":"message","role":"assistant","model":"claude-3-7-sonnet-20250219","content":[{"type":"text","text":"Hello!
-        How can I assist you today? Whether you have a question, need information,
-        or just want to chat, I''m here to help. What''s on your mind?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":8,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":39}}'
+      string: '{"id":"msg_01FwaLMyFwwS3GFqYWkxCccE","type":"message","role":"assistant","model":"claude-3-7-sonnet-20250219","content":[{"type":"text","text":"Hello!
+        How can I assist you today? Feel free to ask me any questions or let me know
+        if there''s something specific you''d like to discuss."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":8,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":34}}'
     headers:
-      CF-RAY:
-      - 91720cd4a986f7b9-LAX
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 24 Feb 2025 20:01:54 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
-      X-Robots-Tag:
-      - none
       anthropic-organization-id:
       - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
       anthropic-ratelimit-input-tokens-limit:
@@ -63,27 +53,39 @@ interactions:
       anthropic-ratelimit-input-tokens-remaining:
       - '1000000'
       anthropic-ratelimit-input-tokens-reset:
-      - '2025-02-24T20:01:53Z'
+      - '2025-05-06T19:59:27Z'
       anthropic-ratelimit-output-tokens-limit:
       - '400000'
       anthropic-ratelimit-output-tokens-remaining:
       - '400000'
       anthropic-ratelimit-output-tokens-reset:
-      - '2025-02-24T20:01:54Z'
+      - '2025-05-06T19:59:28Z'
       anthropic-ratelimit-tokens-limit:
       - '1400000'
       anthropic-ratelimit-tokens-remaining:
       - '1400000'
       anthropic-ratelimit-tokens-reset:
-      - '2025-02-24T20:01:53Z'
+      - '2025-05-06T19:59:27Z'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb0ee28eca9453-SJC
       content-length:
-      - '442'
+      - '436'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:59:28 GMT
       request-id:
-      - req_01GMg4oD65Gq41GaoMtT72mP
+      - req_011CNrsPPtQaNHNzeSpGDhzc
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
       via:
       - 1.1 google
+      x-robots-tag:
+      - none
     status:
       code: 200
       message: OK

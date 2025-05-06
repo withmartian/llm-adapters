@@ -18,7 +18,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,51 +28,83 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5a094ce44cf22\",\n  \"error\": {\n    \"message\":
-        \"deepseek-ai/DeepSeek-V3 is not supported for JSON mode/function calling\",\n
-        \   \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\":
-        \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"nszgTp5-zqrih-93bb132b1ba06435\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561742,\n  \"model\": \"deepseek-ai/DeepSeek-V3\",\n  \"prompt\":
+        [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        16591162562145415000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Here\u2019s a
+        randomly generated number between 1 and 10 using Python's `random` module:\\n\\n```python\\nimport
+        random\\nrandom_number = random.randint(1, 10)\\nprint(random_number)\\n```\\n\\n###
+        Example Output (may vary each run):\\n```\\n7\\n```\\n\\n### Alternative Tools:\\n1.
+        **Bash (using `$RANDOM`)**:\\n   ```bash\\n   echo $((1 + RANDOM % 10))\\n
+        \  ```\\n   *(Outputs a number between 1-10)*.\\n\\n2. **JavaScript**:\\n
+        \  ```javascript\\n   console.log(Math.floor(Math.random() * 10) + 1);\\n
+        \  ```\\n\\nLet me know if you'd like a different method!\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 15,\n    \"completion_tokens\":
+        147,\n    \"total_tokens\": 162\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5a094ce44cf22-SJC
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '226'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:36:24 GMT
-      ETag:
-      - W/"e2-Tleprba60XgGI/0owGGFnH0WoFM"
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb132b1ba06435-SJC
+      content-length:
+      - '1028'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:02:44 GMT
+      etag:
+      - W/"404-aVYeotvHKQbu3KzuwGPagtph7/c"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - b9a65b02-f58a-40fa-bd9f-f55802a26516-noamzn
+      x-api-call-end:
+      - '2025-05-06T20:02:44.287Z'
+      x-api-call-start:
+      - '2025-05-06T20:02:22.727Z'
       x-api-received:
-      - '2025-01-31T00:36:24.489Z'
+      - '2025-05-06T20:02:22.714Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '50'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '99'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nszgTp5-zqrih-93bb132b1ba06435
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
 version: 1

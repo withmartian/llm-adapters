@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}], "model": "wizardlm-2-8x22b"}'
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"\"\""}],"model":"wizardlm-2-8x22b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '83'
+      - '143'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,39 +25,40 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-Bv9n9BofRBAdvTHaVPM3gX","object":"chat.completion","created":1733368501,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? If you have any questions or need information
-        on a topic, feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":10,"total_tokens":37,"completion_tokens":27}}'
+      string: '{"id":"chatcmpl-GeYPoKZQYx6J2fStjYnXaJ","object":"chat.completion","created":1746561302,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        It seems like you didn''t provide a question or topic for me to assist you
+        with. If you have any questions or need assistance with something, feel free
+        to ask, and I''ll do my best to help you out.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"total_tokens":68,"completion_tokens":50}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0de8b1a562512-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:15:01 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb086dad717ae0-SJC
       content-length:
-      - '452'
+      - '512'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:03 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '789'
+      - '930'
     status:
       code: 200
       message: OK

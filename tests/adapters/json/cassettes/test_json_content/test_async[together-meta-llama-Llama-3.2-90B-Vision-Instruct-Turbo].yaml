@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": [{"type": "text", "text": "Hi"},
-      {"type": "text", "text": "Hi"}]}], "model": "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '168'
+      - '155'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,58 +25,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6cbd186cdcce6c-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732318555,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
-        \ \"prompt_logprobs\": null,\n  \"prompt\": [],\n  \"choices\": [\n    {\n
-        \     \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n
-        \       \"content\": \"Hi! How can I help you today?\",\n        \"tool_calls\":
-        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
-        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 13,\n    \"total_tokens\":
-        23,\n    \"completion_tokens\": 10\n  }\n}"
+      string: "{\n  \"id\": \"nsz67Rh-2j9zxn-93ba6f89987517f0\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746555043,\n  \"model\": \"meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\":
+        {\n        \"role\": \"assistant\",\n        \"content\": \"Hi Hi back to
+        you! How's your day going so far?\",\n        \"tool_calls\": []\n      },\n
+        \     \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"seed\":
+        null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 12,\n    \"total_tokens\":
+        27,\n    \"completion_tokens\": 15\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6cbd186cdcce6c-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 22 Nov 2024 23:35:55 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6f89987517f0-SJC
       content-length:
-      - '527'
+      - '549'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:10:43 GMT
       etag:
-      - W/"20f-weTCW82Dvv4wQEfZrnswpPCWZIs"
+      - W/"225-7HvP1eAYVI0jD7iE5QRRIBknx7Y"
       retry-after:
-      - '1'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - c0380891-6ef9-407a-a5f6-f137db95fc70-noamzn
       x-api-call-end:
-      - '2024-11-22T23:35:55.249Z'
+      - '2025-05-06T18:10:43.954Z'
       x-api-call-start:
-      - '2024-11-22T23:35:54.977Z'
+      - '2025-05-06T18:10:43.162Z'
       x-api-received:
-      - '2024-11-22T23:35:54.969Z'
+      - '2025-05-06T18:10:40.328Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -87,11 +88,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '182'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '97747'
+      - '99975'
       x-ratelimit-reset:
-      - '1'
+      - '2'
+      x-request-id:
+      - nsz67Rh-2j9zxn-93ba6f89987517f0
     status:
       code: 200
       message: OK

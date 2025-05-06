@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: "{\"id\":\"d8917303-0b9a-4654-a289-379ac22dc780\",\"object\":\"text_completion\",\"created\":1738285307,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"text\":\"\uFF0C\u540C\u5347\u6E56
-        \uFF5C \u6700\u7F8E\u4EBA\u95F4\u56DB\u6708\u5929\uFF0C\u65B0\u751F\u5165\u6821\u5C55\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":18,\"completion_tokens\":16}}"
+      string: '{"id":"d9ec3b2e-1235-48bb-bc6c-99f5c59b4282","object":"text_completion","created":1746563311,"model":"accounts/fireworks/models/deepseek-v3","choices":[{"index":0,"text":"\nHow
+        do I setup dual monitors so that I can use one monitor to display","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":18,"completion_tokens":16}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c5bc0c1796e3-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 01:01:47 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=1351.0,total;dur=1371.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb3971e9f6eb20-SJC
       content-length:
-      - '341'
+      - '356'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:28:31 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,11 +64,17 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.858'
-      fireworks-speculation-generated-tokens:
-      - '5'
+      - '1.113'
+      fireworks-server-time-to-first-token:
+      - '0.698'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=1346.0,total;dur=1432.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '860'
+      - '1116'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -92,7 +90,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59998'
       x-request-id:
-      - d8917303-0b9a-4654-a289-379ac22dc780
+      - d9ec3b2e-1235-48bb-bc6c-99f5c59b4282
     status:
       code: 200
       message: OK

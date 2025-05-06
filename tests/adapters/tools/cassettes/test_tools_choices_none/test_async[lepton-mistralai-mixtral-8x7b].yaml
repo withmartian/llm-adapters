@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "mixtral-8x7b", "tool_choice": "none",
-      "tools": [{"type": "function", "function": {"description": "Generate random
-      number", "name": "generate", "parameters": {"type": "object", "properties":
-      {"prompt": {"type": "string", "description": "Random number like 5, 4, 3, 10,
-      11"}}, "required": ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"mixtral-8x7b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
     headers:
       accept:
       - application/json
@@ -14,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '415'
+      - '388'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -30,45 +28,45 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-xekdGoVNMeNboADPtMmwR2","object":"chat.completion","created":1733369226,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
-        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n- Open
-        a new private window in your web browser\\\\n- Go to https://www.random.org/\\\\n-
-        Under ''integer'' enter ''1'' for min and ''10'' for max\\\\n- Click on ''Generate''\\\\n-
-        The number generated is your random number.\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
-        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n- Open
-        a new private window in your web browser\\\\n- Go to https://www.random.org/\\\\n-
-        Under ''integer'' enter ''1'' for min and ''10'' for max\\\\n- Click on ''Generate''\\\\n-
-        The number generated is your random number.\"}"},"id":"call-FEgKqY2ok3GqZ2WBNyfiAm","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":21,"total_tokens":107,"completion_tokens":86}}'
+      string: '{"id":"chatcmpl-NWx9LpLvtDEXqoDh9eKBxV","object":"chat.completion","created":1746561696,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"{\"prompt\":
+        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n1. Google:
+        Search ''random number between 1 and 10'' \\\\n2. Online random number generator:
+        e.g. https://www.random.org/integers/ \\\\n3. Use programming language: e.g.
+        Python, Java, JavaScript, etc. \\\\n\\\\nExample results: 5, 4, 3, 10, 11\"}","tool_calls":[{"function":{"name":"generate","arguments":"{\"prompt\":
+        \"Generate random number with specified tools, range 1-10: \\\\n\\\\n1. Google:
+        Search ''random number between 1 and 10'' \\\\n2. Online random number generator:
+        e.g. https://www.random.org/integers/ \\\\n3. Use programming language: e.g.
+        Python, Java, JavaScript, etc. \\\\n\\\\nExample results: 5, 4, 3, 10, 11\"}"},"id":"call-oBLTypzywMonYM6Lkac5Ze","type":"function"}]},"logprobs":{"content":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":21,"total_tokens":128,"completion_tokens":107}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0f0423a30cf61-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:27:07 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb120b7980faaa-SJC
       content-length:
-      - '1051'
+      - '1070'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:01:37 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '688'
+      - '779'
     status:
       code: 200
       message: OK

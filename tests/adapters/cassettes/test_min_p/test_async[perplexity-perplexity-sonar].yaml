@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "0d932af7-29fd-4340-b4fe-93fea5f5c899", "model": "sonar", "created":
+        1746555208, "usage": {"prompt_tokens": 1, "completion_tokens": 224, "total_tokens":
+        225, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "\"Hi\" is a common and casual
+        greeting in the English language, often used in informal settings. It is an
+        alternative to \"hello,\" with the first recorded use of \"hi\" as a greeting
+        attributed to a Native American in Kansas in the 1800s[2]. The term can also
+        refer to other concepts, such as the Japanese kana character \u3072 (hi),
+        or in music and entertainment, like the title of a song or album[4].\n\n###
+        Definitions and Uses\n\n- **Greeting**: \"Hi\" is used as a casual greeting,
+        suitable for most informal situations[2].\n- **Language Variations**: The
+        character \"hi\" exists in multiple languages, such as Japanese kana and Armenian
+        script[4].\n- **Arts and Entertainment**: \"Hi\" is a title used in music
+        and other media[4].\n\n### Cultural Context\n\nIn cultural contexts, \"hi\"
+        is a versatile greeting that can be used in various settings, from casual
+        encounters to more intimate interactions among close friends or family, particularly
+        in languages like Basque, where it has specific allocutive forms[5]."}, "delta":
+        {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba738e388c1688-SJC
+      content-length:
+      - '1612'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:13:28 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=UaXNLIPQ7IfAdIqcDkTTZk0pWmGP_cl0iezaOWMoVug-1746555208-1.0.1.1-Ztxnn.XBpTy3xNpXjxNK4znXyQxLLm.zhZtCWCmzbFdS61Tros2h01Htx6k0lWXpqDE.0TkNUO5mUIZiaGYlvVLrZfwumbvn.99mPZI4Acc;
+        path=/; expires=Tue, 06-May-25 18:43:28 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

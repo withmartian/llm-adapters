@@ -1,0 +1,154 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/Phi-4-multimodal-instruct","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-Rw0luSXrYt5CDcDRKUodcHON","object":"text_completion","created":1746562361,"model":"microsoft/Phi-4-multimodal-instruct","choices":[{"index":0,"text":",
+        I''m working on a Scala Play framework application and need to scaffold out
+        the main application component. It should extend the usual base class for
+        Play applications. One thing I need is an import-able Akka actor system with
+        a name config by default. Also, there has to be two prefix strings for my
+        HTML routes. And I need an HMAC signer definition that uses SHA256 plus an
+        HTTP normalizer. I''m also considering a flag (boolean) to mention about cross-site
+        request forgery protection, but it''s not yet implemented, so maybe we''re
+        just setting it up? Configuration should probably be outside Scala, in a properties
+        file and accessible via a companion object. To avoid clashes, we want these
+        component props to be accessed via their own objects instead of raw config.\n\nAfter
+        the imports, here''s a snippet demonstrating how to fix the Singleton decision.
+        I''ll also show you where to set up your Akka HTTP route in the dummy function:\n\n```scala\n//
+        Assuming this is the beginning of the PlayApp.scala\n\n// Akka Configuration
+        without Singleton\nexplicit private[lilac] val AkkaActors = AkkaInstance\n\n//
+        ...\n\n// Route configuration with dummy route\nprivate[lilac] val PlayRoute
+        = new SoHoRouter(Routes.routes)\n\n// ...\n// Assuming this is the end of
+        the PlayApp.scala\n```\n\nI''ve extracted the Akka actor''s singleton instance
+        into its own object for clarity and to comply with the local scope, and the
+        dummy route function is now clearly part of the class. The HMAC signer configuration
+        has also been separated. Let me know if this aligns with your needs or if
+        there''s anything else you''d like to adjust. That''s taking shape, thanks!
+        Let''s refactor that HMAC signer to accept an optional parameter and, if it''s
+        not provided, set a default key. Also, refactor the code to make a utility
+        class in the companion object which can handle any config you want. The false
+        flag for CSRF will definitely need to be updated with a proper protection
+        mechanism. Here''s how you could define the optional HMAC signer with a default
+        and docums, and introduce the Utility object along with the true CSRF flag:\n\n```scala\n//
+        Utility Object Setup\nobject AppConfigUtils {\n  // ... Insert utility functions
+        for generic config here\n}\n\n// CSRF Protection Flag\nprivate[lilac] val
+        EnableCSRFProtection = true\n\n// HMAC Signer with Optional Parameter\ncase
+        class HmacSHA256Signer(key: Option[member.com.lilac.app.HmacKey] = None) extends
+        HmacSigner {\n  val signer: MemberHttpsSigner = MemberHttpsSigner(\n    key,\n    HmacSHA256(hmacNormalizer),\n    Some(HttpNormalizer.httpOnly,
+        HttpNormalizer.CSRFProtection | HttpNormalizer.BIND_REQUEST_HEADERS)\n  ).withHmacCriticalPolicy(HmacCriticalPolicy.ALWAYS)\n}\n\n//
+        ...\n```\n\nIn the code above, we''ve added a `HmacSHA256Signer` case class
+        that accepts an optional key for HMAC signing. The CSRF protection is enabled
+        by setting `EnableCSRFProtection` to true. You''ll also want to implement
+        the utility object and any necessary routes or middleware as per your application''s
+        specific requirements. Everything should now be on a path for you to further
+        refine or integrate into the app. Great! Now, how exactly does QuartusConfig
+        work and how will it interact with our PlayApp? To enforce HMAC signing verification
+        and CSRF protection, QuartusConfig needs to correctly configure the Akka HTTP
+        server to utilize the `HmacSHA256Signer` along with setting the appropriate
+        critical and optional cookies handlers. Internally, QuartusConfig follows
+        a series of steps when integrating with the Akka HTTP module:\n\n1. Config
+        Path Discovery: QuartusConfig first locates the specified configuration path
+        relative to the current context. This is usually accomplished by retrieving
+        the classloader''s context path.\n\n2. Configuration Access: QuartusConfig
+        loads the Hazelcast configuration properties, which may include parameters
+        like our HMAC key, set exclusively on the Keystone server as a security measure.\n\n3.
+        Property Setting: It sets up the Akka HTTP conf using the loaded properties,
+        passing them along to components such as HmacSHA256Signer and CSRF cookie
+        handlers.\n\n4. Applying the Configuration: In our PlayApp, QuartusConfig
+        is called from the `application` initializer method. We create a QuartusConfig
+        instance pointing to our HMAC key and then use it to build our Akka HTTP server
+        settings.\n\n5. Akka Gateway Integration: The resultant HTTP module, now configured
+        with HMAC signing and CSRF protection authorities, can be integrated into
+        an Akka Gateway, enabling the Play App''s RESTful routes to validate incoming
+        requests.\n\n6. Server Initialization: Finally, QuartusConfig gets integrated
+        with Akka HTTP''s Gateway, and as part of Scala Play''s Lifecycle, the Akka
+        system init required by QuartusConfig is fired off, thereby starting the non-blocking
+        Akka HTTP server with our security measures in place.\n\nThe `HmacSHA256Signer`
+        object ensures that each HTTP request must contain a valid HMAC signature
+        using the provided secret key. `HmacCriticalPolicy.ALWAYS` dictates that without
+        the HMAC validity check, the server will not serve the request.\n\nMeanwhile,
+        the CSRF protection is established by ensuring a token verification mechanism
+        through the `HttpNormaliser.CSRFProtection` cookies. If verified, the server
+        considers the request legitimate; if not, it will reject it as a CSRF attack.\n\nTogether,
+        these mechanisms provide a robust way to secure the API from unauthorized
+        requests, both from an external client standpoint (validated HMACs, protected
+        CSRF tokens) and internally against the exposed server-side trusted contexts
+        (keybed).\n\nUnderstanding this how-to assures you of the Play application''s
+        non-blocking and secure server-side operation, bobbing and weaving through
+        Akka and QuartusConfig, delivering protected endpoints at high performance
+        guaranteed by concurrent actor systems in Scala. Got it, here''s where I need
+        further improvements. Rewrite it in a way that our HMAC signing maintains
+        compatibility with multiple cryptography libraries, not just SHA256. We should
+        have a ''SignerFactory'' object with methods to instantiate different HMAC
+        signers, like a factory pattern. I also want a way to state different critical
+        policies. And, we would take advantage of another logging library, let''s
+        say I''ll add one more dependency. This unit test should check proper HMAC
+        signing, don''t forget to simulate HTTP requests and assert successful signings.
+        Here''s a snippet where you''d fit this new factory and unit testing logic:\n\n```scala\n//
+        HMAC Signing Factory\ncase class HmacSHA256Signer(key: Option[member.com.lilac.app.HmacKey])\n\nobject
+        SignerFactory {\n  def createSigner(alias: String, critical: Boolean = false):
+        HmacSigner = {\n    // Logic for creating different types of HMAC signers\n  }\n}\n\n//
+        Example of creating and asserting on the HMAC signer\ndef test_hmac_sha256_signing():
+        Unit = {\n  //...\n  val signer = SignerFactory.createSigner(\"HMAC-SHA256\",
+        HmacCriticalPolicy.ALWAYS)\n  // Add code to perform the HTTP request test
+        assertion\n  //...\n}\n```\n\nIn this modified version, the golden goose is
+        now a SignerFactory, flexibly producing enduring HMAC signers. To serve unit
+        tests for our historic HMAC signing, we''ll architect a method within this
+        same ballet of code; asserting the strength of our ''HMAC-SHA256'' with all
+        due diligence, ensuring that our SSL handshake is both valid and fortified.
+        The request replay test you suggested is thought-provoking indeed, for it
+        will assure our digital safes remain impervious to duplicity and falter not
+        in the face of test pressure. Let''s set the stage for such testing.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":1578,"completion_tokens":1577,"estimated_cost":0.00015775000000000004}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '7942'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:12:41 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

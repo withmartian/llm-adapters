@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,57 +25,53 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"b72f91ff-8b99-444e-829a-c09af40c5991\",\"object\":\"chat.completion\",\"created\":1738792169,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Alright,
-        the user just said \\\"Hi\\\". I should respond in a friendly and welcoming
-        manner.\\n\\nLet me start with a greeting like \\\"Hello!\\\" to match their
-        tone.\\n\\nThen, maybe ask how I can assist them today to keep the conversation
-        going.\\n\\nKeep it open-ended so they feel comfortable to ask anything.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":75,\"total_tokens\":81,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":62},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+      string: '{"id":"97bdbd5f-46d3-49e1-ae66-6bd2db1ce7b1","object":"chat.completion","created":1746561475,"model":"deepseek-reasoner","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today?","reasoning_content":"Okay, the user just said
+        \"Hi\". That''s pretty straightforward. I should respond in a friendly and
+        welcoming manner. Let me make sure to keep it open so they feel comfortable
+        to ask anything. Maybe start with a greeting and offer help. Something like,
+        \"Hello! How can I assist you today?\" That should work. Let me check for
+        any typos... Nope, looks good. Send it."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":6,"completion_tokens":94,"total_tokens":100,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":83},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":6},"system_fingerprint":"fp_5417b77867_prod0425fp8"}'
     headers:
-      CF-RAY:
-      - 90d61c54fe24173b-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 21:49:30 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESTIME=1738792165861; path=/
-      - HWWAFSESID=96732dc6335304e6ad; path=/
-      - __cf_bm=3YjqZsuzUOj6PuVuV6OPyV84_dgZUKJukMrGD0K8b2I-1738792170-1.0.1.1-aIZPJKmD5DA5ynG1KNKQb_l1erNwIxUa0jvT4CsTW2_j3D.xrlopjSx6bBC_Xi.E0.yIr0.LMlGZCQhG4F.Y.Q;
-        path=/; expires=Wed, 05-Feb-25 22:19:30 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb0ca0ce14cf45-SJC
       content-length:
-      - '849'
+      - '922'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:57:55 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=RNxuGukkZYDyHWRipJgYh_J6xgfCwBnRx07g2aCgmhE-1746561475-1.0.1.1-Y3Risxh7tqiS1uf4mzgO7lsMvp0fLCRrIELgVTDlge4e2Rjzg5D0icDNArWfT75c0baNpVMYSCuAksmTwT85AHkPW175f74kN9bduf0MEuE;
+        path=/; expires=Tue, 06-May-25 20:27:55 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - 9179235078d29718e65d376c653f4aa8
+      - b4d92cbbc14dd8cb07f15572d2059544
     status:
       code: 200
       message: OK

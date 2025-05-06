@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "accounts/fireworks/models/qwen2p5-72b-instruct",
-      "stop": ["stop", "end"]}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"accounts/fireworks/models/qwen2p5-72b-instruct","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '133'
+      - '124'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,45 +25,37 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"d2a399e7-3471-49c7-94c4-5f2ebd216e07","object":"chat.completion","created":1734124780,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? Whether you need help with information, have a
-        question, or just want to chat, feel free to let me know!"},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":64,"completion_tokens":34}}'
+      string: '{"id":"fe4f71f6-e330-4689-8662-129a9184a3bd","object":"chat.completion","created":1746561135,"model":"accounts/fireworks/models/qwen2p5-72b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I assist you today? I''m here to help with any questions or tasks
+        you might have."},"finish_reason":"stop"}],"usage":{"prompt_tokens":30,"total_tokens":54,"completion_tokens":24}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f18fe624e0deb34-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:19:40 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=582.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0453a9366cd4-SJC
       content-length:
-      - '450'
+      - '406'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:52:15 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -74,25 +65,33 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.503'
+      - '0.398'
+      fireworks-server-time-to-first-token:
+      - '0.064'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=649.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '506'
+      - '400'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-limit-tokens-prompt:
-      - '30000'
+      - '60000'
       x-ratelimit-over-limit:
       - 'no'
       x-ratelimit-remaining-requests:
       - '59'
       x-ratelimit-remaining-tokens-generated:
-      - '3000'
+      - '6000'
       x-ratelimit-remaining-tokens-prompt:
-      - '29970'
+      - '59970'
       x-request-id:
-      - d2a399e7-3471-49c7-94c4-5f2ebd216e07
+      - fe4f71f6-e330-4689-8662-129a9184a3bd
     status:
       code: 200
       message: OK

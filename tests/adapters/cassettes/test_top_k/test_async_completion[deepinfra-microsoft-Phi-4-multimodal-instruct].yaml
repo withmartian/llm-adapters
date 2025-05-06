@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/Phi-4-multimodal-instruct","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RKFNnDT4CLhfbRv2Fak53yLY","object":"text_completion","created":1746562308,"model":"microsoft/Phi-4-multimodal-instruct","choices":[{"index":0,"text":"
+        invests a sum of Rs. 2000 at a variable interest rate for 6 years. The interest
+        rate for the first 2 years is 10% per annum, for the next 2 years it''s 12%
+        per annum, and for the last 2 years it''s 15% per annum. Calculate the total
+        amount at the end of 6 years. Interest is compounded annually. To calculate
+        the total amount at the end of 6 years, we need to calculate the compound
+        interest for each period with its respective interest rate and then use the
+        amount accumulated at the end of each period as the principal for the next
+        period.\n\nLet''s calculate the amount for each period:\n\n1. For the first
+        2 years at 10% per annum:\nA1 = P(1 + r/n)^(nt)\nA1 = 2000(1 + 0.10/1)^(1*2)\nA1
+        = 2000(1 + 0.10)^2\nA1 = 2000(1.10)^2\nA1 = 2000 * 1.21\nA1 = Rs. 2420\n\n2.
+        For the next 2 years at 12% per annum, the principal is now the amount A1:\nA2
+        = A1(1 + r/n)^(nt)\nA2 = 2420(1 + 0.12/1)^(1*2)\nA2 = 2420(1 + 0.12)^2\nA2
+        = 2420(1.12)^2\nA2 = 2420 * 1.2544\nA2 = Rs. 3032.208\n\n3. For the last 2
+        years at 15% per annum, the principal is now the amount A2:\nA3 = A2(1 + r/n)^(nt)\nA3
+        = 3032.208(1 + 0.15/1)^(1*2)\nA3 = 3032.208(1 + 0.15)^2\nA3 = 3032.208(1.15)^2\nA3
+        = 3032.208 * 1.3225\nA3 = Rs. 4005.4413\n\nTherefore, the total amount at
+        the end of 6 years is approximately Rs. 4005.44.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":491,"completion_tokens":490,"estimated_cost":4.9050000000000006e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1603'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:11:48 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

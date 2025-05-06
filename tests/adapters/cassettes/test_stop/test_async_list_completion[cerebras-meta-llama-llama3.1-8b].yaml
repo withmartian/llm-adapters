@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "llama3.1-8b", "prompt": "Hi", "stop": ["stop", "end"]}'
+    body: '{"model":"llama3.1-8b","prompt":"Hi","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '65'
+      - '59'
       content-type:
       - application/json
       host:
       - api.cerebras.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,40 +25,56 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.cerebras.ai/v1/completions
   response:
     body:
-      string: '{"id":"chatcmpl-8b5792cf-771a-4201-8225-ed10af6a697c","choices":[{"finish_reason":"stop","index":0,"text":"
-        fri"}],"created":1734127119,"model":"llama3.1-8b","system_fingerprint":"fp_2e2a2a083c","object":"text_completion","usage":{"prompt_tokens":2,"completion_tokens":5,"total_tokens":7},"time_info":{"queue_time":8.657e-05,"prompt_time":6.8686e-05,"completion_time":0.002286482,"total_time":0.00505518913269043,"created":1734127119}}'
+      string: !!binary |
+        MdQRACDXctXr29UnRsw41b9ma8KEzgx7pMkBKzb/1wSHy8LDaCwr+3p222g2HHgWSCQO9L9RJA5n
+        c62tT++WyIHOfgLnuW7QaJQ4H1Wc180mwzLkTTe0ST3UOql71SZq37bJvuoG0nVV5PWCAkPYRwLK
+        vzeYzwzY1Y4KgRJDdBsKJKy/IspcYKTLiBLhrbVi5JG/PlpBwZ4OdbmCQLIRdEwaZxg+wOI8bFfx
+        6HgRZekbWubRCqMYheDsOcH2GwvudVCa6dU/iOJ7pymFL+TpUeDwyOvw/9dt0TiWI4/86rM5Jwa6
+        +F/26grcAiF6w4cAE5+tYYKjCYBTnuDCeR3AMPDoHzGrQGApRvIhnfTlswp/6YznaBzDtJxZ++0s
+        RLNcTRB2P5+akVNAGZL2LZRhwwdQ1lqJQ9eZeAQCDaV4hFpjURs85QlOVdcwpPdLq/Yq9akHfOXt
+        LIIJsMLxzgprEGK+UQAjHfmV/c3cWdzOIvwiCFsRizI081MXzmswDJkLC6Q1XTfyF/IEJsDFUUX4
+        CgcD0C44WJQfeZqm+VRGnqR4vNoMHyBiPTz8MCGOPLKmBYYv8DiQXYQbjBT8h78h+hMBq7r8aXQ8
+        SjAcn0DyCkL0cmQAgGpvfXgJjx59bGMNU4CX8PdECH2LLc6DEW4JVP2rpiI9RuSeKCR0JFO1bXh3
+        IjAW/4lIoyy6um3aougKgavTZFGitWpVVVok/R4FJjvY/W4xfCC/ecMRJS7bTtd5Vc5zW89zW3R6
+        X9RliwLd/pTmiHKp8LvNOr8zjlHgWVAHQnmDm3frFnfR/SMOKEuBskRLQ9EMAs/HIPMs3RZ3AqNZ
+        aWd4cShv8P8ZndHu6o0yT/M8L7qqrgQM0niBPm37sqIkb9DwnqmuHJq+rjtM4n50U3VN3udF3rd1
+        2fSDJ9/dGQM=
     headers:
-      Alt-Svc:
+      alt-svc:
       - h3=":443"; ma=86400
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '435'
-      Content-Type:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb053bed3515be-SJC
+      content-encoding:
+      - br
+      content-type:
       - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:58:39 GMT
-      Via:
-      - 1.1 7a21e9c0eca084f9537ebb23906ea9fe.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - ZDqg9s0pofU6oc9Q7cdMFVvgvqj7-g4nGNIZBwEtgS2kyUbrGeVEYg==
-      X-Amz-Cf-Pop:
-      - SFO20-C1
-      X-Cache:
-      - Miss from cloudfront
+      date:
+      - Tue, 06 May 2025 19:52:51 GMT
+      inference-id:
+      - chatcmpl-9f905796-494d-48a6-ab66-b379ed43104f
       referrer-policy:
       - strict-origin-when-cross-origin
       server:
-      - uvicorn
+      - cloudflare
+      set-cookie:
+      - __cf_bm=91g1fT1YbiHCk4keGbqun2WXFuAox80rJObYCrI6DD8-1746561171-1.0.1.1-kJNj9yJvzsMm48vq7jFgCNZ5vZhxBnbtT.GejJWtAVjLdOBPiFubQUsVlVfB5_.qAmW9q6mtIfhBVNvfR8AV7I0.3OVUel6el4H4._jf1mU;
+        path=/; expires=Tue, 06-May-25 20:22:51 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=3600; includeSubDomains
       x-content-type-options:
@@ -68,15 +84,15 @@ interactions:
       x-ratelimit-limit-tokens-minute:
       - '60000'
       x-ratelimit-remaining-requests-day:
-      - '14392'
+      - '14381'
       x-ratelimit-remaining-tokens-minute:
-      - '60000'
+      - '59227'
       x-ratelimit-reset-requests-day:
-      - '7280.24813246727'
+      - '14828.04148030281'
       x-ratelimit-reset-tokens-minute:
-      - '20.248132467269897'
+      - '8.041480302810669'
       x-request-id:
-      - ZDqg9s0pofU6oc9Q7cdMFVvgvqj7-g4nGNIZBwEtgS2kyUbrGeVEYg==
+      - 93bb053bed3515be-SJC
     status:
       code: 200
       message: OK

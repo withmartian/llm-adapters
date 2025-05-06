@@ -1,9 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": ""}, {"role": "user", "content":
-      ""}, {"role": "assistant", "content": " "}, {"role": "user", "content": ""},
-      {"role": "assistant", "content": " "}, {"role": "user", "content": "\n"}], "model":
-      "nephara"}'
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"llama3-8b-instruct"}'
     headers:
       accept:
       - application/json
@@ -12,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '248'
+      - '233'
       content-type:
       - application/json
       host:
       - jtwtcue2-llama3-8b-instruct.tin.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,42 +26,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://jtwtcue2-llama3-8b-instruct.tin.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-p3fVgQVM5vPuj9BMuA6tb8","object":"chat.completion","created":1733351176,"model":"nephara","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems there might have been a misunderstanding. As this conversation just
-        started, there are no previous messages to respond to. I''m here to assist
-        you with any questions or topics you''d like to discuss. Please feel free
-        to start the conversation, and I''ll do my best to help!","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":35,"total_tokens":94,"completion_tokens":59}}'
+      string: ''
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ecf3794ebec2512-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 04 Dec 2024 22:26:19 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba739218e4d029-SJC
       content-length:
-      - '612'
-      vary:
-      - Accept-Encoding
+      - '0'
+      date:
+      - Tue, 06 May 2025 18:13:25 GMT
+      server:
+      - cloudflare
       x-envoy-upstream-service-time:
-      - '2933'
+      - '1'
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

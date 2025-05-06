@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "wizardlm-2-8x22b", "prompt": "Hi", "max_tokens": 10, "stream":
-      true}'
+    body: '{"model":"wizardlm-2-8x22b","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '79'
+      - '72'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,31 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/completions
   response:
     body:
-      string: 'data: {"id":"cmpl-jpcfVi5n8UECMoeKk3SFLt","object":"text_completion","created":1733910345,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"ian","logprobs":null,"finish_reason":null}]}
+      string: 'data: {"id":"cmpl-Zq7CR6J8ExZxuTiNBqtwag","object":"text_completion","created":1746555108,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":",","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-jpcfVi5n8UECMoeKk3SFLt","object":"text_completion","created":1733910345,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"
-        Hels","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-Zq7CR6J8ExZxuTiNBqtwag","object":"text_completion","created":1746555108,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"
+        I''","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-jpcfVi5n8UECMoeKk3SFLt","object":"text_completion","created":1733910345,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"inki,","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-Zq7CR6J8ExZxuTiNBqtwag","object":"text_completion","created":1746555108,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"m
+        using the","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-jpcfVi5n8UECMoeKk3SFLt","object":"text_completion","created":1733910345,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"
-        was founded in","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-Zq7CR6J8ExZxuTiNBqtwag","object":"text_completion","created":1746555108,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"
+        latest version of","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-jpcfVi5n8UECMoeKk3SFLt","object":"text_completion","created":1733910345,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"
-        ","logprobs":null,"finish_reason":"length"}]}
+        data: {"id":"cmpl-Zq7CR6J8ExZxuTiNBqtwag","object":"text_completion","created":1746555108,"model":"wizardlm-2-8x22b","choices":[{"index":0,"text":"
+        the","logprobs":null,"finish_reason":"length"}]}
 
 
         data: [DONE]
@@ -58,22 +62,18 @@ interactions:
 
         '
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f048b2918fd96bd-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-ray:
+      - 93ba71324c2c7aaf-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:45:45 GMT
-      Server:
+      date:
+      - Tue, 06 May 2025 18:11:48 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '70'
+      - '57'
     status:
       code: 200
       message: OK

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "google/gemma-2-27b-it",
-      "stop": "stop"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"google/gemma-2-27b-it","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '99'
+      - '91'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,56 +25,60 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8f18fd1f8bc2cf13-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1734124728,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
+      string: "{\n  \"id\": \"nszd91c-3NKUce-93bb03564e8aebeb\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561094,\n  \"model\": \"google/gemma-2-27b-it\",\n  \"prompt\":
         [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n      \"seed\":
-        10755548840557066000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
+        12021022867177480000,\n      \"logprobs\": null,\n      \"index\": 0,\n      \"message\":
         {\n        \"role\": \"assistant\",\n        \"content\": \"Hi there! \U0001F44B\\n\\nWhat
         can I do for you today? \U0001F60A\",\n        \"tool_calls\": []\n      }\n
-        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 11,\n    \"completion_tokens\":
-        15,\n    \"total_tokens\": 26\n  }\n}"
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 10,\n    \"completion_tokens\":
+        15,\n    \"total_tokens\": 25\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8f18fd1f8bc2cf13-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 Dec 2024 21:18:48 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb03564e8aebeb-SJC
       content-length:
-      - '533'
+      - '544'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:51:34 GMT
       etag:
-      - W/"215-R5i65XRZL6al0pR+gbOzZfumqWk"
+      - W/"220-jfuvmyswQQX/P3nTMLhFJUYbteU"
       retry-after:
       - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 8d4f327f-487c-4bc0-aceb-eb1b2725af4d-noamzn
       x-api-call-end:
-      - '2024-12-13T21:18:48.602Z'
+      - '2025-05-06T19:51:34.547Z'
       x-api-call-start:
-      - '2024-12-13T21:18:48.273Z'
+      - '2025-05-06T19:51:34.141Z'
       x-api-received:
-      - '2024-12-13T21:18:48.262Z'
+      - '2025-05-06T19:51:34.131Z'
       x-inference-version:
       - v2
       x-ratelimit:
@@ -85,11 +88,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '198'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99932'
+      - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nszd91c-3NKUce-93bb03564e8aebeb
     status:
       code: 200
       message: OK

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,45 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"000c4e6b-236d-4a73-9783-cee165d8687d\",\"object\":\"chat.completion\",\"created\":1738285123,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        \U0001F60A How can I assist you today? Whether you have a question, need advice,
-        or just want to chat, I'm here to help!\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":7,\"total_tokens\":40,\"completion_tokens\":33}}"
+      string: "{\"id\":\"6a04f2b9-91ff-4950-964c-a5ac8ab52ae0\",\"object\":\"chat.completion\",\"created\":1746555033,\"model\":\"accounts/fireworks/models/deepseek-v3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? \U0001F60A\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":7,\"total_tokens\":19,\"completion_tokens\":12}}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c141aaf0cee9-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 00:58:44 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=1470.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6f59bf259459-SJC
       content-length:
-      - '422'
+      - '340'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:33 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -73,11 +64,17 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.818'
-      fireworks-speculation-generated-tokens:
-      - '21'
+      - '0.590'
+      fireworks-server-time-to-first-token:
+      - '0.501'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=839.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '820'
+      - '592'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -93,7 +90,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59993'
       x-request-id:
-      - 000c4e6b-236d-4a73-9783-cee165d8687d
+      - 6a04f2b9-91ff-4950-964c-a5ac8ab52ae0
     status:
       code: 200
       message: OK

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,29 +38,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-28e80b2a-adf1-4131-b772-49b586327b66\",\"object\":\"chat.completion\",\"created\":1742234944,\"model\":\"deepseek-llama3.3-70b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\u003cthink\\u003e\\n\\n\\u003c/think\\u003e\\n\\nHello!
+      string: "{\"id\":\"chatcmpl-507374ea-9e9e-4d22-97ff-ab62101ad739\",\"object\":\"chat.completion\",\"created\":1746555148,\"model\":\"deepseek-llama3.3-70b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\u003cthink\\u003e\\n\\n\\u003c/think\\u003e\\n\\nHello!
         How can I assist you today? \U0001F60A\"},\"finish_reason\":\"stop\",\"content_filter_results\":{\"hate\":{\"filtered\":false},\"self_harm\":{\"filtered\":false},\"sexual\":{\"filtered\":false},\"violence\":{\"filtered\":false},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"profanity\":{\"filtered\":false,\"detected\":false}}}],\"usage\":{\"prompt_tokens\":3,\"completion_tokens\":16,\"total_tokens\":19,\"prompt_tokens_details\":null,\"completion_tokens_details\":null},\"system_fingerprint\":\"\"}"
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e7070dec16f46-DFW
+      - 93ba72307c9824f3-SJC
       content-length:
       - '700'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:09:04 GMT
+      - Tue, 06 May 2025 18:12:29 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=1AfSToqnR45LBni.odH14_r84h74gFzBYIz00l7a9_4-1742234944-1.0.1.1-.97d1Oiurdcd9FPkLALCd9J3ii2eiM1vhqp5vodLNOChziVE4CokAjK40JJvIrRbUZBR8UiZPiQjf43i8L5HYIU8f63JP_mBIdTOA8ziGCQ;
-        path=/; expires=Mon, 17-Mar-25 18:39:04 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=52so73.NAnl4N5q.M8vuG0yzjLywSz0owaCM01lgt3c-1746555149-1.0.1.1-lf57E.4T6wsba5G7fboR5rHy0gpiSRj1iEIOQl0TDeosabnj4ffiS4qfzRIlXfIwZJFFj.J7zjvkvo7inc.thGdvtl0983Iv6.a_.yyXHgs;
+        path=/; expires=Tue, 06-May-25 18:42:29 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 28e80b2a-adf1-4131-b772-49b586327b66
+      - 507374ea-9e9e-4d22-97ff-ab62101ad739
       x-response-time:
-      - '0.284'
+      - '0.352'
     status:
       code: 200
       message: OK

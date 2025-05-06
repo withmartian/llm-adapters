@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "\"\""}, {"role": "assistant",
-      "content": "Hi"}, {"role": "user", "content": "Hi\n\"\""}], "model": "mixtral-8x7b"}'
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi\n\"\""}],"model":"mixtral-8x7b"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '157'
+      - '143'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,43 +25,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-vs74GGLNsBPzKXfejZ7f6R","object":"chat.completion","created":1733465316,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I help you today? If you have any questions or need assistance with
-        something, feel free to ask. I''m here to help.\n\nJust a reminder, I''m an
-        AI and I''ll do my best to provide accurate and helpful information. However,
-        I don''t have access to personal data about individuals unless it has been
-        shared with me in the course of our conversation. I''m designed to respect
-        user privacy and confidentiality. Let me know if you have any questions.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":21,"total_tokens":127,"completion_tokens":106}}'
+      string: "{\"id\":\"chatcmpl-AbUhAvnFH89Q5MFBzoimQQ\",\"object\":\"chat.completion\",\"created\":1746555060,\"model\":\"mixtral-8x7b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I help you today? If you have any questions or need assistance, feel
+        free to ask. I'm here to help. If you'd like to learn more about a specific
+        topic, just let me know and I'll do my best to provide useful and interesting
+        information. \U0001F60A\",\"tool_calls\":null},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":21,\"total_tokens\":85,\"completion_tokens\":64}}"
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8eda1a348d28d019-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 06 Dec 2024 06:08:37 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba70055c21182a-SJC
       content-length:
-      - '794'
+      - '561'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:11:00 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '798'
+      - '499'
     status:
       code: 200
       message: OK

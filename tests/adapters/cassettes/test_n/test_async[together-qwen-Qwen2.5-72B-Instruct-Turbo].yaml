@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo",
-      "n": 2, "temperature": 0.7}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo","n":2}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '121'
+      - '93'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,64 +25,52 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce3c0ab2ccf4d-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320138,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 7995347267187980000,\n      \"logprobs\": null,\n      \"index\":
-        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
-        \"Hello! How can I assist you today? Feel free to ask me any questions or
-        let me know if you need help with anything specific.\",\n        \"tool_calls\":
-        []\n      }\n    },\n    {\n      \"finish_reason\": \"eos\",\n      \"seed\":
-        7995347267187980000,\n      \"logprobs\": null,\n      \"index\": 1,\n      \"message\":
-        {\n        \"role\": \"assistant\",\n        \"content\": \"Hello! How can
-        I assist you today? Feel free to ask me any questions or let me know if you
-        need help with anything specific. \U0001F60A\",\n        \"tool_calls\": []\n
-        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 30,\n    \"completion_tokens\":
-        60,\n    \"total_tokens\": 90\n  }\n}"
+      string: "{\n  \"id\": \"nszcmMb-4yUbBN-93bb018e9ac01694\",\n  \"error\": {\n
+        \   \"message\": \"temperature must be set to a value > 0 when `n` > 1.\",\n
+        \   \"type\": \"invalid_request_error\",\n    \"param\": \"temperature\",\n
+        \   \"code\": null\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6ce3c0ab2ccf4d-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:02:19 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb018e9ac01694-SJC
       content-length:
-      - '967'
+      - '216'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:50:21 GMT
       etag:
-      - W/"3c7-Oaji7LWSsvIxqKWt64Wl5za97DA"
+      - W/"d8-+ZlvW2lH8En0xv3ceimEnz/06ms"
       retry-after:
-      - '1'
-      x-api-call-end:
-      - '2024-11-23T00:02:19.166Z'
-      x-api-call-start:
-      - '2024-11-23T00:02:18.375Z'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-received:
-      - '2024-11-23T00:02:18.364Z'
+      - '2025-05-06T19:50:21.282Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -93,12 +80,14 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '197'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99857'
+      - '99853'
       x-ratelimit-reset:
-      - '1'
+      - '2'
+      x-request-id:
+      - nszcmMb-4yUbBN-93bb018e9ac01694
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
 version: 1

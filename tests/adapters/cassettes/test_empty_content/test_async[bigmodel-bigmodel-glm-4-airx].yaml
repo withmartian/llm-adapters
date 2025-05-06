@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "user", "content": "\"\""}], "model": "glm-4-airx"}'
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"user","content":"\"\""}],"model":"glm-4-airx"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '308'
+      - '278'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,46 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
-      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"It
-        seems like you''re entering empty strings or perhaps there''s a misunderstanding.
-        I''m here to help with any questions or topics you''d like to discuss. If
-        you have a specific question or need assistance with something, please let
-        me know!","role":"assistant"}}],"created":1733771204,"id":"202412100306430b17edb6a9434672","model":"glm-4-airx","request_id":"202412100306430b17edb6a9434672","usage":{"completion_tokens":50,"prompt_tokens":24,"total_tokens":74}}'
+      string: "{\"error\":{\"code\":\"1113\",\"message\":\"\u60A8\u7684\u8D26\u6237\u5DF2\u6B20\u8D39\uFF0C\u8BF7\u5145\u503C\u540E\u91CD\u8BD5\u3002\"}}"
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:06:44 GMT
-      Set-Cookie:
-      - acw_tc=784e2c9c17337712035873470e0fb1ef421b948c540b9afc97ed2a92d2cbc4;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:13:00 GMT
+      set-cookie:
+      - acw_tc=ac11000117465551803134526e00600238a9ed2e81cf0d37d971cf8c32c036;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
+      vary:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 202412100306430b17edb6a9434672
-      content-length:
-      - '526'
+      x-log-id:
+      - 2025050702130059fdeff9cf7e4c5d
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

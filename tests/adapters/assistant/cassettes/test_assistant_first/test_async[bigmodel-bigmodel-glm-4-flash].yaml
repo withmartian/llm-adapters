@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}, {"role": "user",
-      "content": "Hi"}, {"role": "user", "content": "\"\""}], "model": "glm-4-flash"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"glm-4-flash"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '150'
+      - '136'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,32 +25,33 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
       string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"Hello!
-        How can I assist you today? If you have any questions or need information,
-        feel free to let me know.","role":"assistant"}}],"created":1733771039,"id":"20241210030358100deb0d04a94bcb","model":"glm-4-flash","request_id":"20241210030358100deb0d04a94bcb","usage":{"completion_tokens":27,"prompt_tokens":12,"total_tokens":39}}'
+        How can I assist you today?","role":"assistant"}}],"created":1746554954,"id":"2025050702091489d652171c084cf4","model":"glm-4-flash","request_id":"2025050702091489d652171c084cf4","usage":{"completion_tokens":11,"prompt_tokens":12,"total_tokens":23}}'
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-length:
+      - '323'
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:03:59 GMT
-      Set-Cookie:
-      - acw_tc=784e2c8e17337710386171418e7d1968d6a01f125f668c7acc649cdc238bce;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:09:14 GMT
+      set-cookie:
+      - acw_tc=0ae5a87117465549542598208e007ef49de6b7a40d3f63222b93290e89aa1e;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
+      vary:
       - Accept-Encoding
       - Origin
       - Access-Control-Request-Method
@@ -59,10 +59,8 @@ interactions:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 20241210030358100deb0d04a94bcb
-      content-length:
-      - '396'
+      x-log-id:
+      - 2025050702091489d652171c084cf4
     status:
       code: 200
       message: OK

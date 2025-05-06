@@ -16,7 +16,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,7 +26,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,29 +39,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-822e9947-9ed2-44a2-ad66-12bad88d12f6","object":"chat.completion","created":1742234787,"model":"llama3.3-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"How
-        can I help you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":42,"completion_tokens":8,"total_tokens":50,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-bf009c49-9b32-4572-9400-c6c8fc320419","object":"chat.completion","created":1746554959,"model":"llama3.3-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"How
+        can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":42,"completion_tokens":8,"total_tokens":50,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6c9a7bef2e57-DFW
+      - 93ba6d8e2c19cf17-SJC
       content-length:
-      - '647'
+      - '649'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:06:27 GMT
+      - Tue, 06 May 2025 18:09:19 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=IXBOQGc1FsKBqo8Swot9Lq9OJ_tXzOBZWXyNbh6HviY-1742234787-1.0.1.1-8VxU8fTA_FGjMtI.UFq7rA1EmRoaIwlKiI3Q3DD6GFieaSsvv.Q_kv3RMrwKg4XDGsg4gwDtfcp85gyCOL.dvXxoNncsaqNqHrE6d7zVZqQ;
-        path=/; expires=Mon, 17-Mar-25 18:36:27 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=SDY8uZVvQ7Rw1T6YAJQeQffh4Fa43ELHRoJz_1GGNAY-1746554959-1.0.1.1-m4ZzdOnawMdG7HZVrM.aOk7zjiHHxqcCAPyxKo.TDbzrX9L5IcLsuktiQ8Jge3b9s_vwGILH7shdS9y7fM0Ryi2_cl33.sE3uHzxffpoCRw;
+        path=/; expires=Tue, 06-May-25 18:39:19 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 822e9947-9ed2-44a2-ad66-12bad88d12f6
+      - bf009c49-9b32-4572-9400-c6c8fc320419
       x-response-time:
-      - '0.351'
+      - '0.254'
     status:
       code: 200
       message: OK

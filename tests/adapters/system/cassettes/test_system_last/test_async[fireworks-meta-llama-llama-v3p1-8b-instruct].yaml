@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "system", "content":
-      "Hi"}], "model": "accounts/fireworks/models/llama-v3p1-8b-instruct"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"accounts/fireworks/models/llama-v3p1-8b-instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '147'
+      - '137'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,61 +25,72 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"2eb99847-5bf1-46fb-b6bf-1d5b5b872986","object":"chat.completion","created":1732323101,"model":"accounts/fireworks/models/llama-v3p1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"How
-        are you doing today? Is there something I can help you with or would you like
-        to chat?"},"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"total_tokens":40,"completion_tokens":22}}'
+      string: '{"id":"85cfc76b-70cc-4a8b-b7da-e5406c56ece5","object":"chat.completion","created":1746561109,"model":"accounts/fireworks/models/llama-v3p1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"How
+        can I assist you today?"},"finish_reason":"stop"}],"usage":{"prompt_tokens":17,"total_tokens":25,"completion_tokens":8}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8e6d2c116daf67f5-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:51:40 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=323.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb03b45f89cf61-SJC
       content-length:
-      - '403'
+      - '339'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:51:49 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
-      - '18'
+      - '17'
       fireworks-sampling-options:
-      - '{"max_tokens": 2048, "temperature": 1.0, "top_k": 0, "top_p": 1.0, "min_p":
+      - '{"max_tokens": 2048, "temperature": 1.0, "top_k": 0, "top_p": 0.7, "min_p":
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.114'
+      - '0.074'
+      fireworks-server-time-to-first-token:
+      - '0.042'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=215.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '115'
+      - '75'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59983'
       x-request-id:
-      - 2eb99847-5bf1-46fb-b6bf-1d5b5b872986
+      - 85cfc76b-70cc-4a8b-b7da-e5406c56ece5
     status:
       code: 200
       message: OK

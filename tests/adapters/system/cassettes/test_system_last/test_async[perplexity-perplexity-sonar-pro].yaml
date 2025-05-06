@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '69'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "801f2d6e-6fc6-4e35-a8e9-e6ef29f7bb14", "model": "sonar-pro",
+        "created": 1746555000, "usage": {"prompt_tokens": 3, "completion_tokens":
+        313, "total_tokens": 316, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "\"Hi, Hi, Hi\" is a song written
+        by Paul and Linda McCartney and performed by Wings. It was released in 1972
+        as a double A-side single with \"C Moon\"[1]. The single was issued on December
+        1, 1972, in the UK and three days later in the US[1].\n\nThe song achieved
+        considerable success on the charts, reaching number one in Spain, number five
+        in the United Kingdom, and number 10 in the United States in January 1973[1].
+        In Ireland, it peaked at number 18[1]. Following its release, \"Hi, Hi, Hi\"
+        became a regular part of Wings'' live performances throughout the 1970s[1].\n\nThe
+        song has been included in several Paul McCartney compilation albums, including:\n-
+        \"Wingspan: Hits and History\" (2001)\n- \"Pure McCartney\" deluxe edition
+        (2016)\n- As a bonus track on the 1993 and 2018 reissues of \"Red Rose Speedway\"\n-
+        \"The 7\" Singles Box\" (2022)[1]\n\nThe track is available on music streaming
+        platforms like Spotify, where it appears on both the \"Pure McCartney (Deluxe
+        Edition)\" from 2016[3] and Wings'' 1978 compilation[4].\n\nIn 2023, a remix
+        titled \"HI HI HI Remix\" was created by Lil Jay Bingerack featuring Rayvanny.
+        According to the description, this version is \"all about love, happy and
+        good vibes for everyone\"[5]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6e5b0b689e68-SJC
+      content-length:
+      - '1880'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:01 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=NMxMaO7l.9iDIEf.f.HOVJ4nJznk2hiuH4Jh5tgc.tk-1746555001-1.0.1.1-FdLwyaKXszmUGGVPtddDD4q3qNiPBY.Dyej07GEXPsnd9eAMhmWTG_Cmy_NHDxFfQIqNfcdJ0_9Ma9wkQal5daeNO002F69SjCQG0hNB4UQ;
+        path=/; expires=Tue, 06-May-25 18:40:01 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

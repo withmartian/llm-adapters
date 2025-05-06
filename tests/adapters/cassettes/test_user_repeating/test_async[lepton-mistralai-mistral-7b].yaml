@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi\nHi"}], "model": "mistral-7b"}'
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"mistral-7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '76'
+      - '70'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,40 +25,41 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-4H2RPZh2VAWDYhFafgUuMV","object":"chat.completion","created":1733374814,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? Is there something specific you''d like to know
-        or talk about? I''m here to help with information, answer questions, or just
-        chat if you''d like. What''s on your mind?","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":6,"total_tokens":58,"completion_tokens":52}}'
+      string: '{"id":"chatcmpl-cK4RqhNk6ooFEzfNmikXfA","object":"chat.completion","created":1746561573,"model":"mistral-7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+        How can I help you today? Is there something specific you''d like to know
+        or discuss? I''m here to assist you with a variety of topics, from answering
+        questions to helping you learn something new. If you have a question, feel
+        free to ask, and I''ll do my best to help you find an answer.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":6,"total_tokens":77,"completion_tokens":71}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed178b00deace78-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 05:00:15 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0f0c2d0315c2-SJC
       content-length:
-      - '533'
+      - '594'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:59:35 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '690'
+      - '1228'
     status:
       code: 200
       message: OK

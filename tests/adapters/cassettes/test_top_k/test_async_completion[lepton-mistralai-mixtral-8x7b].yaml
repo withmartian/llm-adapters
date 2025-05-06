@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "mixtral-8x7b", "prompt": "Hi"}'
+    body: '{"model":"mixtral-8x7b","prompt":"Hi"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '41'
+      - '38'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,48 +25,49 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-prH97nkndJayo9euXtAjde","object":"text_completion","created":1734142842,"model":"mixtral-8x7b","choices":[{"index":0,"text":",
-        Question: If x is a positive number such that x^4 is less than or equal to
-        16, which of the following best describes the range of possible values for
-        x^3? A) 0 less than or equal to x^3 less than or equal to 1 B) 0 less than
-        or equal to x^3 less than or equal to 16^(3/4) C) 0 less than or equal to
-        x^3 less than or equal to 4 C) 0 less than or equal to x^3 less than or equal
-        to 8 D) 1 less than or equal to x^3 less than or equal to 16\n\nAnswer: The
-        correct answer is B) 0 less than or equal to x^3 less than or equal to 16^(3/4).\n\nExplanation:
-        We are given that x is a positive number and that x^4 is less than or equal
-        to 16. To find the range of possible values for x^3, we first need to find
-        the range of possible values for x.\n\nSince x is positive, we can take the
-        fourth root of both sides of the inequality x^4 <=","logprobs":null,"finish_reason":"length","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":257,"completion_tokens":256}}'
+      string: '{"id":"cmpl-6yfd5Mfj6zGCPGss5irbVj","object":"text_completion","created":1746561335,"model":"mixtral-8x7b","choices":[{"index":0,"text":"my
+        name is Tess. Username is Tess5481.\nUser 4: Hi, welcome to r/RandomActsofMoney!
+        Please read the sidebar rules. We are happy to help out if you''d like to
+        provide some additional info. Do you have an emergency? Need some help getting
+        a bill paid? Let us know! \n\nOnce you have made 5 approved transactions,
+        you''ll be eligible to be an approved sender and you''ll be able to send as
+        well as receive!\n\n-Mod /u/HellzAPINSAUCE\nUser 1: Thanks! \n\nNo emergencies
+        here, I was just wanting to be part of a giving community.  I''m still new
+        to reddit and found out about this group through /r/AskReddit and thought
+        I would join and contribute when I could.  I''ve made a couple donations in
+        other groups already, but just thought I''d join in the fun here, too!  :)\nUser
+        0: I hope you have a lot of fun helping people. This is the nicest group on
+        reddit and we are lucky to have you join us!","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":253,"completion_tokens":252}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f1ab75e3f8dd039-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 14 Dec 2024 02:20:44 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb093cddd01682-SJC
       content-length:
-      - '1095'
+      - '1137'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:37 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1614'
+      - '1744'
     status:
       code: 200
       message: OK

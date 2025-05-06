@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "user", "content":
-      "\"\""}], "model": "jamba-1.5-large"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"jamba-1.5-large"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '116'
+      - '106'
       content-type:
       - application/json
       host:
       - api.ai21.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,45 +25,50 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.ai21.com/studio/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IdQFACC+r02nVe8nZbcBLuDUYWYfoO90z5ITfnrgUCuwtC0v4QQDTOjfPj9dzye9bgwt4QwV839x
-        QJngHnFhNW46dzu343g+jeNsESdTu4xstkwWyWoSzWw0y5YrGLSvbwT3XwdcpR+4HxrURvzC/QGe
-        XYp7WJFS1LYKg8Fxs3t8KjnmWmj1Ud9x8ATfppyV4qDEWXZHHxxcQjsO1E5eUgoDcZTgA2JPLlVq
-        Uqpb3tCmsEo7DheJkdvKZKUm9pSUEgeRFxgos/uLrXOC+zY4dzJwnHeeI6YYDGlLfwuxjnEPUe5w
-        +jEIka47z02nf8p12gruRyMCN7XkVlQmQ4OfBbCyTUenkwED
+      string: '{"detail":"Access denied for this feature"}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ecf3f62ad227afd-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
+      cf-ray:
+      - 93ba6f415e1f1574-SJC
+      content-length:
+      - '43'
+      content-type:
       - application/json
-      Date:
-      - Wed, 04 Dec 2024 22:31:37 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
+      date:
+      - Tue, 06 May 2025 18:10:29 GMT
+      expect-ct:
+      - max-age=86400, enforce
+      referrer-policy:
+      - same-origin
       request-id:
-      - 513f4a15-05ac-65af-7ab8-a8cd4fb6ed26
+      - 37c14416-5880-e611-d180-ac955a565085
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
       via:
       - 1.1 google
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
 version: 1

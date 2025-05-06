@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "8b540e93-c436-4311-b244-460c1220b9cd", "model": "sonar", "created":
+        1746561321, "usage": {"prompt_tokens": 1, "completion_tokens": 182, "total_tokens":
+        183, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "**\"Hi\"** is a common English
+        greeting used in casual settings, less formal than \"hello.\" It''s widely
+        recognized as a friendly way to address someone and is often associated with
+        informal, everyday interactions[2].  \n\n**Other meanings of \"HI\":**  \n-
+        **Place**: Abbreviation for **Hawaii** (especially in postal codes)[1].  \n-
+        **Language**: **Hindi** (ISO 639-1 code \"HI\")[4].  \n- **Science**: **H
+        I region** in astronomy, referring to interstellar clouds of neutral atomic
+        hydrogen[4].  \n- **Culture**: Multiple references in music, including **Hi
+        Records** (soul/rockabilly label) and podcast **Hello Internet**[4].  \n\nIn
+        **Basque**, \"hi\" is an informal pronoun used between close friends or family,
+        requiring specific verb conjugations[5]."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb08d0899c174b-SJC
+      content-length:
+      - '1349'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:21 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Ow.dibzRM2VJdYvU.5YJwEA_nDJrYj35ROXfyLtCqvs-1746561321-1.0.1.1-TeXg1ku3ec8JYa_VRluLnhpEaJKlggw4w7.zvx1TByYZLDHbqdl4hyoT9w4mqBD1MUYTbYnnZZZDi66bNW8Y3ydPB7TplOcMInLIbj5TkYY;
+        path=/; expires=Tue, 06-May-25 20:25:21 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,28 +25,33 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-af55e67d121e4140bd3264acad6dbca9","object":"chat.completion","created":1738286208,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\n\n</think>\n\nHello!
-        How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":4,"total_tokens":17,"completion_tokens":13,"estimated_cost":9.89e-06}}'
+      string: '{"id":"chatcmpl-RJUiNyt68zMVu8LGL2GJFATo","object":"chat.completion","created":1746561069,"model":"deepseek-ai/DeepSeek-R1-Distill-Llama-70B","choices":[{"index":0,"message":{"role":"assistant","content":"<think>\nOkay,
+        the user wrote \"Hi.\" That''s a friendly greeting. I should respond in a
+        warm and welcoming manner. Maybe say hello back and offer assistance. Something
+        like, \"Hello! How can I assist you today?\" That should set a positive tone
+        for our conversation.\n</think>\n\nHello! How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":4,"total_tokens":72,"completion_tokens":68,"estimated_cost":2.7600000000000003e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '423'
+      - '702'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:16:48 GMT
+      - Tue, 06 May 2025 19:51:09 GMT
       server:
       - uvicorn
       x-robots-tag:

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/yi-01-ai/models/yi-large", "prompt": "Hi", "stop":
-      "stop"}'
+    body: '{"model":"accounts/yi-01-ai/models/yi-large","prompt":"Hi","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '78'
+      - '73'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,44 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: '{"id":"7b873d7e-0370-4693-9053-83ed228c0425","object":"text_completion","created":1734126420,"model":"accounts/yi-01-ai/models/yi-large","choices":[{"index":0,"text":"
-        had a vision of you 5 6 He told it to a.\n","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":18,"completion_tokens":16}}'
+      string: '{"id":"540e2967-819d-441f-a77f-3f1441144aff","object":"text_completion","created":1746561152,"model":"accounts/yi-01-ai/models/yi-large","choices":[{"index":0,"text":"
+        he j\nI 0 0 0 0 1 0","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":18,"completion_tokens":16}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f19266de9a52364-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:47:00 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=302.0,total;dur=352.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb04bd9fd32364-SJC
       content-length:
-      - '324'
+      - '301'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:52:31 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -73,9 +64,15 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.240'
+      - '0.199'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=276.0,total;dur=356.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '242'
+      - '202'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -91,7 +88,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '29998'
       x-request-id:
-      - 7b873d7e-0370-4693-9053-83ed228c0425
+      - 540e2967-819d-441f-a77f-3f1441144aff
     status:
       code: 200
       message: OK

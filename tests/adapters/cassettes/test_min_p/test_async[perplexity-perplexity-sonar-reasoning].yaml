@@ -1,0 +1,137 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "aa0b25e3-5586-4fc4-b4ae-ba4645317dcd", "model": "sonar-reasoning",
+        "created": 1746555227, "usage": {"prompt_tokens": 1, "completion_tokens":
+        1111, "total_tokens": 1112, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, let''s tackle
+        this query. The user is asking about \"Hi.\" First, I need to check the search
+        results to understand the different meanings and contexts.\n\nLooking at the
+        first result from Dictionary.com, \"HI\" as an interjection and adjective.
+        The interjection is a casual greeting, and as an adjective, it''s a shortened
+        form of \"high,\" like \"hi-fi.\"\n\nThe second result from Vocabulary.com
+        emphasizes that \"hi\" is a common, more casual greeting than \"hello,\" suitable
+        in most informal situations. It also mentions the first use in the 1800s by
+        a Kansas Native American.\n\nThe third search result is a YouTube video about
+        a greeting song for kids, which doesn''t add much beyond reinforcing that
+        \"hi\" is a standard greeting used in educational contexts.\n\nThe fourth
+        result from Wikipedia lists various uses of \"HI\" and \"Hi,\" including arts,
+        entertainment, language, organizations, places, science, and tech. Notably,
+        \"HI\" can refer to Hydrogen-1, the state abbreviation, or a greeting in English.
+        Under language, it mentions \"Hi\" as a greeting, plus entries in Basque,
+        Armenian, etc. Also notes Hindi''s ISO code as HI.\n\nThe fifth result from
+        Wiktionary provides linguistic details, especially about Basque usage. It
+        explains that in Basque, \"hi\" is a very informal pronoun between close friends
+        or family, requiring verb agreement. The table shows declension forms, which
+        is detailed but maybe too specific unless the user is interested in Basque
+        language.\n\nNow, synthesizing this: The user''s query is just \"Hi,\" so
+        the answer should cover primary meanings. The main uses are the greeting,
+        the chemical symbol for Hydrogen-1, the state abbreviation (Hawaii), and the
+        adjective form. Other references like Basque pronoun or Hindi code are less
+        common but could be mentioned briefly.\n\nNeed to structure the answer clearly.
+        Start with the greeting, then other meanings. Use sections for clarity. Cite
+        sources appropriately. Since the user didn''t specify a language context,
+        focus on English primarily. The Basque part is an edge case but interesting
+        as a linguistic note. The chemical aspect is important as a scientific reference.
+        Also mention the state abbreviation, but HI is the US code for Hawaii. Also
+        note that in tech, \"hi-fi\" is high fidelity.\n\nMake sure to cite each point
+        with the relevant search result. For example, the greeting info comes from
+        [1][2], the chemical from [4], Basque from [5], and the state code from [4].
+        Avoid including too much about the song or other less relevant results unless
+        necessary.\n\nCheck for any other possible meanings. The Wikipedia entry also
+        mentions \"H I region\" in astronomy, but that''s not covered in the query.
+        The user might just want the common meanings. So prioritize the greeting,
+        the chemical isotope, and the adjective. The Basque usage is a language-specific
+        detail that''s less common but notable.\n\nFinal structure: Introduction covers
+        the greeting, then other meanings in sections, each with subpoints. Use headers
+        like \"Primary Meaning: Greeting,\" \"Scientific Reference: Hydrogen-1,\"
+        etc. Ensure citations are correctly placed after each relevant sentence.\n\nMake
+        sure not to start with a header, so the first line is a brief intro. Use bold
+        for subsections if needed. Avoid lists if possible, but use them if they improve
+        readability. Since the user might be expecting a concise explanation, keep
+        each section brief.\n\nDouble-check that all important points are covered
+        without overcomplicating. The answer should be informative, accurate, and
+        properly cited.\n</think>\n\n\"Hi\" is a versatile term with multiple meanings
+        depending on context:\n\n## **Primary Meaning: Greeting**  \nA casual, informal
+        greeting in English, commonly used in most non-formal situations[1][2]. It
+        emerged as a simplified alternative to \"hello,\" with roots traced to 19th-century
+        Native American usage[2]. Examples include:  \n- **Casual interactions**:
+        Used between strangers in small communities or between friends[2]  \n- **Cross-cultural
+        adoption**: Featured in educational materials like children''s songs for teaching
+        greetings[3]  \n\n## **Scientific and Technical References**  \n1. **Hydrogen-1**:
+        The stable isotope of hydrogen with one proton and zero neutrons, symbolized
+        as **\u00b9H** or **H**[4]  \n2. **High Fidelity**: Shortened to *hi-fi* in
+        contexts like audio technology[1]  \n\n## **Geographic and Language References**  \n-
+        **Hawaii**: Abbreviated as **HI** in United States postal codes[4]  \n- **Basque
+        Pronoun**: A highly informal second-person singular pronoun (exclusive and
+        rarely used) requiring complex verb agreement in sentences[5]  \n- **Language
+        Codes**:  \n  | Code | Usage |  \n  |---|---|  \n  | HI | ISO 639-1 code for
+        Hindi |  \n\n## **Cultural and Media Contexts**  \n- **Music/Entertainment**:
+        Names of songs (Ofra Haza''s *Hi*), albums (Texas'' *Hi*), and labels (Hi
+        Records)[4]  \n- **Publications**: Includes magazines like *Hi* and podcasts
+        like *Hello Internet*[4]  \n\nSpecialized linguistic uses like Basque pronouns[5]
+        or ancient scripts[4] exist but are niche applications."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba73bb58ffebe4-SJC
+      content-length:
+      - '5725'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:13:47 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=9oFMujAHO5wf0xPWbU_f4II6H05O5bk4kbyLi1Zky6s-1746555227-1.0.1.1-4PGjtQaVhyxanZyjgvvG.y9QFSBuDUDXrCz1s_Ao1G5FGH.7O0uoSqpVq1uSKJcAQ8fmijHJxUzgR84WDkwsU7P6G1gvZF_CqTLR1kgK42o;
+        path=/; expires=Tue, 06-May-25 18:43:47 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

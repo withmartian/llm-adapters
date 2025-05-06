@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "dolphin-mixtral-8x7b", "prompt": "Hi", "max_tokens": 10, "stream":
-      true}'
+    body: '{"model":"dolphin-mixtral-8x7b","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '83'
+      - '76'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,30 +25,35 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/completions
   response:
     body:
-      string: 'data: {"id":"cmpl-rb4PssEcm6A42d2evBERRY","object":"text_completion","created":1733910345,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"-","logprobs":null,"finish_reason":null}]}
+      string: 'data: {"id":"cmpl-ZMKYkT6nQoCWAB4oSsVtYM","object":"text_completion","created":1746555108,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"F","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-rb4PssEcm6A42d2evBERRY","object":"text_completion","created":1733910345,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"sights","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-ZMKYkT6nQoCWAB4oSsVtYM","object":"text_completion","created":1746555108,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"B!","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-rb4PssEcm6A42d2evBERRY","object":"text_completion","created":1733910345,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
-        are also available","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-ZMKYkT6nQoCWAB4oSsVtYM","object":"text_completion","created":1746555108,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
+        :) As always","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-rb4PssEcm6A42d2evBERRY","object":"text_completion","created":1733910345,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
-        for more advanced","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-ZMKYkT6nQoCWAB4oSsVtYM","object":"text_completion","created":1746555108,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
+        thanks and much","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-rb4PssEcm6A42d2evBERRY","object":"text_completion","created":1733910345,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"","logprobs":null,"finish_reason":"length"}]}
+        data: {"id":"cmpl-ZMKYkT6nQoCWAB4oSsVtYM","object":"text_completion","created":1746555108,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":"
+        love","logprobs":null,"finish_reason":"length"}]}
 
 
         data: [DONE]
@@ -57,22 +61,18 @@ interactions:
 
         '
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f048b2d7c7817e6-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-ray:
+      - 93ba71344cd3234f-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:45:45 GMT
-      Server:
+      date:
+      - Tue, 06 May 2025 18:11:48 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '78'
+      - '53'
     status:
       code: 200
       message: OK

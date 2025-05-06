@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"gpt-4.5-preview","temperature":0.5}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"gpt-4.5-preview"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '89'
+      - '71'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,50 +39,46 @@ interactions:
   response:
     body:
       string: !!binary |
-        A4UBAMT/n87fWabbNzc14YtLlCp2Aml96uZ5QJrgD+rDDTaWzv9vg20PA++iRQkHHljqdMcpiElr
-        G8RvjfPdNQNonBEHpaPYp8rK4Lg9XDRiqT/z49rJY/L+/Tm6Wfh2/+35vN2lMgPIJBOR+khSWWJg
-        jo2moMnlRyIjjnq3Vev0O61WC7xXJhOSOGhofdCqtIMR6btiHjRqjXZQawSNm+AZ+VuOOH4YAKzP
-        OgDtg98ljlr5KlqVoRAn/gRQbqQgDoqdGzsfa09lAmVjd85Bl+MSLs0caaxxhYgvWJoC3mTx8iCS
-        2rh+MpbEoQspMXlbCrJ1a4Sf0BolDnLeWGJYWwb8adAuqn1ANjfK+tCbqdCOOHoZG6QphUv1rhv0
-        CwRoDAWyCUloQNd0yqxRGqcjkWWlZFzGRTY2YJO1l1NQbn7Q+uyxHh4UmElTYb3IQgtDtmmKKi4X
-        E5ESJrOwxb576dCPRU4c9KYAhKOl80KFg7Eeitzm4wchrAsp2ZYZAw==
+        YwAoGQBA/G85u3M5vf3npiasuGQoEDGYhNTXp795HpAmtiZusLF0vl8bLMAA8y5ahIEHlurc8RPb
+        lm0aP5j47poBFCviIBkJJ3ObeUevl6FZmSBKr6fjh0iZSW/xeXzy1Zk9vz9SgwFkpomWTqk3lxh4
+        sSko/M7lZ1oRR2fUHw6Gnd64Cz7nRumMOCi0zus3B94W6cd67nXb3YHX7nrdkctpZGKpK+L4ZgCw
+        Hi0AOgd/RBztxlV+VYZJnPgTQKXJNHGQqKq4cqJw1CBAG7trDrqIt3Bh5pCiwCUUX7A0NZxRYrmv
+        hIPrb4uMOIo6y0C4bUzM2q9M/9fr1PFt4n9da544qHLGkrv/z4Df8szrRHbJlia3zncm1dbqOJoJ
+        lRtwrVOQCf0dAcR4IWmo+73pjGq+LYCkkJFWaqjwWtQqNuCUpdcSUKs/m/oyLkKnblMAWJNSW6eV
+        392QTBqo9EqdaKmzMlP/Qku+qu9iXRIHvURYwtmycjr3g7gIdWnL+BnJFnWWsX9mAAM=
     headers:
-      CF-RAY:
-      - 918bb7686efc1637-SJC
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 27 Feb 2025 22:47:25 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - __cf_bm=ycj5af3rPlOEvm1ndOt8uGAfk78j9bJmBHqshmKYGy0-1740696445-1.0.1.1-7IDz3he_BhQucJFJ5ymtG.Nc5wPN4H2c2FIA5v8.CutUJ2jUroFHbp1y2ScZA9Ew3EgJqAiyHFCzEETph7u7vQ;
-        path=/; expires=Thu, 27-Feb-25 23:17:25 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=ADgRR9Dq31IWP6Jhgm_tLNjgafE.hB24zfL5I0O4abY-1740696445724-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
-      X-Content-Type-Options:
-      - nosniff
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb0a5ffb6c236d-SJC
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:56:23 GMT
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '1375'
+      - '1160'
       openai-version:
       - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=C2U34JBQ44EMndTxalnn6dBt4RioHWPyFCXEs4akGbQ-1746561383-1.0.1.1-j7tDecm0aPxKfGgnXmBJPW9eigWLDx06SBDqKcST1mvEVVqclSYjCq.Y6QIfg6muAz58GsmLB3k.q_AmbT8dYP56X3EggdTvnJzKe7aEoWc;
+        path=/; expires=Tue, 06-May-25 20:26:23 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=LRTa3parb7JQlcSFcM6JMgY4_FL2Rpqeh0EHlQDriAE-1746561383649-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      x-content-type-options:
+      - nosniff
       x-ratelimit-limit-requests:
       - '10000'
       x-ratelimit-limit-tokens:
@@ -88,13 +86,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '9999'
       x-ratelimit-remaining-tokens:
-      - '1999981'
+      - '1999996'
       x-ratelimit-reset-requests:
       - 6ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_16257ca22477c40e0ef3e0557e994ee7
+      - req_58d4dcbba9ed2890dfebb569d2fdc5d9
     status:
       code: 200
       message: OK

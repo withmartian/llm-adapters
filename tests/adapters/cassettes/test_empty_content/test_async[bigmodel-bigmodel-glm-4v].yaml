@@ -1,9 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "assistant", "content": "\"\""}, {"role": "user", "content":
-      "\"\""}, {"role": "user", "content": "\"\""}], "model": "glm-4v"}'
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"user","content":"\"\""}],"model":"glm-4v"}'
     headers:
       accept:
       - application/json
@@ -12,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '304'
+      - '274'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -28,71 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
-      string: '{"choices":[{"finish_reason":"length","index":0,"message":{"content":"\"\"\n
-        \n\"\"\n \n \"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n \n\"\"\n
-        \n\"\"\n \n\"\"\n \n\"\"\n \n","role":"assistant"}}],"created":1733771246,"id":"202412100306529dc64fd7bdce4b2d","model":"glm-4v","request_id":"202412100306529dc64fd7bdce4b2d","usage":{"completion_tokens":1024,"prompt_tokens":1692,"total_tokens":2716}}'
+      string: "{\"error\":{\"code\":\"1113\",\"message\":\"\u60A8\u7684\u8D26\u6237\u5DF2\u6B20\u8D39\uFF0C\u8BF7\u5145\u503C\u540E\u91CD\u8BD5\u3002\"}}"
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:07:26 GMT
-      Set-Cookie:
-      - acw_tc=2f6a1fa517337712122694117e604e005dfe96449d0b7da14d6202d05079e3;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:13:13 GMT
+      set-cookie:
+      - acw_tc=0ae5a7de17465551934378714e0068e07714d4d25e15f2582a0091dcbc0514;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
+      vary:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 202412100306529dc64fd7bdce4b2d
-      content-length:
-      - '2597'
+      x-log-id:
+      - 2025050702131344072f3fffa14ccc
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

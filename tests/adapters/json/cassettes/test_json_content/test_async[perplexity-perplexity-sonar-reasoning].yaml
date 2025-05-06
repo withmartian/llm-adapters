@@ -1,0 +1,112 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '124'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "004fd304-68c0-4a53-a99a-638bc4e0e370", "model": "sonar-reasoning",
+        "created": 1746555017, "usage": {"prompt_tokens": 2, "completion_tokens":
+        733, "total_tokens": 735, "search_context_size": "low"}, "citations": ["https://hellohihi.com",
+        "https://www.instagram.com/hihitoys/", "https://hellohihi.com/pages/contact-us",
+        "https://en.wiktionary.org/wiki/hihi", "https://www.instagram.com/reel/DAbhcQzSACe/"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user is asking
+        about \"HiHi.\" Let me check the search results to figure out what they need.\n\nFirst,
+        looking at the search results, there''s a mix of different contexts where
+        \"HiHi\" appears. The first three results are about a store called \"hihi\"
+        which sells anime, kawaii items, and other merchandise. They have locations
+        in Royal Oak and Midtown Detroit, and their website is hellohihi.com. Then
+        there''s an Instagram account for hihi Toys, which is a shopping and retail
+        page. The contact page gives more details about their store hours and addresses.
+        So, part of the answer should explain that HiHi is a retail store focusing
+        on anime and kawaii culture.\n\nThen, result 4 from Wiktionary mentions \"hihi\"
+        as a verb and noun in different languages. In Maori, it refers to a stitchbird,
+        and in Hong Kong Cantonese, it''s internet slang with a specific meaning.
+        There''s also an interjection form similar to \"hehe.\" So, another part of
+        the answer should cover the linguistic aspects of \"hihi\" across languages.\n\nResult
+        5 is an Instagram reel from someone excited about launching something related
+        to animation and entertainment. The username might be \"HiHi\" here, but it''s
+        not clear if this is the same as the store. Probably a different person or
+        brand, so maybe mention it briefly as another possible usage, but note that
+        it''s a separate entity.\n\nSo, the answer should have two main sections:
+        one about the retail store and the other about the linguistic meanings. Also,
+        mention the Instagram reel as another context but clarify it''s a different
+        entity. Need to make sure citations are correctly applied. For the store info,
+        cite [1][2][3], for the linguistic parts cite [4], and the Instagram reel
+        as [5]. Avoid mixing different contexts unless they''re related. Make sure
+        the answer is structured with headers for each section, using markdown as
+        instructed. No URLs, just the information from the search results with proper
+        citations.\n</think>\n\nThe term \"HiHi\" has multiple contexts across different
+        domains:\n\n## Retail Store  \n**hihi** is a kawaii-centric retail brand operating
+        two physical stores in Michigan:  \n- **Royal Oak location** at 228 W 4th
+        St, with hours Monday-Thursday 11 AM\u20138 PM, Friday-Saturday 11 AM\u20139
+        PM, and Sunday 11 AM\u20137 PM[1][3].  \n- **Midtown Detroit location** at
+        4240 Cass Ave, open Wednesday-Sunday (closed Mondays/Tuesdays)[3].  \nThe
+        stores specialize in anime merchandise, plush toys, Sanrio characters (e.g.,
+        Hello Kitty, My Melody), and Japanese pop culture items like Sonny Angel collectibles[1][2].  \n\n##
+        Linguistic Meanings  \n1. **Maori Language**: *Hihi* refers to the **stitchbird**
+        (*Notiomystis cincta*), New Zealand\u2019s only endemic honeyeater[4].  \n2.
+        **Hong Kong Cantonese**: Used as internet slang for **\u4ec6\u8857** (foul
+        language), functioning as a noun, verb, or adjective depending on context[4].  \n3.
+        **Interjection**: Serves as an alternative spelling of *hehe* in casual speech[4].  \n\n##
+        Other Contexts  \nAn Instagram account (@hihitoys) promotes the retail brand[2],
+        while a separate account (unrelated to the store) announced creative projects
+        involving animation and entertainment in September 2024[5]."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6eb61c8df99f-SJC
+      content-length:
+      - '3819'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:17 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=W.WV47n8XGzT9Rsjw_tE6V_Ulk0DuE2qVh_P_f1ugus-1746555017-1.0.1.1-j3OAzeQkBnr4ipb0Lk.RLFLU5eRp567JRUggg6.ugVX6N2KQXxiGU1roeo_liu.kWTk.f95aL9EsUAu6g8fJuVPL0g3k6XyvRg_KCmQzA3o;
+        path=/; expires=Tue, 06-May-25 18:40:17 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

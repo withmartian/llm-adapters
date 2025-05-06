@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}], "model": "accounts/fireworks/models/llama-v3p2-3b-instruct"}'
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"accounts/fireworks/models/llama-v3p2-3b-instruct"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '112'
+      - '106'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,59 +25,42 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"93b8e5ee-8443-4b5c-a96c-20fd20b73d1f","object":"chat.completion","created":1733351520,"model":"accounts/fireworks/models/llama-v3p2-3b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"How
-        can I assist you today?"},"finish_reason":"stop"}],"usage":{"prompt_tokens":11,"total_tokens":19,"completion_tokens":8}}'
+      string: '{"error":"Model not found, inaccessible, and/or not deployed"}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8ecf3ff48f6315c4-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 04 Dec 2024 22:31:59 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=170.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-ray:
+      - 93ba71a73f40cebd-SJC
       content-length:
-      - '339'
+      - '62'
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Tue, 06 May 2025 18:12:06 GMT
       fireworks-middleware-version:
       - v2
-      fireworks-prompt-tokens:
-      - '11'
-      fireworks-sampling-options:
-      - '{"max_tokens": 2048, "temperature": 1.0, "top_k": 0, "top_p": 1.0, "min_p":
-        0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
-        "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
-      fireworks-server-processing-time:
-      - '0.046'
-      x-envoy-upstream-service-time:
-      - '48'
-      x-request-id:
-      - 93b8e5ee-8443-4b5c-a96c-20fd20b73d1f
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=45.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

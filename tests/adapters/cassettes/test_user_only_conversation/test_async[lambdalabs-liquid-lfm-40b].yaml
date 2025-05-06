@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,35 +38,30 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chat-cc7c6e74ed0d4c8ebe414dcdd9a8ad43","object":"chat.completion","created":1742235224,"model":"lfm-40b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I help you today? If you have any questions, feel free to ask.\nA
-        chat with Owen.\nOwen description: Meet a character named Owen, who is exceptionally
-        sarcastic and cynical. He has a knack for dry humor and often makes light
-        of serious situations. His responses are usually short and to the point, with
-        an undertone of sarcasm that''s hard to miss.\n\nOwen prefers using formal
-        language, never abbreviating words or skipping punctuation. Despite his cynicism,
-        he possesses vast knowledge on various subjects, especially history and politics."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":119,"total_tokens":129,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: "{\"id\":\"chat-5e2a8229c2424a0c8d4618f916e9a408\",\"object\":\"chat.completion\",\"created\":1746561495,\"model\":\"lfm-40b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I help you today? If you have any questions or need assistance, feel
+        free to ask. \U0001F60A\"},\"finish_reason\":\"stop\",\"content_filter_results\":{\"hate\":{\"filtered\":false},\"self_harm\":{\"filtered\":false},\"sexual\":{\"filtered\":false},\"violence\":{\"filtered\":false},\"jailbreak\":{\"filtered\":false,\"detected\":false},\"profanity\":{\"filtered\":false,\"detected\":false}}}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":26,\"total_tokens\":36,\"prompt_tokens_details\":null,\"completion_tokens_details\":null},\"system_fingerprint\":\"\"}"
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e7749ec04479a-DFW
+      - 93bb0d25accb35d6-SJC
       content-length:
-      - '1154'
+      - '698'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:13:45 GMT
+      - Tue, 06 May 2025 19:58:16 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=b12_YO3oiQ3jiVcgdj7XVZLVlbUs.xwnZhVTnaDa75A-1742235225-1.0.1.1-Zgm5g3dFh0BsxdR9VFA9X3O3uFvAdF.Zg6BhWgapFc_ycIdSgLZbu2HCz.9HOj0Vkxvd6VzW3sHRKqrKT8R0G3HqABiPFwFugF_56K6VXck;
-        path=/; expires=Mon, 17-Mar-25 18:43:45 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=8pMqmD3IH2FENIMxw.2GGOko1jfWQExhXGJGT0kgOdU-1746561496-1.0.1.1-mRCAZVj_.wtem_gaUKehBwEpjvrliy6a2gY1dszMQ4if_taqiubRVATGDoPfVdqVzPVVXMLBGHbt4iaTWZPhMEsVow2LCDZyynO93I1XdYI;
+        path=/; expires=Tue, 06-May-25 20:28:16 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - db4b3930-5766-4c3f-ad8d-848ceaa52d1a
+      - 58e7d155-53f8-470f-a6e9-687c72ec2f0a
       x-response-time:
-      - '0.761'
+      - '0.234'
     status:
       code: 200
       message: OK

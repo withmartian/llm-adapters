@@ -16,7 +16,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,7 +26,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,29 +39,29 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-7ef29971-25d3-4213-b46a-5fdd678f578c","object":"chat.completion","created":1742234782,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"How
+      string: '{"id":"chatcmpl-dbbc6e77-8184-432c-a4d3-3910fd6c0d8a","object":"chat.completion","created":1746554956,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"How
         can I assist you today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":42,"completion_tokens":8,"total_tokens":50,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6c7eb9ea4614-DFW
+      - 93ba6d7bdd08eb32-SJC
       content-length:
       - '644'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:06:22 GMT
+      - Tue, 06 May 2025 18:09:16 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=YLAw0s918bhmTjQ6NfL0wHWalqKQ7u1UZ1X_YAJP5Y0-1742234782-1.0.1.1-iTUQZLfnHtpbZdK1Xf2fD_QQwqMvh6Q9polyEN65Fee2xgG.6LxpzLO1HCuobqjjIywJg8gn44VMUk7Ujk.8sC8sGadBcZXDri3G9ZlMelc;
-        path=/; expires=Mon, 17-Mar-25 18:36:22 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=LS8m1my0Km5OEuqh4NZCR8drncMxnlVbjkKR_WzurMQ-1746554956-1.0.1.1-bk3zW39gugxc0xzWtoAuOBFFIGji3OjrXl8FVIBRdb0FGv7ja0qqzElpBZ6NBIyZXmW3bTe5FJ0Mla327IugbVFO.D_dScoJq2nEmTBcFOk;
+        path=/; expires=Tue, 06-May-25 18:39:16 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 7ef29971-25d3-4213-b46a-5fdd678f578c
+      - dbbc6e77-8184-432c-a4d3-3910fd6c0d8a
       x-response-time:
-      - '0.188'
+      - '0.154'
     status:
       code: 200
       message: OK

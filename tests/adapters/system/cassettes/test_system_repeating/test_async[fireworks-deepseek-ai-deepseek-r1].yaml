@@ -15,7 +15,7 @@ interactions:
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,44 +25,37 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: "{\"id\":\"5bd04655-0381-431c-8743-8a94252ee564\",\"object\":\"chat.completion\",\"created\":1738285196,\"model\":\"accounts/fireworks/models/deepseek-r1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\n\\n</think>\\n\\nHi!
-        How can I assist you today? \U0001F60A\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":15,\"total_tokens\":31,\"completion_tokens\":16}}"
+      string: "{\"id\":\"97954965-3326-4bed-b886-8005dd44ce0f\",\"object\":\"chat.completion\",\"created\":1746561021,\"model\":\"accounts/fireworks/models/deepseek-r1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\n\\n</think>\\n\\nHi!
+        It looks like you're saying hello a lot! \U0001F60A How can I assist you today?
+        Whether it's a question, a chat, or something else, I'm here to help!\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":15,\"total_tokens\":60,\"completion_tokens\":45}}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5c308c89aebf1-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 31 Jan 2025 00:59:56 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=837.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb018e2adffb50-SJC
       content-length:
-      - '361'
+      - '472'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:50:22 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,11 +65,17 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.668'
-      fireworks-speculation-generated-tokens:
-      - '9'
+      - '0.999'
+      fireworks-server-time-to-first-token:
+      - '0.410'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=1345.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '670'
+      - '1003'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -92,7 +91,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '59985'
       x-request-id:
-      - 5bd04655-0381-431c-8743-8a94252ee564
+      - 97954965-3326-4bed-b886-8005dd44ce0f
     status:
       code: 200
       message: OK

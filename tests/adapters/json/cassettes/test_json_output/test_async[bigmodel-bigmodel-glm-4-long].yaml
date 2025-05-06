@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi, output simple json"}], "model":
-      "glm-4-long", "response_format": {"type": "json_object"}}'
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"glm-4-long","response_format":{"type":"json_object"}}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '136'
+      - '127'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,43 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
-      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"{\"answer\":\"Hi,
-        output simple \"}","role":"assistant"}}],"created":1733771128,"id":"202412100305279a81f38accd2456e","model":"glm-4-long","request_id":"202412100305279a81f38accd2456e","usage":{"completion_tokens":16,"prompt_tokens":64,"total_tokens":80}}'
+      string: "{\"error\":{\"code\":\"1113\",\"message\":\"\u60A8\u7684\u8D26\u6237\u5DF2\u6B20\u8D39\uFF0C\u8BF7\u5145\u503C\u540E\u91CD\u8BD5\u3002\"}}"
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:05:28 GMT
-      Set-Cookie:
-      - acw_tc=784e2c8d17337711271865807e31d569576fe63702880ae93db446bba5cf04;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:08:53 GMT
+      set-cookie:
+      - acw_tc=ac11000117465549327935860e0055dc07770ad4179d3e29349ca0844fc2ea;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
+      vary:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 202412100305279a81f38accd2456e
-      content-length:
-      - '323'
+      x-log-id:
+      - 20250507020853e6a4ddc3c99944a6
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

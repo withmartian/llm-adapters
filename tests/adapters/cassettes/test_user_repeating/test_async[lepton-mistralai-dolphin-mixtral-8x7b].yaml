@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi\nHi"}], "model": "dolphin-mixtral-8x7b"}'
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"dolphin-mixtral-8x7b"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '86'
+      - '80'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,38 +25,40 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-MshyNAiFJEcjVTqjwLq7TU","object":"chat.completion","created":1733374845,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I help you today?","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":12,"total_tokens":22,"completion_tokens":10}}'
+      string: '{"id":"chatcmpl-zUEXRRzSR8VNCK7W9QXRrq","object":"chat.completion","created":1746561577,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        letter \"H\" is pronounced \"haitch\" in Northern Ireland and parts of Scotland.
+        In the rest of the United Kingdom, \"haitch\" is less common and the letter
+        \"H\" is more commonly pronounced \"aytch\".","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":12,"total_tokens":64,"completion_tokens":52}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed17970ee03fa05-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 05:00:45 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93bb0f20db15234f-SJC
       content-length:
-      - '378'
+      - '519'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:59:37 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '194'
+      - '428'
     status:
       code: 200
       message: OK

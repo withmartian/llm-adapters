@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "gpt-3.5-turbo-instruct", "prompt": "Hi"}'
+    body: '{"model":"gpt-3.5-turbo-instruct","prompt":"Hi"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '51'
+      - '48'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,65 +25,69 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.openai.com/v1/completions
   response:
     body:
       string: !!binary |
-        IaQGACBW6qxXU+1snlHdA8MZSBrrnLDZDhx222DFAQZxEj0GGJbxIIk48cDSbV6CdyTTir85LxwY
-        gOk/LfhX+mJ+R/bWVns3vW537eIw/9nU26XL+jLreU2enzhnALrfTP6UFlTp6tefK30hmrqKcwbg
-        r+We/NNieXN1bXltZWt9G/uqdP9S0IKx1/nVhfV5bepfN9/IKGdwE5f+SaDFmwGAwSqg3q+04Hv1
-        Xp3oZIDL51CmlSAN6Pz04Br9/1H5n8O8AUZUog9See1mpAGS/MkpL2jqz7RY2t0VLva1+w20qJqi
-        iAlnW/fVH+tKC5I7GLFlZICPa9ZN+ImF9uQH9LUrvX6py6UKtFiulfj3bBiPGwYTDkBcs2mAkRkZ
-        AwM=
+        IYQGACB+r1v1aar/5kQxS3miEgi2MqyZ2Q4cdjfZxgMcxEn0mGgG0SCou8gSz+ZGiVDYf7gupw8u
+        BEBVRhKUdpq2cfB8XpxceR/KPzm+ic5HXIzrx1vvXSk/v6V9ARCrWqdDkqChng5/U+40bT2suEv7
+        AqBbyzOdkYQT+WEQOp4f5f7qcKbbJEFFMzQ8MzCGo75ig8joVLq269mx6xtjt1pacpXqAUl8CgBY
+        aIre1yRB+zjf6mDY56GhRoWJdx6BMuqe0vhHV08wGui++dX96r7rAUSqAW/pD5Kwras2F02f1YAk
+        uqN2O5p3tXW/vFhHkqClDkKYykoA3+PVo8F/oUmiPKCmz51m+Dvklu4OSMLp7pQeF/otFPjZAPQ1
+        kQBWYiUMAw==
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8f1ab7c5edacebf1-SJC
-      Cache-Control:
-      - no-cache, must-revalidate
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - br
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 14 Dec 2024 02:21:00 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - __cf_bm=LkbnJebIofKcOjru_opW8NqHrZj5XeIE3hlj731OdrI-1734142860-1.0.1.1-2co1hM1abxy.sXeCkVLyf.5ou.J4mQQcpcCTlLUaN.6IAK9TX9HVTOg1XuDYfkYl9F_5fWd7FB2mB.e0BgnAeA;
-        path=/; expires=Sat, 14-Dec-24 02:51:00 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=_VMs_yYiRz8jnnvjXvBZ.EWS_DLOxuTShA615ECFzY8-1734142860150-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
-      X-Content-Type-Options:
-      - nosniff
       access-control-allow-origin:
       - '*'
       access-control-expose-headers:
       - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
+      cache-control:
+      - no-cache, must-revalidate
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0980ec3d7ad3-SJC
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:55:47 GMT
       openai-model:
-      - gpt-3.5-turbo-instruct
+      - gpt-3.5-turbo-instruct:20230824-v2
       openai-organization:
       - martian-4
       openai-processing-ms:
-      - '434'
+      - '741'
       openai-version:
       - '2020-10-01'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=i6KV88Pw8pAKNkleIuBkE6xr_DP82zdPb3ymlp2zoXE-1746561347-1.0.1.1-_dGyay_nkYUQWz2oAoFRMcnYbzBiJB.Itle6RMyXA5KAjZGITFJ2GDlashd_DnEcvz4XSwhHsNNpLrJCrENqnMiyOwoCjzYk_30tu81p4KA;
+        path=/; expires=Tue, 06-May-25 20:25:47 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=Gn1tJzxCSvgi_d2tIv5ubiHCiDUULvVgmNIVpNfYkCA-1746561347873-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      via:
+      - envoy-router-8985dd5b9-g65xv
+      x-content-type-options:
+      - nosniff
+      x-envoy-upstream-service-time:
+      - '699'
       x-ratelimit-limit-requests:
       - '3500'
       x-ratelimit-limit-tokens:
@@ -91,13 +95,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '3499'
       x-ratelimit-remaining-tokens:
-      - '89983'
+      - '89998'
       x-ratelimit-reset-requests:
       - 17ms
       x-ratelimit-reset-tokens:
-      - 10ms
+      - 0s
       x-request-id:
-      - req_b2bc1f6b6405f316019fb64d5af1d235
+      - req_f1b3d19db1ac9e0dc7566dcc5a5dd15f
     status:
       code: 200
       message: OK

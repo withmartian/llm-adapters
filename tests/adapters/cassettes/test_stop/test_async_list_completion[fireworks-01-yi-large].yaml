@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "accounts/yi-01-ai/models/yi-large", "prompt": "Hi", "stop":
-      ["stop", "end"]}'
+    body: '{"model":"accounts/yi-01-ai/models/yi-large","prompt":"Hi","stop":["stop","end"]}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '87'
+      - '81'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,43 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/completions
   response:
     body:
-      string: "{\"id\":\"8b2b03d0-0625-445f-8ead-50a7b0e9d148\",\"object\":\"text_completion\",\"created\":1734127186,\"model\":\"accounts/yi-01-ai/models/yi-large\",\"choices\":[{\"index\":0,\"text\":\"\uFF08\u4F60\u597D\uFF09\uFF0C\u56E0\u4E3A\u5B83\u4EEC\u5728\u4E0D\u540C\u7684\u6587\u5316\u548C\u8BED\u8A00\u4E2D\u6709\u7740\u76F8\u4F3C\u7684\u529F\u80FD\uFF0C\u88AB\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":18,\"completion_tokens\":16}}"
+      string: '{"id":"db08a940-8e25-4fd8-ae9b-93b879f70f48","object":"text_completion","created":1746561403,"model":"accounts/yi-01-ai/models/yi-large","choices":[{"index":0,"text":"
+        you should use the MVC architecture here. Model = Data you want to work","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":18,"completion_tokens":16}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8f19391f785c67ac-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 13 Dec 2024 21:59:46 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - inference-server;dur=387.0,total;dur=493.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0ae08eb5944a-SJC
       content-length:
-      - '365'
+      - '353'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:56:43 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -72,9 +64,15 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.322'
+      - '0.391'
+      server:
+      - cloudflare
+      server-timing:
+      - inference-server;dur=466.0,total;dur=556.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '324'
+      - '394'
       x-ratelimit-limit-requests:
       - '60'
       x-ratelimit-limit-tokens-generated:
@@ -90,7 +88,7 @@ interactions:
       x-ratelimit-remaining-tokens-prompt:
       - '29998'
       x-request-id:
-      - 8b2b03d0-0625-445f-8ead-50a7b0e9d148
+      - db08a940-8e25-4fd8-ae9b-93b879f70f48
     status:
       code: 200
       message: OK

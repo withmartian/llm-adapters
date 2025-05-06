@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "tensoropera-yodayo/L3.1-70B-Euryale-v2.2_gpu4", "prompt": "Hi",
-      "max_tokens": 10, "stream": true}'
+    body: '{"model":"tensoropera-yodayo/L3.1-70B-Euryale-v2.2_gpu4","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '108'
+      - '101'
       content-type:
       - application/json
       host:
       - open.tensoropera.ai
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,64 +25,33 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.tensoropera.ai/inference/api/v1/completions
   response:
     body:
-      string: 'data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"Ge","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"ig","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"062","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"819","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"76","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"
-        Kidd","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"if","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"ashion","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"
-        |","logprobs":null,"finish_reason":null,"stop_reason":null}],"usage":null}
-
-
-        data: {"id":"cmpl-38a4348c35f34eee82ce8918b84ef3e8","object":"text_completion","created":1733944121,"model":"L3.1-70B-Euryale-v2.2_gpu4","choices":[{"index":0,"text":"
-        Fashion","logprobs":null,"finish_reason":"length","stop_reason":null}],"usage":null}
-
-
-        data: [DONE]
-
-
-        '
+      string: !!binary |
+        BSYAAMTylqpd/pA+E5Rn80Ez89EoJAMOOXC73iJpCwxqSztReYgaBoyw7AOv02EeXyCMbdArPqco
+        2iRpCzUWBcH66eB15/wD
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream;charset=UTF-8
-      Date:
-      - Wed, 11 Dec 2024 19:08:41 GMT
-      Strict-Transport-Security:
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:11:50 GMT
+      strict-transport-security:
       - max-age=15724800; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
+      vary:
+      - Accept-Encoding
       - Origin
     status:
       code: 200

@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi "}], "model": "wizardlm-2-8x22b"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "},{"role":"user","content":"\"\""}],"model":"wizardlm-2-8x22b"}'
     headers:
       accept:
       - application/json
@@ -10,13 +10,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '119'
+      - '142'
       content-type:
       - application/json
       host:
       - wizardlm-2-8x22b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,39 +26,40 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://wizardlm-2-8x22b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-fgLLwtGu4hbiciK4vtfqgC","object":"chat.completion","created":1733368464,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        How can I assist you today? If you have any questions or need information
-        on a specific topic, feel free to ask.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":15,"total_tokens":43,"completion_tokens":28}}'
+      string: '{"id":"chatcmpl-ikrE8bfxQkQvWQQJgq7HrX","object":"chat.completion","created":1746554967,"model":"wizardlm-2-8x22b","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you might have entered an empty string by mistake or you''re ready
+        to tell me something but haven''t yet. How can I assist you today? If you
+        have any questions or need information on a specific topic, feel free to ask!","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":19,"total_tokens":72,"completion_tokens":53}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0dda9284dce80-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:14:25 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba6dbf797deb25-SJC
       content-length:
-      - '461'
+      - '540'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:09:27 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '613'
+      - '747'
     status:
       code: 200
       message: OK

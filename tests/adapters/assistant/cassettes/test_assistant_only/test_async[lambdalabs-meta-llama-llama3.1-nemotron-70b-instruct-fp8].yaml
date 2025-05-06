@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,45 +38,46 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-dbb169e3-a5a7-40d2-9fc5-3942aa19440d","object":"chat.completion","created":1742234810,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems like you just sent a blank response (``````). I''m here to help, so
-        please feel free to start a conversation or ask a question on any topic you''re
-        interested in. Here are some prompts to get us started if you''re unsure:\n\n1.
-        **Technology**:\n   - Explain artificial intelligence in simple terms.\n   -
-        What are the latest trends in smartphone technology?\n\n2. **Science and Environment**:\n   -
-        What are some simple ways to reduce carbon footprint?\n   - Explain the basics
-        of quantum physics.\n\n3. **Culture and Entertainment**:\n   - Recommend a
-        recent movie/TV series with a brief summary.\n   - Discuss the influence of
-        social media on pop culture.\n\n4. **Travel and Food**:\n   - Suggest a budget-friendly
-        travel destination with must-see spots.\n   - Share a simple recipe from an
-        exotic cuisine.\n\n5. **Learning and Productivity**:\n   - Tips for improving
-        focus in a distracting work environment.\n   - Best practices for learning
-        a new language quickly.\n\n6. **Gaming**:\n   - What are some highly anticipated
-        upcoming game releases?\n   - Discuss the evolution of a particular game genre.\n\n7.
-        **Open Question**:\n   - Ask me anything that''s on your mind, no matter how
-        weird or wonderful!\n\nPlease type your question or topic of interest, and
-        I''ll do my best to provide a helpful and engaging response."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":285,"total_tokens":301,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-044056c7-2db1-4fc7-a752-d887f833dfb2","object":"chat.completion","created":1746561292,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like we''re starting from a blank slate. How can I assist you today?
+        Please pick one of the options below, or feel free to suggest something else
+        that''s on your mind:\n\n1. **Ask a Question**: On any topic, from science
+        and history to entertainment and culture.\n2. **Generate Text**: Provide a
+        prompt, and I''ll create a short story, poem, or even a script for you.\n3.
+        **Language Translation**: If you have text in one language, I can translate
+        it into another.\n4. **Summarize Content**: Share an article, document, or
+        long piece of text, and I''ll summarize it for you.\n5. **Chat for Fun**:\n   -
+        **Would You Rather**: I''ll give you two fun options to choose from.\n   -
+        **Two Truths and a Lie**: Guess which statement isn''t true.\n   - **Hangman**:
+        Let''s play a game of hangman.\n   - **Word Chain**: We take turns saying
+        a word that starts with the last letter of the previous word.\n6. **Learn
+        Something New**: Pick a topic you''re curious about, and I''ll provide an
+        introductory lesson.\n7. **Creative Project Brainstorming**: Have a project
+        in mind but need ideas? Let''s brainstorm together.\n8. **Other (Please Specify)**:
+        If none of the above appeals to you, describe what''s on your mind, and I''ll
+        do my best to assist you.\n\nWhich option sounds interesting to you, or do
+        you have something entirely different in mind?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":315,"total_tokens":331,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e6d2bbea74624-DFW
+      - 93bb082b5da51949-SJC
       content-length:
-      - '1963'
+      - '1970'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:06:58 GMT
+      - Tue, 06 May 2025 19:54:58 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=6IIFMu8vUvejom2i16DTyOJJ4Ov3blGFBZYAd9Riz1I-1742234818-1.0.1.1-kykWS9EtTStfo933WcZojXWQF5jZtDdGuvtwI2VbaWPXx44_k0I_1PTVziehpT4_YTJ76us06x8aEsCJmaaYDNFOpOjQXQCtD41BBtkxCIM;
-        path=/; expires=Mon, 17-Mar-25 18:36:58 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=sDjGVaC0svNGsKsnq0I54yCV3m9oqFQc6ZAgU5Xc358-1746561298-1.0.1.1-Nb6KOP1DcEbindy1bwAVL1peDFWfs5ZLw8RQsn5avT1U5cU7wYGMFL_.vq6J.PCDBe_9IB7lcY50XCHOu7CIjxDbvLFaK9ywQCj4ZkkepKk;
+        path=/; expires=Tue, 06-May-25 20:24:58 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - dbb169e3-a5a7-40d2-9fc5-3942aa19440d
+      - 044056c7-2db1-4fc7-a752-d887f833dfb2
       x-response-time:
-      - '8.186'
+      - '6.49'
     status:
       code: 200
       message: OK

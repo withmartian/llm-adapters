@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B","n":2}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '74'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-09804578060840e5bac7558182d4823c\",\"object\":\"chat.completion\",\"created\":1746561038,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user just said \\\"Hi\\\". That's a common greeting. I should respond
+        politely and offer assistance. Maybe say something like \\\"Hello! How can
+        I assist you today?\\\" to keep the conversation going. Let me make sure there's
+        no hidden context I'm missing. Since they didn't add any special instructions,
+        a standard friendly reply should be fine. I'll go with that.\\n\\n</think>\\n\\nHello!
+        How can I assist you today?\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null},{\"index\":1,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user said \\\"Hi\\\". I need to respond in a friendly way. Let me think
+        of a few options. Maybe \\\"Hello! How are you today?\\\" or \\\"Hi there!
+        How can I assist you?\\\" Hmm, which one is better? The second one seems more
+        inviting and opens the conversation up for assistance. But maybe I should
+        keep it simple first. Or perhaps add an emoji to make it feel warmer. Like
+        \\\"Hi! How can I help you today? \U0001F60A\\\" Yeah, that sounds good. It's
+        friendly and offers assistance. I'll go with that.\\n</think>\\n\\nHi! How
+        can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":233,\"completion_tokens\":222,\"estimated_cost\":4.605000000000001e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1451'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 19:50:38 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

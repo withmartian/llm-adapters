@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "Qwen/Qwen2.5-72B-Instruct", "prompt": "Hi", "max_tokens": 10,
-      "stream": true}'
+    body: '{"model":"Qwen/Qwen2.5-72B-Instruct","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '88'
+      - '81'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,57 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "data: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\", \"object\": \"text_completion\",
-        \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\", \"choices\":
-        [{\"index\": 0, \"text\": \",\", \"logprobs\": null, \"finish_reason\": null}],
-        \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" has\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" anyone\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" really\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" used\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" the\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" performance\", \"logprobs\": null,
-        \"finish_reason\": null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" testing\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" and\", \"logprobs\": null, \"finish_reason\":
-        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
-        \"choices\": [{\"index\": 0, \"text\": \" optimization\", \"logprobs\": null,
-        \"finish_reason\": null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RNd8OUp5Hw4snDzJVX2hjaE5\",
-        \"object\": \"text_completion\", \"created\": 1733910320, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+      string: "data: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\", \"object\": \"text_completion\",
+        \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\", \"choices\":
+        [{\"index\": 0, \"text\": \",\\n\\n\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \"If\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" we\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" seek\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" to\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" compute\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" if\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" a\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" number\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
+        \"choices\": [{\"index\": 0, \"text\": \" $\", \"logprobs\": null, \"finish_reason\":
+        null}], \"usage\": null}\r\n\r\ndata: {\"id\": \"cmpl-RDfWuOd46IWE8T4CdPOtUjIJ\",
+        \"object\": \"text_completion\", \"created\": 1746555169, \"model\": \"Qwen/Qwen2.5-72B-Instruct\",
         \"choices\": [{\"index\": 0, \"text\": \"\", \"logprobs\": null, \"finish_reason\":
         \"length\"}], \"usage\": {\"prompt_tokens\": 1, \"total_tokens\": 11, \"completion_tokens\":
-        10, \"estimated_cost\": 4.23e-06}}\r\n\r\ndata: [DONE]\r\n\r\n"
+        10, \"estimated_cost\": 4.0200000000000005e-06}}\r\n\r\ndata: [DONE]\r\n\r\n"
     headers:
       Connection:
       - keep-alive
       Content-Type:
       - text/event-stream; charset=utf-8
       Date:
-      - Wed, 11 Dec 2024 09:45:20 GMT
+      - Tue, 06 May 2025 18:12:49 GMT
       Transfer-Encoding:
       - chunked
       cache-control:

@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "user", "content":
-      "\"\""}], "model": "meta-llama/Meta-Llama-3.1-405B-Instruct"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '140'
+      - '130'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,27 +25,31 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-b215e80bb1de4057852be59e1208850f","object":"chat.completion","created":1733375347,"model":"meta-llama/Meta-Llama-3.1-405B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        looks like you didn''t type anything. Would you like to start a conversation?
-        I''m here to chat!","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":17,"total_tokens":40,"completion_tokens":23,"estimated_cost":3.6e-05}}'
+      string: '{"id":"chatcmpl-RRQz4o3ceOKmHLeJHigTkWJG","object":"chat.completion","created":1746555089,"model":"meta-llama/Meta-Llama-3.1-405B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        looks like you didn''t type anything. Would you like to start a conversation
+        or ask a question? I''m here to help!","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":44,"completion_tokens":27,"estimated_cost":3.52e-05}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '461'
+      - '488'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 05:09:07 GMT
+      - Tue, 06 May 2025 18:11:29 GMT
       server:
       - uvicorn
       x-robots-tag:

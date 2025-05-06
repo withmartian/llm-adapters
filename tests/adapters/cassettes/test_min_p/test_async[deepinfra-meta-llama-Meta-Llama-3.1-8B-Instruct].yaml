@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "meta-llama/Meta-Llama-3.1-8B-Instruct"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"meta-llama/Meta-Llama-3.1-8B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '99'
+      - '93'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,26 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-7fa7cd010e9147b0b613628474628303","object":"chat.completion","created":1734126197,"model":"meta-llama/Meta-Llama-3.1-8B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"How''s
-        it going? Is there something I can help you with or would you like to chat?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":11,"total_tokens":31,"completion_tokens":20,"estimated_cost":1.33e-06}}'
+      string: '{"id":"chatcmpl-RrAYBnNstiRLVkQjABFP0q25","object":"chat.completion","created":1746561026,"model":"meta-llama/Meta-Llama-3.1-8B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"How
+        can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":18,"completion_tokens":7,"estimated_cost":6.8e-07}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '444'
+      - '396'
       Content-Type:
       - application/json
       Date:
-      - Fri, 13 Dec 2024 21:43:17 GMT
+      - Tue, 06 May 2025 19:50:26 GMT
       server:
       - uvicorn
       x-robots-tag:

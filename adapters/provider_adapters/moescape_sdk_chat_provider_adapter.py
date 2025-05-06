@@ -1,5 +1,5 @@
 from adapters.abstract_adapters.openai_sdk_chat_adapter import OpenAISDKChatAdapter
-from adapters.types import Cost, Model, Provider, Vendor
+from adapters.types import Model, Provider, Vendor
 
 
 class MoescapeModel(Model):
@@ -8,19 +8,19 @@ class MoescapeModel(Model):
 
 
 MODELS: list[Model] = [
-    MoescapeModel(
-        name="nephara",
-        api_name="llama3-8b-instruct",
-        cost=Cost(prompt=0, completion=0),
-        context_length=8192,
-    ),
-    MoescapeModel(
-        name="lunara",
-        api_name="lunara-12bv1",
-        cost=Cost(prompt=0, completion=0),
-        context_length=12288,
-        can_system_only=False,
-    ),
+    # MoescapeModel(
+    #     name="nephara",
+    #     api_name="llama3-8b-instruct",
+    #     cost=Cost(prompt=0, completion=0),
+    #     context_length=8192,
+    # ),
+    # MoescapeModel(
+    #     name="lunara",
+    #     api_name="lunara-12bv1",
+    #     cost=Cost(prompt=0, completion=0),
+    #     context_length=12288,
+    #     can_system_only=False,
+    # ),
 ]
 
 

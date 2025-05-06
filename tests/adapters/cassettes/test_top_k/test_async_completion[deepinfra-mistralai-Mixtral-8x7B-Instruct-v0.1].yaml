@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '62'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-RxbZBzrC5btCvrdiHC8Ba9Uj","object":"text_completion","created":1746562793,"model":"mistralai/Mixtral-8x7B-Instruct-v0.1","choices":[{"index":0,"text":",
+        Q! I''ve got some great ideas about activities, but I want to know: What do
+        kids like to do on field trips? Do you have suggestions that will make sure
+        we all have a good time? Thanks!\nUser 3: Hiking and nature walks (assuming
+        a nearby forest for exploration) are always great. If possible, go to a marsh
+        or swamp with a handy boardwalk, kids love those. Basically, make sure they
+        have enough opportunity to discover new things in a safe environment, and
+        that they''re being encouraged to explore on their own but also with others
+        (group formation and activity).\n\nIf you can''t do hikes and stuff like that,
+        museums and things that are hands on. Have a box of (plastic) pulleys, nails,
+        bolts, nuts, board, sandpaper, drill, etc for things like Mechanics classes.\n\nIf
+        you''re ever caught at the later half of a bell ringer without anything planned
+        and you don''t want to go straight to the next topic, have a box of blobs
+        of multicolored clay (have a \"lego rack\" too for easier building) and let
+        them go wild.","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":254,"completion_tokens":253,"estimated_cost":6.096e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1316'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:19:53 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

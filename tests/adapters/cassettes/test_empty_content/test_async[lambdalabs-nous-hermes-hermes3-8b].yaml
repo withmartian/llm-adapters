@@ -16,7 +16,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,7 +26,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -37,32 +39,31 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-8b6d2039-f811-4946-89dc-5813b79ccfb7","object":"chat.completion","created":1742234991,"model":"hermes3-8b","choices":[{"index":0,"message":{"role":"assistant","content":"It
-        seems like you may have inadvertently sent an empty message or typo in your
-        last request. Could you please clarify what you would like assistance with
-        or rephrase your question? I''m happy to help, but I''ll need a bit more information
-        from you to provide a meaningful response. Let me know how I can assist!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":36,"completion_tokens":65,"total_tokens":101,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-07bee5c1-a500-4189-802f-3032d444359a","object":"chat.completion","created":1746555194,"model":"hermes3-8b","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
+        happy to help with any questions or tasks you may have! Could you please provide
+        some more details about what you need assistance with? I''ll do my best to
+        provide a helpful response."},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":36,"completion_tokens":40,"total_tokens":76,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e7196186c6f16-DFW
+      - 93ba734b6ff7257e-SJC
       content-length:
-      - '918'
+      - '794'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:09:51 GMT
+      - Tue, 06 May 2025 18:13:15 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=O5_ZM2QMXAMU7iHeoq0fu.wHIK22s21kaOquqqAaz6I-1742234991-1.0.1.1-.Hwo2yPfb4BNmG7MCX5QgEnFvx0RaCpJGV4G20SOV5rzBX8iqizcZLIVhA15W5X9wJNG5w2F7Umi_X0TGSe_X.bkOhpryPJkpdxSnV0v63E;
-        path=/; expires=Mon, 17-Mar-25 18:39:51 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=f1Eg9ohfr1I6bOw8e2.l9wtA4Rv8SYJiSZu8bHyuZd8-1746555195-1.0.1.1-OUySkIgwufL6HaLx5SYgOL3iQKbw9iKGvryCY.1FeNiyAue9p40lnsNdSAhV5xusaty7SF5uGRLomeukReKHQTnp3VG8TpllTUFLLmMFFOk;
+        path=/; expires=Tue, 06-May-25 18:43:15 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 8b6d2039-f811-4946-89dc-5813b79ccfb7
+      - 07bee5c1-a500-4189-802f-3032d444359a
       x-response-time:
-      - '0.501'
+      - '0.803'
     status:
       code: 200
       message: OK

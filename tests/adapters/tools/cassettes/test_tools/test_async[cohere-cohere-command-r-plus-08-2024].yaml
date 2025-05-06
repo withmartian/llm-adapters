@@ -1,11 +1,9 @@
 interactions:
 - request:
-    body: '{"model": "command-r-plus-08-2024", "messages": [{"role": "user", "content":
-      "Generate random number with tools specified, range 1-10"}], "tools": [{"type":
-      "function", "function": {"description": "Generate random number", "name": "generate",
-      "parameters": {"type": "object", "properties": {"prompt": {"type": "string",
-      "description": "Random number like 5, 4, 3, 10, 11"}}, "required": ["prompt"]}}}],
-      "stream": false}'
+    body: '{"model":"command-r-plus-08-2024","messages":[{"role":"user","content":"Generate
+      random number with tools specified, range 1-10"}],"tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"stream":false}'
     headers:
       accept:
       - '*/*'
@@ -14,30 +12,31 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '419'
+      - '392'
       content-type:
       - application/json
       host:
       - api.cohere.com
       user-agent:
-      - python-httpx/0.27.2
+      - python-httpx/0.28.1
       x-fern-language:
       - Python
       x-fern-sdk-name:
       - cohere
       x-fern-sdk-version:
-      - 5.11.3
+      - 5.15.0
     method: POST
     uri: https://api.cohere.com/v2/chat
   response:
     body:
-      string: '{"id":"0d0cabe8-f5ea-4c2d-9361-77fd417e1aec","message":{"role":"assistant","tool_plan":"I
-        will use the generate tool to generate a random number between 1 and 10.","tool_calls":[{"id":"generate_h8spn2bd8g94","type":"function","function":{"name":"generate","arguments":"{\"prompt\":\"1,2,3,4,5,6,7,8,9,10\"}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":38,"output_tokens":44},"tokens":{"input_tokens":914,"output_tokens":79}}}'
+      string: '{"id":"6228bdbb-ecbd-497f-b9d3-c1109bec93b0","message":{"role":"assistant","tool_plan":"I
+        will use the generate tool to generate a random number between 1 and 10.","tool_calls":[{"id":"generate_ngps6rnnfm3y","type":"function","function":{"name":"generate","arguments":"{\"prompt\":\"1,
+        10\"}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":38,"output_tokens":29},"tokens":{"input_tokens":914,"output_tokens":63}}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Content-Length:
-      - '453'
+      - '438'
       Via:
       - 1.1 google
       access-control-expose-headers:
@@ -47,13 +46,13 @@ interactions:
       content-type:
       - application/json
       date:
-      - Sat, 23 Nov 2024 00:48:20 GMT
+      - Tue, 06 May 2025 20:00:25 GMT
       expires:
       - Thu, 01 Jan 1970 00:00:00 UTC
       num_chars:
       - '4363'
       num_tokens:
-      - '82'
+      - '67'
       pragma:
       - no-cache
       server:
@@ -63,9 +62,9 @@ interactions:
       x-accel-expires:
       - '0'
       x-debug-trace-id:
-      - 7052544bfbaf3bfc4969e29c753d775c
+      - 57dfc6c7f1f390209939290f9e0224e1
       x-envoy-upstream-service-time:
-      - '1437'
+      - '1792'
     status:
       code: 200
       message: OK

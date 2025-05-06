@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "meta-llama/Llama-3.2-11B-Vision-Instruct"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"meta-llama/Llama-3.2-11B-Vision-Instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '137'
+      - '127'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,27 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-ae97331c272c4812a31dfb905520e62b","object":"chat.completion","created":1733369123,"model":"meta-llama/Llama-3.2-11B-Vision-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        It looks like you''re testing out the greeting feature. How can I assist you
-        today?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":13,"total_tokens":33,"completion_tokens":20,"estimated_cost":1.815e-06}}'
+      string: '{"id":"chatcmpl-RCnwyP0YJn4dvy61zh4xXFcI","object":"chat.completion","created":1746561555,"model":"meta-llama/Llama-3.2-11B-Vision-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"That''s
+        a quick hello! What''s on your mind, or how can I help you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":13,"total_tokens":33,"completion_tokens":20,"estimated_cost":1.6169999999999997e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '456'
+      - '459'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:25:23 GMT
+      - Tue, 06 May 2025 19:59:15 GMT
       server:
       - uvicorn
       x-robots-tag:

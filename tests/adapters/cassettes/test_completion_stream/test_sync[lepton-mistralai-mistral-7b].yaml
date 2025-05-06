@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "mistral-7b", "prompt": "Hi", "max_tokens": 10, "stream": true}'
+    body: '{"model":"mistral-7b","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '73'
+      - '66'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,32 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/completions
   response:
     body:
-      string: 'data: {"id":"cmpl-Qh5apUUDv53X67h4dFiKzL","object":"text_completion","created":1733910381,"model":"mistral-7b","choices":[{"index":0,"text":",","logprobs":null,"finish_reason":null}]}
+      string: 'data: {"id":"cmpl-qf6RMasPuqaAz44DTmvQQv","object":"text_completion","created":1746555152,"model":"mistral-7b","choices":[{"index":0,"text":",","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-Qh5apUUDv53X67h4dFiKzL","object":"text_completion","created":1733910381,"model":"mistral-7b","choices":[{"index":0,"text":"
-        I''","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-qf6RMasPuqaAz44DTmvQQv","object":"text_completion","created":1746555152,"model":"mistral-7b","choices":[{"index":0,"text":"\n
+        ","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-Qh5apUUDv53X67h4dFiKzL","object":"text_completion","created":1733910381,"model":"mistral-7b","choices":[{"index":0,"text":"m
-        working on","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-qf6RMasPuqaAz44DTmvQQv","object":"text_completion","created":1746555152,"model":"mistral-7b","choices":[{"index":0,"text":"
+        I''m","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-Qh5apUUDv53X67h4dFiKzL","object":"text_completion","created":1733910381,"model":"mistral-7b","choices":[{"index":0,"text":"
-        a project that","logprobs":null,"finish_reason":null}]}
+        data: {"id":"cmpl-qf6RMasPuqaAz44DTmvQQv","object":"text_completion","created":1746555152,"model":"mistral-7b","choices":[{"index":0,"text":"
+        new to the","logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"cmpl-Qh5apUUDv53X67h4dFiKzL","object":"text_completion","created":1733910381,"model":"mistral-7b","choices":[{"index":0,"text":"
-        has","logprobs":null,"finish_reason":"length"}]}
+        data: {"id":"cmpl-qf6RMasPuqaAz44DTmvQQv","object":"text_completion","created":1746555152,"model":"mistral-7b","choices":[{"index":0,"text":"
+        site","logprobs":null,"finish_reason":"length"}]}
 
 
         data: [DONE]
@@ -58,22 +62,18 @@ interactions:
 
         '
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f048c0a8d7f06a9-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-ray:
+      - 93ba7243da9f5850-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:46:21 GMT
-      Server:
+      date:
+      - Tue, 06 May 2025 18:12:32 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '163'
+      - '6'
     status:
       code: 200
       message: OK

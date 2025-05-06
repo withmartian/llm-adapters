@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "},{"role":"user","content":"\"\""}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '131'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "799ab608-84ff-4aa0-a28b-42753bc65523", "model": "sonar", "created":
+        1746555014, "usage": {"prompt_tokens": 3, "completion_tokens": 241, "total_tokens":
+        244, "search_context_size": "low"}, "citations": ["https://preply.com/en/blog/22-useful-english-greetings-for-every-day/",
+        "https://www.fluentu.com/blog/english/english-greetings-expressions/", "https://www.clearenglishcorner.com/blog/64",
+        "https://en.amazingtalker.com/blog/en/english/47217/", "https://famworld.com/blogs/tipos-de-saludo-en-ingles-y-otras-frases-utiles"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Common English greetings include
+        **\"Hello,\" \"Hi,\"** and **\"Hey\"**[1][4], which work in most situations.
+        For time-specific greetings, use **\"Morning,\" \"Afternoon,\"** or **\"Evening\"**[1][4],
+        or the more formal **\"Good morning/afternoon/evening\"**[5]. To show warmth,
+        try **\"Nice to see you\"** or **\"Good to see you\"**[1][2][4].  \n\nFor
+        casual check-ins, ask **\"How are you doing?\"**, **\"How\u2019s it going?\"**[1][3],
+        or **\"How\u2019s your day?\"**[2]. These often pair with brief replies like
+        **\"Good,\" \"Fine,\"** or **\"Not bad\"**[2][4].  \n\nIn formal settings,
+        stick to **\"Good morning\"** or time-specific phrases[5]. For farewells,
+        use **\"Goodbye,\" \"See you later,\"** or **\"Have a nice day\"**[5].  \n\n(Note:
+        The query contained empty quotes, so this response outlines standard greetings
+        based on the provided results.)"}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6ed19a326456-SJC
+      content-length:
+      - '1568'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:14 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=beueaYUiY7q422Kfxy6kCtlutpGGse6ViT8b.UScMd0-1746555014-1.0.1.1-VitptZcXMS474wPySSGpOtOWXqmfjfDc6x86c5XV.uurlhvCnv0hpBoVk3mQrqrnde9Jm565smDrwG_STqYL00vKc69S338P7LrBp.0en3A;
+        path=/; expires=Tue, 06-May-25 18:40:14 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

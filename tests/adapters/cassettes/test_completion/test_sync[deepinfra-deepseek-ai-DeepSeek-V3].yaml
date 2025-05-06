@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - OpenAI/Python 1.59.3
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,28 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-2b570cc5ca2a41d4844da6573de430c3\",\"object\":\"text_completion\",\"created\":1738285862,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"text\":\"
-        prosto traveller \u0410h, the timeless question\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":2,\"total_tokens\":12,\"completion_tokens\":10,\"estimated_cost\":1.0700000000000003e-05}}"
+      string: '{"id":"cmpl-RrknGDJ2nTWJcTrGkhUMG1dK","object":"text_completion","created":1746555117,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"text":"NonHi\n\n0
+        / 0 / 0","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":2,"total_tokens":12,"completion_tokens":10,"estimated_cost":9.659999999999999e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '356'
+      - '321'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:11:02 GMT
+      - Tue, 06 May 2025 18:11:57 GMT
       server:
       - uvicorn
       x-robots-tag:

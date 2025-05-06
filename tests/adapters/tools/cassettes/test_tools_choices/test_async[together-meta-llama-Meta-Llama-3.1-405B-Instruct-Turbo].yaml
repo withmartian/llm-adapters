@@ -1,12 +1,9 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Generate random number with
-      tools specified, range 1-10"}], "model": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
-      "tool_choice": {"type": "function", "function": {"name": "generate"}}, "tools":
-      [{"type": "function", "function": {"description": "Generate random number",
-      "name": "generate", "parameters": {"type": "object", "properties": {"prompt":
-      {"type": "string", "description": "Random number like 5, 4, 3, 10, 11"}}, "required":
-      ["prompt"]}}}]}'
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
     headers:
       accept:
       - application/json
@@ -15,13 +12,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '496'
+      - '465'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -31,75 +28,80 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8e6ce57b188debe7-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1732320209,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
+      string: "{\n  \"id\": \"nszjKrw-2j9zxn-93bb20cede3acf0a\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746562301,\n  \"model\": \"meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo\",\n
         \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"tool_calls\",\n
-        \     \"seed\": 708627573533964500,\n      \"logprobs\": null,\n      \"index\":
+        \     \"seed\": 1349279858442829600,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         null,\n        \"tool_calls\": [\n          {\n            \"index\": 0,\n
-        \           \"id\": \"call_jc162grlz96ynnjm1ry5ajgh\",\n            \"type\":
-        \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"prompt\\\":\\\"10\\\"}\",\n
-        \             \"name\": \"generate\"\n            }\n          }\n        ]\n
-        \     }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 298,\n    \"completion_tokens\":
-        14,\n    \"total_tokens\": 312\n  }\n}"
+        \           \"id\": \"call_swjk94h1cd31d7bfxuuiyc3p\",\n            \"type\":
+        \"function\",\n            \"function\": {\n              \"arguments\": \"{\\\"prompt\\\":\\\"5,
+        4, 3, 10, 11\\\"}\",\n              \"name\": \"generate\"\n            }\n
+        \         }\n        ]\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        204,\n    \"completion_tokens\": 29,\n    \"total_tokens\": 233,\n    \"cached_tokens\":
+        0\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8e6ce57b188debe7-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:03:29 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb20cede3acf0a-SJC
       content-length:
-      - '777'
+      - '826'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:11:41 GMT
       etag:
-      - W/"309-ejSxLqzrDi6tO8fgIUjWlr0rqxs"
+      - W/"33a-/qRO7pdvLBT67Tkq3DtxbZyVU3M"
       retry-after:
       - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 39c9fb93-9bd7-41e7-9b72-2e5c032e2d63-noamzn
       x-api-call-end:
-      - '2024-11-23T00:03:29.696Z'
+      - '2025-05-06T20:11:41.845Z'
       x-api-call-start:
-      - '2024-11-23T00:03:29.167Z'
+      - '2025-05-06T20:11:41.322Z'
       x-api-received:
-      - '2024-11-23T00:03:29.149Z'
+      - '2025-05-06T20:11:41.304Z'
       x-inference-version:
       - v2
       x-ratelimit:
       - 'false'
       x-ratelimit-limit:
-      - '10'
+      - '100'
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '19'
+      - '199'
       x-ratelimit-remaining-tokens:
       - '100000'
       x-ratelimit-reset:
       - '2'
+      x-request-id:
+      - nszjKrw-2j9zxn-93bb20cede3acf0a
     status:
       code: 200
       message: OK

@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "lunara", "prompt": "Hi", "max_tokens": 10, "stream": true}'
+    body: '{"model":"lunara-12bv1","prompt":"Hi","stream":true,"max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '69'
+      - '68'
       content-type:
       - application/json
       host:
       - jtwtcue2-lunara-12bv1.tin.lepton.run
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,55 +25,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://jtwtcue2-lunara-12bv1.tin.lepton.run/api/v1/completions
   response:
     body:
-      string: 'data: {"id":"cmpl-noYKqit8JbSsB4wFWQLZVM","object":"text_completion","model":"lunara","choices":[{"index":0,"text":"\n\n","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-noYKqit8JbSsB4wFWQLZVM","object":"text_completion","model":"lunara","choices":[{"index":0,"text":"1,","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-noYKqit8JbSsB4wFWQLZVM","object":"text_completion","model":"lunara","choices":[{"index":0,"text":"2,3","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-noYKqit8JbSsB4wFWQLZVM","object":"text_completion","model":"lunara","choices":[{"index":0,"text":",4,","logprobs":null,"finish_reason":null}]}
-
-
-        data: {"id":"cmpl-noYKqit8JbSsB4wFWQLZVM","object":"text_completion","model":"lunara","choices":[{"index":0,"text":"5","logprobs":null,"finish_reason":"length"}]}
-
-
-        data: {"id":"cmpl-noYKqit8JbSsB4wFWQLZVM","object":"text_completion","model":"lunara","choices":[],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10}}
-
-
-        data: [DONE]
-
-
-        '
+      string: ''
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8f048c1bc85867fc-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream; charset=utf-8
-      Date:
-      - Wed, 11 Dec 2024 09:46:24 GMT
-      Server:
+      cf-ray:
+      - 93ba7253bbd8cf29-SJC
+      content-length:
+      - '0'
+      date:
+      - Tue, 06 May 2025 18:12:34 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '141'
+      - '1'
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
 version: 1

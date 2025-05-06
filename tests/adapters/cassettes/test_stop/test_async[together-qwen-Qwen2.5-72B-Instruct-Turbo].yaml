@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "qwen/Qwen2.5-72B-Instruct-Turbo",
-      "stop": "stop"}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/Qwen2.5-72B-Instruct-Turbo","stop":"stop"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '109'
+      - '101'
       content-type:
       - application/json
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,57 +25,61 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"8f18fd096cb0cf29-SJC\",\n  \"object\": \"chat.completion\",\n
-        \ \"created\": 1734124724,\n  \"model\": \"qwen/Qwen2.5-72B-Instruct-Turbo\",\n
-        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"eos\",\n
-        \     \"seed\": 17360132084258933000,\n      \"logprobs\": null,\n      \"index\":
+      string: "{\n  \"id\": \"nszd74y-4yUbBN-93bb032cea1b16a2\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561087,\n  \"model\": \"Qwen/Qwen2.5-72B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 14728463209618973000,\n      \"logprobs\": null,\n      \"index\":
         0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
         \"Hello! How can I assist you today? Feel free to ask me any questions or
         let me know if you need help with anything specific.\",\n        \"tool_calls\":
         []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 30,\n    \"completion_tokens\":
         29,\n    \"total_tokens\": 59\n  }\n}"
     headers:
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-RAY:
-      - 8f18fd096cb0cf29-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 13 Dec 2024 21:18:45 GMT
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       access-control-allow-origin:
       - '*'
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb032cea1b16a2-SJC
       content-length:
-      - '615'
+      - '627'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:51:28 GMT
       etag:
-      - W/"267-T+LDvIXa0ivxnRVEhRvQUhG5/As"
+      - W/"273-Rn0Q+p/4BV77yBAKKiQgYqDVjeo"
       retry-after:
-      - '0'
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
       x-api-call-end:
-      - '2024-12-13T21:18:45.254Z'
+      - '2025-05-06T19:51:28.501Z'
       x-api-call-start:
-      - '2024-12-13T21:18:44.741Z'
+      - '2025-05-06T19:51:27.625Z'
       x-api-received:
-      - '2024-12-13T21:18:44.733Z'
+      - '2025-05-06T19:51:27.598Z'
+      x-content-type-options:
+      - nosniff
       x-inference-version:
       - v2
       x-ratelimit:
@@ -86,11 +89,13 @@ interactions:
       x-ratelimit-limit-tokens:
       - '100000'
       x-ratelimit-remaining:
-      - '195'
+      - '199'
       x-ratelimit-remaining-tokens:
-      - '99862'
+      - '100000'
       x-ratelimit-reset:
-      - '0'
+      - '2'
+      x-request-id:
+      - nszd74y-4yUbBN-93bb032cea1b16a2
     status:
       code: 200
       message: OK

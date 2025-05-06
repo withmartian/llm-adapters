@@ -1,0 +1,125 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '417'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nszgMoY-3NKUce-93bb12aceacff941\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1746561722,\n  \"model\": \"nvidia/Llama-3.1-Nemotron-70B-Instruct-HF\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 893444211161521000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"Since you asked for a random number with tools specified, I'll outline a
+        few common tools/methods to generate a random number within the range of **1-10**.
+        Please choose a tool/method from the list below, and I'll provide the random
+        number accordingly. If you don't specify, I'll default to the first method
+        for simplicity.\\n\\n### Tools/Methods for Random Number Generation:\\n\\n1.
+        **Online Random Number Generator Tool** (e.g., Random.org)\\n2. **Python Programming
+        Language** (using `random` library)\\n3. **Google's Random Number Generator**
+        (via Google Search)\\n4. **Manual Random Selection** (for simplicity, e.g.,
+        flipping a coin and assigning numbers, though less reliable for true randomness)\\n5.
+        **JavaScript** (using browser's console with `Math.random()` function)\\n\\n###
+        Default Response (Using **1. Online Random Number Generator Tool**):\\n\\nSince
+        no specific tool was chosen, I'm defaulting to **Random.org**, a well-regarded
+        online tool for generating truly random numbers.\\n\\n**Random Number (1-10)
+        via Random.org:**\\n(I'm simulating the outcome based on the request for format
+        consistency. In a real scenario, you'd visit Random.org for a truly random
+        result.)\\n\\n* **Generated Random Number:** **7**\\n\\n### How to Proceed
+        if You Want to Use a Different Tool:\\n\\n1. **Reply to this message** with
+        the number of your preferred tool/method (e.g., \\\"2\\\" for Python).\\n2.
+        **Provide any additional details** if necessary (e.g., for Python, just the
+        tool number is sufficient, but for more complex scenarios, additional context
+        might be needed).\\n\\n**Example Reply for a Different Tool:**\\n\\\"Use tool
+        2 (Python Programming Language) to generate the random number.\\\"\",\n        \"tool_calls\":
+        []\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 28,\n    \"completion_tokens\":
+        364,\n    \"total_tokens\": 392\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb12aceacff941-SJC
+      content-length:
+      - '2186'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 20:02:08 GMT
+      etag:
+      - W/"88a-Ygrdgnu9eFx1ekqoFjxi1+UIyQA"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 95ae846a-44e5-4a86-ac58-cc733b5b288b-noamzn
+      x-api-call-end:
+      - '2025-05-06T20:02:08.496Z'
+      x-api-call-start:
+      - '2025-05-06T20:02:02.504Z'
+      x-api-received:
+      - '2025-05-06T20:02:02.499Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nszgMoY-3NKUce-93bb12aceacff941
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.61.0
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,9 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.61.0
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -36,31 +38,35 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"5ee7c81f738b40beaf95c3358cdba526","object":"chat.completion","created":1742234952,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*The
-        human has greeted me with a simple \"Hi\". I should respond with a friendly
-        greeting in return to establish a positive rapport.*\n\nHello! It''s nice
-        to meet you. How are you doing today?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":43,"total_tokens":53,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+      string: '{"id":"chatcmpl-52126a7c-d30b-4adb-8458-ba04a4668614","object":"chat.completion","created":1746555155,"model":"hermes3-70b","choices":[{"index":0,"message":{"role":"assistant","content":"*Hmm,
+        the human has just greeted me with a simple \"Hi\". I wonder if they are just
+        being friendly or if they have a specific question or topic in mind. I should
+        respond in a warm and friendly manner to establish a good rapport, but also
+        keep my response concise so as not to make any assumptions. Perhaps I can
+        end with a question to encourage further conversation if the human desires.*\n\nHello!
+        It''s nice to meet you. How are you doing today? Is there anything in particular
+        I can assist you with?"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":10,"completion_tokens":107,"total_tokens":117,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 921e709d0ae04778-DFW
+      - 93ba72581dc0909c-SJC
       content-length:
-      - '787'
+      - '1112'
       content-type:
       - application/json
       date:
-      - Mon, 17 Mar 2025 18:09:12 GMT
+      - Tue, 06 May 2025 18:12:37 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=VL4InQmJ37Afm5f5VgosrtJdgqaO5Jt2JtjAGeZM41A-1742234952-1.0.1.1-tQ1tZ0i.5rjRnpxO.AIRApI0UOY_PYvF7uSbmIGrMG6EzQjq3qE75Elq0tjGQPi3ZAjaBEn7H_vF7A_q1UILF7FwShc1AgneF9vidtWe5rM;
-        path=/; expires=Mon, 17-Mar-25 18:39:12 GMT; domain=.lambdalabs.com; HttpOnly;
+      - __cf_bm=Ni1psM9._xjTWGRN3QE_z1HewlYxG_mQWe0J0vMWCS0-1746555157-1.0.1.1-cV0acg4ifr.Lv5MguMLtn5kXKV5p_.lrJ8wVZcoRgHV8.bMGPVjzeh11S0XGgCUkUSmXN9bZQ68M.Cmk.MdhKwIWSF0puJMRg1Fq4rakc3E;
+        path=/; expires=Tue, 06-May-25 18:42:37 GMT; domain=.lambdalabs.com; HttpOnly;
         Secure; SameSite=None
       x-request-id:
-      - 8685adc8-a0f7-4dd2-9342-bbfdcd8cc1ed
+      - 52126a7c-d30b-4adb-8458-ba04a4668614
       x-response-time:
-      - '1.268'
+      - '2.31'
     status:
       code: 200
       message: OK

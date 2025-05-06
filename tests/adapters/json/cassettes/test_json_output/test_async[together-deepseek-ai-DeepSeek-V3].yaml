@@ -15,7 +15,7 @@ interactions:
       host:
       - api.together.xyz
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,51 +25,72 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.together.xyz/chat/completions
   response:
     body:
-      string: "{\n  \"id\": \"90a5942d4d06159a\",\n  \"error\": {\n    \"message\":
-        \"deepseek-ai/DeepSeek-V3 is not supported for JSON mode/function calling\",\n
-        \   \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\":
-        \"constraints_model\"\n  }\n}"
+      string: "{\n  \"id\": \"nsz5hU8-zqrih-93ba6d91feb6cf13\",\n  \"error\": {\n
+        \   \"message\": \"Service unavailable\",\n    \"type\": \"service_unavailable\",\n
+        \   \"param\": null,\n    \"code\": null\n  }\n}"
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 90a5942d4d06159a-SJC
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '226'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 31 Jan 2025 00:27:56 GMT
-      ETag:
-      - W/"e2-Oew1BO6yQtgfhzceWkI75zWv774"
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6d91feb6cf13-SJC
+      content-length:
+      - '171'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 06 May 2025 18:09:20 GMT
+      etag:
+      - W/"ab-Ag5qsl8CYY68bO4e2zq2sLF6rgU"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 11434215-f774-4241-be53-a1df605597ad-noamzn
+      x-api-call-start:
+      - '2025-05-06T18:09:20.652Z'
       x-api-received:
-      - '2025-01-31T00:27:56.441Z'
+      - '2025-05-06T18:09:19.733Z'
+      x-api-retries:
+      - '5'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '50'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '99'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nsz5hU8-zqrih-93ba6d91feb6cf13
     status:
-      code: 400
-      message: Bad Request
+      code: 503
+      message: Service Unavailable
 version: 1

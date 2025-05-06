@@ -1,0 +1,125 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/phi-4","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '55'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RKDLE1XeWt93IvWYplo8yeCO\",\"object\":\"text_completion\",\"created\":1746561791,\"model\":\"microsoft/phi-4\",\"choices\":[{\"index\":0,\"text\":\",
+        I'm working with the PaCCMCI framework and need some help with a particular
+        piece of code: \\n```python\\n        # If we are aggregating, the equation
+        has the form:\\n        # <independent_aggregate> = groupby(<key>)['<dependent_aggregate>'].<<method>>\\n
+        \       # Create the callable and add it to our final calls dictionary\\n
+        \       # Step 1: Create the aggregation to perform for each of our dependent
+        variables\\n        if aggregation is not None:\\n            aggregation_dictionary
+        = {}\\n            for node_variable in self._pipeline.node_variables:\\n
+        \               s = node_variable\\n                if aggregation != 'None':\\n
+        \                   s += \\\" = \\\" + node_variable.groupby(self._pipeline.node_keys)['objective'].agg(aggregation)\\n
+        \               aggregation_dictionary[node_variable] = s\\n``` I'm trying
+        to achieve more complex aggregation, specifically conditionally applying aggregation
+        based on certain node properties. How can I do that?<|im_end|>\\n<|im_start|>assistant<|im_sep|>To
+        achieve conditional aggregation based on specific node properties, we\u2019ll
+        need to introduce logic to check these properties and apply different aggregation
+        methods accordingly. Here's how you can modify your snippet to include this
+        functionality:\\n\\nFirst, let's assume `self._pipeline.nodes` holds the node
+        properties and we have an attribute `condition` for each node determining
+        the type of aggregation. Here's an example of how you can accomplish that:\\n\\n```python\\n
+        \       # Step 1: Create the aggregation to perform for each of our dependent
+        variables with conditions\\n        if aggregation is not None:\\n            aggregation_dictionary
+        = {}\\n            for node_variable in self._pipeline.node_variables:\\n
+        \               condition = self._pipeline.nodes[node_variable].get('condition')\\n
+        \               if condition == 'condition1':\\n                    agg_method
+        = 'sum'\\n                elif condition == 'condition2':\\n                    agg_method
+        = 'mean'\\n                else:\\n                    agg_method = aggregation
+        \ # Default to the provided aggregation method\\n\\n                s = node_variable\\n
+        \               if agg_method != 'None':\\n                    s += \\\" =
+        \\\" + node_variable.groupby(self._pipeline.node_keys)['objective'].agg(agg_method)\\n
+        \               aggregation_dictionary[node_variable] = s\\n```\\n\\nThis
+        way, you can check each node's properties and apply different aggregation
+        methods based on the conditions. Make sure `self._pipeline.nodes` is properly
+        structured to hold each node\u2019s properties.\\n\\nWould you like to refine
+        this further or add additional complexities?<|im_end|>\\n<|im_start|>user<|im_sep|>Great,
+        but what if I also want to log these condition checks and the resulting aggregation
+        steps for debugging purposes? I want to include these logs in the `expected_session`
+        created at the end.<|im_end|>\\n<|im_start|>assistant<|im_sep|>Sure! You can
+        incorporate logging for each condition check and aggregation step by appending
+        those logs to a list and then including them in the `expected_session`. Here's
+        how you can modify your code:\\n\\n```python\\n        # Initialize a list
+        for logging\\n        logs = []\\n\\n        # Step 1: Create the aggregation
+        to perform for each of our dependent variables with conditions\\n        if
+        aggregation is not None:\\n            aggregation_dictionary = {}\\n            for
+        node_variable in self._pipeline.node_variables:\\n                condition
+        = self._pipeline.nodes[node_variable].get('condition')\\n                \\n
+        \               if condition == 'condition1':\\n                    agg_method
+        = 'sum'\\n                elif condition == 'condition2':\\n                    agg_method
+        = 'mean'\\n                else:\\n                    agg_method = aggregation
+        \ # Default to the provided aggregation method\\n                \\n                log_message
+        = f\\\"Node: {node_variable}, Condition: {condition}, Aggregation Method:
+        {agg_method}\\\"\\n                logs.append(log_message)\\n\\n                s
+        = node_variable\\n                if agg_method != 'None':\\n                    s
+        += \\\" = \\\" + node_variable.groupby(self._pipeline.node_keys)['objective'].agg(agg_method)\\n
+        \                   logs.append(f\\\"Aggregation Step: {s}\\\")\\n                \\n
+        \               aggregation_dictionary[node_variable] = s\\n\\n        # Existing
+        steps for handling entire_dataset, dependent_variables...\\n        ...\\n\\n
+        \       # Add the session logging commands\\n        expected_session = []\\n
+        \       for log in logs:\\n            expected_session.append(f\\\"LOG: {log}\\\")\\n\\n
+        \       if enter_name:\\n            expected_session.extend([\\\"%store\\\",
+        f\\\"pipeline {enter_name}\\\"])\\n        else:\\n            expected_session.extend([\\\"%store
+        pipeline\\\"])\\n        \\n        return self.ObjectiveCalibrationSession(aggregation_dictionary=aggregation_dictionary,\\n
+        \                                               entire_session=None,\\n                                                pipeline=self._pipeline,\\n
+        \                                               enter_name=enter_name,\\n
+        \                                               exit_name=None,\\n                                                expected_session=expected_session)\\n```\\n\\nThis
+        modified version logs each condition check and the corresponding aggregation
+        step. These logs are then appended to the `expected_session` list as `LOG:
+        {message}` entries.\\n\\nDoes this solution meet your requirements, or is
+        there another specific aspect you'd like to refine?\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":961,\"completion_tokens\":960,\"estimated_cost\":0.00013447}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5806'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:03:11 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

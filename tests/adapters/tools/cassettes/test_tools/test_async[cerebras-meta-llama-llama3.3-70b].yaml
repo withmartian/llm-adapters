@@ -1,0 +1,96 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"llama3.3-70b","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '367'
+      content-type:
+      - application/json
+      host:
+      - api.cerebras.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.cerebras.ai/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        IUwJACD+p1OnNfdmYZX+p9VVgHAJLSCncVjuwOV3bw9tAWdhWhimWcCZBFJ7DDT8Ld0mEn/XhOl+
+        V3Vrw7MFoXmk0gxzX1mT6laHujJNYyvjm6YKndSVVnW2rUsuqQAGC/tkBR03nGdWXe+OagKhTFN/
+        bVLfr2B4tn4ECYbhiQ60ZXk6VrEio83G+9aBofzNGYThhQZsPdCGMQ0ZBB/0kMHQ7V4QthPmZRrm
+        cgJ9nCDFCTv2/cywTH0GIa3rcy1pLAhM1tVyC5LeOOukU4phmNrcg9D3aUiVPujKixoMPvanr91z
+        vOdlXp5jAaGbryZpl2IdU6hD7ryQQiswTPUrN0ViOcxhUFPy1oMKNlzL9JnHFaSsY8hmbJCC4e8D
+        ilB0bmcozyFfn2M3gTZ8vfM7X8tzyCBxEEJ4IayRjIjRCWuDi5INO5NaBmG0JgX4XwlrRXROORWk
+        10Er6PbdAAM=
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb103a4c556801-SJC
+      content-encoding:
+      - br
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:00:22 GMT
+      inference-id:
+      - chatcmpl-54abd38b-4cc5-47cc-8f13-32be5d6a6a28
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=a7cM.g.dxyfVDxdgDbvpLmnAnZ8fj1rh5T9_UxTJEps-1746561622-1.0.1.1-HgbBOZys8XK0YR_t0xVjzZ9LjIVIonMGDewRh17.THHxXGaRRUMoLHUjY35IgsWDCV0.DCLQu9skF45yZmmvtcAog_xCmcxqavgFLy1dZn0;
+        path=/; expires=Tue, 06-May-25 20:30:22 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=3600; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests-day:
+      - '14400'
+      x-ratelimit-limit-tokens-minute:
+      - '60000'
+      x-ratelimit-remaining-requests-day:
+      - '14372'
+      x-ratelimit-remaining-tokens-minute:
+      - '60000'
+      x-ratelimit-reset-requests-day:
+      - '14377.770482063293'
+      x-ratelimit-reset-tokens-minute:
+      - '37.77048206329346'
+      x-request-id:
+      - 93bb103a4c556801-SJC
+    status:
+      code: 200
+      message: OK
+version: 1

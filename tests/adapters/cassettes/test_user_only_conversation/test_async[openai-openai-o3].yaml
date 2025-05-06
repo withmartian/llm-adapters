@@ -15,7 +15,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - AsyncOpenAI/Python 1.68.2
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,7 +25,7 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.68.2
+      - 1.76.0
       x-stainless-read-timeout:
       - '600.0'
       x-stainless-retry-count:
@@ -38,50 +38,54 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        IWQMACDXdNXTVPtbnynvUplkeNgoNoGcv8///Tz+gfSLVVkUWJTm/VFg7cPhfPh4oiMe6NTprt2C
-        mLQ2VfxmnN/dMgAsFHJAmYsojdfts6fh65tPHzbF7VX6uc7L52r4fH330r/PL5fYYgDo/kqSMVLv
-        TDHwC2cp/JvLSaSQQ386Gs2Go+lgAn5onCKNHNAN24PeYNzujdr9SSAxd4WkgBy+GADAdm8DgEvf
-        j5FDr3WUn4hhISf+CABrpwk5oAihCFHYiC0CONf9Awe8Ia3dHty4JUhh4RZy0h7WroHolFgfh8Ji
-        9V8LjRxsozUIl4opWvspRf+n6ejytki+qLWIHDBE57Hi4J8B/MheN0reoq+d8TGJrqLU6vSkC2wx
-        4MZgNuCPCAB2Nhy3EuqJH90ydO0ZSiFzUlmhxY+iUYUDl0xeT0G9+VnptwubbQA2pCQfSSWOhm3R
-        QKVXU0lSZ22m/gUbvnoSC6qRAz44WAJpHSKZJC1sRrWvi5skbxut2T8zAAM=
+      string: "{\n    \"error\": {\n        \"message\": \"Request too large for o3
+        in organization org-EohclM7n5UCFBEOi5KYeiEb4 on tokens per min (TPM): Limit
+        0, Requested 3. The input or output tokens must be reduced in order to run
+        successfully. Visit https://platform.openai.com/account/rate-limits to learn
+        more.\",\n        \"type\": \"tokens\",\n        \"param\": null,\n        \"code\":
+        \"rate_limit_exceeded\"\n    }\n}\n"
     headers:
-      access-control-expose-headers:
-      - X-Request-ID
       alt-svc:
       - h3=":443"; ma=86400
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93165faedabd95a0-TBS
-      content-encoding:
-      - br
+      - 93bb0e1a19625850-SJC
+      content-length:
+      - '393'
       content-type:
-      - application/json
+      - application/json; charset=utf-8
       date:
-      - Wed, 16 Apr 2025 20:18:47 GMT
-      openai-organization:
-      - martian-4
-      openai-processing-ms:
-      - '828'
-      openai-version:
-      - '2020-10-01'
+      - Tue, 06 May 2025 19:58:55 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=ITtYMcKzd.oZESxECi1G7gmb6foHmhsv3z3vgINV8SM-1744834727-1.0.1.1-bH72suqL4VaKuZxVZ6r9NOLVMPo0wkdO8BbUX8QC_g50rZvapcwQphlGCw7rqDXJFISokLgJXMzXyBlH8qmxq6gqXAMpW60qsC6kcxpj8qs;
-        path=/; expires=Wed, 16-Apr-25 20:48:47 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=OHpTyP8vKT.XVqlRgWVbyxDnXbQiaistXQMKjxfKZcI-1746561535-1.0.1.1-gyKpJVZSNi_VyH7r.TiREarEqamZ5_KvOntqfYPpdE5VxlCSa3i3W7THdpBNYhd8pxg_76vBEP59Dj.huej80GHXSCYIUDgjg1EhEi4_O6s;
+        path=/; expires=Tue, 06-May-25 20:28:55 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=LEFzFai55z35OAHn7R2dO0rpe5eIaEDyhKzoSi5yP4g-1744834727248-0.0.1.1-604800000;
+      - _cfuvid=H03INCrtDrxjrKo8OBkeUBh8.FMl.Ti3Tj0JG.BYn5o-1746561535128-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
+      vary:
+      - Origin
       x-content-type-options:
       - nosniff
+      x-ratelimit-limit-requests:
+      - '0'
+      x-ratelimit-limit-tokens:
+      - '0'
+      x-ratelimit-remaining-requests:
+      - '0'
+      x-ratelimit-remaining-tokens:
+      - '0'
+      x-ratelimit-reset-requests:
+      - 0s
+      x-ratelimit-reset-tokens:
+      - 0s
       x-request-id:
-      - req_4c9f06ff4d8bb1f404eb252c9c7a9a5f
+      - req_3048f93a6a09f1245783a777eb27e83b
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

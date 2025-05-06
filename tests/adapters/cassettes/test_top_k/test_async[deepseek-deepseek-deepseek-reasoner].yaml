@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,57 +25,53 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"70ecbd8d-7c59-434b-bfba-81dce222c3b3\",\"object\":\"chat.completion\",\"created\":1738792128,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+      string: "{\"id\":\"b1e84332-00e0-43dd-8214-57164349496f\",\"object\":\"chat.completion\",\"created\":1746561258,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
         How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay, the
-        user just said \\\"Hi\\\". That's a friendly greeting. I should respond in
-        a welcoming manner. Maybe say hello back and ask how I can assist them today.
-        Keep it open-ended so they feel comfortable to ask anything. Let me make sure
-        the tone is warm and approachable.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":73,\"total_tokens\":79,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":60},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_7e73fd9a08\"}"
+        user just said \\\"Hi\\\". I need to respond in a friendly and welcoming way.
+        Maybe start with a greeting like \\\"Hello!\\\" to mirror their message. Then,
+        offer assistance by asking how I can help them today. Keeping it open-ended
+        encourages them to ask whatever they need. Let me make sure the tone is warm
+        and approachable.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":84,\"total_tokens\":90,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":71},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_5417b77867_prod0425fp8\"}"
     headers:
-      CF-RAY:
-      - 90d61b50bb309669-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 05 Feb 2025 21:48:48 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - HWWAFSESID=0edf4bed64902e6668; path=/
-      - HWWAFSESTIME=1738792125161; path=/
-      - __cf_bm=p5UagwPQXpcAnMndgyPyMxmhfu9Loom7SP_h2GBzuN0-1738792128-1.0.1.1-wkH2h1.PE_FAqcRzCjAwsUhQJssoZXRW6_o9KBvvpoCyLzdL4JV45wqjDfr0id4JHkW37zXGuCb0KTOf_UEpjQ;
-        path=/; expires=Wed, 05-Feb-25 22:18:48 GMT; domain=.deepseek.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 93bb0757af3b15ae-SJC
       content-length:
-      - '820'
+      - '890'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 19:54:18 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=4FYwwHB5hTzi42BDB7oz6yCqzfM7WgH2yPcuZ2n3Njg-1746561258-1.0.1.1-0rMbvS4QSXvL96jAdS8MMPP5fPQA_ue0Q3ecrAYMI4UlcbP6rL6pPyDjtoacqM0gpmrYhAPZfnCIPQop3AgepWT9Gku.1rePnTkVeAFt7fY;
+        path=/; expires=Tue, 06-May-25 20:24:18 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
-      - accept-encoding
       x-content-type-options:
       - nosniff
       x-ds-trace-id:
-      - 9907b9445c53af0f8e6c240b10e75e1c
+      - 1581cd944405afd0083cb6dc4d777b6f
     status:
       code: 200
       message: OK

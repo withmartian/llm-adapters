@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"model":"microsoft/phi-4","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '41'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: '{"id":"cmpl-REGtjnaaahHFJQCMB0B0Yto2","object":"text_completion","created":1746561735,"model":"microsoft/phi-4","choices":[{"index":0,"text":",
+        I''m trying to start a new TypeScript library, and I want to create a highly
+        reusable and customizable button component. I aim to implement this lean library
+        with features like on-demand imports and tree shaking. Also, I''m considering
+        using Yarn Workspaces for managing the project structure.\n\nFirst, I need
+        to ensure that the button component is flexible, allowing users to input various
+        HTML attributes, and supports a click event that developers can listen to.
+        Calling the component''s function should be simple, such as `Button.render()`.
+        Can you help me organize a basic but extendable script setup to accomplish
+        this?","logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1,"total_tokens":122,"completion_tokens":121,"estimated_cost":1.701e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '908'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:02:15 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

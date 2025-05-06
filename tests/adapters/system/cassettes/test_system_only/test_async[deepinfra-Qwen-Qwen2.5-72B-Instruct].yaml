@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "system", "content": "Hi"}, {"role": "user", "content":
-      "\"\""}], "model": "Qwen/Qwen2.5-72B-Instruct"}'
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/Qwen2.5-72B-Instruct"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '126'
+      - '116'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,27 +25,31 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-89c0eef5d0e74fdfa0d1018c85291303","object":"chat.completion","created":1733375352,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
-        It looks like your message was cut off. Could you please provide more details
-        so I can assist you better?","name":null,"tool_calls":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":15,"total_tokens":39,"completion_tokens":24,"estimated_cost":1.3050000000000002e-05}}'
+      string: '{"id":"chatcmpl-RBd3eYm1dFzt9PrR1gNjzRTJ","object":"chat.completion","created":1746555074,"model":"Qwen/Qwen2.5-72B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like your message was incomplete. Could you please provide more details
+        so I can assist you better?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":15,"total_tokens":36,"completion_tokens":21,"estimated_cost":9.99e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '477'
+      - '467'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 05:09:12 GMT
+      - Tue, 06 May 2025 18:11:14 GMT
       server:
       - uvicorn
       x-robots-tag:

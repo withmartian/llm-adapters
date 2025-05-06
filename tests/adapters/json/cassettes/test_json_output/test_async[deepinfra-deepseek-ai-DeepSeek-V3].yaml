@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,28 +25,35 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-248f457c52ff44499da286793cf074e4","object":"chat.completion","created":1738285795,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"message":{"role":"assistant","content":"{\n  \"message\":
-        \"Hello, world!\",\n  \"status\": \"success\"\n}","name":null,"tool_calls":[]},"finish_reason":"stop"}],"usage":{"prompt_tokens":8,"total_tokens":28,"completion_tokens":20,"estimated_cost":2.4800000000000003e-05}}'
+      string: '{"id":"chatcmpl-Ryo6ZotDlgiIKAf03myr7v8r","object":"chat.completion","created":1746555090,"model":"deepseek-ai/DeepSeek-V3","choices":[{"index":0,"message":{"role":"assistant","content":"Sure!
+        Here''s a simple JSON example:\n\n```json\n{\n  \"name\": \"John Doe\",\n  \"age\":
+        30,\n  \"isStudent\": false,\n  \"hobbies\": [\"reading\", \"hiking\", \"coding\"],\n  \"address\":
+        {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\":
+        \"CA\",\n    \"zip\": \"12345\"\n  }\n}\n```\n\nThis JSON object includes
+        basic information about a person, such as their name, age, student status,
+        hobbies, and address.","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":9,"total_tokens":127,"completion_tokens":118,"estimated_cost":0.00010844}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '426'
+      - '799'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:09:55 GMT
+      - Tue, 06 May 2025 18:11:30 GMT
       server:
       - uvicorn
       x-robots-tag:

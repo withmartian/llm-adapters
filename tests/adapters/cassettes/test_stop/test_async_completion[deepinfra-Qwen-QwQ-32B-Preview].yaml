@@ -1,0 +1,148 @@
+interactions:
+- request:
+    body: '{"model":"Qwen/QwQ-32B-Preview","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '60'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/completions
+  response:
+    body:
+      string: "{\"id\":\"cmpl-RQehWkcJ6yysR4FgRyalCvjU\",\"object\":\"text_completion\",\"created\":1746561989,\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Qwen-32B\",\"choices\":[{\"index\":0,\"text\":\"\\nI\u2019m
+        trying to wrap my head around how ASR models work, especially the acoustic
+        model part. I read somewhere that for each frame of audio, the acoustic model
+        provides a probability distribution over a vocabulary of phonemes. But then,
+        it also mentions feature vectors derived from the audio, which are used by
+        the model to predict these phoneme probabilities. So, I\u2019m getting a bit
+        confused about the exact process. \\n\\nLet me try to visualize it. Say, I
+        have a short audio clip. This clip is broken down into frames or time segments.
+        Each frame is processed to extract some features\u2014like mel-frequency cepstral
+        coefficients (MFCCs)\u2014which are numerical representations of the audio
+        signal. These features are the input to the acoustic model. \\n\\nBut now,
+        the model is a neural network, right? So, it's trained on a bunch of audio
+        data paired with their phoneme transcriptions. For each frame's feature vector,
+        the network outputs a probability distribution over the possible phonemes.
+        This distribution tells us how likely each phoneme is at that particular frame.
+        \\n\\nWhat's confusing me is how these frame-level probabilities are combined
+        to form the overall transcription. Is it a matter of taking the most probable
+        phoneme for each frame and stringing them together? Or is there a dynamic
+        programming step, like the Viterbi algorithm, that considers the sequence
+        of probabilities to find the most likely overall sequence of phonemes? \\n\\nAlso,
+        I\u2019m curious about the dimensionality here. Each feature vector is, say,
+        40-dimensional (for MFCCs). The output is a distribution over, maybe, 40 phonemes.
+        How is the network structured to handle this transformation? Is it a dense
+        layer at the end, mapping the high-dimensional feature space to the lower-dimensional
+        phoneme space? \\n\\nMoreover, in practice, does the acoustic model process
+        one frame at a time, or does it have a context window, looking at previous
+        and next frames to better predict the current phoneme? I\u2019ve heard terms
+        like context-dependent states in HMMs, which might be similar. \\n\\nAnother
+        point that\u2019s unclear is how the model handles variable-length audio inputs.
+        Neural networks typically have fixed architectures, so if the audio is longer
+        or shorter, how does the model adapt? Maybe with techniques like attention
+        or sequence-to-sequence models that can handle variable-length inputs and
+        outputs. \\n\\nLastly, when dealing with real-world audio, which often has
+        background noise or variations in speaking speed, how does the acoustic model
+        account for that? Is it through data augmentation during training, or are
+        there specific components in the model architecture that make it robust to
+        such variations?\\n\\nCould you help clarify these points for me?\\n\\nCertainly!
+        Let's break down your questions step by step to clarify how ASR models, particularly
+        the acoustic model part, work.\\n\\n**1. The Process of Acoustic Models:**\\n\\n-
+        **Frames and Features:** When you have an audio clip, it's divided into small
+        time segments called frames (typically around 20-25 milliseconds each). Each
+        frame is processed to extract features, such as MFCCs, which capture the acoustic
+        characteristics relevant for speech recognition.\\n  \\n- **Neural Network
+        Input:** These feature vectors (e.g., 40-dimensional for MFCCs) serve as the
+        input to the neural network. The network is trained on a dataset where each
+        frame's features are paired with the corresponding phoneme(s) in the transcription.\\n\\n**2.
+        Frame-Level Probabilities:**\\n\\n- **Output Probabilities:** The acoustic
+        model outputs a probability distribution over the vocabulary of phonemes for
+        each frame. This means, for every frame, the network estimates the likelihood
+        of each phoneme occurring at that moment.\\n\\n**3. Combining Probabilities
+        for Transcription:**\\n\\n- **Sequence Modeling:** While taking the most probable
+        phoneme for each frame (greedy approach) might seem straightforward, it doesn't
+        account for the sequential nature of speech. Instead, models often use dynamic
+        programming, such as the Viterbi algorithm within a Hidden Markov Model (HMM)
+        framework, or recurrent neural networks (RNNs) that can capture temporal dependencies.\\n\\n-
+        **Lattice and Decoding:** The model produces a lattice of possible phoneme
+        sequences. Decoding algorithms like Viterbi find the most likely sequence
+        through this lattice, considering both the phoneme probabilities and the language
+        model constraints (though the language model is more about higher-level structures).\\n\\n**4.
+        Network Architecture:**\\n\\n- **Layers and Outputs:** Acoustic models can
+        have various architectures. A common structure starts with layers that process
+        the input features, possibly including convolutional layers for local patterns
+        or RNN/LSTM layers for temporal sequences. The final layer is typically a
+        dense layer that maps the processed features to the phoneme space, resulting
+        in the probability distribution.\\n\\n**5. Context Window and Sequence Processing:**\\n\\n-
+        **Contextual Information:** Modern models, especially RNNs or transformers,
+        naturally incorporate context by processing sequential data. Earlier HMM-based
+        models used context-dependent states, which considered neighboring frames.
+        In neural networks, the model might process frames sequentially, allowing
+        it to capture context from previous frames implicitly.\\n\\n**6. Handling
+        Variable-Length Inputs:**\\n\\n- **Sequence Models:** Techniques like attention
+        mechanisms or sequence-to-sequence models (e.g., using encoder-decoder architectures)
+        allow the model to handle variable-length inputs and outputs. For example,
+        the encoder processes the input sequence (variable length) into a fixed representation,
+        which the decoder then translates into the output sequence (phoneme transcription).\\n\\n-
+        **Recurrent Layers:** RNNs or LSTMs are inherently capable of handling variable-length
+        sequences, as each step processes one frame, and the hidden states carry context
+        through the sequence.\\n\\n**7. Robustness to Variations:**\\n\\n- **Data
+        Augmentation:** To handle real-world issues like background noise or varying
+        speaking speeds, models are often trained with augmented data. This includes
+        adding simulated noise, pitch shifts, and speed perturbations to the training
+        data.\\n\\n- **Model Architectures:** Some models incorporate robust features
+        by design, such as using noise-robust feature extraction methods (e.g., perceptual
+        linear prediction (PLP) features) or training specifically on diverse datasets.\\n\\n**Putting
+        It All Together:**\\n\\nAcoustic models process each frame's features through
+        a neural network to produce phoneme probabilities. These probabilities are
+        combined using sequence modeling techniques (like RNNs or attention) to form
+        the overall transcription. The model architecture, often involving recurrent
+        or transformer layers, handles sequential dependencies and variable-length
+        inputs, while robust training techniques help in dealing with real-world audio
+        variations.\",\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":1341,\"completion_tokens\":1340,\"estimated_cost\":0.00024132}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '7274'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:06:29 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

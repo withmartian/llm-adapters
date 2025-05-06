@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "assistant", "content": "Hi"}, {"role": "user",
-      "content": "Hi"}, {"role": "user", "content": "\"\""}], "model": "glm-4v"}'
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"glm-4v"}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '145'
+      - '131'
       content-type:
       - application/json
       host:
       - open.bigmodel.cn
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,46 +25,39 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://open.bigmodel.cn/api/paas/v4/chat/completions
   response:
     body:
-      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"It
-        seems like there might have been an issue with the image you''re referring
-        to, as I cannot view it here. If you could provide a description or any additional
-        context, I would be more than happy to help answer your question or provide
-        information based on your input.","role":"assistant"}}],"created":1733771043,"id":"20241210030400c61fa86c3e254075","model":"glm-4v","request_id":"20241210030400c61fa86c3e254075","usage":{"completion_tokens":56,"prompt_tokens":1677,"total_tokens":1733}}'
+      string: "{\"error\":{\"code\":\"1113\",\"message\":\"\u60A8\u7684\u8D26\u6237\u5DF2\u6B20\u8D39\uFF0C\u8BF7\u5145\u503C\u540E\u91CD\u8BD5\u3002\"}}"
     headers:
-      Connection:
-      - keep-alive
-      Content-Type:
+      content-type:
       - application/json; charset=UTF-8
-      Date:
-      - Mon, 09 Dec 2024 19:04:03 GMT
-      Set-Cookie:
-      - acw_tc=784e2c8c17337710401777774e2b68675b199e71f88fd2c52533309cb5ddd8;path=/;HttpOnly;Max-Age=1800
-      Strict-Transport-Security:
+      date:
+      - Tue, 06 May 2025 18:09:16 GMT
+      set-cookie:
+      - acw_tc=ac11000117465549564994952e005f72e498e21ebc893bbdd01c5a8f28da7f;path=/;HttpOnly;Max-Age=1800
+      strict-transport-security:
       - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
+      vary:
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
       - Origin
       - Access-Control-Request-Method
       - Access-Control-Request-Headers
-      X-LOG-ID:
-      - 20241210030400c61fa86c3e254075
-      content-length:
-      - '556'
+      x-log-id:
+      - 2025050702091619ff8cf64637438a
     status:
-      code: 200
-      message: OK
+      code: 429
+      message: Too Many Requests
 version: 1

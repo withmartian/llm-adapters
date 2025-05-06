@@ -1,8 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}, {"role": "assistant",
-      "content": "Hi"}, {"role": "assistant", "content": "Hi"}, {"role": "user", "content":
-      "Hi"}], "model": "accounts/yi-01-ai/models/yi-large"}'
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"accounts/yi-01-ai/models/yi-large"}'
     headers:
       accept:
       - application/json
@@ -11,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '210'
+      - '192'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - AsyncOpenAI/Python 1.54.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -27,46 +25,36 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: '{"id":"2f585677-30c2-48c0-bdc1-60953c90c306","object":"chat.completion","created":1732323043,"model":"accounts/yi-01-ai/models/yi-large","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
+      string: '{"id":"05eb9f76-8d5f-4dfc-8f9b-4ca25f7c5ad7","object":"chat.completion","created":1746555057,"model":"accounts/yi-01-ai/models/yi-large","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!
         How can I assist you today?"},"finish_reason":"stop"}],"usage":{"prompt_tokens":32,"total_tokens":42,"completion_tokens":10}}'
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8e6d2aacbea1945f-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 23 Nov 2024 00:50:43 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=279.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6ff2ecbbebeb-SJC
       content-length:
       - '332'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:57 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -76,11 +64,31 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-processing-time:
-      - '0.178'
+      - '0.183'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=322.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '180'
+      - '186'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '3000'
+      x-ratelimit-limit-tokens-prompt:
+      - '30000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '3000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '29968'
       x-request-id:
-      - 2f585677-30c2-48c0-bdc1-60953c90c306
+      - 05eb9f76-8d5f-4dfc-8f9b-4ca25f7c5ad7
     status:
       code: 200
       message: OK

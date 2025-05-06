@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "meta-llama/Meta-Llama-3.1-70B-Instruct", "prompt": "Hi", "max_tokens":
-      10}'
+    body: '{"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '85'
+      - '80'
       content-type:
       - application/json
       host:
       - api.deepinfra.com
       user-agent:
-      - OpenAI/Python 1.47.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,26 +25,30 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/completions
   response:
     body:
-      string: "{\"id\":\"cmpl-38f435b59aeb4c81b6cb7857eabf8da3\",\"object\":\"text_completion\",\"created\":1733368803,\"model\":\"meta-llama/Meta-Llama-3.1-70B-Instruct\",\"choices\":[{\"index\":0,\"text\":\"Question
-        lpkit [\u2026] materials high product capture of \",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":11,\"completion_tokens\":10,\"estimated_cost\":4.23e-06}}"
+      string: '{"id":"cmpl-Ro8wKbWSFl8QpLVnalbbEx0d","object":"text_completion","created":1746555134,"model":"meta-llama/Meta-Llama-3.1-70B-Instruct","choices":[{"index":0,"text":"import
+        the wreckage of Society''s mad enjoyment\"). It","logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10,"estimated_cost":4.23e-06}}'
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '368'
+      - '358'
       Content-Type:
       - application/json
       Date:
-      - Thu, 05 Dec 2024 03:20:03 GMT
+      - Tue, 06 May 2025 18:12:14 GMT
       server:
       - uvicorn
       x-robots-tag:

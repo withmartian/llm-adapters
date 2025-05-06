@@ -1,0 +1,103 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi
+      "},{"role":"user","content":"\"\""}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '141'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "e234b4e7-8760-44e0-bad5-70f2d97b9cf6", "model": "sonar-reasoning",
+        "created": 1746555031, "usage": {"prompt_tokens": 3, "completion_tokens":
+        575, "total_tokens": 578, "search_context_size": "low"}, "citations": ["https://preply.com/en/blog/22-useful-english-greetings-for-every-day/",
+        "https://www.fluentu.com/blog/english/english-greetings-expressions/", "https://www.clearenglishcorner.com/blog/64",
+        "https://en.amazingtalker.com/blog/en/english/47217/", "https://famworld.com/blogs/tipos-de-saludo-en-ingles-y-otras-frases-utiles"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user just
+        said \"Hi\" and I need to respond using the search results provided. Let me
+        check the search results first.\n\nLooking at the search results, there''s
+        a lot about English greetings. The first result mentions common greetings
+        like \"hello,\" \"hi,\" \"hey,\" and more formal options like \"good morning\"
+        or \"good evening.\" The second result also lists similar phrases and explains
+        when to use them. The third result has examples like \"Hey! How are ya?\"
+        which are casual. The fourth result again emphasizes \"hello,\" \"hi,\" \"hey\"
+        as the most common, and mentions time-based greetings like \"good morning.\"
+        The fifth result includes farewells and formal greetings like \"Good night.\"\n\nSince
+        the user''s query is just \"Hi,\" I should provide a friendly response that
+        acknowledges their greeting and possibly shares some common greetings from
+        the search results. I need to avoid starting with a header and keep it concise.
+        Maybe structure it with bullet points and examples.\n\nI should start with
+        a simple \"Hello! How can I help you today?\" to mirror their greeting. Then,
+        list some common greetings from the search results, maybe categorize them
+        into informal and formal. Cite the sources as [1], [2], etc., after each relevant
+        point. Make sure to mention time-based greetings, casual follow-ups like \"How
+        are you?\" and formal options for different situations. Keep it friendly and
+        helpful, using the information from the search results effectively without
+        plagarizing.\n</think>\n\nHello! How can I help you today? \ud83d\udd0d  \n\n---\n\n###
+        **Common Greetings**  \n**Casual Options**:  \n- **\"Hi\" / \"Hey\" / \"Hello\"**:
+        Universal for informal settings[1][4][5].  \n- **\"How are you?\" / \"How\u2019s
+        it going?\"**: Follows initial greetings to ask about someone\u2019s well-being[1][2][4].  \n-
+        **\"Nice to see you\" / \"Good to see you\"**: Best for friends, colleagues,
+        or acquaintances after a gap[1][2][4].  \n\n**Time-Based Greetings**:  \n-
+        **\"Good morning\"** (5:00 AM\u201312:00 PM)  \n- **\"Good afternoon\"** (12:00
+        PM\u20136:00 PM)  \n- **\"Good evening\"** (after sunset)[1][4][5].  \n\n**Farewells**:  \n-
+        **\"See you later\" / \"Have a nice day\"**: For parting conversations[5].  \n-
+        **\"Take care\"**: A warm, neutral sign-off[5].  \n\nFor formal situations,
+        use **\"Good dinner\"** or **\"Good night\"**[5]. Let me know if you need
+        help crafting responses or navigating specific scenarios! \ud83d\ude0a"},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93ba6f1ccb5e15c8-SJC
+      content-length:
+      - '3191'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:10:31 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=yL11.c85PPucFx8mEOqA_4smMjmPMmC5uZVWf_L.YtI-1746555031-1.0.1.1-1D8NOpum7jWyLXG8kZS8qyFTP2qJMDogwbsC_lrf_7cXeN2gJ27Y2SExFhwgBhUhUMcwxyuXFz.HzvObTnxABbp.V9YDQP2mjErpwqotZR4;
+        path=/; expires=Tue, 06-May-25 18:40:31 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

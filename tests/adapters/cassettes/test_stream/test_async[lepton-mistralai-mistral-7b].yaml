@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "mistral-7b",
-      "stream": true}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"mistral-7b","stream":true}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '88'
+      - '80'
       content-type:
       - application/json
       host:
       - mistral-7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,66 +25,70 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mistral-7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: 'data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null,"asr_results":null}],"usage":null}
+      string: 'data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"Hello"},"logprobs":null,"finish_reason":null}]}
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"Hello"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"!
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"!
         How"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
         can I help"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
         you today?"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
         If you have"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
         any questions or"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
         need assistance with"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
         something, feel"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
         free to ask"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":".
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":".
         I''"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"m
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"m
         here to"},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
-        help!"},"logprobs":null,"finish_reason":null}]}
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":"
+        help."},"logprobs":null,"finish_reason":null}]}
 
 
-        data: {"id":"chatcmpl-oYyaQjem5gGuV8wcQD8Fu6","created":1733368922,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":""},"logprobs":null,"finish_reason":"stop"}]}
+        data: {"id":"chatcmpl-AnSWbg6d3KWa9AEn9sVMrK","created":1746561162,"model":"mistral-7b","choices":[{"index":0,"delta":{"content":""},"logprobs":null,"finish_reason":"stop"}]}
 
 
         data: [DONE]
@@ -93,22 +96,18 @@ interactions:
 
         '
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e8d1ccce96c3-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
+      cf-ray:
+      - 93bb05017847ed39-SJC
+      content-type:
       - text/event-stream; charset=utf-8
-      Date:
-      - Thu, 05 Dec 2024 03:22:02 GMT
-      Server:
+      date:
+      - Tue, 06 May 2025 19:52:42 GMT
+      server:
       - cloudflare
-      Transfer-Encoding:
-      - chunked
       x-envoy-upstream-service-time:
-      - '173'
+      - '5'
     status:
       code: 200
       message: OK

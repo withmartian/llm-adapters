@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"mistralai/Mixtral-8x7B-Instruct-v0.1"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '92'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RwJEWHWBxlAWdTtgk171uIKd\",\"object\":\"chat.completion\",\"created\":1746561314,\"model\":\"mistralai/Mixtral-8x7B-Instruct-v0.1\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"
+        Hello! How can I assist you today? Is there a specific topic or question you'd
+        like to discuss? I'm here to help with any language or writing-related inquiries
+        you might have. \U0001F642\\n\\n(Note: I am a language model, so I cannot
+        provide assistance with tasks that require real-world actions, such as turning
+        on a computer or ordering takeout. However, I'd be happy to help you with
+        language or writing-related questions, like grammar rules, writing techniques,
+        or vocabulary building.)\\n\\nLet me know how I can help! \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":9,\"total_tokens\":133,\"completion_tokens\":124,\"estimated_cost\":3.192e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '891'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 19:55:14 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

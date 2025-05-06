@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"model": "dolphin-mixtral-8x7b", "prompt": "Hi", "max_tokens": 10}'
+    body: '{"model":"dolphin-mixtral-8x7b","prompt":"Hi","max_tokens":10}'
     headers:
       accept:
       - application/json
@@ -9,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '67'
+      - '62'
       content-type:
       - application/json
       host:
       - dolphin-mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,38 +25,38 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://dolphin-mixtral-8x7b.lepton.run/api/v1/completions
   response:
     body:
-      string: '{"id":"cmpl-XpzgiT4YrzxUXzX3v5aBgn","object":"text_completion","created":1733368799,"model":"dolphin-mixtral-8x7b","choices":[{"index":0,"text":",
-        and welcome back to another episode of Real Estate","logprobs":null,"finish_reason":"length","audio":null}],"usage":{"prompt_tokens":1,"total_tokens":11,"completion_tokens":10}}'
+      string: "{\"id\":\"cmpl-dHYKkgvegsSdkSgvX3K9WB\",\"object\":\"text_completion\",\"created\":1746555111,\"model\":\"dolphin-mixtral-8x7b\",\"choices\":[{\"index\":0,\"text\":\",\u2019
+        and he\u2019d say, \u2018Hi\",\"logprobs\":null,\"finish_reason\":\"length\"}],\"usage\":{\"prompt_tokens\":1,\"total_tokens\":11,\"completion_tokens\":10}}"
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e5d3fe87eb29-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:19:59 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba71442c4a2572-SJC
       content-length:
-      - '324'
+      - '285'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:11:51 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '169'
+      - '130'
     status:
       code: 200
       message: OK

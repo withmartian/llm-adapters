@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi, output simple json"}], "model":
-      "mixtral-8x7b", "response_format": {"type": "json_object"}}'
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"mixtral-8x7b","response_format":{"type":"json_object"}}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '138'
+      - '129'
       content-type:
       - application/json
       host:
       - mixtral-8x7b.lepton.run
       user-agent:
-      - AsyncOpenAI/Python 1.47.1
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,45 +25,43 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.47.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://mixtral-8x7b.lepton.run/api/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-fUXvHGBqLwE8RyUjGjGdzK","object":"chat.completion","created":1733368636,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Sure,
-        here is an example of a simple JSON object:\n\n```json\n{\n  \"name\": \"John
-        Doe\",\n  \"age\": 30,\n  \"isStudent\": false,\n  \"hobbies\": [\"reading\",
-        \"jogging\", \"coding\"]\n}\n```\n\nThis JSON object has four properties:
-        `name`, `age`, `isStudent`, and `hobbies`. The `name` property is a string
-        with the value \"John Doe\", the `age` property is a number with the value
-        30, the `isStudent` property is a boolean with the value false, and the `hobbies`
-        property is an array of strings with the values \"reading\", \"jogging\",
-        and \"coding\".\n\nI hope this helps! Let me know if you have any other questions.","tool_calls":null},"logprobs":null,"finish_reason":"stop","audio":null,"asr_results":null}],"usage":{"prompt_tokens":13,"total_tokens":202,"completion_tokens":189}}'
+      string: '{"id":"chatcmpl-R42foFWzXDroQsyCkqcsDJ","object":"chat.completion","created":1746555172,"model":"mixtral-8x7b","choices":[{"index":0,"message":{"role":"assistant","content":"Sure,
+        here''s an example of a simple JSON object:\n```json\n{\n  \"name\": \"John
+        Doe\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n```\nThis JSON object
+        includes three key-value pairs: \"name\" with a value of \"John Doe\", \"age\"
+        with a value of 30, and \"city\" with a value of \"New York\". The keys and
+        values are enclosed in double quotes and separated by colons, and the pairs
+        are separated by commas. The entire object is enclosed in curly braces.","tool_calls":null},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":13,"total_tokens":149,"completion_tokens":136}}'
     headers:
-      CF-Cache-Status:
+      cf-cache-status:
       - DYNAMIC
-      CF-RAY:
-      - 8ed0e1d93a4f9e65-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Thu, 05 Dec 2024 03:17:17 GMT
-      Server:
-      - cloudflare
-      Transfer-Encoding:
-      - chunked
+      cf-ray:
+      - 93ba72c5afc5ce40-SJC
       content-length:
-      - '964'
+      - '766'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 18:12:53 GMT
+      server:
+      - cloudflare
       vary:
       - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '1465'
+      - '981'
     status:
       code: 200
       message: OK

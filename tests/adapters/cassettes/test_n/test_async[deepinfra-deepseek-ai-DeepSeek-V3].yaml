@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepinfra.com
       user-agent:
-      - AsyncOpenAI/Python 1.59.3
+      - AsyncOpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,29 +25,31 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.59.3
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.7
+      - 3.13.1
     method: POST
     uri: https://api.deepinfra.com/v1/openai/chat/completions
   response:
     body:
-      string: "{\"id\":\"chatcmpl-2a47611e3f894a61820f8894dff97e59\",\"object\":\"chat.completion\",\"created\":1738286200,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\"},{\"index\":1,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4,\"total_tokens\":28,\"completion_tokens\":24,\"estimated_cost\":2.5e-05}}"
+      string: "{\"id\":\"chatcmpl-052e25863d9542909b01499f95ff6919\",\"object\":\"chat.completion\",\"created\":1746561022,\"model\":\"deepseek-ai/DeepSeek-V3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null},{\"index\":1,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":5,\"total_tokens\":30,\"completion_tokens\":25,\"estimated_cost\":2.415e-05}}"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '530'
+      - '571'
       Content-Type:
       - application/json
       Date:
-      - Fri, 31 Jan 2025 01:16:40 GMT
+      - Tue, 06 May 2025 19:50:22 GMT
       server:
       - uvicorn
       x-robots-tag:

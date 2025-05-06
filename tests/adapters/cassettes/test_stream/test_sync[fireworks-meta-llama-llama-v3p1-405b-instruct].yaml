@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Hi"}], "model": "accounts/fireworks/models/llama-v3p1-405b-instruct",
-      "stream": true}'
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","stream":true}'
     headers:
       accept:
       - application/json
@@ -10,13 +9,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '128'
+      - '120'
       content-type:
       - application/json
       host:
       - api.fireworks.ai
       user-agent:
-      - OpenAI/Python 1.54.1
+      - OpenAI/Python 1.76.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,36 +25,33 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.54.1
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.10
+      - 3.13.1
     method: POST
     uri: https://api.fireworks.ai/inference/v1/chat/completions
   response:
     body:
-      string: 'data: {"id":"8c6ffea4-5480-4207-98cd-b86ed169273f","object":"chat.completion.chunk","created":1732323179,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null}],"usage":null}
+      string: 'data: {"id":"caeb9129-5f0a-4ef7-851b-ae3334dba9dd","object":"chat.completion.chunk","created":1746561168,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"role":"assistant"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"8c6ffea4-5480-4207-98cd-b86ed169273f","object":"chat.completion.chunk","created":1732323179,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"content":"It''s"},"finish_reason":null}],"usage":null}
+        data: {"id":"caeb9129-5f0a-4ef7-851b-ae3334dba9dd","object":"chat.completion.chunk","created":1746561168,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"content":"Hello!"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"8c6ffea4-5480-4207-98cd-b86ed169273f","object":"chat.completion.chunk","created":1732323179,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"content":"
-        nice to meet you. Is there"},"finish_reason":null}],"usage":null}
+        data: {"id":"caeb9129-5f0a-4ef7-851b-ae3334dba9dd","object":"chat.completion.chunk","created":1746561168,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"content":"
+        How can I assist you today"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"8c6ffea4-5480-4207-98cd-b86ed169273f","object":"chat.completion.chunk","created":1732323179,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"content":"
-        something I can help you with or would"},"finish_reason":null}],"usage":null}
+        data: {"id":"caeb9129-5f0a-4ef7-851b-ae3334dba9dd","object":"chat.completion.chunk","created":1746561168,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"content":"?"},"finish_reason":null}],"usage":null}
 
 
-        data: {"id":"8c6ffea4-5480-4207-98cd-b86ed169273f","object":"chat.completion.chunk","created":1732323179,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{"content":"
-        you like to chat?"},"finish_reason":null}],"usage":null}
-
-
-        data: {"id":"8c6ffea4-5480-4207-98cd-b86ed169273f","object":"chat.completion.chunk","created":1732323179,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"usage":{"prompt_tokens":16,"total_tokens":39,"completion_tokens":23}}
+        data: {"id":"caeb9129-5f0a-4ef7-851b-ae3334dba9dd","object":"chat.completion.chunk","created":1746561168,"model":"accounts/fireworks/models/llama-v3p1-405b-instruct","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"usage":{"prompt_tokens":16,"total_tokens":26,"completion_tokens":10}}
 
 
         data: [DONE]
@@ -63,30 +59,18 @@ interactions:
 
         '
     headers:
-      Access-Control-Allow-Origin:
+      access-control-allow-origin:
       - '*'
-      CF-Cache-Status:
-      - DYNAMIC
-      CF-Ray:
-      - 8e6d2dfbfdb62712-SJC
-      Cf-Placement:
-      - local-SJC
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/event-stream; charset=utf-8
-      Date:
-      - Sat, 23 Nov 2024 00:52:59 GMT
-      Server:
-      - cloudflare
-      Server-Timing:
-      - total;dur=329.0;desc="Total Response Time"
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
       alt-svc:
       - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb0524eaf824e8-SJC
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Tue, 06 May 2025 19:52:48 GMT
       fireworks-middleware-version:
       - v2
       fireworks-prompt-tokens:
@@ -96,11 +80,31 @@ interactions:
         0.0, "typical_p": 1.0, "frequency_penalty": 0.0, "presence_penalty": 0.0,
         "repetition_penalty": 1.0, "mirostat_target": null, "mirostat_lr": 0.1}'
       fireworks-server-time-to-first-token:
-      - '0.226'
+      - '0.188'
+      server:
+      - cloudflare
+      server-timing:
+      - total;dur=297.0;desc="Total Response Time"
+      vary:
+      - Accept-Encoding
       x-envoy-upstream-service-time:
-      - '229'
+      - '189'
+      x-ratelimit-limit-requests:
+      - '60'
+      x-ratelimit-limit-tokens-generated:
+      - '6000'
+      x-ratelimit-limit-tokens-prompt:
+      - '60000'
+      x-ratelimit-over-limit:
+      - 'no'
+      x-ratelimit-remaining-requests:
+      - '59'
+      x-ratelimit-remaining-tokens-generated:
+      - '6000'
+      x-ratelimit-remaining-tokens-prompt:
+      - '59984'
       x-request-id:
-      - 8c6ffea4-5480-4207-98cd-b86ed169273f
+      - caeb9129-5f0a-4ef7-851b-ae3334dba9dd
     status:
       code: 200
       message: OK
