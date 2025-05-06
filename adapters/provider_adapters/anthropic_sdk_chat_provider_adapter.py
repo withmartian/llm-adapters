@@ -80,29 +80,11 @@ class AnthropicModel(Model):
 
 MODELS: list[Model] = [
     AnthropicModel(
-        name="claude-3-haiku-20240307",
-        cost=Cost(prompt=0.25e-6, completion=1.25e-6),
+        name="claude-3-opus-latest",
+        cost=Cost(prompt=15.00e-6, completion=75.00e-6),
         context_length=200000,
         completion_length=4096,
     ),
-    # AnthropicModel(
-    #     name="claude-3-haiku-latest",
-    #     cost=Cost(prompt=0.25e-6, completion=1.25e-6),
-    #     context_length=200000,
-    #     completion_length=4096,
-    # ),
-    # AnthropicModel(
-    #     name="claude-3-sonnet-20240229",
-    #     cost=Cost(prompt=3.00e-6, completion=15.00e-6),
-    #     context_length=200000,
-    #     completion_length=4096,
-    # ),
-    # AnthropicModel(
-    #     name="claude-3-sonnet-latest",
-    #     cost=Cost(prompt=3.0e-6, completion=15.0e-6),
-    #     context_length=200000,
-    #     completion_length=4096,
-    # ),
     AnthropicModel(
         name="claude-3-opus-20240229",
         cost=Cost(prompt=15.00e-6, completion=75.00e-6),
@@ -110,38 +92,31 @@ MODELS: list[Model] = [
         completion_length=4096,
     ),
     AnthropicModel(
-        name="claude-3-opus-latest",
-        cost=Cost(prompt=15.00e-6, completion=75.00e-6),
+        name="claude-3-5-haiku-latest",
+        cost=Cost(prompt=0.80e-6, completion=4.00e-6),
         context_length=200000,
-        completion_length=4096,
+        completion_length=8192,
     ),
     AnthropicModel(
         name="claude-3-5-haiku-20241022",
         cost=Cost(prompt=0.80e-6, completion=4.00e-6),
         context_length=200000,
         completion_length=8192,
-        supports_vision=False,
     ),
     AnthropicModel(
-        name="claude-3-5-sonnet-20240620",
+        name="claude-3-5-sonnet-latest",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
-        completion_length=4096,
+        completion_length=8192,
     ),
     AnthropicModel(
         name="claude-3-5-sonnet-20241022",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
-        completion_length=4096,
-    ),
-    AnthropicModel(
-        name="claude-3-5-haiku-latest",
-        cost=Cost(prompt=1.00e-6, completion=5.00e-6),
-        context_length=200000,
         completion_length=8192,
     ),
     AnthropicModel(
-        name="claude-3-5-sonnet-latest",
+        name="claude-3-5-sonnet-20240620",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
         completion_length=8192,
