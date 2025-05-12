@@ -15,7 +15,7 @@ interactions:
       host:
       - api.lambdalabs.com
       user-agent:
-      - AsyncOpenAI/Python 1.76.0
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,9 +25,7 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.76.0
-      x-stainless-read-timeout:
-      - '600.0'
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -38,41 +36,36 @@ interactions:
     uri: https://api.lambdalabs.com/v1/chat/completions
   response:
     body:
-      string: '{"id":"chatcmpl-7a73b17c-28a8-4372-984a-c065ed1b576c","object":"chat.completion","created":1747090556,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"**Hello!**\n\nIt''s
-        nice to meet you. Is there something I can help you with, or would you like
-        to:\n\n1. **Chat for fun** (e.g., talk about hobbies, movies, books, or games)?\n2.
-        **Ask a question** on a specific topic (e.g., history, science, technology,
-        or more)?\n3. **Play a text-based game** (e.g., 20 Questions, Hangman, Word
-        Chain, or Would You Rather)?\n4. **Generate creative content** (e.g., story,
-        poem, or character ideas)?\n5. **Discuss a particular subject** (e.g., news,
-        education, career, or wellness)?\n6. **Something else** (please specify, and
-        I''ll do my best to assist you)?\n\nChoose a numbered option, or simply type
-        what''s on your mind, and I''ll respond accordingly!","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":16,"total_tokens":197,"completion_tokens":181,"prompt_tokens_details":null},"prompt_logprobs":null}'
+      string: '{"id":"chatcmpl-57fa7e12-8cf3-45b3-ac9a-3516018bcc7d","object":"chat.completion","created":1742489042,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Hi!
+        It''s nice to meet you. Is there something I can help you with or would you
+        like to:\n\n1. **Chat about a topic** (e.g., hobbies, movies, books, technology)?\n2.
+        **Ask a question** on a specific subject (e.g., history, science, entertainment)?\n3.
+        **Play a game** (e.g., 20 Questions, Hangman, Word Chain)?\n4. **Generate
+        ideas** for a project or creative pursuit?\n5. **Practice a language** (if
+        you''re learning one)?\n6. **Discuss a current event** or news story?\n7.
+        **Something else** (please specify)?\n\nLet me know, and I''ll do my best
+        to assist or engage with you!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":152,"total_tokens":168,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
     headers:
-      CF-RAY:
-      - 93ed81a9e946090e-LAX
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 12 May 2025 22:56:00 GMT
-      Server:
-      - cloudflare
-      Set-Cookie:
-      - __cf_bm=4p9j0lSOtl42QmNfqY6tqNWfdrdmXViMo_PXiAOLiNE-1747090560-1.0.1.1-C6aGjJ7S3HUKzFDGgLrrHiAd5m.SgL336GfOv8c3jQWpmLC5s64lH66T81adDASaiB2hdjrAlcsftc08qM3nNGZXf7P.2.h3ub069ILro.w;
-        path=/; expires=Mon, 12-May-25 23:26:00 GMT; domain=.lambdalabs.com; HttpOnly;
-        Secure; SameSite=None
-      Transfer-Encoding:
-      - chunked
       cf-cache-status:
       - DYNAMIC
+      cf-ray:
+      - 9236ac017c9c477e-DFW
       content-length:
-      - '1126'
+      - '1209'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:44:06 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=dWP3qdjaKm8vLr9QCStbHyzX7U49x_yyOZPreCup6Q0-1742489046-1.0.1.1-T8oYc8HosaLT8naXJD.SZ7c5CgZMmCGG6RrMpDlkQACfMNaWr7rEud7J56w2VMQw5Y9Dlr08LYgsOsHnhEovdaWGMJLxOoJxAAocBn6vic8;
+        path=/; expires=Thu, 20-Mar-25 17:14:06 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
       x-request-id:
-      - 7a73b17c-28a8-4372-984a-c065ed1b576c
+      - 57fa7e12-8cf3-45b3-ac9a-3516018bcc7d
       x-response-time:
-      - '3.717'
+      - '4.431'
     status:
       code: 200
       message: OK

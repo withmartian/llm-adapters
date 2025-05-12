@@ -15,7 +15,7 @@ interactions:
       host:
       - api.deepseek.com
       user-agent:
-      - AsyncOpenAI/Python 1.76.0
+      - AsyncOpenAI/Python 1.61.0
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -25,9 +25,7 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.76.0
-      x-stainless-read-timeout:
-      - '600.0'
+      - 1.61.0
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
@@ -38,44 +36,49 @@ interactions:
     uri: https://api.deepseek.com/chat/completions
   response:
     body:
-      string: "{\"id\":\"971055db-088f-4c40-a8e6-97e9922b98d9\",\"object\":\"chat.completion\",\"created\":1747090607,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
-        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Alright,
-        the user just said \\\"Hi\\\". That's a friendly greeting. I should respond
-        in a warm and welcoming manner. Maybe say something like, \\\"Hello! How can
-        I assist you today?\\\" to invite them to share what they need help with.
-        Keep it open-ended so they feel comfortable asking any questions they have.
-        Let me make sure the tone is positive and approachable.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":90,\"total_tokens\":96,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":77},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_5417b77867_prod0425fp8\"}"
+      string: "{\"id\":\"2946e16f-d2ab-40fb-8ed7-04ae949b9f0a\",\"object\":\"chat.completion\",\"created\":1740770880,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay, the
+        user just said \\\"Hi\\\". That's a friendly greeting. I should respond in
+        a welcoming manner. Let me make sure my reply is open and inviting so they
+        feel comfortable to ask anything. Maybe add a smiley to keep it warm.\\n\\nI
+        need to check if there's any specific context or previous messages, but since
+        it's the first interaction, keeping it simple is best. Avoid using any technical
+        jargon. Just a straightforward, friendly response. Alright, let's go with
+        that.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":114,\"total_tokens\":120,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":101},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
     headers:
       CF-RAY:
-      - 93ed82e5bc292f34-LAX
+      - 9192d0af5c1fe81c-ORD
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Date:
-      - Mon, 12 May 2025 22:56:47 GMT
+      - Fri, 28 Feb 2025 19:28:00 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=qdrtpo0NnElvP6rw.LG4aYztXeL.LgP1BrW4zt.Bv.0-1747090607-1.0.1.1-ZPsORkGzfYYDL1s7u4FIjrp2zQA1zA_JSOK8SDY0e5gt9DA7mROezWn4_Nh1y9YKf2H3nKuNLz2ra5URm9fmfKU8CQVbszfX6pVfpM9dqbo;
-        path=/; expires=Mon, 12-May-25 23:26:47 GMT; domain=.deepseek.com; HttpOnly;
+      - HWWAFSESID=6e9c89404a8173994c; path=/
+      - HWWAFSESTIME=1740770877849; path=/
+      - __cf_bm=CVJuI9DNxFu_V9wo6i8l3QG8Ecjqqw2orOgyEOp418o-1740770880-1.0.1.1-rRSMLEZQw5xyqL.HKi33mpbr4B.PeDdUGmAeMy1qIFVx9W6t1iS9UCAQA1Hb0RJopO6lmpdkW.fp.VKQRa4pJmjSSsivwzlqVuUfjmffcIM;
+        path=/; expires=Fri, 28-Feb-25 19:58:00 GMT; domain=.deepseek.com; HttpOnly;
         Secure; SameSite=None
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
       Transfer-Encoding:
       - chunked
-      X-Content-Type-Options:
-      - nosniff
       access-control-allow-credentials:
       - 'true'
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '920'
+      - '1030'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
       vary:
       - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
       x-ds-trace-id:
-      - 6afcf95ddf4b1987b14b107f4cb8bf24
+      - aabfaa0259830b608b60d586502b47e6
     status:
       code: 200
       message: OK
