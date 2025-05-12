@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.2-3b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '76'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-1312cc7b-038f-471b-9240-a0587e59e9d3","object":"chat.completion","created":1747090555,"model":"llama3.2-3b-instruct","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"How
+        can I assist you today?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":44,"completion_tokens":8,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      CF-RAY:
+      - 93ed81a61e132ea8-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 May 2025 22:55:56 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=WkvD0D9DMdjcLGfZIR_qXRTAaMQGC6hPjhJUr3ruYFA-1747090556-1.0.1.1-ASJaPS6EYeNAIiu1.kNu5T0qP14fO5Uh1kIWwFABp.dn1uWR5osM4IVsnaMhKNUPYSIeEc.WEy25f3l0K8EIOQrkhNjMrPTwSk6doeIlnXk;
+        path=/; expires=Mon, 12-May-25 23:25:56 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '448'
+      x-request-id:
+      - 1312cc7b-038f-471b-9240-a0587e59e9d3
+      x-response-time:
+      - '0.134'
+    status:
+      code: 200
+      message: OK
+version: 1

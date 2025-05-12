@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "c06c1c5d-3f2c-41ef-8650-a80961aca202", "model": "sonar-reasoning",
+        "created": 1747090695, "usage": {"prompt_tokens": 1, "completion_tokens":
+        562, "total_tokens": 563, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user''s query
+        is just \"Hi\". Let me look through the search results to figure out what
+        they''re asking for. Since \"Hi\" is a common greeting, but the user might
+        want more than just a simple hello. Let me check the search results.\n\nLooking
+        at the first result from Dictionary.com, \"Hi\" is defined as an informal
+        greeting, more casual than \"hello\". It also mentions HI as an abbreviation
+        for Hawaii..vocab.com in the second result confirms that \"Hi\" is a common,
+        casual greeting and mentions its origin in the 1800s. The third result is
+        a YouTube video for kids, so maybe not relevant unless the user is teaching
+        English. The Wikipedia entry lists various meanings, including the greeting,
+        language codes, and other uses like the podcast \"Hello Internet\".\n\nThe
+        Cambridge Dictionary entry also defines \"Hi\" as an informal greeting. So
+        putting this together, the user might be looking for the definition and usage
+        of \"Hi\" as a greeting. They might also want to know other possible meanings,
+        but since the query is just \"Hi\", the main focus is on its use as a greeting.\n\nI
+        need to structure the answer clearly. Start by explaining it as a greeting,
+        mention its casual nature, and note when it''s appropriate. Then, briefly
+        touch on other possible meanings like Hawaii''s abbreviation or the podcast.
+        Since the search results include multiple sources, I should cite them appropriately.
+        Make sure the answer is concise but covers the main points without unnecessary
+        details.\n</think>\n\n\"Hi\" serves primarily as a **casual greeting** in
+        English, more informal than \"hello\" but widely used in daily interactions[2][5].
+        It is appropriate for most social situations except highly formal settings,
+        such as official meetings or meetings with dignitaries[2].\n\n### **Key Details**  \n-
+        **Usage**: Often used when greeting acquaintances, friends, or even strangers
+        in familiar contexts (e.g., \"Hi, how are you?\")[2][5].  \n- **Etymology**:
+        First documented in the 1800s, attributed to a Kansas Native American speaker[2].  \n-
+        **Alternatives**: Other casual greetings include \"hey,\" \"hello,\" and \"howdy,\"
+        though \"hi\" remains the most commonly used[2].  \n\n### **Other Meanings**  \n1.
+        **HI**: Abbreviation for **Hawaii**[1][4].  \n2. **HI**: A podcast (*Hello
+        Internet*) hosted by CGP Grey and Brady Haran[4].  \n3. **Language**: In Japanese,
+        *hi* (\u3072/\u30d2) is a kana character[4].  \n\nFor young learners, educational
+        content like the *Hi, Hello Song!* simplifies its use in greetings[3]."},
+        "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 93ed84dfae060906-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 May 2025 22:58:15 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=OvcXziPaqNzJgakf9Kq3IugQyehjux.L42UUVFdJD3U-1747090695-1.0.1.1-2uvdjd7WnUkZ8I4osS7IiaOY3Gp5MMcXNkVqj5KjSzjRvnFsQdK0ODH3mep3Ti7jCXL7BFFckXOCjra.PH.S68PaHVqFMed8hk_Jr1ncWeo;
+        path=/; expires=Mon, 12-May-25 23:28:15 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '3160'
+    status:
+      code: 200
+      message: OK
+version: 1

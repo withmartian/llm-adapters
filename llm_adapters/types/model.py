@@ -141,6 +141,8 @@ class Model(BaseModel):
     can_top_k: bool = True
     can_min_p: bool = True
 
+    can_developer: bool = True
+
     can_system: bool = True
     can_system_only: bool = True
     can_system_multiple: bool = True

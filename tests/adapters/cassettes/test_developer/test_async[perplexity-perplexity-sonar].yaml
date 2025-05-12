@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "2bad9122-6ecf-4c5f-af21-91f56b4de533", "model": "sonar", "created":
+        1747090684, "usage": {"prompt_tokens": 1, "completion_tokens": 173, "total_tokens":
+        174, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "The term **\"hi\"** can have
+        multiple meanings depending on the context:\n\n1. **Greeting**: \"Hi\" is
+        an informal greeting, often used in casual settings. It is a common way to
+        say hello to someone, especially to people you know well[2][5].\n\n2. **Abbreviation**:
+        It can be an abbreviation for \"Hawaii\" (HI), particularly when used with
+        zip codes[1].\n\n3. **Other Uses**: In arts and entertainment, \"Hi\" can
+        refer to various works or entities, such as songs, albums, or magazines[4].
+        In language, \"hi\" can denote specific characters or signs in different writing
+        systems, like the Japanese kana \"\u3072\" or the Armenian letter \"\u0545\"[4].
+        \n\nIn general, \"hi\" is an all-purpose greeting suitable for most informal
+        interactions."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 93ed84aa1bda78da-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 May 2025 22:58:04 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=OFvGRfLzqftQxaPCxjFuvt5oJQk1qAuGmuVQDGHb8HU-1747090684-1.0.1.1-thxqmzYlDx4N7_DlJbh9QpyqA3kk0lhlYbVp1QEF26w328LwpWUlDzyOHGLsMb6HLMEQ8eIz0VI4ohovdFqZGV0hISlvpBPRqkHCfeGStls;
+        path=/; expires=Mon, 12-May-25 23:28:04 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1358'
+    status:
+      code: 200
+      message: OK
+version: 1

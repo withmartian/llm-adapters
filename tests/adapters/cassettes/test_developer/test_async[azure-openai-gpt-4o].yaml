@@ -1,0 +1,91 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"gpt-4o","tool_choice":null}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      api-key:
+      - b22bea4270b74a7e9eb3b2c74ee66db9
+      connection:
+      - keep-alive
+      content-length:
+      - '81'
+      content-type:
+      - application/json
+      host:
+      - martiantest.openai.azure.com
+      user-agent:
+      - AsyncAzureOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://martiantest.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-06-01
+  response:
+    body:
+      string: '{"choices":[{"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}},"finish_reason":"stop","index":0,"logprobs":null,"message":{"annotations":[],"content":"Hello!
+        How can I assist you today?","refusal":null,"role":"assistant"}}],"created":1747090676,"id":"chatcmpl-BWWNoHjEJn3UXxEB0W8kPiuapk5Mg","model":"gpt-4o-2024-08-06","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"system_fingerprint":"fp_ee1d74bde0","usage":{"completion_tokens":10,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens":8,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":18}}
+
+        '
+    headers:
+      Content-Length:
+      - '1067'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 May 2025 22:57:55 GMT
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      apim-request-id:
+      - 374e962e-a6e3-437f-8cbc-cad3786c7c42
+      azureml-model-session:
+      - v20250415-5-168444713-2
+      cmp-upstream-response-duration:
+      - '261'
+      ms-azureml-model-time:
+      - '310'
+      x-accel-buffering:
+      - 'no'
+      x-content-type-options:
+      - nosniff
+      x-envoy-upstream-service-time:
+      - '312'
+      x-ms-client-request-id:
+      - 374e962e-a6e3-437f-8cbc-cad3786c7c42
+      x-ms-deployment-name:
+      - gpt-4o
+      x-ms-rai-invoked:
+      - 'true'
+      x-ms-region:
+      - East US
+      x-ratelimit-limit-requests:
+      - '150'
+      x-ratelimit-limit-tokens:
+      - '150000'
+      x-ratelimit-remaining-requests:
+      - '149'
+      x-ratelimit-remaining-tokens:
+      - '149359'
+      x-request-id:
+      - b4e88e57-1245-4466-981f-b67a46272720
+    status:
+      code: 200
+      message: OK
+version: 1

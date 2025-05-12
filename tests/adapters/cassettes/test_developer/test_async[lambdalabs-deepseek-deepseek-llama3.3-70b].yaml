@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-llama3.3-70b"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-f3e87d56-92d4-4cb8-8d09-5171cb68bbb4\",\"object\":\"chat.completion\",\"created\":1747090554,\"model\":\"deepseek-llama3.3-70b\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"<think>\\n\\n</think>\\n\\nHello!
+        How can I assist you today? \U0001F60A\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"usage\":{\"prompt_tokens\":4,\"total_tokens\":20,\"completion_tokens\":16,\"prompt_tokens_details\":null},\"prompt_logprobs\":null}"
+    headers:
+      CF-RAY:
+      - 93ed819ceb411502-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 May 2025 22:55:54 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=ibFxfAMFw1.GZcDJmtonYnts4pltyvwJVVM3w8oSICw-1747090554-1.0.1.1-kNodCjc_.By7UKHMBQJMvjAluYToUFfSb5WEklelynp5moATAvW0TUqavPQPqjEcAx6HSfpShVn7A1oezARfQdB2iKq1mWug8wg_8VLpTVQ;
+        path=/; expires=Mon, 12-May-25 23:25:54 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '484'
+      x-request-id:
+      - f3e87d56-92d4-4cb8-8d09-5171cb68bbb4
+      x-response-time:
+      - '0.355'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -43,6 +43,7 @@ from llm_adapters.types import (
     NotGiven,
     ChatCompletionMessageParam,
     ChatCompletionUserMessageParam,
+    ChatCompletionSystemMessageParam,
 )
 
 CLIENT_SYNC = TypeVar("CLIENT_SYNC")
@@ -194,6 +195,7 @@ class SDKChatAdapter(
             )
 
     # TODO: Check if a "system" message is between two "user" messages
+    # TODO: add name converstion to different roles
     def _format_messages(
         self, **kwargs: Unpack[ChatCompletionCreateArgs]
     ) -> Iterable[ChatCompletionMessageParam]:
@@ -209,6 +211,13 @@ class SDKChatAdapter(
                     role=ConversationRole.user.value, content=EMPTY_CONTENT
                 )
             )
+
+        if not self.get_model().can_developer:
+            for messageId, message in enumerate(messages):
+                if message["role"] == ConversationRole.developer.value:
+                    messages[messageId] = ChatCompletionSystemMessageParam(
+                        role=ConversationRole.system.value, content=message["content"]
+                    )
 
         # Convert empty string to EMPTY_CONTENT if not supported
         if not self.get_model().can_empty_content:

@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-8b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '76'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-095dc672-9beb-44be-91fe-f14681b5249b","object":"chat.completion","created":1747090552,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"It''s
+        nice to meet you. Is there something I can help you with or would you like
+        to chat?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":59,"completion_tokens":23,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      CF-RAY:
+      - 93ed81903cb414fe-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 May 2025 22:55:52 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=Z5Peh9HC8Lgg3zHWM2Fb9YtknrfRBaTGvaWchLhmaNM-1747090552-1.0.1.1-tTfNBNv5wCS_t48RNf0nSBhsBrgbRX3RHlnZ3G7PPclkzqPP4z0kE7TIUgxDJe_D87Y9KAZSNJ9nBLqfq_bj3qUHwjQ0aKD80kUCo7RhVE0;
+        path=/; expires=Mon, 12-May-25 23:25:52 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '510'
+      x-request-id:
+      - 095dc672-9beb-44be-91fe-f14681b5249b
+      x-response-time:
+      - '0.262'
+    status:
+      code: 200
+      message: OK
+version: 1

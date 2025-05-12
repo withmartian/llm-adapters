@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.3-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '81'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-9bb55bd2-7af6-463b-b176-e7c8c167ee3d","object":"chat.completion","created":1747090555,"model":"llama3.3-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"How
+        can I help you today?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":44,"completion_tokens":8,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      CF-RAY:
+      - 93ed81a33957d938-LAX
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 12 May 2025 22:55:55 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=yrnTe5zacuZVpNaOrHL8dAwQzgfGxW557zCHhUawG0M-1747090555-1.0.1.1-Lv_5PZ9CtbmbGSxhY3HQFku72YIH_aherfZZtkk15AIFgU0A8x.BrUZz3IVmch_XHLT1lqlni1dy_u4DJBIe_r1glGC1Ad1_MQE1vii5l50;
+        path=/; expires=Mon, 12-May-25 23:25:55 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '451'
+      x-request-id:
+      - 9bb55bd2-7af6-463b-b176-e7c8c167ee3d
+      x-response-time:
+      - '0.247'
+    status:
+      code: 200
+      message: OK
+version: 1
