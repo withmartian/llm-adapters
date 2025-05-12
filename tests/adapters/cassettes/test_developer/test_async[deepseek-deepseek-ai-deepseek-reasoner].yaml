@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"deepseek-reasoner"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '73'
+      content-type:
+      - application/json
+      host:
+      - api.deepseek.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepseek.com/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"2946e16f-d2ab-40fb-8ed7-04ae949b9f0a\",\"object\":\"chat.completion\",\"created\":1740770880,\"model\":\"deepseek-reasoner\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? \U0001F60A\",\"reasoning_content\":\"Okay, the
+        user just said \\\"Hi\\\". That's a friendly greeting. I should respond in
+        a welcoming manner. Let me make sure my reply is open and inviting so they
+        feel comfortable to ask anything. Maybe add a smiley to keep it warm.\\n\\nI
+        need to check if there's any specific context or previous messages, but since
+        it's the first interaction, keeping it simple is best. Avoid using any technical
+        jargon. Just a straightforward, friendly response. Alright, let's go with
+        that.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":6,\"completion_tokens\":114,\"total_tokens\":120,\"prompt_tokens_details\":{\"cached_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":101},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":6},\"system_fingerprint\":\"fp_5417b77867_prod0225\"}"
+    headers:
+      CF-RAY:
+      - 9192d0af5c1fe81c-ORD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Feb 2025 19:28:00 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - HWWAFSESID=6e9c89404a8173994c; path=/
+      - HWWAFSESTIME=1740770877849; path=/
+      - __cf_bm=CVJuI9DNxFu_V9wo6i8l3QG8Ecjqqw2orOgyEOp418o-1740770880-1.0.1.1-rRSMLEZQw5xyqL.HKi33mpbr4B.PeDdUGmAeMy1qIFVx9W6t1iS9UCAQA1Hb0RJopO6lmpdkW.fp.VKQRa4pJmjSSsivwzlqVuUfjmffcIM;
+        path=/; expires=Fri, 28-Feb-25 19:58:00 GMT; domain=.deepseek.com; HttpOnly;
+        Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1030'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - origin, access-control-request-method, access-control-request-headers
+      - accept-encoding
+      x-content-type-options:
+      - nosniff
+      x-ds-trace-id:
+      - aabfaa0259830b608b60d586502b47e6
+    status:
+      code: 200
+      message: OK
+version: 1

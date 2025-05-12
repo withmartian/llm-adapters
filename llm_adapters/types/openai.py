@@ -45,6 +45,9 @@ from openai.types.chat.chat_completion import (
 from openai.types.chat.chat_completion_user_message_param import (
     ChatCompletionUserMessageParam,
 )
+from openai.types.chat.chat_completion_system_message_param import (
+    ChatCompletionSystemMessageParam,
+)
 from openai.resources.files import FileObject
 from openai.types.file_purpose import FilePurpose
 from openai.types.shared_params.metadata import Metadata
@@ -86,6 +89,7 @@ __all__ = [
     "ChatCompletionMessage",
     "CompletionUsage",
     "ChatCompletionUserMessageParam",
+    "ChatCompletionSystemMessageParam",
     "ChoiceChunk",
     "ChoiceDelta",
     "FileObject",

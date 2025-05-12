@@ -84,6 +84,7 @@ class AnthropicModel(Model):
     supports_completion: bool = False
     supports_n: bool = False
 
+    can_developer: bool = False
     can_system: bool = False
     can_empty_content: bool = False
 

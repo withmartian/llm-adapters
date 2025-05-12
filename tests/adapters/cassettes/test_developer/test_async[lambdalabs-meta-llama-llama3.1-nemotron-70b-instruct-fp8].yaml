@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-nemotron-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '90'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.61.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.61.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-57fa7e12-8cf3-45b3-ac9a-3516018bcc7d","object":"chat.completion","created":1742489042,"model":"llama3.1-nemotron-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","content":"Hi!
+        It''s nice to meet you. Is there something I can help you with or would you
+        like to:\n\n1. **Chat about a topic** (e.g., hobbies, movies, books, technology)?\n2.
+        **Ask a question** on a specific subject (e.g., history, science, entertainment)?\n3.
+        **Play a game** (e.g., 20 Questions, Hangman, Word Chain)?\n4. **Generate
+        ideas** for a project or creative pursuit?\n5. **Practice a language** (if
+        you''re learning one)?\n6. **Discuss a current event** or news story?\n7.
+        **Something else** (please specify)?\n\nLet me know, and I''ll do my best
+        to assist or engage with you!"},"finish_reason":"stop","content_filter_results":{"hate":{"filtered":false},"self_harm":{"filtered":false},"sexual":{"filtered":false},"violence":{"filtered":false},"jailbreak":{"filtered":false,"detected":false},"profanity":{"filtered":false,"detected":false}}}],"usage":{"prompt_tokens":16,"completion_tokens":152,"total_tokens":168,"prompt_tokens_details":null,"completion_tokens_details":null},"system_fingerprint":""}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9236ac017c9c477e-DFW
+      content-length:
+      - '1209'
+      content-type:
+      - application/json
+      date:
+      - Thu, 20 Mar 2025 16:44:06 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=dWP3qdjaKm8vLr9QCStbHyzX7U49x_yyOZPreCup6Q0-1742489046-1.0.1.1-T8oYc8HosaLT8naXJD.SZ7c5CgZMmCGG6RrMpDlkQACfMNaWr7rEud7J56w2VMQw5Y9Dlr08LYgsOsHnhEovdaWGMJLxOoJxAAocBn6vic8;
+        path=/; expires=Thu, 20-Mar-25 17:14:06 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 57fa7e12-8cf3-45b3-ac9a-3516018bcc7d
+      x-response-time:
+      - '4.431'
+    status:
+      code: 200
+      message: OK
+version: 1

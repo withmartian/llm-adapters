@@ -1,0 +1,134 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - x64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - Linux
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "5db864ec-f9e5-4d32-93ef-54aa15c7b178", "model": "sonar-reasoning",
+        "created": 1745834378, "usage": {"prompt_tokens": 1, "completion_tokens":
+        1037, "total_tokens": 1038, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://en.wikipedia.org/wiki/HI",
+        "https://www.youtube.com/watch?v=T-wvRTDieGQ", "https://en.wiktionary.org/wiki/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, let''s tackle
+        this query. The user just wrote \"Hi\". Hmm, that''s pretty short. I need
+        to figure out what they''re looking for. \"Hi\" can mean different things.
+        Let me check the search results to see what''s relevant.\n\nLooking at the
+        search results, there are a few possibilities. The first result from Dictionary.com
+        says \"HI\" is an abbreviation for Hawaii and also an informal version of
+        \"high\". Another entry mentions \"hi\" as a greeting, which is more casual
+        than \"hello\". Wikipedia''s entry lists various meanings like the song \"Hi\"
+        by Ofra Haza, a character in a comic, and more. Wiktionary provides linguistic
+        info, especially about Basque.\n\nThe user might be asking about the greeting
+        \"hi\", the abbreviation HI, or something else. Since the query is just \"Hi\",
+        I should cover the primary meanings first. The greeting \"hi\" is probably
+        the most common usage. The search results from Vocabulary.com and Dictionary.com
+        both highlight this casual greeting. Also, the YouTube link about a greeting
+        song for kids supports that.\n\nThen there''s the abbreviation HI for Hawaii,
+        as mentioned in the Dictionary.com entry. That''s a valid point. The other
+        uses from Wikipedia, like the song, character, album, etc., are less common.
+        The Basque pronoun info from Wiktionary is more niche unless the user is studying
+        Basque.\n\nSo, the answer should start with explaining \"hi\" as a greeting,
+        mention the abbreviation HI for Hawaii, and touch on other uses briefly. Need
+        to cite the relevant sources. Also, avoid starting with headers. Use sections
+        but start with a brief intro. Structure the answer with sections for each
+        main usage, citing the sources appropriately.\n\nWait, the user''s message
+        is just \"Hi\". Maybe they want a response, but since it''s a query for information,
+        I should provide that. But according to the instructions, if it''s a greeting,
+        maybe not. But the user''s previous instructions say to answer queries based
+        on search results. So, proceed with the info from the search results.\n\nSo,
+        first, explain the primary uses: the greeting, the abbreviation, and other
+        meanings. Cite [2] and [1] for the greeting and abbreviation. Then mention
+        others from [3]. Also, note the linguistic aspects from [5]. The YouTube link
+        [4] is a song, but since the user didn''t ask for songs, maybe skip that unless
+        relevant.\n\nNeed to make sure each part is cited properly. For example, when
+        talking about the greeting as casual, cite [2]. When mentioning HI for Hawaii,
+        cite [1]. For other meanings like the song, cite [3]. The Basque pronoun info
+        would be from [5].\n\nAvoid using headers at the start. Use level 2 headers
+        for sections. So, structure as:\n\n- Greeting\n- Abbreviation\n- Other meanings\n\nEach
+        section with brief points and citations. That should cover the possible interpretations
+        of \"Hi\" based on the search results. Also, check if any other contexts are
+        important. The meteorology reference in [1] mentions HI as heat index, but
+        that''s less common. Maybe include that under abbreviations or other uses.\n\nOkay,
+        putting it all together now. Make sure to mention that \"hi\" can be a greeting,
+        abbreviation for Hawaii, and have other cultural or linguistic uses. Keep
+        it concise but informative, citing the sources appropriately.\n</think>\n\nThe
+        term **\"hi\"** has multiple meanings depending on context:\n\n## Greeting  \nAs
+        a casual greeting, *hi* is a common, informal alternative to \"hello,\" widely
+        used in daily interactions. It first appeared in written records in the 19th
+        century, originating from interactions with Indigenous communities in Kansas[2].
+        It\u2019s suitable for most informal settings but less formal occasions[2].  \n\n##
+        Abbreviations  \nHI primarily serves as the **U.S. postal abbreviation for
+        Hawaii** (e.g., zip codes)[1]. In specialized contexts, it may also refer
+        to:  \n- **Hydrogen-1** (protium) in chemistry[3]  \n- **Heat Index** in meteorology[1]  \n\n##
+        Cultural and Linguistic Uses  \n1. **Music/Arts**:  \n   - Namesakes of songs
+        (e.g., Ofra Haza\u2019s Eurovision entry)[3]  \n   - Albums/EPs by artists
+        like Texas or Psapp[3]  \n   - A character in the *Hi and Lois* comic[3]  \n\n2.
+        **Language**:  \n   - **Basque pronoun**: An informal second-person singular
+        (\"you\") requiring allocutive verb agreement[5].  \n   - **Japanese kana**:
+        \u3072 or \u30d2[3].  \n   - **Hindi language code**: ISO 639-1 abbreviation[3].  \n\n##
+        Other References  \nOther niche uses include cuneiform symbols, interstellar
+        hydrogen clouds (HI regions), and organizational names like *Hello Internet*
+        podcast[3].  \n\nCitations: [1][2][3][5]"}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      CF-RAY:
+      - 9375b4eb3f8495a3-TBS
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 28 Apr 2025 09:59:38 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=BLsUgC4GBfQvXk8TsWKHuFzGaL0GqGyEFtc2CDTqVlY-1745834378-1.0.1.1-K8wECorbCQwH.bzU7HG6O15rytNcoM4XV4st6xSmoK6UEr812Zecjc5gP3E2WbByRL3cCIy89uH6XNgHRKgzGppFuU2MDlU7.Q17.cg5mSs;
+        path=/; expires=Mon, 28-Apr-25 10:29:38 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5221'
+    status:
+      code: 200
+      message: OK
+version: 1
