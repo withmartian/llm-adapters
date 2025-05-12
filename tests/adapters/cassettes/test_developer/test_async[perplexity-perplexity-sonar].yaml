@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '61'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "d7bea631-57c4-45da-a2de-d2eae503cbc7", "model": "sonar", "created":
+        1746564744, "usage": {"prompt_tokens": 1, "completion_tokens": 228, "total_tokens":
+        229, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "\"Hi\" is a common greeting in
+        English, often used as a casual alternative to \"hello.\" It is appropriate
+        in most informal settings and is widely used in everyday interactions, such
+        as saying hello to friends, family, or acquaintances[2][5]. The term can also
+        refer to other things, such as the Hawaiian state abbreviation \"HI\" or various
+        cultural references like the song \"Hi\" by Ofra Haza[4].\n\n### Usage of
+        \"Hi\"\n- **Informal Greeting**: \"Hi\" is used as a friendly, informal greeting,
+        suitable for casual interactions.\n- **Cultural References**: Beyond its use
+        as a greeting, \"Hi\" appears in various contexts, such as music, literature,
+        and even a character in comics[4].\n\n### Pronunciation and Variations\n-
+        **Pronunciation**: The word \"hi\" is pronounced as /ha\u026a/ in both US
+        and UK English[5].\n- **Variations**: Similar greetings include \"hello,\"
+        \"hey,\" \"hiya,\" and \"howdy,\" but \"hi\" is one of the most common and
+        versatile options[2]."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb5c65786d17f4-SJC
+      content-length:
+      - '1587'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:52:24 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=MNxgJLkuyTGicvsxjz_jVmyEEXvyZK_mhgOGqs_DfWA-1746564744-1.0.1.1-ho3sr.0jRRMClj.MBOc12S_wJrOBZDS3AxsDLim2k_VwHKi48hhtKWc3jffjkzqg_Ah47m6hE7rT0fYzlVly4PgxhDgNfC__UmfKn.pE_vM;
+        path=/; expires=Tue, 06-May-25 21:22:24 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

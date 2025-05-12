@@ -76,6 +76,7 @@ class AnthropicModel(Model):
 
     can_system: bool = False
     can_empty_content: bool = False
+    can_developer: bool = False
 
 
 MODELS: list[Model] = [

@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"model":"command","messages":[{"role":"user","content":"Hi"}],"stream":false}'
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '78'
+      content-type:
+      - application/json
+      host:
+      - api.cohere.com
+      user-agent:
+      - python-httpx/0.28.1
+      x-fern-language:
+      - Python
+      x-fern-sdk-name:
+      - cohere
+      x-fern-sdk-version:
+      - 5.15.0
+    method: POST
+    uri: https://api.cohere.com/v2/chat
+  response:
+    body:
+      string: '{"id":"40dcbe5b-cd70-4671-92db-e5ac7cde618c","message":{"role":"assistant","content":[{"type":"text","text":"Hello!
+        What can I do for you today?\n\nLet me know if you would like;\n- Help with
+        writing an email, or a list, or even a love letter\n- Information on a specific
+        topic you''re curious about\n- Creative writing, whether that be poetry or
+        fiction\n- Help with learning a language\n- Assistance with tasks, like managing
+        your time or writing out a to-do list\n\nLet me know if there''s something
+        else you need that I can help with!"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":1,"output_tokens":102},"tokens":{"input_tokens":63,"output_tokens":103}}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Length:
+      - '681'
+      Via:
+      - 1.1 google
+      access-control-expose-headers:
+      - X-Debug-Trace-ID
+      cache-control:
+      - no-cache, no-store, no-transform, must-revalidate, private, max-age=0
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:51:29 GMT
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      num_chars:
+      - '293'
+      num_tokens:
+      - '103'
+      pragma:
+      - no-cache
+      server:
+      - envoy
+      vary:
+      - Origin
+      x-accel-expires:
+      - '0'
+      x-debug-trace-id:
+      - 5316de5dfd6ec8051c20d7acce2ea198
+      x-envoy-upstream-service-time:
+      - '3038'
+    status:
+      code: 200
+      message: OK
+version: 1

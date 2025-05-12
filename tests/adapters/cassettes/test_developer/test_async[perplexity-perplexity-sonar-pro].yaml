@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "e429ac55-3676-4ebe-a6f6-6ed18df351c0", "model": "sonar-pro",
+        "created": 1746564752, "usage": {"prompt_tokens": 1, "completion_tokens":
+        96, "total_tokens": 97, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "Hello! \"Hi\" is a common, informal
+        greeting in English, typically used to say hello to someone you know or to
+        acknowledge someone''s presence. It''s more casual than \"hello\" and is appropriate
+        in almost all but the most formal situations[2][5]. The use of \"hi\" has
+        been popular in English since at least the 1800s, and it''s one of the simplest
+        ways to greet someone in both spoken and written conversation[2][5]."}, "delta":
+        {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb5c76d86eebe4-SJC
+      content-length:
+      - '1032'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:52:32 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=0KxawVSf4rRcZYyciTelRyCtBdzPStX8VI5eXLarTjE-1746564752-1.0.1.1-pOAzM2V3C8Bmfi18P986QCyhH9fAnn9vTgaPElYgJjs5fuiV8C4Sx1zJqftBfd6BP4p0K0.l5B7XknO.t.jtjADf3uvIjF97I3jLNMqT7M4;
+        path=/; expires=Tue, 06-May-25 21:22:32 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

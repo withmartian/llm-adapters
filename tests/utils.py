@@ -106,6 +106,17 @@ SIMPLE_CONVERSATION_USER_ONLY: Iterable[ChatCompletionMessageParam] = [
     }
 ]
 
+SIMPLE_CONVERSATION_USER_DEVELOPER: Iterable[ChatCompletionMessageParam] = [
+    {
+        "role": "user",
+        "content": "Hi",
+    },
+    {
+        "role": "developer",
+        "content": "Hi",
+    },
+]
+
 
 SIMPLE_CONVERSATION_JSON_OUTPUT: Iterable[ChatCompletionMessageParam] = [
     {

@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"google/gemma-3-27b-it"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R8hBr5THOjW9dOM0VSKGC0In\",\"object\":\"chat.completion\",\"created\":1746564719,\"model\":\"google/gemma-3-27b-it\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hi
+        there! \U0001F44B \\n\\nHow can I help you today? Just let me know what you're
+        thinking, or if you just wanted to say hi, that's great too! \U0001F60A \\n\\nI
+        can do lots of things, like:\\n\\n* **Answer questions:** About pretty much
+        anything!\\n* **Generate text:** Stories, poems, articles, scripts, code,
+        etc.\\n* **Translate languages:**  I can translate between many different
+        languages.\\n* **Summarize text:**  Give you the key points of a longer piece
+        of writing.\\n* **Brainstorm ideas:**  Help you come up with ideas for a project.\\n*
+        **Just chat!**\\n\\n\\n\\n\",\"name\":null,\"tool_calls\":[]},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":10,\"total_tokens\":151,\"completion_tokens\":141,\"estimated_cost\":2.9199999999999998e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '918'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 06 May 2025 20:51:59 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

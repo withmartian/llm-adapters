@@ -1,0 +1,130 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.1
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "376d93ba-b419-4bc6-9d34-0044ef4e12f6", "model": "sonar-reasoning",
+        "created": 1746564767, "usage": {"prompt_tokens": 1, "completion_tokens":
+        1034, "total_tokens": 1035, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
+        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
+        "message": {"role": "assistant", "content": "<think>\nOkay, the user''s query
+        is just \"Hi\". Let me figure out what they need. \"Hi\" can mean different
+        things depending on context. First, I need to check the search results to
+        see what information is available.\n\nLooking at the search results, the first
+        one from Dictionary.com defines \"hi\" as an informal greeting, more casual
+        than \"hello\" [1][2]. That makes sense. The second source, Vocabulary.com,
+        also describes \"hi\" as a common greeting, used in informal settings [2].
+        The Cambridge English Dictionary entry confirms this, giving examples like
+        \"Hi, there!\" and \"Hi, how are you?\" [5]. So the primary meaning is a greeting.\n\nBut
+        \"Hi\" can also refer to other things. The Wikipedia entry [4] lists various
+        uses. For example, HI is the abbreviation for Hawaii, especially in zip codes.
+        There''s also a mention of HI in language contexts, like the Japanese kana
+        \u3072 or the Armenian letter \u0545. Additionally, there are arts and entertainment
+        references, such as the podcast \"Hello Internet\", songs named \"Hi\", and
+        even a music label called Hi Records.\n\nSo, the answer needs to cover both
+        the common greeting and the other possible meanings. The user might just want
+        the basic definition, but since the search results include more, it''s good
+        to mention the other uses briefly.\n\nI should structure the answer into sections.
+        The greeting is the most important part. Then, other meanings like abbreviations,
+        language uses, and cultural references. Each section can have bullet points
+        or a short explanation with citations.\n\nWait, the user might be a non-native
+        speaker learning English, so explaining the greeting first is essential. Then,
+        if needed, mention the other meanings. Since the search results include examples
+        from songs, podcasts, and labels, those can be part of the cultural references.\n\nAlso,
+        the YouTube link [3] is about a greeting song for kids, which reinforces the
+        greeting usage. But since it''s a video, maybe not necessary to mention unless
+        it''s relevant. Probably focus on the dictionary and encyclopedia entries.\n\nSo,
+        the answer should start with the primary definition of \"hi\" as a greeting,
+        then other uses. Need to cite the sources appropriately. Each sentence that
+        uses information from a search result should have the citation in brackets.
+        For example, when mentioning Hawaii, cite [1][4]. When talking about Japanese
+        kana, cite [4]. For the greeting, cite [1][2][5].\n\nMake sure not to start
+        with a header. Use sections with level 2 headers. Maybe \"Primary Meaning
+        as a Greeting\" and \"Other Uses and References\". Under each, list the points
+        with citations. Avoid using markdown links, just plain text with citations.\n\nCheck
+        for any other possible meanings. The Wikipedia entry also mentions HI as the
+        ISO code for Hindi, which is a language. That''s another point to include
+        under language uses. Also, the physics reference to Hydrogen-1, but maybe
+        that''s too technical unless the user is in that field. Probably best to mention
+        it briefly.\n\nSo the structure would be:\n\n- Greeting\n- Abbreviations (Hawaii,
+        Hindi)\n- Language elements (Japanese kana, Armenian letter)\n- Cultural references
+        (podcast, songs, music labels)\n\nEach part with concise explanations and
+        citations. Keep it clear and not too lengthy. Make sure each cited part is
+        relevant. Don''t include URLs, just the bracketed numbers.\n</think>\n\n**Hi**
+        serves as a versatile term with multiple meanings depending on context:\n\n##
+        Primary Meaning as a Greeting  \n*Hi* is a casual English greeting, often
+        used informally among acquaintances or in relaxed settings. It is less formal
+        than *hello* and is widely accepted in everyday interactions[1][2][5]. Example
+        usages include:  \n- *Hi, there!* (greeting someone in conversation)[5]  \n-
+        *Say hi to Gemma* (requesting a greeting to someone)[5]  \n\n## Other Uses
+        and References  \n1. **Abbreviations**  \n   - **HI**: U.S. state abbreviation
+        for Hawaii[1][4].  \n   - **HI**: ISO 639-1 code for the Hindi language[4].  \n\n2.
+        **Language Symbols**  \n   - **\u3072 / \u30d2**: Japanese kana representing
+        the \"hi\" sound[4].  \n   - **\u0545**: Armenian letter \"H\u0113\"[4].  \n\n3.
+        **Cultural References**  \n   - *Hello Internet*: A podcast hosted by CGP
+        Grey and Brady Haran[4].  \n   - **Broader Media**: Includes songs (e.g.,
+        Ofra Haza\u2019s *Hi*, Texas\u2019 *Hi* album) and labels like Hi Records
+        (Memphis soul/rockabilly)[4].  \n\n4. **Scientific Contexts**  \n   - **H-I**:
+        Hydrogen isotope *protium* (hydrogen-1)[4].  \n\nFor most conversational contexts,
+        *hi* remains a ubiquitous greeting in English[2][5]."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 93bb5ca7ccd19e56-SJC
+      content-length:
+      - '5241'
+      content-type:
+      - application/json
+      date:
+      - Tue, 06 May 2025 20:52:47 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Hthyvv9nZDwkE16DOJPOgoqi1Jbd3oXY4W2ix9TwIw0-1746564767-1.0.1.1-E8Zj1XdGW3zr2PMSj_wqnJQwBVk267HEgPJoSKKronfMoGO4vJYtvUtwbbxGUWuK7IpdL3C62vGxGvFMHLyTrvwuK4SIP.bMyFD60luKeuU;
+        path=/; expires=Tue, 06-May-25 21:22:47 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

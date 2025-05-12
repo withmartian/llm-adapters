@@ -13,7 +13,11 @@ from typing import (
     overload,
 )
 
-from openai.types.chat import ChatCompletionMessageParam, ChatCompletionUserMessageParam
+from openai.types.chat import (
+    ChatCompletionMessageParam,
+    ChatCompletionSystemMessageParam,
+    ChatCompletionUserMessageParam,
+)
 from openai import NOT_GIVEN, NotGiven
 
 from adapters.abstract_adapters.api_key_adapter_mixin import ApiKeyAdapterMixin
@@ -237,6 +241,13 @@ class SDKChatAdapter(
                     role=ConversationRole.user.value, content=EMPTY_CONTENT
                 )
             )
+
+        if not self.get_model().can_developer:
+            for messageId, message in enumerate(messages):
+                if message["role"] == ConversationRole.developer.value:
+                    messages[messageId] = ChatCompletionSystemMessageParam(
+                        role=ConversationRole.system.value, content=message["content"]
+                    )
 
         # Convert empty string to EMPTY_CONTENT if not supported
         if not self.get_model().can_empty_content:
