@@ -258,6 +258,23 @@ class SDKChatAdapter(
                         role=ConversationRole.user.value, content=message["content"]
                     )
 
+        # Handle system message repeating
+        if not self.get_model().can_system_repeating:
+            filtered_messages: list[ChatCompletionMessageParam] = []
+            last_system_content: Optional[str] = None
+
+            for message in messages:
+                if message["role"] == ConversationRole.system.value:
+                    if isinstance(message["content"], str):
+                        if last_system_content == message["content"]:
+                            continue
+                        last_system_content = message["content"]
+                else:
+                    last_system_content = None
+                filtered_messages.append(message)
+
+            messages = filtered_messages
+
         # Change system prompt roles to user
         if not self.get_model().can_system:
             for messageId, message in enumerate(messages):

@@ -63,6 +63,7 @@ class Vendor(str, Enum):
     grok = "grok"
     liquid = "liquid"
     deepseek = "deepseek"
+    jetbrains = "jetbrains"
 
 
 class ConversationRole(str, Enum):
@@ -145,6 +146,7 @@ class Model(BaseModel):
     can_system_only: bool = True
     can_system_multiple: bool = True
     can_system_last: bool = True
+    can_system_repeating: bool = True
 
     can_assistant_only: bool = True
     can_assistant_first: bool = True

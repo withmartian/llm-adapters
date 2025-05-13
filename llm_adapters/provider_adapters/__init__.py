@@ -11,6 +11,7 @@ from .lambdalabs_sdk_chat_provider_adapter import LambdaLabsSDKChatProviderAdapt
 from .azure_sdk_chat_provider_adapter import AzureSDKChatProviderAdapter
 from .groq_sdk_chat_provider_adapter import GroqSDKChatProviderAdapter
 from .perplexity_sdk_chat_provider_adapter import PerplexitySDKChatProviderAdapter
+from .databricks_sdk_chat_provider_adapter import DatabricksSDKChatProviderAdapter
 
 # from .xai_sdk_chat_provider_adapter import XAISDKChatProviderAdapter
 
@@ -41,13 +42,14 @@ __all__ = [
     "LambdaLabsSDKChatProviderAdapter",
     "AzureSDKChatProviderAdapter",
     "PerplexitySDKChatProviderAdapter",
+    "DatabricksSDKChatProviderAdapter",
+    "GroqSDKChatProviderAdapter",
     # # "AzureSDKChatProviderAdapter",
     # # "DatabricksSDKChatProviderAdapter",
     # "DeepInfraSDKChatProviderAdapter",
     # "FireworksSDKChatProviderAdapter",
     # "MoescapeSDKChatProviderAdapter",
     # "TensorOperaSDKChatProviderAdapter",
-    "GroqSDKChatProviderAdapter",
     # "LeptonSDKChatProviderAdapter",
     # "MoonshotSDKChatProviderAdapter",
     # "OctoaiSDKChatProviderAdapter",

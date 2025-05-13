@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"databricks-meta-llama-3-3-70b-instruct","max_tokens":null,"tools":null}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '156'
+      content-type:
+      - application/json
+      host:
+      - adb-8736858266948228.8.azuredatabricks.net
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.6
+    method: POST
+    uri: https://adb-8736858266948228.8.azuredatabricks.net/serving-endpoints/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl_2bbb30fa-e6ab-43d8-9589-96d71eb1aa29","object":"chat.completion","created":1747136497,"model":"meta-llama-3.3-70b-instruct-121024","choices":[{"index":0,"message":{"role":"assistant","content":"HiHi
+        back to you! How''s your day going so far?"},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":13,"completion_tokens":15,"total_tokens":28}}'
+    headers:
+      content-length:
+      - '370'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 13 May 2025 11:41:37 GMT
+      server:
+      - databricks
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-databricks-org-id:
+      - '8736858266948228'
+      x-request-id:
+      - ac7065ea-ffee-45bf-b9ea-e49f76d1812c
+    status:
+      code: 200
+      message: OK
+version: 1

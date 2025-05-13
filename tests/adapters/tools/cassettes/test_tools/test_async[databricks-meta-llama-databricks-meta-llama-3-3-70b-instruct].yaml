@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"databricks-meta-llama-3-3-70b-instruct","max_tokens":null,"tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '411'
+      content-type:
+      - application/json
+      host:
+      - adb-8736858266948228.8.azuredatabricks.net
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.6
+    method: POST
+    uri: https://adb-8736858266948228.8.azuredatabricks.net/serving-endpoints/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl_199eb865-43c4-4864-9e3e-afbea4cf0408","object":"chat.completion","created":1747136557,"model":"meta-llama-3.3-70b-instruct-121024","choices":[{"index":0,"message":{"role":"assistant","content":null,"tool_calls":[{"id":"call_0cb69c88-cea1-47cb-b11d-006e47300851","type":"function","function":{"name":"generate","arguments":"{\"prompt\":
+        \"5\"}"}}]},"finish_reason":"tool_calls","logprobs":null}],"usage":{"prompt_tokens":693,"completion_tokens":14,"total_tokens":707}}'
+    headers:
+      content-length:
+      - '483'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 13 May 2025 11:42:37 GMT
+      server:
+      - databricks
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-databricks-org-id:
+      - '8736858266948228'
+      x-request-id:
+      - b4c75bf4-833c-4ce8-a4cb-66d6dc886c48
+    status:
+      code: 200
+      message: OK
+version: 1
