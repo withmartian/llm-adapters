@@ -90,7 +90,7 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
         )
 
         if response.id is None:
-            response.id = str(uuid.uuid4())
+            response.id = f"adapter-{str(uuid.uuid4())}"
 
         return AdapterChatCompletion.model_construct(
             **response.model_dump(),
