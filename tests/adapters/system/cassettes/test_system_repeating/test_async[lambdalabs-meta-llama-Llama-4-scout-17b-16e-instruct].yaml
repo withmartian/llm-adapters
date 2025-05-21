@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Llama-4-scout-17b-16e-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '280'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"Hi!
+        Is there something I can help you with or would you like to chat?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"created":1747787517,"id":"chatcmpl-6dd4825b-34b4-4781-a83c-b8d347408e1f","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion","prompt_logprobs":null,"usage":{"completion_tokens":18,"prompt_tokens":47,"prompt_tokens_details":null,"total_tokens":65}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff94e6f482714-SJC
+      content-length:
+      - '501'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:31:57 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Gxbx4CPW7sU9DJA5g2n5KSDRHJGR8Z.TnwG3tETU03s-1747787517-1.0.1.1-0Sn6LzBdedBlugnD5NtWX_7ny6_._VGK2men0bI1_yWn5juMpGGAxyHUCdIHrcvZRk_8skUil1XqTfJZqkOiUoh9mUCS3dDfJFmteWSHtkg;
+        path=/; expires=Wed, 21-May-25 01:01:57 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 6dd4825b-34b4-4781-a83c-b8d347408e1f
+      x-response-time:
+      - '0.298'
+    status:
+      code: 200
+      message: OK
+version: 1

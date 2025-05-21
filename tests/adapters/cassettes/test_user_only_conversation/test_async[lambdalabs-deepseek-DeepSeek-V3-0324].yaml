@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"DeepSeek-V3-0324"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '72'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: "{\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"reasoning_content\":null,\"content\":\"Hello!
+        \U0001F60A How can I help you today?\",\"tool_calls\":[]},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null}],\"created\":1747787519,\"id\":\"chatcmpl-1e6627fd-b73c-4f71-b80e-0555ede66eec\",\"model\":\"DeepSeek-V3-0324\",\"object\":\"chat.completion\",\"prompt_logprobs\":null,\"usage\":{\"completion_tokens\":12,\"prompt_tokens\":4,\"prompt_tokens_details\":null,\"total_tokens\":16}}"
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff95bcd271722-SJC
+      content-length:
+      - '454'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:32:00 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Xa1pohF2MoEYqRTpPgW0NENSuysS7_CvC7FL3wOpI.o-1747787520-1.0.1.1-gxstrsGAFz1OqnE72wJuvUvgw.ShwLa1Fqtsbm3r40AZS1I_3c0ElVbsO0futKmQ.Ya8.1u2jEVWTY5GetVqMVN8QfSc8Wko9zYH38rz09Q;
+        path=/; expires=Wed, 21-May-25 01:02:00 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 1e6627fd-b73c-4f71-b80e-0555ede66eec
+      x-response-time:
+      - '0.658'
+    status:
+      code: 200
+      message: OK
+version: 1

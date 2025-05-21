@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"llama3.1-8b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '109'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-651f78b5-6ef7-4337-ac9a-116af26c479f","object":"chat.completion","created":1747787066,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"How
+        can I assist you today?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":42,"total_tokens":50,"completion_tokens":8,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942fee4bdeff2542-SJC
+      content-length:
+      - '448'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:24:26 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=mNg.llOHLVvjeYUfbEOJvbUde6.MW3oxx_vVH.LmYzA-1747787066-1.0.1.1-DXFRvv8tdiDOSNtsh6qdpeunbI0EM18534BThZgCew0V0ap8Bf_KCIHMONzirArqqb2xKH5N6KM9TPboKRdXipb2tGZWIdUMiXhsYQv3pzM;
+        path=/; expires=Wed, 21-May-25 00:54:26 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 651f78b5-6ef7-4337-ac9a-116af26c479f
+      x-response-time:
+      - '0.153'
+    status:
+      code: 200
+      message: OK
+version: 1

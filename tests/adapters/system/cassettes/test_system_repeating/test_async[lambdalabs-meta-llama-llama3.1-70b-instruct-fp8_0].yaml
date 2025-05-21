@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"llama3.1-70b-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '275'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-12414ff7-2980-4183-828d-93efcb22f10a","object":"chat.completion","created":1747787513,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"Hi.
+        It seems like we''re having a repeating conversation. Is there something I
+        can help you with or would you like to chat about a specific topic?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":67,"total_tokens":99,"completion_tokens":32,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff9364989cff1-SJC
+      content-length:
+      - '572'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:31:54 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=HQTcIpGczJK67ix2uNVOrHzTZ1gtKoFyFDWRcDIfDI4-1747787514-1.0.1.1-88l26LJbI2W2Ygvo5eB9xYr9J4UyLFqBnJmFKiO.rX0Lf7vDfUUzFfiwOYZnVrP4hCTAhmw8en0auKROLZ2m4DmDzJ5jvUPDs70r7o5yBKo;
+        path=/; expires=Wed, 21-May-25 01:01:54 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 12414ff7-2980-4183-828d-93efcb22f10a
+      x-response-time:
+      - '0.642'
+    status:
+      code: 200
+      message: OK
+version: 1

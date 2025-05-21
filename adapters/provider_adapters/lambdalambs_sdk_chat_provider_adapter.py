@@ -104,6 +104,36 @@ MODELS: list[Model] = [
         context_length=131000,
         can_assistant_only=False,
     ),
+    LambdaLabsModel(
+        name="llama3.1-8b-instruct",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0.025e-6, completion=0.04e-6),
+        context_length=131000,
+    ),
+    LambdaLabsModel(
+        name="DeepSeek-V3-0324",
+        vendor_name=Vendor.deepseek.value,
+        cost=Cost(prompt=0.34e-6, completion=0.88e-6),
+        context_length=164000,
+    ),
+    LambdaLabsModel(
+        name="llama3.1-70b-instruct-fp8",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0.12e-6, completion=0.30e-6),
+        context_length=131000,
+    ),
+    LambdaLabsModel(
+        name="Llama-4-maverick-17b-128e-instruct-fp8",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0.18e-6, completion=0.60e-6),
+        context_length=1000000,
+    ),
+    LambdaLabsModel(
+        name="Llama-4-scout-17b-16e-instruct",
+        vendor_name=Vendor.meta_llama.value,
+        cost=Cost(prompt=0.08e-6, completion=0.30e-6),
+        context_length=1000000,
+    ),
 ]
 
 

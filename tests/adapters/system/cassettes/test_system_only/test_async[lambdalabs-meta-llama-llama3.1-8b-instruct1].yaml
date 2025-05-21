@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"}],"model":"llama3.1-8b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '78'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-d548abbb-73e7-4b64-80b9-71211301b411","object":"chat.completion","created":1747787065,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"How
+        can I assist you today?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":31,"total_tokens":39,"completion_tokens":8,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942fee48c8d467f0-SJC
+      content-length:
+      - '448'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:24:25 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=L2tYCUg1i055yIErMoCD2P0YcjOGJZg2fQIHz8Rw9vU-1747787065-1.0.1.1-WoU0RQZ813weQTBnUzNB3WRSvIN55H0bYvoO05Sa_q_xmMPy6IA0GxvQ6L03YuPEgidAcEKbvrzQuPmo1MwEwjp9RkCM_8K3._ZRvr4H3G0;
+        path=/; expires=Wed, 21-May-25 00:54:25 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - d548abbb-73e7-4b64-80b9-71211301b411
+      x-response-time:
+      - '0.177'
+    status:
+      code: 200
+      message: OK
+version: 1

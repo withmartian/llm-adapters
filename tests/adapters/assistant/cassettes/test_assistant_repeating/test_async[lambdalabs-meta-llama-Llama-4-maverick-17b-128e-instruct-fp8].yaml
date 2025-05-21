@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Llama-4-maverick-17b-128e-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '197'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"Isn''t
+        it lovely to have a friendly greeting going back and forth? How''s your day
+        going so far?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"created":1747787515,"id":"chatcmpl-09827077-a088-49bd-8b1a-aaa6de9d766e","model":"Llama-4-maverick-17b-128e-instruct-fp8","object":"chat.completion","prompt_logprobs":null,"usage":{"completion_tokens":23,"prompt_tokens":29,"prompt_tokens_details":null,"total_tokens":52}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff940fced270c-SJC
+      content-length:
+      - '534'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:31:55 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=iAvFUlTPgC5jxzvvzH8X5CPBeIurpR2FwsvY.y9DiMc-1747787515-1.0.1.1-sXuQD_MryxOTkCPfkWYrvjEhdJ_9DNUDr7513hjRR2I_9ZHI3UQ_r3qyQKJUByNCxlfkhH.M0QpfmbsiWcRbJOSXY10d3pJByyZPWSo8K.Y;
+        path=/; expires=Wed, 21-May-25 01:01:55 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 09827077-a088-49bd-8b1a-aaa6de9d766e
+      x-response-time:
+      - '0.585'
+    status:
+      code: 200
+      message: OK
+version: 1

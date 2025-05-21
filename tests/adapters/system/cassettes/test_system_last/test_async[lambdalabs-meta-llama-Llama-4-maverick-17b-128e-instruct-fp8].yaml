@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"Llama-4-maverick-17b-128e-instruct-fp8"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '127'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"How
+        can I help you today?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"created":1747787515,"id":"chatcmpl-5d884bc7-6f32-4001-ba72-ba01a5c3d855","model":"Llama-4-maverick-17b-128e-instruct-fp8","object":"chat.completion","prompt_logprobs":null,"usage":{"completion_tokens":8,"prompt_tokens":17,"prompt_tokens_details":null,"total_tokens":25}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff93f1ed8ebe4-SJC
+      content-length:
+      - '464'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:31:55 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=yNzCSEotihzCL9Sw6h8dcf5PpHeilg8HDu0sFOtXoDk-1747787515-1.0.1.1-GDb2wr272lGIg5gBhlThAZh9j1CRCk6fZtYKFJQnzlcQTN._MqS7Th1SkBeTrShiYSIiQAKyMpwkfL4mrGnhhsrQ89kB0z59FIhbjoQ1fp4;
+        path=/; expires=Wed, 21-May-25 01:01:55 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 5d884bc7-6f32-4001-ba72-ba01a5c3d855
+      x-response-time:
+      - '0.767'
+    status:
+      code: 200
+      message: OK
+version: 1

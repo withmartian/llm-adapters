@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"llama3.1-8b-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '129'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-f8d831aa-8efd-44f8-8dfe-00427ccb721a","object":"chat.completion","created":1747787064,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"It
+        looks like we''re off to a friendly start. Is there something I can help you
+        with or would you like to chat?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":38,"total_tokens":65,"completion_tokens":27,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942fee422df5fa49-SJC
+      content-length:
+      - '532'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:24:25 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=uAC49XTNLD58edK3rYlb_ZpB14qgB.41zqxIOqxCJgA-1747787065-1.0.1.1-khwEY1Lit5QWWCdrLncVsV2em5uNMNfiyeR1updR5kzWGFmCFCi1mwrggp8GdQzNhYvqRjI3r7kzyXkAZt8cunzxIbFf.1NCuW7W2AB90HU;
+        path=/; expires=Wed, 21-May-25 00:54:25 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - f8d831aa-8efd-44f8-8dfe-00427ccb721a
+      x-response-time:
+      - '0.286'
+    status:
+      code: 200
+      message: OK
+version: 1

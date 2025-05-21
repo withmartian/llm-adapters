@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"Llama-4-scout-17b-16e-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '122'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"Hi!
+        How are you doing today?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"created":1747787513,"id":"chatcmpl-11a7ad82-3d69-4e9b-a40f-9bb4669e94b0","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion","prompt_logprobs":null,"usage":{"completion_tokens":9,"prompt_tokens":17,"prompt_tokens_details":null,"total_tokens":26}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff93969eace50-SJC
+      content-length:
+      - '459'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:31:54 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=BuEulCsNrmT.hjTQo14vslxaP49sjTrBpCprdRj6bJU-1747787514-1.0.1.1-UXZau1xAJ4bsJDTVAyMAHdhnfq9Q7USQ4.p8lPyjhIDctCsX5DIugcPtsOiaxph0nQY1NUWgv30oh.C7SuBLeHKL2FUuFW1dzlfIskU7rVw;
+        path=/; expires=Wed, 21-May-25 01:01:54 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 11a7ad82-3d69-4e9b-a40f-9bb4669e94b0
+      x-response-time:
+      - '0.198'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,102 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-70b-instruct-fp8","stream":true}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '95'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - OpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: 'data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":36,"completion_tokens":0}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":"How"},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":37,"completion_tokens":1}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":"
+        can"},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":38,"completion_tokens":2}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":"
+        I"},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":39,"completion_tokens":3}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":"
+        assist"},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":40,"completion_tokens":4}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":"
+        you"},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":41,"completion_tokens":5}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":"
+        today"},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":42,"completion_tokens":6}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":"?"},"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":43,"completion_tokens":7}}
+
+
+        data: {"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","object":"chat.completion.chunk","created":1747787517,"model":"llama3.1-70b-instruct-fp8","choices":[{"index":0,"delta":{"content":""},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":44,"completion_tokens":8}}
+
+
+        data: {"choices":[{"index":0,"delta":{"role":"assistant","content":""}}],"created":1747787517,"id":"chatcmpl-d0d6262c-232f-4175-b96b-015bfd02dc9e","model":"llama3.1-70b-instruct-fp8","object":"chat.completion.chunk","usage":{"completion_tokens":8,"prompt_tokens":36,"total_tokens":44}}
+
+
+        data: [DONE]
+
+
+        '
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff9503b54ce50-SJC
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Wed, 21 May 2025 00:31:57 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=3g_2FIGLQ066zW2qPKA0YZhL18A1SK0tNZGKyFSaZSg-1747787517-1.0.1.1-NyKTFntokUPQ9v8m9t4ZW4vase0Qa7r8b.om9E.DaKrUtfJlOultS2QTHelrOtgd8cksnMBFIN.L7v0_KszbV2aL2j3Ue9WHxY4DYHdkN7U;
+        path=/; expires=Wed, 21-May-25 01:01:57 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - d0d6262c-232f-4175-b96b-015bfd02dc9e
+      x-response-time:
+      - '0.028'
+    status:
+      code: 200
+      message: OK
+version: 1

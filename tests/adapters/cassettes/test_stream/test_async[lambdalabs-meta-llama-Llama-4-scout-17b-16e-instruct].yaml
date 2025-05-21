@@ -1,0 +1,94 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Llama-4-scout-17b-16e-instruct","stream":true}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '100'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: 'data: {"choices":[{"index":0,"delta":{"role":"assistant","content":""},"logprobs":null,"finish_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":0,"prompt_tokens":11,"total_tokens":11}}
+
+
+        data: {"choices":[{"index":0,"delta":{"content":"How"},"logprobs":null,"finish_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":1,"prompt_tokens":11,"total_tokens":12}}
+
+
+        data: {"choices":[{"index":0,"delta":{"content":" are"},"logprobs":null,"finish_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":2,"prompt_tokens":11,"total_tokens":13}}
+
+
+        data: {"choices":[{"index":0,"delta":{"content":" you"},"logprobs":null,"finish_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":3,"prompt_tokens":11,"total_tokens":14}}
+
+
+        data: {"choices":[{"index":0,"delta":{"content":" doing"},"logprobs":null,"finish_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":4,"prompt_tokens":11,"total_tokens":15}}
+
+
+        data: {"choices":[{"index":0,"delta":{"content":" today"},"logprobs":null,"finish_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":5,"prompt_tokens":11,"total_tokens":16}}
+
+
+        data: {"choices":[{"index":0,"delta":{"content":"?"},"logprobs":null,"finish_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":6,"prompt_tokens":11,"total_tokens":17}}
+
+
+        data: {"choices":[{"index":0,"delta":{"content":""},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":7,"prompt_tokens":11,"total_tokens":18}}
+
+
+        data: {"choices":[{"index":0,"delta":{"role":"assistant","content":""}}],"created":1747787522,"id":"chatcmpl-d359560b-2e08-4cf9-82e9-8311a8b8c065","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion.chunk","usage":{"completion_tokens":7,"prompt_tokens":11,"total_tokens":18}}
+
+
+        data: [DONE]
+
+
+        '
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff96f0d21eb36-SJC
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Wed, 21 May 2025 00:32:02 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=dZc5068pEhC9Zx6qpvWFCWY584q2dAsmrxZ0f45AaUU-1747787522-1.0.1.1-OGxDS5XEixnJQqM9OR5S3eONctQ_Latj5_p9vFbF0trVmMaiTgNGMoXn8fa5W5vhItzUq2iZcGWBIw5uUIPCoHBaWNeLTgODaftzb9vaSzA;
+        path=/; expires=Wed, 21-May-25 01:02:02 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - d359560b-2e08-4cf9-82e9-8311a8b8c065
+      x-response-time:
+      - '0.121'
+    status:
+      code: 200
+      message: OK
+version: 1

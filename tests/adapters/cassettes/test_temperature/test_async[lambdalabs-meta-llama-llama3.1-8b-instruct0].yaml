@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"llama3.1-8b-instruct","temperature":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '94'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-361a2f75-1807-4c4a-b7d6-a437adbd6c68","object":"chat.completion","created":1747787068,"model":"llama3.1-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"It''s
+        nice to meet you. Is there something I can help you with or would you like
+        to chat?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"usage":{"prompt_tokens":36,"total_tokens":59,"completion_tokens":23,"prompt_tokens_details":null},"prompt_logprobs":null}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942fee583806eb28-SJC
+      content-length:
+      - '510'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:24:28 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=KGD2A_w6jvJflbo1Zv8mFDfHkNypKaFO0dhD1hhkZS8-1747787068-1.0.1.1-QYClQi4Vip7Jw5gBRPGIBQeKtOAwGOFh3bwVFHopgZwvkeevYA0CXJaJckHxPVzeb2Bt5.UB0HMdzLLRoP3JJRHoVUwGJupu_jAaQgAeQP0;
+        path=/; expires=Wed, 21-May-25 00:54:28 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 361a2f75-1807-4c4a-b7d6-a437adbd6c68
+      x-response-time:
+      - '0.261'
+    status:
+      code: 200
+      message: OK
+version: 1

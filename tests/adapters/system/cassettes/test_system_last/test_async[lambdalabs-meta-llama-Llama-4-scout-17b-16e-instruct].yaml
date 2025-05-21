@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"Llama-4-scout-17b-16e-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '119'
+      content-type:
+      - application/json
+      host:
+      - api.lambdalabs.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.lambdalabs.com/v1/chat/completions
+  response:
+    body:
+      string: '{"choices":[{"index":0,"message":{"role":"assistant","reasoning_content":null,"content":"How
+        can I assist you today?","tool_calls":[]},"logprobs":null,"finish_reason":"stop","stop_reason":null}],"created":1747787516,"id":"chatcmpl-360d247a-c1a8-433f-84a7-bff54c8c3b3c","model":"Llama-4-scout-17b-16e-instruct","object":"chat.completion","prompt_logprobs":null,"usage":{"completion_tokens":8,"prompt_tokens":17,"prompt_tokens_details":null,"total_tokens":25}}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 942ff9449b88fa32-SJC
+      content-length:
+      - '458'
+      content-type:
+      - application/json
+      date:
+      - Wed, 21 May 2025 00:31:56 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=ioCW7gIuIaxARVtAScoVQOh6QP3qXLn4PisXvqqWHEc-1747787516-1.0.1.1-mf5bN2Im2NhMpmt9xJJEG2yOFFb6FQPvjaMPvbq1KI3SZuFFWN_JcHXqBI4O8.xP5_2cZ4AHrWBSxWkt7CnPIM6oFOM9EilR88yRGCzSYQo;
+        path=/; expires=Wed, 21-May-25 01:01:56 GMT; domain=.lambdalabs.com; HttpOnly;
+        Secure; SameSite=None
+      x-request-id:
+      - 360d247a-c1a8-433f-84a7-bff54c8c3b3c
+      x-response-time:
+      - '0.37'
+    status:
+      code: 200
+      message: OK
+version: 1
