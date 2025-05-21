@@ -22,6 +22,7 @@ from adapters.types import (
     Cost,
     Turn,
 )
+import uuid
 
 
 class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
@@ -87,6 +88,9 @@ class OpenAISDKChatAdapter(SDKChatAdapter[OpenAI, AsyncOpenAI]):
             + self.get_model().cost.completion * (completion_tokens + reasoning_tokens)
             + self.get_model().cost.request
         )
+
+        if response.id is None:
+            response.id = str(uuid.uuid4())
 
         return AdapterChatCompletion.model_construct(
             **response.model_dump(),

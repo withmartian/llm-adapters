@@ -18,4 +18,5 @@ async def test_async(vcr: VCR, create_adapter: AdapterTestFactory) -> None:
 
     cassette_response = get_response_content_from_vcr(vcr, adapter)
 
+    assert adapter_response.id is not None
     assert adapter_response.choices[0].message.content == cassette_response
