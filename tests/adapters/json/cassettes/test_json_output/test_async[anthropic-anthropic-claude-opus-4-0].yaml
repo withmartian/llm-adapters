@@ -1,0 +1,92 @@
+interactions:
+- request:
+    body: '{"max_tokens":32000,"messages":[{"content":"Hi, output simple json","role":"user"}],"model":"claude-opus-4-0","stream":false}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '125'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - AsyncAnthropic/Python 0.49.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.49.0
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+      x-stainless-timeout:
+      - '600.0'
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: '{"id":"msg_01Qj5J9XXc6LfFezrjxnK5PB","type":"message","role":"assistant","model":"claude-opus-4-20250514","content":[{"type":"text","text":"```json\n{\n  \"message\":
+        \"Hello!\",\n  \"status\": \"success\",\n  \"timestamp\": \"2024-01-01T12:00:00Z\",\n  \"data\":
+        {\n    \"id\": 1,\n    \"name\": \"Example\",\n    \"active\": true\n  }\n}\n```"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":12,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":79,"service_tier":"standard"}}'
+    headers:
+      anthropic-organization-id:
+      - d0fd4539-ef6e-4d6a-b477-e8b932ff8c44
+      anthropic-ratelimit-input-tokens-limit:
+      - '400000'
+      anthropic-ratelimit-input-tokens-remaining:
+      - '400000'
+      anthropic-ratelimit-input-tokens-reset:
+      - '2025-05-22T18:37:26Z'
+      anthropic-ratelimit-output-tokens-limit:
+      - '160000'
+      anthropic-ratelimit-output-tokens-remaining:
+      - '160000'
+      anthropic-ratelimit-output-tokens-reset:
+      - '2025-05-22T18:37:28Z'
+      anthropic-ratelimit-tokens-limit:
+      - '560000'
+      anthropic-ratelimit-tokens-remaining:
+      - '560000'
+      anthropic-ratelimit-tokens-reset:
+      - '2025-05-22T18:37:26Z'
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 943e6c96b83e252d-SJC
+      content-length:
+      - '527'
+      content-type:
+      - application/json
+      date:
+      - Thu, 22 May 2025 18:37:28 GMT
+      request-id:
+      - req_011CPP44qA4CitxeHTz9VWEz
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      via:
+      - 1.1 google
+      x-robots-tag:
+      - none
+    status:
+      code: 200
+      message: OK
+version: 1

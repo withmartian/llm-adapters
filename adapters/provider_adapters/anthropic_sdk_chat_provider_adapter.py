@@ -32,6 +32,7 @@ from anthropic.types.text_delta import TextDelta
 from anthropic.types.text_block_param import TextBlockParam
 from anthropic.types.tool_param import ToolParam
 from httpx import AsyncClient, Client, Limits, Timeout
+import httpx
 from openai.types import CompletionUsage
 from openai.types.chat import ChatCompletionMessage
 from openai.types.chat.chat_completion import Choice
@@ -126,13 +127,37 @@ MODELS: list[Model] = [
         name="claude-3-7-sonnet-20250219",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
-        completion_length=8192,
+        completion_length=64000,
     ),
     AnthropicModel(
         name="claude-3-7-sonnet-latest",
         cost=Cost(prompt=3.00e-6, completion=15.00e-6),
         context_length=200000,
-        completion_length=8192,
+        completion_length=64000,
+    ),
+    AnthropicModel(
+        name="claude-sonnet-4-20250514",
+        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
+        context_length=200000,
+        completion_length=64000,
+    ),
+    AnthropicModel(
+        name="claude-sonnet-4-0",
+        cost=Cost(prompt=3.00e-6, completion=15.00e-6),
+        context_length=200000,
+        completion_length=64000,
+    ),
+    AnthropicModel(
+        name="claude-opus-4-20250514",
+        cost=Cost(prompt=15.00e-6, completion=75.00e-6),
+        context_length=200000,
+        completion_length=32000,
+    ),
+    AnthropicModel(
+        name="claude-opus-4-0",
+        cost=Cost(prompt=15.00e-6, completion=75.00e-6),
+        context_length=200000,
+        completion_length=32000,
     ),
 ]
 
@@ -164,6 +189,10 @@ class AnthropicCreate(BaseModel):
     tools: Optional[Iterable[ToolParam]] = None
     top_k: Optional[int] = None
     top_p: Optional[float] = None
+    timeout: Optional[float | httpx.Timeout] = None
+
+    class Config:
+        arbitrary_types_allowed = True
 
 
 class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic]):
@@ -320,6 +349,8 @@ class AnthropicSDKChatProviderAdapter(SDKChatAdapter[Anthropic, AsyncAnthropic])
             tools=anthropic_tools,
             top_k=params.get("top_k"),
             top_p=params.get("top_p"),
+            timeout=params.get("timeout")
+            or Timeout(timeout=HTTP_TIMEOUT, connect=HTTP_CONNECT_TIMEOUT),
         ).model_dump()
 
     def _extract_response(
