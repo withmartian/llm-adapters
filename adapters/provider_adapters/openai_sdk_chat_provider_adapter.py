@@ -48,7 +48,7 @@ MODELS: list[Model] = [
     ),
     OpenAIModel(
         name="gpt-4o-mini",
-        cost=Cost(prompt=0.15e-6, completion=0.60e-6),
+        cost=Cost(prompt=0.60e-6, completion=2.40e-6),
         context_length=128000,
         completion_length=16385,
         supports_completion=False,
@@ -171,7 +171,7 @@ MODELS: list[Model] = [
     ),
     OpenAIModel(
         name="o4-mini",
-        cost=Cost(prompt=1.10e-6, completion=4.48e-6),
+        cost=Cost(prompt=1.10e-6, completion=4.40e-6),
         context_length=200000,
         completion_length=100000,
         supports_stop=False,
@@ -179,7 +179,7 @@ MODELS: list[Model] = [
     ),
     OpenAIModel(
         name="o4-mini-2025-04-16",
-        cost=Cost(prompt=1.10e-6, completion=4.48e-6),
+        cost=Cost(prompt=1.10e-6, completion=4.40e-6),
         context_length=200000,
         completion_length=100000,
         supports_stop=False,

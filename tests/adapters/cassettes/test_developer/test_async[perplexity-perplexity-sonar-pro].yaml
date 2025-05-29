@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-pro"}'
+    body: '{"messages":[{"role":"user","content":"Hi\nHi\nHi"}],"model":"sonar-pro"}'
     headers:
       accept:
       - application/json
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '65'
+      - '73'
       content-type:
       - application/json
       host:
@@ -27,46 +27,68 @@ interactions:
       x-stainless-package-version:
       - 1.76.0
       x-stainless-read-timeout:
-      - '600.0'
+      - '600000.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.13.1
+      - 3.13.3
     method: POST
     uri: https://api.perplexity.ai/chat/completions
   response:
     body:
-      string: '{"id": "e429ac55-3676-4ebe-a6f6-6ed18df351c0", "model": "sonar-pro",
-        "created": 1746564752, "usage": {"prompt_tokens": 1, "completion_tokens":
-        96, "total_tokens": 97, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
-        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
-        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
+      string: '{"id": "e8ca8c1a-785b-46fd-8828-803d85433d47", "model": "sonar-pro",
+        "created": 1748555303, "usage": {"prompt_tokens": 5, "completion_tokens":
+        347, "total_tokens": 352, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "https://www.youtube.com/watch?v=BL3G5esiwPY", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "search_results": [{"title": "Hi, Hi, Hi - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "date": null}, {"title": "Hi, Hi, Hi - YouTube", "url": "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "date": "2020-04-14"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "date": null}, {"title": "Hi, Hi, Hi (One Hand Clapping Sessions) - YouTube",
+        "url": "https://www.youtube.com/watch?v=BL3G5esiwPY", "date": "2024-05-16"},
+        {"title": "HI HI HI Remix - Lil Jay Bingerack Ft Rayvanny (Official Music
+        Video)", "url": "https://www.youtube.com/watch?v=X9kWEcLc3C4", "date": "2023-08-11"}],
         "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
-        "message": {"role": "assistant", "content": "Hello! \"Hi\" is a common, informal
-        greeting in English, typically used to say hello to someone you know or to
-        acknowledge someone''s presence. It''s more casual than \"hello\" and is appropriate
-        in almost all but the most formal situations[2][5]. The use of \"hi\" has
-        been popular in English since at least the 1800s, and it''s one of the simplest
-        ways to greet someone in both spoken and written conversation[2][5]."}, "delta":
-        {"role": "assistant", "content": ""}}]}'
+        "message": {"role": "assistant", "content": "\"Hi, Hi, Hi\" is a rock song
+        written by Paul and Linda McCartney and performed by their band Wings. It
+        was released as a double A-side single with \"C Moon\" in December 1972[1].
+        The song achieved significant commercial success, reaching number one in Spain,
+        number five in the United Kingdom, and number 10 in the United States in January
+        1973[1].\n\nThe track became a regular part of Wings'' live performances throughout
+        the 1970s and has been included in several Paul McCartney compilation albums,
+        including \"Wingspan: Hits and History\" (2001), the deluxe edition of \"Pure
+        McCartney\" (2016), and as a bonus track on reissues of \"Red Rose Speedway\"[1].
+        It was also featured in \"The 7\" Singles Box\" released in 2022[1].\n\nCritics
+        responded favorably to the song, with Cash Box describing it as \"good old
+        rock ''n roll as only the McCartney''s can perform it,\" while Record World
+        called it \"a steady rocker with an infectious chorus and terrific instrumental
+        breaks\"[1].\n\nA new version of the song, \"Hi, Hi, Hi (One Hand Clapping
+        Sessions),\" was released on May 17, 2024, featuring Paul McCartney on vocals
+        and production, Linda McCartney on background vocals, Denny Laine and Jimmy
+        McCulloch on electric guitar and background vocals, and Geoff Britton on drums[4].\n\nThe
+        song has continued to influence music globally, with artists like Lil Jay
+        Bingerack featuring Rayvanny creating a remix version in 2023, described as
+        a \"global masterpiece\" that''s \"all about love, happy and good vibes for
+        everyone\"[5]."}, "delta": {"role": "assistant", "content": ""}}]}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb5c76d86eebe4-SJC
+      - 94793194986e945f-SJC
       content-length:
-      - '1032'
+      - '2835'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 20:52:32 GMT
+      - Thu, 29 May 2025 21:48:23 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=0KxawVSf4rRcZYyciTelRyCtBdzPStX8VI5eXLarTjE-1746564752-1.0.1.1-pOAzM2V3C8Bmfi18P986QCyhH9fAnn9vTgaPElYgJjs5fuiV8C4Sx1zJqftBfd6BP4p0K0.l5B7XknO.t.jtjADf3uvIjF97I3jLNMqT7M4;
-        path=/; expires=Tue, 06-May-25 21:22:32 GMT; domain=.perplexity.ai; HttpOnly;
+      - __cf_bm=7B6cmgv5Ch4DtYtEcKTtBN5CAX4t2Y.0fc1OcRG21bQ-1748555303-1.0.1.1-k5nF0HhDaGi2haSWfET8LCRy5A9jRNn824mmRaipySkxzCePPofhEMTYUlqW90c0SaB2ZplurhPlR8l_6HHFV3WD3woe76rvPg0sDO.Jdaw;
+        path=/; expires=Thu, 29-May-25 22:18:23 GMT; domain=.perplexity.ai; HttpOnly;
         Secure; SameSite=None
       strict-transport-security:
       - max-age=15552000; includeSubDomains; preload

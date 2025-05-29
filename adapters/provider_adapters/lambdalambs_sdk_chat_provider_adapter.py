@@ -24,7 +24,7 @@ MODELS: list[Model] = [
     LambdaLabsModel(
         name="llama3.1-405b-instruct-fp8",
         vendor_name=Vendor.meta_llama.value,
-        cost=Cost(prompt=0.90e-6, completion=0.90e-6),
+        cost=Cost(prompt=0.80e-6, completion=0.80e-6),
         context_length=131000,
     ),
     LambdaLabsModel(
@@ -33,12 +33,6 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.15e-6, completion=0.15e-6),
         context_length=66000,
         supports_max_completion_tokens=False,
-    ),
-    LambdaLabsModel(
-        name="llama3.1-8b-instruct",
-        vendor_name=Vendor.meta_llama.value,
-        cost=Cost(prompt=0.03e-6, completion=0.03e-6),
-        context_length=131000,
     ),
     # LambdaLabsModel(
     #     name="llama3.2-11b-vision-instruct",
@@ -51,7 +45,7 @@ MODELS: list[Model] = [
     LambdaLabsModel(
         name="qwen25-coder-32b-instruct",
         vendor_name=Vendor.qwen.value,
-        cost=Cost(prompt=0.09e-6, completion=0.09e-6),
+        cost=Cost(prompt=0.07e-6, completion=0.16e-6),
         context_length=33000,
     ),
     LambdaLabsModel(
@@ -64,12 +58,6 @@ MODELS: list[Model] = [
     LambdaLabsModel(
         name="deepseek-llama3.3-70b",
         vendor_name=Vendor.deepseek.value,
-        cost=Cost(prompt=0.20e-6, completion=0.20e-6),
-        context_length=131000,
-    ),
-    LambdaLabsModel(
-        name="llama3.1-70b-instruct-fp8",
-        vendor_name=Vendor.meta_llama.value,
         cost=Cost(prompt=0.20e-6, completion=0.20e-6),
         context_length=131000,
     ),

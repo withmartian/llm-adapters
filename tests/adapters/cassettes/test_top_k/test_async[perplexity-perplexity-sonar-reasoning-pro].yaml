@@ -1,0 +1,140 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '75'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "bbcb38ac-522c-41e9-8a12-dd8cf6b887a6", "model": "sonar-reasoning-pro",
+        "created": 1748554719, "usage": {"prompt_tokens": 1, "completion_tokens":
+        1089, "total_tokens": 1090, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "search_results": [{"title": "HI Definition & Meaning - Dictionary.com", "url":
+        "https://www.dictionary.com/browse/hi", "date": null}, {"title": "Hi - Definition,
+        Meaning & Synonyms - Vocabulary.com", "url": "https://www.vocabulary.com/dictionary/hi",
+        "date": null}, {"title": "Hi, Hello Song! Greeting Song for Kids - A Little
+        SPOT - YouTube", "url": "https://www.youtube.com/watch?v=T-wvRTDieGQ", "date":
+        "2024-09-01"}, {"title": "HI - Wikipedia", "url": "https://en.wikipedia.org/wiki/HI",
+        "date": null}, {"title": "hi - Wiktionary, the free dictionary", "url": "https://en.wiktionary.org/wiki/hi",
+        "date": null}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        "stop", "message": {"role": "assistant", "content": "<think>\nOkay, the user
+        just said \"Hi\". I need to figure out the best way to respond. Let me look
+        through the search results provided.\n\nFirst, result [1] from Dictionary.com
+        says \"hi\" is an informal greeting, a simplified spelling of \"high\" in
+        some contexts. So it''s casual, not formal. Then result [2] from Vocabulary.com
+        confirms that \"hi\" is more casual than \"hello\" and is commonly used. It
+        also mentions that it''s used in friendly settings, maybe even in small towns
+        where everyone greets each other. There''s a note about not using it with
+        the Queen, so formality matters.\n\nResult [3] is a YouTube video about a
+        greeting song for kids. That''s probably not directly relevant unless the
+        user is looking for a song, but the query is just \"Hi\", so maybe not needed
+        here. \n\nResult [4] from Wikipedia lists various meanings of \"HI\" or \"Hi\".
+        It includes arts, language, organizations, places, etc. For example, \"Hello
+        Internet\" podcast, a magazine, songs, and even scientific terms like H I
+        regions in astronomy. Since the user just said \"Hi\", the primary meaning
+        is the greeting, but there are other contexts where \"HI\" could stand for
+        something else. \n\nResult [5] from Wiktionary talks about \"hi\" in Basque,
+        where it''s an informal pronoun used between close friends or family. That''s
+        a specific linguistic use, but since the query is in English, maybe that''s
+        a secondary point. \n\nThe user probably expects a friendly response. Since
+        \"hi\" is a greeting, I should respond in kind. But according to the instructions,
+        I need to provide an answer based on the search results. The answer should
+        start with a summary, then break down into sections if needed. \n\nThe main
+        points are: \"hi\" as a casual greeting, its origin mentioned in result [2]
+        (attributed to a Kansas Native American in the 1800s), alternative greetings,
+        and other meanings of HI. Also, the Basque usage is a niche point but interesting.
+        \n\nI need to structure this. Start with a friendly response, then explain
+        the term. Use headers for different sections like \"Primary Usage\" and \"Additional
+        Meanings\". Cite the sources properly. Make sure to mention the origin, synonyms,
+        and other meanings without overcomplicating. Also, check if the query type
+        is general, so follow the standard format rules. Avoid starting with a header,
+        use bullet points or tables where appropriate. Since there are multiple meanings,
+        a table might be good for comparing different contexts of \"HI\".\n\nWait,
+        the user''s query is just \"Hi\", so maybe they''re just greeting me. But
+        according to the setup, I need to treat this as a query asking for the definition
+        or explanation of \"Hi\". The examples in the search results suggest that.
+        So the answer should explain the term, not just respond with a greeting.\n\nSo,
+        structure: Opening summary, then sections on primary meaning, origin, other
+        greetings, and additional meanings. Use citations from the sources. Make sure
+        to mention the Kansas origin from [2], the casual vs formal from [2], and
+        the disambiguation from [4]. Also, the Basque pronoun from [5] could be a
+        brief note.\n\nCheck for any restrictions: Don''t use moralizing language,
+        don''t start with a header. The answer should be in markdown, use headers
+        for sections, cite sources inline. Avoid lists with single items. If I do
+        a table for additional meanings, that would be good. Let me format that.\n\nEnsure
+        each citation is correct. For example, the origin is in [2], the Basque usage
+        in [5], other meanings in [4]. Also, note that \"hi\" can be part of \"hi-fi\"
+        as per [1]. Alright, putting it all together now.\n</think>\n\n\"Hi\" is a
+        common informal greeting in English, often used as a casual alternative to
+        \"hello.\" It originated in the 1800s and is widely recognized in friendly
+        or familiar settings[1][2].  \n\n### Primary Usage  \n- **Greeting**: \"Hi\"
+        is appropriate in most informal social interactions, such as greeting friends,
+        family, or acquaintances[2].  \n- **Tone**: It conveys a relaxed and approachable
+        tone, making it less formal than \"hello\" or \"good day\"[2].  \n\n### Origin
+        and Synonyms  \n- The term is attributed to a Kansas Native American in the
+        1800s[2].  \n- Common synonyms include \"hey,\" \"hello,\" \"hiya,\" and \"howdy\"[2].  \n\n###
+        Additional Meanings of \"HI\"  \n| **Context**          | **Meaning**                                                                 |  \n|----------------------|-----------------------------------------------------------------------------|  \n|
+        **Language**         | - Basque pronoun for informal address (*hi*) [5].                          |  \n|
+        **Science**          | - H I region: Interstellar cloud of neutral atomic
+        hydrogen[4].            |  \n| **Media**            | - *Hello Internet* podcast[4].                                             |  \n|
+        **Music**            | - Memphis-based Hi Records (soul/rockabilly)[4].                           |  \n\nWhile
+        \"hi\" is most frequently used as a greeting, its other meanings depend on
+        context, from astronomy to cultural references[4][5]."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947923520dde17e4-SJC
+      content-length:
+      - '6303'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:38:39 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=rpzW25jfC7.4S5UyXfbi7pj610lY_BjaaxT_77uGU.o-1748554719-1.0.1.1-pwrykjIwzUuJ53b5ZUfCZwYz5BhFnP8r.84u7ia9EqiwUpayA_s7.BeOlgpR8b8yUdF0hnNSjFqKfNV47U0rJJx1tudpn1J2U2LJ95ViK9k;
+        path=/; expires=Thu, 29-May-25 22:08:39 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

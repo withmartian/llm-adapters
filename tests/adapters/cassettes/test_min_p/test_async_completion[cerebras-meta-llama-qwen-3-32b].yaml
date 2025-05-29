@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"model":"qwen-3-32b","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '36'
+      content-type:
+      - application/json
+      host:
+      - api.cerebras.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.cerebras.ai/v1/completions
+  response:
+    body:
+      string: '{"message":"Requests per second limit exceeded - too many requests
+        sent.","type":"too_many_requests_error","param":"quota","code":"request_quota_exceeded"}'
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947830eb5fd3fa3e-SJC
+      content-length:
+      - '155'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 18:52:49 GMT
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      retry-after-ms:
+      - '839'
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=PoU1VBq3E8IBKbfRGgJZnTdPkoxe3ltpgMQ6S.V9Q28-1748544769-1.0.1.1-7ot7h8V0E5kOQ4duQet07_SAC5cfr9I9ePiu8YXgU1faf8r5exgNuiFX.C4F0_tQsClgJuINDNoflt3MUn1ZMyI5vMtmIZis7DfO2VfzJ5w;
+        path=/; expires=Thu, 29-May-25 19:22:49 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=3600; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 429
+      message: Too Many Requests
+version: 1

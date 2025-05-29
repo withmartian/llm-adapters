@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning"}'
+    body: '{"messages":[{"role":"user","content":"Hi\nHi\nHi\nHi"}],"model":"sonar-reasoning"}'
     headers:
       accept:
       - application/json
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '71'
+      - '83'
       content-type:
       - application/json
       host:
@@ -27,100 +27,88 @@ interactions:
       x-stainless-package-version:
       - 1.76.0
       x-stainless-read-timeout:
-      - '600.0'
+      - '600000.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.13.1
+      - 3.13.3
     method: POST
     uri: https://api.perplexity.ai/chat/completions
   response:
     body:
-      string: '{"id": "376d93ba-b419-4bc6-9d34-0044ef4e12f6", "model": "sonar-reasoning",
-        "created": 1746564767, "usage": {"prompt_tokens": 1, "completion_tokens":
-        1034, "total_tokens": 1035, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
-        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
-        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
-        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
-        "message": {"role": "assistant", "content": "<think>\nOkay, the user''s query
-        is just \"Hi\". Let me figure out what they need. \"Hi\" can mean different
-        things depending on context. First, I need to check the search results to
-        see what information is available.\n\nLooking at the search results, the first
-        one from Dictionary.com defines \"hi\" as an informal greeting, more casual
-        than \"hello\" [1][2]. That makes sense. The second source, Vocabulary.com,
-        also describes \"hi\" as a common greeting, used in informal settings [2].
-        The Cambridge English Dictionary entry confirms this, giving examples like
-        \"Hi, there!\" and \"Hi, how are you?\" [5]. So the primary meaning is a greeting.\n\nBut
-        \"Hi\" can also refer to other things. The Wikipedia entry [4] lists various
-        uses. For example, HI is the abbreviation for Hawaii, especially in zip codes.
-        There''s also a mention of HI in language contexts, like the Japanese kana
-        \u3072 or the Armenian letter \u0545. Additionally, there are arts and entertainment
-        references, such as the podcast \"Hello Internet\", songs named \"Hi\", and
-        even a music label called Hi Records.\n\nSo, the answer needs to cover both
-        the common greeting and the other possible meanings. The user might just want
-        the basic definition, but since the search results include more, it''s good
-        to mention the other uses briefly.\n\nI should structure the answer into sections.
-        The greeting is the most important part. Then, other meanings like abbreviations,
-        language uses, and cultural references. Each section can have bullet points
-        or a short explanation with citations.\n\nWait, the user might be a non-native
-        speaker learning English, so explaining the greeting first is essential. Then,
-        if needed, mention the other meanings. Since the search results include examples
-        from songs, podcasts, and labels, those can be part of the cultural references.\n\nAlso,
-        the YouTube link [3] is about a greeting song for kids, which reinforces the
-        greeting usage. But since it''s a video, maybe not necessary to mention unless
-        it''s relevant. Probably focus on the dictionary and encyclopedia entries.\n\nSo,
-        the answer should start with the primary definition of \"hi\" as a greeting,
-        then other uses. Need to cite the sources appropriately. Each sentence that
-        uses information from a search result should have the citation in brackets.
-        For example, when mentioning Hawaii, cite [1][4]. When talking about Japanese
-        kana, cite [4]. For the greeting, cite [1][2][5].\n\nMake sure not to start
-        with a header. Use sections with level 2 headers. Maybe \"Primary Meaning
-        as a Greeting\" and \"Other Uses and References\". Under each, list the points
-        with citations. Avoid using markdown links, just plain text with citations.\n\nCheck
-        for any other possible meanings. The Wikipedia entry also mentions HI as the
-        ISO code for Hindi, which is a language. That''s another point to include
-        under language uses. Also, the physics reference to Hydrogen-1, but maybe
-        that''s too technical unless the user is in that field. Probably best to mention
-        it briefly.\n\nSo the structure would be:\n\n- Greeting\n- Abbreviations (Hawaii,
-        Hindi)\n- Language elements (Japanese kana, Armenian letter)\n- Cultural references
-        (podcast, songs, music labels)\n\nEach part with concise explanations and
-        citations. Keep it clear and not too lengthy. Make sure each cited part is
-        relevant. Don''t include URLs, just the bracketed numbers.\n</think>\n\n**Hi**
-        serves as a versatile term with multiple meanings depending on context:\n\n##
-        Primary Meaning as a Greeting  \n*Hi* is a casual English greeting, often
-        used informally among acquaintances or in relaxed settings. It is less formal
-        than *hello* and is widely accepted in everyday interactions[1][2][5]. Example
-        usages include:  \n- *Hi, there!* (greeting someone in conversation)[5]  \n-
-        *Say hi to Gemma* (requesting a greeting to someone)[5]  \n\n## Other Uses
-        and References  \n1. **Abbreviations**  \n   - **HI**: U.S. state abbreviation
-        for Hawaii[1][4].  \n   - **HI**: ISO 639-1 code for the Hindi language[4].  \n\n2.
-        **Language Symbols**  \n   - **\u3072 / \u30d2**: Japanese kana representing
-        the \"hi\" sound[4].  \n   - **\u0545**: Armenian letter \"H\u0113\"[4].  \n\n3.
-        **Cultural References**  \n   - *Hello Internet*: A podcast hosted by CGP
-        Grey and Brady Haran[4].  \n   - **Broader Media**: Includes songs (e.g.,
-        Ofra Haza\u2019s *Hi*, Texas\u2019 *Hi* album) and labels like Hi Records
-        (Memphis soul/rockabilly)[4].  \n\n4. **Scientific Contexts**  \n   - **H-I**:
-        Hydrogen isotope *protium* (hydrogen-1)[4].  \n\nFor most conversational contexts,
-        *hi* remains a ubiquitous greeting in English[2][5]."}, "delta": {"role":
-        "assistant", "content": ""}}]}'
+      string: '{"id": "3cd28c1e-277d-460e-8b2c-5d3a3098ca39", "model": "sonar-reasoning",
+        "created": 1748555313, "usage": {"prompt_tokens": 7, "completion_tokens":
+        731, "total_tokens": 738, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "https://www.youtube.com/watch?v=V_XrHHv4X68", "https://www.youtube.com/watch?v=BL3G5esiwPY"],
+        "search_results": [{"title": "Hi, Hi, Hi - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "date": null}, {"title": "Hi, Hi, Hi - YouTube", "url": "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "date": "2020-04-14"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "date": null}, {"title": "Hi, Hi, Hi (2018 Remaster) - YouTube", "url": "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "date": "2022-12-01"}, {"title": "Hi, Hi, Hi (One Hand Clapping Sessions)
+        - YouTube", "url": "https://www.youtube.com/watch?v=BL3G5esiwPY", "date":
+        "2024-05-16"}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        "stop", "message": {"role": "assistant", "content": "<think>\nOkay, the user
+        is asking about \"Hi, Hi, Hi\" with repeated \"Hi\"s in the query. Let me
+        check the search results to see what''s relevant.\n\nFirst, the search results
+        are all about the song \"Hi, Hi, Hi\" by Paul McCartney & Wings. The user
+        might be asking for information on this song. The query is just four \"Hi\"s,
+        which could be a simple way to get the song''s details.\n\nLooking at the
+        search results: [1] is the Wikipedia page that gives background info, including
+        release dates, chart positions, and reception. [2], [3], [4], and [5] are
+        links to YouTube and Spotify, which probably have the song tracks and some
+        metadata.\n\nSince the user''s query is very brief, I need to focus on concise
+        key points from the search results. The answer should mention the song''s
+        authors (Paul and Linda McCartney), the band (Wings), release year (1972 as
+        a single), chart performance (peaked at number 5 in UK, 10 in US), and maybe
+        include some reception highlights like the Cash Box and Record World reviews.
+        Also, note that it''s been included in various compilations over the years,
+        like Wingspan, Pure McCartney, etc.\n\nI should avoid going into too much
+        detail but cover the essentials. Make sure to cite the sources properly. The
+        user might want a quick summary, so structure the answer with sections like
+        key facts, reception, and versions if necessary. Since the user included \"Hi\"
+        multiple times, maybe they''re interested in the song''s title or structure,
+        but the search results don''t mention the lyrics, so I''ll stick to the info
+        available.\n\nCheck if there''s any mention of the song''s style. The Wikipedia
+        page says \"good old rock ''n roll\" with suggestive lyrics, which is worth
+        noting. Also, the song''s been a live staple for Wings in the 70s. The various
+        re-releases and compilations should be mentioned briefly.\n\nMake sure not
+        to copy any text verbatim, paraphrase the information. Use citations after
+        each relevant fact. The answer should be concise, using bullet points or sections
+        as needed but keeping it straightforward since the query is simple.\n</think>\n\n\"Hi,
+        Hi, Hi\" is a rock song by **Paul McCartney & Wings**, released as a double
+        A-side single with \"C Moon\" in December 1972. Key details include:  \n\n###
+        **Key Facts**  \n- **Creators**: Written by Paul McCartney and Linda McCartney[1].  \n-
+        **Chart Performance**: Peaked at #5 in the UK, #10 in the US, and #1 in Spain[1].  \n-
+        **Compilation Inclusions**: Featured on *Wingspan: Hits and History* (2001),
+        *Pure McCartney* (2016), and *Red Rose Speedway* reissues[1]. A 2018 remastered
+        version appeared in *The 7\u201d Singles Box*[4].  \n\n### **Reception**  \nCritics
+        praised its energetic rock style, with *Cash Box* describing it as \"good
+        old rock ''n roll\" and *Record World* highlighting its \"infectious chorus\"
+        and \"suggestive lyrics\"[1].  \n\n### **Versions and Releases**  \n- The
+        2022 remastered version was released as part of *The 7\u201d Singles* box
+        set[4].  \n- A 2024 release includes a live version from the *One Hand Clapping
+        Sessions*[5].  \n\nThe song remained a staple in Wings'' 1970s live performances[1]."},
+        "delta": {"role": "assistant", "content": ""}}]}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb5ca7ccd19e56-SJC
+      - 94793217b9b44f08-SJC
       content-length:
-      - '5241'
+      - '4405'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 20:52:47 GMT
+      - Thu, 29 May 2025 21:48:33 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=Hthyvv9nZDwkE16DOJPOgoqi1Jbd3oXY4W2ix9TwIw0-1746564767-1.0.1.1-E8Zj1XdGW3zr2PMSj_wqnJQwBVk267HEgPJoSKKronfMoGO4vJYtvUtwbbxGUWuK7IpdL3C62vGxGvFMHLyTrvwuK4SIP.bMyFD60luKeuU;
-        path=/; expires=Tue, 06-May-25 21:22:47 GMT; domain=.perplexity.ai; HttpOnly;
+      - __cf_bm=ijNUDr3GgMPKaZ2Bxuqw4b2lGTvmjAcnSwTgO48xaaQ-1748555313-1.0.1.1-.zyhvDlSoIU2eqe4T3U3kZv88BSe31PLNYIkDcjUwctBkdVJqOQR3qP._hnLMhLp6IfGZrevy_tu13Yenb63uLUDjxiYXx8IVzvpI9IN3Zc;
+        path=/; expires=Thu, 29-May-25 22:18:33 GMT; domain=.perplexity.ai; HttpOnly;
         Secure; SameSite=None
       strict-transport-security:
       - max-age=15552000; includeSubDomains; preload

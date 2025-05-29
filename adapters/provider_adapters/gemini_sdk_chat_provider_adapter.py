@@ -58,7 +58,7 @@ MODELS: list[Model] = [
     ),
     GeminiModel(
         name="gemini-2.0-flash",
-        cost=Cost(prompt=0.0375e-6, completion=0.15e-6),
+        cost=Cost(prompt=0.10e-6, completion=0.40e-6),
         context_length=1048576,
         completion_length=8192,
     ),

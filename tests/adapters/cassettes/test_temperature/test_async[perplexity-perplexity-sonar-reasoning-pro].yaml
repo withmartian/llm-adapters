@@ -1,0 +1,149 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning-pro","temperature":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '93'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "9065f209-7e21-458b-af3f-a15780e7d025", "model": "sonar-reasoning-pro",
+        "created": 1748554697, "usage": {"prompt_tokens": 1, "completion_tokens":
+        1167, "total_tokens": 1168, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "search_results": [{"title": "HI Definition & Meaning - Dictionary.com", "url":
+        "https://www.dictionary.com/browse/hi", "date": null}, {"title": "Hi - Definition,
+        Meaning & Synonyms - Vocabulary.com", "url": "https://www.vocabulary.com/dictionary/hi",
+        "date": null}, {"title": "Hi, Hello Song! Greeting Song for Kids | A Little
+        SPOT - YouTube", "url": "https://www.youtube.com/watch?v=T-wvRTDieGQ", "date":
+        "2024-09-01"}, {"title": "HI - Wikipedia", "url": "https://en.wikipedia.org/wiki/HI",
+        "date": null}, {"title": "hi - Wiktionary, the free dictionary", "url": "https://en.wiktionary.org/wiki/hi",
+        "date": null}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        "stop", "message": {"role": "assistant", "content": "<think>\nOkay, let''s
+        tackle this query: \"Hi\". The user is asking about the meaning and usage
+        of the word \"hi\". First, I need to check the search results provided.\n\nLooking
+        at the sources, [1] and [2] both define \"hi\" as an informal greeting, more
+        casual than \"hello\". [2] also mentions it''s commonly used in small towns
+        where people might greet everyone they pass. There''s a bit of history there,
+        attributing the first mention to a Kansas Native American in the 1800s. That''s
+        interesting, I should include that origin note.\n\nThen there''s [4], the
+        Wikipedia entry, which lists various uses of \"HI\" in different contexts
+        like arts, language, and science. For example, \"HI\" can refer to a podcast,
+        a magazine, or even a hydrogen isotope. But since the query is just \"Hi\",
+        the primary focus should be on the greeting meaning. However, it''s worth
+        mentioning other notable uses briefly to cover disambiguation.\n\nSource [5]
+        from Wiktionary talks about \"hi\" in Basque as a very informal pronoun used
+        between close friends or family. That''s a different linguistic context, but
+        maybe the user is interested in other languages too. However, since the query
+        is in English, the main emphasis should stay on the English usage.\n\nSource
+        [3] is a YouTube video of a greeting song for kids. While it shows \"hi\"
+        used in a song, it''s more about usage in children''s contexts. Not sure if
+        that''s necessary unless the user is looking for examples in songs or educational
+        content. But given the query is straightforward, maybe just a brief mention
+        under usage examples.\n\nNow, structuring the answer: Start with a summary
+        of \"hi\" as a casual greeting. Then break down into sections like definition,
+        origin, usage notes, and other meanings. Make sure to cite the sources properly.
+        For example, the origin from [2], the disambiguation from [4], and the Basque
+        pronoun from [5]. Avoid starting with headers, so the first paragraph should
+        summarize everything. Use headers for each section after the intro. Check
+        if any formatting rules apply\u2014since it''s a language query, maybe use
+        subsections with bold text instead of headers? Wait, the format rules say
+        to use Level 2 headers (##) for sections and bold for subsections. So under
+        the main sections, use bold for subsections like **Origin** and **Other Meanings**.\n\nAlso,
+        need to mention that \"hi\" is part of various cultural references like the
+        podcast \"Hello Internet\" and the music label Hi Records, as per [4]. But
+        keep it concise. The user might not need an exhaustive list, just the notable
+        ones. Also, the hydrogen isotope (protium) from [4] is a scientific term,
+        so include that under a different section.\n\nMake sure to cite each point.
+        For example, when talking about the origin, cite [2]. When mentioning other
+        meanings, cite [4]. The Basque usage would be under a separate subsection
+        with [5]. Also, note that in Basque, it''s very informal and requires verb
+        agreement, which is a grammatical detail from [5].\n\nAvoid any markdown errors,
+        use proper citations in brackets. Don''t list references at the end. Keep
+        paragraphs short and use lists where appropriate, but since the information
+        is varied, maybe use a table for the disambiguation part. Wait, the format
+        rules say tables are preferred for comparisons. So for the other meanings
+        of \"HI\", a table might help. But the examples from [4] are in a list format.
+        Maybe a bullet list under a subsection **Other Meanings of HI** with brief
+        points.\n\nCheck if the answer is self-contained and addresses all parts.
+        The user just said \"Hi\", so the answer should explain the word, its usage,
+        origin, and other possible meanings. Make sure not to include song lyrics
+        from [3], as per restrictions. But mentioning the children''s song as an example
+        of usage in media is okay without quoting the lyrics.\n\nDouble-check citations:
+        each relevant sentence should have up to three sources. For example, the definition
+        comes from [1][2], the origin from [2], other meanings from [4], and Basque
+        usage from [5]. Ensure no copyright material is copied verbatim, just paraphrased.\n\nAlright,
+        putting it all together now.\n</think>\n\n\"Hi\" is a common informal greeting
+        in English, often used as a casual alternative to \"hello.\" It originated
+        in the 1800s, with its first recorded mention attributed to a Kansas Native
+        American[2]. While primarily a friendly salutation, \"HI\" has additional
+        meanings across different contexts.  \n\n**Definition and usage**  \n- **Casual
+        greeting**: \"Hi\" is appropriate in most informal settings, from everyday
+        conversations to friendly encounters. It\u2019s less formal than \"hello\"
+        but widely recognized in English-speaking cultures[1][2].  \n- **Variants**:
+        Similar informal greetings include \"hey,\" \"hiya,\" and \"howdy,\" though
+        \"hi\" remains the most universally used[2].  \n\n**Other meanings of HI**  \n-
+        **Arts and entertainment**: Refers to a podcast (*Hello Internet*), a teen
+        magazine (*Hi*), and a Memphis music label (Hi Records)[4].  \n- **Science**:
+        Denotes a hydrogen isotope (protium, or \\( ^1\\text{H} \\)) and interstellar
+        hydrogen clouds (H I regions)[4].  \n- **Language**: In Basque, *hi* is an
+        informal second-person pronoun used only between close friends or family,
+        requiring specific verb conjugations[5].  \n\nThis versatile term spans casual
+        communication, scientific terminology, and cultural references, making it
+        a linguistically and contextually rich word."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947922a11b93ce78-SJC
+      content-length:
+      - '6677'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:38:17 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Wp_tXcIwbRWAIR0wPm7xNmnzG7BylFCJuoG8QPX3KNc-1748554697-1.0.1.1-RNnrnUAf8sWO4sfFF6XAU6wFNuLtwu3fl1YbMMEyJFIsD1hwR1ioupXS2GaTqU6VMi4r4xb_SOiO.8VdGW5JWLqj0vQC43HpnqcqHYUWhqI;
+        path=/; expires=Thu, 29-May-25 22:08:17 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

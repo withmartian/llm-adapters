@@ -15,6 +15,7 @@ class PerplexityModel(Model):
     can_assistant_first: bool = False
     can_assistant_last: bool = False
     can_assistant_only: bool = False
+    can_developer: bool = False
 
     can_system_last: bool = False
 
@@ -28,20 +29,26 @@ class PerplexityModel(Model):
 MODELS: list[Model] = [
     PerplexityModel(
         name="sonar",
-        cost=Cost(prompt=1.00e-6, completion=1.00e-6, request=0.005),
+        cost=Cost(prompt=1.00e-6, completion=1.00e-6, request=0.01),
         context_length=127000,
         vendor_name=Vendor.perplexity.value,
     ),
     PerplexityModel(
         name="sonar-pro",
-        cost=Cost(prompt=3.00e-6, completion=15.00e-6, request=0.005),
+        cost=Cost(prompt=3.00e-6, completion=15.00e-6, request=0.01),
         context_length=127000,
         completion_length=8000,
         vendor_name=Vendor.perplexity.value,
     ),
     PerplexityModel(
         name="sonar-reasoning",
-        cost=Cost(prompt=1.00e-6, completion=5.00e-6, request=0.005),
+        cost=Cost(prompt=1.00e-6, completion=5.00e-6, request=0.01),
+        context_length=127000,
+        vendor_name=Vendor.perplexity.value,
+    ),
+    PerplexityModel(
+        name="sonar-reasoning-pro",
+        cost=Cost(prompt=2.00e-6, completion=8.00e-6, request=0.01),
         context_length=127000,
         vendor_name=Vendor.perplexity.value,
     ),

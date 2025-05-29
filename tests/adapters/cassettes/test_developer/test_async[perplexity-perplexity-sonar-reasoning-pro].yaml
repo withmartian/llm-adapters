@@ -1,0 +1,100 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi\nHi\nHi\nHi"}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '91'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "b09b74ee-595d-4db9-93d8-586232996365", "model": "sonar-reasoning-pro",
+        "created": 1748555323, "usage": {"prompt_tokens": 9, "completion_tokens":
+        366, "total_tokens": 375, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk"],
+        "search_results": [{"title": "Hi, Hi, Hi - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "date": null}, {"title": "Hi, Hi, Hi - song and lyrics by Wings - Spotify",
+        "url": "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0", "date": null},
+        {"title": "Hi, Hi, Hi (2018 Remaster) - YouTube", "url": "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "date": "2022-12-01"}, {"title": "Hi, Hi, Hi - YouTube", "url": "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "date": "2020-04-14"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
+        "date": null}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        null, "message": {"role": "assistant", "content": "<think>\nOkay, let''s see.
+        The user just sent \"Hi Hi Hi Hi Hi\". That''s a bit unusual. I need to figure
+        out what they''re asking for. Maybe they''re referring to the song \"Hi, Hi,
+        Hi\" by Wings? Let me check the search results provided.\n\nLooking at the
+        search results, all of them are about the song \"Hi, Hi, Hi\" by Paul McCartney
+        and Wings. The first result from Wikipedia gives details about the song''s
+        release, chart performance, and compilations it''s been included in. Other
+        results are from Spotify and YouTube, providing links to the song. The user
+        might be looking for information about the song, or perhaps they''re trying
+        to get the lyrics or some specific details.\n\nThe query is just \"Hi\" repeated,
+        so it''s a bit ambiguous. But given the search results all point to the song,
+        it''s safe to assume the user wants information about \"Hi, Hi, Hi\" by Wings.
+        I should structure the answer using the information from the sources. The
+        key points from the sources are the songwriters, release date, chart positions,
+        live performances, and inclusion in compilations. Also, the reception from
+        Cash Box and Record World mentions it''s a rock song with suggestive lyrics.
+        I need to make sure to cite the sources properly, using the numbers in brackets.
+        Since the user''s query is minimal, the answer should be concise but cover
+        all relevant aspects of the song. Let me organize this into sections like
+        Release, Reception, and Legacy, as per the Wikipedia structure. Also, mention
+        the compilations it''s part of, as noted in the sources. Avoid any markdown
+        headers at the start and ensure citations are correctly placed after each
+        relevant sentence.\n</think>\n\nThe repeated \"Hi\" likely refers to"}, "delta":
+        {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947932561b9c67fe-SJC
+      content-length:
+      - '2990'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:48:43 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=IJS46sZw5qRoVBRpsLCmMZ6yWTqQDm.N1BFCw9NvJ98-1748555323-1.0.1.1-lGwUBYk1Kxn1cFKWvVRtEtJDALoBbEYfUha_LXgPpyNCh.KG_mD2qXYMOeyR5FiGMGjkeqmMAlkEXusxzty6GtfOwunBkJ1WjBOmXnBdWis;
+        path=/; expires=Thu, 29-May-25 22:18:43 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

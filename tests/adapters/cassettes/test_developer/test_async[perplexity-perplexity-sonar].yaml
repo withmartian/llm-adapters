@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar"}'
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar"}'
     headers:
       accept:
       - application/json
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '61'
+      - '65'
       content-type:
       - application/json
       host:
@@ -27,53 +27,58 @@ interactions:
       x-stainless-package-version:
       - 1.76.0
       x-stainless-read-timeout:
-      - '600.0'
+      - '600000.0'
       x-stainless-retry-count:
       - '0'
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.13.1
+      - 3.13.3
     method: POST
     uri: https://api.perplexity.ai/chat/completions
   response:
     body:
-      string: '{"id": "d7bea631-57c4-45da-a2de-d2eae503cbc7", "model": "sonar", "created":
-        1746564744, "usage": {"prompt_tokens": 1, "completion_tokens": 228, "total_tokens":
-        229, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
-        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
-        "https://en.wikipedia.org/wiki/HI", "https://dictionary.cambridge.org/us/dictionary/english/hi"],
-        "object": "chat.completion", "choices": [{"index": 0, "finish_reason": "stop",
-        "message": {"role": "assistant", "content": "\"Hi\" is a common greeting in
-        English, often used as a casual alternative to \"hello.\" It is appropriate
-        in most informal settings and is widely used in everyday interactions, such
-        as saying hello to friends, family, or acquaintances[2][5]. The term can also
-        refer to other things, such as the Hawaiian state abbreviation \"HI\" or various
-        cultural references like the song \"Hi\" by Ofra Haza[4].\n\n### Usage of
-        \"Hi\"\n- **Informal Greeting**: \"Hi\" is used as a friendly, informal greeting,
-        suitable for casual interactions.\n- **Cultural References**: Beyond its use
-        as a greeting, \"Hi\" appears in various contexts, such as music, literature,
-        and even a character in comics[4].\n\n### Pronunciation and Variations\n-
-        **Pronunciation**: The word \"hi\" is pronounced as /ha\u026a/ in both US
-        and UK English[5].\n- **Variations**: Similar greetings include \"hello,\"
-        \"hey,\" \"hiya,\" and \"howdy,\" but \"hi\" is one of the most common and
-        versatile options[2]."}, "delta": {"role": "assistant", "content": ""}}]}'
+      string: '{"id": "1fc8a236-f4cb-4a24-868b-6cdc7a704abf", "model": "sonar", "created":
+        1748555282, "usage": {"prompt_tokens": 3, "completion_tokens": 191, "total_tokens":
+        194, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "https://www.youtube.com/watch?v=V_XrHHv4X68", "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk"],
+        "search_results": [{"title": "Hi, Hi, Hi - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "date": null}, {"title": "Hi, Hi, Hi - YouTube", "url": "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "date": "2020-04-14"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "date": null}, {"title": "Hi, Hi, Hi (2018 Remaster) - YouTube", "url": "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "date": "2022-12-01"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
+        "date": null}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        "stop", "message": {"role": "assistant", "content": "It seems like you''re
+        referencing the song \"Hi, Hi, Hi\" by Wings, which was written by Paul and
+        Linda McCartney. Here''s some information about the song:\n\n- **Release**:
+        The song was released as a double A-side single with \"C Moon\" in December
+        1972. It became popular, peaking at number one in Spain, number five in the
+        UK, and number 10 in the US in January 1973[1].\n- **Reception**: The song
+        received positive reviews, being described as \"good old rock ''n roll\" with
+        an infectious chorus and suggestive lyrics[1].\n- **Compilation Inclusion**:
+        It has been included in several compilation albums, such as *Wingspan: Hits
+        and History*, *Pure McCartney*, and *The 7\" Singles Box*[1][5].\n- **Availability**:
+        You can listen to it on various platforms like Spotify and YouTube[2][3][4]."},
+        "delta": {"role": "assistant", "content": ""}}]}'
     headers:
       cf-cache-status:
       - DYNAMIC
       cf-ray:
-      - 93bb5c65786d17f4-SJC
+      - 947931863a4ffa4e-SJC
       content-length:
-      - '1587'
+      - '2070'
       content-type:
       - application/json
       date:
-      - Tue, 06 May 2025 20:52:24 GMT
+      - Thu, 29 May 2025 21:48:02 GMT
       server:
       - cloudflare
       set-cookie:
-      - __cf_bm=MNxgJLkuyTGicvsxjz_jVmyEEXvyZK_mhgOGqs_DfWA-1746564744-1.0.1.1-ho3sr.0jRRMClj.MBOc12S_wJrOBZDS3AxsDLim2k_VwHKi48hhtKWc3jffjkzqg_Ah47m6hE7rT0fYzlVly4PgxhDgNfC__UmfKn.pE_vM;
-        path=/; expires=Tue, 06-May-25 21:22:24 GMT; domain=.perplexity.ai; HttpOnly;
+      - __cf_bm=hfnFn9WbgdsjBlTYfMma0ZKvwIWqofCBPm9PZyF1ZM0-1748555282-1.0.1.1-w2wY37pTIVgrkMD7UdHOtjIHx5wZUpQMco_Ix.GVwqDok99T20Qa4tYbzAos7rkmSX3RZAeGhPZSLIOSuUwVtYudSxHvZI332dRdJb0sITc;
+        path=/; expires=Thu, 29-May-25 22:18:02 GMT; domain=.perplexity.ai; HttpOnly;
         Secure; SameSite=None
       strict-transport-security:
       - max-age=15552000; includeSubDomains; preload

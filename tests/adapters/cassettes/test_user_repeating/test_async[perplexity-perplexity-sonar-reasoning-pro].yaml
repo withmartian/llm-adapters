@@ -1,0 +1,108 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi\nHi"}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '79'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "d50df1f4-92aa-4a50-b75b-f4a970924d5d", "model": "sonar-reasoning-pro",
+        "created": 1748554764, "usage": {"prompt_tokens": 3, "completion_tokens":
+        523, "total_tokens": 526, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "https://www.youtube.com/watch?v=V_XrHHv4X68", "https://www.youtube.com/watch?v=X9kWEcLc3C4"],
+        "search_results": [{"title": "Hi, Hi, Hi - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "date": null}, {"title": "Hi, Hi, Hi - YouTube", "url": "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "date": "2020-04-14"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "date": null}, {"title": "Hi, Hi, Hi (2018 Remaster) - YouTube", "url": "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "date": "2022-12-01"}, {"title": "HI HI HI Remix - Lil Jay Bingerack Ft Rayvanny
+        (Official Music Video)", "url": "https://www.youtube.com/watch?v=X9kWEcLc3C4",
+        "date": "2023-08-11"}], "object": "chat.completion", "choices": [{"index":
+        0, "finish_reason": "stop", "message": {"role": "assistant", "content": "<think>\nOkay,
+        let''s tackle this query. The user just wrote \"Hi\". That''s pretty vague.
+        I need to figure out what they''re asking for. Looking at the search results,
+        they''re all about the song \"Hi, Hi, Hi\" by Paul McCartney and Wings. The
+        user might be referring to this song, especially since the search results
+        include various versions and remixes.\n\nFirst, I should confirm that \"Hi\"
+        is shorthand for the song title. The search results mention the song''s release
+        in 1972, its chart performance, and its inclusion in compilations. There''s
+        also a remix by Lil Jay Bingerack and Rayvanny from 2023. \n\nI need to structure
+        the answer to cover the original song, its release details, chart performance,
+        and the recent remix. Make sure to cite the sources appropriately. Since the
+        user''s query is brief, the answer should be concise but informative, highlighting
+        key points from each relevant search result. Avoid mentioning sources that
+        don''t add new information, like the Spotify link [3], which just confirms
+        the song''s existence. \n\nCheck for any additional details, like the reception
+        from Cash Box and Record World in source [1], which add credibility. Also,
+        note the different releases and compilations mentioned. The remix in source
+        [5] is important to mention as a modern take. Ensure citations are correctly
+        placed after each relevant fact. Avoid any markdown headers at the start and
+        follow the formatting rules strictly.\n</think>\n\n\"Hi, Hi, Hi\" is a 1972
+        rock song by Paul McCartney and Wings, released as a double A-side single
+        with \"C Moon.\" It reached number five in the UK and number 10 in the US[1][4],
+        becoming a live performance staple for the band. The track features Linda
+        McCartney\u2019s backing vocals and has been included in multiple compilations,
+        including *Wingspan: Hits and History* (2001) and *The 7\u201d Singles Box*
+        (2022)[1][4]. Critics praised its energetic rock style and \"suggestive lyrics,\"
+        with *Record World* highlighting its \"infectious chorus\"[1]. \n\nA 2023
+        remix by Lil Jay Bingerack and Rayvanny reimagined the song as a vibrant,
+        global collaboration focused on \"love and good vibes,\" accompanied by an
+        official music video[5]. The original remains notable for its 1970s rock sound
+        and enduring presence in McCartney\u2019s discography[2][4]."}, "delta": {"role":
+        "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947924998c08f967-SJC
+      content-length:
+      - '3607'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:39:24 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=D275DvA6JPrlSLqaR_zpAbhnjLXtusNE4zzRHX3S83o-1748554764-1.0.1.1-2SFvrwyyRgVnM8CvesoPOqpcCXeBFOq4UXRBbGfkkVH6c_oH_2lAd4abkPQmkhvMqLZuIrwDwdMppLkQTkQ5eUJwTtOggdsu4KZuNMFRzh8;
+        path=/; expires=Thu, 29-May-25 22:09:24 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

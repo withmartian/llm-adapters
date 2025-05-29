@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"developer","content":"Hi"}],"model":"llama-4-scout-17b-16e-instruct"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '122'
+      content-type:
+      - application/json
+      host:
+      - api.cerebras.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.cerebras.ai/v1/chat/completions
+  response:
+    body:
+      string: '{"message":"body.messages.1: Input tag ''developer'' found using ''role''
+        does not match any of the expected tags: ''system'', ''user'', ''assistant'',
+        ''tool''","type":"invalid_request_error","param":"validation_error","code":"wrong_api_format"}'
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947830e5c99a67f7-SJC
+      content-length:
+      - '234'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 18:52:48 GMT
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=A23ZuFil3i4a3a8967CSKHW5804_n0oMNCec9aD1fAY-1748544768-1.0.1.1-EBKWvlfGD3MLD24d95SM1lYLv54A924rL3iC1eRIgFu_EWjUJii5UO3YXye6A79mWP1FeU_Wc125bCIoH85dTOKIAERa1zcGlXOrU_BoGio;
+        path=/; expires=Thu, 29-May-25 19:22:48 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=3600; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 422
+      message: Unprocessable Entity
+version: 1

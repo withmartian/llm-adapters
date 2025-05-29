@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: '{"model":"llama-4-scout-17b-16e-instruct","prompt":"Hi"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '56'
+      content-type:
+      - application/json
+      host:
+      - api.cerebras.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.cerebras.ai/v1/completions
+  response:
+    body:
+      string: '{"message":"2 validation errors for ChatCompletionServerRequest\nbest_of\n  Extra
+        inputs are not permitted [type=extra_forbidden, input_value=1, input_type=int]\n    For
+        further information visit https://errors.pydantic.dev/2.8/v/extra_forbidden\necho\n  Extra
+        inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]\n    For
+        further information visit https://errors.pydantic.dev/2.8/v/extra_forbidden","type":"invalid_request_error","param":"validation_error","code":"wrong_api_format"}'
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947834ccd919a230-SJC
+      content-length:
+      - '515'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 18:55:28 GMT
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=5MqxoQWRNe9qMZJV0BLALYQKVzq96AzGCFFAklIdH6g-1748544928-1.0.1.1-WQlpov3fwl0srHh8ns7nP5rkqGMjY8xgibk0WIeJM.l72RlRGZwaCT2i5YQ6NWLYHC_REsi_Rw.YHPJ_oKXdNxHHdDppp2.0M.HT8OLKzOQ;
+        path=/; expires=Thu, 29-May-25 19:25:28 GMT; domain=.api.cerebras.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=3600; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 400
+      message: Bad Request
+version: 1

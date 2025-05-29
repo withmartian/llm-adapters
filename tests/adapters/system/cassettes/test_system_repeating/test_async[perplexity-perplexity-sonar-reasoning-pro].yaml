@@ -1,0 +1,109 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"Hi\nHi\nHi\nHi\nHi\nHi"}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '128'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "98e48ee6-8b8d-4d5d-bea4-60dc76a4de3b", "model": "sonar-reasoning-pro",
+        "created": 1748554609, "usage": {"prompt_tokens": 12, "completion_tokens":
+        567, "total_tokens": 579, "search_context_size": "low"}, "citations": ["https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "https://www.youtube.com/watch?v=S2tQtPMzaPM", "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "https://www.youtube.com/watch?v=V_XrHHv4X68", "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk"],
+        "search_results": [{"title": "Hi, Hi, Hi - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hi,_Hi,_Hi",
+        "date": null}, {"title": "Hi, Hi, Hi - YouTube", "url": "https://www.youtube.com/watch?v=S2tQtPMzaPM",
+        "date": "2020-04-14"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/4gYqEw6l3WNqOnmRS6dyx0",
+        "date": null}, {"title": "Hi, Hi, Hi (2018 Remaster) - YouTube", "url": "https://www.youtube.com/watch?v=V_XrHHv4X68",
+        "date": "2022-12-01"}, {"title": "Hi, Hi, Hi - song and lyrics by Wings -
+        Spotify", "url": "https://open.spotify.com/track/6VvC0CkBmCy1XG9MOyqUIk",
+        "date": null}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        "stop", "message": {"role": "assistant", "content": "<think>\nOkay, let''s
+        tackle this query. The user just sent \"Hi\" multiple times. First, I need
+        to figure out what they''re asking for. \"Hi\" could be a greeting, but since
+        there are multiple \"Hi\"s, maybe they''re referring to the song \"Hi, Hi,
+        Hi\" by Paul McCartney and Wings. Let me check the search results to confirm.\n\nLooking
+        at the search results, all of them are about the song \"Hi, Hi, Hi\" by Wings.
+        The first result from Wikipedia gives detailed info about the song''s release,
+        chart performance, and album inclusions. The YouTube and Spotify links also
+        reference the song. Since there''s no other context, the user is likely asking
+        about the song.\n\nNext, I should structure the answer. Start with a summary
+        that it''s a song by Wings, written by Paul and Linda McCartney. Then mention
+        its release date and chart positions. Include sections on release history,
+        live performances, and critical reception. Use citations from the provided
+        sources. Make sure to cite each relevant point properly. Avoid any markdown
+        headers at the start, use sections with ##, and bold where necessary. Check
+        that all info is accurate and cited correctly. No need for a references section
+        since citations are inline. Alright, time to put it all together.\n</think>\n\n\"Hi,
+        Hi, Hi\" is a rock song written by Paul and Linda McCartney, performed by
+        Wings, and released as a double A-side single with \"C Moon\" in December
+        1972[1][2]. It reached number five in the UK, number 10 in the US, and topped
+        charts in Spain[1]. The track became a live performance staple for Wings during
+        the 1970s[1].\n\n## Release and Chart Performance  \n- **Original release**:
+        December 1, 1972 (UK), December 4, 1972 (US)[1]  \n- **Re-releases**: Included
+        on compilations like *Wingspan: Hits and History* (2001), *Pure McCartney*
+        (2016), and *The 7\" Singles Box* (2022)[1][4]  \n- **Streaming availability**:
+        Accessible on platforms like Spotify and YouTube, with remastered versions
+        released in 2018 and 2022[2][4][5]  \n\n## Critical Reception  \n- Praised
+        as \"good old rock ''n roll\" with \"infectious chorus and terrific instrumental
+        breaks\"[1]  \n- Lyrics noted for their suggestive tone, which reviewers believed
+        would aid its chart success[1]  \n\nThe song remains a notable entry in Paul
+        McCartney''s post-Beatles catalog, blending energetic rock elements with Linda
+        McCartney''s collaborative lyricism[3][5]."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947920e6fe11232c-SJC
+      content-length:
+      - '3687'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:36:49 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=i_hspH06JKDG1bdp5sIMrbnZgSOkYFNnHDYqEmKSlmI-1748554609-1.0.1.1-82dXNaXSdO61AdsTpTzij1_OQiFY30sUA7P3WeJmzjJ_WOc5Zrg40Hvo6w0zgR95t73B6n30_2g4RHTvOoo.wuyMU1qOR7o6QUtwWFmsfCQ;
+        path=/; expires=Thu, 29-May-25 22:06:49 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

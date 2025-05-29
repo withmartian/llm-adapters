@@ -1,0 +1,86 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"user","content":"\"\""}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '110'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "dae19c8f-b517-4386-96d9-95be5b86f2a4", "model": "sonar-reasoning-pro",
+        "created": 1748554597, "usage": {"prompt_tokens": 2, "completion_tokens":
+        298, "total_tokens": 300, "search_context_size": "low"}, "citations": [],
+        "search_results": [], "object": "chat.completion", "choices": [{"index": 0,
+        "finish_reason": "stop", "message": {"role": "assistant", "content": "<think>\nOkay,
+        the user said \"Hi\" and provided the current date as Thursday, May 29, 2025,
+        9:36:32 PM UTC. Let me start by crafting a friendly response. I should greet
+        them back and acknowledge the date. Maybe mention something interesting about
+        the date or offer help. Let me check if there are any notable events on May
+        29, 2025. Wait, 2025 is a future date, so historical events won''t apply.
+        Instead, perhaps note that it''s almost June, the start of summer in the Northern
+        Hemisphere. Offer assistance in a positive and engaging way. Keep it concise
+        but welcoming. Make sure to follow the guidelines: accurate, high-quality,
+        positive, and actionable. Avoid markdown as per the user''s initial request.
+        Alright, let''s put it all together.\n</think>\n\nHello! \ud83c\udf1f It''s
+        a pleasure to connect on this Thursday evening\u2014May 29, 2025, is nearly
+        in the rearview, and June is just around the corner! Whether you''re winding
+        down for the day or gearing up for something exciting, how can I assist you
+        today?  \n**Need ideas?** Here\u2019s a quick brainstorm:  \n- Plan a weekend
+        adventure \ud83d\ude97  \n- Learn a fun fact about space or AI \ud83e\udd16  \n-
+        Optimize your workflow with a time-management hack \u23f0  \n\u2026or just
+        chat! What\u2019s on your mind? \ud83d\ude0a"}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947920b71c82cf23-SJC
+      content-length:
+      - '1711'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:36:37 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=q6WZHAuPs.7TWheUmk6fVc4hydYom4gCzd.QsqKokII-1748554597-1.0.1.1-8h6a3ulr2SslRNy1VAPvEs5DL1MKc38WaEPmguWVfpqeiZIinuaEkqm5R5g5fnHRVZWnZhLtzAcIGrQHdrAAUqYXipfPwgoyw3mGz0YYSWo;
+        path=/; expires=Thu, 29-May-25 22:06:37 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

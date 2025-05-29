@@ -1,0 +1,126 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '75'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "07c1c1ff-a495-470b-a6ff-e3ed27c6ce54", "model": "sonar-reasoning-pro",
+        "created": 1748554749, "usage": {"prompt_tokens": 1, "completion_tokens":
+        787, "total_tokens": 788, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/hi",
+        "https://www.vocabulary.com/dictionary/hi", "https://www.youtube.com/watch?v=T-wvRTDieGQ",
+        "https://en.wikipedia.org/wiki/HI", "https://en.wiktionary.org/wiki/hi"],
+        "search_results": [{"title": "HI Definition & Meaning - Dictionary.com", "url":
+        "https://www.dictionary.com/browse/hi", "date": null}, {"title": "Hi - Definition,
+        Meaning & Synonyms - Vocabulary.com", "url": "https://www.vocabulary.com/dictionary/hi",
+        "date": null}, {"title": "Hi, Hello Song! Greeting Song for Kids - A Little
+        SPOT - YouTube", "url": "https://www.youtube.com/watch?v=T-wvRTDieGQ", "date":
+        "2024-09-01"}, {"title": "HI - Wikipedia", "url": "https://en.wikipedia.org/wiki/HI",
+        "date": null}, {"title": "hi - Wiktionary, the free dictionary", "url": "https://en.wiktionary.org/wiki/hi",
+        "date": null}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        "stop", "message": {"role": "assistant", "content": "<think>\nOkay, the user
+        is asking about the word \"Hi.\" Let me start by going through the search
+        results to gather the necessary information.\n\nFirst, result [1] from Dictionary.com
+        mentions that \"hi\" is an informal greeting, a simplified spelling of \"high\"
+        in some contexts like \"hi fidelity.\" But the main focus here is the greeting.
+        Then, result [2] from Vocabulary.com also defines \"hi\" as a casual greeting,
+        more informal than \"hello,\" and notes its common usage in everyday interactions.
+        It also gives some synonyms like \"hey\" and \"howdy.\" \n\nLooking at result
+        [4] from Wikipedia, \"Hi\" has various other meanings beyond the greeting.
+        For example, it''s a podcast name, a music album, and a character in a comic
+        strip. There''s also a mention of \"HI\" in science as a hydrogen isotope.
+        However, the user''s query is just \"Hi,\" so the primary meaning is the greeting,
+        but it''s good to briefly note other uses.\n\nResult [5] from Wiktionary discusses
+        \"hi\" in Basque as an informal pronoun used among close friends or family.
+        That''s an interesting linguistic note, but maybe less relevant unless the
+        user is looking for non-English uses. Since the query is in English, the main
+        answer should focus on the English usage first.\n\nThe other results, like
+        [3] about a YouTube song, might be less relevant unless the user is interested
+        in educational songs for kids, but the query doesn''t specify that. So I''ll
+        prioritize the definitions from the dictionary and vocabulary sources.\n\nPutting
+        this together, the answer should start by explaining \"hi\" as a casual greeting,
+        mention its synonyms, and then briefly cover other meanings like in different
+        contexts (podcasts, science, etc.). Also, include the Basque pronoun as a
+        trivia point. Citations need to be properly placed after each relevant sentence.\n\nI
+        need to make sure the answer is structured with headers but starts with a
+        summary. Use bullet points for other meanings and a table if comparing anything.
+        Since there are multiple uses, a \"Other Meanings\" section with a list would
+        work. Also, check for any formatting rules, like using LaTeX for scientific
+        terms but keeping it simple. The Basque part can be under a subsection in
+        \"Other Meanings\" since it''s a different language aspect.\n\nFinally, ensure
+        citations are correctly applied. For example, the main greeting definition
+        cites [1][2], the other meanings cite [4], and the Basque part cites [5].
+        Avoid any markdown errors and follow the format rules strictly.\n</think>\n\n\"Hi\"
+        is a common informal greeting in English, used as a casual alternative to
+        \"hello.\" It originated as a simplified spelling variation of \"high\" (e.g.,
+        \"hi-fi\")[1] but evolved into a standalone expression for friendly salutations.
+        The term is widely recognized in everyday interactions, particularly in informal
+        settings like small towns where frequent greetings occur[2].  \n\n### Key
+        Characteristics  \n- **Casual tone**: More relaxed than \"hello,\" suitable
+        for friends, family, and informal encounters[2].  \n- **Synonyms**: Includes
+        \"hey,\" \"hiya,\" and \"howdy\"[2].  \n- **Cultural adaptability**: Used
+        in children\u2019s educational content, such as greeting songs for young learners[3].  \n\n###
+        Other Meanings of \"HI\"  \n| Context          | Examples                                                                 |\n|------------------|--------------------------------------------------------------------------|\n|
+        **Entertainment** | Podcast (*Hello Internet*), music albums (Texas\u2019s
+        *Hi*), comic character (*Hi and Lois*)[4]. |\n| **Science**      | Hydrogen
+        isotope (protium, H I regions in astronomy)[4].                |\n| **Language**     |
+        Basque informal pronoun (**hi**) for close relationships[5].            |\n\nThe
+        word\u2019s versatility extends to niche contexts, but its primary function
+        remains rooted in friendly communication."}, "delta": {"role": "assistant",
+        "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 947924363812cf0a-SJC
+      content-length:
+      - '5120'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:39:09 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=11qn9d8w4YF_JekvPPtq6gEkb_S4Wnyzs7pAP8lNAzo-1748554749-1.0.1.1-AD23qcMk54mdszbZD6dOr2rPfcoh0frBZNcXb9DleINw5LAtZuVtm4yiWjrQ56z2eHGepIZ47JIFUPVamRVIdmFUXM9Mdn16RFEW56Npzvs;
+        path=/; expires=Thu, 29-May-25 22:09:09 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

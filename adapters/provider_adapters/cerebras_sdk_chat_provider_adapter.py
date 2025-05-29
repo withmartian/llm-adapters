@@ -30,6 +30,18 @@ MODELS: list[Model] = [
         context_length=32768,
     ),
     # CerebrasModel(
+    #     name="llama-4-scout-17b-16e-instruct",
+    #     vendor_name=Vendor.meta_llama.value,
+    #     cost=Cost(prompt=0.65e-6, completion=0.85e-6),
+    #     context_length=32768,
+    # ),
+    # CerebrasModel(
+    #     name="qwen-3-32b",
+    #     vendor_name=Vendor.meta_llama.value,
+    #     cost=Cost(prompt=0.40e-6, completion=0.80e-6),
+    #     context_length=32768,
+    # ),
+    # CerebrasModel(
     #     name="deepseek-r1-distill-llama-70b",
     #     vendor_name=Vendor.deepseek.value,
     #     cost=Cost(prompt=0.85e-6, completion=1.20e-6),

@@ -7,6 +7,7 @@ class GroqModel(Model):
 
     supports_vision: bool = False
     supports_tools: bool = False
+    supports_n: bool = False
 
 
 MODELS: list[Model] = [
@@ -15,28 +16,24 @@ MODELS: list[Model] = [
         cost=Cost(prompt=0.05e-6, completion=0.08e-6),
         context_length=131072,
         vendor_name="meta-llama",
-        supports_n=False,
     ),
     GroqModel(
         name="llama3-70b-8192",
         cost=Cost(prompt=0.59e-6, completion=0.79e-6),
         context_length=8192,
         vendor_name="meta-llama",
-        supports_n=False,
     ),
     GroqModel(
         name="llama3-8b-8192",
         cost=Cost(prompt=0.05e-6, completion=0.08e-6),
         context_length=8192,
         vendor_name="meta-llama",
-        supports_n=False,
     ),
     GroqModel(
         name="gemma2-9b-it",
         cost=Cost(prompt=0.20e-6, completion=0.20e-6),
         context_length=8192,
         vendor_name="google",
-        supports_n=False,
     ),
     GroqModel(
         name="llama-guard-3-8b",
@@ -44,7 +41,6 @@ MODELS: list[Model] = [
         context_length=8192,
         vendor_name="meta-llama",
         supports_json_output=False,
-        supports_n=False,
     ),
 ]
 

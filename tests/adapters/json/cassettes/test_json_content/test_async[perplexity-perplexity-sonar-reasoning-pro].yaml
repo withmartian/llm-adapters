@@ -1,0 +1,86 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":[{"type":"text","text":"Hi"},{"type":"text","text":"Hi"}]}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '128'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "71c92a53-c801-4d41-b4c9-1f8e53a7fd5c", "model": "sonar-reasoning-pro",
+        "created": 1748554576, "usage": {"prompt_tokens": 2, "completion_tokens":
+        185, "total_tokens": 187, "search_context_size": "low"}, "citations": ["https://hellohihi.com",
+        "https://en.wiktionary.org/wiki/hihi", "https://www.instagram.com/hihitoys/",
+        "https://en.wikipedia.org/wiki/Stitchbird", "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/stitchbird/"],
+        "search_results": [{"title": "hihi", "url": "https://hellohihi.com", "date":
+        null}, {"title": "hihi - Wiktionary, the free dictionary", "url": "https://en.wiktionary.org/wiki/hihi",
+        "date": null}, {"title": "hihi (@hihitoys) \u2022 Instagram photos and videos",
+        "url": "https://www.instagram.com/hihitoys/", "date": null}, {"title": "Stitchbird
+        - Wikipedia", "url": "https://en.wikipedia.org/wiki/Stitchbird", "date": null},
+        {"title": "Hihi/stitchbird: New Zealand native land birds", "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/stitchbird/",
+        "date": null}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        null, "message": {"role": "assistant", "content": "<think>\nOkay, let''s tackle
+        this query about \"HiHi\". The user probably wants to know the different meanings
+        and uses of the term. Let me start by looking at the search results provided.\n\nFirst,
+        result [1] is a shopping site called hellohihi.com that sells anime-related
+        merchandise. So \"HiHi\" here is a brand or store name. Then, [2] from Wiktionary
+        explains \"hihi\" as an English interjection (like \"hehe\"), a noun from
+        Maori meaning a sun ray or the stitchbird, and in Cantonese as a slang term.
+        Result [3] is an Instagram account for hihitoys, which seems related to the
+        store in [1]. [4] and [5] are about the stitchbird, also known as hihi, a
+        bird native to New Zealand. \n\nSo the main categories are: the store/brand,
+        the bird, the"}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 9479201c3d5bfaf0-SJC
+      content-length:
+      - '1955'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:36:16 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=FucZ1Z3xs.t7ZNIIhOARCSVGCllX55HGee.u.TbeNpI-1748554576-1.0.1.1-tKp3Nx59AKUXaU_WwGgC4JXS5SjH75hEIwchFtc5_WflWfl_AfTLJPKw78gQcDasxsCiPaGMEgfiifxWcL7QxnqSBSGET.laToDdlDSwYjQ;
+        path=/; expires=Thu, 29-May-25 22:06:16 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,108 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"assistant","content":"Hi\nHi"},{"role":"user","content":"Hi"}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '146'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "cb632a9f-e371-4822-854c-c436a7a5e504", "model": "sonar-reasoning-pro",
+        "created": 1748554565, "usage": {"prompt_tokens": 5, "completion_tokens":
+        564, "total_tokens": 569, "search_context_size": "low"}, "citations": ["https://www.vocabulary.com/dictionary/hi",
+        "https://promova.com/confusing-words/hi-hello", "https://www.berlitz.com/blog/hello-in-english"],
+        "search_results": [{"title": "Hi - Definition, Meaning & Synonyms - Vocabulary.com",
+        "url": "https://www.vocabulary.com/dictionary/hi", "date": null}, {"title":
+        "Hi and Hello | Meaning, Examples & Difference | Promova", "url": "https://promova.com/confusing-words/hi-hello",
+        "date": null}, {"title": "How to Say Hi in English in 107 Interesting Ways
+        - Berlitz", "url": "https://www.berlitz.com/blog/hello-in-english", "date":
+        "2021-12-19"}], "object": "chat.completion", "choices": [{"index": 0, "finish_reason":
+        "stop", "message": {"role": "assistant", "content": "<think>\nOkay, let''s
+        tackle this query. The user just wrote \"Hi\". They might be testing the response
+        or starting a conversation. Since the query is a simple greeting, the answer
+        should be friendly and informative.\n\nFirst, I''ll check the search results.
+        Result [1] defines \"hi\" as an informal greeting, synonyms with hello, howdy,
+        etc. It mentions that \"hi\" is casual and commonly used. Result [2] compares
+        \"hi\" and \"hello\", noting that \"hi\" is informal while \"hello\" is more
+        formal. Result [3] talks about various ways to say hello in English, including
+        pronunciation and contexts.\n\nThe user probably expects a polite response.
+        Since they used \"Hi\", maybe they want to know more about the word itself.
+        The answer should explain the meaning, usage, and differences from similar
+        greetings like \"hello\". I should mention that \"hi\" is casual, suitable
+        for friends and informal settings, and contrast it with \"hello\" for formality.
+        Including synonyms and examples from the sources would help. Also, citing
+        the sources appropriately after each relevant point is crucial. Let me structure
+        this: start with a brief summary, then sections on meaning, usage contexts,
+        comparison with \"hello\", and examples. Make sure to cite [1], [2], and [3]
+        where applicable. Avoid headers at the beginning and keep the tone conversational
+        but informative.\n</think>\n\nThe word \"hi\" is a casual, friendly greeting
+        commonly used in informal settings. Originating in the 1800s and popularized
+        in American English, it serves as a versatile alternative to more formal greetings
+        like \"hello\"[1][2].  \n\n**Meaning and Usage**  \n- **Informal Contexts**:
+        \"Hi\" is appropriate for friends, family, and casual interactions, such as
+        greeting someone at a party or saying \"hi there\" to a neighbor[1][2].  \n-
+        **Pronunciation**: It\u2019s pronounced /ha\u026a/ and often delivered with
+        a relaxed tone to convey warmth[3].  \n\n**Comparison with \"Hello\"**  \n|
+        **Hi**                          | **Hello**                      |\n|----------------------------------|--------------------------------|\n|
+        Informal (e.g., \"Hi, Steve!\")    | Formal (e.g., \"Hello, sir\")    |\n|
+        Used among acquaintances         | Suitable for professional settings[2] |  \n\n**Examples**  \n-
+        Casual: \u201cHi everyone, welcome!\u201d[2]  \n- Surprise: \u201cOh, hi!
+        I didn\u2019t expect you here!\u201d[3]  \n\nWhile \"hi\" is nearly universal
+        in English, its tone and context can subtly shift meaning\u2014from enthusiastic
+        to reserved\u2014based on delivery[3]. For more formal situations, \"hello\"
+        or \"greetings\" are preferable[2]."}, "delta": {"role": "assistant", "content":
+        ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 94791fc4ed8ecfe5-SJC
+      content-length:
+      - '3605'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:36:05 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=T0xuadJl2xGvw85RuQFI9bbG2Ydx9N8MLhMns8zUA.0-1748554565-1.0.1.1-XW5cBJNnjsgy1jhrwL7_o8EdNPK9VP3rktvrir5vPeK4r4cMrKs.e1mZ0cR7QY0fnjpdP_bq4eUp.uRFnFOfFQrj.twNh6X_dCp9c1972.Q;
+        path=/; expires=Thu, 29-May-25 22:06:05 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

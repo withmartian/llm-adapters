@@ -1,0 +1,144 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""},{"role":"assistant","content":"\"\""},{"role":"user","content":"\"\""}],"model":"sonar-reasoning-pro"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '254'
+      content-type:
+      - application/json
+      host:
+      - api.perplexity.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.perplexity.ai/chat/completions
+  response:
+    body:
+      string: '{"id": "97bbf512-b0cd-456d-bc50-676127f7cd19", "model": "sonar-reasoning-pro",
+        "created": 1748554631, "usage": {"prompt_tokens": 6, "completion_tokens":
+        1022, "total_tokens": 1028, "search_context_size": "low"}, "citations": ["https://www.dictionary.com/browse/definition",
+        "https://en.wikipedia.org/wiki/Definition", "https://dictionary.cambridge.org/us/dictionary/english/definition",
+        "https://www.vocabulary.com/dictionary/definition", "https://www.thesaurus.com/browse/definition"],
+        "search_results": [{"title": "DEFINITION Definition & Meaning - Dictionary.com",
+        "url": "https://www.dictionary.com/browse/definition", "date": "2025-05-25"},
+        {"title": "Definition - Wikipedia", "url": "https://en.wikipedia.org/wiki/Definition",
+        "date": null}, {"title": "Meaning of definition in English - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/definition",
+        "date": null}, {"title": "Definition, Meaning & Synonyms - Vocabulary.com",
+        "url": "https://www.vocabulary.com/dictionary/definition", "date": null},
+        {"title": "321 Synonyms & Antonyms for DEFINITION | Thesaurus.com", "url":
+        "https://www.thesaurus.com/browse/definition", "date": null}], "object": "chat.completion",
+        "choices": [{"index": 0, "finish_reason": "stop", "message": {"role": "assistant",
+        "content": "<think>\nOkay, let''s tackle this query about definitions. The
+        user wants a comprehensive explanation based on the provided search results.
+        First, I''ll start by understanding what each source contributes.\n\nSource
+        [1] from Dictionary.com gives a basic definition, mentioning it''s the act
+        of making something definite. Source [2] from Wikipedia goes deeper, categorizing
+        definitions into operational and theoretical, and explaining recursive definitions
+        with examples like natural numbers and ancestors. That''s useful for explaining
+        different types of definitions. \n\nSource [3] from Cambridge Dictionary offers
+        a more detailed breakdown, including explanations of what a definition is
+        and how it''s used in different contexts, even touching on specialized uses
+        like in photography. Source [4] from Vocabulary.com emphasizes concise explanations
+        and mentions how definitions are applied in various fields like law and lexicography.
+        Source [5] provides synonyms, which might help in understanding nuances but
+        isn''t crucial here.\n\nI need to structure the answer starting with a general
+        summary, then break it down into sections. The key points are the meaning
+        of a definition, types (operational vs. theoretical, recursive), examples,
+        and usage in different contexts. The Wikipedia source has the recursive definition
+        example, which is important to include. Also, the Cambridge source mentions
+        legal definitions and how they can vary, which shows real-world application.\n\nI
+        should avoid just listing synonyms from source [5] unless they add value.
+        The answer needs to be well-formatted with headers, maybe starting with the
+        basic definition, then types, recursive examples, and applications. Citations
+        should be placed after each relevant sentence, using the sources appropriately.
+        Make sure to mention how definitions can vary and their importance in clarity,
+        citing the examples from the sources. Also, touch on the specialized uses
+        like in bodybuilding from source [3].\n\nCheck for any formatting rules: no
+        headers at the start, use level 2 headers for sections, bold subsections if
+        needed. Avoid lists with single items. Use tables if comparing types. Since
+        there''s a comparison between operational and theoretical definitions from
+        source [2], a table would be good there. \n\nMake sure each part is cited
+        correctly. For example, when explaining recursive definitions, cite [2]. When
+        discussing legal definitions, cite [3]. Keep the flow natural, starting with
+        a summary, then sections, and a closing summary. Avoid any markdown in the
+        thinking, but ensure the final answer follows the format strictly.\n</think>\n\nA
+        **definition** is a statement that explains the meaning of a term, phrase,
+        or concept, often providing clarity and boundaries for its use[1][3]. Definitions
+        serve as foundational tools in language, law, science, and philosophy, ensuring
+        shared understanding across contexts. They can vary in form and purpose, ranging
+        from dictionary entries to technical specifications.\n\n### Core Components  \nA
+        definition typically includes:  \n- **Explanation**: A clear description of
+        the term\u2019s meaning (e.g., \"A *natural number* starts at 0 and increments
+        by 1 indefinitely\"[2]).  \n- **Delimitation**: Boundaries that exclude unrelated
+        concepts (e.g., excluding non-parents from the definition of *ancestor*)[2].  \n-
+        **Contextualization**: Adjustments based on usage, such as legal definitions
+        of *asylum seeker* varying by country[3].  \n\n### Types of Definitions  \n|
+        **Category**            | **Description**                                                                 |
+        **Example**                                   |  \n|-------------------------|---------------------------------------------------------------------------------|-----------------------------------------------|  \n|
+        **Operational**         | Defines concepts through measurable actions or processes.                      |
+        \"An *antique* is an item over 100 years old\"[3]. |  \n| **Theoretical**         |
+        Explains abstract ideas using principles or frameworks.                        |
+        \"Power is the rate at which work is done\"[4]. |  \n| **Recursive**           |
+        Defines terms by self-reference, often using base cases and logical rules.      |
+        A *natural number* is 0 or the successor of another natural number[2]. |  \n\n###
+        Recursive Definitions  \nRecursive definitions build complexity through self-reference
+        while avoiding circularity. For example:  \n1. **Base case**: \"0 is a natural
+        number.\"  \n2. **Recursive step**: \"The successor of a natural number is
+        also a natural number.\"  \n3. **Exclusion clause**: \"Nothing else qualifies\"[2].  \n\nThis
+        structure ensures logical consistency, as seen in defining *ancestor*:  \n-
+        A parent is an ancestor.  \n- A parent of an ancestor is an ancestor[2].  \n\n###
+        Applications and Challenges  \n- **Legal contexts**: Definitions like *pornography*
+        or *refugee* often face ambiguity, requiring precise wording to avoid loopholes[3].  \n-
+        **Technical fields**: High-definition imaging relies on strict criteria for
+        clarity[4].  \n- **Cultural variations**: Terms like *Marxism* or *heatwave*
+        may lack universal agreement, reflecting differing perspectives[3][5].  \n\nDefinitions
+        are essential for communication but must adapt to evolving contexts to remain
+        effective."}, "delta": {"role": "assistant", "content": ""}}]}'
+    headers:
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 94792141ed892516-SJC
+      content-length:
+      - '6687'
+      content-type:
+      - application/json
+      date:
+      - Thu, 29 May 2025 21:37:11 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=Ek5YE.xowehLph2PAqB.IT1akB28ADxQqN88Jb8ZF5M-1748554631-1.0.1.1-TQlpYIImweip1Lx20eSxD3Akitcl9elkjZGc4stPwLvijBWmV3kCDLFBUXBtPtcefdmDNRklXnRA95lKZmjyD5nSUMTXnduAwQsnV9rcqPs;
+        path=/; expires=Thu, 29-May-25 22:07:11 GMT; domain=.perplexity.ai; HttpOnly;
+        Secure; SameSite=None
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -15,7 +15,7 @@ class DeepSeekModel(Model):
 MODELS: list[Model] = [
     DeepSeekModel(
         name="deepseek-chat",
-        cost=Cost(prompt=0.14e-6, completion=0.28e-6),
+        cost=Cost(prompt=0.27e-6, completion=1.10e-6),
         context_length=64000,
         completion_length=8000,
         supports_completion=False,  # Available in beta mode
