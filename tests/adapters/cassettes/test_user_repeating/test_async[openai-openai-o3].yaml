@@ -1,0 +1,91 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"user","content":"Hi"}],"model":"o3"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '89'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: "{\n    \"error\": {\n        \"message\": \"Request too large for o3
+        in organization org-EohclM7n5UCFBEOi5KYeiEb4 on tokens per min (TPM): Limit
+        0, Requested 4. The input or output tokens must be reduced in order to run
+        successfully. Visit https://platform.openai.com/account/rate-limits to learn
+        more.\",\n        \"type\": \"tokens\",\n        \"param\": null,\n        \"code\":
+        \"rate_limit_exceeded\"\n    }\n}\n"
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 94db7f0ccae82aeb-LAX
+      content-length:
+      - '393'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 10 Jun 2025 20:07:40 GMT
+      server:
+      - cloudflare
+      set-cookie:
+      - __cf_bm=xN_8UfyC28bsjdJJbkHFB8Df4YGsG5C17PWzgecyCMA-1749586060-1.0.1.1-Zu_eQpMAcHLVGl_IJ6gU55SR4.axA2Aa2fNK4xQUFHDNKq_5bcgxZcK7gcKNXZBNXwQEoNyyvSbX9a_Xalr1jYBiCdauVYw3xM612ZS23ak;
+        path=/; expires=Tue, 10-Jun-25 20:37:40 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=0W_E6XKF9o5qe0wy3TGDOklO35fMG6E4AJ3AXw8XzGo-1749586060717-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      vary:
+      - Origin
+      x-content-type-options:
+      - nosniff
+      x-ratelimit-limit-requests:
+      - '0'
+      x-ratelimit-limit-tokens:
+      - '0'
+      x-ratelimit-remaining-requests:
+      - '0'
+      x-ratelimit-remaining-tokens:
+      - '0'
+      x-ratelimit-reset-requests:
+      - 0s
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_84ce1b551bfe18cde8246e60675c1b4f
+    status:
+      code: 429
+      message: Too Many Requests
+version: 1

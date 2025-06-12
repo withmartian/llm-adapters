@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '68'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-R4M7HZjaOXgCgNXCxgSP5s9c","object":"chat.completion","created":1748807914,"model":"Qwen/QwQ-32B","choices":[{"index":0,"message":{"role":"assistant","content":"Okay,
+        the user said \"Hi\". I should respond in a friendly way. Let me think...
+        Maybe say hello back and offer help. Keep it simple and open-ended so they
+        feel comfortable to ask something. Maybe something like \"Hi there! How can
+        I assist you today?\" Yeah, that sounds good. Let me make sure there''s no
+        typos or anything. Alright, looks good.\n</think>\n\nHi there! How can I assist
+        you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":11,"total_tokens":102,"completion_tokens":91,"estimated_cost":1.985e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '743'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jun 2025 19:58:34 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

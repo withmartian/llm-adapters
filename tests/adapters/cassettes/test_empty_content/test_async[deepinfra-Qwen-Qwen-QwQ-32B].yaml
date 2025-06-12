@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '260'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RwGmygWnNZu73sUyD5lkK2Yi\",\"object\":\"chat.completion\",\"created\":1748807884,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user provided an empty query again. Let me check the history.\\n\\nLooking
+        back, the user sent three requests in a row that were just empty strings.
+        Each time, I responded with a friendly message asking them to provide more
+        details. Since this is the fourth time, maybe I should consider that there
+        might be an issue. \\n\\nPerhaps they're having trouble with the input method
+        or there's a technical problem. Alternatively, they might not know what to
+        ask. I should make sure to be patient and encouraging. \\n\\nI'll respond
+        again, inviting them to ask a question or describe what they need help with.
+        I'll keep it open-ended to give them space to specify their request. Let's
+        hope this helps them provide more information next time.\\n</think>\\n\\nIt
+        seems like your message might be empty. Could you please provide more details
+        about what you're asking or what you need help with? I'm here to assist! \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":33,\"total_tokens\":221,\"completion_tokens\":188,\"estimated_cost\":4.2550000000000004e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1272'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jun 2025 19:58:04 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

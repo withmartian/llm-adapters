@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"\"\""}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '295'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-RwV7r4XvqTzdxzHirfOQt5gI\",\"object\":\"chat.completion\",\"created\":1748807875,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user started with four \\\"Hi\\\"s and then in the next message, they
+        have three \\\"Hi\\\"s and an empty line. Maybe they're testing how I handle
+        repeated greetings or see if I notice the change. I should acknowledge their
+        messages and maybe ask if they need help with something specific. Let me keep
+        it friendly and open-ended to encourage them to state their actual request.\\n</think>\\n\\nHello!
+        \U0001F60A How can I assist you today? Feel free to ask about anything\u2014from
+        questions and tasks to creative ideas or whatever's on your mind!\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":29,\"total_tokens\":140,\"completion_tokens\":111,\"estimated_cost\":2.655e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '886'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jun 2025 19:57:55 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

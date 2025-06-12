@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B","temperature":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '86'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-R9KeKXTJwvLdhjh1arZc6Yz0\",\"object\":\"chat.completion\",\"created\":1748807906,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        the user said \\\"Hi\\\". I should respond in a friendly way. Maybe say hello
+        back and ask how I can help them. Keep it simple and open-ended so they feel
+        comfortable to ask anything. Let me check if there's any specific guidance
+        for greetings. The instructions mention being helpful and conversational,
+        so a warm reply should work. Alright, I'll go with something like \\\"Hi there!
+        How can I assist you today?\\\" That sounds good.\\n</think>\\n\\nHi there!
+        How can I assist you today? \U0001F60A\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":118,\"completion_tokens\":107,\"estimated_cost\":2.3049999999999998e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '849'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jun 2025 19:58:26 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

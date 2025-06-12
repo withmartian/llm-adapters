@@ -15,6 +15,7 @@ class DeepInfraModel(Model):
     can_system_only: bool = False
     can_min_p: bool = False
     can_top_k: bool = False
+    can_developer: bool = False
 
     def get_api_path(self) -> str:
         return f"{self.vendor_name}/{self.name}"
@@ -65,9 +66,9 @@ MODELS: list[Model] = [
         can_system_only=False,
     ),
     # DeepInfraModel(
-    #     name="QwQ-32B-Preview",
-    #     cost=Cost(prompt=0.12e-6, completion=0.18e-6),
-    #     context_length=32768,
+    #     name="QwQ-32B",
+    #     cost=Cost(prompt=0.15e-6, completion=0.20e-6),
+    #     context_length=131072,
     #     vendor_name=Vendor.Qwen,
     # ),
     DeepInfraModel(

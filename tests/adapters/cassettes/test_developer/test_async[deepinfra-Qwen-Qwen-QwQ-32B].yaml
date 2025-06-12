@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"},{"role":"system","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '101'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl-RDM8IOTL3ZYj2ZIwfsZNaWfw","object":"chat.completion","created":1748808053,"model":"Qwen/QwQ-32B","choices":[{"index":0,"message":{"role":"assistant","content":"Okay,
+        the user just said \"Hi\". I should respond friendly. Let me see... Maybe
+        a cheerful greeting and ask how I can help. Keep it simple and open-ended.
+        Let''s go with \"Hi there! How can I assist you today?\" That sounds good.
+        It''s welcoming and invites them to explain what they need. I''ll make sure
+        there''s no markdown, just plain text. Alright, send that.\n\n</think>\n\nHi
+        there! How can I assist you today?","name":null,"tool_calls":null},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":17,"total_tokens":114,"completion_tokens":97,"estimated_cost":2.1949999999999998e-05}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '774'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jun 2025 20:00:53 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1

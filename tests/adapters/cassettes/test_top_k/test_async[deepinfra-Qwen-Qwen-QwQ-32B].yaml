@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"Qwen/QwQ-32B"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '68'
+      content-type:
+      - application/json
+      host:
+      - api.deepinfra.com
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.deepinfra.com/v1/openai/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"chatcmpl-Rn62LE6vaMGR00ucC56pf8nU\",\"object\":\"chat.completion\",\"created\":1748807911,\"model\":\"Qwen/QwQ-32B\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Okay,
+        someone says \\\"Hi\\\" to me. I should respond with a friendly greeting.
+        Maybe add a smiley to keep it warm. Let me check the last message again. Yep,
+        just \\\"Hi\\\". So keep it simple and welcoming. \\\"Hi there! \U0001F60A
+        How can I assist you today?\\\" That sounds good. It greets them back, shows
+        willingness to help, and uses an emoji to be friendly. I'll go with that.\\n</think>\\n\\nHi
+        there! \U0001F60A How can I assist you today?\",\"name\":null,\"tool_calls\":null},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":11,\"total_tokens\":116,\"completion_tokens\":105,\"estimated_cost\":2.2650000000000005e-05}}"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '783'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jun 2025 19:58:31 GMT
+      server:
+      - uvicorn
+      x-robots-tag:
+      - noindex
+    status:
+      code: 200
+      message: OK
+version: 1
