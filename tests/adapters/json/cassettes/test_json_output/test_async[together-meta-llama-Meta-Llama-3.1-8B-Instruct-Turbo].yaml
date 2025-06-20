@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '160'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nyNXToz-2j9zxn-950ba02a8ece2b50\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1750090733,\n  \"model\": \"meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 16656248596338297000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"{ \\\"key\\\": \\\"value\\\" }\",\n        \"tool_calls\": []\n      }\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 40,\n    \"completion_tokens\":
+        9,\n    \"total_tokens\": 49,\n    \"cached_tokens\": 0\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 950ba02a8ece2b50-LAX
+      content-length:
+      - '560'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 16 Jun 2025 16:18:54 GMT
+      etag:
+      - W/"230-JeLrm4/vN3GEUmXCs0toj7g8E5I"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 9d9392fc-4d75-4c43-8b59-20d97f5c66cf-noamzn
+      x-api-call-end:
+      - '2025-06-16T16:18:54.031Z'
+      x-api-call-start:
+      - '2025-06-16T16:18:53.462Z'
+      x-api-received:
+      - '2025-06-16T16:18:53.453Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '199'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nyNXToz-2j9zxn-950ba02a8ece2b50
+    status:
+      code: 200
+      message: OK
+version: 1

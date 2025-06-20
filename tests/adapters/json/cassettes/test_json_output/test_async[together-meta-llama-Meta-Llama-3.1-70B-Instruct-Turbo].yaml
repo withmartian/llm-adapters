@@ -1,0 +1,102 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi, output simple json"}],"model":"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo","response_format":{"type":"json_object"}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '161'
+      content-type:
+      - application/json
+      host:
+      - api.together.xyz
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.3
+    method: POST
+    uri: https://api.together.xyz/chat/completions
+  response:
+    body:
+      string: "{\n  \"id\": \"nyNYYW6-2j9zxn-950ba5515a1f534f\",\n  \"object\": \"chat.completion\",\n
+        \ \"created\": 1750090944,\n  \"model\": \"meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo\",\n
+        \ \"prompt\": [],\n  \"choices\": [\n    {\n      \"finish_reason\": \"stop\",\n
+        \     \"seed\": 3118597296180162000,\n      \"logprobs\": null,\n      \"index\":
+        0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\":
+        \"{ \\n  \\\"name\\\": \\\"John Doe\\\", \\n  \\\"age\\\": 30, \\n  \\\"city\\\":
+        \\\"New York\\\" \\n}\",\n        \"tool_calls\": []\n      }\n    }\n  ],\n
+        \ \"usage\": {\n    \"prompt_tokens\": 40,\n    \"completion_tokens\": 30,\n
+        \   \"total_tokens\": 70,\n    \"cached_tokens\": 0\n  }\n}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 950ba5515a1f534f-LAX
+      content-length:
+      - '616'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 16 Jun 2025 16:22:25 GMT
+      etag:
+      - W/"268-z4gtvmVKhEi1WKJCNOGracXiBWI"
+      retry-after:
+      - '2'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-amzn-trace-id:
+      - 08177829-c1cd-4818-a707-15278b50e831-noamzn
+      x-api-call-end:
+      - '2025-06-16T16:22:25.079Z'
+      x-api-call-start:
+      - '2025-06-16T16:22:24.359Z'
+      x-api-received:
+      - '2025-06-16T16:22:24.347Z'
+      x-inference-version:
+      - v2
+      x-ratelimit:
+      - 'false'
+      x-ratelimit-limit:
+      - '30'
+      x-ratelimit-limit-tokens:
+      - '100000'
+      x-ratelimit-remaining:
+      - '59'
+      x-ratelimit-remaining-tokens:
+      - '100000'
+      x-ratelimit-reset:
+      - '2'
+      x-request-id:
+      - nyNYYW6-2j9zxn-950ba5515a1f534f
+    status:
+      code: 200
+      message: OK
+version: 1

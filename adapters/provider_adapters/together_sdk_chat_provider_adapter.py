@@ -64,6 +64,22 @@ MODELS: list[Model] = [
         supports_json_content=False,
     ),
     TogetherModel(
+        name="Meta-Llama-3.1-8B-Instruct-Turbo",
+        cost=Cost(prompt=0.18e-6, completion=0.18e-6),
+        context_length=131072,
+        vendor_name=Vendor.meta_llama.value,
+        supports_json_content=False,
+        supports_vision=False,
+    ),
+    TogetherModel(
+        name="Meta-Llama-3.1-70B-Instruct-Turbo",
+        cost=Cost(prompt=0.88e-6, completion=0.88e-6),
+        context_length=131072,
+        vendor_name=Vendor.meta_llama.value,
+        supports_json_content=False,
+        supports_vision=False,
+    ),
+    TogetherModel(
         name="Meta-Llama-3.1-405B-Instruct-Turbo",
         vendor_name=Vendor.meta_llama.value,
         cost=Cost(prompt=3.50e-6, completion=3.50e-6),
