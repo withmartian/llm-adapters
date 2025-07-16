@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"mistralai/devstral-small","tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":"none"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '400'
+      content-type:
+      - application/json
+      host:
+      - openrouter.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.4
+    method: POST
+    uri: https://openrouter.ai/api/v1/chat/completions
+  response:
+    body:
+      string: "\n         \n{\"id\":\"gen-1752691826-JQVzQ411nycpI6Quq4Hb\",\"provider\":\"Mistral\",\"model\":\"mistralai/devstral-small\",\"object\":\"chat.completion\",\"created\":1752691826,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Sure,
+        I can help with that. I'll use a tool to generate a random number between
+        1 and 10 for you. Let's proceed.\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":96,\"completion_tokens\":33,\"total_tokens\":129}}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cf-ray:
+      - 9603af6ad9bb95a5-TBS
+      content-length:
+      - '511'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Jul 2025 18:50:26 GMT
+      permissions-policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      referrer-policy:
+      - no-referrer, strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -63,6 +63,7 @@ class Vendor(str, Enum):
     nous_hermes = "nous-hermes"
     hermes_llama = "hermes-llama"
     moonshot = "moonshot"
+    moonshotai = "moonshotai"
     wizardlm = "wizardlm"
     google = "google"
     ai21 = "ai21"

@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"model":"mistralai/codestral-2501","prompt":"Hi","top_k":5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '60'
+      content-type:
+      - application/json
+      host:
+      - openrouter.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.4
+    method: POST
+    uri: https://openrouter.ai/api/v1/completions
+  response:
+    body:
+      string: "\n         \n{\"id\":\"gen-1752691739-3kv84CBBeFFMg8ZKLF6r\",\"provider\":\"Mistral\",\"model\":\"mistralai/codestral-2501\",\"object\":\"chat.completion\",\"created\":1752691739,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"text\":\",\\n\\nI
+        am trying to get the output of the following function:\\n\\n```\\ndef foo(x):\\n
+        \   if x==1:\\n        return 1\\n    else:\\n        return x+foo(x-1)\\n```\\n\\nFor
+        `x=1`, the output is `1`, but for `x=2`, the output is `3` and for `x=3` it
+        is `6`. I don't understand how the output is `3` and `6`. Can anyone explain?\\n\\nThanks!\",\"reasoning\":null}],\"usage\":{\"prompt_tokens\":5,\"completion_tokens\":101,\"total_tokens\":106}}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cf-ray:
+      - 9603ad4b0b3498c9-TBS
+      content-length:
+      - '668'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Jul 2025 18:48:59 GMT
+      permissions-policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      referrer-policy:
+      - no-referrer, strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

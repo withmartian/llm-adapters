@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: '{"model":"mistralai/devstral-small","prompt":"Hi","stop":"stop"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '64'
+      content-type:
+      - application/json
+      host:
+      - openrouter.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.4
+    method: POST
+    uri: https://openrouter.ai/api/v1/completions
+  response:
+    body:
+      string: "\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n{\"id\":\"gen-1752691121-QbJwLryptyAT84dZEq7b\",\"provider\":\"Parasail\",\"model\":\"mistralai/devstral-small\",\"object\":\"chat.completion\",\"created\":1752691121,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"text\":\"
+        All,\\nI had written a program where the code execution flow is done by passing
+        the messages and actor is the message handling component.\\n50 actors are
+        kept in a list then using every one\u2019s trivialtxactor start\uB85C 50 distinct
+        transections are created and actors are kept running. All these actors are
+        kept separate in a list for analysis.\\nOnce I get a message from the network.
+        Its value is analysed whether it belongs to any of the actor. If it does then
+        it passes the message to the respective actor.\\nThe problem here is. After
+        starting all the processes, not all processes are running; some of them are
+        in the suspend state where time slice cannot give actual unit of time. This
+        is not expected. How to achieve this?\\nMy primary task is to keep the HF
+        channels (which will map to the actor variable in the above command) open
+        and still have some different actors perform a transaction with the message
+        it sent through the network. Precisely, I need 50 channels and another cannister
+        to operate how the actor works (look into trivialtxactor example in sf\u0648\u0627\u0639ro.dfx
+        to get an idea of triggertxactor).This is needed for my primary intention
+        to run tests on 2 channels.\\n\\nThank you in advance.\",\"reasoning\":null}],\"usage\":{\"prompt_tokens\":2,\"completion_tokens\":256,\"total_tokens\":258}}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cf-ray:
+      - 96039e365d1dd464-TBS
+      content-length:
+      - '1662'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Jul 2025 18:38:42 GMT
+      permissions-policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      referrer-policy:
+      - no-referrer, strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

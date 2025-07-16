@@ -1,0 +1,143 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":""},{"role":"user","content":""},{"role":"assistant","content":"
+      "},{"role":"user","content":""},{"role":"assistant","content":" "},{"role":"user","content":"\n"}],"model":"mistralai/devstral-medium"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '240'
+      content-type:
+      - application/json
+      host:
+      - openrouter.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.4
+    method: POST
+    uri: https://openrouter.ai/api/v1/chat/completions
+  response:
+    body:
+      string: "\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n{\"id\":\"gen-1752691046-b4Tvgq4nzt3vyuct7TQ8\",\"provider\":\"Mistral\",\"model\":\"mistralai/devstral-medium\",\"object\":\"chat.completion\",\"created\":1752691046,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\\n\\n###
+        **Data Science Project: Predicting Customer Churn for a Telecommunications
+        Company**\\n\\n#### **Project Overview**\\n\\nCustomer churn, or the rate
+        at which customers stop doing business with a company, is a critical metric
+        for telecommunications companies. Predicting churn allows companies to proactively
+        address customer dissatisfaction and implement retention strategies. This
+        project aims to build a predictive model to identify customers likely to churn
+        based on historical data.\\n\\n---\\n\\n### **1. Business Understanding**\\n\\n####
+        **Objective**\\nThe goal is to develop a predictive model that identifies
+        customers at risk of churning, enabling the company to take proactive measures
+        to retain them.\\n\\n#### **Key Questions**\\n- What factors influence customer
+        churn?\\n- Can we predict which customers are likely to churn?\\n- What strategies
+        can be implemented to reduce churn?\\n\\n---\\n\\n### **2. Data Understanding**\\n\\n####
+        **Data Sources**\\n- **Customer Demographics**: Age, gender, location, etc.\\n-
+        **Account Information**: Tenure, contract type, payment method, etc.\\n- **Service
+        Usage**: Internet service, phone service, streaming services, etc.\\n- **Customer
+        Complaints**: Number of complaints, resolution status, etc.\\n- **Billing
+        Information**: Monthly charges, total charges, etc.\\n\\n#### **Data Description**\\n-
+        **CustomerID**: Unique identifier for each customer.\\n- **Gender**: Customer's
+        gender.\\n- **SeniorCitizen**: Whether the customer is a senior citizen (1
+        = Yes, 0 = No).\\n- **Partner**: Whether the customer has a partner (Yes/No).\\n-
+        **Dependents**: Whether the customer has dependents (Yes/No).\\n- **Tenure**:
+        Number of months the customer has stayed with the company.\\n- **PhoneService**:
+        Whether the customer has phone service (Yes/No).\\n- **InternetService**:
+        Type of internet service (DSL, Fiber optic, No).\\n- **OnlineSecurity**: Whether
+        the customer has online security (Yes/No/No internet service).\\n- **OnlineBackup**:
+        Whether the customer has online backup (Yes/No/No internet service).\\n- **DeviceProtection**:
+        Whether the customer has device protection (Yes/No/No internet service).\\n-
+        **TechSupport**: Whether the customer has tech support (Yes/No/No internet
+        service).\\n- **StreamingTV**: Whether the customer has streaming TV (Yes/No/No
+        internet service).\\n- **StreamingMovies**: Whether the customer has streaming
+        movies (Yes/No/No internet service).\\n- **Contract**: Type of contract (Month-to-month,
+        One year, Two year).\\n- **PaperlessBilling**: Whether the customer has paperless
+        billing (Yes/No).\\n- **PaymentMethod**: Payment method (Electronic check,
+        Mailed check, Bank transfer, Credit card).\\n- **MonthlyCharges**: The amount
+        charged to the customer monthly.\\n- **TotalCharges**: The total amount charged
+        to the customer.\\n- **Churn**: Whether the customer churned (Yes/No).\\n\\n---\\n\\n###
+        **3. Data Preparation**\\n\\n#### **Data Cleaning**\\n- Handle missing values.\\n-
+        Convert categorical variables to numerical using one-hot encoding.\\n- Normalize
+        numerical features.\\n\\n#### **Feature Engineering**\\n- Create new features
+        such as average monthly charges, tenure groups, etc.\\n- Remove redundant
+        or irrelevant features.\\n\\n---\\n\\n### **4. Modeling**\\n\\n#### **Model
+        Selection**\\n- **Logistic Regression**: Simple and interpretable.\\n- **Random
+        Forest**: Handles non-linear relationships well.\\n- **Gradient Boosting**:
+        Often provides high accuracy.\\n- **Neural Networks**: For capturing complex
+        patterns.\\n\\n#### **Model Training**\\n- Split the data into training and
+        testing sets.\\n- Train the models on the training set.\\n- Evaluate the models
+        on the testing set using metrics like accuracy, precision, recall, and F1-score.\\n\\n####
+        **Model Evaluation**\\n- Compare the performance of different models.\\n-
+        Select the best model based on evaluation metrics.\\n\\n---\\n\\n### **5.
+        Evaluation**\\n\\n#### **Performance Metrics**\\n- **Accuracy**: Overall correctness
+        of the model.\\n- **Precision**: Proportion of true positives among predicted
+        positives.\\n- **Recall**: Proportion of true positives among actual positives.\\n-
+        **F1-Score**: Harmonic mean of precision and recall.\\n- **ROC-AUC**: Area
+        under the Receiver Operating Characteristic curve.\\n\\n#### **Results**\\n-
+        Present the performance of the selected model.\\n- Discuss the trade-offs
+        between different models.\\n\\n---\\n\\n### **6. Deployment**\\n\\n#### **Implementation**\\n-
+        Deploy the model using a web application or API.\\n- Integrate the model into
+        the company's CRM system.\\n\\n#### **Monitoring**\\n- Continuously monitor
+        the model's performance.\\n- Update the model with new data periodically.\\n\\n---\\n\\n###
+        **7. Conclusion**\\n\\n#### **Summary**\\n- Summarize the findings and the
+        performance of the predictive model.\\n- Discuss the implications for the
+        business.\\n\\n#### **Future Work**\\n- Explore additional features or data
+        sources.\\n- Implement more advanced models or ensemble methods.\\n- Conduct
+        A/B testing to evaluate the effectiveness of retention strategies.\\n\\n---\\n\\n###
+        **8. References**\\n\\n- List any datasets, libraries, or resources used in
+        the project.\\n\\n---\\n\\nThis structured approach ensures a comprehensive
+        analysis and effective prediction of customer churn, helping the telecommunications
+        company to retain valuable customers.\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":7,\"completion_tokens\":1060,\"total_tokens\":1067}}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cf-ray:
+      - 96039c5e2efce784-TBS
+      content-length:
+      - '6138'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Jul 2025 18:37:26 GMT
+      permissions-policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      referrer-policy:
+      - no-referrer, strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

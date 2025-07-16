@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"},{"role":"user","content":"Hi"},{"role":"system","content":"Hi"},{"role":"system","content":"Hi"},{"role":"user","content":"Hi"}],"model":"mistralai/codestral-2501"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '274'
+      content-type:
+      - application/json
+      host:
+      - openrouter.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.4
+    method: POST
+    uri: https://openrouter.ai/api/v1/chat/completions
+  response:
+    body:
+      string: "{\"id\":\"gen-1752691034-OHDY1jK5ND935VoXJDpO\",\"provider\":\"Mistral\",\"model\":\"mistralai/codestral-2501\",\"object\":\"chat.completion\",\"created\":1752691034,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Hello!
+        How can I assist you today? Let's have a friendly chat. \U0001F60A\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":17,\"completion_tokens\":20,\"total_tokens\":37}}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cf-ray:
+      - 96039c16febf8ccb-TBS
+      content-length:
+      - '454'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Jul 2025 18:37:14 GMT
+      permissions-policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      referrer-policy:
+      - no-referrer, strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

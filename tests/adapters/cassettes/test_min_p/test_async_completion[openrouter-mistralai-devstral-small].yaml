@@ -1,0 +1,100 @@
+interactions:
+- request:
+    body: '{"model":"mistralai/devstral-small","prompt":"Hi","min_p":0.5}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '62'
+      content-type:
+      - application/json
+      host:
+      - openrouter.ai
+      user-agent:
+      - AsyncOpenAI/Python 1.76.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.76.0
+      x-stainless-read-timeout:
+      - '600000.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.13.4
+    method: POST
+    uri: https://openrouter.ai/api/v1/completions
+  response:
+    body:
+      string: "\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n\n         \n\n         \n\n         \n\n
+        \        \n\n         \n\n         \n{\"id\":\"gen-1752691091-MbnGVKCmQulwqR4Nq6lS\",\"provider\":\"Parasail\",\"model\":\"mistralai/devstral-small\",\"object\":\"chat.completion\",\"created\":1752691091,\"choices\":[{\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"stop\",\"text\":\",\\n\\nI
+        am trying to use the `set` command to set a variable to the output of a command.
+        I have a variable `myVar` that contains a string, and I want to set another
+        variable `myOtherVar` to the output of a command that uses `myVar` as an argument.
+        I tried using the `set` command like this:\\n\\n```\\nset myOtherVar = `myCommand
+        -arg $myVar`\\n```\\n\\nBut this doesn\u2019t work. I also tried using the
+        `exec` command, but I\u2019m not sure how to use it correctly. Can someone
+        please help me with this?\\n\\nThanks!\\n\\n`set myOtherVar = `myCommand -arg
+        $myVar`` is the correct way to do it. If it\u2019s not working, it might be
+        because of the way you\u2019re using `myCommand` or the way you\u2019re setting
+        `myVar`. Can you provide more details about what `myCommand` is and how you\u2019re
+        setting `myVar`?\\n\\nAlso, make sure that you\u2019re using backticks (``)
+        and not single quotes (\u2019).\\n\\nIf you\u2019re still having trouble,
+        you can try using the `exec` command like this:\\n\\n```\\nset myOtherVar
+        = [exec myCommand -arg $myVar]\\n```\\n\\nThis will execute `myCommand` with
+        the argument `$myVar` and set `myOtherVar` to the output of the command.\\n\\nI
+        hope this helps! Let me know if you have any other questions.\\n\\nI tried
+        using the `exec` command like you suggested, but I\u2019m still having trouble.
+        I\u2019m using the `file` command to get the size of a file, and I want to
+        set a variable to the size of the file. Here\u2019s what I have so far:\\n\\n```\\nset
+        myVar = \\\"myFile.txt\\\"\\nset myOtherVar = [exec file -size $myVar]\\n```\\n\\nBut
+        this doesn\u2019t work. I also tried using the `set` command with backticks,
+        but that didn\u2019t work either. Can you please help me with this?\\n\\nThanks!\\n\\nThe
+        `file` command in Tcl doesn\u2019t have a `-size` option. To get the size
+        of a file, you can use the `file size` command like this:\\n\\n```\\nset myVar
+        = \\\"myFile.txt\\\"\\nset myOtherVar = [file size $myVar]\\n```\\n\\nThis
+        will set `myOtherVar` to the size of the file in bytes.\\n\\nI hope this helps!
+        Let me know if you have any other questions.\\n\\nThank you! That worked.
+        I was using the wrong command. I appreciate your help.\\n\\nYou\u2019re welcome!
+        I\u2019m glad I could help.\",\"reasoning\":null}],\"usage\":{\"prompt_tokens\":2,\"completion_tokens\":542,\"total_tokens\":544}}"
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cf-ray:
+      - 96039d78488090e3-TBS
+      content-length:
+      - '2747'
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Jul 2025 18:38:12 GMT
+      permissions-policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      referrer-policy:
+      - no-referrer, strict-origin-when-cross-origin
+      server:
+      - cloudflare
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1
