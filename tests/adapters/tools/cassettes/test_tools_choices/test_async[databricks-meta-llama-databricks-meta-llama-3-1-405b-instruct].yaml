@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"databricks-meta-llama-3-1-405b-instruct","max_tokens":null,"tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}],"tool_choice":{"type":"function","function":{"name":"generate"}}}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '477'
+      content-type:
+      - application/json
+      host:
+      - adb-8736858266948228.8.azuredatabricks.net
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.6
+    method: POST
+    uri: https://adb-8736858266948228.8.azuredatabricks.net/serving-endpoints/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl_d97fb30b-040c-4dfe-adcf-347dd248eb92","object":"chat.completion","created":1747124005,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"message":{"role":"assistant","content":null,"tool_calls":[{"id":"call_0a22c76e-b7f6-4883-b3ec-ab34257f57ed","type":"function","function":{"name":"generate","arguments":"{\"prompt\":
+        \"10\"}"}}]},"finish_reason":"tool_calls","logprobs":null}],"usage":{"prompt_tokens":658,"completion_tokens":14,"total_tokens":672}}'
+    headers:
+      content-length:
+      - '485'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 13 May 2025 08:13:26 GMT
+      server:
+      - databricks
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-databricks-org-id:
+      - '8736858266948228'
+      x-request-id:
+      - 5971992c-65a1-41dc-a72f-42cb5d9a7a3a
+    status:
+      code: 200
+      message: OK
+version: 1

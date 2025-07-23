@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"databricks-meta-llama-3-1-405b-instruct","max_tokens":null,"stream":true,"tools":null}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '140'
+      content-type:
+      - application/json
+      host:
+      - adb-8736858266948228.8.azuredatabricks.net
+      user-agent:
+      - OpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.6
+    method: POST
+    uri: https://adb-8736858266948228.8.azuredatabricks.net/serving-endpoints/chat/completions
+  response:
+    body:
+      string: 'data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"role":"assistant","content":""},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":1,"total_tokens":13}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"Hello"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":1,"total_tokens":13}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"!"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":2,"total_tokens":14}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"
+        How"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":3,"total_tokens":15}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"
+        can"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":4,"total_tokens":16}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"
+        I"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":5,"total_tokens":17}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"
+        assist"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":6,"total_tokens":18}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"
+        you"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":7,"total_tokens":19}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"
+        today"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":8,"total_tokens":20}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":"?"},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":9,"total_tokens":21}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":""},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":10,"total_tokens":22}}
+
+
+        data: {"id":"chatcmpl_e454456d-fb0f-4f2f-9843-3eaae5f447ef","object":"chat.completion.chunk","created":1747123979,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"delta":{"content":""},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":12,"completion_tokens":10,"total_tokens":22}}
+
+
+        data: [DONE]
+
+
+        '
+    headers:
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Tue, 13 May 2025 08:12:59 GMT
+      server:
+      - databricks
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-databricks-org-id:
+      - '8736858266948228'
+      x-request-id:
+      - 31fafb55-12f2-4b26-88d3-733bf9e9d99e
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -17,6 +17,7 @@ from llm_adapters.provider_adapters import (
     AzureSDKChatProviderAdapter,
     GroqSDKChatProviderAdapter,
     PerplexitySDKChatProviderAdapter,
+    DatabricksSDKChatProviderAdapter,
 )
 from llm_adapters.types import Model, AdapterModelNotFoundException
 
@@ -34,6 +35,7 @@ ADAPTER_CLASSES: list[type[Adapter]] = [
     AzureSDKChatProviderAdapter,
     GroqSDKChatProviderAdapter,
     PerplexitySDKChatProviderAdapter,
+    DatabricksSDKChatProviderAdapter,
 ]
 
 

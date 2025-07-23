@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Hi"}],"model":"databricks-llama-4-maverick","max_tokens":null,"tools":null,"n":2}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '120'
+      content-type:
+      - application/json
+      host:
+      - adb-8736858266948228.8.azuredatabricks.net
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.6
+    method: POST
+    uri: https://adb-8736858266948228.8.azuredatabricks.net/serving-endpoints/chat/completions
+  response:
+    body:
+      string: '{"error_code":"INTERNAL_ERROR","message":"The server received an invalid
+        response from an upstream server."}'
+    headers:
+      content-length:
+      - '108'
+      content-type:
+      - application/json
+      date:
+      - Tue, 13 May 2025 11:41:59 GMT
+      server:
+      - databricks
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      - nosniff
+      x-databricks-org-id:
+      - '8736858266948228'
+      x-request-id:
+      - 271f763a-9146-4a67-ac77-1797d443ceec
+    status:
+      code: 502
+      message: Bad Gateway
+version: 1

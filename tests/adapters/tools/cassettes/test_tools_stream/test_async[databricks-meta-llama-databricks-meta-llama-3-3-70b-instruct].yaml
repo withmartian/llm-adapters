@@ -1,0 +1,78 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"Generate random number with tools
+      specified, range 1-10"}],"model":"databricks-meta-llama-3-3-70b-instruct","max_tokens":null,"stream":true,"tools":[{"type":"function","function":{"description":"Generate
+      random number","name":"generate","parameters":{"type":"object","properties":{"prompt":{"type":"string","description":"Random
+      number like 5, 4, 3, 10, 11"}},"required":["prompt"]}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '425'
+      content-type:
+      - application/json
+      host:
+      - adb-8736858266948228.8.azuredatabricks.net
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.6
+    method: POST
+    uri: https://adb-8736858266948228.8.azuredatabricks.net/serving-endpoints/chat/completions
+  response:
+    body:
+      string: 'data: {"id":"chatcmpl_7df17099-9b01-4c34-8fb7-e55b932cead6","object":"chat.completion.chunk","created":1747136575,"model":"meta-llama-3.3-70b-instruct-121024","choices":[{"index":0,"delta":{"role":"assistant","content":null,"tool_calls":[{"id":"call_d1da70d7-3f51-4712-95f1-2d662567eada","index":0,"type":"function","function":{"name":"generate","arguments":""}}]},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":693,"completion_tokens":14,"total_tokens":707}}
+
+
+        data: {"id":"chatcmpl_7df17099-9b01-4c34-8fb7-e55b932cead6","object":"chat.completion.chunk","created":1747136575,"model":"meta-llama-3.3-70b-instruct-121024","choices":[{"index":0,"delta":{"content":null,"tool_calls":[{"index":0,"function":{"arguments":"{
+        \"prompt\": \"5\" }"}}]},"finish_reason":null,"logprobs":null}],"usage":{"prompt_tokens":693,"completion_tokens":14,"total_tokens":707}}
+
+
+        data: {"id":"chatcmpl_7df17099-9b01-4c34-8fb7-e55b932cead6","object":"chat.completion.chunk","created":1747136575,"model":"meta-llama-3.3-70b-instruct-121024","choices":[{"index":0,"delta":{"content":null,"tool_calls":[{"index":0,"function":{"arguments":""}}]},"finish_reason":"tool_calls","logprobs":null}],"usage":{"prompt_tokens":693,"completion_tokens":15,"total_tokens":708}}
+
+
+        data: [DONE]
+
+
+        '
+    headers:
+      content-type:
+      - text/event-stream; charset=utf-8
+      date:
+      - Tue, 13 May 2025 11:42:56 GMT
+      server:
+      - databricks
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      x-content-type-options:
+      - nosniff
+      x-databricks-org-id:
+      - '8736858266948228'
+      x-request-id:
+      - b59151f2-c345-428a-b919-795a0cf0aec7
+    status:
+      code: 200
+      message: OK
+version: 1

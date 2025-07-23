@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"messages":[{"role":"user","content":"\"\""},{"role":"assistant","content":"Hi"},{"role":"user","content":"Hi"}],"model":"databricks-meta-llama-3-1-405b-instruct","max_tokens":null,"tools":null}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      content-length:
+      - '195'
+      content-type:
+      - application/json
+      host:
+      - adb-8736858266948228.8.azuredatabricks.net
+      user-agent:
+      - AsyncOpenAI/Python 1.68.2
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - async:asyncio
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.68.2
+      x-stainless-read-timeout:
+      - '600.0'
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.6
+    method: POST
+    uri: https://adb-8736858266948228.8.azuredatabricks.net/serving-endpoints/chat/completions
+  response:
+    body:
+      string: '{"id":"chatcmpl_94ee12b5-4cde-4276-9862-77419838e1ee","object":"chat.completion","created":1747123897,"model":"meta-llama-3.1-405b-instruct-081924","choices":[{"index":0,"message":{"role":"assistant","content":"It
+        seems like you didn''t send a message. How can I assist you today?"},"finish_reason":"stop","logprobs":null}],"usage":{"prompt_tokens":24,"completion_tokens":18,"total_tokens":42}}'
+    headers:
+      content-length:
+      - '393'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 13 May 2025 08:11:37 GMT
+      server:
+      - databricks
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-databricks-org-id:
+      - '8736858266948228'
+      x-request-id:
+      - ae59f320-0f9e-43ee-a196-9901b6f485c6
+    status:
+      code: 200
+      message: OK
+version: 1
