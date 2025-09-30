@@ -51,7 +51,7 @@ poetry run pre-commit install
 
 ### Setup
 
-1. Copy `.env-example` to `.env` and fill in the necessary environment variables.
+1. Copy `.env.example` to `.env` and fill in the necessary environment variables.
 
 ## Supported Models
 
