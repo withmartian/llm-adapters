@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./public/symbolmark.svg" alt="Martian Symbolmark" style="width:100%"/>
+</div>
+
 # LLM Adapters
 
 LLM Adapters provides a unified interface for interacting with various language model APIs, supporting both synchronous and asynchronous operations. Whether you're using OpenAI, Claude, or other providers, this library simplifies integration and offers flexibility in usage.
